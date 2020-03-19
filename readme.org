@@ -8,9 +8,9 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 
 ** Recomended Extensions
 | Extension    | Description                         |
-| [[github:EnixCoda/Gitako][Gitako]]       | GitHub File tree                    |
-| [[github:musically-ut/lovely-forks][Lovely Forks]] | Displays notible forks on repo page |
-| [[github:OctoLinker/OctoLinker][Octo Linker]]  | Links dependencies on github        |
+| [[https://github.com/EnixCoda/Gitako][Gitako]]       | GitHub File tree                    |
+| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]] | Displays notible forks on repo page |
+| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]   | Links dependencies on github        |
 ** Screenshots
 *** Code
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file.png" width="100%" />
