@@ -22,10 +22,11 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 - [[#todo][Todo]]
 
 * Recomended Extensions
-| Extension    | Description                         |
-| [[https://github.com/EnixCoda/Gitako][Gitako]]       | GitHub File tree                    |
-| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]] | Displays notible forks on repo page |
-| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]   | Links dependencies on github        |
+| Extension           | Description                         |
+| [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
+| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]        | Displays notible forks on repo page |
+| [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github    |
+| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github        |
 * Screenshots
 ** Code
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file.png" width="100%" />
