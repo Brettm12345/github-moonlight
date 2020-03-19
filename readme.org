@@ -6,30 +6,46 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 
 #+HTML: </div>
 
-** Recomended Extensions
+* Table of Contents
+
+- [[#github-moonlight][Github Moonlight]]
+- [[#recomended-extensions][Recomended Extensions]]
+- [[#screenshots][Screenshots]]
+  - [[#code][Code]]
+  - [[#commit-tree][Commit Tree]]
+  - [[#markdown][Markdown]]
+  - [[#issues][Issues]]
+  - [[#diff][Diff]]
+  - [[#explore][Explore]]
+  - [[#actions][Actions]]
+  - [[#projects][Projects]]
+- [[#todo][Todo]]
+
+* Recomended Extensions
 | Extension    | Description                         |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]       | GitHub File tree                    |
 | [[https://github.com/musically-ut/lovely-forks][Lovely Forks]] | Displays notible forks on repo page |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]   | Links dependencies on github        |
-** Screenshots
-*** Code
+* Screenshots
+** Code
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file.png" width="100%" />
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" width="100%" />
-*** Commit Tree
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" width ="100%" />
-*** Markdown
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" width ="100%" />
-*** Issues
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" width ="100%" />
-*** Diff
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" width ="100%" />
-*** Explore
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" width ="100%" />
-*** Actions
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" width ="100%" />
-*** Projects
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" width ="100%" />
-** Todo [0/3]
-- [ ] Add screenshots to readme
-- [ ] Finish theming pull request creation
-- [ ] Setup a usercss with user configurable variables
+** Commit Tree
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" width="100%" />
+** Markdown
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" width="100%" />
+** Issues
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" width="100%" />
+** Diff
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" width="100%" />
+** Explore
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" width="100%" />
+** Actions
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" width="100%" />
+** Projects
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" width="100%" />
+* Todo
+  * [X] Add screenshots to readme
+  * [ ] Finish theming pull request creation
+  * [ ] Setup a usercss with user configurable variables
+  * [ ] Add badges to readme.org
