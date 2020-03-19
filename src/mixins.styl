@@ -1,0 +1,203 @@
+i = !important;
+t = transparent;
+
+/**
+ * c <foreground> <border-color> <background> <foreground-important> <border-important> <background-important>
+ * use 0 to omit arguments
+ */
+c(x, y = 0, z = 0, xi = 1, yi = 1, zi = 1) {
+  if (x is a 'call' || (x is a 'rgba')) {
+    color: xi == 0 ? x : x i;
+  }
+
+  if (y is a 'call' || (y is a 'rgba')) {
+    border-color: yi == 0 ? y : y i;
+  }
+
+  if (z is a 'call' || (z is a 'rgba')) {
+    background-color: zi == 0 ? z : z i;
+  }
+}
+
+caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
+  &::before
+    border-{$direction}-color: $borderColor
+  &::after
+    border-{$direction}-color: $popupColor
+
+
+bgi() {
+  background-image: arguments i;
+}
+
+bg() {
+  background: arguments i;
+}
+
+b() {
+  border: arguments i;
+}
+
+bc() {
+  border-color: arguments i;
+}
+
+bb() {
+  border-bottom: arguments i;
+}
+
+bbc() {
+  border-bottom-color: arguments i;
+}
+
+bt() {
+  border-top: arguments i;
+}
+
+btc() {
+  border-top-color: arguments i;
+}
+
+bl() {
+  border-left: arguments i;
+}
+
+blc() {
+  border-left-color: arguments i;
+}
+
+br() {
+  border-right: arguments i;
+}
+
+brc() {
+  border-right-color: arguments i;
+}
+
+by() {
+  border-top: arguments i;
+  border-bottom: arguments i;
+}
+
+byc() {
+  border-top-color: arguments i;
+  border-bottom-color: arguments i;
+}
+
+bx() {
+  border-right: arguments i;
+  border-left: arguments i;
+}
+
+bxc() {
+  border-right-color: arguments i;
+  border-left-color: arguments i;
+}
+
+r() {
+  border-radius: arguments i;
+}
+
+m() {
+  margin: arguments i;
+}
+
+mt() {
+  margin-top: arguments i;
+}
+
+mb() {
+  margin-bottom: arguments i;
+}
+
+ml() {
+  margin-left: arguments i;
+}
+
+mr() {
+  margin-right: arguments i;
+}
+
+my() {
+  m: arguments 0;
+}
+
+mx() {
+  m: arguments 0;
+}
+
+lh() {
+  line-height: arguments i;
+}
+
+p() {
+  padding: arguments i;
+}
+
+px() {
+  padding-left: arguments i;
+  padding-right: arguments i;
+}
+
+py() {
+  padding-top: arguments i;
+  padding-bottom: arguments i;
+}
+
+pt() {
+  padding-top: arguments i;
+}
+
+pb() {
+  padding-bottom: arguments i;
+}
+
+pl() {
+  padding-left: arguments i;
+}
+
+pr() {
+  padding-right: arguments i;
+}
+
+po() {
+  position: arguments i;
+}
+
+s() {
+  box-shadow: arguments i;
+}
+
+o() {
+  opacity: arguments i;
+}
+
+a() {
+  animation: arguments i;
+}
+
+tr() {
+  transition: arguments i;
+}
+
+fn() {
+  font-family: arguments i;
+}
+
+fs() {
+  font-size: arguments i;
+}
+
+fw() {
+  font-weight: arguments i;
+}
+
+td() {
+  text-decoration: arguments i;
+}
+sbc() {
+  scrollbar-color: arguments i;
+}
+sbw() {
+  scrollbar-width: arguments i;
+}
