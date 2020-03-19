@@ -1,0 +1,438 @@
+@require 'variables'
+@require 'mixins'
+@require 'common'
+@require 'notifications'
+@require 'syntax'
+@require 'calendar'
+@require 'markdown'
+@require 'plugins'
+@require 'color-replacements'
+
+$selected = selector('&.selected, &[aria-current], &[aria-selected=true]')
+
+$elevationMd
+  s: var(--elevation-md)
+
+
+::placeholder { c: $placeholder; }
+
+* { sbc: $sb $bg; sbw: thin; }
+
+kbd
+  font: 14px monospace
+  c: $text $border $bg
+  s: inset 0 -1px 0 $border
+
+.octicon { transform: scale(1.1); }
+
+.profile-rollup-content li.d-block.mt-1.py-1,
+.js-recent-activity-container > div > div
+  c: 0 0 $bg
+
+.diffstat-
+  &block-
+    &neutral { c: 0 0 $sb; }
+    &added { c: 0 0 $green; }
+    kdeleted { c: 0 0 $red; }
+  &summary
+    c: $text
+    strong { c: $purple; }
+
+.file-diff-split .empty-cell { c: 0 $border $alt; }
+for $val in num code
+  .blob-{$val}-addition
+    c: $green $green #c3e88d15
+for $val in num code
+  .blob-{$val}-deletion
+    c: $red $red #ff537020
+.lovely-forks-addon { c: $text; o: 0.7; }
+.Label
+  &--gray { c: $text $border $bg; }
+  &--outline { c: $text $border $ }
+.profile-timeline
+  &-card.bg-white { c: 0 0 $hl; }
+  &.discussion-timeline:before { c: 0 0 $hl; }
+  &-month-heading:after
+    c: 0 0 $border
+.repository-lang-stats ol.repository-lang-stats-numbers li .lang
+  c: $cn
+
+.discussion-
+  &item-icon { c: $text $border $icon; }
+  &timeline-actions { c: 0 $border $bg; }
+  &sidebar
+    &heading { c: $text; }
+    &item { c: $faded; fw: 500; }
+.timeline-comment-wrapper { b: 0; }
+.vcard-username { c: $textGray;}
+.user-profile-sticky-bar:after { c: 0 $border $bg; }
+
+.previewable-comment-form .comment-form-head.tabnav
+  c: 0 0 $alt
+  bt: 0px
+  bl: 0px
+  br: 0px
+  bb: $b
+
+
+.tabnav-tab
+  &[aria-current], &[aria-selected=true], &.selected
+    c: $text $border $hl
+.branch-name { c: $text $border $region; }
+
+.select-menu-
+  &header, &header &title { c: $cn $border $bg; }
+  &modal, &item { c: $text $border $alt; }
+  &divider { c: $text $border $alt; }
+  &filters { c: $text $border $hl; }
+  &text-filter
+    &:first-child, &:last-child { c: 0 $border; }
+  &modal
+    @extends $elevationMd
+
+.pagination
+  .current, [aria-current]
+    &:hover { c: $cn 0 $region; }
+  a, em, span, .disabled, .disabled, .gap, .gap, [aria-disabled=true]
+    &, &:hover { c: 0 $border $hl; }
+.dropdown
+  &-menu
+    &:after { border-bottom-color: $border; }
+  &-item
+    c: $text
+    &:hover, &:focus { c: $cn 0 $region; }
+input[type="text"] { c: $cn $border $alt; }
+div[style*="background: linear-gradient"]
+  bg: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+.numbers-summary .octicon { c: $text; }
+.ellipsis-expander, .hidden-text-expander a { c: $text 0 $icon; }
+.UnderlineNav-item
+  /.subnav-link.selected, {$selected}
+    bbc: $blue
+.open.octicon { c: $green; }
+.SelectMenu-
+  &divider { c: $text $border $border; }
+  &list { c: 0 $border $bg; }
+  &item, &modal { c: 0 $border $alt; }
+  &header { bbc: $border; }
+  &filter { btc: $border; }
+  &tab[aria-selected=true] { c: $cn $border $hl; }
+.Box-row--focus-gray.navigation-focus { c: 0 0 $icon; }
+.commit-group-title .octicon-git-commit { c: $text; }
+.commits-listing:before { c: 0 0 $hl; }
+.TimelineItem
+  &--condensed &-badge { size: 30px; }
+.dropdown-signed-commit .dropdown-menu:after { bbc: $border; }
+.signed-commit
+  &-header
+    c: 0 0 $bg
+  &-header, &-badge.verified
+    c: $text $green
+    fs: 16px
+.commit-sha { c: $yellow $border $hl; }
+.commit-ref { c: $text $border $bg; }
+.btn-mktg { c: $cn $border $bg; }
+.timeline-comment
+  c: $text $border $hl
+  &-wrapper { c: 0 $border; }
+  &-header { c: $cn $border $alt; }
+  &--caret
+    &, &.current-user { caret: 'right'; }
+.Header,
+.gh-header
+  background-color: unset
+  &-sticky.is-stuck + &-shadow { c: 0 0 $alt; }
+  &-meta { c: $text $border; }
+table.files td.age { c: $text; }
+table.files
+  c: 0 0 $hl
+  tr.navigation-focus, tr[aria-selected=true]
+    td { c: 0 0 $hl; }
+  td
+    c: 0 $border
+    .age, .icon { c: $text; }
+.dropdown-menu { c: $text $border $alt; }
+.merge-pr-more-commits,
+.status-meta,
+.TimelineItem-body { c: $faded; }
+.thread-subscription-status { c: $text 0 $bg; }
+.TimelineItem:before { c: 0 0 $border; }
+.TimelineItem-badge,
+.TimelineItem--condensed .TimelineItem-badge { c: $hover 0 $bg; }
+.border, .border-gray-dark, .rgh-collaborator { b: $b; }
+.Box-row, .profile-rollup-wrapper+.profile-rollup-wrapper
+  bt: $b
+.btn
+  c: $cn $border $hl
+  bg: none
+  &:hover
+    bgi: none
+    c: 0 0 $region
+body
+  fn: "Inter v"
+  fs: 14px
+  lh: 1.8
+  c: $text 0 $bg
+  &.page-responsive.pagehead { c: 0 0 $bg; }
+.user-profile-nav, .topic-tag { c: $text $border $alt; }
+.reponav-item
+  color: $blue i
+  &.selected
+    c: $blue 0 $bg
+    bc: $hl $border transparent
+    .octicon { c: $cn; }
+  .octicon { c: $text; o: 1; }
+.pagehead-tabs-item, .reponav-item
+  &.selected { bc: $blue $border transparent; }
+.pagehead, .repohead.experiment-repo-nav
+  c: 0 $border $alt
+  @media (min-width: 768px)
+    c: $alt
+.repohead, .repo-list
+  .Label--outline { c: $text $border; }
+.site-header { c: 0 $border $alt; }
+.showcase-page-pattern::after { c: 0 $alt $border; }
+.form-group .form-control
+  c: $cn $border $alt
+  .search-input { caret-color: $blue; }
+  &:focus
+    c: 0 0 $hl
+.form-control, .form-select { c: $cn $border $alt; }
+.flash
+  c: $cn $border $bg
+  &-warn { c: $yellow $border $alt; }
+.menu
+  c: $text $border $alt
+  &, .blankslate { c: $alt $border; }
+  &-heading { c: $cn $border $alt; }
+  &-item
+    bb: $b
+    &:hover { c: 0 0 $hover; }
+    &.selected { c: $blue 0 $hl; }
+.boxed-group-inner, .boxed-group .heading, .boxed-group > h3
+  c: 0 $border $alt
+.rule, hr { bb: $b; }
+.file
+  c: 0 $border
+  &-header { c: $blue $border $alt; }
+.pl-s > a { c: $green;}
+
+:not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra)
+  c: $text
+div.commit-build-statuses
+  .text-
+    &green { c: $teal; }
+    &red { c: $red; }
+  .bg-pending { c: $purple; }
+.link-
+  &gray
+    c: $faded
+    &-dark, body &-dark
+      c: $blue
+      &:hover, body &:hover { td: underline; }
+.access-form-wrapper { c: 0 $border $alt; }
+.table-list-header-toggle .btn-link.selected
+  &:hover { c: $blue-light; }
+.site-footer { bt: $b; }
+.file-wrap { c: 0 $border; }
+.table-list
+  bb: $b
+  &-header
+    c: 0 $alt $border
+    &-toggle .btn-link:hover { c: $blue-light; }
+  &-cell { bt: $b; }
+  &-bordered &-cell
+    &:first-child { bl: $b; }
+    &:last-child { br: $b; }
+.breadcrumb
+  c: $blue
+  strong.final-path { c: $cn; }
+.drag-and-drop { c: $blue $border $alt; }
+.octofication .message,
+.overall-summary { c: 0 $border $alt; }
+.btn-link:not(.IssueLabel),
+.subnav-search-context .btn { c: $blue; }
+.social-count
+  c: $blue 0 $hl
+  &:hover { c: $cn; }
+.subnav-item
+  c: 0 $border
+  &:focus, &:hover { c: 0 0 $icon; }
+  &.selected
+    &, &:focus, &:hover { c: 0 $border $hl; }
+.input-contrast
+  c: $cn $border $alt
+  &:focus { c: 0 0 $hl; }
+.btn-octicon
+  c: $blue
+  &:hover { c: $cn; }
+  &-danger:hover { c: $red; }
+.filter-bar
+  c: 0 0 $alt
+  bb: $b
+.more-repos
+  c: 0 0 $alt
+  s: inset 0 1px 0 $border
+.branch-action-body .merge-
+  &branch-form, &message { c: 0 $border $alt; }
+.news
+  .alert { bt: $b; }
+  .Details
+    &-content--hidden li, button { btc: $border; }
+    button:hover
+        bg: transparent
+        td: underline
+.js-profile-editable-edit-button
+  c: $cn $border $hl
+.pinned-item
+  &-name { c: $faded; }
+  &-checkbox:checked + &-name
+    c: $text $border $icon
+
+.dashboard-notice
+  c: 0 0 $hl
+  b: $b
+  h2 { c: $text; }
+.branch-infobar
+  c: 0 $border $alt
+.branch-action-body { caret: 'right' }
+.repo-list
+  p: 0 12px
+  &, &-item
+    c 0 $border $alt
+.mini-repo-list-item
+  bt: $b
+.commit
+  & &-title, &-group-title
+    &, a { c: $text; }
+  &-tease
+    c: $blue $border $alt
+    &-sha { c: $blue; }
+    &-contributors
+      c: 0 0 $hover
+      bt: $b
+.navigation-focus { c: 0 0 $hover; }
+.commits
+  blockquote { c: $text; }
+  &-list-item.navigation-focus { c: 0 0 $hover; }
+.reponav-item
+  &:focus, &:hover { c: $blue; }
+.team, .user
+  &-mention { c: $cn; }
+.tabnav-pr, div
+  .tabnav-tab
+    c: $blue
+    &.selected { c: $blue $border $bg; }
+    &:focus, &:hover { c: $blue-light; }
+    .Counter { c: $blue; }
+.Counter { c: $blue 0 $border; }
+.Box-header
+  c: 0 $border $alt
+  &--blue { c: $blue $border $alt; }
+*:not(code) .Box { c: 0 $border $hl; }
+.dashboard .js-all-activity-header + div
+  c: 0 $border
+  .Box { c: 0 $border $hl; r: 6px; }
+.full-commit
+  c: $blue $border $alt
+  p.commit-title { c: $blue; }
+  .sha-block
+    & > .sha { c: $blue; }
+    fs: 14px
+    c: $faded
+    fw: 500
+  .commit-meta { c: 0 $border $hl; }
+.commit-author-section { c: $blue; }
+.tabnav { bb: $b; }
+.code-list // Search
+  .file-box,
+  & &-item + &-item,
+  .divider .blob-code,
+  .divider .blob-num,
+    &-item-private .blob-num { c: $text $border $hl; }
+.private .mini-repo-list-item { c: 0 0 $bg; }
+.orghead // Organizations
+  c: 0 $border $alt
+  .org-name { c: $blue; }
+  .pagehead-tabs-item.selected { c: $blue 0 $bg; }
+.tag-info
+  c: $blue
+  .tag-name { c: $text; }
+.note, .help { c: $blue; }
+.file-commit-form--full { c: $bg; }
+.application-main
+  .flex-wrap { c: 0 0 transparent; }
+  & > main
+    & > div.border-bottom.border-gray-light { c: 0 0 $bg; }
+    & > .site-subnav + div
+      c: 0 0 $bg
+      .text-gray-light { c: $text; }
+.github-jobs-logo strong
+  filter: invert(1)
+.team-left-column > div
+  pl: 10px
+  r: 4px
+  b: $b
+  c: 0 $border $hl
+.TimelineItem-break { c: 0 $alt transparent; }
+code, pre, tt { fn: monospace; }
+.blob-code-inner
+  c: $text
+  fn: monospace
+  fs: 15px
+  lh: 1.8
+  .highlighted { c: 0 0 $icon; }
+.blob-num { c: $hover $border $alt; fw: 600; }
+.blob-expanded .blob-code, .blob-expanded .blob-num
+  c: 0 $border $alt
+.graphs
+  .area { fill: $teal; }
+.contrib-person path { fill: $orange; }
+{selector('.menu-item', '&.selected, &[aria-current]', '&:before')} { c: 0 0 $blue; }
+.branch-action-body
+  b 0px
+  c 0 0 $hl
+.merge-status-
+  &list { c: 0 $border; }
+  &item { c: 0 $border $bg; }
+.CheckRun
+  c: 0 $border $alt;
+  &-header { c: 0 $border; }
+.checks-list-item
+  &.selected &-name
+    c: $cn 0 $region
+.issue-keyword { c: $purple; }
+.diffbar { c: 0 0 $bg; }
+.muted-link { c: $faded; }
+.progress-bar { c: 0 0 $hl; }
+.pinned-item-list-item .pinned-item-handle { c: $faded;}
+.js-user-status-container { c: 0 0 $hl; }
+.github-pr-file span
+  &.deletion { c: 0 0 $red; }
+  &.addition { c: 0 0 $green; }
+.protip
+  & > strong { c: $yellow; td: underline; }
+  & > svg { fill: $yellow; }
+.Popover-message { caret: 'top'; }
+.UnderlineNav-item.selected, .UnderlineNav-item[aria-current], .UnderlineNav-item[role="tab"][aria-selected="true"]
+  bbc: $blue
+.Box--responsive .Box-row--unread { s: inset 2px 0 0 $blue; }
+.gh-header-number { c: $orange; fw: 400; td: underline; }
+.toolbar-item
+  &, & .menu-target
+    c: $text
+    tr: color 0.1s ease-in-out
+    &:hover { c: $blue $hl; }
+.body > div.d-flex { px: 10px; }
+.pagination-loader-container { bgi: none; c: 0 0 $hl; }
+.ajax-pagination-form .ajax-pagination-btn { c: $blue; }
+.blankslate code { c: $text $border $bg; }
+.octicon[style="color: #6a737d;"] { c: $textGray; }
+.content.p-4.text-center.rounded-1.border.border-gray-light
+  c 0 0 $alt
+
+// Marketplace
+.MarketplaceBackground-
+  &buffer { c: 0 $border $alt; }
+  &reccomendations img { filter: invert(1); }
+.marketplace-plan-emphasis { c: $text; }
