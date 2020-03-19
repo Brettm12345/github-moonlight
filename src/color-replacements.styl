@@ -1,0 +1,24 @@
+$bgColors = {
+  gray: $alt
+  gray-light: $alt
+  blue-light: $alt
+  blue: $icon
+  gray-dark: $bg
+  gray-2: $icon
+  white: $bg
+}
+
+$textColors = {
+  gray-light: $textAlt
+  blue: $blue
+  gray: $text
+  gray-dark: $text
+  emphasized: $blue-light
+}
+
+.bg-
+  for $k, $v in $bgColors
+    &{$k} { c: 0 0 $v; }
+.text-
+  for $k, $v in $textColors
+    &{$k} { c: $v; }

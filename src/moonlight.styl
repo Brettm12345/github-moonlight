@@ -1,86 +1,42 @@
 @require 'variables'
 @require 'mixins'
+@require 'common'
 @require 'notifications'
-@require 'gitako'
 @require 'syntax'
 @require 'calendar'
+@require 'markdown'
+@require 'plugins'
+@require 'color-replacements'
 
 $selected = selector('&.selected, &[aria-current], &[aria-selected=true]')
 
 $elevationMd
   s: var(--elevation-md)
 
-.diffstat-summary
-  c: $text
-  strong { c: $purple; }
-.octicon { transform: scale(1.1); }
+
 ::placeholder { c: $placeholder; }
 
-// Common styles
-.commit-icon .octicon,
-.commit-group-title .octicon-git-commit,
-
-.bg-gray,
-.bg-gray-light,
-.bg-blue-light,
-div[style="background-color: #fcfdfd"],
-.conversation-list-heading .inner,
-.email-format .email-hidden-toggle a,
-nav.UnderlineNav + div.border.d-md-block,
-.tint-box,
-.copyable-terminal,
-.capped-card-content,
-#contributors-master svg.viz,
-.timeline-commits .hidden-text-expander .ellipsis-expander,
-.blob-num-expandable, .blob-num-hunk,
-.blob-code-expandable, .blob-code-hunk
-  c: 0 0 $alt
-
-.discussion-sidebar-item+.discussion-sidebar-item,
-.UnderlineNav,
-.reaction-summary-item,
-.comment-reactions.has-reactions,
-.jump-to-suggestions-results-container .navigation-item,
-.Box-footer,
-.graphs.axis,
-.dropdown-divider,
-.blob-expanded + tr:not(.blob-expanded) .blob-code,
-.blob-expanded + tr:not(.blob-expanded) .blob-num,
-.blob-expanded .blob-num-hunk,
-.TimelineItem-badge,
-.avatar-before-user-status,
-tr:not(.blob-expanded) + .blob-expanded .blob-code,
-tr:not(.blob-expanded) + .blob-expanded .blob-num,
-.branch-action-item + .branch-action-item, .branch-action-item + .mergeability-details,
-.social-count,
-.timeline-new-comment .previewable-comment-form .comment-body,
-.dashboard-rollup-items .body,
-.Box-body,
-.profile-rollup-summarized+.profile-rollup-summarized,
-.file-diff-split .blob-code + .blob-num,
-.ScreenshotCarousel,
-.border-top,
-.border-bottom,
-.border-right,
-.border-lg-left,
-.Subhead,
-.repository-lang-stats-graph
-  c: 0 $border
-
-// Scrollbars
 * { sbc: $sb $bg; sbw: thin; }
+
+kbd
+  font: 14px monospace
+  c: $text $border $bg
+  s: inset 0 -1px 0 $border
+
+.octicon { transform: scale(1.1); }
+
 .profile-rollup-content li.d-block.mt-1.py-1,
 .js-recent-activity-container > div > div
   c: 0 0 $bg
 
-.discussion-sidebar-
-  &heading { c: $text; }
-  &item { c: $faded; fw: 500; }
-
-.diffstat-block-
-  &neutral { c: 0 0 $sb; }
-  &added { c: 0 0 $green; }
-  &deleted { c: 0 0 $red; }
+.diffstat-
+  &block-
+    &neutral { c: 0 0 $sb; }
+    &added { c: 0 0 $green; }
+    kdeleted { c: 0 0 $red; }
+  &summary
+    c: $text
+    strong { c: $purple; }
 
 .file-diff-split .empty-cell { c: 0 $border $alt; }
 for $val in num code
@@ -104,6 +60,9 @@ for $val in num code
 .discussion-
   &item-icon { c: $text $border $icon; }
   &timeline-actions { c: 0 $border $bg; }
+  &sidebar
+    &heading { c: $text; }
+    &item { c: $faded; fw: 500; }
 .timeline-comment-wrapper { b: 0; }
 .vcard-username { c: $textGray;}
 .user-profile-sticky-bar:after { c: 0 $border $bg; }
@@ -115,13 +74,12 @@ for $val in num code
   br: 0px
   bb: $b
 
-.text-gray-light { c: $textAlt }
-.bg-gray-dark
-  c: 0 0 $bg
+
 .tabnav-tab
   &[aria-current], &[aria-selected=true], &.selected
     c: $text $border $hl
 .branch-name { c: $text $border $region; }
+
 .select-menu-
   &header, &header &title { c: $cn $border $bg; }
   &modal, &item { c: $text $border $alt; }
@@ -137,11 +95,6 @@ for $val in num code
     &:hover { c: $cn 0 $region; }
   a, em, span, .disabled, .disabled, .gap, .gap, [aria-disabled=true]
     &, &:hover { c: 0 $border $hl; }
-.project-
-  &issue-body-blur { bg: linear-gradient(0deg, black, rgba(0, 0, 0, 0)); }
-  &column { c: 0 0 $alt; }
-  &header { c: 0 0 $hl; }
-  &card:hover { c: 0 $border; }
 .dropdown
   &-menu
     &:after { border-bottom-color: $border; }
@@ -152,24 +105,6 @@ input[type="text"] { c: $cn $border $alt; }
 div[style*="background: linear-gradient"]
   bg: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
 .numbers-summary .octicon { c: $text; }
-.markdown-body
-  h1, h2 { c: 0 $border; }
-  img { c: 0 0 $hl; }
-  table
-    td, th
-      c: 0 $border
-    tr
-      c: $text $border $alt
-  code, tt
-    c: $cn
-    fw: 500
-    fn: monospace
-  /.highlight pre, pre { c: 0 $border $alt; fn: monospace; fw: 500; }
-  blockquote { c: $textAlt $border $hl; }
-  hr { c: 0 0 $border; }
-  .clippy-wrapper .clippy
-    c: $cn $border $alt
-    .icon { filter: invert(1); }
 .ellipsis-expander, .hidden-text-expander a { c: $text 0 $icon; }
 .UnderlineNav-item
   /.subnav-link.selected, {$selected}
@@ -182,13 +117,11 @@ div[style*="background: linear-gradient"]
   &header { bbc: $border; }
   &filter { btc: $border; }
   &tab[aria-selected=true] { c: $cn $border $hl; }
-.bg-gray-2 { c: 0 0 $icon; }
 .Box-row--focus-gray.navigation-focus { c: 0 0 $icon; }
 .commit-group-title .octicon-git-commit { c: $text; }
 .commits-listing:before { c: 0 0 $hl; }
-.TimelineItem-badge, .TimelineItem--condensed .TimelineItem-badge
-  width: 30px
-  height: 30px
+.TimelineItem
+  &--condensed &-badge { size: 30px; }
 .dropdown-signed-commit .dropdown-menu:after { bbc: $border; }
 .signed-commit
   &-header
@@ -229,7 +162,6 @@ table.files
 .border, .border-gray-dark, .rgh-collaborator { b: $b; }
 .Box-row, .profile-rollup-wrapper+.profile-rollup-wrapper
   bt: $b
-.bg-white { c: 0 0 $bg; }
 .btn
   c: $cn $border $hl
   bg: none
@@ -291,26 +223,23 @@ div.commit-build-statuses
   .text-
     &green { c: $teal; }
     &red { c: $red; }
-  .bg-
-    &pending { c: $purple; }
+  .bg-pending { c: $purple; }
 .link-
   &gray
     c: $faded
     &-dark, body &-dark
       c: $blue
       &:hover, body &:hover { td: underline; }
-.text-gray
-  &, &-dark, body &-dark { c: $text; }
-.text-emphasized { c: $blue-light; }
 .access-form-wrapper { c: 0 $border $alt; }
 .table-list-header-toggle .btn-link.selected
   &:hover { c: $blue-light; }
-.table-list-header-toggle .btn-link:hover { c: $blue-light; }
 .site-footer { bt: $b; }
 .file-wrap { c: 0 $border; }
 .table-list
   bb: $b
-  &-header { c: 0 $alt $border; }
+  &-header
+    c: 0 $alt $border
+    &-toggle .btn-link:hover { c: $blue-light; }
   &-cell { bt: $b; }
   &-bordered &-cell
     &:first-child { bl: $b; }
@@ -344,8 +273,8 @@ div.commit-build-statuses
 .more-repos
   c: 0 0 $alt
   s: inset 0 1px 0 $border
-.branch-action-body .merge-branch-form, .branch-action-body .merge-message
-  c: 0 $border $alt
+.branch-action-body .merge-
+  &branch-form, &message { c: 0 $border $alt; }
 .news
   .alert { bt: $b; }
   .Details
@@ -431,7 +360,6 @@ div.commit-build-statuses
   .tag-name { c: $text; }
 .note, .help { c: $blue; }
 .file-commit-form--full { c: $bg; }
-.bg-blue { c: 0 0 $icon; }
 .application-main
   .flex-wrap { c: 0 0 transparent; }
   & > main
@@ -475,7 +403,6 @@ code, pre, tt { fn: monospace; }
     c: $cn 0 $region
 .issue-keyword { c: $purple; }
 .diffbar { c: 0 0 $bg; }
-.text-blue { c: $blue; }
 .muted-link { c: $faded; }
 .progress-bar { c: 0 0 $hl; }
 .pinned-item-list-item .pinned-item-handle { c: $faded;}
@@ -499,10 +426,6 @@ code, pre, tt { fn: monospace; }
 .body > div.d-flex { px: 10px; }
 .pagination-loader-container { bgi: none; c: 0 0 $hl; }
 .ajax-pagination-form .ajax-pagination-btn { c: $blue; }
-kbd
-  font: 14px monospace
-  c: $text $border $bg
-  s: inset 0 -1px 0 $border
 .blankslate code { c: $text $border $bg; }
 .octicon[style="color: #6a737d;"] { c: $textGray; }
 .content.p-4.text-center.rounded-1.border.border-gray-light
@@ -513,15 +436,3 @@ kbd
   &buffer { c: 0 $border $alt; }
   &reccomendations img { filter: invert(1); }
 .marketplace-plan-emphasis { c: $text; }
-
-// Plugin: Better github pull requests
-.code-review.blob-code.blob-code-context
-  c: 0 0 $alt
-#js-repo-pjax-container,
-.pr-toolbar
-  c: 0 0 $bg
-.__better_github_pr
-  &_dark_mode
-    ../, & { c: $text $border $alt; }
-  .github-pr-file.github-pr-file-highlight, & .tree-view_item:hover { c: 0 0 $icon; }
-
