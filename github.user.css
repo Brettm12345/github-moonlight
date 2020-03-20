@@ -755,7 +755,11 @@
     display: none;
   }
   .signed-commit-header {
+    border-color: var(--green) !important;
     background-color: var(--bg) !important;
+  }
+  .signed-commit-verified-label {
+    color: var(--green) !important;
   }
   .signed-commit-badge.verified {
     color: var(--green) !important;
