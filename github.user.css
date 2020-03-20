@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.5.0
+@version      0.4.8
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -43,39 +43,39 @@
 @preprocessor uso
 ==/UserStyle== */
 :root {
-  --alt: /*[[alt]]*/ ;
-  --bg: /*[[bg]]*/ ;
-  --blue: /*[[blue]]*/ ;
-  --blue-light: /*[[blue-light]]*/ ;
-  --border: /*[[border]]*/ ;
-  --cn: /*[[cn]]*/ ;
-  --cyan-trans: /*[[cyan-trans]]*/ ;
-  --faded: /*[[faded]]*/ ;
-  --green: /*[[green]]*/ ;
-  --green-trans: /*[[green-trans]]*/ ;
-  --hl: /*[[hl]]*/ ;
-  --hover: /*[[hover]]*/ ;
-  --icon: /*[[icon]]*/ ;
-  --indigo: /*[[indigo]]*/ ;
-  --mono-font: /*[[mono_font]]*/ ;
-  --orange: /*[[orange]]*/ ;
-  --placeholder: /*[[placeholder]]*/ ;
-  --purple: /*[[purple]]*/ ;
-  --red: /*[[red]]*/ ;
-  --red-trans: /*[[red-trans]]*/ ;
-  --region: /*[[region]]*/ ;
-  --sb: /*[[sb]]*/ ;
-  --teal: /*[[teal]]*/ ;
-  --text: /*[[text-color]]*/ ;
-  --text-alt: /*[[text-alt]]*/ ;
-  --text-gray: /*[[text-gray]]*/ ;
-  --ui-font: /*[[ui_font]]*/ ;
-  --yellow: /*[[yellow]]*/ ;
+  --alt: /*[[alt]]*/;
+  --bg: /*[[bg]]*/;
+  --blue: /*[[blue]]*/;
+  --blue-light: /*[[blue-light]]*/;
+  --border: /*[[border]]*/;
+  --cn: /*[[cn]]*/;
+  --cyan-trans: /*[[cyan-trans]]*/;
+  --faded: /*[[faded]]*/;
+  --green: /*[[green]]*/;
+  --green-trans: /*[[green-trans]]*/;
+  --hl: /*[[hl]]*/;
+  --hover: /*[[hover]]*/;
+  --icon: /*[[icon]]*/;
+  --indigo: /*[[indigo]]*/;
+  --mono-font: /*[[mono_font]]*/;
+  --orange: /*[[orange]]*/;
+  --placeholder: /*[[placeholder]]*/;
+  --purple: /*[[purple]]*/;
+  --red: /*[[red]]*/;
+  --red-trans: /*[[red-trans]]*/;
+  --region: /*[[region]]*/;
+  --sb: /*[[sb]]*/;
+  --teal: /*[[teal]]*/;
+  --text: /*[[text-color]]*/;
+  --text-alt: /*[[text-alt]]*/;
+  --text-gray: /*[[text-gray]]*/;
+  --ui-font: /*[[ui_font]]*/;
+  --yellow: /*[[yellow]]*/;
 }
 @-moz-document domain('github.com') {
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
-  div[style="background-color: #fcfdfd"],
+  div[style='background-color: #fcfdfd'],
   .conversation-list-heading .inner,
   .email-format .email-hidden-toggle a,
   nav.UnderlineNav + div.border.d-md-block,
@@ -90,7 +90,7 @@
   .blob-code-hunk {
     background-color: var(--alt) !important;
   }
-  .discussion-sidebar-item + .discussion-sidebar-item,
+  .discussion-sidebar-item+.discussion-sidebar-item,
   .UnderlineNav,
   .reaction-summary-item,
   .comment-reactions.has-reactions,
@@ -113,7 +113,7 @@
   .dashboard-rollup-items .body,
   .saved-reply-form,
   .Box-body,
-  .profile-rollup-summarized + .profile-rollup-summarized,
+  .profile-rollup-summarized+.profile-rollup-summarized,
   .file-diff-split .blob-code + .blob-num,
   .orgs-help-shelf,
   .ScreenshotCarousel,
@@ -140,7 +140,7 @@
   }
   .filter-item.selected,
   .filter-item[aria-current],
-  .filter-item[aria-selected="true"] {
+  .filter-item[aria-selected=true] {
     color: var(--cn) !important;
     background-color: var(--icon) !important;
   }
@@ -236,7 +236,7 @@
     background-color: var(--red) !important;
   }
   .pl-c2::before {
-    content: "^M";
+    content: '^M';
   }
   .pl-sr .pl-cce {
     font-weight: bold !important;
@@ -281,23 +281,23 @@
   .pl-corl {
     text-decoration: underline !important;
   }
-  .legend li[style*="#ebedf0"] {
+  .legend li[style*='#ebedf0'] {
     background-color: #fff !important;
     opacity: 0.05 !important;
   }
-  .legend li[style*="#c6e48b"] {
+  .legend li[style*='#c6e48b'] {
     background-color: var(--blue) !important;
     opacity: 0.25 !important;
   }
-  .legend li[style*="#7bc96f"] {
+  .legend li[style*='#7bc96f'] {
     background-color: var(--blue) !important;
     opacity: 0.5 !important;
   }
-  .legend li[style*="#239a3b"] {
+  .legend li[style*='#239a3b'] {
     background-color: var(--blue) !important;
     opacity: 0.75 !important;
   }
-  .legend li[style*="#196127"] {
+  .legend li[style*='#196127'] {
     background-color: var(--blue) !important;
   }
   .graph-before-activity-overview {
@@ -307,23 +307,23 @@
   .calendar-graph text.month {
     fill: var(--cn);
   }
-  .calendar-graph rect[fill="#ebedf0"] {
+  .calendar-graph rect[fill='#ebedf0'] {
     fill: #fff;
     opacity: 0.05 !important;
   }
-  .calendar-graph rect[fill="#c6e48b"] {
+  .calendar-graph rect[fill='#c6e48b'] {
     fill: var(--blue);
     opacity: 0.25 !important;
   }
-  .calendar-graph rect[fill="#7bc96f"] {
+  .calendar-graph rect[fill='#7bc96f'] {
     fill: var(--blue);
     opacity: 0.5 !important;
   }
-  .calendar-graph rect[fill="#239a3b"] {
+  .calendar-graph rect[fill='#239a3b'] {
     fill: var(--blue);
     opacity: 0.75 !important;
   }
-  .calendar-graph rect[fill="#196127"] {
+  .calendar-graph rect[fill='#196127'] {
     fill: var(--blue);
   }
   .markdown-body h1,
@@ -372,7 +372,7 @@
     filter: invert(1);
   }
   .project-issue-body-blur {
-    background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(0deg, #000, rgba(0,0,0,0)) !important;
   }
   .project-column {
     background-color: var(--alt) !important;
@@ -441,10 +441,7 @@
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title {
     border-top-color: var(--border) !important;
   }
-  .gitako-side-bar
-    .gitako-side-bar-body
-    .gitako-settings-bar-content
-    .shadow-shelter {
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .shadow-shelter {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
@@ -460,15 +457,8 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .gitako-side-bar
-    .gitako-side-bar-body
-    .file-explorer
-    .search-input-wrapper
-    input[type="text"].form-control,
-  .gitako-side-bar-content
-    .file-explorer
-    .search-input-wrapper
-    input[type="text"].form-control {
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type='text'].form-control,
+  .gitako-side-bar-content .file-explorer .search-input-wrapper input[type='text'].form-control {
     border: 1px !important;
     border-radius: 0 !important;
   }
@@ -548,9 +538,9 @@
     border-color: var(--border) !important;
   }
   .select-menu-tab-nav.selected,
-  .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tab-nav[aria-selected='true'],
   .select-menu-tab-nav a.selected,
-  .select-menu-tab-nav a[aria-selected="true"] {
+  .select-menu-tab-nav a[aria-selected='true'] {
     border-color: var(--border) var(--border) var(--hl) !important;
     color: var(--cn) !important;
     background-color: var(--hl) !important;
@@ -637,8 +627,7 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .repository-content
-    .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
+  .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -664,12 +653,12 @@
   .graph-filter .info {
     color: var(--text) !important;
   }
-  line[stroke="#000"] {
+  line[stroke='#000'] {
     stroke: var(--border);
   }
-  text[fill="#000"],
-  text[fill="#6a737d"],
-  text[text-anchor="middle"] {
+  text[fill='#000'],
+  text[fill='#6a737d'],
+  text[text-anchor='middle'] {
     fill: var(--text);
   }
   .viz {
@@ -766,7 +755,7 @@
   .signup-plan-card:hover {
     background-color: var(--region) !important;
   }
-  div[style*="height: 1px;"] {
+  div[style*='height: 1px;'] {
     background-color: var(--border) !important;
   }
   .MarketplaceBackground-buffer {
@@ -895,11 +884,10 @@
     background-color: var(--bg) !important;
   }
   .select-menu-modal-right.details-reset.details-overlay.mb-2,
-  .select-menu
-    .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
+  .select-menu .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
     background-color: var(--alt) !important;
   }
-  .profile-rollup-wrapper + .profile-rollup-wrapper {
+  .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--border) !important;
   }
   .activity-overview-percentage {
@@ -1056,10 +1044,10 @@
   .Box-row--focus-gray.navigation-focus {
     background-color: var(--icon) !important;
   }
-  .Box-row[style*="background: rgb"] {
+  .Box-row[style*='background: rgb'] {
     background-color: var(--region) !important;
   }
-  img[src*="octocat-spinner-64.gif"] {
+  img[src*='octocat-spinner-64.gif'] {
     filter: invert(1);
   }
   .form-control.focus,
@@ -1077,7 +1065,7 @@
   .octicon:not(.text-green):not(.text-red).open {
     color: var(--green) !important;
   }
-  .octicon:not(.text-green):not(.text-red)[style="color: #6a737d;"] {
+  .octicon:not(.text-green):not(.text-red)[style='color: #6a737d;'] {
     color: var(--text-gray) !important;
   }
   .octicon:not(.text-green):not(.text-red).octicon-file {
@@ -1108,7 +1096,7 @@
   .diffstat-summary strong {
     color: var(--purple) !important;
   }
-  path[fill="#eee"] {
+  path[fill='#eee'] {
     fill: var(--icon);
   }
   .file-diff-split .empty-cell {
@@ -1194,7 +1182,7 @@
     background-color: var(--alt) !important;
   }
   .tabnav-tab[aria-current],
-  .tabnav-tab[aria-selected="true"],
+  .tabnav-tab[aria-selected=true],
   .tabnav-tab.selected {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1246,23 +1234,23 @@
   .pagination span,
   .pagination .disabled,
   .pagination .gap,
-  .pagination [aria-disabled="true"],
+  .pagination [aria-disabled=true],
   .pagination a:hover,
   .pagination em:hover,
   .pagination span:hover,
   .pagination .disabled:hover,
   .pagination .gap:hover,
-  .pagination [aria-disabled="true"]:hover {
+  .pagination [aria-disabled=true]:hover {
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
-  input[type="text"] {
+  input[type='text'] {
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  div[style*="background: linear-gradient"] {
-    background: linear-gradient(to top, #000, rgba(0, 0, 0, 0)) !important;
+  div[style*='background: linear-gradient'] {
+    background: linear-gradient(to top, #000, rgba(0,0,0,0)) !important;
   }
   .numbers-summary .octicon {
     color: var(--text) !important;
@@ -1275,7 +1263,7 @@
   .subnav-link.selected,
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
-  .UnderlineNav-item[aria-selected="true"] {
+  .UnderlineNav-item[aria-selected=true] {
     border-bottom-color: var(--blue) !important;
   }
   .SelectMenu-divider {
@@ -1298,7 +1286,7 @@
   .SelectMenu-filter {
     border-top-color: var(--border) !important;
   }
-  .SelectMenu-tab[aria-selected="true"] {
+  .SelectMenu-tab[aria-selected=true] {
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
@@ -1355,7 +1343,7 @@
     background-color: var(--hl) !important;
   }
   table.files tr.navigation-focus td,
-  table.files tr[aria-selected="true"] td {
+  table.files tr[aria-selected=true] td {
     background-color: var(--hl) !important;
   }
   table.files td {
@@ -1466,13 +1454,13 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .pagehead-tabs-item,
     .pagehead,
     .repohead.experiment-repo-nav {
       color: var(--alt) !important;
     }
-  }
+}
   .repohead .Label--outline,
   .repo-list .Label--outline {
     color: var(--text) !important;
@@ -1559,8 +1547,7 @@
   .pl-s > a {
     color: var(--green) !important;
   }
-  :not(.commit-build-statuses)
-    > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
     color: var(--text) !important;
   }
   div.commit-build-statusesgray,
@@ -1891,16 +1878,16 @@
   .js-user-status-container {
     background-color: var(--hl) !important;
   }
-  .protip > code {
+  .protip  > code {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
-  .protip > strong {
+  .protip  > strong {
     color: var(--yellow) !important;
     text-decoration: underline !important;
   }
-  .protip > svg {
+  .protip  > svg {
     fill: var(--yellow);
   }
   .Popover-message {
@@ -1929,7 +1916,7 @@
   }
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
-  .UnderlineNav-item[role="tab"][aria-selected="true"] {
+  .UnderlineNav-item[role='tab'][aria-selected='true'] {
     border-bottom-color: var(--blue) !important;
   }
   .gh-header-number {
