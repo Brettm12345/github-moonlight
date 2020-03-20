@@ -39,6 +39,8 @@ body
     c 0 0 $bg
 h1
   c $text
+mark
+  c $yellow
 svg
   c $text
 kbd
@@ -235,6 +237,8 @@ div[style*='background: linear-gradient']
   c $text
 .btn-mktg
   c $cn $border $bg
+.Header
+  c $text $border $bg
 .timeline-comment
   c $text $border $hl
   &-wrapper
@@ -244,8 +248,9 @@ div[style*='background: linear-gradient']
   &--caret
     &,
     &.current-user
-      caret 'right'
-.Header,
+      &::before,
+      &::after
+        brc $alt
 .gh-header
   background-color unset
   &-sticky.is-stuck + &-shadow
