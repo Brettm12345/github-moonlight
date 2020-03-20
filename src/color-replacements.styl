@@ -1,28 +1,27 @@
 $bgColors = {
-  gray: $alt
-  gray-light: $alt
-  blue-light: $alt
-  blue: $icon
-  gray-dark: $bg
-  gray-2: $icon
-  white: $hl
+  gray: $alt,
+  gray-light: $alt,
+  blue-light: $alt,
+  blue: $icon,
+  gray-dark: $bg,
+  gray-2: $icon,
+  white: $hl,
   pending: $purple
 }
-
 $textColors = {
-  gray-light: $textAlt
-  blue: $blue
-  gray: $text
-  gray-dark: $text
-  emphasized: $blue-light
-  green: $green
+  gray-light: $textAlt,
+  blue: $blue,
+  gray: $text,
+  gray-dark: $text,
+  emphasized: $blue-light,
+  green: $green,
   red: $red
-  blue: $blue
 }
-
 .bg-
   for $k, $v in $bgColors
-    &{$k} { c: 0 0 $v; }
+    &{$k}
+      c 0 0 $v
 .text-
   for $k, $v in $textColors
-    &{$k} { c: $v; }
+    &{$k}
+      c $v

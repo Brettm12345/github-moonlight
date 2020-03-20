@@ -1,28 +1,34 @@
 .compare-pr-placeholder
   c 0 $border $hl
-
+  p
+    c $text
 .range-editor
   c 0 $border $alt
-  &-icon { c: $faded; }
-
-.compare-pr-placeholder p { c: $text; }
-
-.select-menu-tabs { c: 0 $border; }
-
-.select-menu-tabs .select-menu-tab-nav.selected, .select-menu-tabs .select-menu-tab-nav[aria-selected="true"], .select-menu-tabs a.selected, .select-menu-tabs a[aria-selected="true"]
-  c $cn 0 $hl
-  bc $border $border $hl
-
+  &-icon
+    c $faded
+.select-menu-tabs
+  c 0 $border
+  .select-menu-tab-nav.selected,
+  .select-menu-tab-nav[aria-selected='true'],
+  a.selected,
+  a[aria-selected='true']
+    bc $border $border $hl
+    c $cn 0 $hl
 .github-pr-file span
-  &.deletion { c: 0 0 $red; }
-  &.addition { c: 0 0 $green; }
-
+  &.deletion
+    c 0 0 $red
+  &.addition
+    c 0 0 $green
 .SelectMenu
-  &-blankslate, &-loading, &-message { c: $text $border $alt; }
-
+  &-blankslate,
+  &-loading,
+  &-message
+    c $text $border $alt
 ul.comparison-list
- c 0 $border $alt
- & > li
-   c: $text $border $alt
-   em { c: $faded; }
- & > li.title { c: $text $border $hl; }
+  c 0 $border $alt
+  & > li
+    c $text $border $alt
+    em
+      c $faded
+  & > li.title
+    c $text $border $hl

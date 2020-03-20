@@ -5,11 +5,20 @@
   "author": "brettm12345",
   "license": "MIT",
   "scripts": {
-    "build": "stylus ./src/moonlight.styl",
+    "build": "stylus ./github.user.styl",
     "build:watch": "yarn build --watch"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build"
+    }
+  },
   "dependencies": {
-    "iconfonts": "^0.12.0",
     "stylus": "^0.54.7"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "stylint": "^2.0.0",
+    "stylus-supremacy": "^2.14.0"
   }
 }

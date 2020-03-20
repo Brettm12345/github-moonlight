@@ -1,132 +1,80 @@
 .cm-s-github-light
-  &.CodeMirror { c: $text $border $bg; }
-  .CodeMirror-lines { c: 0 0 $bg; }
-
-.file-commit-form--full { c: $text $border $bg; }
-
-.CodeMirror-linenumber.CodeMirror-gutter-elt { fw: 500; }
-
-.cm-s-github-light .CodeMirror-gutters, .CodeMirror-gutter.CodeMirror-linenumbers { c: $indigo $border $alt; }
-  
-
-
-.pl-c /* comment, punctuation.definition.comment, string.comment */
-  c: #7a88cf
-
-.pl-c1 /* constant, entity.name.constant, variable.other.constant, variable.language, support, meta.property-name, support.constant, support.variable, meta.module-reference, markup.raw, meta.diff.header, meta.output */,
-.pl-s .pl-v /* string variable */
-  c: #c8d3f5
-
-.pl-e /* entity */,
-.pl-en /* entity.name */
-  c: #82aaff
-
-.pl-smi /* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */,
-.pl-s .pl-s1 /* string source */
-  c: #ff757f
-
-.pl-ent /* entity.name.tag, markup.quote */
-  c: #ff757f
-
-.pl-k /* keyword, storage, storage.type */
-  c: #c099ff
-
-.pl-s .pl-pse .pl-s1 /* string punctuation.section.embedded source */,
-.pl-pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */
-  c: #86e1fc
-
-.pl-sr /* string.regexp */
-  c: #b4f9f8
-
-
-.pl-sr .pl-cce /* string.regexp constant.character.escape */
-  c: #ff98a4
-
-
-.pl-s /* string */,
-.pl-sr .pl-sre /* string.regexp source.ruby.embedded */,
-.pl-sr .pl-sra /* string.regexp string.regexp.arbitrary-repitition */
-  c: #c3e88d
-
-.pl-v /* variable */
-  c: #fca7ea
-
-.pl-smw /* sublimelinter.mark.warning */
-  c: #ffc777
-
-.pl-bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
-  c: #ff757fcc
-
-
-.pl-ii /* invalid.illegal */
-  c: #fafbfc 0  #b31d28
-
-
-.pl-c2 /* carriage-return */
-  c: #fafbfc 0 #d73a49
-
-
-.pl-c2::before /* carriage-return */
-  content: "^M"
-
-
-.pl-sr .pl-cce /* string.regexp constant.character.escape */
-  fw: bold
-  c: #ff98a4
-
-
-.pl-ml /* markup.list */
-  c: #735c0f
-
-
-.pl-mh .pl-en, /* markup.heading entity.name */
-.pl-ms /* met,.separator */
-  c: #86e1fc
-
-
-.pl-mh /* markup.heading */
-  fw: bold
-  c: #c3e88d
-
-
-.pl-mi /* markup.italic */
-  font-style: italic
-  c: #24292e
-
-
-.pl-mb /* markup.bold */
-  fw: bold
-  c: #24292e
-
-
-.pl-md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
-  c: #ff757f 0 #ff5370aa
-
-
-.pl-mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
-  c: #c3e88d 0 #77e0c6dd
-
-
-.pl-mc /* markup.changed, punctuation.definition.changed */
-  c: #c099ff 0 #86e1fcbb
-
-
-.pl-mi2 /* markup.ignored, markup.untracked */
-  /* c: #f6f8fa 0 #005cc5 */
-
-
-.pl-mdr /* meta.diff.range */
-  fw: bold
-  c: #6f42c1
-
-
-.pl-ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
-  c: #586069
-
-
-.pl-sg /* sublimelinter.gutter-mark */
-  c: #959da5
-
-
-.pl-corl /* constant.other.reference.link, string.other.link */
-  td: underline
+  .CodeMirror-gutters,
+  /.CodeMirror-gutter.CodeMirror-linenumbers
+    c $indigo $border $alt
+  &.CodeMirror
+    c $text $border $bg
+  .CodeMirror-lines
+    c 0 0 $bg
+.CodeMirror-linenumber.CodeMirror-gutter-elt
+  fw 500
+.pl-
+  &c /* comment, punctuation.definition.comment, string.comment */
+    c $indigo
+  &c1,
+  &s &v /* string variable */
+    c $text
+  &e,
+  &en /* entity.name */
+    c $blue
+  &ent,
+  &smi,
+  &s &s1 /* string source */
+    c $lightRed
+  &k /* keyword, storage, storage.type */
+    c $purpleAlt
+  &s &pse &s1,
+  &pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */
+    c $cyan
+  &sr /* string.regexp */
+    c $cyanAlt
+  &sr &cce /* string.regexp constant.character.escape */
+    c $lightRed
+  &s,
+  &sr &sre,
+  &sr &sra /* string.regexp string.regexp.arbitrary-repitition */
+    c $green
+  &v /* variable */
+    c $pink
+  &smw /* sublimelinter.mark.warning */
+    c $yellow
+  &bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
+    c $red
+  &ii /* invalid.illegal */
+    c $cn 0 $red
+  &c2 /* carriage-return */
+    c $cn 0 $red
+  &c2::before /* carriage-return */
+    content '^M'
+  &sr &cce /* string.regexp constant.character.escape */
+    c $lightRed
+    fw bold
+  &ml /* markup.list */
+    c $orange
+  &mh &en,
+  &ms /* met,.separator */
+    c $cyan
+  &mh /* markup.heading */
+    c $green
+    fw bold
+  &mi /* markup.italic */
+    c $yellow
+    font-style italic
+  &mb /* markup.bold */
+    c $cn
+    fw bold
+  &md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
+    c $red 0 $redTrans
+  &mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
+    c $green 0 $greenTrans
+  &mc /* markup.changed, punctuation.definition.changed */
+    c $purple 0 $cyanTrans
+  &mdr /* meta.diff.range */
+    c $teal
+    fw bold
+  &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
+    c $hover
+  &sg /* sublimelinter.gutter-mark */
+    c $faded
+  &corl /* constant.other.reference.link, string.other.link */
+    td underline

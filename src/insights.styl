@@ -1,29 +1,52 @@
-.Box-row--yellow { c: $text $yellow transparent; }
-.graph-filter .info { c: $text; }
-text[fill="#6a737d"] { fill: $text; }
-text[fill="#000"] { fill: $text; }
-.viz { c: $text $border $alt; }
-.viz.code-frequency { p: 8px; c: $text $border $alt; }
-.cadd { c: $green; }
-.cdel { c: $red; }
-.conversation-list-heading .inner { c: $faded; }
+.Box-row--yellow
+  c $text $yellow transparent
+.graph-filter .info
+  c $text
+line[stroke='#000']
+  stroke $border
+text
+  &[text-anchor='middle']
+    fill $text
+  &[fill='#6a737d']
+    fill $text
+  &[fill='#000']
+    fill $text
+.viz
+  c $text $border $alt
+  .code-frequency
+    c $text $border $alt
+    p 8px
+.cadd
+  c $green
+.cdel
+  c $red
 .conversation-list-heading
-  c: $faded $border
-  .inner { c: $faded; }
-.num { c: $faded; }
-relative-time { c: $faded; }
+  c $faded $border
+  .inner
+    c $faded
+.num
+  c $faded
+relative-time
+  c $faded
 .simple-conversation-list > li
-  c: 0 $border
-.graphs .dir { c: $text; }
-.code-frequency .addition { fill: $green; }
-.code-frequency .deletion { fill: $red; }
-.community-checklist .progress { c: 0 0 $region; }
-line[stroke="#000"] { stroke: $border; }
-text[text-anchor="middle"] { fill: $text; }
-table.capped-list td { c: $text $border $alt; border-color: $border i; }
-table.capped-list tr:nth-child(2n),
-table.capped-list th { c: $text $border $alt; }
-.traffic-graph-stats,
-.summary-stats li,
-.summary-stats li .num { c: $text $border $alt; }
-table.capped-list .octicon { c: $text; }
+  c 0 $border
+.graphs
+  .dir
+    c $text
+  .area
+    fill $teal
+.code-frequency
+  .addition
+    fill $green
+  .deletion
+    fill $red
+.community-checklist .progress
+  c 0 0 $region
+table.capped-list
+  td
+    border-color $border i
+    c $text $border $alt
+  tr:nth-child(2n), th
+    c $text $border $alt
+.traffic-graph-stats, .summary-stats li, .summary-stats li .num
+  c $text $border $alt

@@ -1,6 +1,16 @@
 {
   "cSpell.words": ["octicon", "pagehead", "reponav"],
   "cSpell.enabled": false,
+  "stylusSupremacy.insertNewLineAroundBlocks": false,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertColons": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertNewLineBetweenSelectors": true,
+  "stylusSupremacy.sortProperties": "alphabetical",
+  "stylusSupremacy.quoteChar": "'",
+  "stylusSupremacy.insertNewLineBeforeElse": false,
+  "stylusSupremacy.insertNewLineAroundOthers": false,
+  "stylusSupremacy.insertParenthesisAroundIfCondition": false,
   "languageStylus.useBuiltinFunctions": true,
   "languageStylus.useSeparator": true
 }

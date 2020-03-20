@@ -1,28 +1,37 @@
 // Plugin: gitako
-
 .gitako-
-  &ready .js-header-wrapper { c: 0 0 $bg; }
+  &ready .js-header-wrapper
+    c 0 0 $bg
   &toggle-show-button-wrapper.collapsed
-    c: 0 $border $hl
-    m: 1%
-    .action-icon { c: $blue; }
+    c 0 $border $hl
+    m 1%
+    .action-icon
+      c $blue
   &side-bar
-    &, ../resize-handler { c: 0 $border $border; }
+    &, ../resize-handler
+      c 0 $border $border
     & &-body
-      c: 0 $border $alt
-      brc: $border
-      .octicon { c: $blue; }
+      brc $border
+      c 0 $border $alt
+      .octicon
+        c $blue
       .gitako-settings-bar
-        &-title { btc: $border; }
-        &-content .shadow-shelter { c: 0 $border $alt; }
+        &-title
+          btc $border
+        &-content .shadow-shelter
+          c 0 $border $alt
         &, .header-row
-          c: $text $border $alt
+          c $text $border $alt
       &, ../-content
-        .meta-bar { c: $text $border $alt; }
+        .meta-bar
+          c $text $border $alt
         .file-explorer
-          .search-input-wrapper input[type="text"].form-control
-            r: 0px
-            b: 1px
-          .no-results { c: $faded; }
-          .node-item-row { c: 0 0 $hl; }
-          .node-item { c: $text $border; }
+          .search-input-wrapper input[type='text'].form-control
+            b 1px
+            r 0
+          .no-results
+            c $faded
+          .node-item
+            c $text $border
+            &-row
+              c 0 0 $hl

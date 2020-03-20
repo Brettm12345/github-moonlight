@@ -1,32 +1,39 @@
-.notifications-list-item.notification-unread { c: 0 $border $alt; }
-
+.notifications-list-item.notification-unread
+  c 0 $border $alt
 .filter-item
-  tr: background-color ease-in-out 0.2s
-  &:hover { c: 0 0 $hover; }
-  &.selected, &[aria-current], &[aria-selected=true] { c: $cn 0 $icon; }
-
-.notification-
-  &navigation.bg-white { c: 0 0 $bg; }
-  &configure-filters .octicon { c: $hover; }
-.notifications-list-item
-  & &-actions svg { fill: $text; }
+  tr background-color ease-in-out 0.2s
   &:hover
-    c: 0 0 $hl;
+    c 0 0 $hover
+  &.selected,
+  &[aria-current],
+  &[aria-selected=true]
+    c $cn 0 $icon
+.notification-
+  &navigation.bg-white
+    c 0 0 $bg
+  &configure-filters .octicon
+    c $hover
+.notifications-list-item
+  & &-actions svg
+    fill $text
+  &:hover
+    c 0 0 $hl
     .notification-list-item-actions .btn
-      tr: background-color 0.2s ease-in-out
-      &:hover { c: $cn $border $border; }
-
+      tr background-color 0.2s ease-in-out
+      &:hover
+        c $cn $border $border
 // Plugin: Notification Dropdown
 .notification-navigation .notification-configure-filters:hover .octicon
-  c: $blue
+  c $blue
 .notifications-dropdown
-  c: 0 $border $border
+  c 0 $border $border
   .notifications-list
-    mb: 0
+    mb 0
   &-arrow
-    c: 0 $alt
-  &, &-see-all
-    c: 0 $border $region
-    bt: $b
+    c 0 $alt
+  &,
+  &-see-all
+    bt $b
+    c 0 $border $region
 .thread-subscription-status
-  c 0 $border
+  c $text $border $bg
