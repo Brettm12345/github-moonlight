@@ -1,0 +1,31 @@
+.content
+  c $text
+.sidebar-menu
+  c $text $border $alt
+  h3, ul ul li
+    &:hover, & a:hover
+      c $cn $border $region
+    c $text $border $alt
+.js-current .standalone a, .sidebar-module .disable > a
+  c $cn $border $hl
+  blc $blue
+.sub-nav
+  c 0 $border
+h1, h2, h3, h4, h5, h6
+  c $text
+.sidebar-module
+  c 0 $border $hl
+pre
+  c $text $border $hl
+code
+  .p
+    c $text
+  .nt
+    c $blue
+  .s,
+  .s2
+    c $green
+  .ni
+    c $cyan
+  .na
+    c $red

@@ -6,23 +6,31 @@
   c 0 $border $alt
   &-icon
     c $faded
-.select-menu-tabs
-  c 0 $border
-  .select-menu-tab-nav.selected,
-  .select-menu-tab-nav[aria-selected='true'],
-  a.selected,
-  a[aria-selected='true']
-    bc $border $border $hl
-    c $cn 0 $hl
+.select-menu
+  &-tabs
+    c 0 $border
+    ../-tab-nav
+      &.selected, &[aria-selected='true'],
+      a.selected,
+      a[aria-selected='true']
+        bc $border $border $hl
+        c $cn 0 $hl
+.blob-code-
+  &addition
+    c 0 0 $greenTrans
+  &deletion
+    c 0 0 $redTrans
+.Progress
+  c 0 0 $icon
 .github-pr-file span
   &.deletion
     c 0 0 $red
   &.addition
     c 0 0 $green
-.SelectMenu
-  &-blankslate,
-  &-loading,
-  &-message
+.SelectMenu-
+  &blankslate,
+  &loading,
+  &message
     c $text $border $alt
 ul.comparison-list
   c 0 $border $alt

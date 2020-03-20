@@ -13,6 +13,8 @@
     c 0 0 $bg
   &configure-filters .octicon
     c $hover
+  &navigation &-configure-filters:hover .octicon
+    c $blue
 .notifications-list-item
   & &-actions svg
     fill $text
@@ -23,8 +25,6 @@
       &:hover
         c $cn $border $border
 // Plugin: Notification Dropdown
-.notification-navigation .notification-configure-filters:hover .octicon
-  c $blue
 .notifications-dropdown
   c 0 $border $border
   .notifications-list

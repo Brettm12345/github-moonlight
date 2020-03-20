@@ -21,8 +21,8 @@
 @require 'commits'
 @require 'dashboard'
 @require 'team'
+@require 'developer'
 
-$selected = selector('&.selected, &[aria-current], &[aria-selected=true]')
 $elevationMd
   s var(--elevation-md)
 ::placeholder
@@ -45,13 +45,15 @@ kbd
   c $text $border $bg
   font 14px $monoFont
   s inset 0 -1px 0 $border
+.file:target
+  @extend $elevationMd
 .description
   c $text
 .State--
   &green
-    c $cn $green $green
+    c $border $green $green
   &red
-    c $cn $red $red
+    c $border $red $red
 .notification-navigation .notification-configure-filters .octicon
   c $text
 .Box
@@ -70,12 +72,11 @@ kbd
       c 0 0 $region
 img[src*='octocat-spinner-64.gif']
   filter invert(1)
-.form-control.focus,
-.form-control:focus,
-.form-select.focus,
-.form-select:focus
-  c $cn $blue 0
-  s none
+.form
+  &-control, &-select
+    &.focus, &:focus
+      c $cn $blue 0
+      s none
 .octicon:not(.text-green):not(.text-red)
   c $text
   &.open
@@ -189,8 +190,6 @@ path[fill='#eee']
   em,
   span,
   .disabled,
-  .disabled,
-  .gap,
   .gap,
   [aria-disabled=true]
     &,
@@ -207,7 +206,7 @@ div[style*='background: linear-gradient']
   c $text 0 $icon
 .UnderlineNav-item
   /.subnav-link.selected,
-  {$selected}
+  &.selected, &[aria-current], &[aria-selected=true]
     bbc $blue
 .SelectMenu-
   &divider
@@ -570,9 +569,10 @@ tt
 .blob-num
   c $hover $border $alt
   fw 600
-.blob-expanded .blob-code,
-.blob-expanded .blob-num
-  c 0 $border $alt
+.blob-expanded
+  .blob-
+    &code, &num
+      c 0 $border $alt
 .contrib-person path
   fill $orange
 {selector('.menu-item', '&.selected, &[aria-current]', '&:before')}
@@ -610,10 +610,9 @@ tt
   caret 'bottom'
   caret 'top'
   caret 'left'
-.UnderlineNav-item.selected,
-.UnderlineNav-item[aria-current],
-.UnderlineNav-item[role='tab'][aria-selected='true']
-  bbc $blue
+.UnderlineNav-item
+  &.selected, &[aria-current], &[role='tab'][aria-selected='true']
+    bbc $blue
 .gh-header-number
   c $orange
   fw 400
