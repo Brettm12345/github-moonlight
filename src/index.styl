@@ -7,6 +7,8 @@
 @require 'markdown'
 @require 'plugins'
 @require 'color-replacements'
+@require 'pull-requests'
+@require 'actions'
 
 $selected = selector('&.selected, &[aria-current], &[aria-selected=true]')
 
@@ -412,6 +414,7 @@ code, pre, tt { fn: monospace; }
   &.deletion { c: 0 0 $red; }
   &.addition { c: 0 0 $green; }
 .protip
+  & > code { c: $text $border $hl; }
   & > strong { c: $yellow; td: underline; }
   & > svg { fill: $yellow; }
 .Popover-message { caret: 'top'; }

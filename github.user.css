@@ -85,6 +85,9 @@
   .repository-lang-stats-graph {
     border-color: var(--border) !important;
   }
+  *::placeholder {
+    color: var(--faded) !important;
+  }
   .notifications-list-item.notification-unread {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -107,7 +110,7 @@
   .notification-configure-filters .octicon {
     color: var(--hover) !important;
   }
-  .notifications-list-item .notification-list-item-actions svg {
+  .notifications-list-item .notifications-list-item-actions svg {
     fill: var(--text);
   }
   .notifications-list-item:hover {
@@ -139,6 +142,28 @@
   }
   .thread-subscription-status {
     border-color: var(--border) !important;
+  }
+  .cm-s-github-light.CodeMirror {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .cm-s-github-light .CodeMirror-lines {
+    background-color: var(--bg) !important;
+  }
+  .file-commit-form--full {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .CodeMirror-linenumber.CodeMirror-gutter-elt {
+    font-weight: 500 !important;
+  }
+  .cm-s-github-light .CodeMirror-gutters,
+  .CodeMirror-gutter.CodeMirror-linenumbers {
+    color: var(--indigo) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
   }
   .pl-c {
     color: #7a88cf !important;
@@ -447,6 +472,60 @@
   }
   .text-emphasized {
     color: var(--blue-light) !important;
+  }
+  .compare-pr-placeholder {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .range-editor {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .range-editor-icon {
+    color: var(--faded) !important;
+  }
+  .compare-pr-placeholder p {
+    color: var(--text) !important;
+  }
+  .select-menu-tabs {
+    border-color: var(--border) !important;
+  }
+  .select-menu-tabs .select-menu-tab-nav.selected,
+  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tabs a.selected,
+  .select-menu-tabs a[aria-selected="true"] {
+    color: var(--cn) !important;
+    background-color: var(--hl) !important;
+    border-color: var(--border) var(--border) var(--hl) !important;
+  }
+  .SelectMenu-blankslate,
+  .SelectMenu-loading,
+  .SelectMenu-message {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  ul.comparison-list {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  ul.comparison-list > li {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  ul.comparison-list > li em {
+    color: var(--faded) !important;
+  }
+  ul.comparison-list > li.title {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
   }
   .select-menu-modal {
     box-shadow: var(--elevation-md) !important;
@@ -1378,6 +1457,11 @@
   }
   .github-pr-file span.addition {
     background-color: var(--green) !important;
+  }
+  .protip > code {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
   }
   .protip > strong {
     color: var(--yellow) !important;
