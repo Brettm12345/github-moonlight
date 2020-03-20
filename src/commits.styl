@@ -1,0 +1,34 @@
+.commit-group-title .octicon-git-commit { c: $text; }
+.commits-listing:before { c: 0 0 $hl; }
+.dropdown-signed-commit .dropdown-menu:after { display: none; }
+.signed-commit
+  &-header
+    c: 0 0 $bg
+  &-header, &-badge.verified
+    c: $green $green
+    fs: 16px
+.commit-sha { c: $yellow $border $hl; }
+.commit-ref { c: $text $border $bg; fw: 500; ff: monospace; }
+.commit
+  & &-title, &-group-title
+    &, a { c: $text; }
+  &-tease
+    c: $blue $border $alt
+    &-sha { c: $blue; }
+    &-contributors
+      c: 0 0 $hover
+      bt: $b
+.commits
+  blockquote { c: $text; }
+  &-list-item.navigation-focus { c: 0 0 $hover; }
+.full-commit
+  c: $blue $border $alt
+  p.commit-title { c: $blue; }
+  .sha-block
+    & > .sha { c: $blue; }
+    fs: 14px
+    c: $faded
+    fw: 500
+  .commit-meta { c: 0 $border $hl; }
+.commit-author-section { c: $blue; }
+.file-commit-form--full { c: $bg; }
