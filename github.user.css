@@ -8,7 +8,7 @@
 @supportURL   https://github.com/brettm12345/github-moonlight/issues
 @updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
 @var text ui_font "Custom ui font" "Inter V"
-@var text mono_font "Custom $monoFont font" "$monoFont"
+@var text mono_font "Custom $monoFont font" "monospace"
 @var color alt "Alternative Background" #1e2030
 @var color bg "Background Color" #191b28
 @var color blue "Blue" #82aaff
