@@ -30,8 +30,17 @@ $elevationMd
 *
   sbc $sb $bg
   sbw thin
+body
+  c $text 0 $bg
+  fn 'Inter v'
+  fs 14px
+  lh 1.8
+  &.page-responsive.pagehead
+    c 0 0 $bg
+h1
+  c $text
 svg
-  color $text
+  c $text
 kbd
   c $text $border $bg
   font 14px monospace
@@ -58,9 +67,9 @@ img[src*='octocat-spinner-64.gif']
 .form-control:focus,
 .form-select.focus,
 .form-select:focus
-  bs none
   c $cn $blue 0
-.octicon
+  s none
+.octicon:not(.text-green):not(.text-red)
   c $text
   &.open
     c $green
@@ -232,26 +241,30 @@ div[style*='background: linear-gradient']
   &-meta
     c $text $border
 table.files
-  tr.navigation-focus,
-  tr[aria-selected=true]
-    td
-      c 0 0 $hl
+  c $text $border $hl
+  tr
+    &.navigation-focus,
+    &[aria-selected=true]
+      td
+        c 0 0 $hl
   td
     c 0 $border
-    .icon .octicon-file-directory
-      c $blue
-    .age,
-    .icon
+    &.age
       c $text
+    &.icon
+      c $text
+      .octicon-file-directory
+        c $blue
 .merge-pr-more-commits,
 .status-meta,
-.TimelineItem-body
-  c $faded
-.TimelineItem:before
-  c 0 0 $border
-.TimelineItem-badge,
-.TimelineItem--condensed .TimelineItem-badge
-  c $hover 0 $bg
+.TimelineItem
+  &:before
+    c 0 0 $border
+  &-badge,
+  &--condensed &-badge
+    c $hover 0 $bg
+  &-body
+    c $faded
 .border,
 .border-gray-dark,
 .rgh-collaborator
@@ -265,15 +278,6 @@ table.files
   &:hover
     bgi none
     c 0 0 $region
-body
-  c $text 0 $bg
-  fn 'Inter v'
-  fs 14px
-  lh 1.8
-  &.page-responsive.pagehead
-    c 0 0 $bg
-h1
-  c $text
 .auth-form-body
   c $text $border $alt
 .user-profile-nav,
@@ -289,7 +293,7 @@ div.listgroup-item
   &:focus,
   &:hover
     c $blue
-  color $blue i
+  c $blue
   &.selected
     bc $hl $border transparent
     c $blue 0 $bg
@@ -318,9 +322,10 @@ div.listgroup-item
     caret-color $blue
   &:focus
     c 0 0 $hl
-.form-control,
-.form-select
-  c $cn $border $alt
+.form
+  &-control,
+  &-select
+    c $cn $border $alt
 .flash
   c $cn $border $bg
   &-warn
@@ -338,10 +343,11 @@ div.listgroup-item
       c 0 0 $hover
     &.selected
       c $blue 0 $hl
-.boxed-group-inner,
-.boxed-group .heading,
-.boxed-group > h3
-  c 0 $border $alt
+.boxed-group
+  &-inner,
+  & .heading,
+  & > h3
+    c 0 $border $alt
 .rule,
 hr
   bb $b
@@ -595,6 +601,8 @@ tt
 .Popover-message
   c $text
   caret 'bottom'
+  caret 'top'
+  caret 'left'
 .UnderlineNav-item.selected,
 .UnderlineNav-item[aria-current],
 .UnderlineNav-item[role='tab'][aria-selected='true']

@@ -3,7 +3,8 @@
 .signed-commit
   &-header
     c 0 0 $bg
-  &-header, &-badge.verified
+  &-header,
+  &-badge.verified
     c $green $green
     fs 16px
 .commit
@@ -15,12 +16,14 @@
     c $text
   &-ref
     c $text $border $bg
-    ff monospace
+    fn monospace
     fw 500
   &-sha
     c $yellow $border $hl
-  & &-title, &-group-title
-    &, a
+  & &-title,
+  &-group-title
+    &,
+    a
       c $text
   &-tease
     c $blue $border $alt

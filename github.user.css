@@ -23,7 +23,7 @@
     --elevation-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     --faded: #7f85a3;
     --green: #c3e88d;
-    --green-trans: rgba(119,224,198,0.867);
+    --green-trans: rgba(119,224,198,0.2);
     --hl: #212337;
     --hover: #444a73;
     --icon: #2f334d;
@@ -35,7 +35,7 @@
     --purple: #c597f9;
     --purple-alt: #c099ff;
     --red: #ff5370;
-    --red-trans: rgba(255,83,112,0.667);
+    --red-trans: rgba(255,83,112,0.2);
     --region: #383e5c;
     --sb: rgba(130,139,184,0.188);
     --teal: #4fd6be;
@@ -659,7 +659,6 @@
     background-color: var(--region) !important;
   }
   table.capped-list td {
-    border-color: var(--border) i;
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -766,7 +765,7 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
-    ff: monospace;
+    font-family: monospace !important;
     font-weight: 500 !important;
   }
   .commit-sha {
@@ -839,6 +838,10 @@
   .activity-overview-label {
     fill: var(--faded);
   }
+  .ajax-pagination-form .ajax-pagination-btn {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
   .team-left-column.bg-white {
     background-color: var(--alt) !important;
   }
@@ -853,8 +856,21 @@
     scrollbar-color: var(--sb) var(--bg) !important;
     scrollbar-width: thin !important;
   }
+  body {
+    color: var(--text) !important;
+    background-color: var(--bg) !important;
+    font-family: 'Inter v' !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+  body.page-responsive.pagehead {
+    background-color: var(--bg) !important;
+  }
+  h1 {
+    color: var(--text) !important;
+  }
   svg {
-    color: var(--text);
+    color: var(--text) !important;
   }
   kbd {
     color: var(--text) !important;
@@ -895,21 +911,21 @@
   .form-control:focus,
   .form-select.focus,
   .form-select:focus {
-    bs: none;
     color: var(--cn) !important;
     border-color: var(--blue) !important;
+    box-shadow: none !important;
   }
-  .octicon {
+  .octicon:not(.text-green):not(.text-red) {
     color: var(--text) !important;
     transform: scale(1.1);
   }
-  .octicon.open {
+  .octicon:not(.text-green):not(.text-red).open {
     color: var(--green) !important;
   }
-  .octicon[style='color: #6a737d;'] {
+  .octicon:not(.text-green):not(.text-red)[style='color: #6a737d;'] {
     color: var(--text-gray) !important;
   }
-  .octicon.octicon-file {
+  .octicon:not(.text-green):not(.text-red).octicon-file {
     color: var(--indigo) !important;
   }
   .muted-link {
@@ -1178,6 +1194,11 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
   }
+  table.files {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
   table.files tr.navigation-focus td,
   table.files tr[aria-selected=true] td {
     background-color: var(--hl) !important;
@@ -1185,25 +1206,33 @@
   table.files td {
     border-color: var(--border) !important;
   }
-  table.files td .icon .octicon-file-directory {
-    color: var(--blue) !important;
-  }
-  table.files td .age,
-  table.files td .icon {
+  table.files td.age {
     color: var(--text) !important;
   }
-  .merge-pr-more-commits,
-  .status-meta,
-  .TimelineItem-body {
-    color: var(--faded) !important;
+  table.files td.icon {
+    color: var(--text) !important;
   }
+  table.files td.icon .octicon-file-directory {
+    color: var(--blue) !important;
+  }
+  .merge-pr-more-commits:before,
+  .status-meta:before,
   .TimelineItem:before {
     background-color: var(--border) !important;
   }
+  .merge-pr-more-commits-badge,
+  .status-meta-badge,
   .TimelineItem-badge,
+  .merge-pr-more-commits--condensed .merge-pr-more-commits-badge,
+  .status-meta--condensed .status-meta-badge,
   .TimelineItem--condensed .TimelineItem-badge {
     color: var(--hover) !important;
     background-color: var(--bg) !important;
+  }
+  .merge-pr-more-commits-body,
+  .status-meta-body,
+  .TimelineItem-body {
+    color: var(--faded) !important;
   }
   .border,
   .border-gray-dark,
@@ -1224,19 +1253,6 @@
     background-image: none !important;
     background-color: var(--region) !important;
   }
-  body {
-    color: var(--text) !important;
-    background-color: var(--bg) !important;
-    font-family: 'Inter v' !important;
-    font-size: 14px !important;
-    line-height: 1.8 !important;
-  }
-  body.page-responsive.pagehead {
-    background-color: var(--bg) !important;
-  }
-  h1 {
-    color: var(--text) !important;
-  }
   .auth-form-body {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1256,7 +1272,7 @@
     border-color: var(--border) !important;
   }
   .reponav-item {
-    color: var(--blue) i;
+    color: var(--blue) !important;
   }
   .reponav-item.selected {
     border-color: var(--blue) var(--border) transparent !important;
@@ -1753,6 +1769,18 @@
   }
   .Popover-message::after {
     border-bottom-color: var(--alt);
+  }
+  .Popover-message::before {
+    border-top-color: var(--border);
+  }
+  .Popover-message::after {
+    border-top-color: var(--alt);
+  }
+  .Popover-message::before {
+    border-left-color: var(--border);
+  }
+  .Popover-message::after {
+    border-left-color: var(--alt);
   }
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],

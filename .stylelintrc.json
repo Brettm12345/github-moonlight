@@ -12,7 +12,6 @@
     "error": true
   },
   "cssLiteral": "never",
-  "customProperties": [],
   "depthLimit": {
     "expect": 3,
     "error": true
@@ -40,7 +39,7 @@
   "maxErrors": false,
   "maxWarnings": false,
   "mixed": false,
-  "mixins": [
+  "customProperties": [
     "c",
     "caret",
     "bgi",
