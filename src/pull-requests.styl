@@ -32,6 +32,9 @@
   &loading,
   &message
     c $text $border $alt
+.status-meta,
+.merge-pr-more-commits
+  c $faded
 ul.comparison-list
   c 0 $border $alt
   & > li
@@ -40,3 +43,27 @@ ul.comparison-list
       c $faded
   & > li.title
     c $text $border $hl
+.branch-
+  &action-state-clean
+    ../action-body::before
+      brc: $hl
+  &action-state-clean &action-icon,
+  &action-item-icon
+    c $border 0 $green
+    .octicon
+      fill $border
+  &infobar
+    c 0 $border $alt
+  &action-body
+    b 0
+    c 0 $border $hl
+    caret 'right'
+    .merge-
+      &branch-form,
+      &message
+        c 0 $border $alt
+.merge-status-
+  &list
+    c 0 $border
+  &item
+    c 0 $border $alt

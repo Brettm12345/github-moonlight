@@ -479,16 +479,6 @@ div.commit-build-statuses,
   c 0 0 $hl
   h2
     c $text
-.branch-infobar
-  c 0 $border $alt
-.branch-action-body
-  b 0
-  c 0 0 $hl
-  caret 'right'
-  .merge-
-    &branch-form,
-    &message
-      c 0 $border $alt
 .repo-list
   p 0 12px
   &,
@@ -589,11 +579,6 @@ tt
   fill $orange
 {selector('.menu-item', '&.selected, &[aria-current]', '&:before')}
   c 0 0 $blue
-.merge-status-
-  &list
-    c 0 $border
-  &item
-    c 0 $border $bg
 .CheckRun
   c 0 $border $alt
   &-header
