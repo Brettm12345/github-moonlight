@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.5.7
+@version      0.6.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -1082,17 +1082,17 @@
     border-color: var(--blue) !important;
     box-shadow: none !important;
   }
-  .octicon:not(.text-green):not(.text-red) {
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check) {
     color: var(--text) !important;
     transform: scale(1.1);
   }
-  .octicon:not(.text-green):not(.text-red).open {
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check).open {
     color: var(--green) !important;
   }
-  .octicon:not(.text-green):not(.text-red)[style='color: #6a737d;'] {
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check)[style='color: #6a737d;'] {
     color: var(--text-gray) !important;
   }
-  .octicon:not(.text-green):not(.text-red).octicon-file {
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check).octicon-file {
     color: var(--indigo) !important;
   }
   .muted-link {
@@ -1126,6 +1126,16 @@
   .file-diff-split .empty-cell {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .blob-code-addition .x {
+    background-color: var(--teal) !important;
+  }
+  .blob-code-deletion .x {
+    background-color: var(--red) !important;
+  }
+  .blob-code-addition .x,
+  .blob-code-deletion .x {
+    color: var(--border) !important;
   }
   .blob-num-addition {
     color: var(--green) !important;
@@ -1435,9 +1445,15 @@
   }
   .user-profile-nav,
   .topic-tag {
+    border: 1px solid var(--border) !important;
+    transition: background-color 0.1s ease-in-out !important;
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .user-profile-nav-link:hover,
+  .topic-tag-link:hover {
+    background-color: var(--region) !important;
   }
   .user-profile-nav-action,
   .topic-tag-action {

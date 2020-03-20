@@ -85,7 +85,7 @@ img[src*='octocat-spinner-64.gif']
     &:focus
       c $cn $blue 0
       s none
-.octicon:not(.text-green):not(.text-red)
+.octicon:not(.text-green):not(.text-red):not(.octicon-check)
   c $text
   &.open
     c $green
@@ -117,6 +117,14 @@ path[fill='#eee']
   fill $icon
 .file-diff-split .empty-cell
   c 0 $border $alt
+.blob-code-
+  &addition .x
+    c 0 0 $teal
+  &deletion .x
+    c 0 0 $red
+  &addition, &deletion
+    .x
+      c $border
 .blob-
   for $val in num code
     &{$val}-addition
@@ -305,6 +313,10 @@ table.files
   c $text $border $alt
 .user-profile-nav,
 .topic-tag
+  b $b
+  &-link:hover
+    c 0 0 $region
+  tr background-color 0.1s ease-in-out
   c $text $border $alt
   &-action
     c $text $border $bg
