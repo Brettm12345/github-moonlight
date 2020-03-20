@@ -609,6 +609,14 @@
     background-color: var(--bg) !important;
     box-shadow: inset 0 -1px 0 var(--border) !important;
   }
+  .form-control.focus,
+  .form-control:focus,
+  .form-select.focus,
+  .form-select:focus {
+    color: var(--cn) !important;
+    border-color: var(--blue) !important;
+    bs: none;
+  }
   .octicon {
     transform: scale(1.1);
   }
@@ -622,7 +630,7 @@
   .diffstat-block-added {
     background-color: var(--green) !important;
   }
-  .diffstat-block- kdeleted {
+  .diffstat-block-deleted {
     background-color: var(--red) !important;
   }
   .diffstat-summary {
@@ -630,6 +638,9 @@
   }
   .diffstat-summary strong {
     color: var(--purple) !important;
+  }
+  path[fill="#eee"] {
+    fill: var(--icon);
   }
   .file-diff-split .empty-cell {
     border-color: var(--border) !important;

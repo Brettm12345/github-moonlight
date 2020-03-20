@@ -26,6 +26,7 @@ kbd
   c: $text $border $bg
   s: inset 0 -1px 0 $border
 
+.form-control.focus, .form-control:focus, .form-select.focus, .form-select:focus { c: $cn $blue 0; bs: none; }
 .octicon { transform: scale(1.1); }
 
 .profile-rollup-content li.d-block.mt-1.py-1,
@@ -36,10 +37,12 @@ kbd
   &block-
     &neutral { c: 0 0 $sb; }
     &added { c: 0 0 $green; }
-    kdeleted { c: 0 0 $red; }
+    &deleted { c: 0 0 $red; }
   &summary
     c: $text
     strong { c: $purple; }
+
+path[fill="#eee"] { fill: $icon; }
 
 .file-diff-split .empty-cell { c: 0 $border $alt; }
 for $val in num code
