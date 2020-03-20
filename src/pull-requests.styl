@@ -13,6 +13,10 @@
   c $cn 0 $hl
   bc $border $border $hl
 
+.github-pr-file span
+  &.deletion { c: 0 0 $red; }
+  &.addition { c: 0 0 $green; }
+
 .SelectMenu
   &-blankslate, &-loading, &-message { c: $text $border $alt; }
 

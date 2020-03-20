@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.1.0
+@version      0.1.5
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -72,10 +72,13 @@
   .branch-action-item + .mergeability-details,
   .social-count,
   .timeline-new-comment .previewable-comment-form .comment-body,
+  .listgroup,
   .dashboard-rollup-items .body,
+  .saved-reply-form,
   .Box-body,
   .profile-rollup-summarized+.profile-rollup-summarized,
   .file-diff-split .blob-code + .blob-num,
+  .orgs-help-shelf,
   .ScreenshotCarousel,
   .border-top,
   .border-bottom,
@@ -124,18 +127,21 @@
     border-color: var(--border) !important;
     background-color: var(--border) !important;
   }
-  .notification-dropdown {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+  .notification-navigation .notification-configure-filters:hover .octicon {
+    color: var(--blue) !important;
   }
-  .notification-dropdown .notifications-list {
+  .notifications-dropdown {
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
+  .notifications-dropdown .notifications-list {
     margin-bottom: 0 !important;
   }
-  .notification-dropdown-arrow {
+  .notifications-dropdown-arrow {
     border-color: var(--alt) !important;
   }
-  .notification-dropdown,
-  .notification-dropdown-see-all {
+  .notifications-dropdown,
+  .notifications-dropdown-see-all {
     border-color: var(--border) !important;
     background-color: var(--region) !important;
     border-top: 1px solid var(--border) !important;
@@ -533,6 +539,12 @@
     background-color: var(--hl) !important;
     border-color: var(--border) var(--border) var(--hl) !important;
   }
+  .github-pr-file span.deletion {
+    background-color: var(--red) !important;
+  }
+  .github-pr-file span.addition {
+    background-color: var(--green) !important;
+  }
   .SelectMenu-blankslate,
   .SelectMenu-loading,
   .SelectMenu-message {
@@ -696,6 +708,142 @@
   div[style*="height: 1px;"] {
     background-color: var(--border) !important;
   }
+  .MarketplaceBackground-buffer {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .MarketplaceBackground-reccomendations img {
+    filter: invert(1);
+  }
+  .marketplace-plan-emphasis {
+    color: var(--text) !important;
+  }
+  .dropdown-menu {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .dropdown-menu:after {
+    border-bottom-color: var(--border);
+  }
+  .dropdown-item {
+    color: var(--text) !important;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
+  }
+  .issue-keyword {
+    color: var(--purple) !important;
+  }
+  .pinned-issue-item {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .commit-group-title .octicon-git-commit {
+    color: var(--text) !important;
+  }
+  .commits-listing:before {
+    background-color: var(--hl) !important;
+  }
+  .dropdown-signed-commit .dropdown-menu:after {
+    display: none;
+  }
+  .signed-commit-header {
+    background-color: var(--bg) !important;
+  }
+  .signed-commit-header,
+  .signed-commit-badge.verified {
+    color: var(--green) !important;
+    border-color: var(--green) !important;
+    font-size: 16px !important;
+  }
+  .commit-sha {
+    color: var(--yellow) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .commit-ref {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+    font-weight: 500 !important;
+    ff: monospace;
+  }
+  .commit .commit-title,
+  .commit-group-title,
+  .commit .commit-title a,
+  .commit-group-title a {
+    color: var(--text) !important;
+  }
+  .commit-tease {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .commit-tease-sha {
+    color: var(--blue) !important;
+  }
+  .commit-tease-contributors {
+    background-color: var(--hover) !important;
+    border-top: 1px solid var(--border) !important;
+  }
+  .commits blockquote {
+    color: var(--text) !important;
+  }
+  .commits-list-item.navigation-focus {
+    background-color: var(--hover) !important;
+  }
+  .full-commit {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .full-commit p.commit-title {
+    color: var(--blue) !important;
+  }
+  .full-commit .sha-block {
+    font-size: 14px !important;
+    color: var(--faded) !important;
+    font-weight: 500 !important;
+  }
+  .full-commit .sha-block > .sha {
+    color: var(--blue) !important;
+  }
+  .full-commit .commit-meta {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .commit-author-section {
+    color: var(--blue) !important;
+  }
+  .file-commit-form--full {
+    color: var(--bg) !important;
+  }
+  .select-menu.select-menu-modal-right.details-reset.details-overlay.mb-2,
+  .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
+    background-color: var(--alt) !important;
+  }
+  .profile-rollup-wrapper+.profile-rollup-wrapper {
+    border-top: 1px solid var(--border) !important;
+  }
+  .details-reset:not(#repo-meta-edit) summary {
+    background-color: var(--alt) !important;
+  }
+  .activity-overview-percentage {
+    fill: var(--cn);
+  }
+  .activity-overview-label {
+    fill: var(--faded);
+  }
+  .team-left-column.bg-white {
+    background-color: var(--alt) !important;
+  }
+  .orgs-help-item-octicon {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
   .select-menu-modal {
     box-shadow: var(--elevation-md) !important;
   }
@@ -713,6 +861,31 @@
     background-color: var(--bg) !important;
     box-shadow: inset 0 -1px 0 var(--border) !important;
   }
+  .notification-navigation .notification-configure-filters .octicon {
+    color: var(--text) !important;
+  }
+  .Box--responsive,
+  .Boxrow--unread {
+    box-shadow: inset 2px 0 0 var(--blue) !important;
+  }
+  .Box-header {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .Box-header--blue {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .Box-row {
+    border-top: 1px solid var(--border) !important;
+  }
+  .Box-row--focus-gray.navigation-focus {
+    background-color: var(--icon) !important;
+  }
+  .Box-row[style*="background: rgb"] {
+    background-color: var(--region) !important;
+  }
   img[src*="octocat-spinner-64.gif"] {
     filter: invert(1);
   }
@@ -726,6 +899,9 @@
   }
   .octicon {
     transform: scale(1.1);
+  }
+  .muted-link:hover {
+    color: var(--blue) !important;
   }
   .profile-rollup-content li.d-block.mt-1.py-1,
   .js-recent-activity-container > div > div {
@@ -869,10 +1045,15 @@
   .select-menu-text-filter:last-child {
     border-color: var(--border) !important;
   }
+  .pagination .current,
+  .pagination [aria-current] {
+    color: var(--cn) !important;
+    background-color: var(--icon) !important;
+  }
   .pagination .current:hover,
   .pagination [aria-current]:hover {
     color: var(--cn) !important;
-    background-color: var(--region) !important;
+    background-color: var(--hover) !important;
   }
   .pagination a,
   .pagination em,
@@ -888,17 +1069,6 @@
   .pagination [aria-disabled=true]:hover {
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
-  }
-  .dropdown-menu:after {
-    border-bottom-color: var(--border);
-  }
-  .dropdown-item {
-    color: var(--text) !important;
-  }
-  .dropdown-item:hover,
-  .dropdown-item:focus {
-    color: var(--cn) !important;
-    background-color: var(--region) !important;
   }
   input[type="text"] {
     color: var(--cn) !important;
@@ -950,45 +1120,12 @@
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
-  .Box-row--focus-gray.navigation-focus {
-    background-color: var(--icon) !important;
-  }
-  .commit-group-title .octicon-git-commit {
-    color: var(--text) !important;
-  }
-  .commits-listing:before {
-    background-color: var(--hl) !important;
-  }
   .TimelineItem--condensed .TimelineItem-badge {
     width: 30px !important;
     height: 30px !important;
   }
-  .dropdown-signed-commit .dropdown-menu:after {
-    display: none;
-  }
-  .signed-commit-header {
-    background-color: var(--bg) !important;
-  }
-  .signed-commit-header,
-  .signed-commit-badge.verified {
-    color: var(--green) !important;
-    border-color: var(--green) !important;
-    font-size: 16px !important;
-  }
   .TableObject-item--primary {
     color: var(--text) !important;
-  }
-  .commit-sha {
-    color: var(--yellow) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .commit-ref {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
-    font-weight: 500 !important;
-    ff: monospace;
   }
   .btn-mktg {
     color: var(--cn) !important;
@@ -1046,11 +1183,6 @@
   table.files td .icon {
     color: var(--text) !important;
   }
-  .dropdown-menu {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
   .merge-pr-more-commits,
   .status-meta,
   .TimelineItem-body {
@@ -1073,19 +1205,12 @@
   .rgh-collaborator {
     border: 1px solid var(--border) !important;
   }
-  .Box-row[style*="background: rgb"] {
-    background-color: var(--region) !important;
-  }
-  .Box-row,
-  .profile-rollup-wrapper+.profile-rollup-wrapper {
-    border-top: 1px solid var(--border) !important;
-  }
   .btn {
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
+    background-image: none;
     transition: background-color ease-in-out 0.1s;
-    background: none !important;
   }
   .btn.btn-sm {
     background-color: var(--alt) !important;
@@ -1104,11 +1229,26 @@
   body.page-responsive.pagehead {
     background-color: var(--bg) !important;
   }
+  h1 {
+    color: var(--text) !important;
+  }
+  .auth-form-body {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
   .user-profile-nav,
   .topic-tag {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .access-token {
+    border-bottom-color: var(--border) !important;
+  }
+  div.listgroup-item {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
   }
   .reponav-item {
     color: var(--blue) !important;
@@ -1247,10 +1387,6 @@
   body body .link-gray-dark:hover {
     text-decoration: underline !important;
   }
-  .pinned-issue-item {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
   .access-form-wrapper {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -1293,6 +1429,10 @@
     border-right: 1px solid var(--border) !important;
   }
   .breadcrumb {
+    color: var(--blue) !important;
+  }
+  .breadcrumb-item-selected,
+  .breadcrumb-item[aria-current] {
     color: var(--blue) !important;
   }
   .breadcrumb strong.final-path {
@@ -1418,31 +1558,7 @@
   .mini-repo-list-item {
     border-top: 1px solid var(--border) !important;
   }
-  .commit .commit-title,
-  .commit-group-title,
-  .commit .commit-title a,
-  .commit-group-title a {
-    color: var(--text) !important;
-  }
-  .commit-tease {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .commit-tease-sha {
-    color: var(--blue) !important;
-  }
-  .commit-tease-contributors {
-    background-color: var(--hover) !important;
-    border-top: 1px solid var(--border) !important;
-  }
   .navigation-focus {
-    background-color: var(--hover) !important;
-  }
-  .commits blockquote {
-    color: var(--text) !important;
-  }
-  .commits-list-item.navigation-focus {
     background-color: var(--hover) !important;
   }
   .reponav-item:focus,
@@ -1477,15 +1593,6 @@
     color: var(--blue) !important;
     background-color: var(--border) !important;
   }
-  .Box-header {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .Box-header--blue {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
   *:not(code) .Box {
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
@@ -1497,29 +1604,6 @@
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
     border-radius: 6px !important;
-  }
-  .full-commit {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .full-commit p.commit-title {
-    color: var(--blue) !important;
-  }
-  .full-commit .sha-block {
-    font-size: 14px !important;
-    color: var(--faded) !important;
-    font-weight: 500 !important;
-  }
-  .full-commit .sha-block > .sha {
-    color: var(--blue) !important;
-  }
-  .full-commit .commit-meta {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .commit-author-section {
-    color: var(--blue) !important;
   }
   .tabnav {
     border-bottom: 1px solid var(--border) !important;
@@ -1556,9 +1640,6 @@
   .note,
   .help {
     color: var(--blue) !important;
-  }
-  .file-commit-form--full {
-    color: var(--bg) !important;
   }
   .application-main .flex-wrap {
     background-color: transparent !important;
@@ -1643,9 +1724,6 @@
     color: var(--cn) !important;
     background-color: var(--region) !important;
   }
-  .issue-keyword {
-    color: var(--purple) !important;
-  }
   .diffbar {
     background-color: var(--bg) !important;
   }
@@ -1660,12 +1738,6 @@
   }
   .js-user-status-container {
     background-color: var(--hl) !important;
-  }
-  .github-pr-file span.deletion {
-    background-color: var(--red) !important;
-  }
-  .github-pr-file span.addition {
-    background-color: var(--green) !important;
   }
   .protip > code {
     color: var(--text) !important;
@@ -1692,9 +1764,6 @@
   .UnderlineNav-item[aria-current],
   .UnderlineNav-item[role="tab"][aria-selected="true"] {
     border-bottom-color: var(--blue) !important;
-  }
-  .Box--responsive .Box-row--unread {
-    box-shadow: inset 2px 0 0 var(--blue) !important;
   }
   .gh-header-number {
     color: var(--orange) !important;
@@ -1737,16 +1806,6 @@
   }
   .content.p-4.text-center.rounded-1.border.border-gray-light {
     background-color: var(--alt) !important;
-  }
-  .MarketplaceBackground-buffer {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .MarketplaceBackground-reccomendations img {
-    filter: invert(1);
-  }
-  .marketplace-plan-emphasis {
-    color: var(--text) !important;
   }
 }
 @-moz-document domain('gist.github.com') {
