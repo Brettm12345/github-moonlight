@@ -47,6 +47,8 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" width="100%" />
 * Todo
   * [X] Add screenshots to readme
+  * [X] Add styles for actions
+  * [X] Add styles for insights
   * [ ] Finish theming pull request creation
   * [ ] Setup a usercss with user configurable variables
   * [ ] Add badges to readme.org
