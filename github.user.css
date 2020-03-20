@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.4.5
+@version      0.4.6
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -43,34 +43,34 @@
 @preprocessor uso
 ==/UserStyle== */
 :root {
-  --alt: /*[[alt]]*/;
-  --bg: /*[[bg]]*/;
-  --blue: /*[[blue]]*/;
-  --blue-light: /*[[blue-light]]*/;
-  --border: /*[[border]]*/;
-  --cn: /*[[cn]]*/;
-  --faded: /*[[faded]]*/;
-  --green: /*[[green]]*/;
-  --green-trans: /*[[green-trans]]*/;
-  --hl: /*[[hl]]*/;
-  --hover: /*[[hover]]*/;
-  --icon: /*[[icon]]*/;
-  --indigo: /*[[indigo]]*/;
-  --mono-font: /*[[mono_font]]*/;
-  --orange: /*[[orange]]*/;
-  --placeholder: /*[[placeholder]]*/;
-  --purple: /*[[purple]]*/;
-  --red: /*[[red]]*/;
-  --red-trans: /*[[red-trans]]*/;
-  --region: /*[[region]]*/;
-  --sb: /*[[sb]]*/;
-  --teal: /*[[teal]]*/;
-  --text: /*[[text-color]]*/;
-  --cyan-trans: /*[[cyan-trans]]*/;
-  --text-alt: /*[[text-alt]]*/;
-  --text-gray: /*[[text-gray]]*/;
-  --ui-font: /*[[ui_font]]*/;
-  --yellow: /*[[yellow]]*/;
+  --alt: /* [[alt]] */;
+  --bg: /* [[bg]] */;
+  --blue: /* [[blue]] */;
+  --blue-light: /* [[blue-light]] */;
+  --border: /* [[border]] */;
+  --cn: /* [[cn]] */;
+  --cyan-trans: /* [[cyan-trans]] */;
+  --faded: /* [[faded]] */;
+  --green: /* [[green]] */;
+  --green-trans: /* [[green-trans]] */;
+  --hl: /* [[hl]] */;
+  --hover: /* [[hover]] */;
+  --icon: /* [[icon]] */;
+  --indigo: /* [[indigo]] */;
+  --mono-font: /* [[mono_font]] */;
+  --orange: /* [[orange]] */;
+  --placeholder: /* [[placeholder]] */;
+  --purple: /* [[purple]] */;
+  --red: /* [[red]] */;
+  --red-trans: /* [[red-trans]] */;
+  --region: /* [[region]] */;
+  --sb: /* [[sb]] */;
+  --teal: /* [[teal]] */;
+  --text: /* [[text-color]] */;
+  --text-alt: /* [[text-alt]] */;
+  --text-gray: /* [[text-gray]] */;
+  --ui-font: /* [[ui_font]] */;
+  --yellow: /* [[yellow]] */;
 }
 @-moz-document domain('github.com') {
   .commit-icon .octicon,
@@ -748,6 +748,9 @@
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
+  code .link-gray {
+    font-weight: 500 !important;
+  }
   .dropdown-signed-commit .dropdown-menu:after {
     display: none;
   }
@@ -758,7 +761,8 @@
   .signed-commit-badge.verified {
     color: var(--green) !important;
     border-color: var(--green) !important;
-    font-size: 16px !important;
+    background-color: var(--green-trans) !important;
+    font-weight: 500 !important;
   }
   .commit-author-section {
     color: var(--blue) !important;
@@ -957,6 +961,9 @@
     color: var(--border) !important;
     border-color: var(--green) !important;
     background-color: var(--green) !important;
+  }
+  .State--green .octicon {
+    fill: var(--border);
   }
   .State--red {
     color: var(--border) !important;
