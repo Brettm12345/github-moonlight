@@ -6,9 +6,18 @@ text[fill="#000"] { fill: $text; }
 .viz.code-frequency { p: 8px; c: $text $border $alt; }
 .cadd { c: $green; }
 .cdel { c: $red; }
+.conversation-list-heading .inner { c: $faded; }
+.conversation-list-heading
+  c: $faded $border
+  .inner { c: $faded; }
+.num { c: $faded; }
+relative-time { c: $faded; }
+.simple-conversation-list > li
+  c: 0 $border
 .graphs .dir { c: $text; }
 .code-frequency .addition { fill: $green; }
 .code-frequency .deletion { fill: $red; }
+.community-checklist .progress { c: 0 0 $region; }
 line[stroke="#000"] { stroke: $border; }
 text[text-anchor="middle"] { fill: $text; }
 table.capped-list td { c: $text $border $alt; border-color: $border i; }

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.0.3
+@version      0.1.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -359,6 +359,32 @@
   .markdown-body .clippy-wrapper .clippy .icon {
     filter: invert(1);
   }
+  .project-issue-body-blur {
+    background: linear-gradient(0deg, #000, rgba(0,0,0,0)) !important;
+  }
+  .project-column {
+    background-color: var(--alt) !important;
+  }
+  .project-pane.bg-white {
+    background-color: var(--hl) !important;
+  }
+  .project-header {
+    background-color: var(--bg) !important;
+  }
+  .project-card:hover {
+    border-color: var(--border) !important;
+  }
+  .btn.btn-outline,
+  .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2 {
+    background-color: var(--alt) !important;
+  }
+  .d-flex.flex-row.flex-items-center.f6 {
+    background-color: var(--bg) !important;
+  }
+  .comment-reactions.has-reactions.js-reactions-container.js-socket-channel.js-updatable-content {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
   .code-review.blob-code.blob-code-context {
     background-color: var(--alt) !important;
   }
@@ -456,7 +482,10 @@
     background-color: var(--icon) !important;
   }
   .bg-white {
-    background-color: var(--bg) !important;
+    background-color: var(--hl) !important;
+  }
+  .bg-pending {
+    background-color: var(--purple) !important;
   }
   .text-gray-light {
     color: var(--text-alt) !important;
@@ -472,6 +501,12 @@
   }
   .text-emphasized {
     color: var(--blue-light) !important;
+  }
+  .text-green {
+    color: var(--green) !important;
+  }
+  .text-red {
+    color: var(--red) !important;
   }
   .compare-pr-placeholder {
     border-color: var(--border) !important;
@@ -527,6 +562,19 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
+  .CheckStep-line {
+    font-family: monospace !important;
+    font-weight: 500 !important;
+  }
+  .CheckStep-line-number {
+    color: var(--indigo) !important;
+  }
+  .CheckStep-linecontent {
+    color: var(--text) !important;
+  }
+  .CheckStep-line:hover {
+    background-color: var(--hl) !important;
+  }
   .Box-row--yellow {
     color: var(--text) !important;
     border-color: var(--yellow) !important;
@@ -558,6 +606,25 @@
   .cdel {
     color: var(--red) !important;
   }
+  .conversation-list-heading .inner {
+    color: var(--faded) !important;
+  }
+  .conversation-list-heading {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+  }
+  .conversation-list-heading .inner {
+    color: var(--faded) !important;
+  }
+  .num {
+    color: var(--faded) !important;
+  }
+  relative-time {
+    color: var(--faded) !important;
+  }
+  .simple-conversation-list > li {
+    border-color: var(--border) !important;
+  }
   .graphs .dir {
     color: var(--text) !important;
   }
@@ -566,6 +633,9 @@
   }
   .code-frequency .deletion {
     fill: var(--red);
+  }
+  .community-checklist .progress {
+    background-color: var(--region) !important;
   }
   line[stroke="#000"] {
     stroke: var(--border);
@@ -595,6 +665,37 @@
   table.capped-list .octicon {
     color: var(--text) !important;
   }
+  .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
+  .exploregrid-item {
+    background-color: var(--hl) !important;
+  }
+  #jump-to-results:hover {
+    background-color: var(--hl) !important;
+  }
+  .js-navigation-item:hover {
+    background-color: var(--hl) !important;
+  }
+  .jump-to-field-active {
+    background-color: var(--hl) !important;
+  }
+  .release-timeline-tags .tag-timeline-date::after {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .release-main-section {
+    border-left-color: var(--border) !important;
+  }
+  .signup-plan-card {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .signup-plan-card:hover {
+    background-color: var(--region) !important;
+  }
+  div[style*="height: 1px;"] {
+    background-color: var(--border) !important;
+  }
   .select-menu-modal {
     box-shadow: var(--elevation-md) !important;
   }
@@ -602,12 +703,18 @@
     scrollbar-color: var(--sb) var(--bg) !important;
     scrollbar-width: thin !important;
   }
+  svg {
+    color: var(--text);
+  }
   kbd {
     font: 14px monospace;
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
     box-shadow: inset 0 -1px 0 var(--border) !important;
+  }
+  img[src*="octocat-spinner-64.gif"] {
+    filter: invert(1);
   }
   .form-control.focus,
   .form-control:focus,
@@ -700,10 +807,10 @@
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .discussion-sidebarheading {
+  .discussion-sidebar-heading {
     color: var(--text) !important;
   }
-  .discussion-sidebaritem {
+  .discussion-sidebar-item {
     color: var(--faded) !important;
     font-weight: 500 !important;
   }
@@ -857,7 +964,7 @@
     height: 30px !important;
   }
   .dropdown-signed-commit .dropdown-menu:after {
-    border-bottom-color: var(--border) !important;
+    display: none;
   }
   .signed-commit-header {
     background-color: var(--bg) !important;
@@ -880,6 +987,8 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
+    font-weight: 500 !important;
+    ff: monospace;
   }
   .btn-mktg {
     color: var(--cn) !important;
@@ -964,6 +1073,9 @@
   .rgh-collaborator {
     border: 1px solid var(--border) !important;
   }
+  .Box-row[style*="background: rgb"] {
+    background-color: var(--region) !important;
+  }
   .Box-row,
   .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--border) !important;
@@ -972,7 +1084,11 @@
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
+    transition: background-color ease-in-out 0.1s;
     background: none !important;
+  }
+  .btn.btn-sm {
+    background-color: var(--alt) !important;
   }
   .btn:hover {
     background-image: none !important;
@@ -1113,30 +1229,40 @@
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
     color: var(--text) !important;
   }
-  div.commit-build-statuses .text-green {
-    color: var(--teal) !important;
-  }
-  div.commit-build-statuses .text-red {
-    color: var(--red) !important;
-  }
-  div.commit-build-statuses .bg-pending {
-    color: var(--purple) !important;
-  }
+  div.commit-build-statusesgray,
   .link-gray {
     color: var(--faded) !important;
   }
+  div.commit-build-statusesgray-dark,
   .link-gray-dark,
+  body div.commit-build-statusesgray-dark,
   body .link-gray-dark {
     color: var(--blue) !important;
   }
+  div.commit-build-statusesgray-dark:hover,
   .link-gray-dark:hover,
+  body div.commit-build-statusesgray-dark:hover,
   body .link-gray-dark:hover,
+  body body div.commit-build-statusesgray-dark:hover,
   body body .link-gray-dark:hover {
     text-decoration: underline !important;
+  }
+  .pinned-issue-item {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
   }
   .access-form-wrapper {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  table.files td.icon .octicon-file-directory {
+    color: var(--blue) !important;
+  }
+  .discussion-sidebar-heading {
+    color: var(--text) !important;
+  }
+  .octicon.octicon-file {
+    color: var(--indigo) !important;
   }
   .table-list-header-toggle .btn-link.selected:hover {
     color: var(--blue-light) !important;
@@ -1151,8 +1277,8 @@
     border-bottom: 1px solid var(--border) !important;
   }
   .table-list-header {
-    border-color: var(--alt) !important;
-    background-color: var(--border) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
   }
   .table-list-header-toggle .btn-link:hover {
     color: var(--blue-light) !important;
@@ -1185,6 +1311,10 @@
   .btn-link:not(.IssueLabel),
   .subnav-search-context .btn {
     color: var(--blue) !important;
+  }
+  .btn.btn-primary,
+  .js-selected-navigation-item.subnav-item {
+    background-color: var(--hl) !important;
   }
   .social-count {
     color: var(--blue) !important;
@@ -1549,11 +1679,14 @@
   .protip > svg {
     fill: var(--yellow);
   }
+  .Popover-message {
+    color: var(--text) !important;
+  }
   .Popover-message::before {
-    border-top-color: var(--border);
+    border-bottom-color: var(--border);
   }
   .Popover-message::after {
-    border-top-color: var(--alt);
+    border-bottom-color: var(--alt);
   }
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
@@ -1589,6 +1722,11 @@
   .ajax-pagination-form .ajax-pagination-btn {
     color: var(--blue) !important;
   }
+  .blankslate {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
   .blankslate code {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1609,5 +1747,26 @@
   }
   .marketplace-plan-emphasis {
     color: var(--text) !important;
+  }
+}
+@-moz-document domain('gist.github.com') {
+  .js-gist-file-update-container.js-task-list-container.file-box {
+    background-color: var(--hl) !important;
+  }
+  #gist-pjax-container {
+    background-color: var(--alt) !important;
+  }
+  .gisthead .pagehead-actions .octicon-mute {
+    fill: var(--faded);
+  }
+  .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
+  .discussion-timeline-actions,
+  .reponav.js-repo-nav,
+  .reponav-item,
+  .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit.selected,
+  .discussion-timeline-actions.selected,
+  .reponav.js-repo-nav.selected,
+  .reponav-item.selected {
+    background-color: var(--alt) !important;
   }
 }

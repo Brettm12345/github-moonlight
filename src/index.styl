@@ -5,11 +5,16 @@
 @require 'syntax'
 @require 'calendar'
 @require 'markdown'
+@require 'projects'
 @require 'plugins'
 @require 'color-replacements'
 @require 'pull-requests'
 @require 'actions'
 @require 'insights'
+@require 'explore'
+@require 'search'
+@require 'release'
+@require 'billing'
 
 $selected = selector('&.selected, &[aria-current], &[aria-selected=true]')
 
@@ -20,12 +25,15 @@ $elevationMd
 ::placeholder { c: $placeholder; }
 
 * { sbc: $sb $bg; sbw: thin; }
+svg
+  color: $text
 
 kbd
   font: 14px monospace
   c: $text $border $bg
   s: inset 0 -1px 0 $border
 
+img[src*="octocat-spinner-64.gif"] { filter: invert(1); }
 .form-control.focus, .form-control:focus, .form-select.focus, .form-select:focus { c: $cn $blue 0; bs: none; }
 .octicon { transform: scale(1.1); }
 
@@ -66,7 +74,7 @@ for $val in num code
 .discussion-
   &item-icon { c: $text $border $icon; }
   &timeline-actions { c: 0 $border $bg; }
-  &sidebar
+  &sidebar-
     &heading { c: $text; }
     &item { c: $faded; fw: 500; }
 .timeline-comment-wrapper { b: 0; }
@@ -123,12 +131,13 @@ div[style*="background: linear-gradient"]
   &header { bbc: $border; }
   &filter { btc: $border; }
   &tab[aria-selected=true] { c: $cn $border $hl; }
+
 .Box-row--focus-gray.navigation-focus { c: 0 0 $icon; }
 .commit-group-title .octicon-git-commit { c: $text; }
 .commits-listing:before { c: 0 0 $hl; }
 .TimelineItem
   &--condensed &-badge { size: 30px; }
-.dropdown-signed-commit .dropdown-menu:after { bbc: $border; }
+.dropdown-signed-commit .dropdown-menu:after { display: none; }
 .signed-commit
   &-header
     c: 0 0 $bg
@@ -137,7 +146,7 @@ div[style*="background: linear-gradient"]
     fs: 16px
 .TableObject-item--primary { c: $text; }
 .commit-sha { c: $yellow $border $hl; }
-.commit-ref { c: $text $border $bg; }
+.commit-ref { c: $text $border $bg; fw: 500; ff: monospace; }
 .btn-mktg { c: $cn $border $bg; }
 .timeline-comment
   c: $text $border $hl
@@ -167,11 +176,15 @@ table.files
 .TimelineItem-badge,
 .TimelineItem--condensed .TimelineItem-badge { c: $hover 0 $bg; }
 .border, .border-gray-dark, .rgh-collaborator { b: $b; }
+.Box-row[style*="background: rgb"]
+  c: 0 0 $region
 .Box-row, .profile-rollup-wrapper+.profile-rollup-wrapper
   bt: $b
 .btn
   c: $cn $border $hl
+  transition: background-color ease-in-out 0.1s
   bg: none
+  &.btn-sm { c: 0 0 $alt; }
   &:hover
     bgi: none
     c: 0 0 $region
@@ -227,17 +240,17 @@ body
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra)
   c: $text
 div.commit-build-statuses
-  .text-
-    &green { c: $teal; }
-    &red { c: $red; }
-  .bg-pending { c: $purple; }
 .link-
   &gray
     c: $faded
     &-dark, body &-dark
       c: $blue
       &:hover, body &:hover { td: underline; }
+.pinned-issue-item { c: 0 $border $hl; }
 .access-form-wrapper { c: 0 $border $alt; }
+table.files td.icon .octicon-file-directory { c: $blue; }
+.discussion-sidebar-heading { c: $text; }
+.octicon.octicon-file { c: $indigo; }
 .table-list-header-toggle .btn-link.selected
   &:hover { c: $blue-light; }
 .site-footer { bt: $b; }
@@ -245,7 +258,7 @@ div.commit-build-statuses
 .table-list
   bb: $b
   &-header
-    c: 0 $alt $border
+    c: 0 $border $alt
     &-toggle .btn-link:hover { c: $blue-light; }
   &-cell { bt: $b; }
   &-bordered &-cell
@@ -259,6 +272,8 @@ div.commit-build-statuses
 .overall-summary { c: 0 $border $alt; }
 .btn-link:not(.IssueLabel),
 .subnav-search-context .btn { c: $blue; }
+.btn.btn-primary,
+.js-selected-navigation-item.subnav-item { c: 0 0 $hl; }
 .social-count
   c: $blue 0 $hl
   &:hover { c: $cn; }
@@ -421,7 +436,7 @@ code, pre, tt { fn: monospace; }
   & > code { c: $text $border $hl; }
   & > strong { c: $yellow; td: underline; }
   & > svg { fill: $yellow; }
-.Popover-message { caret: 'top'; }
+.Popover-message { caret: 'bottom'; c: $text; }
 .UnderlineNav-item.selected, .UnderlineNav-item[aria-current], .UnderlineNav-item[role="tab"][aria-selected="true"]
   bbc: $blue
 .Box--responsive .Box-row--unread { s: inset 2px 0 0 $blue; }
@@ -434,10 +449,13 @@ code, pre, tt { fn: monospace; }
 .body > div.d-flex { px: 10px; }
 .pagination-loader-container { bgi: none; c: 0 0 $hl; }
 .ajax-pagination-form .ajax-pagination-btn { c: $blue; }
-.blankslate code { c: $text $border $bg; }
+.blankslate
+  c: $text $border $hl
+  code { c: $text $border $bg; }
 .octicon[style="color: #6a737d;"] { c: $textGray; }
 .content.p-4.text-center.rounded-1.border.border-gray-light
   c 0 0 $alt
+// .reponav.js-repo-nav { c: 0 0 $bg; }
 
 // Marketplace
 .MarketplaceBackground-
