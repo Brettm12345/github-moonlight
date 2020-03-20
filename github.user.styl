@@ -7,8 +7,69 @@
 @homepageURL  https://github.com/brettm12345/github-moonlight
 @supportURL   https://github.com/brettm12345/github-moonlight/issues
 @updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
+@var text ui_font "Custom ui font" "Inter V"
+@var text mono_font "Custom $monoFont font" "$monoFont"
+@var color alt "Alternative Background" #1e2030
+@var color bg "Background Color" #191b28
+@var color blue "Blue" #82aaff
+@var color blue-light "Light Blue" #82aaff
+@var color border "Border Color" #131421
+@var color cn "Highlighted text" #ffffff
+@var color cyan "Cyan" #86e1fc
+@var color cyan-light "Light Cyan" #b4f9f8
+@var color cyan-trans "Transparent Cyan" #86e1fcbb
+@var color faded "Faded" #7f85a3
+@var color green "Green" #c3e88d
+@var color green-trans "Transparent Green" rgba(119, 224, 198, 0.2)
+@var color hl "Highlight" #212337
+@var color hover "Hover" #444a73
+@var color icon "Icon" #2f334d
+@var color indigo "Indigo" #7a88cf
+@var color red-light "Light Red" #ff757f
+@var color orange "Orange" #ff995e
+@var color pink "Pink" #fca7ea
+@var color placeholder "Placeholder" #c8d3f5aa
+@var color purple "Purple" #c597f9
+@var color purple-alt "Alternative Purple" #c099ff
+@var color red "Red" #ff5370
+@var color red-trans "Transparent Red" rgba(255, 83, 112, 0.2)
+@var color region "Region Highlight" #383e5c
+@var color sb "Scrollbar" #828bb830
+@var color teal "Teal" #4fd6be
+@var color text "Text" #c8d3f5
+@var color text-alt "Alternative Text" #b4c2f0
+@var color text-gray "Gray Text" #a9b8e8
+@var color yellow "Yellow" #ffc777
 @preprocessor uso
 ==/UserStyle== */
+
+:root
+  --blue: /*[[blue]]*/;
+  --blue-light: /*[[blue-light]]*/;
+  --purple: /*[[purple]]*/;
+  --red: /*[[red]]*/;
+  --teal: /*[[teal]]*/;
+  --green: /*[[green]]*/;
+  --indigo: /*[[indigo]]*/;
+  --placeholder: /*[[placeholder]]*/;
+  --border: /*[[border]]*/;
+  --bg: /*[[bg]]*/;
+  --alt: /*[[alt]]*/;
+  --yellow /*[[yellow]]*/;
+  --orange /*[[orange]]*/;
+  --region: /*[[region]]*/;
+  --hl: /*[[hl]]*/;
+  --icon: /*[[icon]]*/;
+  --hover: /*[[hover]]*/;
+  --faded: /*[[faded]]*/;
+  --text-alt: /*[[text-alt]]*/;
+  --text-gray: /*[[text-gray]]*/;
+  --text: /*[[text]]*/;
+  --sb: /*[[sb]]*/;
+  --cn: /*[[cn]]*/;
+  --ui-font: /*[[ui-font]]*/;
+  --mono-font: /*[[mono-font]]*/;
+
 @-moz-document domain('github.com')
   @require './src'
 @-moz-document domain('gist.github.com')

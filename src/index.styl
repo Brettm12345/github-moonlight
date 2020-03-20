@@ -32,7 +32,7 @@ $elevationMd
   sbw thin
 body
   c $text 0 $bg
-  fn 'Inter v'
+  fn $uiFont
   fs 14px
   lh 1.8
   &.page-responsive.pagehead
@@ -43,8 +43,15 @@ svg
   c $text
 kbd
   c $text $border $bg
-  font 14px monospace
+  font 14px $monoFont
   s inset 0 -1px 0 $border
+.description
+  c $text
+.State--
+  &green
+    c $cn $green $green
+  &red
+    c $cn $red $red
 .notification-navigation .notification-configure-filters .octicon
   c $text
 .Box
@@ -552,10 +559,10 @@ div
 code,
 pre,
 tt
-  fn monospace
+  fn $monoFont
 .blob-code-inner
   c $text
-  fn monospace
+  fn $monoFont
   fs 15px
   lh 1.8
   .highlighted

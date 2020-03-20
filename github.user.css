@@ -7,43 +7,69 @@
 @homepageURL  https://github.com/brettm12345/github-moonlight
 @supportURL   https://github.com/brettm12345/github-moonlight/issues
 @updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
+@var text ui_font "Custom ui font" "Inter V"
+@var text mono_font "Custom $monoFont font" "$monoFont"
+@var color alt "Alternative Background" #1e2030
+@var color bg "Background Color" #191b28
+@var color blue "Blue" #82aaff
+@var color blue-light "Light Blue" #82aaff
+@var color border "Border Color" #131421
+@var color cn "Highlighted text" #ffffff
+@var color cyan "Cyan" #86e1fc
+@var color cyan-light "Light Cyan" #b4f9f8
+@var color cyan-trans "Transparent Cyan" #86e1fcbb
+@var color faded "Faded" #7f85a3
+@var color green "Green" #c3e88d
+@var color green-trans "Transparent Green" rgba(119, 224, 198, 0.2)
+@var color hl "Highlight" #212337
+@var color hover "Hover" #444a73
+@var color icon "Icon" #2f334d
+@var color indigo "Indigo" #7a88cf
+@var color red-light "Light Red" #ff757f
+@var color orange "Orange" #ff995e
+@var color pink "Pink" #fca7ea
+@var color placeholder "Placeholder" #c8d3f5aa
+@var color purple "Purple" #c597f9
+@var color purple-alt "Alternative Purple" #c099ff
+@var color red "Red" #ff5370
+@var color red-trans "Transparent Red" rgba(255, 83, 112, 0.2)
+@var color region "Region Highlight" #383e5c
+@var color sb "Scrollbar" #828bb830
+@var color teal "Teal" #4fd6be
+@var color text "Text" #c8d3f5
+@var color text-alt "Alternative Text" #b4c2f0
+@var color text-gray "Gray Text" #a9b8e8
+@var color yellow "Yellow" #ffc777
 @preprocessor uso
 ==/UserStyle== */
+:root {
+  --blue: /*[[blue]]*/;
+  --blue-light: /*[[blue-light]]*/;
+  --purple: /*[[purple]]*/;
+  --red: /*[[red]]*/;
+  --teal: /*[[teal]]*/;
+  --green: /*[[green]]*/;
+  --indigo: /*[[indigo]]*/;
+  --placeholder: /*[[placeholder]]*/;
+  --border: /*[[border]]*/;
+  --bg: /*[[bg]]*/;
+  --alt: /*[[alt]]*/;
+  --yellow: /*[[yellow]]*/;
+  --orange: /*[[orange]]*/;
+  --region: /*[[region]]*/;
+  --hl: /*[[hl]]*/;
+  --icon: /*[[icon]]*/;
+  --hover: /*[[hover]]*/;
+  --faded: /*[[faded]]*/;
+  --text-alt: /*[[text-alt]]*/;
+  --text-gray: /*[[text-gray]]*/;
+  --text: /*[[text]]*/;
+  --sb: /*[[sb]]*/;
+  --cn: /*[[cn]]*/;
+  --ui-font: /*[[ui-font]]*/;
+  --mono-font: /*[[mono-font]]*/;
+}
 @-moz-document domain('github.com') {
-  :root {
-    --alt: #1e2030;
-    --bg: #191b28;
-    --blue: #82aaff;
-    --blue-light: #83aaff;
-    --border: #131421;
-    --cn: #fff;
-    --cyan: #86e1fc;
-    --cyan-light: #b4f9f8;
-    --cyan-trans: rgba(134,225,252,0.733);
-    --elevation-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-    --faded: #7f85a3;
-    --green: #c3e88d;
-    --green-trans: rgba(119,224,198,0.2);
-    --hl: #212337;
-    --hover: #444a73;
-    --icon: #2f334d;
-    --indigo: #7a88cf;
-    --light-red: #ff757f;
-    --orange: #ff995e;
-    --pink: #fca7ea;
-    --placeholder: rgba(200,211,245,0.667);
-    --purple: #c597f9;
-    --purple-alt: #c099ff;
-    --red: #ff5370;
-    --red-trans: rgba(255,83,112,0.2);
-    --region: #383e5c;
-    --sb: rgba(130,139,184,0.188);
-    --teal: #4fd6be;
-    --text: #c8d3f5;
-    --text-alt: #b4c2f0;
-    --text-gray: #a9b8e8;
-    --yellow: #ffc777;
-  }
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
   div[style='background-color: #fcfdfd'],
@@ -187,31 +213,10 @@
   .pl-en {
     color: var(--blue) !important;
   }
-  .pl-ent,
-  .pl-smi,
-  .pl-s .pl-s1 {
-    color: var(--light-red) !important;
-  }
-  .pl-k {
-    color: var(--purple-alt) !important;
-  }
-  .pl-s .pl-pse .pl-s1,
-  .pl-pds {
-    color: var(--cyan) !important;
-  }
-  .pl-sr {
-    color: var(--cyan-alt) !important;
-  }
-  .pl-sr .pl-cce {
-    color: var(--light-red) !important;
-  }
   .pl-s,
   .pl-sr .pl-sre,
   .pl-sr .pl-sra {
     color: var(--green) !important;
-  }
-  .pl-v {
-    color: var(--pink) !important;
   }
   .pl-smw {
     color: var(--yellow) !important;
@@ -231,15 +236,10 @@
     content: '^M';
   }
   .pl-sr .pl-cce {
-    color: var(--light-red) !important;
     font-weight: bold !important;
   }
   .pl-ml {
     color: var(--orange) !important;
-  }
-  .pl-mh .pl-en,
-  .pl-ms {
-    color: var(--cyan) !important;
   }
   .pl-mh {
     color: var(--green) !important;
@@ -255,15 +255,12 @@
   }
   .pl-md {
     color: var(--red) !important;
-    background-color: var(--red-trans) !important;
   }
   .pl-mi1 {
     color: var(--green) !important;
-    background-color: var(--green-trans) !important;
   }
   .pl-mc {
     color: var(--purple) !important;
-    background-color: var(--cyan-trans) !important;
   }
   .pl-mdr {
     color: var(--teal) !important;
@@ -342,14 +339,14 @@
   .markdown-body code,
   .markdown-body tt {
     color: var(--cn) !important;
-    font-family: monospace !important;
+    font-family: var(--mono-font) !important;
     font-weight: 500 !important;
   }
   .highlight pre,
   .markdown-body pre {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
-    font-family: monospace !important;
+    font-family: var(--mono-font) !important;
     font-weight: 500 !important;
   }
   .markdown-body blockquote {
@@ -578,7 +575,7 @@
     background-color: var(--alt) !important;
   }
   .CheckStep-line {
-    font-family: monospace !important;
+    font-family: var(--mono-font) !important;
     font-weight: 500 !important;
   }
   .CheckStep-line-number {
@@ -765,7 +762,7 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
-    font-family: monospace !important;
+    font-family: var(--mono-font) !important;
     font-weight: 500 !important;
   }
   .commit-sha {
@@ -829,9 +826,6 @@
   .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--border) !important;
   }
-  .details-reset:not(#repo-meta-edit) summary {
-    background-color: var(--alt) !important;
-  }
   .activity-overview-percentage {
     fill: var(--cn);
   }
@@ -859,7 +853,7 @@
   body {
     color: var(--text) !important;
     background-color: var(--bg) !important;
-    font-family: 'Inter v' !important;
+    font-family: var(--ui-font) !important;
     font-size: 14px !important;
     line-height: 1.8 !important;
   }
@@ -876,8 +870,21 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
-    font: 14px monospace;
+    font: 14px var(--mono-font);
     box-shadow: inset 0 -1px 0 var(--border) !important;
+  }
+  .description {
+    color: var(--text) !important;
+  }
+  .State--green {
+    color: var(--cn) !important;
+    border-color: var(--green) !important;
+    background-color: var(--green) !important;
+  }
+  .State--red {
+    color: var(--cn) !important;
+    border-color: var(--red) !important;
+    background-color: var(--red) !important;
   }
   .notification-navigation .notification-configure-filters .octicon {
     color: var(--text) !important;
@@ -963,22 +970,18 @@
   .blob-num-addition {
     color: var(--green) !important;
     border-color: var(--green) !important;
-    background-color: var(--green-trans) !important;
   }
   .blob-code-addition {
     color: var(--green) !important;
     border-color: var(--green) !important;
-    background-color: var(--green-trans) !important;
   }
   .blob-num-deletion {
     color: var(--red) !important;
     border-color: var(--red) !important;
-    background-color: var(--red-trans) !important;
   }
   .blob-code-deletion {
     color: var(--red) !important;
     border-color: var(--red) !important;
-    background-color: var(--red-trans) !important;
   }
   .lovely-forks-addon {
     color: var(--text) !important;
@@ -1690,11 +1693,11 @@
   code,
   pre,
   tt {
-    font-family: monospace !important;
+    font-family: var(--mono-font) !important;
   }
   .blob-code-inner {
     color: var(--text) !important;
-    font-family: monospace !important;
+    font-family: var(--mono-font) !important;
     font-size: 15px !important;
     line-height: 1.8 !important;
   }

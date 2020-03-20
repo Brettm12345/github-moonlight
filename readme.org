@@ -21,7 +21,9 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
   - [[#actions][Actions]]
   - [[#projects][Projects]]
 - [[#todo][Todo]]
-
+* Features
+- Custom colors: All color variables are easily customizable
+- Custom fonts: Allow the user to pick custom fonts
 * Recomended Extensions
 | Extension           | Description                         |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
@@ -47,9 +49,11 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 ** Projects
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" width="100%" />
 * Todo
+  * [ ] Add support for more extensions
+  * [ ] Put colors into usercss variables
   * [X] Add screenshots to readme
   * [X] Add styles for actions
   * [X] Add styles for insights
-  * [ ] Finish theming pull request creation
-  * [ ] Setup a usercss with user configurable variables
-  * [ ] Add badges to readme.org
+  * [X] Finish theming pull request creation
+  * [X] Setup a usercss with user configurable variables
+  * [X] Add badges to readme.org
