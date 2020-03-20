@@ -73,8 +73,10 @@ kbd
 img[src*='octocat-spinner-64.gif']
   filter invert(1)
 .form
-  &-control, &-select
-    &.focus, &:focus
+  &-control,
+  &-select
+    &.focus,
+    &:focus
       c $cn $blue 0
       s none
 .octicon:not(.text-green):not(.text-red)
@@ -206,7 +208,9 @@ div[style*='background: linear-gradient']
   c $text 0 $icon
 .UnderlineNav-item
   /.subnav-link.selected,
-  &.selected, &[aria-current], &[aria-selected=true]
+  &.selected,
+  &[aria-current],
+  &[aria-selected=true]
     bbc $blue
 .SelectMenu-
   &divider
@@ -289,6 +293,10 @@ table.files
 .user-profile-nav,
 .topic-tag
   c $text $border $alt
+  &-action
+    c $text $border $bg
+    button
+      c $text $border $border
 .access-token
   bbc $border
 div.listgroup-item
@@ -529,10 +537,11 @@ div
     c $blue
   .pagehead-tabs-item.selected
     c $blue 0 $bg
-.tag-info
-  c $blue
-  .tag-name
-    c $text
+.tag
+  &-info
+    c $blue
+    ../-name
+      c $text
 .note,
 .help
   c $blue
@@ -571,7 +580,8 @@ tt
   fw 600
 .blob-expanded
   .blob-
-    &code, &num
+    &code,
+    &num
       c 0 $border $alt
 .contrib-person path
   fill $orange
@@ -611,7 +621,9 @@ tt
   caret 'top'
   caret 'left'
 .UnderlineNav-item
-  &.selected, &[aria-current], &[role='tab'][aria-selected='true']
+  &.selected,
+  &[aria-current],
+  &[role='tab'][aria-selected='true']
     bbc $blue
 .gh-header-number
   c $orange

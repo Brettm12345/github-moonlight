@@ -5,7 +5,7 @@
   "author": "brettm12345",
   "license": "MIT",
   "scripts": {
-    "build": "stylus ./github.user.styl",
+    "build": "stylus -U ./github.user.styl",
     "build:watch": "yarn build --watch"
   },
   "husky": {

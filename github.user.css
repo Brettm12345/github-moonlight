@@ -613,13 +613,9 @@
   line[stroke='#000'] {
     stroke: var(--border);
   }
+  text[fill='#000'],
+  text[fill='#6a737d'],
   text[text-anchor='middle'] {
-    fill: var(--text);
-  }
-  text[fill='#6a737d'] {
-    fill: var(--text);
-  }
-  text[fill='#000'] {
     fill: var(--text);
   }
   .viz {
@@ -1352,6 +1348,18 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
+  .user-profile-nav-action,
+  .topic-tag-action {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .user-profile-nav-action button,
+  .topic-tag-action button {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
   .access-token {
     border-bottom-color: var(--border) !important;
   }
@@ -1742,7 +1750,7 @@
   .tag-info {
     color: var(--blue) !important;
   }
-  .tag-info .tag-name {
+  .tag-name {
     color: var(--text) !important;
   }
   .note,
