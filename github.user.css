@@ -767,6 +767,9 @@
   .commit-author-section {
     color: var(--blue) !important;
   }
+  .commit-desc pre {
+    background-color: var(--alt) !important;
+  }
   .commits-listing:before {
     background-color: var(--hl) !important;
   }
@@ -834,8 +837,8 @@
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .select-menu.select-menu-modal-right.details-reset.details-overlay.mb-2,
-  .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
+  .select-menu-modal-right.details-reset.details-overlay.mb-2,
+  .select-menu .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
     background-color: var(--alt) !important;
   }
   .profile-rollup-wrapper+.profile-rollup-wrapper {
