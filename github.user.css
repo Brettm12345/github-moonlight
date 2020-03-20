@@ -757,7 +757,6 @@
   .signed-commit-header {
     background-color: var(--bg) !important;
   }
-  .signed-commit-header,
   .signed-commit-badge.verified {
     color: var(--green) !important;
     border-color: var(--green) !important;
