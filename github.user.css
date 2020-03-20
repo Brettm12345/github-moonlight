@@ -527,6 +527,74 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
+  .Box-row--yellow {
+    color: var(--text) !important;
+    border-color: var(--yellow) !important;
+    background-color: transparent !important;
+  }
+  .graph-filter .info {
+    color: var(--text) !important;
+  }
+  text[fill="#6a737d"] {
+    fill: var(--text);
+  }
+  text[fill="#000"] {
+    fill: var(--text);
+  }
+  .viz {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .viz.code-frequency {
+    padding: 8px !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .cadd {
+    color: var(--green) !important;
+  }
+  .cdel {
+    color: var(--red) !important;
+  }
+  .graphs .dir {
+    color: var(--text) !important;
+  }
+  .code-frequency .addition {
+    fill: var(--green);
+  }
+  .code-frequency .deletion {
+    fill: var(--red);
+  }
+  line[stroke="#000"] {
+    stroke: var(--border);
+  }
+  text[text-anchor="middle"] {
+    fill: var(--text);
+  }
+  table.capped-list td {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    border-color: var(--border) !important;
+  }
+  table.capped-list tr:nth-child(2n),
+  table.capped-list th {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .traffic-graph-stats,
+  .summary-stats li,
+  .summary-stats li .num {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  table.capped-list .octicon {
+    color: var(--text) !important;
+  }
   .select-menu-modal {
     box-shadow: var(--elevation-md) !important;
   }
