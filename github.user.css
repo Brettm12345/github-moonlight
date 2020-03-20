@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.4.0
+@version      0.4.5
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -36,38 +36,38 @@
 @var color region "Region Highlight" #383e5c
 @var color sb "Scrollbar" #828bb830
 @var color teal "Teal" #4fd6be
-@var color text "Text" #c8d3f5
+@var color text-color "Text" #c8d3f5
 @var color text-alt "Alternative Text" #b4c2f0
 @var color text-gray "Gray Text" #a9b8e8
 @var color yellow "Yellow" #ffc777
 @preprocessor uso
 ==/UserStyle== */
 :root {
+  --alt: /*[[alt]]*/;
+  --bg: /*[[bg]]*/;
   --blue: /*[[blue]]*/;
   --blue-light: /*[[blue-light]]*/;
+  --border: /*[[border]]*/;
+  --cn: /*[[cn]]*/;
+  --faded: /*[[faded]]*/;
+  --green: /*[[green]]*/;
+  --hl: /*[[hl]]*/;
+  --hover: /*[[hover]]*/;
+  --icon: /*[[icon]]*/;
+  --indigo: /*[[indigo]]*/;
+  --mono-font: /*[[mono_font]]*/;
+  --orange: /*[[orange]]*/;
+  --placeholder: /*[[placeholder]]*/;
   --purple: /*[[purple]]*/;
   --red: /*[[red]]*/;
-  --teal: /*[[teal]]*/;
-  --green: /*[[green]]*/;
-  --indigo: /*[[indigo]]*/;
-  --placeholder: /*[[placeholder]]*/;
-  --border: /*[[border]]*/;
-  --bg: /*[[bg]]*/;
-  --alt: /*[[alt]]*/;
-  --yellow: /*[[yellow]]*/;
-  --orange: /*[[orange]]*/;
   --region: /*[[region]]*/;
-  --hl: /*[[hl]]*/;
-  --icon: /*[[icon]]*/;
-  --hover: /*[[hover]]*/;
-  --faded: /*[[faded]]*/;
+  --sb: /*[[sb]]*/;
+  --teal: /*[[teal]]*/;
+  --text: /*[[text-color]]*/;
   --text-alt: /*[[text-alt]]*/;
   --text-gray: /*[[text-gray]]*/;
-  --text: /*[[text]]*/;
-  --sb: /*[[sb]]*/;
-  --cn: /*[[cn]]*/;
-  --ui-font: /*[[ui-font]]*/;
-  --mono-font: /*[[mono-font]]*/;
+  --ui-font: /*[[ui_font]]*/;
+  --yellow: /*[[yellow]]*/;
 }
 @-moz-document domain('github.com') {
   .commit-icon .octicon,
