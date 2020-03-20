@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.4.6
+@version      0.4.8
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -856,6 +856,12 @@
   .ajax-pagination-form .ajax-pagination-btn {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .user-profile-nav {
+    border: 1px solid var(--border) !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: 8px !important;
   }
   .team-left-column.bg-white {
     background-color: var(--alt) !important;
@@ -1887,6 +1893,9 @@
   }
   .Popover-message::after {
     border-left-color: var(--alt);
+  }
+  .UnderlineNav-item:hover {
+    border-bottom-color: var(--region) !important;
   }
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
