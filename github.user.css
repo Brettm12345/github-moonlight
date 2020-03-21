@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.0
+@version      0.6.2
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -49,6 +49,8 @@
   --blue-light: /*[[blue-light]]*/;
   --border: /*[[border]]*/;
   --cn: /*[[cn]]*/;
+  --cyan: /*[[cyan]]*/;
+  --cyan-light: /*[[cyan-light]]*/;
   --cyan-trans: /*[[cyan-trans]]*/;
   --faded: /*[[faded]]*/;
   --green: /*[[green]]*/;
@@ -216,6 +218,10 @@
   .pl-en {
     color: var(--blue) !important;
   }
+  .pl-s .pl-pse .pl-s1,
+  .pl-pds {
+    color: var(--cyan) !important;
+  }
   .pl-s,
   .pl-sr .pl-sre,
   .pl-sr .pl-sra {
@@ -243,6 +249,10 @@
   }
   .pl-ml {
     color: var(--orange) !important;
+  }
+  .pl-mh .pl-en,
+  .pl-ms {
+    color: var(--cyan) !important;
   }
   .pl-mh {
     color: var(--green) !important;
@@ -282,23 +292,23 @@
     text-decoration: underline !important;
   }
   .legend li[style*='#ebedf0'] {
-    background-color: #fff !important;
+    background-color: var(--indigo) !important;
     opacity: 0.05 !important;
   }
   .legend li[style*='#c6e48b'] {
-    background-color: var(--blue) !important;
+    background-color: var(--teal) !important;
     opacity: 0.25 !important;
   }
   .legend li[style*='#7bc96f'] {
-    background-color: var(--blue) !important;
+    background-color: var(--teal) !important;
     opacity: 0.5 !important;
   }
   .legend li[style*='#239a3b'] {
-    background-color: var(--blue) !important;
+    background-color: var(--teal) !important;
     opacity: 0.75 !important;
   }
   .legend li[style*='#196127'] {
-    background-color: var(--blue) !important;
+    background-color: var(--teal) !important;
   }
   .graph-before-activity-overview {
     background-color: var(--hl) !important;
@@ -308,23 +318,23 @@
     fill: var(--cn);
   }
   .calendar-graph rect[fill='#ebedf0'] {
-    fill: #fff;
+    fill: var(--indigo);
     opacity: 0.05 !important;
   }
   .calendar-graph rect[fill='#c6e48b'] {
-    fill: var(--blue);
+    fill: var(--teal);
     opacity: 0.25 !important;
   }
   .calendar-graph rect[fill='#7bc96f'] {
-    fill: var(--blue);
+    fill: var(--teal);
     opacity: 0.5 !important;
   }
   .calendar-graph rect[fill='#239a3b'] {
-    fill: var(--blue);
+    fill: var(--teal);
     opacity: 0.75 !important;
   }
   .calendar-graph rect[fill='#196127'] {
-    fill: var(--blue);
+    fill: var(--teal);
   }
   .markdown-body h1,
   .markdown-body h2 {
@@ -902,8 +912,23 @@
     background-color: var(--region) !important;
   }
   .select-menu-modal-right.details-reset.details-overlay.mb-2,
-  .select-menu .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
+  .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
     background-color: var(--alt) !important;
+  }
+  .UnderlineNav {
+    background-color: var(--hl) !important;
+  }
+  .profile-timeline.discussion-timeline:before {
+    background-color: var(--hl) !important;
+  }
+  .profile-timeline-rollup-content li.d-block.mt-1.py-1 {
+    background-color: var(--bg) !important;
+  }
+  .profile-timeline-card.bg-white {
+    background-color: var(--hl) !important;
+  }
+  .profile-timeline-month-heading:after {
+    background-color: var(--border) !important;
   }
   .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--border) !important;
@@ -923,6 +948,52 @@
     padding-left: 10px !important;
     padding-right: 10px !important;
     border-radius: 8px !important;
+  }
+  .user-profile-sticky-bar:after {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .js-profile-editable-edit-button {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .pinned-item-name {
+    color: var(--faded) !important;
+  }
+  .pinned-item-checkbox:checked + .pinned-item-name {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--icon) !important;
+  }
+  .dashboard-notice {
+    border: 1px solid var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .dashboard-notice h2 {
+    color: var(--text) !important;
+  }
+  .repo-list {
+    padding: 0 12px !important;
+  }
+  .repo-list,
+  .repo-list-item {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .mini-repo-list-item {
+    border-top: 1px solid var(--border) !important;
+  }
+  .navigation-focus {
+    background-color: var(--hover) !important;
+  }
+  .team,
+  .user-mention {
+    color: var(--cn) !important;
+  }
+  .profile-timeline-month-heading.bg-white,
+  .profile-timeline-year-list {
+    background-color: var(--bg) !important;
   }
   .team-left-column.bg-white {
     background-color: var(--alt) !important;
@@ -990,12 +1061,19 @@
   code .s2 {
     color: var(--green) !important;
   }
+  code .ni {
+    color: var(--cyan) !important;
+  }
   code .na {
     color: var(--red) !important;
   }
   .file:target,
   .select-menu-modal {
     box-shadow: var(--elevation-md) !important;
+  }
+  ::selection {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
   }
   * {
     scrollbar-color: var(--sb) var(--bg) !important;
@@ -1026,6 +1104,31 @@
     background-color: var(--bg) !important;
     font: 14px var(--mono-font);
     box-shadow: inset 0 -1px 0 var(--border) !important;
+  }
+  code,
+  pre,
+  tt {
+    font-family: var(--mono-font) !important;
+  }
+  .blob-code-inner {
+    color: var(--text) !important;
+    font-family: var(--mono-font) !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+  .blob-code-inner .highlighted {
+    background-color: var(--icon) !important;
+  }
+  .blob-num {
+    color: var(--hover) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    font-weight: 600 !important;
+  }
+  .blob-expanded .blob-code,
+  .blob-expanded .blob-num {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
   }
   .description {
     color: var(--text) !important;
@@ -1101,7 +1204,6 @@
   .muted-link:hover {
     color: var(--blue) !important;
   }
-  .profile-rollup-content li.d-block.mt-1.py-1,
   .js-recent-activity-container > div > div {
     background-color: var(--bg) !important;
   }
@@ -1170,15 +1272,6 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
   }
-  .profile-timeline-card.bg-white {
-    background-color: var(--hl) !important;
-  }
-  .profile-timeline.discussion-timeline:before {
-    background-color: var(--hl) !important;
-  }
-  .profile-timeline-month-heading:after {
-    background-color: var(--border) !important;
-  }
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang {
     color: var(--cn) !important;
   }
@@ -1203,10 +1296,6 @@
   }
   .vcard-username {
     color: var(--text-gray) !important;
-  }
-  .user-profile-sticky-bar:after {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
   }
   .previewable-comment-form .comment-form-head.tabnav {
     border-bottom: 1px solid var(--border) !important;
@@ -1337,6 +1426,10 @@
     height: 30px !important;
     width: 30px !important;
   }
+  .TimelineItem-break {
+    border-color: var(--alt) !important;
+    background-color: transparent !important;
+  }
   .TableObject-item--primary {
     color: var(--text) !important;
   }
@@ -1443,7 +1536,6 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .user-profile-nav,
   .topic-tag {
     border: 1px solid var(--border) !important;
     transition: background-color 0.1s ease-in-out !important;
@@ -1451,17 +1543,14 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .user-profile-nav-link:hover,
   .topic-tag-link:hover {
     background-color: var(--region) !important;
   }
-  .user-profile-nav-action,
   .topic-tag-action {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .user-profile-nav-action button,
   .topic-tag-action button {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1599,21 +1688,21 @@
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
     color: var(--text) !important;
   }
-  div.commit-build-statusesgray,
+  div.commit-build-statuses,
   .link-gray {
     color: var(--faded) !important;
   }
-  div.commit-build-statusesgray-dark,
+  div.commit-build-statuses-dark,
   .link-gray-dark,
-  body div.commit-build-statusesgray-dark,
+  body div.commit-build-statuses-dark,
   body .link-gray-dark {
     color: var(--blue) !important;
   }
-  div.commit-build-statusesgray-dark:hover,
+  div.commit-build-statuses-dark:hover,
   .link-gray-dark:hover,
-  body div.commit-build-statusesgray-dark:hover,
+  body div.commit-build-statuses-dark:hover,
   body .link-gray-dark:hover,
-  body body div.commit-build-statusesgray-dark:hover,
+  body body div.commit-build-statuses-dark:hover,
   body body .link-gray-dark:hover {
     text-decoration: underline !important;
   }
@@ -1736,44 +1825,6 @@
     background: transparent !important;
     text-decoration: underline !important;
   }
-  .js-profile-editable-edit-button {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .pinned-item-name {
-    color: var(--faded) !important;
-  }
-  .pinned-item-checkbox:checked + .pinned-item-name {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--icon) !important;
-  }
-  .dashboard-notice {
-    border: 1px solid var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .dashboard-notice h2 {
-    color: var(--text) !important;
-  }
-  .repo-list {
-    padding: 0 12px !important;
-  }
-  .repo-list,
-  .repo-list-item {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .mini-repo-list-item {
-    border-top: 1px solid var(--border) !important;
-  }
-  .navigation-focus {
-    background-color: var(--hover) !important;
-  }
-  .team-mention,
-  .user-mention {
-    color: var(--cn) !important;
-  }
   .tabnav-pr .tabnav-tab,
   div .tabnav-tab {
     color: var(--blue) !important;
@@ -1868,35 +1919,6 @@
     padding-left: 10px !important;
     border-radius: 4px !important;
   }
-  .TimelineItem-break {
-    border-color: var(--alt) !important;
-    background-color: transparent !important;
-  }
-  code,
-  pre,
-  tt {
-    font-family: var(--mono-font) !important;
-  }
-  .blob-code-inner {
-    color: var(--text) !important;
-    font-family: var(--mono-font) !important;
-    font-size: 15px !important;
-    line-height: 1.8 !important;
-  }
-  .blob-code-inner .highlighted {
-    background-color: var(--icon) !important;
-  }
-  .blob-num {
-    color: var(--hover) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-    font-weight: 600 !important;
-  }
-  .blob-expanded .blob-code,
-  .blob-expanded .blob-num {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
   .contrib-person path {
     fill: var(--orange);
   }
@@ -1947,12 +1969,6 @@
   }
   .Popover-message::after {
     border-bottom-color: var(--alt);
-  }
-  .Popover-message::before {
-    border-top-color: var(--border);
-  }
-  .Popover-message::after {
-    border-top-color: var(--alt);
   }
   .Popover-message::before {
     border-left-color: var(--border);

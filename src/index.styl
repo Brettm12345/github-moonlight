@@ -25,6 +25,8 @@
 
 $elevationMd
   s var(--elevation-md)
+::selection
+  c $cn 0 $region
 ::placeholder
   c $placeholder
 *
@@ -47,6 +49,25 @@ kbd
   c $text $border $bg
   font 14px $monoFont
   s inset 0 -1px 0 $border
+code,
+pre,
+tt
+  fn $monoFont
+.blob-code-inner
+  c $text
+  fn $monoFont
+  fs 15px
+  lh 1.8
+  .highlighted
+    c 0 0 $icon
+.blob-num
+  c $hover $border $alt
+  fw 600
+.blob-expanded
+  .blob-
+    &code,
+    &num
+      c 0 $border $alt
 .file:target
   @extend $elevationMd
 .description
@@ -98,7 +119,6 @@ img[src*='octocat-spinner-64.gif']
   c $faded
   &:hover
     c $blue
-.profile-rollup-content li.d-block.mt-1.py-1,
 .js-recent-activity-container > div > div
   c 0 0 $bg
 .diffstat-
@@ -140,13 +160,6 @@ path[fill='#eee']
     c $text $border $bg
   &--outline
     c $text $border $
-.profile-timeline
-  &-card.bg-white
-    c 0 0 $hl
-  &.discussion-timeline:before
-    c 0 0 $hl
-  &-month-heading:after
-    c 0 0 $border
 .repository-lang-stats ol.repository-lang-stats-numbers li .lang
   c $cn
 .discussion-
@@ -164,8 +177,6 @@ path[fill='#eee']
   b 0
 .vcard-username
   c $textGray
-.user-profile-sticky-bar:after
-  c 0 $border $bg
 .previewable-comment-form .comment-form-head.tabnav
   bb $b
   bl 0
@@ -247,6 +258,8 @@ div[style*='background: linear-gradient']
 .TimelineItem
   &--condensed &-badge
     size 30px
+  &-break
+    c 0 $alt transparent
 .TableObject-item--primary
   c $text
 .btn-mktg
@@ -311,7 +324,6 @@ table.files
     c 0 0 $region
 .auth-form-body
   c $text $border $alt
-.user-profile-nav,
 .topic-tag
   b $b
   &-link:hover
@@ -400,15 +412,14 @@ hr
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra)
   c $text
 div.commit-build-statuses,
-.link-
-  &gray
-    c $faded
-    &-dark,
-    body &-dark
-      &:hover,
-      body &:hover
-        td underline
-      c $blue
+.link-gray
+  c $faded
+  &-dark,
+  body &-dark
+    &:hover,
+    body &:hover
+      td underline
+    c $blue
 .access-form-wrapper
   c 0 $border $alt
 .discussion-sidebar-heading
@@ -491,31 +502,6 @@ div.commit-build-statuses,
     button:hover
       bg transparent
       td underline
-.js-profile-editable-edit-button
-  c $cn $border $hl
-.pinned-item
-  &-name
-    c $faded
-  &-checkbox:checked + &-name
-    c $text $border $icon
-.dashboard-notice
-  b $b
-  c 0 0 $hl
-  h2
-    c $text
-.repo-list
-  p 0 12px
-  &,
-  &-item
-    c 0 $border $alt
-.mini-repo-list-item
-  bt $b
-.navigation-focus
-  c 0 0 $hover
-.team,
-.user
-  &-mention
-    c $cn
 .tabnav-pr,
 div
   .tabnav-tab
@@ -578,31 +564,12 @@ div
   c 0 $border $hl
   pl 10px
   r 4px
-.TimelineItem-break
-  c 0 $alt transparent
-code,
-pre,
-tt
-  fn $monoFont
-.blob-code-inner
-  c $text
-  fn $monoFont
-  fs 15px
-  lh 1.8
-  .highlighted
-    c 0 0 $icon
-.blob-num
-  c $hover $border $alt
-  fw 600
-.blob-expanded
-  .blob-
-    &code,
-    &num
-      c 0 $border $alt
 .contrib-person path
   fill $orange
-{selector('.menu-item', '&.selected, &[aria-current]', '&:before')}
-  c 0 0 $blue
+.menu-item
+  &.selected, &[aria-current]
+    &:before
+      c 0 0 $blue
 .CheckRun
   c 0 $border $alt
   &-header
@@ -629,7 +596,6 @@ tt
 .Popover-message
   c $text
   caret 'bottom'
-  caret 'top'
   caret 'left'
 .UnderlineNav-item
   &:hover

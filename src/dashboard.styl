@@ -1,14 +1,27 @@
-.select-menu
-  &-item
+.select-menu-
+  &item
     tr background-color 0.1s ease-in-out
     &:hover
       c 0 0 $region
-  &-modal-right.details-reset.details-overlay.mb-2,
+  &modal-right.details-reset.details-overlay.mb-2,
   .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
     c 0 0 $alt
-.profile-rollup-wrapper
-  &+&
-    bt $b
+.UnderlineNav
+  c 0 0 $hl
+.profile-
+.profile-
+  &timeline
+    &.discussion-timeline:before
+      c 0 0 $hl
+    &-rollup-content li.d-block.mt-1.py-1
+      c 0 0 $bg
+    &-card.bg-white
+      c 0 0 $hl
+    &-month-heading:after
+      c 0 0 $border
+  &rollup-wrapper
+    &+&
+      bt $b
 .activity-overview-
   &percentage
     fill $cn
@@ -17,7 +30,38 @@
 .ajax-pagination-
   &form &btn
     c 0 $border $alt
-.user-profile-nav
+.user-profile-
+  &nav
+    b $b
+    px 10px
+    r 8px
+  &sticky-bar:after
+    c 0 $border $bg
+.js-profile-editable-edit-button
+  c $cn $border $hl
+.pinned-item-
+  &name
+    c $faded
+  &checkbox:checked + &name
+    c $text $border $icon
+.dashboard-notice
   b $b
-  px 10px
-  r 8px
+  c 0 0 $hl
+  h2
+    c $text
+.repo-list
+  p 0 12px
+  &,
+  &-item
+    c 0 $border $alt
+.mini-repo-list-item
+  bt $b
+.navigation-focus
+  c 0 0 $hover
+.team,
+.user-mention
+    c $cn
+.profile-timeline-
+  &month-heading.bg-white,
+  &year-list
+    c 0 0 $bg
