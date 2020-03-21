@@ -36,6 +36,8 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" width="100%" />
 ** Commit Tree
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" width="100%" />
+** Contribution Tree
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/contributions.png" width="100%" />
 ** Markdown
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" width="100%" />
 ** Issues
