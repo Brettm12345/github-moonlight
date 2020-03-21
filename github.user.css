@@ -929,6 +929,10 @@
   }
   .UnderlineNav {
     background-color: var(--hl) !important;
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .UnderlineNav[style*="margin-top: 0px;"] {
+    background-color: var(--bg) !important;
   }
   .profile-timeline.discussion-timeline:before {
     background-color: var(--hl) !important;
