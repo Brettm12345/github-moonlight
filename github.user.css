@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.4
+@version      0.6.5
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -582,6 +582,12 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .SelectMenu-item {
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .SelectMenu-item:hover {
+    background-color: var(--hl) !important;
   }
   .status-meta,
   .merge-pr-more-commits {
