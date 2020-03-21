@@ -211,17 +211,16 @@ path[fill='#eee']
   .current,
   [aria-current]
     c $cn 0 $icon
-    &:hover
-      c $cn 0 $hover
   a,
   em,
   span,
   .disabled,
   .gap,
   [aria-disabled=true]
-    &,
     &:hover
-      c 0 $border $hl
+      c 0 0 $region
+    tr background-color 0.1s ease-in-out
+    c 0 $border $hl
 input[type='text']
   c $cn $border $alt
 div[style*='background: linear-gradient']

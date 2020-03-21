@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.3
+@version      0.6.4
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -1353,25 +1353,23 @@
     color: var(--cn) !important;
     background-color: var(--icon) !important;
   }
-  .pagination .current:hover,
-  .pagination [aria-current]:hover {
-    color: var(--cn) !important;
-    background-color: var(--hover) !important;
-  }
   .pagination a,
   .pagination em,
   .pagination span,
   .pagination .disabled,
   .pagination .gap,
-  .pagination [aria-disabled=true],
+  .pagination [aria-disabled=true] {
+    transition: background-color 0.1s ease-in-out !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
   .pagination a:hover,
   .pagination em:hover,
   .pagination span:hover,
   .pagination .disabled:hover,
   .pagination .gap:hover,
   .pagination [aria-disabled=true]:hover {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    background-color: var(--region) !important;
   }
   input[type='text'] {
     color: var(--cn) !important;
