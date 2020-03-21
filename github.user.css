@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.2
+@version      0.6.3
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -529,6 +529,12 @@
   }
   .text-red {
     color: var(--red) !important;
+  }
+  .task-progress {
+    color: var(--faded) !important;
+  }
+  .task-progress .progress-bar .progress {
+    background-color: var(--region) !important;
   }
   .compare-pr-placeholder {
     border-color: var(--border) !important;
@@ -1142,7 +1148,7 @@
     fill: var(--border);
   }
   .State--red {
-    color: var(--border) !important;
+    color: var(--cn) !important;
     border-color: var(--red) !important;
     background-color: var(--red) !important;
   }
