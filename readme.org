@@ -24,6 +24,8 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 * Features
 - Custom colors: All color variables are easily customizable
 - Custom fonts: Allow the user to pick custom fonts
+* Recomended Font
+The font I reccomend for use with this stylesheet is [[https://rsms.me/inter/][Inter]]
 * Recomended Extensions
 | Extension           | Description                         |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
