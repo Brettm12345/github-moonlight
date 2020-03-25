@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.7
+@version      0.6.8
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -335,6 +335,9 @@
   }
   .calendar-graph rect[fill='#196127'] {
     fill: var(--teal);
+  }
+  .markdown-body a {
+    text-decoration: underline !important;
   }
   .markdown-body h1,
   .markdown-body h2 {
