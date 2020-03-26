@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.8.6
+@version      0.8.7
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -869,7 +869,7 @@
   .signup-plan-card:hover {
     background-color: var(--region) !important;
   }
-  div[style*="height"] {
+  div[style*="height: 1px;"] {
     background-color: var(--border) !important;
   }
   .MarketplaceBackground-buffer {
