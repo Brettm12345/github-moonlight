@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.8.0
+@version      0.8.5
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -711,6 +711,12 @@
   .timeline-comment--caret.current-user::after {
     border-right-color: var(--alt) !important;
   }
+  .composer.composer-responsive .timeline-comment::before {
+    border-right-color: var(--alt);
+  }
+  .composer.composer-responsive .timeline-comment::after {
+    border-right-color: var(--alt);
+  }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1076,6 +1082,12 @@
     border-color: var(--green) !important;
     background-color: var(--teal-trans) !important;
     font-weight: 500 !important;
+  }
+  #first-time-contributor .Popover-message::before {
+    border-right-color: var(--alt);
+  }
+  #first-time-contributor .Popover-message::after {
+    border-right-color: var(--alt);
   }
   .commit-author-section {
     color: var(--blue) !important;
@@ -1643,6 +1655,11 @@
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
+    background-color: var(--alt) !important;
+  }
+  .tabnav--responsive .tabnav-tab {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
   .tabnav-tab[aria-current],
