@@ -8,8 +8,7 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 [[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
 #+HTML: </div>
 
-* Table of Contents
-:TOC_3_gh:
+* Table of Contents :TOC_3_gh:
 - [[#github-moonlight][Github Moonlight]]
 - [[#features][Features]]
 - [[#recomended-fonts][Recomended Fonts]]
@@ -22,6 +21,9 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
   - [[#markdown][Markdown]]
   - [[#issues][Issues]]
   - [[#diff][Diff]]
+  - [[#gist-user][Gist User]]
+  - [[#gist-file][Gist File]]
+  - [[#gist-file-edit][Gist File Edit]]
   - [[#explore][Explore]]
   - [[#api-docs][Api Docs]]
   - [[#actions][Actions]]
@@ -61,6 +63,8 @@ These are the fonts used in the screenshots
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png" width="100%" />
 ** Gist File
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png" width="100%" />
+** Gist File Edit
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file-edit.png" width="100%" />
 ** Explore
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" width="100%" />
 ** Api Docs

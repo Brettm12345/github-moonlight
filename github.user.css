@@ -210,7 +210,7 @@
     background-color: var(--hl) !important;
   }
   .cm-s-github-light .CodeMirror-lines {
-    background-color: var(--region) !important;
+    background-color: var(--hl) !important;
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
@@ -2108,11 +2108,23 @@
   .js-gist-file-update-container.js-task-list-container.file-box {
     background-color: var(--hl) !important;
   }
+  .cm-s-github-light .CodeMirror-linenumber {
+    color: var(--indigo) !important;
+  }
   #gist-pjax-container {
     background-color: var(--alt) !important;
   }
   .application-main {
     margin-bottom: 16px !important;
+  }
+  .cm-attribute {
+    color: var(--yellow) !important;
+  }
+  .cm-string {
+    color: var(--green) !important;
+  }
+  .cm-operator {
+    color: var(--cyan) !important;
   }
   .form-select,
   input[type="text"].form-control {
