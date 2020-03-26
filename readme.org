@@ -1,5 +1,6 @@
 #+HTML: <div align="center">
 
+
 * Github Moonlight
 
 A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
@@ -7,13 +8,16 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 [[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
 #+HTML: </div>
 
-* Table of Contents
-
+* Table of Contents :TOC_3_gh:
 - [[#github-moonlight][Github Moonlight]]
+- [[#features][Features]]
+- [[#recomended-fonts][Recomended Fonts]]
 - [[#recomended-extensions][Recomended Extensions]]
 - [[#screenshots][Screenshots]]
   - [[#code][Code]]
   - [[#commit-tree][Commit Tree]]
+  - [[#pull-requests][Pull Requests]]
+  - [[#contribution-tree][Contribution Tree]]
   - [[#markdown][Markdown]]
   - [[#issues][Issues]]
   - [[#diff][Diff]]
@@ -21,6 +25,7 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
   - [[#actions][Actions]]
   - [[#projects][Projects]]
 - [[#todo][Todo]]
+
 * Features
 - Custom colors: All color variables are easily customizable
 - Custom fonts: Allow the user to pick custom fonts
@@ -36,7 +41,6 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github        |
 * Screenshots
 ** Code
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file.png" width="100%" />
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" width="100%" />
 ** Commit Tree
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" width="100%" />
@@ -59,12 +63,12 @@ These are the fonts used in the screenshots
 * Todo
 Feel free to create an issue if you want anything added to the theme
 
-  * [ ] Add support for more extensions
-  * [ ] Add support for github api docs
-  * [X] Put colors into usercss variables
-  * [X] Add screenshots to readme
-  * [X] Add styles for actions
-  * [X] Add styles for insights
-  * [X] Finish theming pull request creation
-  * [X] Setup a usercss with user configurable variables
-  * [X] Add badges to readme.org
+  - [ ] Add support for more extensions
+  - [ ] Add support for github api docs
+  - [X] Put colors into usercss variables
+  - [X] Add screenshots to readme
+  - [X] Add styles for actions
+  - [X] Add styles for insights
+  - [X] Finish theming pull request creation
+  - [X] Setup a usercss with user configurable variables
+  - [X] Add badges to readme.org
