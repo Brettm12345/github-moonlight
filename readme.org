@@ -31,6 +31,7 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 * Features
 - Custom colors: All color variables are easily customizable
 - Custom fonts: Allow the user to pick custom fonts
+- Complete theme: This theme changes 100% of the github ui. As well as the
 * Recomended Fonts
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
@@ -56,6 +57,10 @@ These are the fonts used in the screenshots
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" width="100%" />
 ** Diff
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" width="100%" />
+** Gist User
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png" width="100%" />
+** Gist File
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png" width="100%" />
 ** Explore
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" width="100%" />
 ** Api Docs

@@ -1,0 +1,3401 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-5Bs4ERl99/u2AUfpOZF2F0cdfNby7+Vd9teUshXUBPo5CjwECR7IAEf+weI/eCk5tF7K1h3O8hd8k0+P/HePeg==" rel="stylesheet" href="gist-file_files/frameworks-e41b3811197df7fbb60147e939917617.css">
+  
+    <link crossorigin="anonymous" media="all" integrity="sha512-whJUL2x2LCRTRARm7cOI7JLt7r+fON3F+LANQKvZarg3YuJttlZQnErXU2uAq06K5Io1Bcv6eWF64jH1L8Lbrg==" rel="stylesheet" href="gist-file_files/github-c212542f6c762c2453440466edc388ec.css">
+    
+    
+    
+    
+
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Create a new Gist</title>
+    <meta name="description" content="GitHub is where people build software. More than 40 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://gist.github.com/opensearch-gist.xml" title="Gist">
+  <link rel="fluid-icon" href="https://gist.github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    <meta property="og:url" content="https://gist.github.com">
+    <meta property="og:site_name" content="GitHub">
+    <meta property="og:title" content="Build software better, together">
+    <meta property="og:description" content="GitHub is where people build software. More than 40 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-mark.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="620">
+    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="620">
+
+    <meta property="twitter:site" content="github">
+    <meta property="twitter:site:id" content="13334762">
+    <meta property="twitter:creator" content="github">
+    <meta property="twitter:creator:id" content="13334762">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="GitHub">
+    <meta property="twitter:description" content="GitHub is where people build software. More than 40 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="twitter:image:src" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
+    <meta property="twitter:image:width" content="1200">
+    <meta property="twitter:image:height" content="1200">
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6NTA1MjcyODU1OmE1OTBkZTJjNDZlMTdlZWNlZTU5MWY0M2E0MGVkYjI2NDIxYTViODA1Y2JkZWU1N2I2ZDRiZDg5YzgzMjNjYWM=--8c8ad36ef4a6c95e84b27447281d402b34e5bdb2">
+  <link rel="sudo-modal" href="https://gist.github.com/sessions/sudo_modal">
+
+  <meta name="request-id" content="C064:1196:63FC33:A88E80:5E7C4877" data-pjax-transient="true"><meta name="html-safe-nonce" content="9a8bdfbddbb3d5d7a51673d6a850cef921494f99" data-pjax-transient="true"><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2lzdC5naXRodWIuY29tL0JyZXR0bTEyMzQ1IiwicmVxdWVzdF9pZCI6IkMwNjQ6MTE5Njo2M0ZDMzM6QTg4RTgwOjVFN0M0ODc3IiwidmlzaXRvcl9pZCI6IjI0Mzc2NDgzMTU3OTQ0OTQ4NTIiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true"><meta name="visitor-hmac" content="02d23abead4289b13694671532f5f1feac1e34a3fe26a001d590ef4d467ae295" data-pjax-transient="true">
+
+
+    <meta name="page-subject" content="GitHub">
+
+  <meta name="github-keyboard-shortcuts" content="dashboards" data-pjax-transient="true">
+
+  
+
+  <meta name="selected-link" value="/" data-pjax-transient="">
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+<meta name="octolytics-host" content="collector.githubapp.com"><meta name="octolytics-app-id" content="gist"><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event"><meta name="octolytics-dimension-ga_id" content="" class="js-octo-ga-id"><meta name="octolytics-actor-id" content="7571012"><meta name="octolytics-actor-login" content="Brettm12345"><meta name="octolytics-actor-hash" content="efa9bc33fbd921b058f123fd19e19c873b476aea9409963feb6720c42008b605">
+<meta name="analytics-location" content="/" data-pjax-transient="true">
+
+
+
+
+  <meta class="js-ga-set" name="userId" content="efd50b030d97c5cc0fb4f8fe0c558c78">
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="gist.github.com">
+    <meta name="user-login" content="Brettm12345">
+
+      <meta name="expected-hostname" content="gist.github.com">
+
+      <meta name="js-proxy-site-detection-payload" content="M2VjMmUxNjllNTdhMTVlYjQxZDEzZWFiYWRkZDFlODY2N2U3OGNjN2E3YjYxZGFlYWMxYmVlOGE3MTNhODI2Ynx7InJlbW90ZV9hZGRyZXNzIjoiMTAwLjEuMjAuMTk1IiwicmVxdWVzdF9pZCI6IkMwNjQ6MTE5Njo2M0ZDMzM6QTg4RTgwOjVFN0M0ODc3IiwidGltZXN0YW1wIjoxNTg1MjAzMzIwLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="MARKETPLACE_FEATURED_BLOG_POSTS,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,RELATED_ISSUES,GHE_CLOUD_TRIAL,PAGE_STALE_CHECK">
+
+  <meta http-equiv="x-pjax-version" content="9d2e5c50e62b8f4ec909afc553a52bf5">
+  
+
+      <link crossorigin="anonymous" media="all" integrity="sha512-5hVNC4CXyolsNW7Su6XRzySIA8wItt7030sh1rRwjvqH5aASFMWfrEXSkuyWvgYPRZQSUmHqNBNQ+8N3kZ61fQ==" rel="stylesheet" href="gist-file_files/gist-e6154d0b8097ca896c356ed2bba5d1cf.css">
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+  <style type="text/css">/* the tree node's style */
+.tree-view {
+  overflow-y: hidden;
+}
+
+.tree-view_item {
+  /* immediate child of .tree-view, for styling convenience */
+}
+
+/* style for the children nodes container */
+.tree-view_children {
+  margin-left: 16px;
+}
+
+.tree-view_children-collapsed {
+  height: 0px;
+}
+
+.tree-view_arrow {
+  cursor: pointer;
+  margin-right: 6px;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tree-view_arrow:after {
+  content: '▾';
+}
+
+/* rotate the triangle to close it */
+.tree-view_arrow-collapsed {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+</style><style type="text/css">@import url(https://cdn.jsdelivr.net/npm/file-icons-js@1.0.3/css/style.css);</style><style type="text/css">/* Extension specific */
+
+.__better_github_pr {
+    display: none;
+}
+
+._better_github_pr_resizer {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: lightgray;
+    right: 0;
+    top: 0;
+    cursor: col-resize;
+    opacity: .4;
+    transition: opacity .2s ease;
+    z-index: 1;
+}
+
+._better_github_pr_resizer:hover {
+    opacity: 1;
+}
+
+.enable_better_github_pr .__better_github_pr {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    padding: 0 10px 0;
+    width: 330px;
+    height: calc(100vh - 68px);
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.__better_github_pr > div {
+    height: calc(100% - 55px);
+}
+
+.__better_github_pr .file-container {
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.__better_github_pr .file-container > div {
+    width: fit-content;
+}
+
+.__better_github_pr .close-button {
+    background: none;
+    border: none;
+    padding: 5px 2px;
+}
+
+.__better_github_pr .actions {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.__better_github_pr .actions-filter {
+    flex: 1;
+    padding: 5px 10px;
+    border-radius: 4px;
+    outline: none;
+    background: #efefef;
+    color: #666666;
+    border: 1px solid #efefef;
+    transition: border .2s;
+}
+.__better_github_pr .actions-filter:focus {
+    outline: none;
+    border: 1px solid #dddddd;
+}
+
+.__better_github_pr .actions-small-button
+{
+    flex: 0 0 24px;
+    padding: 0 5px;
+}
+.__better_github_pr .actions-small-button:nth-child(2) {
+    padding-left: 10px;
+}
+.__better_github_pr .actions-small-button:last-child {
+    padding-right: 0;
+}
+
+.__better_github_pr .actions-small-button button
+{
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.__better_github_pr_noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* GitHub page changes */
+
+.enable_better_github_pr #files,
+.enable_better_github_pr .commit.full-commit.prh-commit {
+    margin-left: 340px;
+}
+
+.enable_better_github_pr .comment-holder {
+    max-width: 708px;
+}
+
+.enable_better_github_pr .container {
+    transition: width .2s ease;
+}
+
+/* react-treeview */
+
+.tree-view_item {
+    position: relative;
+    padding-left: 37px;
+    transition: background-color .1s;
+}
+
+.tree-view_item:hover {
+    background-color: #efefef;
+}
+
+.tree-view_arrow {
+    transform: translateY(-1px);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.tree-view_arrow:before {
+    content: url("data:image/svg+xml;uff8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 125' enable-background='new 0 0 100 100' xml:space='preserve'><polygon stroke='%23adadad' fill='%23ffffff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='  82.626,50 17.374,87.674 17.374,12.326 82.626,50 17.374,87.674 17.374,12.326 '/></svg>");
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    vertical-align: middle;
+    margin-right: 4px;
+    transition: transform .2s;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.tree-view_arrow:after {
+    content: url('data:image/svg+xml;uff8,<svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill="%238197B0" fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>');
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tree-view_arrow-collapsed {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.tree-view_arrow-collapsed:before {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.github-pr-file {
+    white-space: nowrap;
+    padding-left: 18px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: transparent;
+    font-weight: normal;
+}
+
+.github-pr-file.github-pr-file-highlight {
+    background: #ebebeb;
+}
+
+.github-pr-file.github-pr-file-deleted {
+    text-decoration: line-through;
+}
+
+.github-pr-file > span {
+    margin-right: 4px;
+}
+
+.github-pr-file > span.changes > .number {
+  color: #888888;
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+.github-pr-file span.addition {
+    background-color: #2cbe4e;
+}
+
+.github-pr-file span.change-block {
+    display: inline-block;
+    vertical-align: middle;
+    height: 6px;
+    width: 6px;
+    margin-right: 2px;
+}
+
+.github-pr-file span.deletion {
+    background-color: #b22;
+}
+
+.github-pr-file-highlight-filter {
+    background: #fffbdd;
+}
+
+.github-pr-file-comment {
+    margin-left: 3px;
+    position: relative;
+    top: 2px;
+}
+
+.github-pr-file-checkmark {
+    color: #2cbe4e;
+    margin-left: 5px;
+}
+
+/* Dark mode */
+
+.__better_github_pr_dark_mode .__better_github_pr {
+    border-color: #484848;
+    background-color: #202020;
+    color: #bebebe;
+}
+
+.__better_github_pr_dark_mode .__better_github_pr .link-gray-dark {
+    color: #bebebe !important;
+}
+
+.__better_github_pr_dark_mode .github-pr-file > span.changes > .number {
+    color: #999999;
+}
+
+.__better_github_pr_dark_mode .github-pr-file.github-pr-file-highlight,
+.__better_github_pr_dark_mode .tree-view_item:hover {
+    background-color: #42433E;
+}
+
+.__better_github_pr_dark_mode .__better_github_pr .actions-filter {
+    background-color: #42433E;
+    border-color: #333333;
+    color: #ffffff;
+}
+
+.__better_github_pr_dark_mode .__better_github_pr .actions-filter:focus {
+    border-color: #000000;
+}
+
+.__better_github_pr_dark_mode .__better_github_pr .actions-filter::placeholder {
+    color: #ffffff;
+}
+
+.__better_github_pr_dark_mode .__better_github_pr .settings-button,
+.__better_github_pr_dark_mode .__better_github_pr .close-button,
+.__better_github_pr_dark_mode .__better_github_pr .full-width-button {
+    color: #ffffff;
+}
+
+.__better_github_pr_dark_mode .__better_github_pr .github-pr-file-highlight-filter {
+    background: #e4af3c;
+    color: #333333;
+}
+</style></head>
+
+  <body class="logged-in env-production min-width-lg page-gist-edit intent-mouse" style="animation-fill-mode: none; overflow-y: visible;">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+      <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+
+    
+    
+
+
+
+        <div class="Header" role="banner">
+  <div class="Header-item">
+    <a class="Header-link" data-hotkey="g d" aria-label="Gist Homepage " href="https://gist.github.com/">
+  <svg class="octicon octicon-mark-github v-align-middle d-none" height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+  <svg height="24" class="octicon octicon-logo-github v-align-middle" viewBox="0 0 45 16" version="1.1" width="67" aria-hidden="true"><path fill-rule="evenodd" d="M18.53 12.03h-.02c.009 0 .015.01.024.011h.006l-.01-.01zm.004.011c-.093.001-.327.05-.574.05-.78 0-1.05-.36-1.05-.83V8.13h1.59c.09 0 .16-.08.16-.19v-1.7c0-.09-.08-.17-.16-.17h-1.59V3.96c0-.08-.05-.13-.14-.13h-2.16c-.09 0-.14.05-.14.13v2.17s-1.09.27-1.16.28c-.08.02-.13.09-.13.17v1.36c0 .11.08.19.17.19h1.11v3.28c0 2.44 1.7 2.69 2.86 2.69.53 0 1.17-.17 1.27-.22.06-.02.09-.09.09-.16v-1.5a.177.177 0 00-.146-.18zM42.23 9.84c0-1.81-.73-2.05-1.5-1.97-.6.04-1.08.34-1.08.34v3.52s.49.34 1.22.36c1.03.03 1.36-.34 1.36-2.25zm2.43-.16c0 3.43-1.11 4.41-3.05 4.41-1.64 0-2.52-.83-2.52-.83s-.04.46-.09.52c-.03.06-.08.08-.14.08h-1.48c-.1 0-.19-.08-.19-.17l.02-11.11c0-.09.08-.17.17-.17h2.13c.09 0 .17.08.17.17v3.77s.82-.53 2.02-.53l-.01-.02c1.2 0 2.97.45 2.97 3.88zm-8.72-3.61h-2.1c-.11 0-.17.08-.17.19v5.44s-.55.39-1.3.39-.97-.34-.97-1.09V6.25c0-.09-.08-.17-.17-.17h-2.14c-.09 0-.17.08-.17.17v5.11c0 2.2 1.23 2.75 2.92 2.75 1.39 0 2.52-.77 2.52-.77s.05.39.08.45c.02.05.09.09.16.09h1.34c.11 0 .17-.08.17-.17l.02-7.47c0-.09-.08-.17-.19-.17zm-23.7-.01h-2.13c-.09 0-.17.09-.17.2v7.34c0 .2.13.27.3.27h1.92c.2 0 .25-.09.25-.27V6.23c0-.09-.08-.17-.17-.17zm-1.05-3.38c-.77 0-1.38.61-1.38 1.38 0 .77.61 1.38 1.38 1.38.75 0 1.36-.61 1.36-1.38 0-.77-.61-1.38-1.36-1.38zm16.49-.25h-2.11c-.09 0-.17.08-.17.17v4.09h-3.31V2.6c0-.09-.08-.17-.17-.17h-2.13c-.09 0-.17.08-.17.17v11.11c0 .09.09.17.17.17h2.13c.09 0 .17-.08.17-.17V8.96h3.31l-.02 4.75c0 .09.08.17.17.17h2.13c.09 0 .17-.08.17-.17V2.6c0-.09-.08-.17-.17-.17zM8.81 7.35v5.74c0 .04-.01.11-.06.13 0 0-1.25.89-3.31.89-2.49 0-5.44-.78-5.44-5.92S2.58 1.99 5.1 2c2.18 0 3.06.49 3.2.58.04.05.06.09.06.14L7.94 4.5c0 .09-.09.2-.2.17-.36-.11-.9-.33-2.17-.33-1.47 0-3.05.42-3.05 3.73s1.5 3.7 2.58 3.7c.92 0 1.25-.11 1.25-.11v-2.3H4.88c-.11 0-.19-.08-.19-.17V7.35c0-.09.08-.17.19-.17h3.74c.11 0 .19.08.19.17z"></path></svg>
+  <svg height="24" class="octicon octicon-logo-gist v-align-middle" viewBox="0 0 25 16" version="1.1" width="37" aria-hidden="true"><path fill-rule="evenodd" d="M4.7 8.73h2.45v4.02c-.55.27-1.64.34-2.53.34-2.56 0-3.47-2.2-3.47-5.05 0-2.85.91-5.06 3.48-5.06 1.28 0 2.06.23 3.28.73V2.66C7.27 2.33 6.25 2 4.63 2 1.13 2 0 4.69 0 8.03c0 3.34 1.11 6.03 4.63 6.03 1.64 0 2.81-.27 3.59-.64V7.73H4.7v1zm6.39 3.72V6.06h-1.05v6.28c0 1.25.58 1.72 1.72 1.72v-.89c-.48 0-.67-.16-.67-.7v-.02zm.25-8.72c0-.44-.33-.78-.78-.78s-.77.34-.77.78.33.78.77.78.78-.34.78-.78zm4.34 5.69c-1.5-.13-1.78-.48-1.78-1.17 0-.77.33-1.34 1.88-1.34 1.05 0 1.66.16 2.27.36v-.94c-.69-.3-1.52-.39-2.25-.39-2.2 0-2.92 1.2-2.92 2.31 0 1.08.47 1.88 2.73 2.08 1.55.13 1.77.63 1.77 1.34 0 .73-.44 1.42-2.06 1.42-1.11 0-1.86-.19-2.33-.36v.94c.5.2 1.58.39 2.33.39 2.38 0 3.14-1.2 3.14-2.41 0-1.28-.53-2.03-2.75-2.23h-.03zm8.58-2.47v-.86h-2.42v-2.5l-1.08.31v2.11l-1.56.44v.48h1.56v5c0 1.53 1.19 2.13 2.5 2.13.19 0 .52-.02.69-.05v-.89c-.19.03-.41.03-.61.03-.97 0-1.5-.39-1.5-1.34V6.94h2.42v.02-.01z"></path></svg>
+</a>
+  </div>
+
+
+  <div class="Header-item Header-item--full js-site-search">
+      <div class="header-search mr-3">
+
+<!-- '"` --><!-- </textarea></xmp> --><form class="position-relative js-quicksearch-form" role="search" aria-label="Site" action="/search" accept-charset="UTF-8" method="get">
+  <div class="header-search-wrapper form-control input-sm js-chromeless-input-container">
+    <input type="text" class="form-control input-sm js-site-search-focus header-search-input js-navigation-enable js-quicksearch-field" data-hotkey="s,/" name="q" aria-label="Search" placeholder="Search…" autocorrect="off" autocomplete="off" autocapitalize="off">
+  </div>
+
+    <div class="gist-quicksearch-results js-quicksearch-results js-navigation-container" data-quicksearch-url="/search/quick"></div>
+</form></div>
+
+
+    <nav aria-label="Global" class="d-flex">
+  <a class="Header-link mr-3" data-ga-click="Header, go to all gists, text:all gists" href="https://gist.github.com/discover">All gists</a>
+
+  <a class="Header-link mr-3" data-ga-click="Header, go to GitHub, text:Back to GitHub" href="https://github.com/">Back to GitHub</a>
+
+
+
+</nav>
+
+  </div>
+
+
+
+
+
+    
+    <div class="Header-item ">
+      <a aria-label="You have unread notifications" class="Header-link notification-indicator position-relative tooltipped tooltipped-s js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:unread" data-channel="notification-changed:7571012" href="https://github.com/notifications">
+        <span class="js-indicator-modifier mail-status unread"></span>
+        <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path></svg>
+</a>    </div>
+
+
+    <div class="Header-item ">
+      <a class="Header-link" data-ga-click="Header, go to new gist, text:new gist" aria-label="Create new gist" href="https://gist.github.com/">
+        <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+</a>    </div>
+
+    <div class="Header-item position-relative mr-0" id="user-links">
+
+      <details class="details-overlay details-reset">
+        <summary class="Header-link name" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar" aria-haspopup="menu" role="button">
+          <img class="avatar" src="gist-file_files/7571012" alt="@Brettm12345" width="20" height="20">
+          <span class="dropdown-caret"></span>
+        </summary>
+        <details-menu class="dropdown-menu dropdown-menu-sw" style="width: 180px" role="menu">
+          <div class="css-truncate"><a role="menuitem" class="text-gray-dark  no-underline px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="https://gist.github.com/Brettm12345" data-ga-click="Header, go to profile, text:Signed in as">Signed in as <strong class="css-truncate-target">Brettm12345</strong></a></div>
+          <div role="none" class="dropdown-divider"></div>
+          <a role="menuitem" class="dropdown-item" href="https://gist.github.com/Brettm12345" data-ga-click="Header, go to your gists, text:your gists">Your gists</a>
+          <a role="menuitem" class="dropdown-item" href="https://gist.github.com/Brettm12345/starred" data-ga-click="Header, go to starred gists, text:starred gists">Starred gists</a>
+          <a role="menuitem" class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">Help</a>
+          <div role="none" class="dropdown-divider"></div>
+          <a role="menuitem" class="dropdown-item" href="https://github.com/Brettm12345" data-ga-click="Header, go to profile, text:your profile">Your GitHub profile</a>
+          <!-- '"` --><!-- </textarea></xmp> --><form class="logout-form" action="https://gist.github.com/auth/github/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ueie8jCJtAvgkbKo1e+eVWxF5IRLYq8n7qM2pG610iD6fdHBDMuDWUw9KF5pHhqjJNtReOMjun8sL5FFG1E3dg==">
+            <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
+              Sign out
+            </button>
+</form>        </details-menu>
+      </details>
+    </div>
+</div>
+
+
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+    <div id="js-flash-container">
+
+</div>
+
+
+    
+
+  <include-fragment class="js-notification-shelf-include-fragment" data-base-src="https://github.com/notifications/beta/shelf"></include-fragment>
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled="">
+        <div itemscope="" itemtype="http://schema.org/Code">
+    <main id="gist-pjax-container" class="gist-content-wrapper" data-pjax-container="">
+      
+  <div class="gisthead pagehead repohead readability-menu bg-gray-light pb-0 pt-3 mb-4">
+  <div class="container-lg px-3">
+    
+    <div class="mb-3">
+      <ul class="list-style-none d-flex flex-items-center">
+          <li class="flex-auto mr-3">
+              <svg height="36" class="octicon octicon-gist mr-2 mt-1 float-left" viewBox="0 0 12 16" version="1.1" width="27" aria-hidden="true"><path fill-rule="evenodd" d="M7.5 5L10 7.5 7.5 10l-.75-.75L8.5 7.5 6.75 5.75 7.5 5zm-3 0L2 7.5 4.5 10l.75-.75L3.5 7.5l1.75-1.75L4.5 5zM0 13V2c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1zm1 0h10V2H1v11z"></path></svg>
+            <div class="meta">
+              <a class="css-truncate d-block" href="https://gist.github.com/Brettm12345/cb871ea3076639d0ba05166645f08933">
+                <strong class="css-truncate-target">sk-hoogle.sh</strong>
+              </a>
+              <div class="f6">
+                <span class="d-block css-truncate">
+                    <span class="text-gray css-truncate-target">Fuzzy search through hoogle</span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="flex-auto mr-3">
+              <svg height="36" class="octicon octicon-gist mr-2 mt-1 float-left" viewBox="0 0 12 16" version="1.1" width="27" aria-hidden="true"><path fill-rule="evenodd" d="M7.5 5L10 7.5 7.5 10l-.75-.75L8.5 7.5 6.75 5.75 7.5 5zm-3 0L2 7.5 4.5 10l.75-.75L3.5 7.5l1.75-1.75L4.5 5zM0 13V2c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1zm1 0h10V2H1v11z"></path></svg>
+            <div class="meta">
+              <a class="css-truncate d-block" href="https://gist.github.com/Brettm12345/cb96c29698995e16665be8cfec3a301b">
+                <strong class="css-truncate-target">nixos-option.sh</strong>
+              </a>
+              <div class="f6">
+                <span class="d-block css-truncate">
+                    <span class="text-gray css-truncate-target">nixos-option with fzf</span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="flex-auto mr-3">
+              <svg height="36" class="octicon octicon-gist mr-2 mt-1 float-left" viewBox="0 0 12 16" version="1.1" width="27" aria-hidden="true"><path fill-rule="evenodd" d="M7.5 5L10 7.5 7.5 10l-.75-.75L8.5 7.5 6.75 5.75 7.5 5zm-3 0L2 7.5 4.5 10l.75-.75L3.5 7.5l1.75-1.75L4.5 5zM0 13V2c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1zm1 0h10V2H1v11z"></path></svg>
+            <div class="meta">
+              <a class="css-truncate d-block" href="https://gist.github.com/Brettm12345/b5bd3883e9de4f44b7c8e04d6c8f81a9">
+                <strong class="css-truncate-target">nix-install.sh</strong>
+              </a>
+              <div class="f6">
+                <span class="d-block css-truncate">
+                    <span class="text-gray css-truncate-target">Nixos package install script with FZF</span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="flex-auto mr-3">
+              <svg height="36" class="octicon octicon-gist mr-2 mt-1 float-left" viewBox="0 0 12 16" version="1.1" width="27" aria-hidden="true"><path fill-rule="evenodd" d="M7.5 5L10 7.5 7.5 10l-.75-.75L8.5 7.5 6.75 5.75 7.5 5zm-3 0L2 7.5 4.5 10l.75-.75L3.5 7.5l1.75-1.75L4.5 5zM0 13V2c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v11c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1zm1 0h10V2H1v11z"></path></svg>
+            <div class="meta">
+              <a class="css-truncate d-block" href="https://gist.github.com/Brettm12345/ee3ba58c67a859436d32f3d366153b05">
+                <strong class="css-truncate-target">Css.purs</strong>
+              </a>
+              <div class="f6">
+                <span class="d-block css-truncate">
+                    <span class="text-gray css-truncate-target">Purescript tailwind css parser</span>
+                </span>
+              </div>
+            </div>
+          </li>
+        <li class="flex-auto pt-2 text-bold text-right f6 lh-condensed">
+          <a href="https://gist.github.com/Brettm12345">See all of your gists</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-lg px-3 new-discussion-timeline">
+  <div class="repository-content gist-content">
+    
+  <script type="text/html" id="js-gist-file-template">
+  <div class="js-gist-file">
+    
+<div class="file js-code-editor container-preview show-code   mx-lg-3"
+  data-github-confirm-unload="Your changes will be lost.">
+  <div class="file-header mb-2">
+
+      <div class="input-group gist-filename-input">
+  <input type="hidden" name="gist[contents][][oid]" value="">
+  <input type="text" class="form-control filename js-gist-filename js-blob-filename"
+    aria-label="Filename including extension…"
+    name="gist[contents][][name]"
+    value=""
+    placeholder="Filename including extension…"
+    data-default-value="gistfile1.txt"
+    data-language-detection-url="/detect_language"
+    autofocus
+    >
+    <input type="hidden" name="new_filename" class="js-new-filename-field" value="">
+  <span class="input-group-button">
+    <button type="button" class="btn btn-danger js-remove-gist-file tooltipped tooltipped-e d-none" aria-label="Remove file">
+      <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+    </button>
+  </span>
+</div>
+
+
+      <div class="file-actions d-none d-md-flex">
+        <select id="indent-mode" class="form-select select-sm js-code-indent-mode" aria-label="Indent mode">
+          <optgroup label="Indent mode">
+            <option value="space">Spaces</option>
+<option value="tab">Tabs</option>
+          </optgroup>
+        </select>
+
+        <select id="indent-size" class="form-select select-sm js-code-indent-width" aria-label="Indent size">
+          <optgroup label="Indent size">
+            <option value="2">2</option>
+<option value="4">4</option>
+<option value="8">8</option>
+          </optgroup>
+        </select>
+
+        <select id="line-wrap-mode" class="form-select select-sm js-code-wrap-mode" aria-label="Line wrap mode">
+          <optgroup label="Line wrap mode">
+            <option value="off">No wrap</option>
+<option value="on">Soft wrap</option>
+          </optgroup>
+        </select>
+      </div>
+  </div>
+
+  <input type="hidden" name="content_changed" class="js-blob-contents-changed" value="true">
+
+  <div class="commit-create  position-relative ">
+    <textarea
+      class="form-control file-editor-textarea js-blob-contents js-code-textarea "
+      rows="17" name="gist[contents][][value]"
+      data-filename=""
+      data-codemirror-mode=""
+      data-allow-unchanged="true"
+      placeholder="Enter file contents here"
+      aria-label="Enter file contents here"
+      spellcheck="false"
+      >
+</textarea>
+  </div>
+
+
+  <div class="loading-preview-msg"><p class="preview-msg text-gray">Loading preview&hellip;</p></div>
+  <div class="no-changes-preview-msg"><p class="preview-msg text-gray">No changes to display.</p></div>
+  <div class="error-preview-msg"><p class="preview-msg text-gray">Unable to load this preview, sorry.</p></div>
+  <div class="js-commit-preview commit-preview   ">
+  </div>
+</div>
+
+  </div>
+</script>
+
+
+  <!-- '"` --><!-- </textarea></xmp> --><form class="js-blob-form" id="new_gist" aria-label="Create gist" action="/" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="AcyzmkaL4Jbct+bLbTbnpo1ejITqMD7ibqN9UGwgWNeJ8rsrKPYSFAR2peitIvZLkL6vay6rUzlFflm38R0hkg==">
+
+  <div>
+    <div id="gists" class="js-gist-files">
+      <input type="text" class="form-control input-block input-contrast" name="gist[description]" aria-label="Gist description" placeholder="Gist description…" autocomplete="off">
+
+<div class="gist-dropzone js-gist-dropzone d-none">
+  <div class="gist-dropzone-pill">
+    <svg height="32" class="octicon octicon-file-code" viewBox="0 0 12 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8.5 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V4.5L8.5 1zM11 14H1V2h7l3 3v9zM5 6.98L3.5 8.5 5 10l-.5 1L2 8.5 4.5 6l.5.98zM7.5 6L10 8.5 7.5 11l-.5-.98L8.5 8.5 7 7l.5-1z"></path></svg><svg height="32" class="octicon octicon-arrow-right" viewBox="0 0 10 16" version="1.1" width="20" aria-hidden="true"><path fill-rule="evenodd" d="M10 8L4 3v3H0v4h4v3l6-5z"></path></svg><svg height="32" class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+    <p>Drop one or more files here to prefill your gist!</p>
+  </div>
+</div>
+
+
+        <div class="js-gist-file">
+          
+<div class="file js-code-editor container-preview show-code   mx-lg-3" data-github-confirm-unload="Your changes will be lost.">
+  <div class="file-header mb-2">
+
+      <div class="input-group gist-filename-input">
+  <input type="hidden" name="gist[contents][][oid]" value="">
+  <input type="text" class="form-control filename js-gist-filename js-blob-filename" aria-label="Filename including extension…" name="gist[contents][][name]" value="syntax.styl" placeholder="Filename including extension…" data-default-value="gistfile1.txt" data-language-detection-url="/detect_language" autofocus="">
+    <input type="hidden" name="new_filename" class="js-new-filename-field" value="syntax.styl" data-default-value="syntax.styl">
+  <span class="input-group-button">
+    <button type="button" class="btn btn-danger js-remove-gist-file tooltipped tooltipped-e d-none" aria-label="Remove file">
+      <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
+    </button>
+  </span>
+</div>
+
+
+      <div class="file-actions d-none d-md-flex">
+        <select id="indent-mode" class="form-select select-sm js-code-indent-mode" aria-label="Indent mode">
+          <optgroup label="Indent mode">
+            <option value="space" selected="selected">Spaces</option>
+<option value="tab">Tabs</option>
+          </optgroup>
+        </select>
+
+        <select id="indent-size" class="form-select select-sm js-code-indent-width" aria-label="Indent size">
+          <optgroup label="Indent size">
+            <option value="2" selected="selected">2</option>
+<option value="4">4</option>
+<option value="8">8</option>
+          </optgroup>
+        </select>
+
+        <select id="line-wrap-mode" class="form-select select-sm js-code-wrap-mode" aria-label="Line wrap mode">
+          <optgroup label="Line wrap mode">
+            <option value="off" selected="selected">No wrap</option>
+<option value="on">Soft wrap</option>
+          </optgroup>
+        </select>
+      </div>
+  </div>
+
+  <input type="hidden" name="content_changed" class="js-blob-contents-changed" value="true" data-default-value="true">
+
+  <div class="commit-create  position-relative ">
+    <textarea class="form-control file-editor-textarea js-blob-contents js-code-textarea " rows="17" name="gist[contents][][value]" data-filename="" data-codemirror-mode="" data-allow-unchanged="true" placeholder="Enter file contents here" aria-label="Enter file contents here" spellcheck="false" style="display: none;">.cm-s-github-light
+
+  /.CodeMirror-gutter.CodeMirror-linenumbers, .CodeMirror-gutters
+    c $indigo $border $alt
+  &amp;.CodeMirror
+    c $text $border $hl
+  .CodeMirror-lines
+    c 0 0 $region
+.CodeMirror-linenumber.CodeMirror-gutter-elt
+  fw 500
+.code .s1
+  c $green
+.pl-
+  &amp;c /* comment, punctuation.definition.comment, string.comment */
+    c $indigo
+  &amp;c1, &amp;s &amp;v /* string variable */
+    c $text
+  &amp;e, &amp;en /* entity.name */
+    c $blue
+  &amp;ent, &amp;smi, &amp;s &amp;s1 /* string source */
+    c $lightRed
+  &amp;k /* keyword, storage, storage.type */
+    c $purpleAlt
+  &amp;s &amp;pse &amp;s1, &amp;pds /* punctuation.definition.string, 
+source.regexp, string.regexp.character-class */
+    c $cyan
+  &amp;sr /* string.regexp */
+    c $cyanAlt
+  &amp;sr &amp;cce /* string.regexp constant.character.escape */
+    c $lightRed
+  &amp;s, &amp;sr &amp;sre, &amp;sr &amp;sra /* string.regexp 
+string.regexp.arbitrary-repitition */
+    c $green
+  &amp;v /* variable */
+    c $pink
+  &amp;smw /* sublimelinter.mark.warning */
+    c $yellow
+  &amp;bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, 
+message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
+    c $red
+  &amp;ii /* invalid.illegal */
+    c $cn 0 $red
+  &amp;c2 /* carriage-return */
+    c $cn 0 $red
+  &amp;c2::before /* carriage-return */
+    content "^M"
+  &amp;sr &amp;cce /* string.regexp constant.character.escape */
+    c $lightRed
+    fw bold
+  &amp;ml /* markup.list */
+    c $orange
+  &amp;mh &amp;en, &amp;ms /* met,.separator */
+    c $cyan
+  &amp;mh /* markup.heading */
+    c $green
+    fw bold
+  &amp;mi /* markup.italic */
+    c $yellow
+    font-style italic
+  &amp;mb /* markup.bold */
+    c $cn
+    fw bold
+  &amp;md /* markup.deleted, meta.diff.header.from-file, 
+punctuation.definition.deleted */
+    c $red 0 $redTrans
+  &amp;mi1 /* markup.inserted, meta.diff.header.to-file, 
+punctuation.definition.inserted */
+    c $teal 0 $tealTrans
+  &amp;mc /* markup.changed, punctuation.definition.changed */
+    c $cyan 0 $cyanTrans
+  &amp;mdr /* meta.diff.range */
+    c $teal
+    fw bold
+  &amp;ba /* brackethighlighter.tag, brackethighlighter.curly, 
+brackethighlighter.round, brackethighlighter.square, 
+brackethighlighter.angle, brackethighlighter.quote */
+    c $hover
+  &amp;sg /* sublimelinter.gutter-mark */
+    c $faded
+  &amp;corl /* constant.other.reference.link, string.other.link */
+    td underline
+</textarea>
+  <div class="CodeMirror cm-s-github-light" style="height: 277px;"><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 12px;"><div style="min-width: 1px; height: 1340px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="display: block; right: 12px; left: 53px;"><div style="height: 100%; min-height: 1px; width: 1242px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="display: block; height: 12px; width: 12px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 53px; margin-bottom: -12px; border-right-width: 18px; min-height: 1340px; min-width: 1241.5px; padding-right: 12px; padding-bottom: 12px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div style="position: relative; outline: currentcolor none medium;" role="presentation"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation">  &amp;ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"></div><div class="CodeMirror-code" role="presentation" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="" contenteditable="true"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">.cm-s-github-light</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  /.CodeMirror-gutter.CodeMirror-linenumbers, .CodeMirror-gutters</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $indigo $border $alt</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;.CodeMirror</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $text $border $hl</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  .CodeMirror-lines</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c 0 0 $region</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">.CodeMirror-linenumber.CodeMirror-gutter-elt</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  fw 500</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">.code .s1</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  c $green</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">.pl-</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;c /* comment, punctuation.definition.comment, string.comment */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $indigo</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;c1, &amp;s &amp;v /* string variable */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $text</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;e, &amp;en /* entity.name */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $blue</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;ent, &amp;smi, &amp;s &amp;s1 /* string source */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $lightRed</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;k /* keyword, storage, storage.type */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $purpleAlt</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;s &amp;pse &amp;s1, &amp;pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $cyan</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;sr /* string.regexp */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $cyanAlt</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;sr &amp;cce /* string.regexp constant.character.escape */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $lightRed</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;s, &amp;sr &amp;sre, &amp;sr &amp;sra /* string.regexp string.regexp.arbitrary-repitition */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $green</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;v /* variable */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $pink</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;smw /* sublimelinter.mark.warning */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $yellow</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $red</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;ii /* invalid.illegal */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $cn 0 $red</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;c2 /* carriage-return */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">40</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $cn 0 $red</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">41</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;c2::before /* carriage-return */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">42</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    content "^M"</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">43</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;sr &amp;cce /* string.regexp constant.character.escape */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">44</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $lightRed</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">45</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    fw bold</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">46</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;ml /* markup.list */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">47</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $orange</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">48</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;mh &amp;en, &amp;ms /* met,.separator */</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">49</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">    c $cyan</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53px;" contenteditable="false"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">50</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation">  &amp;mh /* markup.heading */</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 18px; width: 1px; border-bottom: 12px solid transparent; top: 1340px;"></div><div class="CodeMirror-gutters" style="height: 1370px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 53px;"></div></div></div></div></div>
+
+
+  <div class="loading-preview-msg"><p class="preview-msg text-gray">Loading preview…</p></div>
+  <div class="no-changes-preview-msg"><p class="preview-msg text-gray">No changes to display.</p></div>
+  <div class="error-preview-msg"><p class="preview-msg text-gray">Unable to load this preview, sorry.</p></div>
+  <div class="js-commit-preview commit-preview   ">
+  </div>
+</div>
+
+        </div>
+    </div>
+
+    <button type="button" class="btn float-left js-add-gist-file">Add file</button>
+
+    <input type="text" name="required_field_634a" class="form-control" hidden="hidden"><input type="hidden" name="timestamp" value="1585203319945" class="form-control" data-default-value="1585203319945"><input type="hidden" name="timestamp_secret" value="8b6176c13276f8077f4ddd8925387d45eaed7f5e5f29176a9de401a42631f6fb" class="form-control" data-default-value="8b6176c13276f8077f4ddd8925387d45eaed7f5e5f29176a9de401a42631f6fb">
+
+    <div class="form-actions">
+      <button type="submit" name="gist[public]" value="1" class="btn js-gist-create ">Create public gist</button>
+      <button type="submit" name="gist[public]" value="0" class="btn btn-secret js-gist-create " aria-describedby="secret_gist_desc">
+        Create secret gist
+      </button>
+      <span id="secret_gist_desc" class="mr-2 mt-2 float-right tooltipped tooltipped-w tooltipped-multiline" aria-label="Secret gists are hidden from search engines but visible to anyone you give the URL.">
+        <svg class="octicon octicon-info" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+      </span>
+    </div>
+  </div>
+</form>
+  </div>
+</div><!-- /.container -->
+
+    </main>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg width-full px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">© 2020 GitHub, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mx-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://github.blog/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" async="async" integrity="sha512-o4vS4IKrjdy/HD+xr2+VhO6DxQmj5jikhHbEGrd8+JGhpmIOxRrpT1Qo5k3IhKimm8VXIu3pyYejLtOAkm+OsQ==" type="application/javascript" id="js-conditional-compat" data-src="https://github.githubassets.com/assets/compat-bootstrap-a38bd2e0.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-6XqOrpzsRfeWz1MuH9q2GuzW4Ktvt+kA5KbChOp1ZjaoGbRl3tBng8HiA5B/lClMvkkj4h+vVuSwLeh14JzGuA==" type="application/javascript" src="gist-file_files/environment-bootstrap-e97a8eae.js"></script>
+    
+    
+    
+    
+    
+      <script crossorigin="anonymous" async="async" integrity="sha512-7AfL2+X0IwAFvwPJaCvU4c/sTFEldDt5W1XNHBR/rgk2VgqjzJy6zKQv1b3pJo10x7wdgyrCW91bq/D80RqyKg==" type="application/javascript" src="gist-file_files/gist-editor-bootstrap-ec07cbdb.js"></script>
+  <script crossorigin="anonymous" async="async" integrity="sha512-alkl6DADeTV3bRr3BmAyqI7ndRkvbLF36gkXqauRyTFTqEhcmv7j2QbI/ZzN2SL8zVpiyhY1hrLvjxsAASP5lw==" type="application/javascript" src="gist-file_files/gist-bootstrap-6a5925e8.js"></script>
+
+    
+  <div class="js-stale-session-flash flash flash-warn flash-banner" hidden="">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <span class="js-stale-session-flash-signed-in" hidden="">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="js-stale-session-flash-signed-out" hidden="">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark hx_rsm" open="">
+    <summary role="button" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog="">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  
+
+
+</body><style id="stylus-2" type="text/css" class="stylus">html::-webkit-scrollbar {
+	width: 10px!important;
+	height: 10px!important;
+}
+html::-webkit-scrollbar-thumb {
+	background-color: #383838!important;
+	border: 2px solid #484848!important;
+	border-radius: 0px!important;
+}
+html::-webkit-scrollbar-track {
+	background-color: transparent!important;
+}
+html::-webkit-scrollbar-thumb:hover {
+	background: #282828!important;
+}
+html::-webkit-scrollbar-thumb:active {
+	background: #181818!important;
+}
+html::-webkit-scrollbar-corner {
+	background: #383838!important;
+}</style><style id="stylus-42" type="text/css" class="stylus">.expandRichHints kbd > .candidates:not(#\9) {
+    color: #828bb8;
+}
+#sk_hints > div.myHint:not(#\9) {
+    background: #131421;
+    color: #828bb8;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.20);
+
+    border: 1px solid black;
+}
+#sk_hints > div.myHint > span:not(#\9) {
+    opacity: 1;
+    color: #82aaff;
+}
+
+#sk_hints[mode="text"] > div.begin:not(#\9) {
+    color: #82aaff !important;
+}
+
+#sk_hints[mode="text"] > div:not(#\9) {
+    background: #131421;
+    color: #828bb8;
+    border: 1px solid #000;
+}</style><style id="stylus-45" type="text/css" class="stylus">.sk_theme {
+  font-family: 'Inter var' !important;
+}
+.sk_theme kbd,
+.sk_omnibar_middle,
+#sk_omnibarSearchArea,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li,
+.sk_omnibar_middle .omnibar_ > ul > li,
+#sk_omnibarSearchArea .omnibar_ > ul > li,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li:nth-child(2n + 1),
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li:nth-child(2n + 1),
+.sk_omnibar_middle .omnibar_ > ul > li:nth-child(2n + 1),
+#sk_omnibarSearchArea .omnibar_ > ul > li:nth-child(2n + 1) {
+  border: 1px solid !important;
+}
+.sk_theme kbd {
+  font-family: monospace !important;
+}
+.sk_theme,
+#sk_editor,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li,
+.sk_omnibar_middle .omnibar_ > ul > li,
+#sk_omnibarSearchArea .omnibar_ > ul > li,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li:nth-child(2n + 1),
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li:nth-child(2n + 1),
+.sk_omnibar_middle .omnibar_ > ul > li:nth-child(2n + 1),
+#sk_omnibarSearchArea .omnibar_ > ul > li:nth-child(2n + 1) {
+  color: #828bb8 !important;
+  border-color: #131421 !important;
+  background-color: #191b28 !important;
+}
+#sk_keystroke {
+  background: #131421 !important;
+  padding: 0.2rem 0.8rem !important;
+}
+#sk_keystroke div .annotation {
+  color: #fff !important;
+}
+.sk_theme tbody {
+  color: #c3e88d !important;
+}
+.expandRichHints {
+  animation: 0s ease-in-out 1 forwards expandRichHints;
+}
+.collapseRichHints {
+  animation: 0s ease-in-out 1 forwards collapseRichHints;
+}
+.sk_theme kbd {
+  color: #82aaff !important;
+  border-color: #000 !important;
+  background-color: #222436 !important;
+  box-shadow: none !important;
+}
+.expandRichHints kbd > .candidates {
+  color: #828bb8 !important;
+}
+#sk_editor .normal-mode .ace_cursor {
+  border-color: #82aaff !important;
+  background-color: #82aaff !important;
+}
+.sk_theme .resultPage,
+.sk_theme .annotation {
+  line-height: 1.5;
+  font-weight: 500 !important;
+  margin-left: 1rem !important;
+  margin-right: 3rem !important;
+  color: #fff !important;
+}
+.sk_theme .feature_name {
+  color: #c099ff !important;
+}
+.sk_theme .feature_name > span {
+  border-color: #2f334d !important;
+}
+.sk_theme .url {
+  text-decoration: underline !important;
+  font-weight: 400 !important;
+  color: #82aaff !important;
+}
+#sk_omnibar {
+  padding: 0 !important;
+}
+#sk_omnibarSearchArea {
+  margin: 0 !important;
+  font-size: 1.6rem !important;
+  font-family: monospace !important;
+}
+#sk_omnibarSearchArea .prompt {
+  color: #c099ff !important;
+  border-color: #131421 !important;
+  background-color: #222436 !important;
+}
+#sk_omnibarSearchArea .prompt,
+#sk_omnibarSearchArea input {
+  font-family: monospace !important;
+}
+#sk_omnibarSearchArea input {
+  color: #fff !important;
+  border-color: #131421 !important;
+  background-color: #222436 !important;
+  caret-color: #82aaff;
+}
+#sk_omnibarSearchArea .prompt .separator {
+  position: relative;
+  top: 2px;
+  color: #86e1fc !important;
+  font-size: 1rem !important;
+}
+.sk_omnibar_middle,
+#sk_omnibarSearchArea {
+  border-color: #131421 !important;
+  background-color: #222436 !important;
+  margin: 0 !important;
+  padding: 0.5rem 1rem !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResult,
+#sk_omnibarSearchArea #sk_omnibarSearchResult,
+.sk_omnibar_middle .omnibar_,
+#sk_omnibarSearchArea .omnibar_ {
+  line-height: 1.5;
+  color: #828bb8 !important;
+  border-color: #131421 !important;
+  background-color: #191b28 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li,
+.sk_omnibar_middle .omnibar_ > ul > li,
+#sk_omnibarSearchArea .omnibar_ > ul > li,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li:nth-child(2n + 1),
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li:nth-child(2n + 1),
+.sk_omnibar_middle .omnibar_ > ul > li:nth-child(2n + 1),
+#sk_omnibarSearchArea .omnibar_ > ul > li:nth-child(2n + 1) {
+  padding: 0.5rem !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li.focused,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li.focused,
+.sk_omnibar_middle .omnibar_ > ul > li.focused,
+#sk_omnibarSearchArea .omnibar_ > ul > li.focused,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li:nth-child(2n + 1).focused,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li:nth-child(2n + 1).focused,
+.sk_omnibar_middle .omnibar_ > ul > li:nth-child(2n + 1).focused,
+#sk_omnibarSearchArea .omnibar_ > ul > li:nth-child(2n + 1).focused {
+  color: #fff !important;
+  border-color: #222436 !important;
+  background-color: #2f334d !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li.title,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li.title,
+.sk_omnibar_middle .omnibar_ > ul > li.title,
+#sk_omnibarSearchArea .omnibar_ > ul > li.title,
+.sk_omnibar_middle #sk_omnibarSearchResult > ul > li:nth-child(2n + 1).title,
+#sk_omnibarSearchArea #sk_omnibarSearchResult > ul > li:nth-child(2n + 1).title,
+.sk_omnibar_middle .omnibar_ > ul > li:nth-child(2n + 1).title,
+#sk_omnibarSearchArea .omnibar_ > ul > li:nth-child(2n + 1).title {
+  color: #b7bbd3 !important;
+  font-weight: lighter !important;
+  font-size: 1.4rem !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResultfolder,
+#sk_omnibarSearchArea #sk_omnibarSearchResultfolder,
+.sk_omnibar_middle .omnibar_folder,
+#sk_omnibarSearchArea .omnibar_folder {
+  color: #82aaff !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResulttimestamp,
+#sk_omnibarSearchArea #sk_omnibarSearchResulttimestamp,
+.sk_omnibar_middle .omnibar_timestamp,
+#sk_omnibarSearchArea .omnibar_timestamp {
+  color: #c099ff !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResultvisitcount,
+#sk_omnibarSearchArea #sk_omnibarSearchResultvisitcount,
+.sk_omnibar_middle .omnibar_visitcount,
+#sk_omnibarSearchArea .omnibar_visitcount {
+  color: #82aaff !important;
+}
+.sk_omnibar_middle #sk_omnibarSearchResulthighlight,
+#sk_omnibarSearchArea #sk_omnibarSearchResulthighlight,
+.sk_omnibar_middle .omnibar_highlight,
+#sk_omnibarSearchArea .omnibar_highlight {
+  color: #c3e88d !important;
+}
+.sk_omnibar_middle tr background-color,
+#sk_omnibarSearchArea tr background-color {
+  padding: 1em 1.5em !important;
+}
+</style><style id="stylus-55" type="text/css" class="stylus">.pl-c /* comment, punctuation.definition.comment, string.comment */ {
+  color: #7a88cf;
+}
+.pl-c1 /* constant, entity.name.constant, variable.other.constant, variable.language, support, meta.property-name, support.constant, support.variable, meta.module-reference, markup.raw, meta.diff.header, meta.output */,
+.pl-s .pl-v /* string variable */ {
+  color: #c8d3f5;
+}
+.pl-e /* entity */,
+.pl-en /* entity.name */ {
+  color: #82aaff;
+}
+.pl-smi /* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */,
+.pl-s .pl-s1 /* string source */ {
+  color: #ff757f;
+}
+.pl-ent /* entity.name.tag, markup.quote */ {
+  color: #ff757f;
+}
+.pl-k /* keyword, storage, storage.type */ {
+  color: #c099ff;
+}
+.pl-s .pl-pse .pl-s1 /* string punctuation.section.embedded source */,
+.pl-pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */ {
+  color: #86e1fc;
+}
+.pl-sr /* string.regexp */ {
+  color: #b4f9f8;
+}
+
+.pl-sr .pl-cce /* string.regexp constant.character.escape */ {
+  color: #ff98a4;
+}
+
+.pl-s /* string */,
+.pl-sr .pl-sre /* string.regexp source.ruby.embedded */,
+.pl-sr .pl-sra /* string.regexp string.regexp.arbitrary-repitition */ {
+  color: #c3e88d;
+}
+
+.pl-v /* variable */,
+.pl-smw /* sublimelinter.mark.warning */ {
+  color: #ffc777cc;
+}
+
+.pl-bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */ {
+  color: #ff757fcc;
+}
+
+.pl-ii /* invalid.illegal */ {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.pl-c2 /* carriage-return */ {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.pl-c2::before /* carriage-return */ {
+  content: "^M";
+}
+
+.pl-sr .pl-cce /* string.regexp constant.character.escape */ {
+  font-weight: bold;
+  color: #ff98a4;
+}
+
+.pl-ml /* markup.list */ {
+  color: #735c0f;
+}
+
+.pl-mh .pl-en, /* markup.heading entity.name */
+.pl-ms /* met,.separator */ {
+  color: #86e1fc;
+}
+
+.pl-mh /* markup.heading */ {
+  font-weight: bold;
+  color: #c3e88d;
+}
+
+.pl-mi /* markup.italic */ {
+  font-style: italic;
+  color: #24292e;
+}
+
+.pl-mb /* markup.bold */ {
+  font-weight: bold;
+  color: #24292e;
+}
+
+.pl-md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */ {
+  color: #ff757f;
+  background-color: #ff5370aa;
+}
+
+.pl-mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */ {
+  color: #c3e88d;
+  background-color: #77e0c6dd;
+}
+
+.pl-mc /* markup.changed, punctuation.definition.changed */ {
+  color: #c099ff;
+  background-color: #86e1fcbb;
+}
+
+.pl-mi2 /* markup.ignored, markup.untracked */ {
+  /* color: #f6f8fa; */
+  /* background-color: #005cc5; */
+}
+
+.pl-mdr /* meta.diff.range */ {
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+.pl-ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */ {
+  color: #586069;
+}
+
+.pl-sg /* sublimelinter.gutter-mark */ {
+  color: #959da5;
+}
+
+.pl-corl /* constant.other.reference.link, string.other.link */ {
+  text-decoration: underline;
+}</style><style id="stylus-61" type="text/css" class="stylus">:root {
+  --alt: rgb(30, 32, 48);
+  --bg: rgb(25, 27, 40);
+  --blue: rgb(130, 170, 255);
+  --blue-trans: rgba(130, 170, 255, .2);
+  --border: rgb(19, 20, 33);
+  --cn: rgb(255, 255, 255);
+  --cyan: rgb(134, 225, 252);
+  --cyan-light: rgb(180, 249, 248);
+  --cyan-trans: rgba(134, 225, 252, .2);
+  --faded: rgb(127, 133, 163);
+  --green: rgb(195, 232, 141);
+  --hl: rgb(33, 35, 55);
+  --hover: rgb(68, 74, 115);
+  --icon: rgb(47, 51, 77);
+  --indigo: rgb(122, 136, 207);
+  --mono-font: monospace;
+  --orange: rgb(255, 153, 94);
+  --pink: rgb(252, 167, 234);
+  --placeholder: rgba(200, 211, 245, .667);
+  --purple: rgb(197, 151, 249);
+  --purple-trans: rgba(197, 151, 249, .2);
+  --red: rgb(255, 83, 112);
+  --red-trans: rgba(255, 83, 112, .2);
+  --region: rgb(56, 62, 92);
+  --sb: rgba(130, 139, 184, .188);
+  --teal: rgb(79, 214, 190);
+  --teal-trans: rgba(79, 214, 190, .2);
+  --text: rgb(200, 211, 245);
+  --text-alt: rgb(180, 194, 240);
+  --text-gray: rgb(169, 184, 232);
+  --ui-font: Inter V;
+  --yellow: rgb(255, 199, 119);
+  --yellow-trans: rgba(255, 199, 119, .2);
+}.commit-icon .octicon,
+  .commit-group-title .octicon-git-commit,
+  div[style*="#fcfdfd"],
+  .conversation-list-heading .inner,
+  .email-format .email-hidden-toggle a,
+  nav.UnderlineNav + div.border.d-md-block,
+  .tint-box,
+  .copyable-terminal,
+  .capped-card-content,
+  #contributors-master svg.viz,
+  .timeline-commits .hidden-text-expander .ellipsis-expander,
+  .blob-num-expandable,
+  .blob-num-hunk,
+  .blob-code-expandable,
+  .blob-code-hunk {
+    background-color: var(--alt) !important;
+  }
+  .discussion-sidebar-item+.discussion-sidebar-item,
+  .UnderlineNav,
+  .reaction-summary-item,
+  .jump-to-suggestions-results-container .navigation-item,
+  .Box-footer,
+  .graphs.axis,
+  .blob-expanded + tr:not(.blob-expanded) .blob-code,
+  .blob-expanded + tr:not(.blob-expanded) .blob-num,
+  .blob-expanded .blob-num-hunk,
+  .TimelineItem-badge,
+  .avatar-before-user-status,
+  tr:not(.blob-expanded) + .blob-expanded .blob-code,
+  tr:not(.blob-expanded) + .blob-expanded .blob-num,
+  .branch-action-item + .branch-action-item,
+  .branch-action-item + .mergeability-details,
+  .social-count,
+  .timeline-new-comment .previewable-comment-form .comment-body,
+  .listgroup,
+  .dashboard-rollup-items .body,
+  .saved-reply-form,
+  .Box-body,
+  .profile-rollup-summarized+.profile-rollup-summarized,
+  .file-diff-split .blob-code + .blob-num,
+  .orgs-help-shelf,
+  .ScreenshotCarousel,
+  .border-top,
+  .border-bottom,
+  .border-right,
+  .border-lg-left,
+  .Subhead,
+  .repository-lang-stats-graph {
+    border-color: var(--border) !important;
+  }
+  *::placeholder {
+    color: var(--faded) !important;
+  }
+  .notifications-list-item.notification-unread {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .filter-item {
+    transition: background-color ease-in-out 0.2s !important;
+  }
+  .filter-item:hover {
+    background-color: var(--hover) !important;
+  }
+  .filter-item.selected,
+  .filter-item[aria-current],
+  .filter-item[aria-selected=true] {
+    color: var(--cn) !important;
+    background-color: var(--icon) !important;
+  }
+  .notification-navigation.bg-white {
+    background-color: var(--bg) !important;
+  }
+  .notification-configure-filters .octicon {
+    color: var(--hover) !important;
+  }
+  .notification-navigation .notification--configure-filters:hover .octicon {
+    color: var(--blue) !important;
+  }
+  .notifications-list-item .notifications-list-item-actions svg {
+    fill: var(--text);
+  }
+  .notifications-list-item:hover {
+    background-color: var(--hl) !important;
+  }
+  .notifications-list-item:hover .notification-list-item-actions .btn {
+    transition: background-color 0.2s ease-in-out !important;
+  }
+  .notifications-list-item:hover .notification-list-item-actions .btn:hover {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
+  .notifications-dropdown {
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
+  .notifications-dropdown .notifications-list {
+    margin-bottom: 0 !important;
+  }
+  .notifications-dropdown-arrow {
+    border-color: var(--alt) !important;
+  }
+  .notifications-dropdown,
+  .notifications-dropdown-see-all {
+    border-top: 1px solid var(--border) !important;
+    border-color: var(--border) !important;
+    background-color: var(--region) !important;
+  }
+  .thread-subscription-status {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .CodeMirror-gutter.CodeMirror-linenumbers,
+  .cm-s-github-light .CodeMirror-gutters {
+    color: var(--indigo) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .cm-s-github-light.CodeMirror {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .cm-s-github-light .CodeMirror-lines {
+    background-color: var(--region) !important;
+  }
+  .CodeMirror-linenumber.CodeMirror-gutter-elt {
+    font-weight: 500 !important;
+  }
+  .code .s1 {
+    color: var(--green) !important;
+  }
+  .pl-c {
+    color: var(--indigo) !important;
+  }
+  .pl-c1,
+  .pl-s .pl-v {
+    color: var(--text) !important;
+  }
+  .pl-e,
+  .pl-en {
+    color: var(--blue) !important;
+  }
+  .pl-s .pl-pse .pl-s1,
+  .pl-pds {
+    color: var(--cyan) !important;
+  }
+  .pl-s,
+  .pl-sr .pl-sre,
+  .pl-sr .pl-sra {
+    color: var(--green) !important;
+  }
+  .pl-v {
+    color: var(--pink) !important;
+  }
+  .pl-smw {
+    color: var(--yellow) !important;
+  }
+  .pl-bu {
+    color: var(--red) !important;
+  }
+  .pl-ii {
+    color: var(--cn) !important;
+    background-color: var(--red) !important;
+  }
+  .pl-c2 {
+    color: var(--cn) !important;
+    background-color: var(--red) !important;
+  }
+  .pl-c2::before {
+    content: "^M";
+  }
+  .pl-sr .pl-cce {
+    font-weight: bold !important;
+  }
+  .pl-ml {
+    color: var(--orange) !important;
+  }
+  .pl-mh .pl-en,
+  .pl-ms {
+    color: var(--cyan) !important;
+  }
+  .pl-mh {
+    color: var(--green) !important;
+    font-weight: bold !important;
+  }
+  .pl-mi {
+    color: var(--yellow) !important;
+    font-style: italic;
+  }
+  .pl-mb {
+    color: var(--cn) !important;
+    font-weight: bold !important;
+  }
+  .pl-md {
+    color: var(--red) !important;
+    background-color: var(--red-trans) !important;
+  }
+  .pl-mi1 {
+    color: var(--teal) !important;
+    background-color: var(--teal-trans) !important;
+  }
+  .pl-mc {
+    color: var(--cyan) !important;
+    background-color: var(--cyan-trans) !important;
+  }
+  .pl-mdr {
+    color: var(--teal) !important;
+    font-weight: bold !important;
+  }
+  .pl-ba {
+    color: var(--hover) !important;
+  }
+  .pl-sg {
+    color: var(--faded) !important;
+  }
+  .pl-corl {
+    text-decoration: underline !important;
+  }
+  .legend li[style*="#ebedf0"] {
+    background-color: var(--indigo) !important;
+    opacity: 0.05 !important;
+  }
+  .calendar-graph rect[fill="#ebedf0"] {
+    fill: var(--indigo);
+    opacity: 0.05 !important;
+  }
+  .legend li[style*="#c6e48b"] {
+    background-color: var(--teal) !important;
+    opacity: 0.25 !important;
+  }
+  .calendar-graph rect[fill="#c6e48b"] {
+    fill: var(--teal);
+    opacity: 0.25 !important;
+  }
+  .legend li[style*="#7bc96f"] {
+    background-color: var(--teal) !important;
+    opacity: 0.5 !important;
+  }
+  .calendar-graph rect[fill="#7bc96f"] {
+    fill: var(--teal);
+    opacity: 0.5 !important;
+  }
+  .legend li[style*="#239a3b"] {
+    background-color: var(--teal) !important;
+    opacity: 0.75 !important;
+  }
+  .calendar-graph rect[fill="#239a3b"] {
+    fill: var(--teal);
+    opacity: 0.75 !important;
+  }
+  .legend li[style*="#196127"] {
+    background-color: var(--teal) !important;
+    opacity: 1 !important;
+  }
+  .calendar-graph rect[fill="#196127"] {
+    fill: var(--teal);
+    opacity: 1 !important;
+  }
+  .graph-before-activity-overview {
+    background-color: var(--hl) !important;
+  }
+  .calendar-graph text.wday,
+  .calendar-graph text.month {
+    fill: var(--cn);
+  }
+  .markdown-body a {
+    color: var(--text-alt) !important;
+    text-decoration: underline !important;
+    transition: color 0.1s ease-in-out !important;
+  }
+  .markdown-body a:hover {
+    color: var(--blue) !important;
+  }
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5 {
+    border-color: var(--border) !important;
+  }
+  .markdown-body img {
+    background-color: var(--hl) !important;
+  }
+  .markdown-body table td,
+  .markdown-body table th {
+    border-color: var(--border) !important;
+  }
+  .markdown-body table tr {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .markdown-body code,
+  .markdown-body tt {
+    color: var(--cn) !important;
+    font-weight: 500 !important;
+    font-family: var(--mono-font) !important;
+  }
+  .highlight pre,
+  .markdown-body pre {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    font-weight: 500 !important;
+    font-family: var(--mono-font) !important;
+  }
+  .markdown-body blockquote {
+    color: var(--text-alt) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .markdown-body hr {
+    background-color: var(--border) !important;
+  }
+  .markdown-body .clippy-wrapper .clippy {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .markdown-body .clippy-wrapper .clippy .icon {
+    filter: invert(1);
+  }
+  .project-issue-body-blur {
+    background: linear-gradient(0deg, #000, rgba(0,0,0,0)) !important;
+  }
+  .project-column {
+    background-color: var(--alt) !important;
+  }
+  .project-pane.bg-white {
+    background-color: var(--hl) !important;
+  }
+  .project-header {
+    background-color: var(--bg) !important;
+  }
+  .project-card:hover {
+    border-color: var(--border) !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
+  }
+  .project-card:focus {
+    box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
+  }
+  .btn.btn-outline,
+  .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2 {
+    background-color: var(--alt) !important;
+  }
+  .d-flex.flex-row.flex-items-center.f6 {
+    background-color: var(--bg) !important;
+  }
+  .comment-reactions.has-reactions.js-reactions-container.js-socket-channel.js-updatable-content {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .code-review.blob-code.blob-code-context {
+    background-color: var(--alt) !important;
+  }
+  #js-repo-pjax-container,
+  .pr-toolbar {
+    background-color: var(--bg) !important;
+  }
+  .__better_github_pr,
+  .__better_github_pr_dark_mode {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .__better_github_pr .github-pr-file.github-pr-file-highlight,
+  .__better_github_pr .tree-view_item:hover {
+    background-color: var(--icon) !important;
+  }
+  .gitako-ready .js-header-wrapper {
+    background-color: var(--bg) !important;
+  }
+  .gitako-toggle-show-button-wrapper.collapsed {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+    margin: 1% !important;
+  }
+  .gitako-toggle-show-button-wrapper.collapsed .action-icon {
+    color: var(--blue) !important;
+  }
+  .gitako-side-bar,
+  .gitako-resize-handler {
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body {
+    border-right-color: var(--border) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .octicon {
+    color: var(--blue) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title {
+    border-top-color: var(--border) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .shadow-shelter {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar,
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .header-row {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .meta-bar,
+  .gitako-side-bar-content .meta-bar {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type="text"].form-control,
+  .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control {
+    border: 1px !important;
+    border-radius: 0 !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
+  .gitako-side-bar-content .file-explorer .no-results {
+    color: var(--faded) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
+  .gitako-side-bar-content .file-explorer .node-item {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
+  .gitako-side-bar-content .file-explorer .node-item-row {
+    background-color: var(--hl) !important;
+  }
+  .bg-gray {
+    background-color: var(--alt) !important;
+  }
+  .bg-gray-light {
+    background-color: var(--alt) !important;
+  }
+  .bg-blue-light {
+    background-color: var(--alt) !important;
+  }
+  .bg-yellow-light {
+    background-color: var(--yellow-trans) !important;
+  }
+  .bg-blue {
+    background-color: var(--icon) !important;
+  }
+  .bg-gray-dark {
+    background-color: var(--bg) !important;
+  }
+  .bg-gray-2 {
+    background-color: var(--icon) !important;
+  }
+  .bg-white {
+    background-color: var(--hl) !important;
+  }
+  .bg-pending {
+    background-color: var(--purple) !important;
+  }
+  .text-gray-light {
+    color: var(--text-alt) !important;
+  }
+  .text-blue {
+    color: var(--blue) !important;
+  }
+  .text-gray {
+    color: var(--text) !important;
+  }
+  .text-gray-dark {
+    color: var(--text) !important;
+  }
+  .text-emphasized {
+    color: var(--blue) !important;
+  }
+  .text-green {
+    color: var(--green) !important;
+  }
+  .text-red {
+    color: var(--red) !important;
+  }
+  .task-progress {
+    color: var(--faded) !important;
+  }
+  .task-progress .progress-bar .progress {
+    background-color: var(--region) !important;
+  }
+  .compare-pr-placeholder {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .compare-pr-placeholder p {
+    color: var(--text) !important;
+  }
+  .comment-reactions.has-reactions {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .range-editor {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .range-editor-icon {
+    color: var(--faded) !important;
+  }
+  .select-menu-tabs {
+    border-color: var(--border) !important;
+  }
+  .select-menu-tab-nav.selected,
+  .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tab-nav a.selected,
+  .select-menu-tab-nav a[aria-selected="true"] {
+    border-color: var(--border) var(--border) var(--hl) !important;
+    color: var(--cn) !important;
+    background-color: var(--hl) !important;
+  }
+  .blob-code-addition {
+    background-color: var(--teal-trans) !important;
+  }
+  .blob-code-deletion {
+    background-color: var(--red-trans) !important;
+  }
+  .Progress {
+    background-color: var(--icon) !important;
+  }
+  .github-pr-file span.deletion {
+    background-color: var(--red) !important;
+  }
+  .github-pr-file span.addition {
+    background-color: var(--green) !important;
+  }
+  .SelectMenu-blankslate,
+  .SelectMenu-loading,
+  .SelectMenu-message {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .SelectMenu-item {
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .SelectMenu-item:hover {
+    background-color: var(--hl) !important;
+  }
+  .status-meta,
+  .merge-pr-more-commits {
+    color: var(--faded) !important;
+  }
+  ul.comparison-list {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  ul.comparison-list > li {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  ul.comparison-list > li em {
+    color: var(--faded) !important;
+  }
+  ul.comparison-list > li.title {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .branch-action-body::before {
+    border-right-color: var(--hl) !important;
+  }
+  .branch-action-state-clean .branch-action-icon,
+  .branch-action-item-icon {
+    color: var(--border) !important;
+    background-color: var(--green) !important;
+  }
+  .branch-action-state-clean .branch-action-icon .octicon,
+  .branch-action-item-icon .octicon {
+    fill: var(--border);
+  }
+  .branch-infobar {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .branch-action-body {
+    border: 0 !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .branch-action-body::before {
+    border-right-color: var(--alt);
+  }
+  .branch-action-body::after {
+    border-right-color: var(--alt);
+  }
+  .branch-action-body .merge-branch-form,
+  .branch-action-body .merge-message {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .merge-status-list {
+    border-color: var(--border) !important;
+  }
+  .merge-status-item {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .timeline-comment {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .timeline-comment-wrapper {
+    border: 0 !important;
+    border-color: var(--border) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline {
+    color: var(--purple) !important;
+    border-color: var(--purple) !important;
+    background-color: var(--purple-trans) !important;
+  }
+  .timeline-comment-header {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .timeline-comment--caret::before,
+  .timeline-comment--caret.current-user::before,
+  .timeline-comment--caret::after,
+  .timeline-comment--caret.current-user::after {
+    border-right-color: var(--alt) !important;
+  }
+  .composer.composer-responsive .timeline-comment::before {
+    border-right-color: var(--alt);
+  }
+  .composer.composer-responsive .timeline-comment::after {
+    border-right-color: var(--alt);
+  }
+  .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .CheckStep-line {
+    font-family: var(--mono-font) !important;
+    font-weight: 500 !important;
+  }
+  .CheckStep-line-number {
+    color: var(--indigo) !important;
+  }
+  .CheckStep-linecontent {
+    color: var(--text) !important;
+  }
+  .CheckStep-line:hover {
+    background-color: var(--hl) !important;
+  }
+  .graph-filter .info {
+    color: var(--text) !important;
+  }
+  line[stroke="#000"] {
+    stroke: var(--border);
+  }
+  text[fill="#000"],
+  text[fill="#6a737d"],
+  text[text-anchor="middle"] {
+    fill: var(--text);
+  }
+  .viz {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .viz .code-frequency {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    padding: 8px !important;
+  }
+  .cadd {
+    color: var(--green) !important;
+  }
+  .cdel {
+    color: var(--red) !important;
+  }
+  .conversation-list-heading {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+  }
+  .conversation-list-heading .inner {
+    color: var(--faded) !important;
+  }
+  .num {
+    color: var(--faded) !important;
+  }
+  relative-time {
+    color: var(--faded) !important;
+  }
+  .simple-conversation-list > li {
+    border-color: var(--border) !important;
+  }
+  .graphs .dir {
+    color: var(--text) !important;
+  }
+  .graphs .area {
+    fill: var(--teal);
+  }
+  .code-frequency .addition {
+    fill: var(--green);
+  }
+  .code-frequency .deletion {
+    fill: var(--red);
+  }
+  .community-checklist .progress {
+    background-color: var(--region) !important;
+  }
+  table.capped-list td {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  table.capped-list tr:nth-child(2n),
+  table.capped-list th {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .traffic-graph-stats,
+  .summary-stats li,
+  .summary-stats li .num {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
+  .exploregrid-item {
+    background-color: var(--hl) !important;
+  }
+  .filter-bar {
+    border-bottom: 1px solid var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .form-control,
+  .form-select {
+    box-shadow: none !important;
+  }
+  .form-control.search-page-label.js-advanced-search-label,
+  .form-control.search-page-label.js-advanced-search-label input {
+    background-color: var(--hl) !important;
+  }
+  .code-list .file-box,
+  .code-list .code-list-item + .code-list-item,
+  .code-list .divider .blob-code,
+  .code-list .divider .blob-num,
+  .code-list-item-private .blob-num {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .code-list-item.hx_hit-code.code-list-item-public.repo-specific {
+    background-color: var(--bg) !important;
+  }
+  .jump-to-field-active,
+  .js-navigation-item:hover,
+  #jump-to-results:hover {
+    background-color: var(--hl) !important;
+  }
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
+    background-color: var(--region) !important;
+  }
+  #commit_search_results .commit {
+    border-left: 1px solid var(--border) !important;
+    border-right: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .release-timeline-tags .tag-timeline-date::after {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .release-main-section {
+    border-left-color: var(--border) !important;
+  }
+  .signup-plan-card {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .signup-plan-card:hover {
+    background-color: var(--region) !important;
+  }
+  div[style*="height: 1px;"] {
+    background-color: var(--border) !important;
+  }
+  .MarketplaceBackground-buffer {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .MarketplaceBackground-reccomendations img {
+    filter: invert(1);
+  }
+  .marketplace-plan-emphasis {
+    color: var(--text) !important;
+  }
+  .dropdown-divider {
+    border-color: var(--border) !important;
+  }
+  .dropdown-signed-commit .dropdown-menu-w::before {
+    border-left-color: var(--bg);
+  }
+  .dropdown-signed-commit .dropdown-menu-w::after {
+    border-left-color: var(--bg);
+  }
+  .dropdown-menu {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .dropdown-menu:after {
+    border-bottom-color: var(--border);
+  }
+  .dropdown-item {
+    color: var(--text) !important;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
+  }
+  .issue-keyword {
+    color: var(--purple) !important;
+  }
+  .js-issue-row {
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .pinned-issue-item {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  code .link-gray {
+    font-weight: 500 !important;
+  }
+  .signed-commit-header {
+    border-color: var(--green) !important;
+    background-color: var(--bg) !important;
+  }
+  .signed-commit-verified-label {
+    color: var(--green) !important;
+  }
+  .signed-commit-badge.verified {
+    color: var(--green) !important;
+    border-color: var(--green) !important;
+    background-color: var(--teal-trans) !important;
+    font-weight: 500 !important;
+  }
+  #first-time-contributor .Popover-message::before {
+    border-right-color: var(--alt);
+  }
+  #first-time-contributor .Popover-message::after {
+    border-right-color: var(--alt);
+  }
+  .inline-comment-form {
+    border-color: var(--border) !important;
+  }
+  .commit-author-section {
+    color: var(--blue) !important;
+  }
+  .commit-desc pre {
+    background-color: var(--alt) !important;
+  }
+  .commits-listing:before {
+    background-color: var(--hl) !important;
+  }
+  .commit-group-title .octicon-git-commit {
+    color: var(--text) !important;
+  }
+  .commit-ref {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+    font-family: var(--mono-font) !important;
+    font-weight: 500 !important;
+  }
+  .commit-ref .user {
+    color: var(--blue) !important;
+  }
+  .commit-sha {
+    color: var(--yellow) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .commit .commit-title,
+  .commit-group-title,
+  .commit .commit-title a,
+  .commit-group-title a {
+    color: var(--text) !important;
+  }
+  .commit-tease {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .commit-tease-sha {
+    color: var(--blue) !important;
+  }
+  .commit-tease-contributors {
+    border-top: 1px solid var(--border) !important;
+    background-color: var(--hover) !important;
+  }
+  .commits blockquote {
+    color: var(--text) !important;
+  }
+  .commits-list-item.navigation-focus {
+    background-color: var(--hover) !important;
+  }
+  .full-commit {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .full-commit p.commit-title {
+    color: var(--blue) !important;
+  }
+  .full-commit .sha-block {
+    color: var(--faded) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+  }
+  .full-commit .sha-block > .sha {
+    color: var(--blue) !important;
+  }
+  .full-commit .commit-meta {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .file-commit-form--full {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .commit-form {
+    background-color: var(--alt) !important;
+  }
+  .commit-form::before {
+    border-right-color: var(--alt);
+  }
+  .commit-form::after {
+    border-right-color: var(--alt);
+  }
+  .select-menu-item {
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .select-menu-item:hover {
+    background-color: var(--region) !important;
+  }
+  .select-menu-modal-right.details-reset.details-overlay.mb-2,
+  .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
+    background-color: var(--alt) !important;
+  }
+  .UnderlineNav {
+    background-color: var(--hl) !important;
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .UnderlineNav[style*="margin-top"] {
+    background-color: var(--bg) !important;
+  }
+  .profile-timeline.discussion-timeline:before {
+    background-color: var(--hl) !important;
+  }
+  .profile-timeline-rollup-content li.d-block.mt-1.py-1 {
+    background-color: var(--bg) !important;
+  }
+  .profile-timeline-card.bg-white {
+    background-color: var(--hl) !important;
+  }
+  .profile-timeline-month-heading:after {
+    background-color: var(--border) !important;
+  }
+  .profile-rollup-wrapper+.profile-rollup-wrapper {
+    border-top: 1px solid var(--border) !important;
+  }
+  .activity-overview-percentage {
+    fill: var(--cn);
+  }
+  .activity-overview-label {
+    fill: var(--faded);
+  }
+  .ajax-pagination-form .ajax-pagination-btn {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .user-profile-nav {
+    border: 1px solid var(--border) !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: 8px !important;
+  }
+  .user-profile-sticky-bar:after {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .js-profile-editable-edit-button {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .pinned-item-name {
+    color: var(--faded) !important;
+  }
+  .pinned-item-checkbox:checked + .pinned-item-name {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--icon) !important;
+  }
+  .dashboard-notice {
+    border: 1px solid var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .dashboard-notice h2 {
+    color: var(--text) !important;
+  }
+  .repo-list {
+    padding: 0 12px !important;
+  }
+  .repo-list,
+  .repo-list-item {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .mini-repo-list-item {
+    border-top: 1px solid var(--border) !important;
+  }
+  .navigation-focus {
+    background-color: var(--hover) !important;
+  }
+  .team,
+  .user-mention {
+    color: var(--cn) !important;
+  }
+  .profile-timeline-month-heading.bg-white,
+  .profile-timeline-year-list {
+    background-color: var(--bg) !important;
+  }
+  .team-left-column.bg-white {
+    background-color: var(--alt) !important;
+  }
+  .orgs-help-item-octicon {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  * {
+    scrollbar-color: var(--sb) var(--bg) !important;
+  }
+  ::selection {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
+  }
+  ::placeholder {
+    color: var(--placeholder) !important;
+  }
+  body {
+    color: var(--text) !important;
+    background-color: var(--bg) !important;
+    font-family: var(--ui-font), sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+  body.page-responsive.pagehead {
+    background-color: var(--bg) !important;
+  }
+  input {
+    caret-color: var(--blue);
+  }
+  h1 {
+    color: var(--text) !important;
+  }
+  mark {
+    color: var(--yellow) !important;
+  }
+  svg {
+    color: var(--text) !important;
+  }
+  kbd {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+    font: 14px var(--mono-font);
+    box-shadow: inset 0 -1px 0 var(--border) !important;
+  }
+  legend {
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+  }
+  input:disabled,
+  select:disabled,
+  button:disabled,
+  textara:disabled {
+    cursor: not-allowed;
+    opacity: 0.5 !important;
+  }
+  fieldset {
+    border: 1px solid var(--border) !important;
+    margin: 0 !important;
+    margin-bottom: 6px !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+  }
+  code,
+  pre,
+  tt {
+    font-family: var(--mono-font) !important;
+  }
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23c8d3f5%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22feather%20feather-chevron-down%22%20%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22%20/%3E%3C/svg%3E");
+  }
+  .blob-code-inner {
+    color: var(--text) !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    font-family: var(--mono-font) !important;
+  }
+  .blob-code-inner .highlighted {
+    background-color: var(--icon) !important;
+  }
+  .blob-num {
+    color: var(--hover) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    font-weight: 600 !important;
+  }
+  .blob-expanded .blob-code,
+  .blob-expanded .blob-num {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .file:target {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
+  }
+  .description {
+    color: var(--text) !important;
+  }
+  .State--green {
+    color: var(--border) !important;
+    border-color: var(--green) !important;
+    background-color: var(--green) !important;
+  }
+  .State--green .octicon {
+    fill: var(--border);
+  }
+  .State--red {
+    color: var(--cn) !important;
+    border-color: var(--red) !important;
+    background-color: var(--red) !important;
+  }
+  .notification-navigation .notification-configure-filters .octicon {
+    color: var(--text) !important;
+  }
+  .Box--responsive,
+  .Boxrow--unread {
+    box-shadow: inset 2px 0 0 var(--blue) !important;
+  }
+  .Box-header {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .Box-header--blue {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .Box-row {
+    border-top: 1px solid var(--border) !important;
+  }
+  .Box-row:first-of-type {
+    border-top: 0 !important;
+  }
+  .Box-row--focus-gray.navigation-focus {
+    background-color: var(--icon) !important;
+  }
+  .Box-row[style*="background"] {
+    background-color: var(--region) !important;
+  }
+  img[src*="octocat-spinner-64.gif"] {
+    filter: invert(1);
+  }
+  .form-control.focus,
+  .form-select.focus,
+  .form-control:focus,
+  .form-select:focus {
+    color: var(--cn) !important;
+    border-color: var(--blue) !important;
+    box-shadow: none !important;
+  }
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check) {
+    color: var(--text) !important;
+    transform: scale(1.1);
+  }
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check).open {
+    color: var(--green) !important;
+  }
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check)[style*="#6a737d"] {
+    color: var(--text-gray) !important;
+  }
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check).octicon-file {
+    color: var(--indigo) !important;
+  }
+  .muted-link {
+    color: var(--faded) !important;
+  }
+  .muted-link:hover {
+    color: var(--blue) !important;
+  }
+  .js-recent-activity-container > div > div {
+    background-color: var(--bg) !important;
+  }
+  .diffstat-block-neutral {
+    background-color: var(--sb) !important;
+  }
+  .diffstat-block-added {
+    background-color: var(--green) !important;
+  }
+  .diffstat-block-deleted {
+    background-color: var(--red) !important;
+  }
+  .diffstat-summary {
+    color: var(--text) !important;
+  }
+  .diffstat-summary strong {
+    color: var(--purple) !important;
+  }
+  path[fill="#eee"] {
+    fill: var(--icon);
+  }
+  .file-diff-split .empty-cell {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .blob-code-addition .x {
+    background-color: var(--teal) !important;
+  }
+  .blob-code-deletion .x {
+    background-color: var(--red) !important;
+  }
+  .blob-code-addition .x,
+  .blob-code-deletion .x {
+    color: var(--border) !important;
+  }
+  .lovely-forks-addon {
+    color: var(--text) !important;
+    opacity: 0.7 !important;
+  }
+  .Label--gray {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .Label--outline {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .repository-lang-stats ol.repository-lang-stats-numbers li .lang {
+    color: var(--cn) !important;
+  }
+  .discussion-item-icon {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--icon) !important;
+  }
+  .discussion-timeline-actions {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .discussion-sidebar-heading {
+    color: var(--text) !important;
+  }
+  .discussion-sidebar-item {
+    color: var(--faded) !important;
+    font-weight: 500 !important;
+  }
+  .vcard-username {
+    color: var(--text-gray) !important;
+  }
+  .previewable-comment-form .comment-form-head.tabnav {
+    border-bottom: 1px solid var(--border) !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    background-color: var(--alt) !important;
+  }
+  .tabnav--responsive .tabnav-tab {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .tabnav-tab[aria-current],
+  .tabnav-tab[aria-selected=true],
+  .tabnav-tab.selected {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .branch-name {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--region) !important;
+  }
+  .select-menu-header,
+  .select-menu-header .select-menu-title {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .select-menu-modal,
+  .select-menu-item {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .select-menu-divider {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .select-menu-filters {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .select-menu-text-filter:first-child,
+  .select-menu-text-filter:last-child {
+    border-color: var(--border) !important;
+  }
+  .select-menu-modal {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
+  }
+  .pagination .current,
+  .pagination [aria-current] {
+    color: var(--cn) !important;
+    background-color: var(--icon) !important;
+  }
+  .pagination a,
+  .pagination em,
+  .pagination span,
+  .pagination .disabled,
+  .pagination .gap,
+  .pagination [aria-disabled=true] {
+    transition: background-color 0.1s ease-in-out !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .pagination a:hover,
+  .pagination em:hover,
+  .pagination span:hover,
+  .pagination .disabled:hover,
+  .pagination .gap:hover,
+  .pagination [aria-disabled=true]:hover {
+    background-color: var(--region) !important;
+  }
+  input[type="text"] {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  div[style*="linear-gradient"] {
+    background: linear-gradient(to top, #000, rgba(0,0,0,0)) !important;
+  }
+  .numbers-summary .octicon {
+    color: var(--text) !important;
+  }
+  .ellipsis-expander,
+  .hidden-text-expander a {
+    color: var(--text) !important;
+    background-color: var(--icon) !important;
+  }
+  .subnav-link.selected,
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current],
+  .UnderlineNav-item[aria-selected=true] {
+    border-bottom-color: var(--blue) !important;
+  }
+  .SelectMenu-divider {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
+  .SelectMenu-list {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .SelectMenu-item,
+  .SelectMenu-modal {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .SelectMenu-header {
+    border-bottom-color: var(--border) !important;
+  }
+  .SelectMenu-footer {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .SelectMenu-footer kbd {
+    font-size: unset !important;
+  }
+  .SelectMenu-filter {
+    border-top-color: var(--border) !important;
+  }
+  .SelectMenu-tab[aria-selected=true] {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .TimelineItem--condensed .TimelineItem-badge {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .TimelineItem-break {
+    border-color: var(--alt) !important;
+    background-color: transparent !important;
+  }
+  .TableObject-item--primary {
+    color: var(--text) !important;
+  }
+  .btn-mktg {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .Header {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .gh-header {
+    background-color: unset;
+  }
+  .gh-header-sticky.is-stuck + .gh-header-shadow {
+    background-color: var(--alt) !important;
+  }
+  .gh-header-meta {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  table.files {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  table.files tr.navigation-focus td,
+  table.files tr[aria-selected=true] td {
+    background-color: var(--hl) !important;
+  }
+  table.files td {
+    border-color: var(--border) !important;
+  }
+  table.files td.age {
+    color: var(--text) !important;
+  }
+  table.files td.icon {
+    color: var(--text) !important;
+  }
+  table.files td.icon .octicon-file-directory {
+    color: var(--blue) !important;
+  }
+  .merge-pr-more-commits:before,
+  .status-meta:before,
+  .TimelineItem:before {
+    background-color: var(--border) !important;
+  }
+  .merge-pr-more-commits-badge,
+  .status-meta-badge,
+  .TimelineItem-badge,
+  .merge-pr-more-commits--condensed .merge-pr-more-commits-badge,
+  .status-meta--condensed .status-meta-badge,
+  .TimelineItem--condensed .TimelineItem-badge {
+    color: var(--hover) !important;
+    background-color: var(--bg) !important;
+  }
+  .merge-pr-more-commits-body,
+  .status-meta-body,
+  .TimelineItem-body {
+    color: var(--faded) !important;
+  }
+  .border,
+  .border-gray-dark,
+  .rgh-collaborator {
+    border: 1px solid var(--border) !important;
+  }
+  .btn {
+    background-image: none;
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+    transition: background-color, border-color ease-in-out 0.1s;
+  }
+  .btn.btn-sm {
+    background-color: var(--alt) !important;
+  }
+  .btn:disabled,
+  .btn:disabled:hover {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .btn:hover {
+    background-image: none !important;
+    color: var(--cn) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--region) !important;
+  }
+  .auth-form-body {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .topic-tag {
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .topic-tag-link:hover {
+    background-color: var(--region) !important;
+  }
+  .topic-tag-action {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .topic-tag-action button {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--border) !important;
+  }
+  .access-token {
+    border-bottom-color: var(--border) !important;
+  }
+  div.listgroup-item {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .reponav-item {
+    color: var(--blue) !important;
+  }
+  .reponav-item.selected {
+    border-color: var(--blue) var(--border) transparent !important;
+  }
+  .reponav-item:focus,
+  .reponav-item:hover {
+    color: var(--blue) !important;
+  }
+  .reponav-item.selected {
+    border-color: var(--hl) var(--border) transparent !important;
+    color: var(--blue) !important;
+    background-color: var(--bg) !important;
+  }
+  .reponav-item.selected .octicon {
+    color: var(--cn) !important;
+  }
+  .reponav-item .octicon {
+    color: var(--text) !important;
+    opacity: 1 !important;
+  }
+  .pagehead-tabs-item,
+  .pagehead,
+  .repohead.experiment-repo-nav {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+@media (min-width: 768px) {
+    .pagehead-tabs-item,
+    .pagehead,
+    .repohead.experiment-repo-nav {
+      color: var(--alt) !important;
+    }
+}
+  .repohead .Label--outline,
+  .repo-list .Label--outline {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .site-header {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .showcase-page-pattern::after {
+    border-color: var(--alt) !important;
+    background-color: var(--border) !important;
+  }
+  .write-content.js-write-bucket {
+    box-shadow: none !important;
+  }
+  .form-group .form-control {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .form-group .form-control .search-input {
+    caret-color: var(--blue);
+  }
+  .form-group .form-control:focus {
+    background-color: var(--hl) !important;
+  }
+  .form-control,
+  .form-select {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .flash {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .flash-warn {
+    color: var(--yellow) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .menu {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .menu,
+  .menu .blankslate {
+    color: var(--alt) !important;
+    border-color: var(--border) !important;
+  }
+  .menu-heading {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .menu-item {
+    border-bottom: 1px solid var(--border) !important;
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .menu-item:hover {
+    background-color: var(--region) !important;
+  }
+  .menu-item.selected {
+    color: var(--blue) !important;
+    background-color: var(--hl) !important;
+  }
+  .boxed-group-inner,
+  .boxed-group .heading,
+  .boxed-group > h3 {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .rule,
+  hr {
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .file {
+    border-color: var(--border) !important;
+  }
+  .file-header {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .pl-s > a {
+    color: var(--green) !important;
+  }
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
+    color: var(--text) !important;
+  }
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):hover {
+    color: var(--blue) !important;
+  }
+  div.commit-build-statuses,
+  .link-gray {
+    color: var(--faded) !important;
+  }
+  div.commit-build-statuses:hover,
+  .link-gray:hover {
+    color: var(--blue) !important;
+  }
+  div.commit-build-statuses-dark,
+  .link-gray-dark,
+  body div.commit-build-statuses-dark,
+  body .link-gray-dark {
+    color: var(--blue) !important;
+  }
+  div.commit-build-statuses-dark:hover,
+  .link-gray-dark:hover,
+  body div.commit-build-statuses-dark:hover,
+  body .link-gray-dark:hover,
+  body body div.commit-build-statuses-dark:hover,
+  body body .link-gray-dark:hover {
+    text-decoration: underline !important;
+  }
+  .access-form-wrapper {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .discussion-sidebar-heading {
+    color: var(--text) !important;
+  }
+  .table-list-header-toggle .btn-link.selected:hover {
+    color: var(--blue) !important;
+  }
+  .footer,
+  .site-footer {
+    border-top: 1px solid var(--border) !important;
+  }
+  .file-wrap {
+    border-color: var(--border) !important;
+  }
+  .table-list {
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .table-list-header {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .table-list-header-toggle .btn-link:hover {
+    color: var(--blue) !important;
+  }
+  .table-list-cell {
+    border-top: 1px solid var(--border) !important;
+  }
+  .table-list-bordered .table-list-cell:first-child {
+    border-left: 1px solid var(--border) !important;
+  }
+  .table-list-bordered .table-list-cell:last-child {
+    border-right: 1px solid var(--border) !important;
+  }
+  .breadcrumb {
+    color: var(--blue) !important;
+  }
+  .breadcrumb-item-selected,
+  .breadcrumb-item[aria-current] {
+    color: var(--blue) !important;
+  }
+  .breadcrumb strong.final-path {
+    color: var(--cn) !important;
+  }
+  .drag-and-drop {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .octofication .message,
+  .overall-summary {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .btn-link:not(.IssueLabel),
+  .subnav-search-context .btn {
+    color: var(--blue) !important;
+  }
+  .btn.btn-primary,
+  .js-selected-navigation-item.subnav-item {
+    background-color: var(--hl) !important;
+  }
+  .social-count {
+    color: var(--blue) !important;
+    background-color: var(--hl) !important;
+  }
+  .social-count:hover {
+    color: var(--cn) !important;
+  }
+  .subnav-item {
+    border-color: var(--border) !important;
+  }
+  .subnav-item:focus,
+  .subnav-item:hover {
+    background-color: var(--icon) !important;
+  }
+  .subnav-item.selected,
+  .subnav-item.selected:focus,
+  .subnav-item.selected:hover {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .input-contrast {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .input-contrast:focus {
+    background-color: var(--hl) !important;
+  }
+  .btn-octicon {
+    color: var(--blue) !important;
+  }
+  .btn-octicon:hover {
+    color: var(--cn) !important;
+  }
+  .btn-octicon-danger:hover {
+    color: var(--red) !important;
+  }
+  .more-repos {
+    background-color: var(--alt) !important;
+    box-shadow: inset 0 1px 0 var(--border) !important;
+  }
+  .news .alert {
+    border-top: 1px solid var(--border) !important;
+  }
+  .news .Details-content--hidden li,
+  .news .Details button {
+    border-top-color: var(--border) !important;
+  }
+  .news .Details button:hover {
+    background: transparent !important;
+    text-decoration: underline !important;
+  }
+  .tabnav-pr .tabnav-tab,
+  div .tabnav-tab {
+    color: var(--blue) !important;
+  }
+  .tabnav-pr .tabnav-tab.selected,
+  div .tabnav-tab.selected {
+    color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .tabnav-pr .tabnav-tab:focus,
+  div .tabnav-tab:focus,
+  .tabnav-pr .tabnav-tab:hover,
+  div .tabnav-tab:hover {
+    color: var(--blue) !important;
+  }
+  .tabnav-pr .tabnav-tab .Counter,
+  div .tabnav-tab .Counter {
+    color: var(--blue) !important;
+  }
+  .Counter {
+    color: var(--blue) !important;
+    background-color: var(--border) !important;
+  }
+  *:not(code) .Box {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .dashboard .js-all-activity-header + div {
+    border-color: var(--border) !important;
+  }
+  .dashboard .js-all-activity-header + div .Box {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+    border-radius: 6px !important;
+  }
+  .tabnav {
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .private .mini-repo-list-item {
+    background-color: var(--bg) !important;
+  }
+  .orghead {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .orghead .org-name {
+    color: var(--blue) !important;
+  }
+  .orghead .pagehead-tabs-item.selected {
+    color: var(--blue) !important;
+    background-color: var(--bg) !important;
+  }
+  .tag-info {
+    color: var(--blue) !important;
+  }
+  .tag-name {
+    color: var(--text) !important;
+  }
+  .note,
+  .help {
+    color: var(--blue) !important;
+  }
+  .application-main .flex-wrap {
+    background-color: transparent !important;
+  }
+  .application-main > main > div.border-bottom.border-gray-light {
+    background-color: var(--bg) !important;
+  }
+  .application-main > main > .site-subnav + div {
+    background-color: var(--bg) !important;
+  }
+  .application-main > main > .site-subnav + div .text-gray-light {
+    color: var(--text) !important;
+  }
+  .github-jobs-logo strong {
+    filter: invert(1);
+  }
+  .team-left-column > div {
+    border: 1px solid var(--border) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+    padding-left: 10px !important;
+    border-radius: 4px !important;
+  }
+  .contrib-person path {
+    fill: var(--orange);
+  }
+  .menu-item.selected:before,
+  .menu-item[aria-current]:before {
+    background-color: var(--blue) !important;
+  }
+  .CheckRun {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .CheckRun-header {
+    border-color: var(--border) !important;
+  }
+  .checks-list-item.selected .checks-list-item-name {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
+  }
+  .diffbar {
+    background-color: var(--bg) !important;
+  }
+  .progress-bar {
+    background-color: var(--hl) !important;
+  }
+  .pinned-item-list-item .pinned-item-handle {
+    color: var(--faded) !important;
+  }
+  .js-user-status-container {
+    background-color: var(--hl) !important;
+  }
+  .protip  > code {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .protip  > strong {
+    color: var(--yellow) !important;
+    text-decoration: underline !important;
+  }
+  .protip  > svg {
+    fill: var(--yellow);
+  }
+  .Popover-message {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .Popover-message--top-left::before {
+    border-bottom-color: var(--hl);
+  }
+  .Popover-message--top-left::after {
+    border-bottom-color: var(--hl);
+  }
+  .Popover-message--bottom-left::before {
+    border-top-color: var(--hl);
+  }
+  .Popover-message--bottom-left::after {
+    border-top-color: var(--hl);
+  }
+  .UnderlineNav-item:hover {
+    border-bottom-color: var(--region) !important;
+  }
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current],
+  .UnderlineNav-item[role="tab"][aria-selected="true"] {
+    border-bottom-color: var(--blue) !important;
+  }
+  .gh-header-number {
+    color: var(--orange) !important;
+    font-weight: 400 !important;
+    text-decoration: underline !important;
+  }
+  .toolbar-item,
+  .toolbar-item .menu-target {
+    color: var(--text) !important;
+    transition: color 0.1s ease-in-out !important;
+  }
+  .toolbar-item:hover,
+  .toolbar-item .menu-target:hover {
+    color: var(--blue) !important;
+    border-color: var(--hl) !important;
+  }
+  .body > div.d-flex {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .pagination-loader-container {
+    background-image: none !important;
+    background-color: var(--hl) !important;
+  }
+  .ajax-pagination-form .ajax-pagination-btn {
+    color: var(--blue) !important;
+  }
+  .blankslate {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .blankslate code {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .content.p-4.text-center.rounded-1.border.border-gray-light {
+    background-color: var(--alt) !important;
+  }
+  .Box.Box--condensed .Box-row {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .Box-row--focus-gray {
+    background-color: var(--hl) !important;
+  }
+  .Box-row--yellow {
+    color: var(--text) !important;
+    border-color: var(--yellow) !important;
+    background-color: transparent !important;
+  }
+  .Box--responsive .Box-row--unread::before {
+    background-image: none !important;
+    background-color: var(--blue) !important;
+  }
+  .text {
+    color: var(--faded) !important;
+  }.js-gist-file-update-container.js-task-list-container.file-box {
+    background-color: var(--hl) !important;
+  }
+  #gist-pjax-container {
+    background-color: var(--alt) !important;
+  }
+  .application-main {
+    margin-bottom: 16px !important;
+  }
+  .form-select,
+  input[type="text"].form-control {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .gisthead .pagehead-actions .octicon-mute {
+    fill: var(--faded);
+  }
+  .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
+  .discussion-timeline-actions,
+  .reponav.js-repo-nav,
+  .reponav-item,
+  .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit.selected,
+  .discussion-timeline-actions.selected,
+  .reponav.js-repo-nav.selected,
+  .reponav-item.selected {
+    background-color: var(--alt) !important;
+  }</style><div style="display: block; opacity: 1;"></div></html>

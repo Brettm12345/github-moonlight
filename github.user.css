@@ -207,10 +207,10 @@
   .cm-s-github-light.CodeMirror {
     color: var(--text) !important;
     border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    background-color: var(--hl) !important;
   }
   .cm-s-github-light .CodeMirror-lines {
-    background-color: var(--bg) !important;
+    background-color: var(--region) !important;
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
@@ -2110,6 +2110,15 @@
   }
   #gist-pjax-container {
     background-color: var(--alt) !important;
+  }
+  .application-main {
+    margin-bottom: 16px !important;
+  }
+  .form-select,
+  input[type="text"].form-control {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
   }
   .gisthead .pagehead-actions .octicon-mute {
     fill: var(--faded);
