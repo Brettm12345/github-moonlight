@@ -246,6 +246,10 @@ div[style*="linear-gradient"]
       fs unset
   &filter
     btc $border
+  &tab
+    c $text
+    &:not([aria-selected=true])
+      c $cn $border $hl
   &tab[aria-selected=true]
     c $cn $border $hl
 .TimelineItem

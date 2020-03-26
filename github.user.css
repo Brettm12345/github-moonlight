@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.9.5
+@version      0.9.6
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -1495,6 +1495,14 @@
   }
   .SelectMenu-filter {
     border-top-color: var(--border) !important;
+  }
+  .SelectMenu-tab {
+    color: var(--text) !important;
+  }
+  .SelectMenu-tab:not([aria-selected=true]) {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
   }
   .SelectMenu-tab[aria-selected=true] {
     color: var(--cn) !important;
