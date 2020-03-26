@@ -63,8 +63,7 @@ These are the fonts used in the screenshots
 * Todo
 Feel free to create an issue if you want anything added to the theme
 
-  - [ ] Add support for more extensions
-  - [ ] Add support for github api docs
+  - [X] Add support for github api docs
   - [X] Put colors into usercss variables
   - [X] Add screenshots to readme
   - [X] Add styles for actions

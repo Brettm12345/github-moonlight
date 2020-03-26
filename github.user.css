@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.7.7
+@version      0.8.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -217,6 +217,9 @@
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
+  }
+  .code .s1 {
+    color: var(--green) !important;
   }
   .pl-c {
     color: var(--indigo) !important;
@@ -876,6 +879,153 @@
   .marketplace-plan-emphasis {
     color: var(--text) !important;
   }
+  iframe#graphiql,
+  iframe#graphiql .graphiql-ide {
+    border-color: var(--border) !important;
+  }
+  .graphiql-ide {
+    border-top-color: var(--border) !important;
+  }
+  .CodeMirror-cursor {
+    border-left-color: var(--blue) !important;
+  }
+  .CodeMirror-hint {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .CodeMirror-hint-information {
+    color: var(--indigo) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .CodeMirror-hint-active {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
+    font-weight: 500 !important;
+  }
+  .CodeMirror-linenumber {
+    color: var(--indigo) !important;
+    font-weight: 500 !important;
+  }
+  .CodeMirror-gutters,
+  .CodeMirror-gutter.CodeMirror-foldgutter {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .CodeMirror.cm-s-graphiql {
+    background-color: var(--alt) !important;
+  }
+  .history-contents,
+  .doc-explorer-contents {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .history-title-bar,
+  .doc-explorer-title-bar {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .graphiql-container .graphiql-container .history-contents p {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .graphiql-container .execute-options > li.selected,
+  .graphiql-container .toolbar-menu-items > li.hover,
+  .graphiql-container .toolbar-menu-items > li:active,
+  .graphiql-container .toolbar-menu-items > li:hover,
+  .graphiql-container .toolbar-select-options > li.hover,
+  .graphiql-container .toolbar-select-options > li:active,
+  .graphiql-container .toolbar-select-options > li:hover,
+  .graphiql-container .history-contents > p:hover,
+  .graphiql-container .history-contents > p:active {
+    border-color: var(--border) !important;
+    background-color: var(--region) !important;
+  }
+  .graphiql-container .search-box {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .graphiql-container .search-box input {
+    background-color: var(--bg) !important;
+  }
+  .graphiql-container .result-window .CodeMirror-gutters {
+    border-color: var(--border) !important;
+  }
+  .graphiql-container .doc-category-title {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+  }
+  .graphiql-container .resultWrap {
+    border-left-color: var(--border) !important;
+  }
+  .graphiql-container .arg-name {
+    color: var(--pink) !important;
+  }
+  .graphiql-container .field-name {
+    color: var(--blue) !important;
+  }
+  .graphiql-container .keyword {
+    color: var(--purple) !important;
+  }
+  .graphiql-container .type-name {
+    color: var(--yellow) !important;
+  }
+  .graphiql-container .field-short-description {
+    color: var(--indigo) !important;
+  }
+  .graphiql-container .topBar {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    background: var(--alt) !important;
+  }
+  .graphiql-container .toolbar-button,
+  .graphiql-container .execute-button {
+    background: var(--bg) !important;
+    box-shadow: none !important;
+  }
+  .graphiql-container .toolbar-button svg,
+  .graphiql-container .execute-button svg {
+    fill: var(--text);
+  }
+  .graphiql-container .variable-editor-title {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .graphiql-container .docExplorerShow {
+    background: var(--hl) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .result-window .CodeMirror {
+    background-color: var(--alt) !important;
+  }
+  .cm-punctuation {
+    color: var(--text) !important;
+  }
+  .cm-comment {
+    color: var(--indigo) !important;
+  }
+  .cm-def {
+    color: var(--blue) !important;
+  }
+  .cm-property {
+    color: var(--teal) !important;
+  }
+  .cm-string,
+  .cm-string-2 {
+    color: var(--green) !important;
+  }
+  .cm-keyword {
+    color: var(--purple) !important;
+  }
   .dropdown-divider {
     border-color: var(--border) !important;
   }
@@ -1145,6 +1295,42 @@
   .sub-nav {
     border-color: var(--border) !important;
   }
+  body table {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  body table th {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  body table tr td {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .alert.tip {
+    color: var(--text) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-trans) !important;
+  }
+  .alert.note {
+    color: var(--text) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--blue-trans) !important;
+  }
+  .alert.warning {
+    color: var(--text) !important;
+    border-color: var(--yellow) !important;
+    background-color: var(--yellow-trans) !important;
+  }
+  .alert.product {
+    color: var(--text) !important;
+    border-color: var(--purple) !important;
+    background-color: var(--purple-trans) !important;
+    background: var(--purple-trans) !important;
+  }
   h1,
   h2,
   h3,
@@ -1153,10 +1339,38 @@
   h6 {
     color: var(--text) !important;
   }
+  .content ol li pre code {
+    background-color: var(--bg) !important;
+    padding: 8px !important;
+  }
+  ol > li::before {
+    border-right-color: var(--border) !important;
+    color: var(--text) !important;
+  }
+  .octokit-language span,
+  .lead {
+    color: var(--faded) !important;
+  }
+  .libraries-jumbotron {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
   .sidebar-module {
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
+  .content .sectionbody .dlist dt,
+  .content .verseblock-content,
+  .content dl code,
+  .content h2 code,
+  .content h3 code,
+  .content h4 code,
+  .content ol code,
+  .content p > tt,
+  .content table code,
+  .content ul code,
+  p code,
   pre {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1840,6 +2054,7 @@
   .table-list-header-toggle .btn-link.selected:hover {
     color: var(--blue) !important;
   }
+  .footer,
   .site-footer {
     border-top: 1px solid var(--border) !important;
   }

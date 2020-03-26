@@ -11,10 +11,38 @@
   c $cn $border $hl
 .sub-nav
   c 0 $border
+body table
+  th
+    c $text $border $hl
+  tr td
+    c $text $border $alt
+  c $text $border $alt
+.alert
+  &.tip
+    c $text $teal $tealTrans
+  &.note
+    c $text $blue $blueTrans
+  &.warning
+    c $text $yellow $yellowTrans
+  &.product
+    c $text $purple $purpleTrans
+    bg $purpleTrans
 h1, h2, h3, h4, h5, h6
   c $text
+.content ol li pre code
+  c 0 0 $bg
+  p 8px
+ol > li::before
+  brc $border
+  c $text
+.octokit-language span,
+.lead
+  c $faded
+.libraries-jumbotron
+  c $text $border $bg
 .sidebar-module
   c 0 $border $hl
+.content .sectionbody .dlist dt, .content .verseblock-content, .content dl code, .content h2 code, .content h3 code, .content h4 code, .content ol code, .content p > tt, .content table code, .content ul code, p code,
 pre
   c $text $border $hl
 code
