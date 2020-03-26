@@ -631,7 +631,11 @@ div
     c $text $border $bg
 .content.p-4.text-center.rounded-1.border.border-gray-light
   c 0 0 $alt
+.Box.Box--condensed .Box-row
+  c 0 $border $alt
 .Box-row--
+  &focus-gray
+    c 0 0 $hl
   &yellow
     c $text $yellow transparent
   /.Box--responsive &unread::before
