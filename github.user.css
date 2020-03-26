@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.7.2
+@version      0.7.5
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -112,7 +112,6 @@
   .jump-to-suggestions-results-container .navigation-item,
   .Box-footer,
   .graphs.axis,
-  .dropdown-divider,
   .blob-expanded + tr:not(.blob-expanded) .blob-code,
   .blob-expanded + tr:not(.blob-expanded) .blob-num,
   .blob-expanded .blob-num-hunk,
@@ -517,7 +516,7 @@
     background-color: var(--alt) !important;
   }
   .bg-blue-light {
-    background-color: var(--blue-trans) !important;
+    background-color: var(--alt) !important;
   }
   .bg-yellow-light {
     background-color: var(--yellow-trans) !important;
@@ -875,6 +874,12 @@
   .marketplace-plan-emphasis {
     color: var(--text) !important;
   }
+  .dropdown-divider {
+    border-color: var(--border) !important;
+  }
+  .dropdown-signed-commit .dropdown--menu:after {
+    display: none;
+  }
   .dropdown-menu {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -900,9 +905,6 @@
   }
   code .link-gray {
     font-weight: 500 !important;
-  }
-  .dropdown-signed-commit .dropdown-menu:after {
-    display: none;
   }
   .signed-commit-header {
     border-color: var(--green) !important;
@@ -1795,6 +1797,10 @@
   div.commit-build-statuses,
   .link-gray {
     color: var(--faded) !important;
+  }
+  div.commit-build-statuses:hover,
+  .link-gray:hover {
+    color: var(--blue) !important;
   }
   div.commit-build-statuses-dark,
   .link-gray-dark,

@@ -1,9 +1,13 @@
-.dropdown
-  &-menu
+.dropdown-
+  &divider
+    c 0 $border
+  &signed-commit &-menu:after
+    display none
+  &menu
     c $text $border $alt
     &:after
       border-bottom-color $border
-  &-item
+  &item
     c $text
     &:hover, &:focus
       c $cn 0 $region
