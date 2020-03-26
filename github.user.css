@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.7.6
+@version      0.7.7
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -108,7 +108,6 @@
   .discussion-sidebar-item+.discussion-sidebar-item,
   .UnderlineNav,
   .reaction-summary-item,
-  .comment-reactions.has-reactions,
   .jump-to-suggestions-results-container .navigation-item,
   .Box-footer,
   .graphs.axis,
@@ -417,12 +416,12 @@
   .project-header {
     background-color: var(--bg) !important;
   }
-  .project-card:focus {
-    box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
-  }
   .project-card:hover {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
     border-color: var(--border) !important;
+  }
+  .project-card:focus {
+    box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
   }
   .btn.btn-outline,
   .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2 {
@@ -574,6 +573,10 @@
   .compare-pr-placeholder p {
     color: var(--text) !important;
   }
+  .comment-reactions.has-reactions {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
   .range-editor {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -722,11 +725,6 @@
   }
   .CheckStep-line:hover {
     background-color: var(--hl) !important;
-  }
-  .Box-row--yellow {
-    color: var(--text) !important;
-    border-color: var(--yellow) !important;
-    background-color: transparent !important;
   }
   .graph-filter .info {
     color: var(--text) !important;
@@ -881,8 +879,11 @@
   .dropdown-divider {
     border-color: var(--border) !important;
   }
-  .dropdown-signed-commit .dropdown--menu:after {
-    display: none;
+  .dropdown-signed-commit .dropdown-menu-w::before {
+    border-left-color: var(--bg);
+  }
+  .dropdown-signed-commit .dropdown-menu-w::after {
+    border-left-color: var(--bg);
   }
   .dropdown-menu {
     color: var(--text) !important;
@@ -902,6 +903,9 @@
   }
   .issue-keyword {
     color: var(--purple) !important;
+  }
+  .js-issue-row {
+    transition: background-color 0.1s ease-in-out !important;
   }
   .pinned-issue-item {
     border-color: var(--border) !important;
@@ -1632,6 +1636,12 @@
   .btn.btn-sm {
     background-color: var(--alt) !important;
   }
+  .btn:disabled,
+  .btn:disabled:hover {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
   .btn:hover {
     background-image: none !important;
     color: var(--cn) !important;
@@ -2124,6 +2134,15 @@
   }
   .content.p-4.text-center.rounded-1.border.border-gray-light {
     background-color: var(--alt) !important;
+  }
+  .Box-row--yellow {
+    color: var(--text) !important;
+    border-color: var(--yellow) !important;
+    background-color: transparent !important;
+  }
+  .Box--responsive .Box-row--unread::before {
+    background-image: none !important;
+    background-color: var(--blue) !important;
   }
 }
 @-moz-document domain('gist.github.com') {

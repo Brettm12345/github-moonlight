@@ -7,11 +7,12 @@
     c 0 0 $hl
   &header
     c 0 0 $bg
-  &card:focus
-    s 0 0 0 .2em $blueTrans
-  &card:hover
-    md-shadow-z-1()
-    c 0 $border
+  &card
+    &:hover
+      md-shadow-z-1()
+      c 0 $border
+    &:focus
+      s 0 0 0 .2em $blueTrans
 .btn.btn-outline,
 .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2
   c 0 0 $alt
