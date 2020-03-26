@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "husky": "^4.2.3",
+    "stlint": "^1.0.62",
+    "stlint-v4fire": "^1.0.37",
     "stylint": "^2.0.0",
     "stylus-supremacy": "^2.14.0"
   }

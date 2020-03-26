@@ -2,30 +2,23 @@
   a
     c $textAlt
     td underline
-  h1,
-  h2,
-  h3,
-  h4,
-  h5
+  h1, h2, h3, h4, h5
     c 0 $border
   img
     c 0 0 $hl
   table
-    td,
-    th
+    td, th
       c 0 $border
     tr
       c $text $border $alt
-  code,
-  tt
-    mono()
+  code, tt
     c $cn
     fw 500
-  /.highlight pre,
-  pre
-    c 0 $border $alt
     mono()
+  /.highlight pre, pre
+    c 0 $border $alt
     fw 500
+    mono()
   blockquote
     c $textAlt $border $hl
   hr

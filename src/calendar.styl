@@ -1,38 +1,19 @@
-// TODO: Clean this up
-.legend li
-  &[style*='#ebedf0']
-    c 0 0 $indigo
-    o 0.05
-  &[style*='#c6e48b']
-    c 0 0 $teal
-    o 0.25
-  &[style*='#7bc96f']
-    c 0 0 $teal
-    o 0.5
-  &[style*='#239a3b']
-    c 0 0 $teal
-    o 0.75
-  &[style*='#196127']
-    c 0 0 $teal
+cal($opacity, $target, $color = $teal)
+  .legend li[style*={$target}]
+    c 0 0 $color
+    o $opacity
+  .calendar-graph rect[fill={$target}]
+    fill $color
+    o $opacity
+
+cal(0.05, "#ebedf0", $indigo)
+cal(0.25, "#c6e48b")
+cal(0.5, "#7bc96f")
+cal(0.75, "#239a3b")
+cal(1, "#196127")
+
 .graph-before-activity-overview
   c 0 0 $hl
-.calendar-graph
-  text
-    &.wday,
-    &.month
-      fill $cn
-  rect
-    &[fill='#ebedf0']
-      fill $indigo
-      o 0.05
-    &[fill='#c6e48b']
-      fill $teal
-      o 0.25
-    &[fill='#7bc96f']
-      fill $teal
-      o 0.5
-    &[fill='#239a3b']
-      fill $teal
-      o 0.75
-    &[fill='#196127']
-      fill $teal
+.calendar-graph text
+  &.wday, &.month
+    fill $cn

@@ -3,15 +3,13 @@
     tr background-color 0.1s ease-in-out
     &:hover
       c 0 0 $region
-  &modal-right.details-reset.details-overlay.mb-2,
-  .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
+  &modal-right.details-reset.details-overlay.mb-2, .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
     c 0 0 $alt
 .UnderlineNav
   c 0 0 $hl
   tr background-color 0.1s ease-in-out
-  &[style*="margin-top: 0px;"]
+  &[style*="margin-top"]
     c 0 0 $bg
-.profile-
 .profile-
   &timeline
     &.discussion-timeline:before
@@ -54,8 +52,7 @@
     c $text
 .repo-list
   p 0 12px
-  &,
-  &-item
+  &, &-item
     c 0 $border $alt
 .mini-repo-list-item
   bt $b
@@ -63,8 +60,7 @@
   c 0 0 $hover
 .team,
 .user-mention
-    c $cn
+  c $cn
 .profile-timeline-
-  &month-heading.bg-white,
-  &year-list
+  &month-heading.bg-white, &year-list
     c 0 0 $bg

@@ -1,8 +1,11 @@
 {
   "cSpell.words": ["octicon", "pagehead", "reponav"],
+  "stylelint.autoFix": true,
+  "stylelint.additionalDocumentSelectors": ["stylus"],
   "cSpell.enabled": false,
   "stylusSupremacy.insertNewLineAroundBlocks": false,
   "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.ignoreFiles": ["src/*.styl"],
   "stylusSupremacy.insertColons": false,
   "stylelint.enable": true,
   "stylelint.validate": [

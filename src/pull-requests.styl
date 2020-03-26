@@ -14,9 +14,7 @@
   &-tabs
     c 0 $border
     ../-tab-nav
-      &.selected, &[aria-selected='true'],
-      a.selected,
-      a[aria-selected='true']
+      &.selected, &[aria-selected="true"], a.selected, a[aria-selected="true"]
         bc $border $border $hl
         c $cn 0 $hl
 .blob-code-
@@ -32,9 +30,7 @@
   &.addition
     c 0 0 $green
 .SelectMenu-
-  &blankslate,
-  &loading,
-  &message
+  &blankslate, &loading, &message
     c $text $border $alt
   &item
     tr background-color 0.1s ease-in-out
@@ -54,9 +50,8 @@ ul.comparison-list
 .branch-
   &action-state-clean
     ../action-body::before
-      brc: $hl
-  &action-state-clean &action-icon,
-  &action-item-icon
+      brc $hl
+  &action-state-clean &action-icon, &action-item-icon
     c $border 0 $green
     .octicon
       fill $border
@@ -65,10 +60,9 @@ ul.comparison-list
   &action-body
     b 0
     c 0 $border $hl
-    caret 'right'
+    caret "right"
     .merge-
-      &branch-form,
-      &message
+      &branch-form, &message
         c 0 $border $alt
 .merge-status-
   &list
@@ -85,8 +79,6 @@ ul.comparison-list
   &-header
     c $cn $border $alt
   &--caret
-    &,
-    &.current-user
-      &::before,
-      &::after
+    &, &.current-user
+      &::before, &::after
         brc $alt

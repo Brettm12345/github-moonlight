@@ -7,24 +7,17 @@
   &, & input
     c 0 0 $hl
 .code-list
-  .file-box,
-  & &-item + &-item,
-  .divider .blob-code,
-  .divider .blob-num,
-  &-item-private .blob-num
+  .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c $text $border $hl
   &-item
     &.hx_hit-code&-public.repo-specific
       c 0 0 $bg
-.js-navigation-item:hover,
-.jump-to-field-active,
-#jump-to-results:hover
+.jump-to-field-active, .js-navigation-item:hover, #jump-to-results:hover
   c 0 0 $hl
 .jump-to-suggestions
   &-results-container .navigation-focus &-path
     c 0 0 $region
-#commit_search_results
-  .commit
-    c $text $border $alt
-    px 8px
-    bx $b
+#commit_search_results .commit
+  bx $b
+  c $text $border $alt
+  px 8px

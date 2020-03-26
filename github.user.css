@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.7.0
+@version      0.7.1
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -203,8 +203,8 @@
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .cm-s-github-light .CodeMirror-gutters,
-  .CodeMirror-gutter.CodeMirror-linenumbers {
+  .CodeMirror-gutter.CodeMirror-linenumbers,
+  .cm-s-github-light .CodeMirror-gutters {
     color: var(--indigo) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -258,7 +258,7 @@
     background-color: var(--red) !important;
   }
   .pl-c2::before {
-    content: '^M';
+    content: "^M";
   }
   .pl-sr .pl-cce {
     font-weight: bold !important;
@@ -307,24 +307,45 @@
   .pl-corl {
     text-decoration: underline !important;
   }
-  .legend li[style*='#ebedf0'] {
+  .legend li[style*=#ebedf0] {
     background-color: var(--indigo) !important;
     opacity: 0.05 !important;
   }
-  .legend li[style*='#c6e48b'] {
+  .calendar-graph rect[fill=#ebedf0] {
+    fill: var(--indigo);
+    opacity: 0.05 !important;
+  }
+  .legend li[style*=#c6e48b] {
     background-color: var(--teal) !important;
     opacity: 0.25 !important;
   }
-  .legend li[style*='#7bc96f'] {
+  .calendar-graph rect[fill=#c6e48b] {
+    fill: var(--teal);
+    opacity: 0.25 !important;
+  }
+  .legend li[style*=#7bc96f] {
     background-color: var(--teal) !important;
     opacity: 0.5 !important;
   }
-  .legend li[style*='#239a3b'] {
+  .calendar-graph rect[fill=#7bc96f] {
+    fill: var(--teal);
+    opacity: 0.5 !important;
+  }
+  .legend li[style*=#239a3b] {
     background-color: var(--teal) !important;
     opacity: 0.75 !important;
   }
-  .legend li[style*='#196127'] {
+  .calendar-graph rect[fill=#239a3b] {
+    fill: var(--teal);
+    opacity: 0.75 !important;
+  }
+  .legend li[style*=#196127] {
     background-color: var(--teal) !important;
+    opacity: 1 !important;
+  }
+  .calendar-graph rect[fill=#196127] {
+    fill: var(--teal);
+    opacity: 1 !important;
   }
   .graph-before-activity-overview {
     background-color: var(--hl) !important;
@@ -332,25 +353,6 @@
   .calendar-graph text.wday,
   .calendar-graph text.month {
     fill: var(--cn);
-  }
-  .calendar-graph rect[fill='#ebedf0'] {
-    fill: var(--indigo);
-    opacity: 0.05 !important;
-  }
-  .calendar-graph rect[fill='#c6e48b'] {
-    fill: var(--teal);
-    opacity: 0.25 !important;
-  }
-  .calendar-graph rect[fill='#7bc96f'] {
-    fill: var(--teal);
-    opacity: 0.5 !important;
-  }
-  .calendar-graph rect[fill='#239a3b'] {
-    fill: var(--teal);
-    opacity: 0.75 !important;
-  }
-  .calendar-graph rect[fill='#196127'] {
-    fill: var(--teal);
   }
   .markdown-body a {
     color: var(--text-alt) !important;
@@ -377,16 +379,16 @@
   }
   .markdown-body code,
   .markdown-body tt {
-    font-family: var(--mono-font) !important;
     color: var(--cn) !important;
     font-weight: 500 !important;
+    font-family: var(--mono-font) !important;
   }
   .highlight pre,
   .markdown-body pre {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
-    font-family: var(--mono-font) !important;
     font-weight: 500 !important;
+    font-family: var(--mono-font) !important;
   }
   .markdown-body blockquote {
     color: var(--text-alt) !important;
@@ -580,9 +582,9 @@
     border-color: var(--border) !important;
   }
   .select-menu-tab-nav.selected,
-  .select-menu-tab-nav[aria-selected='true'],
+  .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tab-nav a.selected,
-  .select-menu-tab-nav a[aria-selected='true'] {
+  .select-menu-tab-nav a[aria-selected="true"] {
     border-color: var(--border) var(--border) var(--hl) !important;
     color: var(--cn) !important;
     background-color: var(--hl) !important;
@@ -828,8 +830,8 @@
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific {
     background-color: var(--bg) !important;
   }
-  .js-navigation-item:hover,
   .jump-to-field-active,
+  .js-navigation-item:hover,
   #jump-to-results:hover {
     background-color: var(--hl) !important;
   }
@@ -837,13 +839,13 @@
     background-color: var(--region) !important;
   }
   #commit_search_results .commit {
+    border-left: 1px solid var(--border) !important;
+    border-right: 1px solid var(--border) !important;
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
     padding-left: 8px !important;
     padding-right: 8px !important;
-    border-left: 1px solid var(--border) !important;
-    border-right: 1px solid var(--border) !important;
   }
   .release-timeline-tags .tag-timeline-date::after {
     border-color: var(--border) !important;
@@ -1014,7 +1016,7 @@
     background-color: var(--hl) !important;
     transition: background-color 0.1s ease-in-out !important;
   }
-  .UnderlineNav[style*="margin-top: 0px;"] {
+  .UnderlineNav[style*="margin-top"] {
     background-color: var(--bg) !important;
   }
   .profile-timeline.discussion-timeline:before {
@@ -1125,10 +1127,10 @@
   }
   .js-current .standalone a,
   .sidebar-module .disable > a {
+    border-left-color: var(--blue) !important;
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
-    border-left-color: var(--blue) !important;
   }
   .sub-nav {
     border-color: var(--border) !important;
