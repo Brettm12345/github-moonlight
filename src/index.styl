@@ -16,13 +16,11 @@
 @require "release"
 @require "billing"
 @require "marketplace"
-@require "graphql"
 @require "dropdowns"
 @require "issues"
 @require "commits"
 @require "dashboard"
 @require "team"
-@require "developer"
 
 *
   sbc $sb $bg
@@ -37,6 +35,8 @@ body
   lh 1.8
   &.page-responsive.pagehead
     c 0 0 $bg
+input
+  caret-color $blue
 h1
   c $text
 mark
@@ -385,6 +385,9 @@ hr
 .pl-s > a
   c $green
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra)
+  &:hover
+    c $blue
+
   c $text
 div.commit-build-statuses,
 .link-gray
@@ -483,7 +486,7 @@ div
 .Counter
   c $blue 0 $border
 *:not(code) .Box
-  c 0 $border $hl
+  c 0 $border $alt
 .dashboard .js-all-activity-header + div
   c 0 $border
   .Box
@@ -597,3 +600,5 @@ div
   /.Box--responsive &unread::before
     bgi none
     c 0 0 $blue
+.text
+  c $faded

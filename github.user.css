@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.8.7
+@version      0.9.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -355,6 +355,10 @@
   .markdown-body a {
     color: var(--text-alt) !important;
     text-decoration: underline !important;
+    transition: color 0.1s ease-in-out !important;
+  }
+  .markdown-body a:hover {
+    color: var(--blue) !important;
   }
   .markdown-body h1,
   .markdown-body h2,
@@ -882,153 +886,6 @@
   .marketplace-plan-emphasis {
     color: var(--text) !important;
   }
-  iframe#graphiql,
-  iframe#graphiql .graphiql-ide {
-    border-color: var(--border) !important;
-  }
-  .graphiql-ide {
-    border-top-color: var(--border) !important;
-  }
-  .CodeMirror-cursor {
-    border-left-color: var(--blue) !important;
-  }
-  .CodeMirror-hint {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-    transition: background-color 0.1s ease-in-out !important;
-  }
-  .CodeMirror-hint-information {
-    color: var(--indigo) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .CodeMirror-hint-active {
-    color: var(--cn) !important;
-    background-color: var(--region) !important;
-    font-weight: 500 !important;
-  }
-  .CodeMirror-linenumber {
-    color: var(--indigo) !important;
-    font-weight: 500 !important;
-  }
-  .CodeMirror-gutters,
-  .CodeMirror-gutter.CodeMirror-foldgutter {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .CodeMirror.cm-s-graphiql {
-    background-color: var(--alt) !important;
-  }
-  .history-contents,
-  .doc-explorer-contents {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
-  }
-  .history-title-bar,
-  .doc-explorer-title-bar {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .graphiql-container .graphiql-container .history-contents p {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-  }
-  .graphiql-container .execute-options > li.selected,
-  .graphiql-container .toolbar-menu-items > li.hover,
-  .graphiql-container .toolbar-menu-items > li:active,
-  .graphiql-container .toolbar-menu-items > li:hover,
-  .graphiql-container .toolbar-select-options > li.hover,
-  .graphiql-container .toolbar-select-options > li:active,
-  .graphiql-container .toolbar-select-options > li:hover,
-  .graphiql-container .history-contents > p:hover,
-  .graphiql-container .history-contents > p:active {
-    border-color: var(--border) !important;
-    background-color: var(--region) !important;
-  }
-  .graphiql-container .search-box {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
-  }
-  .graphiql-container .search-box input {
-    background-color: var(--bg) !important;
-  }
-  .graphiql-container .result-window .CodeMirror-gutters {
-    border-color: var(--border) !important;
-  }
-  .graphiql-container .doc-category-title {
-    color: var(--faded) !important;
-    border-color: var(--border) !important;
-  }
-  .graphiql-container .resultWrap {
-    border-left-color: var(--border) !important;
-  }
-  .graphiql-container .arg-name {
-    color: var(--pink) !important;
-  }
-  .graphiql-container .field-name {
-    color: var(--blue) !important;
-  }
-  .graphiql-container .keyword {
-    color: var(--purple) !important;
-  }
-  .graphiql-container .type-name {
-    color: var(--yellow) !important;
-  }
-  .graphiql-container .field-short-description {
-    color: var(--indigo) !important;
-  }
-  .graphiql-container .topBar {
-    background: var(--alt) !important;
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .graphiql-container .toolbar-button,
-  .graphiql-container .execute-button {
-    background: var(--bg) !important;
-    box-shadow: none !important;
-  }
-  .graphiql-container .toolbar-button svg,
-  .graphiql-container .execute-button svg {
-    fill: var(--text);
-  }
-  .graphiql-container .variable-editor-title {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .graphiql-container .docExplorerShow {
-    background: var(--hl) !important;
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .result-window .CodeMirror {
-    background-color: var(--alt) !important;
-  }
-  .cm-punctuation {
-    color: var(--text) !important;
-  }
-  .cm-comment {
-    color: var(--indigo) !important;
-  }
-  .cm-def {
-    color: var(--blue) !important;
-  }
-  .cm-property {
-    color: var(--teal) !important;
-  }
-  .cm-string,
-  .cm-string-2 {
-    color: var(--green) !important;
-  }
-  .cm-keyword {
-    color: var(--purple) !important;
-  }
   .dropdown-divider {
     border-color: var(--border) !important;
   }
@@ -1085,6 +942,9 @@
   }
   #first-time-contributor .Popover-message::after {
     border-right-color: var(--alt);
+  }
+  .inline-comment-form {
+    border-color: var(--border) !important;
   }
   .commit-author-section {
     color: var(--blue) !important;
@@ -1272,135 +1132,6 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .content {
-    color: var(--text) !important;
-  }
-  .sidebar-menu {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .sidebar-menu h3,
-  .sidebar-menu ul ul li {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .sidebar-menu h3:hover,
-  .sidebar-menu ul ul li:hover,
-  .sidebar-menu h3 a:hover,
-  .sidebar-menu ul ul li a:hover {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--region) !important;
-  }
-  .js-current .standalone a,
-  .sidebar-module .disable > a {
-    border-left-color: var(--blue) !important;
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .sub-nav {
-    border-color: var(--border) !important;
-  }
-  body table {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  body table th {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  body table tr td {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .alert.tip {
-    color: var(--text) !important;
-    border-color: var(--teal) !important;
-    background-color: var(--teal-trans) !important;
-  }
-  .alert.note {
-    color: var(--text) !important;
-    border-color: var(--blue) !important;
-    background-color: var(--blue-trans) !important;
-  }
-  .alert.warning {
-    color: var(--text) !important;
-    border-color: var(--yellow) !important;
-    background-color: var(--yellow-trans) !important;
-  }
-  .alert.product {
-    background: var(--purple-trans) !important;
-    color: var(--text) !important;
-    border-color: var(--purple) !important;
-    background-color: var(--purple-trans) !important;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--text) !important;
-  }
-  .content ol li pre code {
-    background-color: var(--bg) !important;
-    padding: 8px !important;
-  }
-  ol > li::before {
-    border-right-color: var(--border) !important;
-    color: var(--text) !important;
-  }
-  .octokit-language span,
-  .lead {
-    color: var(--faded) !important;
-  }
-  .libraries-jumbotron {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
-  }
-  .sidebar-module {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .content .sectionbody .dlist dt,
-  .content .verseblock-content,
-  .content dl code,
-  .content h2 code,
-  .content h3 code,
-  .content h4 code,
-  .content ol code,
-  .content p > tt,
-  .content table code,
-  .content ul code,
-  p code,
-  pre {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  code .p {
-    color: var(--text) !important;
-  }
-  code .nt {
-    color: var(--blue) !important;
-  }
-  code .s,
-  code .s2 {
-    color: var(--green) !important;
-  }
-  code .ni {
-    color: var(--cyan) !important;
-  }
-  code .na {
-    color: var(--red) !important;
-  }
   * {
     scrollbar-color: var(--sb) var(--bg) !important;
   }
@@ -1420,6 +1151,9 @@
   }
   body.page-responsive.pagehead {
     background-color: var(--bg) !important;
+  }
+  input {
+    caret-color: var(--blue);
   }
   h1 {
     color: var(--text) !important;
@@ -2019,6 +1753,9 @@
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
     color: var(--text) !important;
   }
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):hover {
+    color: var(--blue) !important;
+  }
   div.commit-build-statuses,
   .link-gray {
     color: var(--faded) !important;
@@ -2183,7 +1920,7 @@
   }
   *:not(code) .Box {
     border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    background-color: var(--alt) !important;
   }
   .dashboard .js-all-activity-header + div {
     border-color: var(--border) !important;
@@ -2363,6 +2100,9 @@
     background-image: none !important;
     background-color: var(--blue) !important;
   }
+  .text {
+    color: var(--faded) !important;
+  }
 }
 @-moz-document domain('gist.github.com') {
   .js-gist-file-update-container.js-task-list-container.file-box {
@@ -2383,5 +2123,283 @@
   .reponav.js-repo-nav.selected,
   .reponav-item.selected {
     background-color: var(--alt) !important;
+  }
+}
+@-moz-document domain('developer.github.com') {
+  iframe#graphiql,
+  iframe#graphiql .graphiql-ide {
+    border-color: var(--border) !important;
+  }
+  .graphiql-ide {
+    border-top-color: var(--border) !important;
+  }
+  .CodeMirror-cursor {
+    border-left-color: var(--blue) !important;
+  }
+  .CodeMirror-hint {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    transition: background-color 0.1s ease-in-out !important;
+  }
+  .CodeMirror-hint-information {
+    color: var(--indigo) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .CodeMirror-hint-active {
+    color: var(--cn) !important;
+    background-color: var(--region) !important;
+    font-weight: 500 !important;
+  }
+  .CodeMirror-linenumber {
+    color: var(--indigo) !important;
+    font-weight: 500 !important;
+  }
+  .CodeMirror-gutters,
+  .CodeMirror-gutter.CodeMirror-foldgutter {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .CodeMirror.cm-s-graphiql {
+    background-color: var(--alt) !important;
+  }
+  .history-contents,
+  .doc-explorer-contents {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .history-title-bar,
+  .doc-explorer-title-bar {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .graphiql-container .graphiql-container .history-contents p {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .graphiql-container .execute-options > li.selected,
+  .graphiql-container .toolbar-menu-items > li.hover,
+  .graphiql-container .toolbar-menu-items > li:active,
+  .graphiql-container .toolbar-menu-items > li:hover,
+  .graphiql-container .toolbar-select-options > li.hover,
+  .graphiql-container .toolbar-select-options > li:active,
+  .graphiql-container .toolbar-select-options > li:hover,
+  .graphiql-container .history-contents > p:hover,
+  .graphiql-container .history-contents > p:active {
+    border-color: var(--border) !important;
+    background-color: var(--region) !important;
+  }
+  .graphiql-container .search-box {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .graphiql-container .search-box input {
+    background-color: var(--bg) !important;
+  }
+  .graphiql-container .result-window .CodeMirror-gutters {
+    border-color: var(--border) !important;
+  }
+  .graphiql-container .doc-category-title {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+  }
+  .graphiql-container .resultWrap {
+    border-left-color: var(--border) !important;
+  }
+  .graphiql-container .arg-name {
+    color: var(--pink) !important;
+  }
+  .graphiql-container .field-name {
+    color: var(--blue) !important;
+  }
+  .graphiql-container .keyword {
+    color: var(--purple) !important;
+  }
+  .graphiql-container .type-name {
+    color: var(--yellow) !important;
+  }
+  .graphiql-container .field-short-description {
+    color: var(--indigo) !important;
+  }
+  .graphiql-container .topBar {
+    background: var(--alt) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .graphiql-container .toolbar-button,
+  .graphiql-container .execute-button {
+    background: var(--bg) !important;
+    box-shadow: none !important;
+  }
+  .graphiql-container .toolbar-button svg,
+  .graphiql-container .execute-button svg {
+    fill: var(--text);
+  }
+  .graphiql-container .variable-editor-title {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .graphiql-container .docExplorerShow {
+    background: var(--hl) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .result-window .CodeMirror {
+    background-color: var(--alt) !important;
+  }
+  .cm-punctuation {
+    color: var(--text) !important;
+  }
+  .cm-comment {
+    color: var(--indigo) !important;
+  }
+  .cm-def {
+    color: var(--blue) !important;
+  }
+  .cm-property {
+    color: var(--teal) !important;
+  }
+  .cm-string,
+  .cm-string-2 {
+    color: var(--green) !important;
+  }
+  .cm-keyword {
+    color: var(--purple) !important;
+  }
+  .content {
+    color: var(--text) !important;
+  }
+  .sidebar-menu {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .sidebar-menu h3,
+  .sidebar-menu ul ul li {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .sidebar-menu h3:hover,
+  .sidebar-menu ul ul li:hover,
+  .sidebar-menu h3 a:hover,
+  .sidebar-menu ul ul li a:hover {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--region) !important;
+  }
+  .js-current .standalone a,
+  .sidebar-module .disable > a {
+    border-left-color: var(--blue) !important;
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .sub-nav {
+    border-color: var(--border) !important;
+  }
+  body table {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  body table th {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  body table tr td {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .alert.tip {
+    color: var(--text) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-trans) !important;
+  }
+  .alert.note {
+    color: var(--text) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--blue-trans) !important;
+  }
+  .alert.warning {
+    color: var(--text) !important;
+    border-color: var(--yellow) !important;
+    background-color: var(--yellow-trans) !important;
+  }
+  .alert.product {
+    background: var(--purple-trans) !important;
+    color: var(--text) !important;
+    border-color: var(--purple) !important;
+    background-color: var(--purple-trans) !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text) !important;
+  }
+  .content ol li pre code {
+    background-color: var(--bg) !important;
+    padding: 8px !important;
+  }
+  ol > li::before {
+    border-right-color: var(--border) !important;
+    color: var(--text) !important;
+  }
+  .octokit-language span,
+  .lead {
+    color: var(--faded) !important;
+  }
+  .libraries-jumbotron {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .sidebar-module {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .content .sectionbody .dlist dt,
+  .content .verseblock-content,
+  .content dl code,
+  .content h2 code,
+  .content h3 code,
+  .content h4 code,
+  .content ol code,
+  .content p > tt,
+  .content table code,
+  .content ul code,
+  p code,
+  pre {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  code .p {
+    color: var(--text) !important;
+  }
+  code .nt {
+    color: var(--blue) !important;
+  }
+  code .s,
+  code .s2 {
+    color: var(--green) !important;
+  }
+  code .ni {
+    color: var(--cyan) !important;
+  }
+  code .na {
+    color: var(--red) !important;
   }
 }
