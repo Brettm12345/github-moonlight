@@ -6,7 +6,10 @@
   "license": "MIT",
   "scripts": {
     "build": "stylus -U ./github.user.styl",
-    "build:watch": "yarn build --watch"
+    "build:watch": "yarn build --watch",
+    "lint": "stlint src",
+    "lint:fix": "yarn lint --fix",
+    "lint:watch": "yarn lint --watch"
   },
   "husky": {
     "hooks": {

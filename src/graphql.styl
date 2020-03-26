@@ -17,8 +17,7 @@ iframe#graphiql
   &-linenumber
     c $indigo
     fw 500
-  &-gutters
-  &-gutter&-foldgutter
+  &-gutters, &-gutter&-foldgutter
     c $text $border $alt
   &.cm-s-graphiql
     c 0 0 $alt
@@ -30,15 +29,7 @@ iframe#graphiql
 .graphiql-container
   .graphiql-container .history-contents p
     c $text $border
-  .execute-options > li.selected,
-  .toolbar-menu-items > li.hover,
-  .toolbar-menu-items > li:active,
-  .toolbar-menu-items > li:hover,
-  .toolbar-select-options > li.hover,
-  .toolbar-select-options > li:active,
-  .toolbar-select-options > li:hover,
-  .history-contents > p:hover,
-  .history-contents > p:active
+  .execute-options > li.selected, .toolbar-menu-items > li.hover, .toolbar-menu-items > li:active, .toolbar-menu-items > li:hover, .toolbar-select-options > li.hover, .toolbar-select-options > li:active, .toolbar-select-options > li:hover, .history-contents > p:hover, .history-contents > p:active
     c 0 $border $region
 
   .search-box
@@ -62,8 +53,8 @@ iframe#graphiql
   .field-short-description
     c $indigo
   .topBar
-    c $text $border $alt
     bg $alt
+    c $text $border $alt
   .toolbar, .execute
     &-button
       bg $bg

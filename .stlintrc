@@ -21,7 +21,6 @@
   "reportOptions": {
     "columnSplitter": " | ",
     "maxWidth": 70,
-    "minWidth": 70,
     "trancate": false
   },
   "sortOrder": {

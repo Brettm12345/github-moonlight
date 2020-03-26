@@ -1,28 +1,28 @@
-@require 'variables'
-@require 'mixins'
-@require 'common'
-@require 'notifications'
-@require 'syntax'
-@require 'calendar'
-@require 'markdown'
-@require 'projects'
-@require 'plugins'
-@require 'color-replacements'
-@require 'pull-requests'
-@require 'actions'
-@require 'insights'
-@require 'explore'
-@require 'search'
-@require 'release'
-@require 'billing'
-@require 'marketplace'
-@require 'graphql'
-@require 'dropdowns'
-@require 'issues'
-@require 'commits'
-@require 'dashboard'
-@require 'team'
-@require 'developer'
+@require "variables"
+@require "mixins"
+@require "common"
+@require "notifications"
+@require "syntax"
+@require "calendar"
+@require "markdown"
+@require "projects"
+@require "plugins"
+@require "color-replacements"
+@require "pull-requests"
+@require "actions"
+@require "insights"
+@require "explore"
+@require "search"
+@require "release"
+@require "billing"
+@require "marketplace"
+@require "graphql"
+@require "dropdowns"
+@require "issues"
+@require "commits"
+@require "dashboard"
+@require "team"
+@require "developer"
 
 *
   sbc $sb $bg
@@ -59,22 +59,21 @@ textara
     o 0.5
 fieldset
   b $b
-  r 6px
   m 0
   mb 6px
   p 10px
-
+  r 6px
 code,
 pre,
 tt
   mono()
 .form-select
-  @extend $chevronDown
+  background-image url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c8d3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" %3E%3Cpolyline points="6 9 12 15 18 9" /%3E%3C/svg%3E')
 .blob-code-inner
   c $text
-  mono()
   fs 15px
   lh 1.8
+  mono()
   .highlighted
     c 0 0 $icon
 .blob-num
@@ -82,8 +81,7 @@ tt
   fw 600
 .blob-expanded
   .blob-
-    &code,
-    &num
+    &code, &num
       c 0 $border $alt
 .file:target
   md-shadow-z-1()
@@ -99,8 +97,7 @@ tt
 .notification-navigation .notification-configure-filters
   octicon $text
 .Box
-  &--responsive,
-  &row--unread
+  &--responsive, &row--unread
     s inset 2px 0 0 $blue
   &-header
     c 0 $border $alt
@@ -112,22 +109,20 @@ tt
     bt $b
     &--focus-gray.navigation-focus
       c 0 0 $icon
-    &[style*='background: rgb']
+    &[style*="background"]
       c 0 0 $region
-img[src*='octocat-spinner-64.gif']
+img[src*="octocat-spinner-64.gif"]
   filter invert(1)
 .form
-  &-control,
-  &-select
-    &.focus,
-    &:focus
+  &-control, &-select
+    &.focus, &:focus
       c $cn $blue 0
       s none
 .octicon:not(.text-green):not(.text-red):not(.octicon-check)
   c $text
   &.open
     c $green
-  &[style='color: #6a737d;']
+  &[style*="#6a737d"]
     c $textGray
   &.octicon-file
     c $indigo
@@ -150,7 +145,7 @@ img[src*='octocat-spinner-64.gif']
     c $text
     strong
       c $purple
-path[fill='#eee']
+path[fill="#eee"]
   fill $icon
 .file-diff-split .empty-cell
   c 0 $border $alt
@@ -162,13 +157,6 @@ path[fill='#eee']
   &addition, &deletion
     .x
       c $border
-.blob-
-  for $val in num code
-    &{$val}-addition
-      c $teal $teal $tealTrans
-  for $val in num code
-    &{$val}-deletion
-      c $red $red $redTrans
 .lovely-forks-addon
   c $text
   o 0.7
@@ -201,46 +189,35 @@ path[fill='#eee']
 .tabnav--responsive .tabnav-tab
   c $text $border $alt
 .tabnav-tab
-  &[aria-current],
-  &[aria-selected=true],
-  &.selected
+  &[aria-current], &[aria-selected=true], &.selected
     c $text $border $hl
 .branch-name
   c $text $border $region
 .select-menu-
-  &header,
-  &header &title
+  &header, &header &title
     c $cn $border $bg
-  &modal,
-  &item
+  &modal, &item
     c $text $border $alt
   &divider
     c $text $border $alt
   &filters
     c $text $border $hl
   &text-filter
-    &:first-child,
-    &:last-child
+    &:first-child, &:last-child
       c 0 $border
   &modal
     md-shadow-z-2()
 .pagination
-  .current,
-  [aria-current]
+  .current, [aria-current]
     c $cn 0 $icon
-  a,
-  em,
-  span,
-  .disabled,
-  .gap,
-  [aria-disabled=true]
+  a, em, span, .disabled, .gap, [aria-disabled=true]
     &:hover
       c 0 0 $region
     tr background-color 0.1s ease-in-out
     c 0 $border $hl
-input[type='text']
+input[type="text"]
   c $cn $border $alt
-div[style*='background: linear-gradient']
+div[style*="linear-gradient"]
   bg linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
 .numbers-summary
   octicon $text
@@ -248,18 +225,14 @@ div[style*='background: linear-gradient']
 .hidden-text-expander a
   c $text 0 $icon
 .UnderlineNav-item
-  /.subnav-link.selected,
-  &.selected,
-  &[aria-current],
-  &[aria-selected=true]
+  /.subnav-link.selected, &.selected, &[aria-current], &[aria-selected=true]
     bbc $blue
 .SelectMenu-
   &divider
     c $text $border $border
   &list
     c 0 $border $bg
-  &item,
-  &modal
+  &item, &modal
     c 0 $border $alt
   &header
     bbc $border
@@ -291,8 +264,7 @@ div[style*='background: linear-gradient']
 table.files
   c $text $border $hl
   tr
-    &.navigation-focus,
-    &[aria-selected=true]
+    &.navigation-focus, &[aria-selected=true]
       td
         c 0 0 $hl
   td
@@ -308,8 +280,7 @@ table.files
 .TimelineItem
   &:before
     c 0 0 $border
-  &-badge,
-  &--condensed &-badge
+  &-badge, &--condensed &-badge
     c $hover 0 $bg
   &-body
     c $faded
@@ -335,8 +306,8 @@ table.files
   b $b
   &-link:hover
     c 0 0 $region
-  tr background-color 0.1s ease-in-out
   c $text $border $alt
+  tr background-color 0.1s ease-in-out
   &-action
     c $text $border $bg
     button
@@ -348,8 +319,7 @@ div.listgroup-item
 .reponav-item
   &.selected
     bc $blue $border transparent
-  &:focus,
-  &:hover
+  &:focus, &:hover
     c $blue
   c $blue
   &.selected
@@ -363,6 +333,7 @@ div.listgroup-item
 .pagehead,
 .repohead.experiment-repo-nav
   c 0 $border $alt
+  // @stlint-ignore
   @media (min-width: 768px)
     c $alt
 .repohead,
@@ -382,8 +353,7 @@ div.listgroup-item
   &:focus
     c 0 0 $hl
 .form
-  &-control,
-  &-select
+  &-control, &-select
     c $cn $border $alt
 .flash
   c $cn $border $bg
@@ -391,8 +361,7 @@ div.listgroup-item
     c $yellow $border $alt
 .menu
   c $text $border $alt
-  &,
-  .blankslate
+  &, .blankslate
     c $alt $border
   &-heading
     c $cn $border $alt
@@ -404,9 +373,7 @@ div.listgroup-item
     &.selected
       c $blue 0 $hl
 .boxed-group
-  &-inner,
-  & .heading,
-  & > h3
+  &-inner, & .heading, & > h3
     c 0 $border $alt
 .rule,
 hr
@@ -424,12 +391,10 @@ div.commit-build-statuses,
   c $faded
   &:hover
     c $blue
-  &-dark,
-  body &-dark
-    &:hover,
-    body &:hover
-      td underline
+  &-dark, body &-dark
     c $blue
+    &:hover, body &:hover
+      td underline
 .access-form-wrapper
   c 0 $border $alt
 .discussion-sidebar-heading
@@ -457,8 +422,7 @@ div.commit-build-statuses,
       br $b
 .breadcrumb
   c $blue
-  &-item-selected,
-  &-item[aria-current]
+  &-item-selected, &-item[aria-current]
     c $blue
   strong.final-path
     c $cn
@@ -479,13 +443,10 @@ div.commit-build-statuses,
     c $cn
 .subnav-item
   c 0 $border
-  &:focus,
-  &:hover
+  &:focus, &:hover
     c 0 0 $icon
   &.selected
-    &,
-    &:focus,
-    &:hover
+    &, &:focus, &:hover
       c 0 $border $hl
 .input-contrast
   c $cn $border $alt
@@ -504,8 +465,7 @@ div.commit-build-statuses,
   .alert
     bt $b
   .Details
-    &-content--hidden li,
-    button
+    &-content--hidden li, button
       btc $border
     button:hover
       bg transparent
@@ -516,8 +476,7 @@ div
     c $blue
     &.selected
       c $blue $border $bg
-    &:focus,
-    &:hover
+    &:focus, &:hover
       c $blue
     .Counter
       c $blue
@@ -597,27 +556,24 @@ div
 .Popover-message
   c $text $border
   &--top-left
-    caret 'bottom' $hl
+    caret "bottom" $hl
   &--bottom-left
-    caret 'top' $hl
+    caret "top" $hl
 .UnderlineNav-item
   &:hover
     bbc $region
-  &.selected,
-  &[aria-current],
-  &[role='tab'][aria-selected='true']
+  &.selected, &[aria-current], &[role="tab"][aria-selected="true"]
     bbc $blue
 .gh-header-number
   c $orange
   fw 400
   td underline
 .toolbar-item
-  &,
-  & .menu-target
-    c $text
-    tr color 0.1s ease-in-out
+  &, & .menu-target
     &:hover
       c $blue $hl
+    c $text
+    tr color 0.1s ease-in-out
 .body > div.d-flex
   px 10px
 .pagination-loader-container

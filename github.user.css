@@ -85,12 +85,9 @@
   --yellow-trans: /*[[yellow-trans]]*/;
 }
 @-moz-document domain('github.com') {
-  .form-select {
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23c8d3f5%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22feather%20feather-chevron-down%22%20%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22%20/%3E%3C/svg%3E");
-  }
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
-  div[style='background-color: #fcfdfd'],
+  div[style*="#fcfdfd"],
   .conversation-list-heading .inner,
   .email-format .email-hidden-toggle a,
   nav.UnderlineNav + div.border.d-md-block,
@@ -103,7 +100,7 @@
   .blob-num-hunk,
   .blob-code-expandable,
   .blob-code-hunk {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .discussion-sidebar-item+.discussion-sidebar-item,
   .UnderlineNav,
@@ -136,180 +133,178 @@
   .border-lg-left,
   .Subhead,
   .repository-lang-stats-graph {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   *::placeholder {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .notifications-list-item.notification-unread {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .filter-item {
     transition: background-color ease-in-out 0.2s !important;
   }
   .filter-item:hover {
-    background-color: var(--hover) !important;
+    c: 0 0 var(--hover);
   }
   .filter-item.selected,
   .filter-item[aria-current],
   .filter-item[aria-selected=true] {
-    color: var(--cn) !important;
-    background-color: var(--icon) !important;
+    c: var(--cn) 0 var(--icon);
   }
   .notification-navigation.bg-white {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .notification-configure-filters .octicon {
-    color: var(--hover) !important;
+    c: var(--hover);
   }
   .notification-navigation .notification--configure-filters:hover .octicon {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .notifications-list-item .notifications-list-item-actions svg {
     fill: var(--text);
   }
   .notifications-list-item:hover {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .notifications-list-item:hover .notification-list-item-actions .btn {
     transition: background-color 0.2s ease-in-out !important;
   }
   .notifications-list-item:hover .notification-list-item-actions .btn:hover {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--border) !important;
+    c: var(--cn) var(--border) var(--border);
   }
   .notifications-dropdown {
-    border-color: var(--border) !important;
-    background-color: var(--border) !important;
+    c: 0 var(--border) var(--border);
   }
   .notifications-dropdown .notifications-list {
     margin-bottom: 0 !important;
   }
   .notifications-dropdown-arrow {
-    border-color: var(--alt) !important;
+    c: 0 var(--alt);
   }
   .notifications-dropdown,
   .notifications-dropdown-see-all {
     border-top: 1px solid var(--border) !important;
-    border-color: var(--border) !important;
-    background-color: var(--region) !important;
+    c: 0 var(--border) var(--region);
   }
   .thread-subscription-status {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .CodeMirror-gutter.CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters {
-    color: var(--indigo) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--indigo) var(--border) var(--alt);
   }
   .cm-s-github-light.CodeMirror {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .cm-s-github-light .CodeMirror-lines {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
   }
   .code .s1 {
-    color: var(--green) !important;
+    c: var(--green);
   }
   .pl-c {
-    color: var(--indigo) !important;
+    c: var(--indigo);
   }
   .pl-c1,
   .pl-s .pl-v {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .pl-e,
   .pl-en {
-    color: var(--blue) !important;
+    c: var(--blue);
+  }
+  .pl-ent,
+  .pl-smi,
+  .pl-s .pl-s1 {
+    c: $lightRed;
+  }
+  .pl-k {
+    c: $purpleAlt;
   }
   .pl-s .pl-pse .pl-s1,
   .pl-pds {
-    color: var(--cyan) !important;
+    c: var(--cyan);
+  }
+  .pl-sr {
+    c: $cyanAlt;
+  }
+  .pl-sr .pl-cce {
+    c: $lightRed;
   }
   .pl-s,
   .pl-sr .pl-sre,
   .pl-sr .pl-sra {
-    color: var(--green) !important;
+    c: var(--green);
   }
   .pl-v {
-    color: var(--pink) !important;
+    c: var(--pink);
   }
   .pl-smw {
-    color: var(--yellow) !important;
+    c: var(--yellow);
   }
   .pl-bu {
-    color: var(--red) !important;
+    c: var(--red);
   }
   .pl-ii {
-    color: var(--cn) !important;
-    background-color: var(--red) !important;
+    c: var(--cn) 0 var(--red);
   }
   .pl-c2 {
-    color: var(--cn) !important;
-    background-color: var(--red) !important;
+    c: var(--cn) 0 var(--red);
   }
   .pl-c2::before {
     content: "^M";
   }
   .pl-sr .pl-cce {
+    c: $lightRed;
     font-weight: bold !important;
   }
   .pl-ml {
-    color: var(--orange) !important;
+    c: var(--orange);
   }
   .pl-mh .pl-en,
   .pl-ms {
-    color: var(--cyan) !important;
+    c: var(--cyan);
   }
   .pl-mh {
-    color: var(--green) !important;
+    c: var(--green);
     font-weight: bold !important;
   }
   .pl-mi {
-    color: var(--yellow) !important;
+    c: var(--yellow);
     font-style: italic;
   }
   .pl-mb {
-    color: var(--cn) !important;
+    c: var(--cn);
     font-weight: bold !important;
   }
   .pl-md {
-    color: var(--red) !important;
-    background-color: var(--red-trans) !important;
+    c: var(--red) 0 var(--red-trans);
   }
   .pl-mi1 {
-    color: var(--teal) !important;
-    background-color: var(--teal-trans) !important;
+    c: var(--teal) 0 var(--teal-trans);
   }
   .pl-mc {
-    color: var(--cyan) !important;
-    background-color: var(--cyan-trans) !important;
+    c: var(--cyan) 0 var(--cyan-trans);
   }
   .pl-mdr {
-    color: var(--teal) !important;
+    c: var(--teal);
     font-weight: bold !important;
   }
   .pl-ba {
-    color: var(--hover) !important;
+    c: var(--hover);
   }
   .pl-sg {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .pl-corl {
     text-decoration: underline !important;
   }
   .legend li[style*="#ebedf0"] {
-    background-color: var(--indigo) !important;
+    c: 0 0 var(--indigo);
     opacity: 0.05 !important;
   }
   .calendar-graph rect[fill="#ebedf0"] {
@@ -317,7 +312,7 @@
     opacity: 0.05 !important;
   }
   .legend li[style*="#c6e48b"] {
-    background-color: var(--teal) !important;
+    c: 0 0 var(--teal);
     opacity: 0.25 !important;
   }
   .calendar-graph rect[fill="#c6e48b"] {
@@ -325,7 +320,7 @@
     opacity: 0.25 !important;
   }
   .legend li[style*="#7bc96f"] {
-    background-color: var(--teal) !important;
+    c: 0 0 var(--teal);
     opacity: 0.5 !important;
   }
   .calendar-graph rect[fill="#7bc96f"] {
@@ -333,7 +328,7 @@
     opacity: 0.5 !important;
   }
   .legend li[style*="#239a3b"] {
-    background-color: var(--teal) !important;
+    c: 0 0 var(--teal);
     opacity: 0.75 !important;
   }
   .calendar-graph rect[fill="#239a3b"] {
@@ -341,7 +336,7 @@
     opacity: 0.75 !important;
   }
   .legend li[style*="#196127"] {
-    background-color: var(--teal) !important;
+    c: 0 0 var(--teal);
     opacity: 1 !important;
   }
   .calendar-graph rect[fill="#196127"] {
@@ -349,14 +344,14 @@
     opacity: 1 !important;
   }
   .graph-before-activity-overview {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .calendar-graph text.wday,
   .calendar-graph text.month {
     fill: var(--cn);
   }
   .markdown-body a {
-    color: var(--text-alt) !important;
+    c: var(--text-alt);
     text-decoration: underline !important;
   }
   .markdown-body h1,
@@ -364,45 +359,38 @@
   .markdown-body h3,
   .markdown-body h4,
   .markdown-body h5 {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .markdown-body img {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .markdown-body table td,
   .markdown-body table th {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .markdown-body table tr {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .markdown-body code,
   .markdown-body tt {
-    color: var(--cn) !important;
+    c: var(--cn);
     font-weight: 500 !important;
     font-family: var(--mono-font) !important;
   }
   .highlight pre,
   .markdown-body pre {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
     font-weight: 500 !important;
     font-family: var(--mono-font) !important;
   }
   .markdown-body blockquote {
-    color: var(--text-alt) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text-alt) var(--border) var(--hl);
   }
   .markdown-body hr {
-    background-color: var(--border) !important;
+    c: 0 0 var(--border);
   }
   .markdown-body .clippy-wrapper .clippy {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--cn) var(--border) var(--alt);
   }
   .markdown-body .clippy-wrapper .clippy .icon {
     filter: invert(1);
@@ -411,262 +399,236 @@
     background: linear-gradient(0deg, #000, rgba(0,0,0,0)) !important;
   }
   .project-column {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .project-pane.bg-white {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .project-header {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .project-card:hover {
+    c: 0 var(--border);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
-    border-color: var(--border) !important;
   }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
   }
   .btn.btn-outline,
   .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2 {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .d-flex.flex-row.flex-items-center.f6 {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .comment-reactions.has-reactions.js-reactions-container.js-socket-channel.js-updatable-content {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: 0 var(--border) var(--bg);
   }
   .code-review.blob-code.blob-code-context {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   #js-repo-pjax-container,
   .pr-toolbar {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .__better_github_pr,
   .__better_github_pr_dark_mode {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .__better_github_pr .github-pr-file.github-pr-file-highlight,
   .__better_github_pr .tree-view_item:hover {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
   .gitako-ready .js-header-wrapper {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .gitako-toggle-show-button-wrapper.collapsed {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
     margin: 1% !important;
   }
   .gitako-toggle-show-button-wrapper.collapsed .action-icon {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .gitako-side-bar,
   .gitako-resize-handler {
-    border-color: var(--border) !important;
-    background-color: var(--border) !important;
+    c: 0 var(--border) var(--border);
   }
   .gitako-side-bar .gitako-side-bar-body {
     border-right-color: var(--border) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .gitako-side-bar .gitako-side-bar-body .octicon {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title {
     border-top-color: var(--border) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .shadow-shelter {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar,
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .header-row {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .gitako-side-bar .gitako-side-bar-body .meta-bar,
   .gitako-side-bar-content .meta-bar {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
-  .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type='text'].form-control,
-  .gitako-side-bar-content .file-explorer .search-input-wrapper input[type='text'].form-control {
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type="text"].form-control,
+  .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control {
     border: 1px !important;
     border-radius: 0 !important;
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
   .gitako-side-bar-content .file-explorer .no-results {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
   .gitako-side-bar-content .file-explorer .node-item {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border);
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
   .gitako-side-bar-content .file-explorer .node-item-row {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .bg-gray {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .bg-gray-light {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .bg-blue-light {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .bg-yellow-light {
-    background-color: var(--yellow-trans) !important;
+    c: 0 0 var(--yellow-trans);
   }
   .bg-blue {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
   .bg-gray-dark {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .bg-gray-2 {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
   .bg-white {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .bg-pending {
-    background-color: var(--purple) !important;
+    c: 0 0 var(--purple);
   }
   .text-gray-light {
-    color: var(--text-alt) !important;
+    c: var(--text-alt);
   }
   .text-blue {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .text-gray {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .text-gray-dark {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .text-emphasized {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .text-green {
-    color: var(--green) !important;
+    c: var(--green);
   }
   .text-red {
-    color: var(--red) !important;
+    c: var(--red);
   }
   .task-progress {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .task-progress .progress-bar .progress {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
   .compare-pr-placeholder {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .compare-pr-placeholder p {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .comment-reactions.has-reactions {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .range-editor {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .range-editor-icon {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .select-menu-tabs {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .select-menu-tab-nav.selected,
   .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tab-nav a.selected,
   .select-menu-tab-nav a[aria-selected="true"] {
     border-color: var(--border) var(--border) var(--hl) !important;
-    color: var(--cn) !important;
-    background-color: var(--hl) !important;
+    c: var(--cn) 0 var(--hl);
   }
   .blob-code-addition {
-    background-color: var(--teal-trans) !important;
+    c: 0 0 var(--teal-trans);
   }
   .blob-code-deletion {
-    background-color: var(--red-trans) !important;
+    c: 0 0 var(--red-trans);
   }
   .Progress {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
   .github-pr-file span.deletion {
-    background-color: var(--red) !important;
+    c: 0 0 var(--red);
   }
   .github-pr-file span.addition {
-    background-color: var(--green) !important;
+    c: 0 0 var(--green);
   }
   .SelectMenu-blankslate,
   .SelectMenu-loading,
   .SelectMenu-message {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .SelectMenu-item {
     transition: background-color 0.1s ease-in-out !important;
   }
   .SelectMenu-item:hover {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .status-meta,
   .merge-pr-more-commits {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   ul.comparison-list {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   ul.comparison-list > li {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   ul.comparison-list > li em {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   ul.comparison-list > li.title {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .branch-action-body::before {
     border-right-color: var(--hl) !important;
   }
   .branch-action-state-clean .branch-action-icon,
   .branch-action-item-icon {
-    color: var(--border) !important;
-    background-color: var(--green) !important;
+    c: var(--border) 0 var(--green);
   }
   .branch-action-state-clean .branch-action-icon .octicon,
   .branch-action-item-icon .octicon {
     fill: var(--border);
   }
   .branch-infobar {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .branch-action-body {
     border: 0 !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .branch-action-body::before {
     border-right-color: var(--alt);
@@ -676,34 +638,26 @@
   }
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .merge-status-list {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .merge-status-item {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .timeline-comment {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .timeline-comment-wrapper {
     border: 0 !important;
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline {
-    color: var(--purple) !important;
-    border-color: var(--purple) !important;
-    background-color: var(--purple-trans) !important;
+    c: var(--purple) var(--purple) var(--purple-trans);
   }
   .timeline-comment-header {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--cn) var(--border) var(--alt);
   }
   .timeline-comment--caret::before,
   .timeline-comment--caret.current-user::before,
@@ -718,69 +672,62 @@
     border-right-color: var(--alt);
   }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .CheckStep-line {
     font-family: var(--mono-font) !important;
     font-weight: 500 !important;
   }
   .CheckStep-line-number {
-    color: var(--indigo) !important;
+    c: var(--indigo);
   }
   .CheckStep-linecontent {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .CheckStep-line:hover {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .graph-filter .info {
-    color: var(--text) !important;
+    c: var(--text);
   }
-  line[stroke='#000'] {
+  line[stroke="#000"] {
     stroke: var(--border);
   }
-  text[fill='#000'],
-  text[fill='#6a737d'],
-  text[text-anchor='middle'] {
+  text[fill="#000"],
+  text[fill="#6a737d"],
+  text[text-anchor="middle"] {
     fill: var(--text);
   }
   .viz {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .viz .code-frequency {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
     padding: 8px !important;
   }
   .cadd {
-    color: var(--green) !important;
+    c: var(--green);
   }
   .cdel {
-    color: var(--red) !important;
+    c: var(--red);
   }
   .conversation-list-heading {
-    color: var(--faded) !important;
-    border-color: var(--border) !important;
+    c: var(--faded) var(--border);
   }
   .conversation-list-heading .inner {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .num {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   relative-time {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .simple-conversation-list > li {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .graphs .dir {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .graphs .area {
     fill: var(--teal);
@@ -792,33 +739,27 @@
     fill: var(--red);
   }
   .community-checklist .progress {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
   table.capped-list td {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   table.capped-list tr:nth-child(2n),
   table.capped-list th {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .traffic-graph-stats,
   .summary-stats li,
   .summary-stats li .num {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
   .exploregrid-item {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .filter-bar {
     border-bottom: 1px solid var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .form-control,
   .form-select {
@@ -826,68 +767,60 @@
   }
   .form-control.search-page-label.js-advanced-search-label,
   .form-control.search-page-label.js-advanced-search-label input {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .code-list .file-box,
   .code-list .code-list-item + .code-list-item,
   .code-list .divider .blob-code,
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .jump-to-field-active,
   .js-navigation-item:hover,
   #jump-to-results:hover {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
   #commit_search_results .commit {
     border-left: 1px solid var(--border) !important;
     border-right: 1px solid var(--border) !important;
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
     padding-left: 8px !important;
     padding-right: 8px !important;
   }
   .release-timeline-tags .tag-timeline-date::after {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .release-main-section {
     border-left-color: var(--border) !important;
   }
   .signup-plan-card {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .signup-plan-card:hover {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
-  div[style*='height: 1px;'] {
-    background-color: var(--border) !important;
+  div[style*="height"] {
+    c: 0 0 var(--border);
   }
   .MarketplaceBackground-buffer {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
   }
   .marketplace-plan-emphasis {
-    color: var(--text) !important;
+    c: var(--text);
   }
   iframe#graphiql,
   iframe#graphiql .graphiql-ide {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .graphiql-ide {
     border-top-color: var(--border) !important;
@@ -896,49 +829,37 @@
     border-left-color: var(--blue) !important;
   }
   .CodeMirror-hint {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
     transition: background-color 0.1s ease-in-out !important;
   }
   .CodeMirror-hint-information {
-    color: var(--indigo) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--indigo) var(--border) var(--alt);
   }
   .CodeMirror-hint-active {
-    color: var(--cn) !important;
-    background-color: var(--region) !important;
+    c: var(--cn) 0 var(--region);
     font-weight: 500 !important;
   }
   .CodeMirror-linenumber {
-    color: var(--indigo) !important;
+    c: var(--indigo);
     font-weight: 500 !important;
   }
   .CodeMirror-gutters,
   .CodeMirror-gutter.CodeMirror-foldgutter {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .CodeMirror.cm-s-graphiql {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .history-contents,
   .doc-explorer-contents {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .history-title-bar,
   .doc-explorer-title-bar {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .graphiql-container .graphiql-container .history-contents p {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border);
   }
   .graphiql-container .execute-options > li.selected,
   .graphiql-container .toolbar-menu-items > li.hover,
@@ -949,46 +870,41 @@
   .graphiql-container .toolbar-select-options > li:hover,
   .graphiql-container .history-contents > p:hover,
   .graphiql-container .history-contents > p:active {
-    border-color: var(--border) !important;
-    background-color: var(--region) !important;
+    c: 0 var(--border) var(--region);
   }
   .graphiql-container .search-box {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: 0 var(--border) var(--bg);
   }
   .graphiql-container .search-box input {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .graphiql-container .result-window .CodeMirror-gutters {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .graphiql-container .doc-category-title {
-    color: var(--faded) !important;
-    border-color: var(--border) !important;
+    c: var(--faded) var(--border);
   }
   .graphiql-container .resultWrap {
     border-left-color: var(--border) !important;
   }
   .graphiql-container .arg-name {
-    color: var(--pink) !important;
+    c: var(--pink);
   }
   .graphiql-container .field-name {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .graphiql-container .keyword {
-    color: var(--purple) !important;
+    c: var(--purple);
   }
   .graphiql-container .type-name {
-    color: var(--yellow) !important;
+    c: var(--yellow);
   }
   .graphiql-container .field-short-description {
-    color: var(--indigo) !important;
+    c: var(--indigo);
   }
   .graphiql-container .topBar {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
     background: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .graphiql-container .toolbar-button,
   .graphiql-container .execute-button {
@@ -1000,40 +916,36 @@
     fill: var(--text);
   }
   .graphiql-container .variable-editor-title {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .graphiql-container .docExplorerShow {
     background: var(--hl) !important;
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .result-window .CodeMirror {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .cm-punctuation {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .cm-comment {
-    color: var(--indigo) !important;
+    c: var(--indigo);
   }
   .cm-def {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .cm-property {
-    color: var(--teal) !important;
+    c: var(--teal);
   }
   .cm-string,
   .cm-string-2 {
-    color: var(--green) !important;
+    c: var(--green);
   }
   .cm-keyword {
-    color: var(--purple) !important;
+    c: var(--purple);
   }
   .dropdown-divider {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .dropdown-signed-commit .dropdown-menu-w::before {
     border-left-color: var(--bg);
@@ -1042,45 +954,38 @@
     border-left-color: var(--bg);
   }
   .dropdown-menu {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .dropdown-menu:after {
     border-bottom-color: var(--border);
   }
   .dropdown-item {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .dropdown-item:hover,
   .dropdown-item:focus {
-    color: var(--cn) !important;
-    background-color: var(--region) !important;
+    c: var(--cn) 0 var(--region);
   }
   .issue-keyword {
-    color: var(--purple) !important;
+    c: var(--purple);
   }
   .js-issue-row {
     transition: background-color 0.1s ease-in-out !important;
   }
   .pinned-issue-item {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   code .link-gray {
     font-weight: 500 !important;
   }
   .signed-commit-header {
-    border-color: var(--green) !important;
-    background-color: var(--bg) !important;
+    c: 0 var(--green) var(--bg);
   }
   .signed-commit-verified-label {
-    color: var(--green) !important;
+    c: var(--green);
   }
   .signed-commit-badge.verified {
-    color: var(--green) !important;
-    border-color: var(--green) !important;
-    background-color: var(--teal-trans) !important;
+    c: var(--green) var(--green) var(--teal-trans);
     font-weight: 500 !important;
   }
   #first-time-contributor .Popover-message::before {
@@ -1090,83 +995,72 @@
     border-right-color: var(--alt);
   }
   .commit-author-section {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .commit-desc pre {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .commits-listing:before {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .commit-group-title .octicon-git-commit {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .commit-ref {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
     font-family: var(--mono-font) !important;
     font-weight: 500 !important;
   }
   .commit-ref .user {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .commit-sha {
-    color: var(--yellow) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--yellow) var(--border) var(--hl);
   }
   .commit .commit-title,
   .commit-group-title,
   .commit .commit-title a,
   .commit-group-title a {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .commit-tease {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--blue) var(--border) var(--alt);
   }
   .commit-tease-sha {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .commit-tease-contributors {
     border-top: 1px solid var(--border) !important;
-    background-color: var(--hover) !important;
+    c: 0 0 var(--hover);
   }
   .commits blockquote {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .commits-list-item.navigation-focus {
-    background-color: var(--hover) !important;
+    c: 0 0 var(--hover);
   }
   .full-commit {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--blue) var(--border) var(--alt);
   }
   .full-commit p.commit-title {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .full-commit .sha-block {
-    color: var(--faded) !important;
+    c: var(--faded);
     font-size: 14px !important;
     font-weight: 500 !important;
   }
   .full-commit .sha-block > .sha {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .full-commit .commit-meta {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .file-commit-form--full {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .commit-form {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .commit-form::before {
     border-right-color: var(--alt);
@@ -1178,30 +1072,30 @@
     transition: background-color 0.1s ease-in-out !important;
   }
   .select-menu-item:hover {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
   .select-menu-modal-right.details-reset.details-overlay.mb-2,
   .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .UnderlineNav {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
     transition: background-color 0.1s ease-in-out !important;
   }
   .UnderlineNav[style*="margin-top"] {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .profile-timeline.discussion-timeline:before {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .profile-timeline-rollup-content li.d-block.mt-1.py-1 {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .profile-timeline-card.bg-white {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .profile-timeline-month-heading:after {
-    background-color: var(--border) !important;
+    c: 0 0 var(--border);
   }
   .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--border) !important;
@@ -1213,8 +1107,7 @@
     fill: var(--faded);
   }
   .ajax-pagination-form .ajax-pagination-btn {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .user-profile-nav {
     border: 1px solid var(--border) !important;
@@ -1223,125 +1116,96 @@
     border-radius: 8px !important;
   }
   .user-profile-sticky-bar:after {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: 0 var(--border) var(--bg);
   }
   .js-profile-editable-edit-button {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--cn) var(--border) var(--hl);
   }
   .pinned-item-name {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .pinned-item-checkbox:checked + .pinned-item-name {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--icon) !important;
+    c: var(--text) var(--border) var(--icon);
   }
   .dashboard-notice {
     border: 1px solid var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .dashboard-notice h2 {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .repo-list {
     padding: 0 12px !important;
   }
   .repo-list,
   .repo-list-item {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .mini-repo-list-item {
     border-top: 1px solid var(--border) !important;
   }
   .navigation-focus {
-    background-color: var(--hover) !important;
+    c: 0 0 var(--hover);
   }
   .team,
   .user-mention {
-    color: var(--cn) !important;
+    c: var(--cn);
   }
   .profile-timeline-month-heading.bg-white,
   .profile-timeline-year-list {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .team-left-column.bg-white {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .orgs-help-item-octicon {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .content {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .sidebar-menu {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .sidebar-menu h3,
   .sidebar-menu ul ul li {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .sidebar-menu h3:hover,
   .sidebar-menu ul ul li:hover,
   .sidebar-menu h3 a:hover,
   .sidebar-menu ul ul li a:hover {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--region) !important;
+    c: var(--cn) var(--border) var(--region);
   }
   .js-current .standalone a,
   .sidebar-module .disable > a {
     border-left-color: var(--blue) !important;
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--cn) var(--border) var(--hl);
   }
   .sub-nav {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   body table {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   body table th {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   body table tr td {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .alert.tip {
-    color: var(--text) !important;
-    border-color: var(--teal) !important;
-    background-color: var(--teal-trans) !important;
+    c: var(--text) var(--teal) var(--teal-trans);
   }
   .alert.note {
-    color: var(--text) !important;
-    border-color: var(--blue) !important;
-    background-color: var(--blue-trans) !important;
+    c: var(--text) var(--blue) var(--blue-trans);
   }
   .alert.warning {
-    color: var(--text) !important;
-    border-color: var(--yellow) !important;
-    background-color: var(--yellow-trans) !important;
+    c: var(--text) var(--yellow) var(--yellow-trans);
   }
   .alert.product {
-    color: var(--text) !important;
-    border-color: var(--purple) !important;
-    background-color: var(--purple-trans) !important;
     background: var(--purple-trans) !important;
+    c: var(--text) var(--purple) var(--purple-trans);
   }
   h1,
   h2,
@@ -1349,28 +1213,25 @@
   h4,
   h5,
   h6 {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .content ol li pre code {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
     padding: 8px !important;
   }
   ol > li::before {
     border-right-color: var(--border) !important;
-    color: var(--text) !important;
+    c: var(--text);
   }
   .octokit-language span,
   .lead {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .libraries-jumbotron {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .sidebar-module {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .content .sectionbody .dlist dt,
   .content .verseblock-content,
@@ -1384,59 +1245,53 @@
   .content ul code,
   p code,
   pre {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   code .p {
-    color: var(--text) !important;
+    c: var(--text);
   }
   code .nt {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   code .s,
   code .s2 {
-    color: var(--green) !important;
+    c: var(--green);
   }
   code .ni {
-    color: var(--cyan) !important;
+    c: var(--cyan);
   }
   code .na {
-    color: var(--red) !important;
+    c: var(--red);
   }
   * {
     scrollbar-color: var(--sb) var(--bg) !important;
   }
   ::selection {
-    color: var(--cn) !important;
-    background-color: var(--region) !important;
+    c: var(--cn) 0 var(--region);
   }
   ::placeholder {
-    color: var(--placeholder) !important;
+    c: var(--placeholder);
   }
   body {
-    color: var(--text) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) 0 var(--bg);
     font-family: var(--ui-font), sans-serif !important;
     font-size: 14px !important;
     line-height: 1.8 !important;
   }
   body.page-responsive.pagehead {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   h1 {
-    color: var(--text) !important;
+    c: var(--text);
   }
   mark {
-    color: var(--yellow) !important;
+    c: var(--yellow);
   }
   svg {
-    color: var(--text) !important;
+    c: var(--text);
   }
   kbd {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
     font: 14px var(--mono-font);
     box-shadow: inset 0 -1px 0 var(--border) !important;
   }
@@ -1453,70 +1308,63 @@
   }
   fieldset {
     border: 1px solid var(--border) !important;
-    border-radius: 6px !important;
     margin: 0 !important;
     margin-bottom: 6px !important;
     padding: 10px !important;
+    border-radius: 6px !important;
   }
   code,
   pre,
   tt {
     font-family: var(--mono-font) !important;
   }
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23c8d3f5%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22feather%20feather-chevron-down%22%20%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22%20/%3E%3C/svg%3E");
+  }
   .blob-code-inner {
-    color: var(--text) !important;
-    font-family: var(--mono-font) !important;
+    c: var(--text);
     font-size: 15px !important;
     line-height: 1.8 !important;
+    font-family: var(--mono-font) !important;
   }
   .blob-code-inner .highlighted {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
   .blob-num {
-    color: var(--hover) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--hover) var(--border) var(--alt);
     font-weight: 600 !important;
   }
   .blob-expanded .blob-code,
   .blob-expanded .blob-num {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .file:target {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .description {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .State--green {
-    color: var(--border) !important;
-    border-color: var(--green) !important;
-    background-color: var(--green) !important;
+    c: var(--border) var(--green) var(--green);
   }
   .State--green .octicon {
     fill: var(--border);
   }
   .State--red {
-    color: var(--cn) !important;
-    border-color: var(--red) !important;
-    background-color: var(--red) !important;
+    c: var(--cn) var(--red) var(--red);
   }
   .notification-navigation .notification-configure-filters .octicon {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .Box--responsive,
   .Boxrow--unread {
     box-shadow: inset 2px 0 0 var(--blue) !important;
   }
   .Box-header {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .Box-header--blue {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--blue) var(--border) var(--alt);
   }
   .Box-row {
     border-top: 1px solid var(--border) !important;
@@ -1525,188 +1373,157 @@
     border-top: 0 !important;
   }
   .Box-row--focus-gray.navigation-focus {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
-  .Box-row[style*='background: rgb'] {
-    background-color: var(--region) !important;
+  .Box-row[style*="background"] {
+    c: 0 0 var(--region);
   }
-  img[src*='octocat-spinner-64.gif'] {
+  img[src*="octocat-spinner-64.gif"] {
     filter: invert(1);
   }
   .form-control.focus,
   .form-select.focus,
   .form-control:focus,
   .form-select:focus {
-    color: var(--cn) !important;
-    border-color: var(--blue) !important;
+    c: var(--cn) var(--blue) 0;
     box-shadow: none !important;
   }
   .octicon:not(.text-green):not(.text-red):not(.octicon-check) {
-    color: var(--text) !important;
+    c: var(--text);
     transform: scale(1.1);
   }
   .octicon:not(.text-green):not(.text-red):not(.octicon-check).open {
-    color: var(--green) !important;
+    c: var(--green);
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check)[style='color: #6a737d;'] {
-    color: var(--text-gray) !important;
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check)[style*="#6a737d"] {
+    c: var(--text-gray);
   }
   .octicon:not(.text-green):not(.text-red):not(.octicon-check).octicon-file {
-    color: var(--indigo) !important;
+    c: var(--indigo);
   }
   .muted-link {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .muted-link:hover {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .js-recent-activity-container > div > div {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .diffstat-block-neutral {
-    background-color: var(--sb) !important;
+    c: 0 0 var(--sb);
   }
   .diffstat-block-added {
-    background-color: var(--green) !important;
+    c: 0 0 var(--green);
   }
   .diffstat-block-deleted {
-    background-color: var(--red) !important;
+    c: 0 0 var(--red);
   }
   .diffstat-summary {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .diffstat-summary strong {
-    color: var(--purple) !important;
+    c: var(--purple);
   }
-  path[fill='#eee'] {
+  path[fill="#eee"] {
     fill: var(--icon);
   }
   .file-diff-split .empty-cell {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .blob-code-addition .x {
-    background-color: var(--teal) !important;
+    c: 0 0 var(--teal);
   }
   .blob-code-deletion .x {
-    background-color: var(--red) !important;
+    c: 0 0 var(--red);
   }
   .blob-code-addition .x,
   .blob-code-deletion .x {
-    color: var(--border) !important;
+    c: var(--border);
   }
   .blob-num-addition {
-    color: var(--teal) !important;
-    border-color: var(--teal) !important;
-    background-color: var(--teal-trans) !important;
+    c: var(--teal) var(--teal) var(--teal-trans);
   }
   .blob-code-addition {
-    color: var(--teal) !important;
-    border-color: var(--teal) !important;
-    background-color: var(--teal-trans) !important;
+    c: var(--teal) var(--teal) var(--teal-trans);
   }
   .blob-num-deletion {
-    color: var(--red) !important;
-    border-color: var(--red) !important;
-    background-color: var(--red-trans) !important;
+    c: var(--red) var(--red) var(--red-trans);
   }
   .blob-code-deletion {
-    color: var(--red) !important;
-    border-color: var(--red) !important;
-    background-color: var(--red-trans) !important;
+    c: var(--red) var(--red) var(--red-trans);
   }
   .lovely-forks-addon {
-    color: var(--text) !important;
+    c: var(--text);
     opacity: 0.7 !important;
   }
   .Label--gray {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .Label--outline {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border) $;
   }
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang {
-    color: var(--cn) !important;
+    c: var(--cn);
   }
   .discussion-item-icon {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--icon) !important;
+    c: var(--text) var(--border) var(--icon);
   }
   .discussion-timeline-actions {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: 0 var(--border) var(--bg);
   }
   .discussion-sidebar-heading {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .discussion-sidebar-item {
-    color: var(--faded) !important;
+    c: var(--faded);
     font-weight: 500 !important;
   }
   .vcard-username {
-    color: var(--text-gray) !important;
+    c: var(--text-gray);
   }
   .previewable-comment-form .comment-form-head.tabnav {
     border-bottom: 1px solid var(--border) !important;
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .tabnav--responsive .tabnav-tab {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .tabnav-tab[aria-current],
   .tabnav-tab[aria-selected=true],
   .tabnav-tab.selected {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .branch-name {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--region) !important;
+    c: var(--text) var(--border) var(--region);
   }
   .select-menu-header,
   .select-menu-header .select-menu-title {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--cn) var(--border) var(--bg);
   }
   .select-menu-modal,
   .select-menu-item {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .select-menu-divider {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .select-menu-filters {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .select-menu-text-filter:first-child,
   .select-menu-text-filter:last-child {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .select-menu-modal {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
   }
   .pagination .current,
   .pagination [aria-current] {
-    color: var(--cn) !important;
-    background-color: var(--icon) !important;
+    c: var(--cn) 0 var(--icon);
   }
   .pagination a,
   .pagination em,
@@ -1715,8 +1532,7 @@
   .pagination .gap,
   .pagination [aria-disabled=true] {
     transition: background-color 0.1s ease-in-out !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .pagination a:hover,
   .pagination em:hover,
@@ -1724,23 +1540,20 @@
   .pagination .disabled:hover,
   .pagination .gap:hover,
   .pagination [aria-disabled=true]:hover {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
-  input[type='text'] {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+  input[type="text"] {
+    c: var(--cn) var(--border) var(--alt);
   }
-  div[style*='background: linear-gradient'] {
+  div[style*="linear-gradient"] {
     background: linear-gradient(to top, #000, rgba(0,0,0,0)) !important;
   }
   .numbers-summary .octicon {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .ellipsis-expander,
   .hidden-text-expander a {
-    color: var(--text) !important;
-    background-color: var(--icon) !important;
+    c: var(--text) 0 var(--icon);
   }
   .subnav-link.selected,
   .UnderlineNav-item.selected,
@@ -1749,26 +1562,20 @@
     border-bottom-color: var(--blue) !important;
   }
   .SelectMenu-divider {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--border) !important;
+    c: var(--text) var(--border) var(--border);
   }
   .SelectMenu-list {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: 0 var(--border) var(--bg);
   }
   .SelectMenu-item,
   .SelectMenu-modal {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .SelectMenu-header {
     border-bottom-color: var(--border) !important;
   }
   .SelectMenu-footer {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .SelectMenu-footer kbd {
     font-size: unset !important;
@@ -1777,66 +1584,56 @@
     border-top-color: var(--border) !important;
   }
   .SelectMenu-tab[aria-selected=true] {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--cn) var(--border) var(--hl);
   }
   .TimelineItem--condensed .TimelineItem-badge {
     height: 30px !important;
     width: 30px !important;
   }
   .TimelineItem-break {
-    border-color: var(--alt) !important;
-    background-color: transparent !important;
+    c: 0 var(--alt) transparent;
   }
   .TableObject-item--primary {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .btn-mktg {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--cn) var(--border) var(--bg);
   }
   .Header {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .gh-header {
     background-color: unset;
   }
   .gh-header-sticky.is-stuck + .gh-header-shadow {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .gh-header-meta {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border);
   }
   table.files {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   table.files tr.navigation-focus td,
   table.files tr[aria-selected=true] td {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   table.files td {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   table.files td.age {
-    color: var(--text) !important;
+    c: var(--text);
   }
   table.files td.icon {
-    color: var(--text) !important;
+    c: var(--text);
   }
   table.files td.icon .octicon-file-directory {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .merge-pr-more-commits:before,
   .status-meta:before,
   .TimelineItem:before {
-    background-color: var(--border) !important;
+    c: 0 0 var(--border);
   }
   .merge-pr-more-commits-badge,
   .status-meta-badge,
@@ -1844,13 +1641,12 @@
   .merge-pr-more-commits--condensed .merge-pr-more-commits-badge,
   .status-meta--condensed .status-meta-badge,
   .TimelineItem--condensed .TimelineItem-badge {
-    color: var(--hover) !important;
-    background-color: var(--bg) !important;
+    c: var(--hover) 0 var(--bg);
   }
   .merge-pr-more-commits-body,
   .status-meta-body,
   .TimelineItem-body {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .border,
   .border-gray-dark,
@@ -1859,199 +1655,162 @@
   }
   .btn {
     background-image: none;
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--cn) var(--border) var(--hl);
     transition: background-color, border-color ease-in-out 0.1s;
   }
   .btn.btn-sm {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .btn:disabled,
   .btn:disabled:hover {
-    color: var(--faded) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--faded) var(--border) var(--hl);
   }
   .btn:hover {
     background-image: none !important;
-    color: var(--cn) !important;
-    border-color: var(--blue) !important;
-    background-color: var(--region) !important;
+    c: var(--cn) var(--blue) var(--region);
   }
   .auth-form-body {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .topic-tag {
     border: 1px solid var(--border) !important;
+    c: var(--text) var(--border) var(--alt);
     transition: background-color 0.1s ease-in-out !important;
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
   }
   .topic-tag-link:hover {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
   .topic-tag-action {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .topic-tag-action button {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--border) !important;
+    c: var(--text) var(--border) var(--border);
   }
   .access-token {
     border-bottom-color: var(--border) !important;
   }
   div.listgroup-item {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border);
   }
   .reponav-item {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .reponav-item.selected {
     border-color: var(--blue) var(--border) transparent !important;
   }
   .reponav-item:focus,
   .reponav-item:hover {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .reponav-item.selected {
     border-color: var(--hl) var(--border) transparent !important;
-    color: var(--blue) !important;
-    background-color: var(--bg) !important;
+    c: var(--blue) 0 var(--bg);
   }
   .reponav-item.selected .octicon {
-    color: var(--cn) !important;
+    c: var(--cn);
   }
   .reponav-item .octicon {
-    color: var(--text) !important;
+    c: var(--text);
     opacity: 1 !important;
   }
   .pagehead-tabs-item,
   .pagehead,
   .repohead.experiment-repo-nav {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
 @media (min-width: 768px) {
     .pagehead-tabs-item,
     .pagehead,
     .repohead.experiment-repo-nav {
-      color: var(--alt) !important;
+      c: var(--alt);
     }
 }
   .repohead .Label--outline,
   .repo-list .Label--outline {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border);
   }
   .site-header {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .showcase-page-pattern::after {
-    border-color: var(--alt) !important;
-    background-color: var(--border) !important;
+    c: 0 var(--alt) var(--border);
   }
   .write-content.js-write-bucket {
     box-shadow: none !important;
   }
   .form-group .form-control {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--cn) var(--border) var(--alt);
   }
   .form-group .form-control .search-input {
     caret-color: var(--blue);
   }
   .form-group .form-control:focus {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .form-control,
   .form-select {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--cn) var(--border) var(--alt);
   }
   .flash {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--cn) var(--border) var(--bg);
   }
   .flash-warn {
-    color: var(--yellow) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--yellow) var(--border) var(--alt);
   }
   .menu {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--text) var(--border) var(--alt);
   }
   .menu,
   .menu .blankslate {
-    color: var(--alt) !important;
-    border-color: var(--border) !important;
+    c: var(--alt) var(--border);
   }
   .menu-heading {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--cn) var(--border) var(--alt);
   }
   .menu-item {
     border-bottom: 1px solid var(--border) !important;
     transition: background-color 0.1s ease-in-out !important;
   }
   .menu-item:hover {
-    background-color: var(--region) !important;
+    c: 0 0 var(--region);
   }
   .menu-item.selected {
-    color: var(--blue) !important;
-    background-color: var(--hl) !important;
+    c: var(--blue) 0 var(--hl);
   }
   .boxed-group-inner,
   .boxed-group .heading,
   .boxed-group > h3 {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .rule,
   hr {
     border-bottom: 1px solid var(--border) !important;
   }
   .file {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .file-header {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--blue) var(--border) var(--alt);
   }
   .pl-s > a {
-    color: var(--green) !important;
+    c: var(--green);
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
-    color: var(--text) !important;
+    c: var(--text);
   }
   div.commit-build-statuses,
   .link-gray {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   div.commit-build-statuses:hover,
   .link-gray:hover {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   div.commit-build-statuses-dark,
   .link-gray-dark,
   body div.commit-build-statuses-dark,
   body .link-gray-dark {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   div.commit-build-statuses-dark:hover,
   .link-gray-dark:hover,
@@ -2062,31 +1821,29 @@
     text-decoration: underline !important;
   }
   .access-form-wrapper {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .discussion-sidebar-heading {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .table-list-header-toggle .btn-link.selected:hover {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .footer,
   .site-footer {
     border-top: 1px solid var(--border) !important;
   }
   .file-wrap {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .table-list {
     border-bottom: 1px solid var(--border) !important;
   }
   .table-list-header {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .table-list-header-toggle .btn-link:hover {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .table-list-cell {
     border-top: 1px solid var(--border) !important;
@@ -2098,72 +1855,65 @@
     border-right: 1px solid var(--border) !important;
   }
   .breadcrumb {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .breadcrumb-item-selected,
   .breadcrumb-item[aria-current] {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .breadcrumb strong.final-path {
-    color: var(--cn) !important;
+    c: var(--cn);
   }
   .drag-and-drop {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--blue) var(--border) var(--alt);
   }
   .octofication .message,
   .overall-summary {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .btn-link:not(.IssueLabel),
   .subnav-search-context .btn {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .btn.btn-primary,
   .js-selected-navigation-item.subnav-item {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .social-count {
-    color: var(--blue) !important;
-    background-color: var(--hl) !important;
+    c: var(--blue) 0 var(--hl);
   }
   .social-count:hover {
-    color: var(--cn) !important;
+    c: var(--cn);
   }
   .subnav-item {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .subnav-item:focus,
   .subnav-item:hover {
-    background-color: var(--icon) !important;
+    c: 0 0 var(--icon);
   }
   .subnav-item.selected,
   .subnav-item.selected:focus,
   .subnav-item.selected:hover {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .input-contrast {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: var(--cn) var(--border) var(--alt);
   }
   .input-contrast:focus {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .btn-octicon {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .btn-octicon:hover {
-    color: var(--cn) !important;
+    c: var(--cn);
   }
   .btn-octicon-danger:hover {
-    color: var(--red) !important;
+    c: var(--red);
   }
   .more-repos {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
     box-shadow: inset 0 1px 0 var(--border) !important;
   }
   .news .alert {
@@ -2179,86 +1929,78 @@
   }
   .tabnav-pr .tabnav-tab,
   div .tabnav-tab {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .tabnav-pr .tabnav-tab.selected,
   div .tabnav-tab.selected {
-    color: var(--blue) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--blue) var(--border) var(--bg);
   }
   .tabnav-pr .tabnav-tab:focus,
   div .tabnav-tab:focus,
   .tabnav-pr .tabnav-tab:hover,
   div .tabnav-tab:hover {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .tabnav-pr .tabnav-tab .Counter,
   div .tabnav-tab .Counter {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .Counter {
-    color: var(--blue) !important;
-    background-color: var(--border) !important;
+    c: var(--blue) 0 var(--border);
   }
   *:not(code) .Box {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
   }
   .dashboard .js-all-activity-header + div {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .dashboard .js-all-activity-header + div .Box {
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
     border-radius: 6px !important;
   }
   .tabnav {
     border-bottom: 1px solid var(--border) !important;
   }
   .private .mini-repo-list-item {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .orghead {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .orghead .org-name {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .orghead .pagehead-tabs-item.selected {
-    color: var(--blue) !important;
-    background-color: var(--bg) !important;
+    c: var(--blue) 0 var(--bg);
   }
   .tag-info {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .tag-name {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .note,
   .help {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .application-main .flex-wrap {
-    background-color: transparent !important;
+    c: 0 0 transparent;
   }
   .application-main > main > div.border-bottom.border-gray-light {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .application-main > main > .site-subnav + div {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .application-main > main > .site-subnav + div .text-gray-light {
-    color: var(--text) !important;
+    c: var(--text);
   }
   .github-jobs-logo strong {
     filter: invert(1);
   }
   .team-left-column > div {
     border: 1px solid var(--border) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: 0 var(--border) var(--hl);
     padding-left: 10px !important;
     border-radius: 4px !important;
   }
@@ -2267,46 +2009,41 @@
   }
   .menu-item.selected:before,
   .menu-item[aria-current]:before {
-    background-color: var(--blue) !important;
+    c: 0 0 var(--blue);
   }
   .CheckRun {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .CheckRun-header {
-    border-color: var(--border) !important;
+    c: 0 var(--border);
   }
   .checks-list-item.selected .checks-list-item-name {
-    color: var(--cn) !important;
-    background-color: var(--region) !important;
+    c: var(--cn) 0 var(--region);
   }
   .diffbar {
-    background-color: var(--bg) !important;
+    c: 0 0 var(--bg);
   }
   .progress-bar {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .pinned-item-list-item .pinned-item-handle {
-    color: var(--faded) !important;
+    c: var(--faded);
   }
   .js-user-status-container {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .protip  > code {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .protip  > strong {
-    color: var(--yellow) !important;
+    c: var(--yellow);
     text-decoration: underline !important;
   }
   .protip  > svg {
     fill: var(--yellow);
   }
   .Popover-message {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    c: var(--text) var(--border);
   }
   .Popover-message--top-left::before {
     border-bottom-color: var(--hl);
@@ -2325,23 +2062,22 @@
   }
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
-  .UnderlineNav-item[role='tab'][aria-selected='true'] {
+  .UnderlineNav-item[role="tab"][aria-selected="true"] {
     border-bottom-color: var(--blue) !important;
   }
   .gh-header-number {
-    color: var(--orange) !important;
+    c: var(--orange);
     font-weight: 400 !important;
     text-decoration: underline !important;
   }
   .toolbar-item,
   .toolbar-item .menu-target {
-    color: var(--text) !important;
+    c: var(--text);
     transition: color 0.1s ease-in-out !important;
   }
   .toolbar-item:hover,
   .toolbar-item .menu-target:hover {
-    color: var(--blue) !important;
-    border-color: var(--hl) !important;
+    c: var(--blue) var(--hl);
   }
   .body > div.d-flex {
     padding-left: 10px !important;
@@ -2349,47 +2085,40 @@
   }
   .pagination-loader-container {
     background-image: none !important;
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .ajax-pagination-form .ajax-pagination-btn {
-    color: var(--blue) !important;
+    c: var(--blue);
   }
   .blankslate {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    c: var(--text) var(--border) var(--hl);
   }
   .blankslate code {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
+    c: var(--text) var(--border) var(--bg);
   }
   .content.p-4.text-center.rounded-1.border.border-gray-light {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .Box.Box--condensed .Box-row {
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    c: 0 var(--border) var(--alt);
   }
   .Box-row--focus-gray {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   .Box-row--yellow {
-    color: var(--text) !important;
-    border-color: var(--yellow) !important;
-    background-color: transparent !important;
+    c: var(--text) var(--yellow) transparent;
   }
   .Box--responsive .Box-row--unread::before {
     background-image: none !important;
-    background-color: var(--blue) !important;
+    c: 0 0 var(--blue);
   }
 }
 @-moz-document domain('gist.github.com') {
   .js-gist-file-update-container.js-task-list-container.file-box {
-    background-color: var(--hl) !important;
+    c: 0 0 var(--hl);
   }
   #gist-pjax-container {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
   .gisthead .pagehead-actions .octicon-mute {
     fill: var(--faded);
@@ -2402,6 +2131,6 @@
   .discussion-timeline-actions.selected,
   .reponav.js-repo-nav.selected,
   .reponav-item.selected {
-    background-color: var(--alt) !important;
+    c: 0 0 var(--alt);
   }
 }

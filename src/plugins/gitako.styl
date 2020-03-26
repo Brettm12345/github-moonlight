@@ -1,4 +1,3 @@
-// Plugin: gitako
 .gitako-
   &ready .js-header-wrapper
     c 0 0 $bg
@@ -8,8 +7,7 @@
     .action-icon
       c $blue
   &side-bar
-    &,
-    ../resize-handler
+    &, ../resize-handler
       c 0 $border $border
     & &-body
       brc $border
@@ -21,15 +19,13 @@
           btc $border
         &-content .shadow-shelter
           c 0 $border $alt
-        &,
-        .header-row
+        &, .header-row
           c $text $border $alt
-      &,
-      ../-content
+      &, ../-content
         .meta-bar
           c $text $border $alt
         .file-explorer
-          .search-input-wrapper input[type='text'].form-control
+          .search-input-wrapper input[type="text"].form-control
             b 1px
             r 0
           .no-results
