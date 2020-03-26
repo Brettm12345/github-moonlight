@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.7.5
+@version      0.7.6
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -417,7 +417,11 @@
   .project-header {
     background-color: var(--bg) !important;
   }
+  .project-card:focus {
+    box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
+  }
   .project-card:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
     border-color: var(--border) !important;
   }
   .btn.btn-outline,
