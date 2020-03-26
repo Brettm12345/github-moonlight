@@ -89,11 +89,15 @@ tt
   c $text
 .State--
   &green
+    b 1px solid $teal
+    c $teal $teal $tealTrans
     .octicon
-      fill $border
-    c $border $green $green
+      fill $teal
   &red
-    c $cn $red $red
+    b 1px solid $red
+    c $red $red $redTrans
+    .octicon
+      fill $red
 .notification-navigation .notification-configure-filters
   octicon $text
 .Box

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.9.0
+@version      0.9.4
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -1224,17 +1224,22 @@
     color: var(--text) !important;
   }
   .State--green {
-    color: var(--border) !important;
-    border-color: var(--green) !important;
-    background-color: var(--green) !important;
+    border: 1px solid var(--teal) !important;
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-trans) !important;
   }
   .State--green .octicon {
-    fill: var(--border);
+    fill: var(--teal);
   }
   .State--red {
-    color: var(--cn) !important;
+    border: 1px solid var(--red) !important;
+    color: var(--red) !important;
     border-color: var(--red) !important;
-    background-color: var(--red) !important;
+    background-color: var(--red-trans) !important;
+  }
+  .State--red .octicon {
+    fill: var(--red);
   }
   .notification-navigation .notification-configure-filters .octicon {
     color: var(--text) !important;
