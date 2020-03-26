@@ -1,8 +1,8 @@
 cal($opacity, $target, $color = $teal)
-  .legend li[style*={$target}]
+  .legend li[style*=\"{$target}\"]
     c 0 0 $color
     o $opacity
-  .calendar-graph rect[fill={$target}]
+  .calendar-graph rect[fill=\"{$target}\"]
     fill $color
     o $opacity
 
