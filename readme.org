@@ -26,8 +26,8 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 - Custom fonts: Allow the user to pick custom fonts
 * Recomended Fonts
 These are the fonts used in the screenshots
-- ~UI Font~: [[https://rsms.me/inter/][Inter]]
-- ~Code Font~: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
+- UI Font: [[https://rsms.me/inter/][Inter]]
+- Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
 * Recomended Extensions
 | Extension           | Description                         |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
