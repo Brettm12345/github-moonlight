@@ -1,52 +1,59 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.8
+@version      0.7.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
 @supportURL   https://github.com/brettm12345/github-moonlight/issues
 @updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
-@var text ui_font "Custom ui font" "Inter V, sans-serif"
-@var text mono_font "Custom $monoFont font" "monospace"
-@var color alt "Alternative Background" #1e2030
-@var color bg "Background Color" #191b28
-@var color blue "Blue" #82aaff
-@var color blue-light "Light Blue" #82aaff
-@var color border "Border Color" #131421
-@var color cn "Highlighted text" #ffffff
-@var color cyan "Cyan" #86e1fc
-@var color cyan-light "Light Cyan" #b4f9f8
-@var color cyan-trans "Transparent Cyan" #86e1fcbb
-@var color faded "Faded" #7f85a3
-@var color green "Green" #c3e88d
-@var color green-trans "Transparent Green" rgba(119, 224, 198, 0.2)
-@var color hl "Highlight" #212337
-@var color hover "Hover" #444a73
-@var color icon "Icon" #2f334d
-@var color indigo "Indigo" #7a88cf
-@var color red-light "Light Red" #ff757f
-@var color orange "Orange" #ff995e
-@var color pink "Pink" #fca7ea
-@var color placeholder "Placeholder" #c8d3f5aa
-@var color purple "Purple" #c597f9
-@var color purple-alt "Alternative Purple" #c099ff
-@var color red "Red" #ff5370
-@var color red-trans "Transparent Red" rgba(255, 83, 112, 0.2)
-@var color region "Region Highlight" #383e5c
-@var color sb "Scrollbar" #828bb830
-@var color teal "Teal" #4fd6be
-@var color text-color "Text" #c8d3f5
-@var color text-alt "Alternative Text" #b4c2f0
-@var color text-gray "Gray Text" #a9b8e8
-@var color yellow "Yellow" #ffc777
+
+
+@var text  ui_font    "UI Font"        "Inter V"
+@var text  mono_font  "Monospace Font" "monospace"
+
+@var color red-light  "Light Red"      #ff757f
+@var color red        "Red"            #ff5370
+@var color orange     "Orange"         #ff995e
+@var color yellow     "Yellow"         #ffc777
+@var color green      "Green"          #c3e88d
+@var color teal       "Teal"           #4fd6be
+@var color blue       "Blue"           #82aaff
+@var color cyan       "Cyan"           #86e1fc
+@var color cyan-light "Light Cyan"     #b4f9f8
+@var color pink       "Pink"           #fca7ea
+@var color purple     "Purple"         #c597f9
+@var color indigo     "Indigo"         #7a88cf
+@var color border     "Border"         #131421
+@var color bg         "Background"     #191b28
+@var color alt        "Alt Background" #1e2030
+@var color hl         "Highlight"      #212337
+@var color icon       "Icon"           #2f334d
+@var color region     "Region"         #383e5c
+@var color hover      "Hover"          #444a73
+@var color faded      "Faded"          #7f85a3
+@var color text-color "Text"           #c8d3f5
+@var color text-alt   "Alt Text"       #b4c2f0
+@var color text-gray  "Gray Text"      #a9b8e8
+@var color cn         "Light text"     #ffffff
+
+
+@var color placeholder  "Placeholder"        #c8d3f5aa
+@var color red-trans    "Transparent Red"    #ff537033
+@var color yellow-trans "Transparent Yellow" #ffc77733
+@var color teal-trans   "Transparent Teal"   #4fd6be33
+@var color cyan-trans   "Transparent Cyan"   #86e1fc33
+@var color blue-trans   "Transparent Blue"   #82aaff33
+@var color purple-trans "Transparent Purple" #c597f933
+@var color sb           "Scrollbar"          #828bb830
+
 @preprocessor uso
 ==/UserStyle== */
 :root
   --alt  /*[[alt]]*/;
   --bg  /*[[bg]]*/;
   --blue  /*[[blue]]*/;
-  --blue-light  /*[[blue-light]]*/;
+  --blue-trans /*[[blue-trans]]*/;
   --border  /*[[border]]*/;
   --cn  /*[[cn]]*/;
   --cyan /*[[cyan]]*/
@@ -54,25 +61,29 @@
   --cyan-trans  /*[[cyan-trans]]*/;
   --faded  /*[[faded]]*/;
   --green  /*[[green]]*/;
-  --green-trans  /*[[green-trans]]*/;
   --hl  /*[[hl]]*/;
   --hover  /*[[hover]]*/;
   --icon  /*[[icon]]*/;
   --indigo  /*[[indigo]]*/;
   --mono-font  /*[[mono_font]]*/;
   --orange  /*[[orange]]*/;
+  --pink /*[[pink]]*/;
   --placeholder  /*[[placeholder]]*/;
   --purple  /*[[purple]]*/;
+  --purple-trans  /*[[purple-trans]]*/;
   --red  /*[[red]]*/;
   --red-trans  /*[[red-trans]]*/;
   --region  /*[[region]]*/;
   --sb  /*[[sb]]*/;
   --teal  /*[[teal]]*/;
+  --teal-trans  /*[[teal-trans]]*/;
   --text  /*[[text-color]]*/;
   --text-alt  /*[[text-alt]]*/;
   --text-gray  /*[[text-gray]]*/;
   --ui-font  /*[[ui_font]]*/;
   --yellow  /*[[yellow]]*/;
+  --yellow-trans /*[[yellow-trans]]*/;
+
 @-moz-document domain('github.com')
   @require './src'
 @-moz-document domain('gist.github.com')

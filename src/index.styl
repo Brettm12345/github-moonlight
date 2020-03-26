@@ -23,18 +23,15 @@
 @require 'team'
 @require 'developer'
 
-$elevationMd
-  s var(--elevation-md)
+*
+  sbc $sb $bg
 ::selection
   c $cn 0 $region
 ::placeholder
   c $placeholder
-*
-  sbc $sb $bg
-  sbw thin
 body
   c $text 0 $bg
-  fn $uiFont
+  fn $uiFont, sans-serif
   fs 14px
   lh 1.8
   &.page-responsive.pagehead
@@ -49,13 +46,32 @@ kbd
   c $text $border $bg
   font 14px $monoFont
   s inset 0 -1px 0 $border
+legend
+  fs 0.9em
+  fw 600
+input,
+select,
+button,
+textara
+  &:disabled
+    cursor not-allowed
+    o 0.5
+fieldset
+  b $b
+  r 6px
+  m 0
+  mb 6px
+  p 10px
+
 code,
 pre,
 tt
-  fn $monoFont
+  mono()
+.form-select
+  @extend $chevronDown
 .blob-code-inner
   c $text
-  fn $monoFont
+  mono()
   fs 15px
   lh 1.8
   .highlighted
@@ -69,7 +85,7 @@ tt
     &num
       c 0 $border $alt
 .file:target
-  @extend $elevationMd
+  md-shadow-z-1()
 .description
   c $text
 .State--
@@ -79,8 +95,8 @@ tt
     c $border $green $green
   &red
     c $cn $red $red
-.notification-navigation .notification-configure-filters .octicon
-  c $text
+.notification-navigation .notification-configure-filters
+  octicon $text
 .Box
   &--responsive,
   &row--unread
@@ -148,7 +164,7 @@ path[fill='#eee']
 .blob-
   for $val in num code
     &{$val}-addition
-      c $teal $teal $greenTrans
+      c $teal $teal $tealTrans
   for $val in num code
     &{$val}-deletion
       c $red $red $redTrans
@@ -173,8 +189,6 @@ path[fill='#eee']
     &item
       c $faded
       fw 500
-.timeline-comment-wrapper
-  b 0
 .vcard-username
   c $textGray
 .previewable-comment-form .comment-form-head.tabnav
@@ -206,7 +220,7 @@ path[fill='#eee']
     &:last-child
       c 0 $border
   &modal
-    @extend $elevationMd
+    md-shadow-z-2()
 .pagination
   .current,
   [aria-current]
@@ -225,8 +239,8 @@ input[type='text']
   c $cn $border $alt
 div[style*='background: linear-gradient']
   bg linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
-.numbers-summary .octicon
-  c $text
+.numbers-summary
+  octicon $text
 .ellipsis-expander,
 .hidden-text-expander a
   c $text 0 $icon
@@ -265,18 +279,6 @@ div[style*='background: linear-gradient']
   c $cn $border $bg
 .Header
   c $text $border $bg
-.timeline-comment
-  c $text $border $hl
-  &-wrapper
-    c 0 $border
-  &-header
-    c $cn $border $alt
-  &--caret
-    &,
-    &.current-user
-      &::before,
-      &::after
-        brc $alt
 .gh-header
   background-color unset
   &-sticky.is-stuck + &-shadow
@@ -315,12 +317,12 @@ table.files
 .btn
   background-image none
   c $cn $border $hl
-  transition background-color ease-in-out 0.1s
+  transition background-color, border-color ease-in-out 0.1s
   &.btn-sm
     c 0 0 $alt
   &:hover
     bgi none
-    c 0 0 $region
+    c $cn $blue $region
 .auth-form-body
   c $text $border $alt
 .topic-tag
@@ -347,8 +349,7 @@ div.listgroup-item
   &.selected
     bc $hl $border transparent
     c $blue 0 $bg
-    .octicon
-      c $cn
+    octicon $cn
   .octicon
     c $text
     o 1
@@ -366,6 +367,8 @@ div.listgroup-item
   c 0 $border $alt
 .showcase-page-pattern::after
   c 0 $alt $border
+.write-content.js-write-bucket
+  s none
 .form-group .form-control
   c $cn $border $alt
   .search-input
@@ -425,7 +428,7 @@ div.commit-build-statuses,
   c $text
 .table-list-header-toggle .btn-link.selected
   &:hover
-    c $blue-light
+    c $blue
 .site-footer
   bt $b
 .file-wrap
@@ -435,7 +438,7 @@ div.commit-build-statuses,
   &-header
     c 0 $border $alt
     &-toggle .btn-link:hover
-      c $blue-light
+      c $blue
   &-cell
     bt $b
   &-bordered &-cell
@@ -485,9 +488,6 @@ div.commit-build-statuses,
     c $cn
   &-danger:hover
     c $red
-.filter-bar
-  bb $b
-  c 0 0 $alt
 .more-repos
   c 0 0 $alt
   s inset 0 1px 0 $border
@@ -509,7 +509,7 @@ div
       c $blue $border $bg
     &:focus,
     &:hover
-      c $blue-light
+      c $blue
     .Counter
       c $blue
 .Counter
@@ -523,13 +523,6 @@ div
     r 6px
 .tabnav
   bb $b
-.code-list // Search
-  .file-box,
-  & &-item + &-item,
-  .divider .blob-code,
-  .divider .blob-num,
-  &-item-private .blob-num
-    c $text $border $hl
 .private .mini-repo-list-item
   c 0 0 $bg
 .orghead // Organizations
@@ -593,9 +586,11 @@ div
   svg
     fill $yellow
 .Popover-message
-  c $text
-  caret 'bottom'
-  caret 'left'
+  c $text $border
+  &--top-left
+    caret 'bottom' $hl
+  &--bottom-left
+    caret 'top' $hl
 .UnderlineNav-item
   &:hover
     bbc $region

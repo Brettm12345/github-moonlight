@@ -1,8 +1,12 @@
 .markdown-body
   a
+    c $textAlt
     td underline
   h1,
-  h2
+  h2,
+  h3,
+  h4,
+  h5
     c 0 $border
   img
     c 0 0 $hl
@@ -14,13 +18,13 @@
       c $text $border $alt
   code,
   tt
+    mono()
     c $cn
-    fn $monoFont
     fw 500
   /.highlight pre,
   pre
     c 0 $border $alt
-    fn $monoFont
+    mono()
     fw 500
   blockquote
     c $textAlt $border $hl

@@ -21,7 +21,7 @@
         c $cn 0 $hl
 .blob-code-
   &addition
-    c 0 0 $greenTrans
+    c 0 0 $tealTrans
   &deletion
     c 0 0 $redTrans
 .Progress
@@ -75,3 +75,18 @@ ul.comparison-list
     c 0 $border
   &item
     c 0 $border $alt
+.timeline-comment
+  c $text $border $hl
+  &-wrapper
+    b 0
+    c 0 $border
+  &-label.tooltipped.tooltipped-s.tooltipped-multiline
+    c $purple $purple $purpleTrans
+  &-header
+    c $cn $border $alt
+  &--caret
+    &,
+    &.current-user
+      &::before,
+      &::after
+        brc $alt

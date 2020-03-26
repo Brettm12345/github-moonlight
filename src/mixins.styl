@@ -1,4 +1,7 @@
 $i = !important
+$chevronDown
+  background-image url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c8d3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" %3E%3Cpolyline points="6 9 12 15 18 9" /%3E%3C/svg%3E');
+
 /**
  * c <foreground> <border-color> <background> <foreground-important> <border-important> <background-important>
  * use 0 to omit arguments
@@ -10,9 +13,9 @@ c($x, $y = 0, $z = 0, $xi = 1, $yi = 1, $zi = 1)
     border-color $yi == 0 ? $y : $y $i
   if ($z is a 'call' || ($z is a 'rgba'))
     background-color $zi == 0 ? $z : $z $i
-caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
+caret($direction = 'bottom', $popupColor = $alt)
   &::before
-    border-{$direction}-color $borderColor
+    border-{$direction}-color $popupColor
   &::after
     border-{$direction}-color $popupColor
 bgi()
@@ -110,3 +113,15 @@ sbw()
 size($w, $h = $w)
   height $h $i
   width $w $i
+mono()
+  fn $monoFont
+octicon()
+  .octicon
+    c arguments
+select-caret()
+  bgi url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="utf-8"%3F%3E%3Csvg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="%23c8d3f5" focusable="false" height="20" stroke-width="0" viewBox="0 0 20 20" width="20"%3E%3Cpath d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z" /%3E%3C/svg%3E%0A')
+
+md-shadow-z-1()
+  s 0 2px 5px 0 rgba(black, 0.26)
+md-shadow-z-2()
+  s 0 4px 8px 0 rgba(black, 0.4)

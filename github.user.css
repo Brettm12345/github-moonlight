@@ -1,52 +1,59 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.6.8
+@version      0.7.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
 @supportURL   https://github.com/brettm12345/github-moonlight/issues
 @updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
-@var text ui_font "Custom ui font" "Inter V, sans-serif"
-@var text mono_font "Custom $monoFont font" "monospace"
-@var color alt "Alternative Background" #1e2030
-@var color bg "Background Color" #191b28
-@var color blue "Blue" #82aaff
-@var color blue-light "Light Blue" #82aaff
-@var color border "Border Color" #131421
-@var color cn "Highlighted text" #ffffff
-@var color cyan "Cyan" #86e1fc
-@var color cyan-light "Light Cyan" #b4f9f8
-@var color cyan-trans "Transparent Cyan" #86e1fcbb
-@var color faded "Faded" #7f85a3
-@var color green "Green" #c3e88d
-@var color green-trans "Transparent Green" rgba(119, 224, 198, 0.2)
-@var color hl "Highlight" #212337
-@var color hover "Hover" #444a73
-@var color icon "Icon" #2f334d
-@var color indigo "Indigo" #7a88cf
-@var color red-light "Light Red" #ff757f
-@var color orange "Orange" #ff995e
-@var color pink "Pink" #fca7ea
-@var color placeholder "Placeholder" #c8d3f5aa
-@var color purple "Purple" #c597f9
-@var color purple-alt "Alternative Purple" #c099ff
-@var color red "Red" #ff5370
-@var color red-trans "Transparent Red" rgba(255, 83, 112, 0.2)
-@var color region "Region Highlight" #383e5c
-@var color sb "Scrollbar" #828bb830
-@var color teal "Teal" #4fd6be
-@var color text-color "Text" #c8d3f5
-@var color text-alt "Alternative Text" #b4c2f0
-@var color text-gray "Gray Text" #a9b8e8
-@var color yellow "Yellow" #ffc777
+
+
+@var text  ui_font    "UI Font"        "Inter V"
+@var text  mono_font  "Monospace Font" "monospace"
+
+@var color red-light  "Light Red"      #ff757f
+@var color red        "Red"            #ff5370
+@var color orange     "Orange"         #ff995e
+@var color yellow     "Yellow"         #ffc777
+@var color green      "Green"          #c3e88d
+@var color teal       "Teal"           #4fd6be
+@var color blue       "Blue"           #82aaff
+@var color cyan       "Cyan"           #86e1fc
+@var color cyan-light "Light Cyan"     #b4f9f8
+@var color pink       "Pink"           #fca7ea
+@var color purple     "Purple"         #c597f9
+@var color indigo     "Indigo"         #7a88cf
+@var color border     "Border"         #131421
+@var color bg         "Background"     #191b28
+@var color alt        "Alt Background" #1e2030
+@var color hl         "Highlight"      #212337
+@var color icon       "Icon"           #2f334d
+@var color region     "Region"         #383e5c
+@var color hover      "Hover"          #444a73
+@var color faded      "Faded"          #7f85a3
+@var color text-color "Text"           #c8d3f5
+@var color text-alt   "Alt Text"       #b4c2f0
+@var color text-gray  "Gray Text"      #a9b8e8
+@var color cn         "Light text"     #ffffff
+
+
+@var color placeholder  "Placeholder"        #c8d3f5aa
+@var color red-trans    "Transparent Red"    #ff537033
+@var color yellow-trans "Transparent Yellow" #ffc77733
+@var color teal-trans   "Transparent Teal"   #4fd6be33
+@var color cyan-trans   "Transparent Cyan"   #86e1fc33
+@var color blue-trans   "Transparent Blue"   #82aaff33
+@var color purple-trans "Transparent Purple" #c597f933
+@var color sb           "Scrollbar"          #828bb830
+
 @preprocessor uso
 ==/UserStyle== */
 :root {
   --alt: /*[[alt]]*/;
   --bg: /*[[bg]]*/;
   --blue: /*[[blue]]*/;
-  --blue-light: /*[[blue-light]]*/;
+  --blue-trans: /*[[blue-trans]]*/;
   --border: /*[[border]]*/;
   --cn: /*[[cn]]*/;
   --cyan: /*[[cyan]]*/;
@@ -54,27 +61,33 @@
   --cyan-trans: /*[[cyan-trans]]*/;
   --faded: /*[[faded]]*/;
   --green: /*[[green]]*/;
-  --green-trans: /*[[green-trans]]*/;
   --hl: /*[[hl]]*/;
   --hover: /*[[hover]]*/;
   --icon: /*[[icon]]*/;
   --indigo: /*[[indigo]]*/;
   --mono-font: /*[[mono_font]]*/;
   --orange: /*[[orange]]*/;
+  --pink: /*[[pink]]*/;
   --placeholder: /*[[placeholder]]*/;
   --purple: /*[[purple]]*/;
+  --purple-trans: /*[[purple-trans]]*/;
   --red: /*[[red]]*/;
   --red-trans: /*[[red-trans]]*/;
   --region: /*[[region]]*/;
   --sb: /*[[sb]]*/;
   --teal: /*[[teal]]*/;
+  --teal-trans: /*[[teal-trans]]*/;
   --text: /*[[text-color]]*/;
   --text-alt: /*[[text-alt]]*/;
   --text-gray: /*[[text-gray]]*/;
   --ui-font: /*[[ui_font]]*/;
   --yellow: /*[[yellow]]*/;
+  --yellow-trans: /*[[yellow-trans]]*/;
 }
 @-moz-document domain('github.com') {
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c8d3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" %3E%3Cpolyline points="6 9 12 15 18 9" /%3E%3C/svg%3E");
+  }
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
   div[style='background-color: #fcfdfd'],
@@ -227,6 +240,9 @@
   .pl-sr .pl-sra {
     color: var(--green) !important;
   }
+  .pl-v {
+    color: var(--pink) !important;
+  }
   .pl-smw {
     color: var(--yellow) !important;
   }
@@ -271,11 +287,11 @@
     background-color: var(--red-trans) !important;
   }
   .pl-mi1 {
-    color: var(--green) !important;
-    background-color: var(--green-trans) !important;
+    color: var(--teal) !important;
+    background-color: var(--teal-trans) !important;
   }
   .pl-mc {
-    color: var(--purple) !important;
+    color: var(--cyan) !important;
     background-color: var(--cyan-trans) !important;
   }
   .pl-mdr {
@@ -337,10 +353,14 @@
     fill: var(--teal);
   }
   .markdown-body a {
+    color: var(--text-alt) !important;
     text-decoration: underline !important;
   }
   .markdown-body h1,
-  .markdown-body h2 {
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5 {
     border-color: var(--border) !important;
   }
   .markdown-body img {
@@ -357,8 +377,8 @@
   }
   .markdown-body code,
   .markdown-body tt {
-    color: var(--cn) !important;
     font-family: var(--mono-font) !important;
+    color: var(--cn) !important;
     font-weight: 500 !important;
   }
   .highlight pre,
@@ -495,7 +515,10 @@
     background-color: var(--alt) !important;
   }
   .bg-blue-light {
-    background-color: var(--alt) !important;
+    background-color: var(--blue-trans) !important;
+  }
+  .bg-yellow-light {
+    background-color: var(--yellow-trans) !important;
   }
   .bg-blue {
     background-color: var(--icon) !important;
@@ -525,7 +548,7 @@
     color: var(--text) !important;
   }
   .text-emphasized {
-    color: var(--blue-light) !important;
+    color: var(--blue) !important;
   }
   .text-green {
     color: var(--green) !important;
@@ -565,7 +588,7 @@
     background-color: var(--hl) !important;
   }
   .blob-code-addition {
-    background-color: var(--green-trans) !important;
+    background-color: var(--teal-trans) !important;
   }
   .blob-code-deletion {
     background-color: var(--red-trans) !important;
@@ -635,7 +658,7 @@
     background-color: var(--hl) !important;
   }
   .branch-action-body::before {
-    border-right-color: var(--border);
+    border-right-color: var(--alt);
   }
   .branch-action-body::after {
     border-right-color: var(--alt);
@@ -651,6 +674,31 @@
   .merge-status-item {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .timeline-comment {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .timeline-comment-wrapper {
+    border: 0 !important;
+    border-color: var(--border) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline {
+    color: var(--purple) !important;
+    border-color: var(--purple) !important;
+    background-color: var(--purple-trans) !important;
+  }
+  .timeline-comment-header {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .timeline-comment--caret::before,
+  .timeline-comment--caret.current-user::before,
+  .timeline-comment--caret::after,
+  .timeline-comment--caret.current-user::after {
+    border-right-color: var(--alt) !important;
   }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--text) !important;
@@ -756,17 +804,46 @@
   .exploregrid-item {
     background-color: var(--hl) !important;
   }
+  .filter-bar {
+    border-bottom: 1px solid var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .form-control,
+  .form-select {
+    bs: none;
+  }
+  .form-control.search-page-label.js-advanced-search-label,
+  .form-control.search-page-label.js-advanced-search-label input {
+    background-color: var(--hl) !important;
+  }
+  .code-list .file-box,
+  .code-list .code-list-item + .code-list-item,
+  .code-list .divider .blob-code,
+  .code-list .divider .blob-num,
+  .code-list-item-private .blob-num {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .code-list-item.hx_hit-code.code-list-item-public.repo-specific {
+    background-color: var(--bg) !important;
+  }
+  .js-navigation-item:hover,
+  .jump-to-field-active,
   #jump-to-results:hover {
-    background-color: var(--hl) !important;
-  }
-  .js-navigation-item:hover {
-    background-color: var(--hl) !important;
-  }
-  .jump-to-field-active {
     background-color: var(--hl) !important;
   }
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
     background-color: var(--region) !important;
+  }
+  #commit_search_results .commit {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    border-left: 1px solid var(--border) !important;
+    border-right: 1px solid var(--border) !important;
   }
   .release-timeline-tags .tag-timeline-date::after {
     border-color: var(--border) !important;
@@ -835,7 +912,7 @@
   .signed-commit-badge.verified {
     color: var(--green) !important;
     border-color: var(--green) !important;
-    background-color: var(--green-trans) !important;
+    background-color: var(--teal-trans) !important;
     font-weight: 500 !important;
   }
   .commit-author-section {
@@ -856,6 +933,9 @@
     background-color: var(--bg) !important;
     font-family: var(--mono-font) !important;
     font-weight: 500 !important;
+  }
+  .commit-ref .user {
+    color: var(--blue) !important;
   }
   .commit-sha {
     color: var(--yellow) !important;
@@ -915,7 +995,7 @@
     background-color: var(--alt) !important;
   }
   .commit-form::before {
-    border-right-color: var(--border);
+    border-right-color: var(--alt);
   }
   .commit-form::after {
     border-right-color: var(--alt);
@@ -1086,22 +1166,20 @@
   code .na {
     color: var(--red) !important;
   }
-  .file:target,
-  .select-menu-modal {
-    box-shadow: var(--elevation-md) !important;
+  * {
+    scrollbar-color: var(--sb) var(--bg) !important;
   }
   ::selection {
     color: var(--cn) !important;
     background-color: var(--region) !important;
   }
-  * {
-    scrollbar-color: var(--sb) var(--bg) !important;
-    scrollbar-width: thin !important;
+  ::placeholder {
+    color: var(--placeholder) !important;
   }
   body {
     color: var(--text) !important;
     background-color: var(--bg) !important;
-    font-family: var(--ui-font) !important;
+    font-family: var(--ui-font), sans-serif !important;
     font-size: 14px !important;
     line-height: 1.8 !important;
   }
@@ -1123,6 +1201,24 @@
     background-color: var(--bg) !important;
     font: 14px var(--mono-font);
     box-shadow: inset 0 -1px 0 var(--border) !important;
+  }
+  legend {
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+  }
+  input:disabled,
+  select:disabled,
+  button:disabled,
+  textara:disabled {
+    cursor: not-allowed;
+    opacity: 0.5 !important;
+  }
+  fieldset {
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    margin: 0 !important;
+    margin-bottom: 6px !important;
+    padding: 10px !important;
   }
   code,
   pre,
@@ -1148,6 +1244,9 @@
   .blob-expanded .blob-num {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .file:target {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .description {
     color: var(--text) !important;
@@ -1261,12 +1360,12 @@
   .blob-num-addition {
     color: var(--teal) !important;
     border-color: var(--teal) !important;
-    background-color: var(--green-trans) !important;
+    background-color: var(--teal-trans) !important;
   }
   .blob-code-addition {
     color: var(--teal) !important;
     border-color: var(--teal) !important;
-    background-color: var(--green-trans) !important;
+    background-color: var(--teal-trans) !important;
   }
   .blob-num-deletion {
     color: var(--red) !important;
@@ -1309,9 +1408,6 @@
   .discussion-sidebar-item {
     color: var(--faded) !important;
     font-weight: 500 !important;
-  }
-  .timeline-comment-wrapper {
-    border: 0 !important;
   }
   .vcard-username {
     color: var(--text-gray) !important;
@@ -1360,6 +1456,9 @@
   .select-menu-text-filter:first-child,
   .select-menu-text-filter:last-child {
     border-color: var(--border) !important;
+  }
+  .select-menu-modal {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
   }
   .pagination .current,
   .pagination [aria-current] {
@@ -1460,25 +1559,6 @@
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .timeline-comment {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
-  }
-  .timeline-comment-wrapper {
-    border-color: var(--border) !important;
-  }
-  .timeline-comment-header {
-    color: var(--cn) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
-  }
-  .timeline-comment--caret::before,
-  .timeline-comment--caret.current-user::before,
-  .timeline-comment--caret::after,
-  .timeline-comment--caret.current-user::after {
-    border-right-color: var(--alt) !important;
-  }
   .gh-header {
     background-color: unset;
   }
@@ -1539,13 +1619,15 @@
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
-    transition: background-color ease-in-out 0.1s;
+    transition: background-color, border-color ease-in-out 0.1s;
   }
   .btn.btn-sm {
     background-color: var(--alt) !important;
   }
   .btn:hover {
     background-image: none !important;
+    color: var(--cn) !important;
+    border-color: var(--blue) !important;
     background-color: var(--region) !important;
   }
   .auth-form-body {
@@ -1627,6 +1709,9 @@
   .showcase-page-pattern::after {
     border-color: var(--alt) !important;
     background-color: var(--border) !important;
+  }
+  .write-content.js-write-bucket {
+    box-shadow: none !important;
   }
   .form-group .form-control {
     color: var(--cn) !important;
@@ -1731,7 +1816,7 @@
     color: var(--text) !important;
   }
   .table-list-header-toggle .btn-link.selected:hover {
-    color: var(--blue-light) !important;
+    color: var(--blue) !important;
   }
   .site-footer {
     border-top: 1px solid var(--border) !important;
@@ -1747,7 +1832,7 @@
     background-color: var(--alt) !important;
   }
   .table-list-header-toggle .btn-link:hover {
-    color: var(--blue-light) !important;
+    color: var(--blue) !important;
   }
   .table-list-cell {
     border-top: 1px solid var(--border) !important;
@@ -1823,10 +1908,6 @@
   .btn-octicon-danger:hover {
     color: var(--red) !important;
   }
-  .filter-bar {
-    border-bottom: 1px solid var(--border) !important;
-    background-color: var(--alt) !important;
-  }
   .more-repos {
     background-color: var(--alt) !important;
     box-shadow: inset 0 1px 0 var(--border) !important;
@@ -1856,7 +1937,7 @@
   div .tabnav-tab:focus,
   .tabnav-pr .tabnav-tab:hover,
   div .tabnav-tab:hover {
-    color: var(--blue-light) !important;
+    color: var(--blue) !important;
   }
   .tabnav-pr .tabnav-tab .Counter,
   div .tabnav-tab .Counter {
@@ -1880,15 +1961,6 @@
   }
   .tabnav {
     border-bottom: 1px solid var(--border) !important;
-  }
-  .code-list .file-box,
-  .code-list .code-list-item + .code-list-item,
-  .code-list .divider .blob-code,
-  .code-list .divider .blob-num,
-  .code-list-item-private .blob-num {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--hl) !important;
   }
   .private .mini-repo-list-item {
     background-color: var(--bg) !important;
@@ -1980,18 +2052,19 @@
   }
   .Popover-message {
     color: var(--text) !important;
+    border-color: var(--border) !important;
   }
-  .Popover-message::before {
-    border-bottom-color: var(--border);
+  .Popover-message--top-left::before {
+    border-bottom-color: var(--hl);
   }
-  .Popover-message::after {
-    border-bottom-color: var(--alt);
+  .Popover-message--top-left::after {
+    border-bottom-color: var(--hl);
   }
-  .Popover-message::before {
-    border-left-color: var(--border);
+  .Popover-message--bottom-left::before {
+    border-top-color: var(--hl);
   }
-  .Popover-message::after {
-    border-left-color: var(--alt);
+  .Popover-message--bottom-left::after {
+    border-top-color: var(--hl);
   }
   .UnderlineNav-item:hover {
     border-bottom-color: var(--region) !important;
