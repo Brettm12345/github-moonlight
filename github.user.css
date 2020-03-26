@@ -2370,6 +2370,9 @@
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
+  .command-line span.output {
+    color: var(--teal) !important;
+  }
   .content .sectionbody .dlist dt,
   .content .verseblock-content,
   .content dl code,
@@ -2401,5 +2404,11 @@
   }
   code .na {
     color: var(--red) !important;
+  }
+  code .mf,
+  code .mh,
+  code .mi,
+  code .mo {
+    color: var(--orange) !important;
   }
 }

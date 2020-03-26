@@ -8,7 +8,8 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
 [[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
 #+HTML: </div>
 
-* Table of Contents :TOC_3_gh:
+* Table of Contents
+:TOC_3_gh:
 - [[#github-moonlight][Github Moonlight]]
 - [[#features][Features]]
 - [[#recomended-fonts][Recomended Fonts]]
@@ -22,6 +23,7 @@ A dark usestyle for GitHub inspired by [[github:atomiks/moonlight-vscode-theme][
   - [[#issues][Issues]]
   - [[#diff][Diff]]
   - [[#explore][Explore]]
+  - [[#api-docs][Api Docs]]
   - [[#actions][Actions]]
   - [[#projects][Projects]]
 - [[#todo][Todo]]
@@ -56,6 +58,8 @@ These are the fonts used in the screenshots
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" width="100%" />
 ** Explore
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" width="100%" />
+** Api Docs
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" width="100%" />
 ** Actions
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" width="100%" />
 ** Projects
