@@ -1,10 +1,10 @@
 .graph-filter .info
   c $text
 line[stroke="#000"]
-  stroke $border
+  v 0 $border
 text
   &[fill="#000"], &[fill="#6a737d"], &[text-anchor="middle"]
-    fill $text
+    v $text
 .viz
   c $text $border $alt
   .code-frequency
@@ -28,12 +28,12 @@ relative-time
   .dir
     c $text
   .area
-    fill $teal
+    v $teal
 .code-frequency
   .addition
-    fill $green
+    v $green
   .deletion
-    fill $red
+    v $red
 .community-checklist .progress
   c 0 0 $region
 table.capped-list

@@ -3,8 +3,8 @@ cal($opacity, $target, $color = $teal)
     c 0 0 $color
     o $opacity
   .calendar-graph rect[fill=\"{$target}\"]
-    fill $color
     o $opacity
+    v $color
 
 cal(0.05, "#ebedf0", $indigo)
 cal(0.25, "#c6e48b")
@@ -16,4 +16,4 @@ cal(1, "#196127")
   c 0 0 $hl
 .calendar-graph text
   &.wday, &.month
-    fill $cn
+    v $cn

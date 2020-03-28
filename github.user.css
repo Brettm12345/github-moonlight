@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      0.9.9
+@version      1.0.0
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -167,7 +167,7 @@
     color: var(--blue) !important;
   }
   .notifications-list-item .notifications-list-item-actions svg {
-    fill: var(--text);
+    fill: var(--text) !important;
   }
   .notifications-list-item:hover {
     background-color: var(--hl) !important;
@@ -317,7 +317,6 @@
   .pl-ba {
     color: var(--hover) !important;
   }
-  .pl-s,
   .pl-s1,
   .pl-smi {
     color: var(--pink) !important;
@@ -333,47 +332,47 @@
     opacity: 0.05 !important;
   }
   .calendar-graph rect[fill="#ebedf0"] {
-    fill: var(--indigo);
     opacity: 0.05 !important;
+    fill: var(--indigo) !important;
   }
   .legend li[style*="#c6e48b"] {
     background-color: var(--teal) !important;
     opacity: 0.25 !important;
   }
   .calendar-graph rect[fill="#c6e48b"] {
-    fill: var(--teal);
     opacity: 0.25 !important;
+    fill: var(--teal) !important;
   }
   .legend li[style*="#7bc96f"] {
     background-color: var(--teal) !important;
     opacity: 0.5 !important;
   }
   .calendar-graph rect[fill="#7bc96f"] {
-    fill: var(--teal);
     opacity: 0.5 !important;
+    fill: var(--teal) !important;
   }
   .legend li[style*="#239a3b"] {
     background-color: var(--teal) !important;
     opacity: 0.75 !important;
   }
   .calendar-graph rect[fill="#239a3b"] {
-    fill: var(--teal);
     opacity: 0.75 !important;
+    fill: var(--teal) !important;
   }
   .legend li[style*="#196127"] {
     background-color: var(--teal) !important;
     opacity: 1 !important;
   }
   .calendar-graph rect[fill="#196127"] {
-    fill: var(--teal);
     opacity: 1 !important;
+    fill: var(--teal) !important;
   }
   .graph-before-activity-overview {
     background-color: var(--hl) !important;
   }
   .calendar-graph text.wday,
   .calendar-graph text.month {
-    fill: var(--cn);
+    fill: var(--cn) !important;
   }
   .markdown-body a {
     color: var(--text-alt) !important;
@@ -685,7 +684,7 @@
   }
   .branch-action-state-clean .branch-action-icon .octicon,
   .branch-action-item-icon .octicon {
-    fill: var(--border);
+    fill: var(--border) !important;
   }
   .branch-infobar {
     border-color: var(--border) !important;
@@ -767,12 +766,12 @@
     color: var(--text) !important;
   }
   line[stroke="#000"] {
-    stroke: var(--border);
+    stroke: var(--border) !important;
   }
   text[fill="#000"],
   text[fill="#6a737d"],
   text[text-anchor="middle"] {
-    fill: var(--text);
+    fill: var(--text) !important;
   }
   .viz {
     color: var(--text) !important;
@@ -811,13 +810,13 @@
     color: var(--text) !important;
   }
   .graphs .area {
-    fill: var(--teal);
+    fill: var(--teal) !important;
   }
   .code-frequency .addition {
-    fill: var(--green);
+    fill: var(--green) !important;
   }
   .code-frequency .deletion {
-    fill: var(--red);
+    fill: var(--red) !important;
   }
   .community-checklist .progress {
     background-color: var(--region) !important;
@@ -1088,10 +1087,10 @@
     border-top: 1px solid var(--border) !important;
   }
   .activity-overview-percentage {
-    fill: var(--cn);
+    fill: var(--cn) !important;
   }
   .activity-overview-label {
-    fill: var(--faded);
+    fill: var(--faded) !important;
   }
   .ajax-pagination-form .ajax-pagination-btn {
     border-color: var(--border) !important;
@@ -1251,7 +1250,7 @@
     font-family: var(--mono-font) !important;
   }
   .form-select {
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23c8d3f5%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22feather%20feather-chevron-down%22%20%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22%20/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23c8d3f5%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22feather%20feather-chevron-down%22%20%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22%20/%3E%3C/svg%3E") !important;
   }
   .blob-code-inner {
     color: var(--text) !important;
@@ -1286,7 +1285,7 @@
     background-color: var(--teal-trans) !important;
   }
   .State--green .octicon {
-    fill: var(--teal);
+    fill: var(--teal) !important;
   }
   .State--red {
     border: 1px solid var(--red) !important;
@@ -1295,7 +1294,7 @@
     background-color: var(--red-trans) !important;
   }
   .State--red .octicon {
-    fill: var(--red);
+    fill: var(--red) !important;
   }
   img[src*="octocat-spinner-64.gif"] {
     filter: invert(1);
@@ -1346,7 +1345,7 @@
     color: var(--purple) !important;
   }
   path[fill="#eee"] {
-    fill: var(--icon);
+    fill: var(--icon) !important;
   }
   .file-diff-split .empty-cell {
     border-color: var(--border) !important;
@@ -1628,7 +1627,7 @@
     border: 1px solid var(--border) !important;
   }
   .btn {
-    background-image: none;
+    background-image: none !important;
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
@@ -1981,7 +1980,7 @@
     color: var(--text) !important;
   }
   .contrib-person path {
-    fill: var(--orange);
+    fill: var(--orange) !important;
   }
   .menu-item.selected:before,
   .menu-item[aria-current]:before {
@@ -2020,7 +2019,7 @@
     text-decoration: underline !important;
   }
   .protip  > svg {
-    fill: var(--yellow);
+    fill: var(--yellow) !important;
   }
   .Popover-message {
     color: var(--text) !important;
@@ -2159,7 +2158,7 @@
     background-color: var(--hl) !important;
   }
   .gisthead .pagehead-actions .octicon-mute {
-    fill: var(--faded);
+    fill: var(--faded) !important;
   }
   .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
   .discussion-timeline-actions,
@@ -2285,7 +2284,7 @@
   }
   .graphiql-container .toolbar-button svg,
   .graphiql-container .execute-button svg {
-    fill: var(--text);
+    fill: var(--text) !important;
   }
   .graphiql-container .variable-editor-title {
     color: var(--text) !important;

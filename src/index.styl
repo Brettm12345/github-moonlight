@@ -68,7 +68,7 @@ pre,
 tt
   mono()
 .form-select
-  background-image url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c8d3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" %3E%3Cpolyline points="6 9 12 15 18 9" /%3E%3C/svg%3E')
+  bgi url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c8d3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" %3E%3Cpolyline points="6 9 12 15 18 9" /%3E%3C/svg%3E')
 .blob-
   &code-inner
     c $text
@@ -84,7 +84,7 @@ tt
     &code, &num
       c 0 $border $alt
 .file:target
-  md-shadow-z-1()
+  s-1()
 .description
   c $text
 .State--
@@ -92,14 +92,14 @@ tt
     b 1px solid $teal
     c $teal $teal $tealTrans
     .octicon
-      fill $teal
+      v $teal
   &red
     b 1px solid $red
     c $red $red $redTrans
     .octicon
-      fill $red
+      v $red
 img[src*="octocat-spinner-64.gif"]
-  filter invert(1)
+  inv()
 .form
   &-control, &-select
     &.focus, &:focus
@@ -133,7 +133,7 @@ img[src*="octocat-spinner-64.gif"]
     strong
       c $purple
 path[fill="#eee"]
-  fill $icon
+  v $icon
 .file-diff-split .empty-cell
   c 0 $border $alt
 .blob-code-
@@ -200,7 +200,7 @@ comment-form
     &:first-child, &:last-child
       c 0 $border
   &modal
-    md-shadow-z-2()
+    s-2()
 .pagination
   .current, [aria-current]
     c $cn 0 $icon
@@ -290,7 +290,7 @@ table.files
 .rgh-collaborator
   b $b
 .btn
-  background-image none
+  bgi none
   c $cn $border $hl
   ease background-color, border-color
   &.btn-sm
@@ -496,7 +496,7 @@ div.commit-build-statuses,
       .text-gray-light
         c $text
 .contrib-person path
-  fill $orange
+  v $orange
 .menu-item
   &.selected, &[aria-current]
     &:before
@@ -523,7 +523,7 @@ div.commit-build-statuses,
     c $yellow
     td underline
   svg
-    fill $yellow
+    v $yellow
 .Popover-message
   c $text $border
   &--top-left
