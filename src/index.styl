@@ -105,15 +105,16 @@ img[src*="octocat-spinner-64.gif"]
     &.focus, &:focus
       c $cn $blue 0
       s none
-.octicon:not(.text-green):not(.text-red):not(.octicon-check)
-  c $text
+.octicon
+  transform scale(1.1)
   &.open
     c $green
   &[style*="#6a737d"]
     c $textGray
-  &.octicon-file
+  &&-smiley, &&-file
     c $indigo
-  transform scale(1.1)
+  &:not(.text-green):not(.text-red):not(&-check):not(&-smiley):not(&-file)
+    c $text
 .muted-link
   c $faded
   &:hover
@@ -171,9 +172,8 @@ comment-form
     c 0 0 $alt
 .tabnav
   bb $b
-  &--responsive &-tab
-    c $text $border $alt
-  &-tab
+  &--responsive &-tab, &-tab
+    c $faded $border
     &[aria-current], &[aria-selected=true], &.selected
       c $text $border $hl
   .&-pr, div
@@ -262,6 +262,8 @@ div[style*="linear-gradient"]
     c 0 0 $alt
   &-meta
     c $text $border
+.js-navigation-open
+  ease color
 table.files
   c $text $border $hl
   tr
@@ -434,11 +436,9 @@ div.commit-build-statuses,
 .octofication .message,
 .overall-summary
   c 0 $border $alt
-.btn-link:not(.IssueLabel),
-.subnav-search-context .btn
+.btn-link:not(.IssueLabel):not(.tabnav-tab), .subnav-search-context .btn
   c $blue
-.btn.btn-primary,
-.js-selected-navigation-item.subnav-item
+.btn.btn-primary, .js-selected-navigation-item.subnav-item
   c 0 0 $hl
 .social-count
   c $blue 0 $hl

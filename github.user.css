@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.0
+@version      1.0.1
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -143,7 +143,7 @@
     background-color: var(--alt) !important;
   }
   .filter-item {
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .filter-item:hover {
     background-color: var(--hover) !important;
@@ -173,7 +173,7 @@
     background-color: var(--hl) !important;
   }
   .notifications-list-item:hover .notification-list-item-actions .btn {
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .notifications-list-item:hover .notification-list-item-actions .btn:hover {
     color: var(--cn) !important;
@@ -376,7 +376,7 @@
   }
   .markdown-body a {
     color: var(--text-alt) !important;
-    transition: color 0.1s ease-in-out !important;
+    transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
     text-decoration: underline !important;
   }
   .markdown-body a:hover {
@@ -648,7 +648,7 @@
     background-color: var(--alt) !important;
   }
   .SelectMenu-item {
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .SelectMenu-item:hover {
     background-color: var(--hl) !important;
@@ -926,12 +926,18 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
+  .dropdown-menu-ne::before {
+    border-top-color: var(--hl);
+  }
+  .dropdown-menu-ne::after {
+    border-top-color: var(--hl);
+  }
   .dropdown-menu:after {
     border-bottom-color: var(--border);
   }
   .dropdown-item {
     color: var(--text) !important;
-    transition: background-color, color 0.1s ease-in-out !important;
+    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .dropdown-item:hover,
   .dropdown-item:focus {
@@ -941,12 +947,22 @@
   .issue-keyword {
     color: var(--purple) !important;
   }
+  .js-selected-navigation-item.subnav-item,
   .js-issue-row {
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .pinned-issue-item {
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
+  }
+  .reaction-sort-item {
+    transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+    border-color: var(--bg) !important;
+  }
+  .reaction-sort-item:hover,
+  .reaction-sort-item:focus {
+    border-color: var(--blue) !important;
+    background-color: var(--blue-trans) !important;
   }
   code .link-gray {
     font-weight: 500 !important;
@@ -1059,7 +1075,7 @@
     border-right-color: var(--alt);
   }
   .select-menu-item {
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .select-menu-item:hover {
     background-color: var(--region) !important;
@@ -1307,18 +1323,21 @@
     border-color: var(--blue) !important;
     box-shadow: none !important;
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check) {
-    color: var(--text) !important;
+  .octicon {
     transform: scale(1.1);
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check).open {
+  .octicon.open {
     color: var(--green) !important;
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check)[style*="#6a737d"] {
+  .octicon[style*="#6a737d"] {
     color: var(--text-gray) !important;
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check).octicon-file {
+  .octicon.octicon-smiley,
+  .octicon.octicon-file {
     color: var(--indigo) !important;
+  }
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check):not(.octicon-smiley):not(.octicon-file) {
+    color: var(--text) !important;
   }
   .muted-link {
     color: var(--faded) !important;
@@ -1399,13 +1418,16 @@
   .tabnav {
     border-bottom: 1px solid var(--border) !important;
   }
-  .tabnav--responsive .tabnav-tab {
-    color: var(--text) !important;
+  .tabnav--responsive .tabnav-tab,
+  .tabnav-tab {
+    color: var(--faded) !important;
     border-color: var(--border) !important;
-    background-color: var(--alt) !important;
   }
+  .tabnav--responsive .tabnav-tab[aria-current],
   .tabnav-tab[aria-current],
+  .tabnav--responsive .tabnav-tab[aria-selected=true],
   .tabnav-tab[aria-selected=true],
+  .tabnav--responsive .tabnav-tab.selected,
   .tabnav-tab.selected {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1471,7 +1493,7 @@
   .pagination .disabled,
   .pagination .gap,
   .pagination [aria-disabled=true] {
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
@@ -1501,7 +1523,7 @@
   }
   .UnderlineNav {
     background-color: var(--hl) !important;
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .UnderlineNav[style*="margin-top"] {
     background-color: var(--bg) !important;
@@ -1581,6 +1603,9 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
   }
+  .js-navigation-open {
+    transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
   table.files {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1631,7 +1656,7 @@
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
-    transition: background-color, border-color 0.1s ease-in-out !important;
+    transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .btn.btn-sm {
     background-color: var(--alt) !important;
@@ -1658,7 +1683,7 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .topic-tag-link:hover {
     background-color: var(--region) !important;
@@ -1775,7 +1800,7 @@
   }
   .menu-item {
     border-bottom: 1px solid var(--border) !important;
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .menu-item:hover {
     background-color: var(--region) !important;
@@ -1889,7 +1914,7 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .btn-link:not(.IssueLabel),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab),
   .subnav-search-context .btn {
     color: var(--blue) !important;
   }
@@ -2053,7 +2078,7 @@
   .toolbar-item,
   .toolbar-item .menu-target {
     color: var(--text) !important;
-    transition: color 0.1s ease-in-out !important;
+    transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .toolbar-item:hover,
   .toolbar-item .menu-target:hover {
@@ -2186,7 +2211,7 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
-    transition: background-color 0.1s ease-in-out !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .CodeMirror-hint-information {
     color: var(--indigo) !important;
