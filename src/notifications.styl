@@ -1,7 +1,7 @@
 .notifications-list-item.notification-unread
   c 0 $border $alt
 .filter-item
-  tr background-color ease-in-out 0.2s
+  ease background-color
   &:hover
     c 0 0 $hover
   &.selected, &[aria-current], &[aria-selected=true]
@@ -11,15 +11,17 @@
     c 0 0 $bg
   &configure-filters
     octicon $hover
-  &navigation &-configure-filters:hover
-    octicon $blue
+  &navigation &configure-filters
+    octicon $text
+    &:hover
+      octicon $blue
 .notifications-list-item
   & &-actions svg
     fill $text
   &:hover
     c 0 0 $hl
     .notification-list-item-actions .btn
-      tr background-color 0.2s ease-in-out
+      ease background-color
       &:hover
         c $cn $border $border
 .notifications-dropdown

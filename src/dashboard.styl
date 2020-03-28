@@ -1,15 +1,12 @@
 .select-menu-
   &item
-    tr background-color 0.1s ease-in-out
+    ease background-color
     &:hover
       c 0 0 $region
   &modal-right.details-reset.details-overlay.mb-2, .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
     c 0 0 $alt
-.UnderlineNav
-  c 0 0 $hl
-  tr background-color 0.1s ease-in-out
-  &[style*="margin-top"]
-    c 0 0 $bg
+.github-jobs-logo strong
+  filter invert(1)
 .profile-
   &timeline
     &.discussion-timeline:before
@@ -45,11 +42,17 @@
     c $faded
   &checkbox:checked + &name
     c $text $border $icon
-.dashboard-notice
-  b $b
-  c 0 0 $hl
-  h2
-    c $text
+.dashboard
+  .js-all-activity-header + div
+    c 0 $border
+    .Box
+      c 0 $border $hl
+      r 6px
+  &-notice
+    b $b
+    c 0 0 $hl
+    h2
+      c $text
 .repo-list
   p 0 12px
   &, &-item
@@ -64,3 +67,13 @@
 .profile-timeline-
   &month-heading.bg-white, &year-list
     c 0 0 $bg
+.vcard-username
+  c $textGray
+.private .mini-repo-list-item
+  c 0 0 $bg
+.orghead
+  c 0 $border $alt
+  .org-name
+    c $blue
+  .pagehead-tabs-item.selected
+    c $blue 0 $bg

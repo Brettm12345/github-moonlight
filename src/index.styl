@@ -69,18 +69,18 @@ tt
   mono()
 .form-select
   background-image url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23c8d3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" %3E%3Cpolyline points="6 9 12 15 18 9" /%3E%3C/svg%3E')
-.blob-code-inner
-  c $text
-  fs 15px
-  lh 1.8
-  mono()
-  .highlighted
-    c 0 0 $icon
-.blob-num
-  c $hover $border $alt
-  fw 600
-.blob-expanded
-  .blob-
+.blob-
+  &code-inner
+    c $text
+    fs 15px
+    lh 1.8
+    mono()
+    .highlighted
+      c 0 0 $icon
+  &num
+    c $hover $border $alt
+    fw 600
+  &expanded
     &code, &num
       c 0 $border $alt
 .file:target
@@ -98,23 +98,6 @@ tt
     c $red $red $redTrans
     .octicon
       fill $red
-.notification-navigation .notification-configure-filters
-  octicon $text
-.Box
-  &--responsive, &row--unread
-    s inset 2px 0 0 $blue
-  &-header
-    c 0 $border $alt
-    &--blue
-      c $blue $border $alt
-  &-row
-    &:first-of-type
-      bt 0
-    bt $b
-    &--focus-gray.navigation-focus
-      c 0 0 $icon
-    &[style*="background"]
-      c 0 0 $region
 img[src*="octocat-spinner-64.gif"]
   filter invert(1)
 .form
@@ -161,14 +144,11 @@ path[fill="#eee"]
   &addition, &deletion
     .x
       c $border
-.lovely-forks-addon
-  c $text
-  o 0.7
-.Label
-  &--gray
+.Label--
+  &gray
     c $text $border $bg
-  &--outline
-    c $text $border $
+  &outline
+    c $text $border
 .repository-lang-stats ol.repository-lang-stats-numbers li .lang
   c $cn
 .discussion-
@@ -182,19 +162,29 @@ path[fill="#eee"]
     &item
       c $faded
       fw 500
-.vcard-username
-  c $textGray
-.previewable-comment-form .comment-form-head.tabnav
+comment-form
+  .previewable-& .&-head.tabnav
+    bb $b
+    bl 0
+    br 0
+    bt 0
+    c 0 0 $alt
+.tabnav
   bb $b
-  bl 0
-  br 0
-  bt 0
-  c 0 0 $alt
-.tabnav--responsive .tabnav-tab
-  c $text $border $alt
-.tabnav-tab
-  &[aria-current], &[aria-selected=true], &.selected
-    c $text $border $hl
+  &--responsive &-tab
+    c $text $border $alt
+  &-tab
+    &[aria-current], &[aria-selected=true], &.selected
+      c $text $border $hl
+  .&-pr, div
+    ../-tab
+      c $blue
+      &.selected
+        c $blue $border $bg
+      &:focus, &:hover
+        c $blue
+      .Counter
+        c $blue
 .branch-name
   c $text $border $region
 .select-menu-
@@ -217,7 +207,7 @@ path[fill="#eee"]
   a, em, span, .disabled, .gap, [aria-disabled=true]
     &:hover
       c 0 0 $region
-    tr background-color 0.1s ease-in-out
+    ease background-color
     c 0 $border $hl
 input[type="text"]
   c $cn $border $alt
@@ -225,12 +215,17 @@ div[style*="linear-gradient"]
   bg linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
 .numbers-summary
   octicon $text
-.ellipsis-expander,
-.hidden-text-expander a
-  c $text 0 $icon
-.UnderlineNav-item
-  /.subnav-link.selected, &.selected, &[aria-current], &[aria-selected=true]
-    bbc $blue
+-expander
+  .ellipsis&, .hidden-text& a
+    c $text 0 $icon
+.UnderlineNav
+  c 0 0 $hl
+  ease background-color
+  &[style*="margin-top"]
+    c 0 0 $bg
+  &-item
+    /.subnav-link.selected, &.selected, &[aria-current], &[aria-selected=true]
+      bbc $blue
 .SelectMenu-
   &divider
     c $text $border $border
@@ -299,7 +294,7 @@ table.files
 .btn
   background-image none
   c $cn $border $hl
-  transition background-color, border-color ease-in-out 0.1s
+  ease background-color, border-color
   &.btn-sm
     c 0 0 $alt
   &:disabled
@@ -315,7 +310,7 @@ table.files
   &-link:hover
     c 0 0 $region
   c $text $border $alt
-  tr background-color 0.1s ease-in-out
+  ease background-color
   &-action
     c $text $border $bg
     button
@@ -354,14 +349,14 @@ div.listgroup-item
   c 0 $alt $border
 .write-content.js-write-bucket
   s none
-.form-group .form-control
-  c $cn $border $alt
-  .search-input
-    caret-color $blue
-  &:focus
-    c 0 0 $hl
-.form
-  &-control, &-select
+.form-
+  &group &control
+    c $cn $border $alt
+    .search-input
+      caret-color $blue
+    &:focus
+      c 0 0 $hl
+  &control, &select
     c $cn $border $alt
 .flash
   c $cn $border $bg
@@ -375,7 +370,7 @@ div.listgroup-item
     c $cn $border $alt
   &-item
     bb $b
-    tr background-color 0.1s ease-in-out
+    ease background-color
     &:hover
       c 0 0 $region
     &.selected
@@ -393,10 +388,9 @@ hr
 .pl-s > a
   c $green
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra)
+  c $text
   &:hover
     c $blue
-
-  c $text
 div.commit-build-statuses,
 .link-gray
   c $faded
@@ -481,35 +475,10 @@ div.commit-build-statuses,
     button:hover
       bg transparent
       td underline
-.tabnav-pr,
-div
-  .tabnav-tab
-    c $blue
-    &.selected
-      c $blue $border $bg
-    &:focus, &:hover
-      c $blue
-    .Counter
-      c $blue
 .Counter
   c $blue 0 $border
 *:not(code) .Box
   c 0 $border $alt
-.dashboard .js-all-activity-header + div
-  c 0 $border
-  .Box
-    c 0 $border $hl
-    r 6px
-.tabnav
-  bb $b
-.private .mini-repo-list-item
-  c 0 0 $bg
-.orghead // Organizations
-  c 0 $border $alt
-  .org-name
-    c $blue
-  .pagehead-tabs-item.selected
-    c $blue 0 $bg
 .tag
   &-info
     c $blue
@@ -528,13 +497,6 @@ div
       c 0 0 $bg
       .text-gray-light
         c $text
-.github-jobs-logo strong
-  filter invert(1)
-.team-left-column > div
-  b $b
-  c 0 $border $hl
-  pl 10px
-  r 4px
 .contrib-person path
   fill $orange
 .menu-item
@@ -584,7 +546,7 @@ div
     &:hover
       c $blue $hl
     c $text
-    tr color 0.1s ease-in-out
+    ease color
 .body > div.d-flex
   px 10px
 .pagination-loader-container
@@ -598,15 +560,30 @@ div
     c $text $border $bg
 .content.p-4.text-center.rounded-1.border.border-gray-light
   c 0 0 $alt
-.Box.Box--condensed .Box-row
-  c 0 $border $alt
-.Box-row--
-  &focus-gray
-    c 0 0 $hl
-  &yellow
-    c $text $yellow transparent
-  /.Box--responsive &unread::before
-    bgi none
-    c 0 0 $blue
+.Box
+  &--responsive, &row--unread
+    s inset 2px 0 0 $blue
+  &-header
+    c 0 $border $alt
+    &--blue
+      c $blue $border $alt
+  &-row
+    &:first-of-type
+      bt 0
+    bt $b
+    &--focus-gray.navigation-focus
+      c 0 0 $icon
+    &[style*="background"]
+      c 0 0 $region
+  &&--condensed &-row
+    c 0 $border $alt
+  &-row--
+    &focus-gray
+      c 0 0 $hl
+    &yellow
+      c $text $yellow transparent
+    ../--responsive &unread::before
+      bgi none
+      c 0 0 $blue
 .text
   c $faded
