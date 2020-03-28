@@ -17,15 +17,15 @@
   &e, &en /* entity.name */
     c $blue
   &ent, &smi, &s &s1 /* string source */
-    c $lightRed
+    c $redLight
   &k /* keyword, storage, storage.type */
-    c $purpleAlt
+    c $purple
   &s &pse &s1, &pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */
     c $cyan
   &sr /* string.regexp */
-    c $cyanAlt
+    c $cyan
   &sr &cce /* string.regexp constant.character.escape */
-    c $lightRed
+    c $redLight
   &s, &sr &sre, &sr &sra /* string.regexp string.regexp.arbitrary-repitition */
     c $green
   &v /* variable */
@@ -41,7 +41,7 @@
   &c2::before /* carriage-return */
     content "^M"
   &sr &cce /* string.regexp constant.character.escape */
-    c $lightRed
+    c $redLight
     fw bold
   &ml /* markup.list */
     c $orange
@@ -67,6 +67,8 @@
     fw bold
   &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
     c $hover
+  &s, &s1, &smi
+    c $pink
   &sg /* sublimelinter.gutter-mark */
     c $faded
   &corl /* constant.other.reference.link, string.other.link */

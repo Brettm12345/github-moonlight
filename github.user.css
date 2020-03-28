@@ -50,39 +50,39 @@
 @preprocessor uso
 ==/UserStyle== */
 :root {
-  --alt: /*[[alt]]*/ ;
-  --bg: /*[[bg]]*/ ;
-  --blue: /*[[blue]]*/ ;
-  --blue-trans: /*[[blue-trans]]*/ ;
-  --border: /*[[border]]*/ ;
-  --cn: /*[[cn]]*/ ;
-  --cyan: /*[[cyan]]*/ ;
-  --cyan-light: /*[[cyan-light]]*/ ;
-  --cyan-trans: /*[[cyan-trans]]*/ ;
-  --faded: /*[[faded]]*/ ;
-  --green: /*[[green]]*/ ;
-  --hl: /*[[hl]]*/ ;
-  --hover: /*[[hover]]*/ ;
-  --icon: /*[[icon]]*/ ;
-  --indigo: /*[[indigo]]*/ ;
-  --mono-font: /*[[mono_font]]*/ ;
-  --orange: /*[[orange]]*/ ;
-  --pink: /*[[pink]]*/ ;
-  --placeholder: /*[[placeholder]]*/ ;
-  --purple: /*[[purple]]*/ ;
-  --purple-trans: /*[[purple-trans]]*/ ;
-  --red: /*[[red]]*/ ;
-  --red-trans: /*[[red-trans]]*/ ;
-  --region: /*[[region]]*/ ;
-  --sb: /*[[sb]]*/ ;
-  --teal: /*[[teal]]*/ ;
-  --teal-trans: /*[[teal-trans]]*/ ;
-  --text: /*[[text-color]]*/ ;
-  --text-alt: /*[[text-alt]]*/ ;
-  --text-gray: /*[[text-gray]]*/ ;
-  --ui-font: /*[[ui_font]]*/ ;
-  --yellow: /*[[yellow]]*/ ;
-  --yellow-trans: /*[[yellow-trans]]*/ ;
+  --alt: /*[[alt]]*/;
+  --bg: /*[[bg]]*/;
+  --blue: /*[[blue]]*/;
+  --blue-trans: /*[[blue-trans]]*/;
+  --border: /*[[border]]*/;
+  --cn: /*[[cn]]*/;
+  --cyan: /*[[cyan]]*/;
+  --cyan-light: /*[[cyan-light]]*/;
+  --cyan-trans: /*[[cyan-trans]]*/;
+  --faded: /*[[faded]]*/;
+  --green: /*[[green]]*/;
+  --hl: /*[[hl]]*/;
+  --hover: /*[[hover]]*/;
+  --icon: /*[[icon]]*/;
+  --indigo: /*[[indigo]]*/;
+  --mono-font: /*[[mono_font]]*/;
+  --orange: /*[[orange]]*/;
+  --pink: /*[[pink]]*/;
+  --placeholder: /*[[placeholder]]*/;
+  --purple: /*[[purple]]*/;
+  --purple-trans: /*[[purple-trans]]*/;
+  --red: /*[[red]]*/;
+  --red-trans: /*[[red-trans]]*/;
+  --region: /*[[region]]*/;
+  --sb: /*[[sb]]*/;
+  --teal: /*[[teal]]*/;
+  --teal-trans: /*[[teal-trans]]*/;
+  --text: /*[[text-color]]*/;
+  --text-alt: /*[[text-alt]]*/;
+  --text-gray: /*[[text-gray]]*/;
+  --ui-font: /*[[ui_font]]*/;
+  --yellow: /*[[yellow]]*/;
+  --yellow-trans: /*[[yellow-trans]]*/;
 }
 @-moz-document domain('github.com') {
   .commit-icon .octicon,
@@ -102,7 +102,7 @@
   .blob-code-hunk {
     background-color: var(--alt) !important;
   }
-  .discussion-sidebar-item + .discussion-sidebar-item,
+  .discussion-sidebar-item+.discussion-sidebar-item,
   .UnderlineNav,
   .reaction-summary-item,
   .jump-to-suggestions-results-container .navigation-item,
@@ -123,7 +123,7 @@
   .dashboard-rollup-items .body,
   .saved-reply-form,
   .Box-body,
-  .profile-rollup-summarized + .profile-rollup-summarized,
+  .profile-rollup-summarized+.profile-rollup-summarized,
   .file-diff-split .blob-code + .blob-num,
   .orgs-help-shelf,
   .ScreenshotCarousel,
@@ -150,7 +150,7 @@
   }
   .filter-item.selected,
   .filter-item[aria-current],
-  .filter-item[aria-selected="true"] {
+  .filter-item[aria-selected=true] {
     color: var(--cn) !important;
     background-color: var(--icon) !important;
   }
@@ -232,9 +232,23 @@
   .pl-en {
     color: var(--blue) !important;
   }
+  .pl-ent,
+  .pl-smi,
+  .pl-s .pl-s1 {
+    color: var(--red-light) !important;
+  }
+  .pl-k {
+    color: var(--purple) !important;
+  }
   .pl-s .pl-pse .pl-s1,
   .pl-pds {
     color: var(--cyan) !important;
+  }
+  .pl-sr {
+    color: var(--cyan) !important;
+  }
+  .pl-sr .pl-cce {
+    color: var(--red-light) !important;
   }
   .pl-s,
   .pl-sr .pl-sre,
@@ -262,6 +276,7 @@
     content: "^M";
   }
   .pl-sr .pl-cce {
+    color: var(--red-light) !important;
     font-weight: bold !important;
   }
   .pl-ml {
@@ -301,6 +316,11 @@
   }
   .pl-ba {
     color: var(--hover) !important;
+  }
+  .pl-s,
+  .pl-s1,
+  .pl-smi {
+    color: var(--pink) !important;
   }
   .pl-sg {
     color: var(--faded) !important;
@@ -412,7 +432,7 @@
     filter: invert(1);
   }
   .project-issue-body-blur {
-    background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(0deg, #000, rgba(0,0,0,0)) !important;
   }
   .project-column {
     background-color: var(--alt) !important;
@@ -425,7 +445,7 @@
   }
   .project-card:hover {
     border-color: var(--border) !important;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
@@ -485,10 +505,7 @@
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title {
     border-top-color: var(--border) !important;
   }
-  .gitako-side-bar
-    .gitako-side-bar-body
-    .gitako-settings-bar-content
-    .shadow-shelter {
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .shadow-shelter {
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
@@ -504,15 +521,8 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  .gitako-side-bar
-    .gitako-side-bar-body
-    .file-explorer
-    .search-input-wrapper
-    input[type="text"].form-control,
-  .gitako-side-bar-content
-    .file-explorer
-    .search-input-wrapper
-    input[type="text"].form-control {
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type="text"].form-control,
+  .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control {
     border: 1px !important;
     border-radius: 0 !important;
   }
@@ -735,8 +745,7 @@
   .composer.composer-responsive .timeline-comment::after {
     border-right-color: var(--alt);
   }
-  .repository-content
-    .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
+  .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
@@ -864,9 +873,7 @@
   #jump-to-results:hover {
     background-color: var(--hl) !important;
   }
-  .jump-to-suggestions-results-container
-    .navigation-focus
-    .jump-to-suggestions-path {
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
     background-color: var(--region) !important;
   }
   #commit_search_results .commit {
@@ -1059,8 +1066,7 @@
     background-color: var(--region) !important;
   }
   .select-menu-modal-right.details-reset.details-overlay.mb-2,
-  .select-menu-
-    .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
+  .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
     background-color: var(--alt) !important;
   }
   .github-jobs-logo strong {
@@ -1078,7 +1084,7 @@
   .profile-timeline-month-heading:after {
     background-color: var(--border) !important;
   }
-  .profile-rollup-wrapper + .profile-rollup-wrapper {
+  .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--border) !important;
   }
   .activity-overview-percentage {
@@ -1268,7 +1274,7 @@
     background-color: var(--alt) !important;
   }
   .file:target {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .description {
     color: var(--text) !important;
@@ -1400,7 +1406,7 @@
     background-color: var(--alt) !important;
   }
   .tabnav-tab[aria-current],
-  .tabnav-tab[aria-selected="true"],
+  .tabnav-tab[aria-selected=true],
   .tabnav-tab.selected {
     color: var(--text) !important;
     border-color: var(--border) !important;
@@ -1453,7 +1459,7 @@
     border-color: var(--border) !important;
   }
   .select-menu-modal {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
   }
   .pagination .current,
   .pagination [aria-current] {
@@ -1465,7 +1471,7 @@
   .pagination span,
   .pagination .disabled,
   .pagination .gap,
-  .pagination [aria-disabled="true"] {
+  .pagination [aria-disabled=true] {
     transition: background-color 0.1s ease-in-out !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
@@ -1475,7 +1481,7 @@
   .pagination span:hover,
   .pagination .disabled:hover,
   .pagination .gap:hover,
-  .pagination [aria-disabled="true"]:hover {
+  .pagination [aria-disabled=true]:hover {
     background-color: var(--region) !important;
   }
   input[type="text"] {
@@ -1484,7 +1490,7 @@
     background-color: var(--alt) !important;
   }
   div[style*="linear-gradient"] {
-    background: linear-gradient(to top, #000, rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(to top, #000, rgba(0,0,0,0)) !important;
   }
   .numbers-summary .octicon {
     color: var(--text) !important;
@@ -1504,7 +1510,7 @@
   .subnav-link.selected,
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current],
-  .UnderlineNav-item[aria-selected="true"] {
+  .UnderlineNav-item[aria-selected=true] {
     border-bottom-color: var(--blue) !important;
   }
   .SelectMenu-divider {
@@ -1538,12 +1544,12 @@
   .SelectMenu-tab {
     color: var(--text) !important;
   }
-  .SelectMenu-tab:not([aria-selected="true"]) {
+  .SelectMenu-tab:not([aria-selected=true]) {
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
-  .SelectMenu-tab[aria-selected="true"] {
+  .SelectMenu-tab[aria-selected=true] {
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
@@ -1585,7 +1591,7 @@
     background-color: var(--hl) !important;
   }
   table.files tr.navigation-focus td,
-  table.files tr[aria-selected="true"] td {
+  table.files tr[aria-selected=true] td {
     background-color: var(--hl) !important;
   }
   table.files td {
@@ -1706,13 +1712,13 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .pagehead-tabs-item,
     .pagehead,
     .repohead.experiment-repo-nav {
       color: var(--alt) !important;
     }
-  }
+}
   .repohead .Label--outline,
   .repo-list .Label--outline {
     color: var(--text) !important;
@@ -1803,12 +1809,10 @@
   .pl-s > a {
     color: var(--green) !important;
   }
-  :not(.commit-build-statuses)
-    > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
     color: var(--text) !important;
   }
-  :not(.commit-build-statuses)
-    > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):hover {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):hover {
     color: var(--blue) !important;
   }
   div.commit-build-statuses,
@@ -2009,16 +2013,16 @@
   .js-user-status-container {
     background-color: var(--hl) !important;
   }
-  .protip > code {
+  .protip  > code {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
-  .protip > strong {
+  .protip  > strong {
     color: var(--yellow) !important;
     text-decoration: underline !important;
   }
-  .protip > svg {
+  .protip  > svg {
     fill: var(--yellow);
   }
   .Popover-message {
