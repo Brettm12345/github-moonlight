@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.1
+@version      1.0.2
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -403,14 +403,16 @@
   }
   .markdown-body code,
   .markdown-body tt {
+    border: 1px solid var(--border) !important;
     color: var(--cn) !important;
     font-weight: 500 !important;
     font-family: var(--mono-font) !important;
   }
   .highlight pre,
   .markdown-body pre {
+    border: 1px solid var(--border) !important;
     border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+    background-color: var(--bg) !important;
     font-weight: 500 !important;
     font-family: var(--mono-font) !important;
   }
