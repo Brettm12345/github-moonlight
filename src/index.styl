@@ -242,11 +242,9 @@ div[style*="linear-gradient"]
   &filter
     btc $border
   &tab
-    c $text
-    &:not([aria-selected=true])
-      c $cn $border $hl
-  &tab[aria-selected=true]
-    c $cn $border $hl
+    c $text $border $bg
+    &[aria-selected=true]
+      c $cn $border $alt
 .TimelineItem
   &--condensed &-badge
     size 30px
