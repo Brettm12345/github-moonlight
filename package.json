@@ -5,8 +5,8 @@
   "author": "brettm12345",
   "license": "MIT",
   "scripts": {
-    "build": "stylus -U ./github.user.styl",
-    "build:watch": "yarn build --watch",
+    "build": "cp ./metadata.css ./github.user.css && stylus -c -p github.user.styl >> ./github.user.css",
+    "build:watch": "stylus --watch github.user.styl",
     "lint": "stlint src",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch"

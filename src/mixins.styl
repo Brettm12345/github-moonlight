@@ -1,140 +1,200 @@
 $i = !important
-prop($p, $x, $xi = 1)
+prop($p, $x)
   if ($x is a 'call' || $x is a 'rgba')
-      {$p} $xi == 0 ? $x : $x $i
+      {$p} $x $i
 /**
- * c <foreground> <border-color> <background> <foreground-important> <border-important> <background-important>
+ * c <foreground> <border-color> <background>
  * use 0 to omit arguments
  */
-c($x, $y = 0, $z = 0, $xi = 1, $yi = 1, $zi = 1)
-  prop('color', $x, $xi)
-  prop('border-color', $y, $yi)
-  prop('background-color', $z, $zi)
+c($x, $y = 0, $z = 0)
+  +cache('x' + $x)
+    prop('color', $x)
+  +cache('y' + $y)
+    prop('border-color', $y)
+  +cache('z' + $z)
+    prop('background-color', $z)
 /**
  * v <fill> <stroke> <fill-important> <stroke-important>
  * use 0 to omit arguments
  */
-v($x, $y = 0, $xi = 1, $yi = 1)
-  prop('fill', $x, $xi)
-  prop('stroke', $y, $yi)
+v($x, $y = 0)
+  +cache('x' + $x)
+    prop('fill', $x)
+  +cache('y' + $y)
+    prop('stroke', $y)
 caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
-  &::before
-    border-{$direction}-color $borderColor
-  &::after
-    border-{$direction}-color $popupColor
+  +cache('direction' + $direction)
+    +cache('borderColor' + $borderColor)
+      &::before
+        border-{$direction}-color $borderColor
+    +cache('popupColor' + $popupColor)
+      &::after
+        border-{$direction}-color $popupColor
 bgi()
-  background-image arguments $i
+  +cache('args' + arguments)
+    background-image arguments $i
 bg()
-  background arguments $i
+  +cache('args' + arguments)
+    background arguments $i
 b()
-  border arguments $i
+  +cache('args' + arguments)
+    border arguments $i
 bc()
-  border-color arguments $i
+  +cache('args' + arguments)
+    border-color arguments $i
 bb()
-  border-bottom arguments $i
+  +cache('args' + arguments)
+    border-bottom arguments $i
 bbc()
-  border-bottom-color arguments $i
+  +cache('args' + arguments)
+    border-bottom-color arguments $i
 bt()
-  border-top arguments $i
+  +cache('args' + arguments)
+    border-top arguments $i
 btc()
-  border-top-color arguments $i
+  +cache('args' + arguments)
+    border-top-color arguments $i
 bl()
-  border-left arguments $i
+  +cache('args' + arguments)
+    border-left arguments $i
 blc()
-  border-left-color arguments $i
+  +cache('args' + arguments)
+    border-left-color arguments $i
 br()
-  border-right arguments $i
+  +cache('args' + arguments)
+    border-right arguments $i
 brc()
-  border-right-color arguments $i
+  +cache('args' + arguments)
+    border-right-color arguments $i
 by()
-  border-bottom arguments $i
-  border-top arguments $i
+  +cache('args' + arguments)
+    border-bottom arguments $i
+    border-top arguments $i
 byc()
-  border-bottom-color arguments $i
-  border-top-color arguments $i
+  +cache('args' + arguments)
+    border-bottom-color arguments $i
+    border-top-color arguments $i
 bx()
-  border-left arguments $i
-  border-right arguments $i
+  +cache('args' + arguments)
+    border-left arguments $i
+    border-right arguments $i
 bxc()
-  border-left-color arguments $i
-  border-right-color arguments $i
+  +cache('args' + arguments)
+    border-left-color arguments $i
+    border-right-color arguments $i
 r()
-  border-radius arguments $i
+  +cache('args' + arguments)
+    border-radius arguments $i
 rtl()
-  border-top-left-radius arguments $i
+  +cache('args' + arguments)
+    border-top-left-radius arguments $i
 rtr()
-  border-top-right-radius arguments $i
+  +cache('args' + arguments)
+    border-top-right-radius arguments $i
 rb()
-  border-bottom-left-radius arguments $i
-  border-bottom-right-radius arguments $i
+  +cache('args' + arguments)
+    border-bottom-left-radius arguments $i
+    border-bottom-right-radius arguments $i
 rbl()
-  border-bottom-left-radius arguments $i
+  +cache('args' + arguments)
+    border-bottom-left-radius arguments $i
 rbr()
-  border-bottom-right-radius arguments $i
+  +cache('args' + arguments)
+    border-bottom-right-radius arguments $i
 rt()
-  border-top-left-radius arguments $i
-  border-top-right-radius arguments $i
+  +cache('args' + arguments)
+    border-top-left-radius arguments $i
+    border-top-right-radius arguments $i
 m()
-  margin arguments $i
+  +cache('args' + arguments)
+    margin arguments $i
 mt()
-  margin-top arguments $i
+  +cache('args' + arguments)
+    margin-top arguments $i
 mb()
-  margin-bottom arguments $i
+  +cache('args' + arguments)
+    margin-bottom arguments $i
 ml()
-  margin-left arguments $i
+  +cache('args' + arguments)
+    margin-left arguments $i
 mr()
-  margin-right arguments $i
+  +cache('args' + arguments)
+    margin-right arguments $i
 my()
-  margin-top arguments $i
-  margin-bottom arguments $i
+  +cache('args' + arguments)
+    margin-top arguments $i
+    margin-bottom arguments $i
 mx()
-  margin-left arguments $i
-  margin-right arguments $i
+  +cache('args' + arguments)
+    margin-left arguments $i
+    margin-right arguments $i
 lh()
-  line-height arguments $i
+  +cache('args' + arguments)
+    line-height arguments $i
 p()
-  padding arguments $i
+  +cache('args' + arguments)
+    padding arguments $i
 px()
-  padding-left arguments $i
-  padding-right arguments $i
+  +cache('args' + arguments)
+    padding-left arguments $i
+    padding-right arguments $i
 py()
-  padding-bottom arguments $i
-  padding-top arguments $i
+  +cache('args' + arguments)
+    padding-bottom arguments $i
+    padding-top arguments $i
 pt()
-  padding-top arguments $i
+  +cache('args' + arguments)
+    padding-top arguments $i
 pb()
-  padding-bottom arguments $i
+  +cache('args' + arguments)
+    padding-bottom arguments $i
 pl()
-  padding-left arguments $i
+  +cache('args' + arguments)
+    padding-left arguments $i
 pr()
-  padding-right arguments $i
+  +cache('args' + arguments)
+    padding-right arguments $i
 po()
-  position arguments $i
+  +cache('args' + arguments)
+    position arguments $i
 s()
-  box-shadow arguments $i
+  +cache('args' + arguments)
+    box-shadow arguments $i
 o()
-  opacity arguments $i
+  +cache('args' + arguments)
+    opacity arguments $i
 a()
-  animation arguments $i
+  +cache('args' + arguments)
+    animation arguments $i
 tr()
-  transition arguments $i
+  +cache('args' + arguments)
+    transition arguments $i
 ease()
-  tr arguments 300ms $easeInOutCubic
+  +cache('args' + arguments)
+    tr arguments 300ms $easeInOutCubic
 fn()
-  font-family arguments $i
+  +cache('args' + arguments)
+    font-family arguments $i
 fs()
-  font-size arguments $i
+  +cache('args' + arguments)
+    font-size arguments $i
 fw()
-  font-weight arguments $i
+  +cache('args' + arguments)
+    font-weight arguments $i
 td()
-  text-decoration arguments $i
+  +cache('args' + arguments)
+    text-decoration arguments $i
 sbc()
-  scrollbar-color arguments $i
+  +cache('args' + arguments)
+    scrollbar-color arguments $i
 sbw()
-  scrollbar-width arguments $i
+  +cache('args' + arguments)
+    scrollbar-width arguments $i
 size($w, $h = $w)
-  height $h $i
-  width $w $i
+  +cache('h' + $h)
+    height $h $i
+  +cache('w' + $w)
+    width $w $i
 mono()
   fn $monoFont
 inv()

@@ -1,0 +1,88 @@
+/* ==UserStyle==
+@name         GitHub-Moonlight
+@namespace    https://github.com/brettm12345/github-moonlight
+@version      1.2.3
+@license      MIT
+@description  A dark blue github theme
+@author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
+@homepageURL  https://github.com/brettm12345/github-moonlight
+@supportURL   https://github.com/brettm12345/github-moonlight/issues
+@updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
+
+
+@var text  ui_font    "UI Font"        "Inter V"
+@var text  mono_font  "Monospace Font" "monospace"
+
+@var color red-light  "Light Red"      #ff757f
+@var color red        "Red"            #ff5370
+@var color orange     "Orange"         #ff995e
+@var color yellow     "Yellow"         #ffc777
+@var color green      "Green"          #c3e88d
+@var color teal       "Teal"           #4fd6be
+@var color blue       "Blue"           #82aaff
+@var color cyan       "Cyan"           #86e1fc
+@var color cyan-light "Light Cyan"     #b4f9f8
+@var color pink       "Pink"           #fca7ea
+@var color purple     "Purple"         #c597f9
+@var color indigo     "Indigo"         #7a88cf
+@var color border     "Border"         #131421
+@var color bg         "Background"     #191b28
+@var color alt        "Alt Background" #1e2030
+@var color hl         "Highlight"      #212337
+@var color icon       "Icon"           #2f334d
+@var color region     "Region"         #383e5c
+@var color hover      "Hover"          #444a73
+@var color faded      "Faded"          #7f85a3
+@var color text-color "Text"           #c8d3f5
+@var color text-alt   "Alt Text"       #b4c2f0
+@var color text-gray  "Gray Text"      #a9b8e8
+@var color cn         "Light text"     #ffffff
+
+
+@var color placeholder  "Placeholder"        #c8d3f5aa
+@var color red-trans    "Transparent Red"    #ff537033
+@var color yellow-trans "Transparent Yellow" #ffc77733
+@var color teal-trans   "Transparent Teal"   #4fd6be33
+@var color cyan-trans   "Transparent Cyan"   #86e1fc33
+@var color blue-trans   "Transparent Blue"   #82aaff33
+@var color purple-trans "Transparent Purple" #c597f933
+@var color sb           "Scrollbar"          #828bb830
+
+@preprocessor uso
+==/UserStyle== */
+:root {
+  --alt:  /*[[alt]]*/;
+  --bg:  /*[[bg]]*/;
+  --blue:  /*[[blue]]*/;
+  --blue-trans: /*[[blue-trans]]*/;
+  --border:  /*[[border]]*/;
+  --cn:  /*[[cn]]*/;
+  --cyan: /*[[cyan]]*/;
+  --cyan-light: /*[[cyan-light]]*/;
+  --cyan-trans:  /*[[cyan-trans]]*/;
+  --faded:  /*[[faded]]*/;
+  --green:  /*[[green]]*/;
+  --hl:  /*[[hl]]*/;
+  --hover:  /*[[hover]]*/;
+  --icon:  /*[[icon]]*/;
+  --indigo:  /*[[indigo]]*/;
+  --mono-font:  /*[[mono_font]]*/;
+  --orange:  /*[[orange]]*/;
+  --pink: /*[[pink]]*/;
+  --placeholder:  /*[[placeholder]]*/;
+  --purple:  /*[[purple]]*/;
+  --purple-trans:  /*[[purple-trans]]*/;
+  --red:  /*[[red]]*/;
+  --red-light: /*[[red-light]]*/;
+  --red-trans: /*[[red-trans]]*/;
+  --region: /*[[region]]*/;
+  --sb: /*[[sb]]*/;
+  --teal: /*[[teal]]*/;
+  --teal-trans: /*[[teal-trans]]*/;
+  --text: /*[[text-color]]*/;
+  --text-alt: /*[[text-alt]]*/;
+  --text-gray: /*[[text-gray]]*/;
+  --ui-font: /*[[ui_font]]*/;
+  --yellow: /*[[yellow]]*/;
+  --yellow-trans: /*[[yellow-trans]]*/;
+}
