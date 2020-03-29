@@ -1,23 +1,25 @@
 $i = !important
 prop($p, $x...)
   +cache('x', $x, 'p', $p)
-    if ($x is a 'call' || $x is a 'rgba' || $x == none)
-      {$p} $x $i
+    {$p} $x $i
+colorProp($p, $x)
+  if ($x is a 'call' || $x is a 'rgba' || $x == none)
+    prop $p $x
 /**
  * c <foreground> <border-color> <background>
  * use 0 to omit arguments
  */
 c($x, $y = 0, $z = 0)
-  prop 'color' $x
-  prop 'border-color' $y
-  prop 'background-color' $z
+  colorProp 'color' $x
+  colorProp 'border-color' $y
+  colorProp 'background-color' $z
 /**
  * v <fill> <stroke> <fill-important> <stroke-important>
  * use 0 to omit arguments
  */
 v($x, $y = 0)
-  prop 'fill'  $x
-  prop 'stroke'  $y
+  colorProp 'fill' $x
+  colorProp 'stroke' $y
 caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
   +cache('direction' + $direction)
     +cache('borderColor' + $borderColor)
@@ -32,40 +34,41 @@ bg($x...)
   prop 'background' $x
 b($x...)
   prop 'border' $x
-bc($x...)
+bc($x)
   prop 'border-color' $x
 bb($x...)
   prop 'border-bottom' $x
-bbc($x...)
+bbc($x)
   prop 'border-bottom-color' $x
 bt($x...)
   prop 'border-top' $x
-btc($x...)
+btc($x)
   prop 'border-top-color' $x
 bl($x...)
-  prop 'border-left'
-blc($x...)
+  prop 'border-left' $x
+blc($x)
   prop 'border-left-color' $x
 br($x...)
   prop 'border-right' $x
-brc($x...)
+brc($x)
   prop 'border-right-color' $x
 by($x...)
   +cache('x', $x)
-    bb $x
-    bt $x
-byc($x...)
+    for $d in top bottom
+      border-{$d} $x $i
+byc($x)
   +cache('x', $x)
-    bbc $x
-    btc $x
+    for $d in top bottom
+      border-{$d}-color $x $i
 bx($x...)
-  +cache('x' + $x)
-    bl $x
-    br $x
+  +cache('x', $x)
+    for $d in left right
+      border-{$d} $x $i
 bxc($x...)
   +cache('x' + $x)
-    blc $x
-    brc $x
+    for $d in left right
+      border-{$d}-color $x $i
+      border-{$d}-color $x $i
 r($x...)
   prop 'border-radius' $x
 rtl($x...)
@@ -74,16 +77,16 @@ rtr($x...)
   prop 'border-top-right-radius' $x
 rb($x...)
   +cache('x' + $x)
-    rbl $x
-    rbr $x
+    for $d in left right
+      border-bottom-{$d}-radius $x $i
+rt($x...)
+  +cache('x' + $x)
+    for $d in left right
+      border-top-{$d}-radius $x $i
 rbl($x...)
   prop 'border-bottom-left-radius' $x
 rbr($x...)
   prop 'border-bottom-right-radius' $x
-rt($x...)
-  +cache('x' + $x)
-    rtl $x
-    rtr $x
 m($x...)
   prop 'margin' $x
 mt($x...)
@@ -96,14 +99,14 @@ mr($x...)
   prop 'margin-right' $x
 my($x...)
   +cache('x' + $x)
-    mt $x
-    mb $x
+    for $d in top bottom
+      margin-{$d} $x $i
 mx($x...)
   +cache('x' + $x)
-    ml $x
-    mr $x
+    for $d in left right
+      margin-{$d} $x $i
 lh($x...)
-  prop 'line-height'
+  prop 'line-height' $x
 p($x...)
   prop 'padding' $x
 pt($x...)
@@ -116,12 +119,12 @@ pr($x...)
   prop 'padding-right' $x
 py($x...)
   +cache('x' + $x)
-    pb $x
-    pt $x
+    for $d in top bottom
+      padding-{$d} $x $i
 px($x...)
   +cache('x' + $x)
-    pl $x
-    pr $x
+    for $d in left right
+      padding-{$d} $x $i
 po($x...)
   prop 'position' $x
 s($x...)
