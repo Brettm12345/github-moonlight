@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.4
+@version      1.5.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1778,7 +1778,8 @@
     color: var(--base-1) !important;
   }
   .branch-action-body,
-  .timeline-comment-wrapper {
+  .timeline-comment-wrapper,
+  .previewable-comment-form .comment-form-head.tabnav {
     border: 0 !important;
   }
   .branch-action-body::before,
@@ -1841,7 +1842,6 @@
   }
   .filter-bar,
   .boxed-group-list > li,
-  .previewable-comment-form .comment-form-head.tabnav,
   .tabnav,
   .Header,
   .menu-item,
@@ -2184,16 +2184,6 @@
   path[fill="#eee"] {
     fill: var(--base-7) !important;
   }
-  .previewable-comment-form .comment-form-head.tabnav {
-    border-left: 0 !important;
-  }
-  .previewable-comment-form .comment-form-head.tabnav {
-    border-right: 0 !important;
-  }
-  .previewable-comment-form .comment-form-head.tabnav,
-  .Box-row:first-of-type {
-    border-top: 0 !important;
-  }
   .tabnav {
     margin-bottom: 0px !important;
   }
@@ -2341,6 +2331,9 @@
   .Box--responsive,
   .Boxrow--unread {
     box-shadow: inset 2px 0 0 var(--blue) !important;
+  }
+  .Box-row:first-of-type {
+    border-top: 0 !important;
   }
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 var(--base-1) !important;
