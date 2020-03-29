@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.9
+@version      1.2.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1166,6 +1166,7 @@
     color: var(--blue) !important;
   }
   .commit-desc pre {
+    color: var(--text) !important;
     background-color: var(--alt) !important;
   }
   .commits-listing:before {
@@ -1211,7 +1212,7 @@
     color: var(--text) !important;
   }
   .commits-list-item.navigation-focus {
-    background-color: var(--hover) !important;
+    background-color: var(--hl) !important;
   }
   .full-commit {
     color: var(--blue) !important;
@@ -2466,6 +2467,12 @@
   }
   .reponame-suggestion {
     color: var(--green) !important;
+  }
+  #tree-finder-field {
+    background-color: var(--bg) !important;
+  }
+  .tree-browser-result[aria-selected="true"] {
+    background-color: var(--hl) !important;
   }
 }
 @-moz-document domain('gist.github.com') {
