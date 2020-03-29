@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.8
+@version      1.1.9
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1630,6 +1630,9 @@
   .container-preview .tabnav-tabs {
     margin-left: 5% !important;
   }
+  .tabnav-tab {
+    color: var(--faded) !important;
+  }
   .tabnav-tabs.js-file-editor-nav .tabnav-tab {
     color: var(--faded) !important;
     border-color: var(--border) !important;
@@ -1652,9 +1655,6 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
-  }
-  .tabnav-tab {
-    color: var(--blue) !important;
   }
   .tabnav-tab.selected {
     color: var(--blue) !important;
@@ -2064,10 +2064,10 @@
   .pl-s > a {
     color: var(--green) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker) {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab) {
     color: var(--text) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):hover {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):hover {
     color: var(--blue) !important;
   }
   div.commit-build-statuses,

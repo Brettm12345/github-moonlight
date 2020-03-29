@@ -182,6 +182,8 @@ comment-form
   bb $b
   /.container-preview &-tabs
     ml 5%
+  &-tab
+    c $faded
   &-tabs.js-file-editor-nav &-tab
     c $faded $border $bg
     mt 8px
@@ -192,7 +194,6 @@ comment-form
       c $text $border $hl
   .&-pr, div
     ../-tab
-      c $blue
       &.selected
         &.js-blob-edit-
           &code, &preview
@@ -409,7 +410,7 @@ hr
     m 0
 .pl-s > a
   c $green
-:not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker)
+:not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab)
   c $text
   &:hover
     c $blue
