@@ -13,6 +13,7 @@
 @require "search"
 @require "release"
 @require "billing"
+@require "icons"
 @require "marketplace"
 @require "dropdowns"
 @require "issues"
@@ -108,35 +109,6 @@ img[src*="octocat-spinner-64.gif"]
     &.focus, &:focus
       c $cn $blue 0
       s none
-.octicon
-  color $text
-  &-repo
-    &, &-push, &-forked
-      mb 0.1em
-  &.merged, &-git-pull-request
-    c $purple
-  &-repo
-    c $faded
-  &-play
-    c $redLight
-  &-x, &-trashcan
-    c $red
-  &-repo-push, &-check, &.open
-    c $green
-  &[style*="#6a737d"]
-    c $textGray
-  &-alert, &-pencil, &-star, &-light-bulb
-    c $yellow
-  &-repo-forked, &-issue-opened
-    c $teal
-  &-issue-closed
-    c $red
-  &-project, &-eye
-    c $blue
-  &-package, &-rss, &-flame
-    c $orange
-  &-smiley, &-file
-    c $indigo
 .muted-link
   c $faded
   &:hover
@@ -210,8 +182,6 @@ comment-form
 .branch-name
   c $text $border $region
 .select-menu-
-  &item .octicon-check
-    c $green
   &header, &header &title
     c $cn $border $bg
   &modal, &item
@@ -299,8 +269,6 @@ table.files
       c $text
     &.icon
       c $text
-      .octicon-file-directory
-        c $blue
 .TimelineItem
   &-badge
     c 0 $hl
@@ -565,6 +533,8 @@ div.commit-build-statuses,
     v $yellow
 .Popover-message
   c $text $border
+  &--bottom-right
+    caret 'top' $alt $alt
   &--top-right
     caret "bottom" $alt $alt
   &--top-left

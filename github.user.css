@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.1
+@version      1.4.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -604,11 +604,12 @@
   relative-time,
   .simple-conversation-list,
   .pulse-section,
+  .octicon-mute,
+  .octicon-repo,
   .full-commit .sha-block,
   .discussion-sidebar-item,
   .pinned-item-name,
   .hook-delivery-time,
-  .octicon-repo,
   .muted-link,
   .tabnav-extra,
   .tabnav-tab,
@@ -1255,10 +1256,10 @@
   .pl-md,
   .text-red,
   .cdel,
-  .State--red,
   .octicon-x,
   .octicon-trashcan,
   .octicon-issue-closed,
+  .State--red,
   .btn-octicon-danger:hover,
   code .na {
     color: var(--red) !important;
@@ -1301,12 +1302,11 @@
   a.module-linker,
   .text-green,
   .cadd,
-  .signed-commit-verified-label,
-  .signed-commit-badge.verified,
   .octicon-repo-push,
   .octicon-check,
   .octicon.open,
-  .select-menu-item .octicon-check,
+  .signed-commit-verified-label,
+  .signed-commit-badge.verified,
   .SelectMenu-icon--check,
   .pl-s > a,
   .reponame-suggestion,
@@ -1338,6 +1338,10 @@
   .gitako-side-bar .gitako-side-bar-body .octicon:focus,
   .text-blue,
   .text-emphasized,
+  .octicon-file-directory,
+  .octicon-saved,
+  .octicon-project,
+  .octicon-eye,
   .commit-author-section,
   .commit-ref .user,
   .commit-tease,
@@ -1347,14 +1351,11 @@
   .full-commit .sha-block > .sha,
   .orghead .org-name,
   .orghead .pagehead-tabs-item.selected,
-  .octicon-project,
-  .octicon-eye,
   .muted-link:hover,
   .tabnav-tab.selected,
   .tabnav-tab.selected.js-blob-edit-code,
   .tabnav-tab.selected.js-blob-edit-preview,
   .tabnav-tab .Counter,
-  table.files td.icon .octicon-file-directory,
   .topic-tag-action,
   .topic-tag-action button,
   .topic-tag-action a,
@@ -1403,11 +1404,12 @@
     color: var(--red-light) !important;
   }
   .pl-k,
+  .text-purple,
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .issue-keyword,
-  .State--purple,
   .octicon.merged,
   .octicon-git-pull-request,
+  .issue-keyword,
+  .State--purple,
   .diffstat-summary strong,
   .graphiql-container .keyword,
   .cm-keyword {
@@ -1432,12 +1434,13 @@
   }
   .pl-smw,
   .pl-mi,
-  .commit-sha,
-  mark,
+  .octicon-inbox,
   .octicon-alert,
   .octicon-pencil,
   .octicon-star,
   .octicon-light-bulb,
+  .commit-sha,
+  mark,
   .flash-warn,
   .protip  > strong,
   .cm-attribute,
@@ -1464,9 +1467,9 @@
   }
   .pl-mi1,
   .pl-mdr,
-  .State--green,
   .octicon-repo-forked,
   .octicon-issue-opened,
+  .State--green,
   .cm-property,
   .command-line span.output {
     color: var(--teal) !important;
@@ -1819,6 +1822,18 @@
   .graphiql-container .resultWrap {
     border-left-color: var(--border) !important;
   }
+  .octicon {
+    color: var(--text);
+  }
+  .octicon-repo,
+  .octicon-repo-push,
+  .octicon-repo-forked {
+    margin-bottom: 0.1em !important;
+  }
+  .octicon[style*="#6a737d"],
+  .vcard-username {
+    color: var(--text-gray) !important;
+  }
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
   }
@@ -1919,10 +1934,6 @@
   }
   .repo-list {
     padding: 0 12px !important;
-  }
-  .vcard-username,
-  .octicon[style*="#6a737d"] {
-    color: var(--text-gray) !important;
   }
   .vcard-detail .octicon {
     color: var(--faded) !important;
@@ -2062,14 +2073,6 @@
   img[src*="octocat-spinner-64.gif"] {
     filter: invert(1);
   }
-  .octicon {
-    color: var(--text);
-  }
-  .octicon-repo,
-  .octicon-repo-push,
-  .octicon-repo-forked {
-    margin-bottom: 0.1em !important;
-  }
   .diffstat-block-neutral {
     background-color: var(--sb) !important;
   }
@@ -2173,6 +2176,11 @@
   rect[fill="#c0aa12"] {
     fill: var(--yellow) !important;
   }
+  .Popover-message--bottom-right::before,
+  .Popover-message--bottom-right::after,
+  .Popover-message--bottom-left::after {
+    border-top-color: var(--alt) !important;
+  }
   .Popover-message--top-right::before,
   .Popover-message--top-right::after,
   body::after,
@@ -2192,9 +2200,6 @@
   }
   .Popover-message--top-left::after {
     border-bottom-color: var(--hl) !important;
-  }
-  .Popover-message--bottom-left::after {
-    border-top-color: var(--alt) !important;
   }
   .UnderlineNav-item:hover {
     border-bottom-color: var(--region) !important;
