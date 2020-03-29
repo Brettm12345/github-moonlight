@@ -15,6 +15,7 @@ made with :heart:
     - [[#custom-colors][Custom colors]]
     - [[#custom-fonts][Custom fonts]]
     - [[#complete-theme][Complete theme]]
+    - [[#blazing-fast][Blazing Fast]]
     - [[#smooth-transitions][Smooth transitions]]
 - [[#recomended-fonts][Recomended Fonts]]
 - [[#recomended-extensions][Recomended Extensions]]
@@ -48,6 +49,9 @@ The ui and the monospace fonts are easily customizable through css variables
 This theme changes 100% of the github ui. If you want to teak
 the colors to match the rest of your system go ahead! Forks and pull requests
 are welcome!
+*** Blazing Fast
+Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
+compression to consolidate and minify selectors
 *** Smooth transitions
 This theme adds easings from [[https://easings.net][easings.net]] so that color
 changes appear smoother.
