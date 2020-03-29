@@ -271,7 +271,7 @@ table.files
       c $text
 .TimelineItem
   &-badge
-    c 0 $hl
+    c 0 $hl $alt
     ../--condensed &
       size 30px
   &-break
@@ -280,7 +280,8 @@ table.files
     &:before
       c 0 0 $hl
     &-badge, &--condensed &-badge
-      c $hover $hl $bg
+      b 2px solid $hl
+      c $hover $hl $alt
     &-body
       c $faded
 .border,
@@ -300,6 +301,9 @@ table.files
     c $cn $blue $region
 .auth-form-body
   c $text $border $alt
+.numbers-summary li
+  &> .nolink, &>a
+    c $faded
 .topic-tag
   b $b
   &-outline

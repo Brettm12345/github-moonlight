@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.2
+@version      1.4.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -197,6 +197,12 @@
   .SelectMenu-footer,
   .SelectMenu-tab[aria-selected=true],
   .gh-header-sticky.is-stuck + .gh-header-shadow,
+  .TimelineItem-badge,
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
+  .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .btn.btn-sm,
   .auth-form-body,
   .topic-tag,
@@ -274,7 +280,6 @@
   .blob-expanded + tr:not(.blob-expanded) .blob-code,
   .blob-expanded + tr:not(.blob-expanded) .blob-num,
   .blob-expanded .blob-num-hunk,
-  .TimelineItem-badge,
   .avatar-before-user-status,
   tr:not(.blob-expanded) + .blob-expanded .blob-code,
   tr:not(.blob-expanded) + .blob-expanded .blob-num,
@@ -620,6 +625,8 @@
   .TimelineItem .merge-pr-more-commits-body,
   .btn:disabled,
   .btn:disabled:hover,
+  .numbers-summary li> .nolink,
+  .numbers-summary li>a,
   div.commit-build-statuses,
   .link-gray,
   .pinned-item-list-item .pinned-item-handle,
@@ -787,12 +794,6 @@
   .SelectMenu-tab,
   .btn-mktg,
   .Header,
-  .TimelineItem-badge,
-  .TimelineItem .status-meta-badge,
-  .TimelineItem .merge-pr-more-commits-badge,
-  .TimelineItem--condensed .TimelineItem-badge,
-  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
-  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .reponav-item.selected,
   .flash,
   .application-main > main > div.border-bottom.border-gray-light,
@@ -2116,6 +2117,14 @@
   }
   .TimelineItem--condensed .TimelineItem-badge {
     width: 30px !important;
+  }
+  .TimelineItem-badge,
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
+  .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
+    border: 2px solid var(--hl) !important;
   }
   .btn,
   .btn:hover,
