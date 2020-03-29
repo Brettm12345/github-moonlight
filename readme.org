@@ -1,4 +1,4 @@
-# Created 2020-03-29 Sun 04:07
+# Created 2020-03-29 Sun 12:44
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+html: <div align="center">
@@ -17,21 +17,25 @@ made with :heart:
 #+html: </div>
 
 * Features
-*** Custom colors
+*** Custom Colors
 All color variables are easily customizable
 check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
-*** Custom fonts
+*** Custom Fonts
 The ui and the monospace fonts are easily customizable through css variables
-*** Complete theme
+*** Complete Theme
 This theme changes 100% of the github ui. If you want to teak
 the colors to match the rest of your system go ahead! Forks and pull requests
 are welcome!
 *** Blazing Fast
 Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
 compression to consolidate and minify selectors
-*** Smooth transitions
+*** Smooth Transitions
 This theme adds easings from [[https://easings.net][easings.net]] so that color
 changes appear smoother.
+*** Extendible Code
+The theme being written in stylus and with many mixins minimizes boilerplate and
+allows for an optimized development workflow. Making it easy to create themes
+based off of this one and customize all aspects of the theme.
 * Recomended Fonts
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
