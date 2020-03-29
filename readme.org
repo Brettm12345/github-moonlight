@@ -12,6 +12,10 @@ made with :heart:
 * Table of Contents :TOC_3_gh:
 - [[#github-moonlight][Github Moonlight]]
 - [[#features][Features]]
+    - [[#custom-colors][Custom colors]]
+    - [[#custom-fonts][Custom fonts]]
+    - [[#complete-theme][Complete theme]]
+    - [[#smooth-transitions][Smooth transitions]]
 - [[#recomended-fonts][Recomended Fonts]]
 - [[#recomended-extensions][Recomended Extensions]]
 - [[#screenshots][Screenshots]]
@@ -32,13 +36,19 @@ made with :heart:
 - [[#todo][Todo]]
 
 * Features
-- Custom colors: All color variables are easily customizable
-- Custom fonts: Allow the user to pick custom fonts
-- Complete theme: This theme changes 100% of the github ui. If you want to teak
-  the colors to match the rest of your system go ahead! Forks and pull requests
-  are welcome!
-- Smooth transitions: This theme adds easings from [[https://easings.net][easings.net]] so that color
-  changes appear smoother.
+*** Custom colors
+All color variables are easily customizable
+check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
+*** Custom fonts
+The ui and the monospace fonts are easily customizable through css variables
+
+*** Complete theme
+This theme changes 100% of the github ui. If you want to teak
+the colors to match the rest of your system go ahead! Forks and pull requests
+are welcome!
+*** Smooth transitions
+This theme adds easings from [[https://easings.net][easings.net]] so that color
+changes appear smoother.
 * Recomended Fonts
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
@@ -81,11 +91,11 @@ These are the fonts used in the screenshots
 * Todo
 Feel free to create an issue if you want anything added to the theme
 
-  - [X] Add support for github api docs
-  - [X] Put colors into usercss variables
-  - [X] Add screenshots to readme
-  - [X] Add styles for actions
-  - [X] Add styles for insights
-  - [X] Finish theming pull request creation
-  - [X] Setup a usercss with user configurable variables
-  - [X] Add badges to readme.org
+- [X] Add support for github api docs
+- [X] Put colors into usercss variables
+- [X] Add screenshots to readme
+- [X] Add styles for actions
+- [X] Add styles for insights
+- [X] Finish theming pull request creation
+- [X] Setup a usercss with user configurable variables
+- [X] Add badges to readme.org
