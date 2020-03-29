@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.3.1
+@version      1.3.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -2088,21 +2088,23 @@
   rect[fill="#c0aa12"] {
     fill: var(--yellow) !important;
   }
+  .Popover-message--top-right::before,
   .Popover-message--top-left::before,
   body::before,
   .layout-content.status.status-api .section .example-container .example-opener .color-secondary::before,
   .grouped-items-selector::before,
   .layout-content.status.status-full-history .history-nav a.current::before,
   #uptime-tooltip .tooltip-box::before {
-    border-bottom-color: var(--border);
+    border-bottom-color: var(--alt);
   }
+  .Popover-message--top-right::after,
   .Popover-message--top-left::after,
   body::after,
   .layout-content.status.status-api .section .example-container .example-opener .color-secondary::after,
   .grouped-items-selector::after,
   .layout-content.status.status-full-history .history-nav a.current::after,
   #uptime-tooltip .tooltip-box::after {
-    border-bottom-color: var(--hl);
+    border-bottom-color: var(--alt);
   }
   .UnderlineNav-item:hover {
     border-bottom-color: var(--region) !important;
