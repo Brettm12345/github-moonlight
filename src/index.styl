@@ -113,16 +113,34 @@ img[src*="octocat-spinner-64.gif"]
       c $cn $blue 0
       s none
 .octicon
+  color $text
   mb 0.2em
   transform scale(1.1)
-  &.open
+  &-repo
+    &, &-push, &-forked
+      mb 0.1em
+  &.merged, &-git-pull-request
+    c $purple
+  &-repo
+    c $faded
+  &-play
+    c $redLight
+  &-repo-push, &-check, &.open
     c $green
   &[style*="#6a737d"]
     c $textGray
-  &&-smiley, &&-file
+  &-star, &-light-bulb
+    c $yellow
+  &-repo-forked, &-issue-opened
+    c $teal
+  &-issue-closed
+    c $red
+  &-project, &-eye
+    c $blue
+  &-package, &-rss, &-flame
+    c $orange
+  &-smiley, &-file
     c $indigo
-  &:not(.text-green):not(.text-red):not(&-check):not(&-smiley):not(&-file):not(.X):not(.Gear):not(&-x):not(&-file-directory)
-    c $text
 .muted-link
   c $faded
   &:hover
@@ -347,13 +365,17 @@ div.listgroup-item
   &:focus, &:hover
     c $blue
   c $blue
+  .octicon
+    c $indigo
+    filter contrast(0.5)
+    o 0.8
   &.selected
     bc $hl $border transparent
     c $blue 0 $bg
-    octicon $cn
-  .octicon
-    c $text
-    o 1
+    .octicon
+      c $text
+      filter none
+      o 1
 .pagehead-tabs-item,
 .pagehead,
 .repohead.experiment-repo-nav
@@ -557,7 +579,7 @@ div.commit-build-statuses,
   &--top-left
     caret "bottom" $hl
   &--bottom-left
-    caret "top" $hl
+    caret "top"
 .UnderlineNav-item
   &:hover
     bbc $region

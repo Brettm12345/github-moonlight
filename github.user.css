@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.2.1
+@version      1.2.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -73,6 +73,7 @@
   --purple: /*[[purple]]*/;
   --purple-trans: /*[[purple-trans]]*/;
   --red: /*[[red]]*/;
+  --red-light: /*[[red-light]]*/;
   --red-trans: /*[[red-trans]]*/;
   --region: /*[[region]]*/;
   --sb: /*[[sb]]*/;
@@ -779,7 +780,7 @@
     background-color: var(--hl) !important;
   }
   .branch-action-body::before {
-    border-right-color: var(--alt);
+    border-right-color: var(--border);
   }
   .branch-action-body::after {
     border-right-color: var(--alt);
@@ -828,7 +829,7 @@
     border-right-color: var(--alt) !important;
   }
   .composer.composer-responsive .timeline-comment::before {
-    border-right-color: var(--alt);
+    border-right-color: var(--border);
   }
   .composer.composer-responsive .timeline-comment::after {
     border-right-color: var(--alt);
@@ -1092,7 +1093,7 @@
     border-color: var(--border) !important;
   }
   .dropdown-signed-commit .dropdown-menu-w::before {
-    border-left-color: var(--bg);
+    border-left-color: var(--border);
   }
   .dropdown-signed-commit .dropdown-menu-w::after {
     border-left-color: var(--bg);
@@ -1103,7 +1104,7 @@
     background-color: var(--alt) !important;
   }
   .dropdown-menu-ne::before {
-    border-top-color: var(--hl);
+    border-top-color: var(--border);
   }
   .dropdown-menu-ne::after {
     border-top-color: var(--hl);
@@ -1157,7 +1158,7 @@
     font-weight: 500 !important;
   }
   #first-time-contributor .Popover-message::before {
-    border-right-color: var(--alt);
+    border-right-color: var(--border);
   }
   #first-time-contributor .Popover-message::after {
     border-right-color: var(--alt);
@@ -1246,7 +1247,7 @@
     background-color: var(--alt) !important;
   }
   .commit-form::before {
-    border-right-color: var(--alt);
+    border-right-color: var(--border);
   }
   .commit-form::after {
     border-right-color: var(--alt);
@@ -1536,21 +1537,56 @@
     box-shadow: none !important;
   }
   .octicon {
+    color: var(--text);
     margin-bottom: 0.2em !important;
     transform: scale(1.1);
   }
+  .octicon-repo,
+  .octicon-repo-push,
+  .octicon-repo-forked {
+    margin-bottom: 0.1em !important;
+  }
+  .octicon.merged,
+  .octicon-git-pull-request {
+    color: var(--purple) !important;
+  }
+  .octicon-repo {
+    color: var(--faded) !important;
+  }
+  .octicon-play {
+    color: var(--red-light) !important;
+  }
+  .octicon-repo-push,
+  .octicon-check,
   .octicon.open {
     color: var(--green) !important;
   }
   .octicon[style*="#6a737d"] {
     color: var(--text-gray) !important;
   }
-  .octicon.octicon-smiley,
-  .octicon.octicon-file {
-    color: var(--indigo) !important;
+  .octicon-star,
+  .octicon-light-bulb {
+    color: var(--yellow) !important;
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check):not(.octicon-smiley):not(.octicon-file):not(.X):not(.Gear):not(.octicon-x):not(.octicon-file-directory) {
-    color: var(--text) !important;
+  .octicon-repo-forked,
+  .octicon-issue-opened {
+    color: var(--teal) !important;
+  }
+  .octicon-issue-closed {
+    color: var(--red) !important;
+  }
+  .octicon-project,
+  .octicon-eye {
+    color: var(--blue) !important;
+  }
+  .octicon-package,
+  .octicon-rss,
+  .octicon-flame {
+    color: var(--orange) !important;
+  }
+  .octicon-smiley,
+  .octicon-file {
+    color: var(--indigo) !important;
   }
   .muted-link {
     color: var(--faded) !important;
@@ -1952,16 +1988,19 @@
   .reponav-item:hover {
     color: var(--blue) !important;
   }
+  .reponav-item .octicon {
+    color: var(--indigo) !important;
+    filter: contrast(0.5);
+    opacity: 0.8 !important;
+  }
   .reponav-item.selected {
     border-color: var(--hl) var(--border) transparent !important;
     color: var(--blue) !important;
     background-color: var(--bg) !important;
   }
   .reponav-item.selected .octicon {
-    color: var(--cn) !important;
-  }
-  .reponav-item .octicon {
     color: var(--text) !important;
+    filter: none;
     opacity: 1 !important;
   }
   .pagehead-tabs-item,
@@ -2301,16 +2340,16 @@
     border-color: var(--border) !important;
   }
   .Popover-message--top-left::before {
-    border-bottom-color: var(--hl);
+    border-bottom-color: var(--border);
   }
   .Popover-message--top-left::after {
     border-bottom-color: var(--hl);
   }
   .Popover-message--bottom-left::before {
-    border-top-color: var(--hl);
+    border-top-color: var(--border);
   }
   .Popover-message--bottom-left::after {
-    border-top-color: var(--hl);
+    border-top-color: var(--alt);
   }
   .UnderlineNav-item:hover {
     border-bottom-color: var(--region) !important;
@@ -2914,7 +2953,7 @@
   .grouped-items-selector::before,
   .layout-content.status.status-full-history .history-nav a.current::before,
   #uptime-tooltip .tooltip-box::before {
-    border-bottom-color: var(--alt);
+    border-bottom-color: var(--border);
   }
   body::after,
   .layout-content.status.status-api .section .example-container .example-opener .color-secondary::after,

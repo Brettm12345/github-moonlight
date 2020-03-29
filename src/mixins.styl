@@ -17,9 +17,9 @@ c($x, $y = 0, $z = 0, $xi = 1, $yi = 1, $zi = 1)
 v($x, $y = 0, $xi = 1, $yi = 1)
   prop('fill', $x, $xi)
   prop('stroke', $y, $yi)
-caret($direction = 'bottom', $popupColor = $alt)
+caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
   &::before
-    border-{$direction}-color $popupColor
+    border-{$direction}-color $borderColor
   &::after
     border-{$direction}-color $popupColor
 bgi()
