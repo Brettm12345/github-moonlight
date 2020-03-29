@@ -6,7 +6,6 @@
   c 0 $border $hl
   p
     c $text
-
 .comment-reactions
   .user-has-reacted
     c 0 $border $hl
@@ -100,8 +99,9 @@ ul.comparison-list
         brc $alt
 .composer.composer-responsive .timeline-comment
   caret "right"
-.tabnav-pr .tabnav-tab.js-pjax-history-navigate.selected
-  c 0 0 $bg
+.tabnav
+  &-pr &-tab.selected
+    c 0 0 $bg
 .review-
   &thread-reply
     c 0 $border $alt

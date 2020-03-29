@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.0
+@version      1.4.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -756,7 +756,7 @@
   .pr-toolbar,
   .gitako-ready .js-header-wrapper,
   .bg-gray-dark,
-  .tabnav-pr .tabnav-tab.js-pjax-history-navigate.selected,
+  .tabnav-pr .tabnav-tab.selected,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .signed-commit-header,
   .commit-ref,
