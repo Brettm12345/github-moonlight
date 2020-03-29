@@ -1,5 +1,5 @@
 $i = !important
-prop($p, $x)
+prop($p, $x...)
   +cache('x', $x, 'p', $p)
     if ($x is a 'call' || $x is a 'rgba')
       {$p} $x $i
@@ -8,18 +8,16 @@ prop($p, $x)
  * use 0 to omit arguments
  */
 c($x, $y = 0, $z = 0)
-  prop('color', $x)
-  prop('border-color', $y)
-  prop('background-color', $z)
+  prop 'color' $x
+  prop 'border-color' $y
+  prop 'background-color' $z
 /**
  * v <fill> <stroke> <fill-important> <stroke-important>
  * use 0 to omit arguments
  */
 v($x, $y = 0)
-  +cache('x' + $x)
-    prop('fill', $x)
-  +cache('y' + $y)
-    prop('stroke', $y)
+  prop 'fill'  $x
+  prop 'stroke'  $y
 caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
   +cache('direction' + $direction)
     +cache('borderColor' + $borderColor)
@@ -28,166 +26,127 @@ caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
     +cache('popupColor' + $popupColor)
       &::after
         border-{$direction}-color $popupColor
-bgi()
-  +cache('args' + arguments)
-    background-image arguments $i
-bg()
-  +cache('args' + arguments)
-    background arguments $i
-b()
-  +cache('args' + arguments)
-    border arguments $i
-bc()
-  +cache('args' + arguments)
-    border-color arguments $i
-bb()
-  +cache('args' + arguments)
-    border-bottom arguments $i
-bbc()
-  +cache('args' + arguments)
-    border-bottom-color arguments $i
-bt()
-  +cache('args' + arguments)
-    border-top arguments $i
-btc()
-  +cache('args' + arguments)
-    border-top-color arguments $i
-bl()
-  +cache('args' + arguments)
-    border-left arguments $i
-blc()
-  +cache('args' + arguments)
-    border-left-color arguments $i
-br()
-  +cache('args' + arguments)
-    border-right arguments $i
-brc()
-  +cache('args' + arguments)
-    border-right-color arguments $i
-by()
-  +cache('args' + arguments)
-    border-bottom arguments $i
-    border-top arguments $i
-byc()
-  +cache('args' + arguments)
-    border-bottom-color arguments $i
-    border-top-color arguments $i
-bx()
-  +cache('args' + arguments)
-    border-left arguments $i
-    border-right arguments $i
-bxc()
-  +cache('args' + arguments)
-    border-left-color arguments $i
-    border-right-color arguments $i
-r()
-  +cache('args' + arguments)
-    border-radius arguments $i
-rtl()
-  +cache('args' + arguments)
-    border-top-left-radius arguments $i
-rtr()
-  +cache('args' + arguments)
-    border-top-right-radius arguments $i
-rb()
-  +cache('args' + arguments)
-    border-bottom-left-radius arguments $i
-    border-bottom-right-radius arguments $i
-rbl()
-  +cache('args' + arguments)
-    border-bottom-left-radius arguments $i
-rbr()
-  +cache('args' + arguments)
-    border-bottom-right-radius arguments $i
-rt()
-  +cache('args' + arguments)
-    border-top-left-radius arguments $i
-    border-top-right-radius arguments $i
-m()
-  +cache('args' + arguments)
-    margin arguments $i
-mt()
-  +cache('args' + arguments)
-    margin-top arguments $i
-mb()
-  +cache('args' + arguments)
-    margin-bottom arguments $i
-ml()
-  +cache('args' + arguments)
-    margin-left arguments $i
-mr()
-  +cache('args' + arguments)
-    margin-right arguments $i
-my()
-  +cache('args' + arguments)
-    margin-top arguments $i
-    margin-bottom arguments $i
-mx()
-  +cache('args' + arguments)
-    margin-left arguments $i
-    margin-right arguments $i
-lh()
-  +cache('args' + arguments)
-    line-height arguments $i
-p()
-  +cache('args' + arguments)
-    padding arguments $i
-px()
-  +cache('args' + arguments)
-    padding-left arguments $i
-    padding-right arguments $i
-py()
-  +cache('args' + arguments)
-    padding-bottom arguments $i
-    padding-top arguments $i
-pt()
-  +cache('args' + arguments)
-    padding-top arguments $i
-pb()
-  +cache('args' + arguments)
-    padding-bottom arguments $i
-pl()
-  +cache('args' + arguments)
-    padding-left arguments $i
-pr()
-  +cache('args' + arguments)
-    padding-right arguments $i
-po()
-  +cache('args' + arguments)
-    position arguments $i
-s()
-  +cache('args' + arguments)
-    box-shadow arguments $i
-o()
-  +cache('args' + arguments)
-    opacity arguments $i
-a()
-  +cache('args' + arguments)
-    animation arguments $i
-tr()
-  +cache('args' + arguments)
-    transition arguments $i
-ease()
-  +cache('args' + arguments)
-    tr arguments 300ms $easeInOutCubic
-fn()
-  +cache('args' + arguments)
-    font-family arguments $i
-fs()
-  +cache('args' + arguments)
-    font-size arguments $i
-fw()
-  +cache('args' + arguments)
-    font-weight arguments $i
-td()
-  +cache('args' + arguments)
-    text-decoration arguments $i
-sbc()
-  +cache('args' + arguments)
-    scrollbar-color arguments $i
-sbw()
-  +cache('args' + arguments)
-    scrollbar-width arguments $i
+bgi($x...)
+  prop 'background-image' $x
+bg($x...)
+  prop 'background' $x
+b($x...)
+  prop 'border' $x
+bc($x...)
+  prop 'border-color' $x
+bb($x...)
+  prop 'border-bottom' $x
+bbc($x...)
+  prop 'border-bottom-color' $x
+bt($x...)
+  prop 'border-top' $x
+btc($x...)
+  prop 'border-top-color' $x
+bl($x...)
+  prop 'border-left'
+blc($x...)
+  prop 'border-left-color' $x
+br($x...)
+  prop 'border-right' $x
+brc($x...)
+  prop 'border-right-color' $x
+by($x...)
+  +cache('x', $x)
+    bb $x
+    bt $x
+byc($x...)
+  +cache('x', $x)
+    bbc $x
+    btc $x
+bx($x...)
+  +cache('x' + $x)
+    bl $x
+    br $x
+bxc($x...)
+  +cache('x' + $x)
+    blc $x
+    brc $x
+r($x...)
+  prop 'border-radius' $x
+rtl($x...)
+  prop 'border-top-left-radius' $x
+rtr($x...)
+  prop 'border-top-right-radius' $x
+rb($x...)
+  +cache('x' + $x)
+    rbl $x
+    rbr $x
+rbl($x...)
+  prop 'border-bottom-left-radius' $x
+rbr($x...)
+  prop 'border-bottom-right-radius' $x
+rt($x...)
+  +cache('x' + $x)
+    rtl $x
+    rtr $x
+m($x...)
+  prop 'margin' $x
+mt($x...)
+  prop 'margin-top' $x
+mb($x...)
+  prop 'margin-bottom' $x
+ml($x...)
+  prop 'margin-left' $x
+mr($x...)
+  prop 'margin-right' $x
+my($x...)
+  +cache('x' + $x)
+    mt $x
+    mb $x
+mx($x...)
+  +cache('x' + $x)
+    ml $x
+    mr $x
+lh($x...)
+  prop 'line-height'
+p($x...)
+  prop 'padding' $x
+pt($x...)
+  prop 'padding-top' $x
+pb($x...)
+  prop 'padding-bottom' $x
+pl($x...)
+  prop 'padding-left' $x
+pr($x...)
+  prop 'padding-right' $x
+py($x...)
+  +cache('x' + $x)
+    pb $x
+    pt $x
+px($x...)
+  +cache('x' + $x)
+    pl $x
+    pr $x
+po($x...)
+  prop 'position' $x
+s($x...)
+  prop 'box-shadow' $x
+o($x...)
+  prop 'opacity' $x
+a($x...)
+  prop 'animation' $x
+tr($x...)
+  prop 'transition' $x
+ease($x...)
+  +cache('x' + $x)
+    tr $x 300ms $easeInOutCubic
+fn($x...)
+  prop 'font-family' $x
+fs($x...)
+  prop 'font-size' $x
+fw($x...)
+  prop 'font-weight' $x
+td($x...)
+  prop 'text-decoration' $x
+sbc($x...)
+  prop 'scrollbar-color' $x
+sbw($x...)
+  prop 'scrollbar-width' $x
 size($w, $h = $w)
   +cache('h' + $h)
     height $h $i
@@ -202,10 +161,10 @@ box()
   ease border-color, background-color
   &:hover, &:focus
     c 0 $blue $hl
-octicon()
-  +cache('args' + arguments)
+octicon($x...)
+  +cache('x' + $x)
     .octicon
-      c arguments
+      c $x
 s-1()
   s 0 2px 5px 0 rgba(black, 0.26)
 s-2()
