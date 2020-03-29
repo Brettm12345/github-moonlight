@@ -19,6 +19,7 @@
 @require "commits"
 @require "dashboard"
 @require "team"
+@require "webhooks"
 
 *
   sbc $sb $bg
@@ -185,7 +186,7 @@ comment-form
   bb $b
   /.container-preview &-tabs
     ml 5%
-  &-tab
+  &-extra, &-tab
     c $faded
   &-tabs.js-file-editor-nav &-tab
     c $faded $border $bg

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.3.2
+@version      1.3.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -167,6 +167,7 @@
   .team-left-column[aria-label="Explore"] > div,
   .team-left-column[aria-label="Explore"].bg-white,
   .orgs-help-item-octicon,
+  .hook-delivery-guid,
   img,
   .blob-num,
   .blob-expandedcode,
@@ -401,6 +402,7 @@
   .team-left-column > div,
   .team-left-column[aria-label="Explore"] > div,
   .orgs-help-item-octicon,
+  .hook-delivery-guid,
   kbd,
   .blob-num,
   .blob-expandedcode,
@@ -588,8 +590,10 @@
   .full-commit .sha-block,
   .discussion-sidebar-item,
   .pinned-item-name,
+  .hook-delivery-time,
   .octicon-repo,
   .muted-link,
+  .tabnav-extra,
   .tabnav-tab,
   .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .tabnav--responsive .tabnav-tab,
@@ -748,6 +752,7 @@
   .private .mini-repo-list-item,
   .orghead .pagehead-tabs-item.selected,
   .team-left-column > div,
+  .hook-delivery-container .tabnav-tab[aria-selected="true"],
   body,
   body.page-responsive.pagehead,
   kbd,
@@ -1069,6 +1074,7 @@
   .discussion-sidebar-heading,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .dashboard-notice h2,
+  .hook-delivery-guid,
   body,
   h1,
   kbd,
@@ -1180,6 +1186,7 @@
   .user-profile-nav,
   .dashboard-notice,
   .team-left-column[aria-label="Explore"] > div,
+  .hook-delivery-guid,
   fieldset,
   .border,
   .rgh-collaborator,
@@ -1743,6 +1750,7 @@
     border-radius: 8px !important;
   }
   .filter-bar,
+  .boxed-group-list > li,
   .previewable-comment-form .comment-form-head.tabnav,
   .tabnav,
   .menu-item,
