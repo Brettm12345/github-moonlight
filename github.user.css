@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.3
+@version      1.4.4
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1233,7 +1233,8 @@
     background-color: var(--red) !important;
   }
   .Toast--warning .Toast-icon,
-  .Toast--success .Toast-icon {
+  .Toast--success .Toast-icon,
+  .IssueLabel {
     color: var(--bg) !important;
   }
   .Toast--warning .Toast-icon {
