@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.0
+@version      1.5.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -530,6 +530,8 @@
   .Box.Box--condensed .Box-row,
   .SideNav,
   .SideNav-item,
+  .suggester,
+  .suggester li,
   input[type="text"].form-control,
   iframe#graphiql,
   iframe#graphiql .graphiql-ide,
@@ -1168,6 +1170,7 @@
   .Box-row--yellow,
   .SideNav,
   .boxed-group-inner,
+  .suggester,
   .form-select,
   input[type="text"].form-control,
   .CodeMirror-hint,
@@ -1947,7 +1950,8 @@
   body.page-responsive.pagehead,
   .select-menu-filters,
   .SelectMenu-list,
-  .Popover-message {
+  .Popover-message,
+  .suggester {
     background-color: var(--base-3) !important;
   }
   .email-quoted-reply,
@@ -2254,7 +2258,8 @@
   rect[fill="#e25d10"] {
     fill: var(--orange) !important;
   }
-  .menu-item:hover {
+  .menu-item:hover,
+  .suggester li[aria-selected="true"] {
     background-color: var(--base-6) !important;
   }
   .user-status-container-border-busy,
