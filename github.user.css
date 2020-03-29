@@ -2,6 +2,7 @@
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
 @version      1.0.7
+@license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -2217,6 +2218,49 @@
   }
   .text {
     color: var(--faded) !important;
+  }
+  .border-top {
+    border-top: 1px solid var(--border) !important;
+  }
+  .border-left {
+    border-left: 1px solid var(--border) !important;
+  }
+  .border-right {
+    border-right: 1px solid var(--border) !important;
+  }
+  .border-bottom {
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .repository-content > div.bg-white.clearfix:first-child {
+    background-color: var(--bg) !important;
+  }
+  .SideNav {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .SideNav-item {
+    border-color: var(--border) !important;
+    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .SideNav-item[aria-current='page'],
+  .SideNav-item[aria-selected='true'] {
+    background-color: var(--hl) !important;
+  }
+  .SideNav-item[aria-current='page']::before,
+  .SideNav-item[aria-selected='true']::before {
+    background-color: var(--blue) !important;
+  }
+  .SideNav-item:focus,
+  .SideNav-item:hover {
+    background-color: var(--hl) !important;
+  }
+  .SideNav-item:focus::before,
+  .SideNav-item:hover::before {
+    background-color: var(--icon) !important;
+  }
+  .SideNav-item:last-child {
+    box-shadow: 0 1px 0 var(--border) !important;
   }
 }
 @-moz-document domain('gist.github.com') {

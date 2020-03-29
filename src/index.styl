@@ -595,3 +595,29 @@ div.commit-build-statuses,
       c 0 0 $blue
 .text
   c $faded
+.border-
+  &top
+    bt $b
+  &left
+    bl $b
+  &right
+    br $b
+  &bottom
+    bb $b
+.repository-content > div.bg-white.clearfix:first-child
+  c 0 0 $bg
+.SideNav
+  c $text $border $alt
+  &-item
+    c 0 $border
+    ease background-color, color
+    &[aria-current='page'], &[aria-selected='true']
+      c 0 0 $hl
+      &::before
+        c 0 0 $blue
+    &:focus, &:hover
+      c 0 0 $hl
+      &::before
+        c 0 0 $icon
+    &:last-child
+      s 0 1px 0 $border
