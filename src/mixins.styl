@@ -1,7 +1,7 @@
 $i = !important
 prop($p, $x...)
   +cache('x', $x, 'p', $p)
-    if ($x is a 'call' || $x is a 'rgba')
+    if ($x is a 'call' || $x is a 'rgba' || $x == none)
       {$p} $x $i
 /**
  * c <foreground> <border-color> <background>

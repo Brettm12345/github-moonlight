@@ -1547,6 +1547,19 @@
   .State--red .octicon {
     fill: var(--red) !important;
   }
+  .form-control,
+  .form-select,
+  .form-control.focus,
+  .focus.ais-SearchBox-input,
+  .form-control:focus,
+  .ais-SearchBox-input:focus,
+  .form-select.focus,
+  .form-select:focus,
+  .write-content.js-write-bucket,
+  .graphiql-container .toolbar-button,
+  .graphiql-container .execute-button {
+    box-shadow: none !important;
+  }
   .search-result-intro mark,
   .search-result-intro .ais-Highlight-highlighted,
   .subnav-link.selected,
@@ -1565,6 +1578,9 @@
   }
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
+  }
+  .MarketplacePlan--sticky div.bg-white {
+    border-top: none !important;
   }
   .MarketplacePlan--sticky div.bg-white .bg-blue,
   .menu-item.selected:before,
@@ -1690,6 +1706,12 @@
   }
   .gh-header {
     background-color: unset;
+  }
+  .btn,
+  .btn:hover,
+  .pagination-loader-container,
+  .Box--responsive .Box-row--unread::before {
+    background-image: none !important;
   }
   .reponav-item.selected {
     border-color: var(--blue) var(--border) transparent !important;
