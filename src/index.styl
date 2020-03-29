@@ -196,6 +196,8 @@ comment-form
 .branch-name
   c $text $border $region
 .select-menu-
+  &item .octicon-check
+    c $green
   &header, &header &title
     c $cn $border $bg
   &modal, &item
@@ -235,6 +237,10 @@ div[style*="linear-gradient"]
     /.subnav-link.selected, &.selected, &[aria-current], &[aria-selected=true]
       bbc $blue
 .SelectMenu-
+  &item
+    c $text $border
+  &icon--check
+    c $green
   &divider
     c $text $border $border
   &list
@@ -492,9 +498,11 @@ div.commit-build-statuses,
     c $blue
     ../-name
       c $text
-.note,
-.help
+.note, .help
   c $blue
+.site-subnav.bg-wite
+  c 0 0 $alt
+  s-2()
 .application-main
   .flex-wrap
     c 0 0 transparent
@@ -634,3 +642,5 @@ div.commit-build-statuses,
       s 0 1px 0 $border
 section[style*="#fafbfc"]
   c 0 0 $bg
+.reponame-suggestion
+  c $green

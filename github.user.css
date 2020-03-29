@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.0
+@version      1.1.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -121,6 +121,7 @@
   .social-count,
   .timeline-new-comment .previewable-comment-form .comment-body,
   .listgroup,
+  .license-container,
   .dashboard-rollup-items .body,
   .saved-reply-form,
   .Box-body,
@@ -136,6 +137,7 @@
   .repository-lang-stats-graph {
     border-color: var(--border) !important;
   }
+  .Subhead-description,
   *::placeholder {
     color: var(--faded) !important;
   }
@@ -897,6 +899,14 @@
   .exploregrid-item {
     background-color: var(--hl) !important;
   }
+  .newsletter-frequency-choice {
+    border-color: var(--border) !important;
+    border-radius: 8px !important;
+  }
+  .newsletter-frequency-choice h3 {
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
   .filter-bar {
     border-bottom: 1px solid var(--border) !important;
     background-color: var(--alt) !important;
@@ -1546,6 +1556,9 @@
     border-color: var(--border) !important;
     background-color: var(--region) !important;
   }
+  .select-menu-item .octicon-check {
+    color: var(--green) !important;
+  }
   .select-menu-header,
   .select-menu-header .select-menu-title {
     color: var(--cn) !important;
@@ -1626,6 +1639,13 @@
   .UnderlineNav-item[aria-current],
   .UnderlineNav-item[aria-selected=true] {
     border-bottom-color: var(--blue) !important;
+  }
+  .SelectMenu-item {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .SelectMenu-icon--check {
+    color: var(--green) !important;
   }
   .SelectMenu-divider {
     color: var(--text) !important;
@@ -2088,6 +2108,10 @@
   .help {
     color: var(--blue) !important;
   }
+  .site-subnav.bg-wite {
+    background-color: var(--alt) !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
+  }
   .application-main .flex-wrap {
     background-color: transparent !important;
   }
@@ -2313,6 +2337,9 @@
   }
   section[style*="#fafbfc"] {
     background-color: var(--bg) !important;
+  }
+  .reponame-suggestion {
+    color: var(--green) !important;
   }
 }
 @-moz-document domain('gist.github.com') {
