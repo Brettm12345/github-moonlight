@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.7
+@version      1.0.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -2231,7 +2231,7 @@
   .border-bottom {
     border-bottom: 1px solid var(--border) !important;
   }
-  .repository-content > div.bg-white.clearfix:first-child {
+  .repository-content > div.bg-white:first-child {
     background-color: var(--bg) !important;
   }
   .SideNav {
