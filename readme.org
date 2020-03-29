@@ -10,6 +10,7 @@ made with :heart:
 #+HTML: </div>
 
 * Table of Contents :TOC_3_gh:
+
 - [[#github-moonlight][Github Moonlight]]
 - [[#features][Features]]
     - [[#custom-colors][Custom colors]]
@@ -21,6 +22,7 @@ made with :heart:
 - [[#screenshots][Screenshots]]
   - [[#code][Code]]
   - [[#commit-tree][Commit Tree]]
+  - [[#dashboard][Dashboard]]
   - [[#pull-requests][Pull Requests]]
   - [[#contribution-tree][Contribution Tree]]
   - [[#markdown][Markdown]]
@@ -64,6 +66,8 @@ These are the fonts used in the screenshots
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" width="100%" />
 ** Commit Tree
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" width="100%" />
+** Dashboard
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" width="100%" />
 ** Pull Requests
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png" width="100%" />
 ** Contribution Tree

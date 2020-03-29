@@ -139,6 +139,11 @@ mono()
   fn $monoFont
 inv()
   filter invert(1)
+box()
+  c 0 $border $alt
+  ease border-color, background-color
+  &:hover, &:focus
+    c 0 $blue $hl
 octicon()
   .octicon
     c arguments

@@ -1228,8 +1228,14 @@
   }
   .dashboard .js-all-activity-header + div .Box {
     border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    background-color: var(--alt) !important;
+    transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
     border-radius: 6px !important;
+  }
+  .dashboard .js-all-activity-header + div .Box:hover,
+  .dashboard .js-all-activity-header + div .Box:focus {
+    border-color: var(--blue) !important;
+    background-color: var(--hl) !important;
   }
   .dashboard-notice {
     border: 1px solid var(--border) !important;
@@ -1278,13 +1284,23 @@
     background-color: var(--bg) !important;
   }
   .team-left-column > div {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .team-left-column[aria-label="Explore"] > div {
     border: 1px solid var(--border) !important;
     border-color: var(--border) !important;
-    background-color: var(--hl) !important;
+    background-color: var(--alt) !important;
+    transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
     padding-left: 10px !important;
     border-radius: 4px !important;
   }
-  .team-left-column.bg-white {
+  .team-left-column[aria-label="Explore"] > div:hover,
+  .team-left-column[aria-label="Explore"] > div:focus {
+    border-color: var(--blue) !important;
+    background-color: var(--hl) !important;
+  }
+  .team-left-column[aria-label="Explore"].bg-white {
     background-color: var(--alt) !important;
   }
   .orgs-help-item-octicon {
