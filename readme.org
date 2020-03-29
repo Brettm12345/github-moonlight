@@ -34,7 +34,11 @@ made with :heart:
 * Features
 - Custom colors: All color variables are easily customizable
 - Custom fonts: Allow the user to pick custom fonts
-- Complete theme: This theme changes 100% of the github ui. As well as the
+- Complete theme: This theme changes 100% of the github ui. If you want to teak
+  the colors to match the rest of your system go ahead! Forks and pull requests
+  are welcome!
+- Smooth transitions: This theme adds easings from [[https://easings.net][easings.net]] so that color
+  changes appear smoother.
 * Recomended Fonts
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
