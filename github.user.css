@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.6
+@version      1.4.7
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -197,6 +197,7 @@
   .select-menu-modal,
   .select-menu-item,
   .select-menu-divider,
+  .select-menu-no-results,
   input[type="text"],
   .SelectMenu-item,
   .SelectMenu-modal,
@@ -456,6 +457,7 @@
   .select-menu-item,
   .select-menu-divider,
   .select-menu-filters,
+  .select-menu-no-results,
   .select-menu-text-filter:first-child,
   .select-menu-text-filter:last-child,
   .pagination a,
@@ -626,6 +628,7 @@
   .tabnav-tab,
   .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .tabnav--responsive .tabnav-tab,
+  .select-menu-no-results,
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body,
