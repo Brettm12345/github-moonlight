@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.1
+@version      1.1.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1442,7 +1442,7 @@
   .octicon.octicon-file {
     color: var(--indigo) !important;
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check):not(.octicon-smiley):not(.octicon-file):not(.X):not(.Gear):not(.octicon-x) {
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check):not(.octicon-smiley):not(.octicon-file):not(.X):not(.Gear):not(.octicon-x):not(.octicon-file-directory) {
     color: var(--text) !important;
   }
   .muted-link {
