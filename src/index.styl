@@ -172,6 +172,12 @@ comment-form
     c 0 0 $alt
 .tabnav
   bb $b
+  /.container-preview &-tabs
+    ml 5%
+  &-tabs.js-file-editor-nav &-tab
+    c $faded $border $bg
+    mt 8px
+    rt 6px
   &--responsive &-tab, &-tab
     c $faded $border
     &[aria-current], &[aria-selected=true], &.selected
@@ -180,9 +186,10 @@ comment-form
     ../-tab
       c $blue
       &.selected
+        &.js-blob-edit-
+          &code, &preview
+            c $blue $border $hl
         c $blue $border $bg
-      &:focus, &:hover
-        c $blue
       .Counter
         c $blue
 .branch-name
@@ -385,6 +392,7 @@ hr
   c 0 $border
   &-header
     c $blue $border $alt
+    m 0
 .pl-s > a
   c $green
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra)
@@ -453,8 +461,9 @@ div.commit-build-statuses,
       c 0 $border $hl
 .input-contrast
   c $cn $border $alt
+  ease border-color, background-color
   &:focus
-    c 0 0 $hl
+    c 0 $blue $hl
 .btn-octicon
   c $blue
   &:hover

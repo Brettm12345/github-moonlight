@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.3
+@version      1.0.4
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -201,22 +201,25 @@
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .CodeMirror-gutter.CodeMirror-linenumbers,
-  .cm-s-github-light .CodeMirror-gutters {
-    color: var(--indigo) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+  .CodeMirror-linenumber.CodeMirror-gutter-elt {
+    font-weight: 500 !important;
   }
   .cm-s-github-light.CodeMirror {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
   }
+  .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
+  .cm-s-github-light .CodeMirror-gutters {
+    color: var(--indigo) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
   .cm-s-github-light .CodeMirror-lines {
     background-color: var(--hl) !important;
   }
-  .CodeMirror-linenumber.CodeMirror-gutter-elt {
-    font-weight: 500 !important;
+  .cm-s-github-light .CodeMirror-linenumber {
+    color: var(--indigo) !important;
   }
   .code .s1 {
     color: var(--green) !important;
@@ -373,6 +376,9 @@
   .calendar-graph text.wday,
   .calendar-graph text.month {
     fill: var(--cn) !important;
+  }
+  .js-commit-preview .markdown-body {
+    background-color: var(--hl) !important;
   }
   .markdown-body a {
     color: var(--text-alt) !important;
@@ -1438,6 +1444,17 @@
   .tabnav {
     border-bottom: 1px solid var(--border) !important;
   }
+  .container-preview .tabnav-tabs {
+    margin-left: 5% !important;
+  }
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab {
+    color: var(--faded) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+    margin-top: 8px !important;
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+  }
   .tabnav--responsive .tabnav-tab,
   .tabnav-tab {
     color: var(--faded) !important;
@@ -1461,9 +1478,11 @@
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
   }
-  .tabnav-tab:focus,
-  .tabnav-tab:hover {
+  .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav-tab.selected.js-blob-edit-preview {
     color: var(--blue) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
   }
   .tabnav-tab .Counter {
     color: var(--blue) !important;
@@ -1846,6 +1865,7 @@
     color: var(--blue) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+    margin: 0 !important;
   }
   .pl-s > a {
     color: var(--green) !important;
@@ -1966,8 +1986,10 @@
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+    transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .input-contrast:focus {
+    border-color: var(--blue) !important;
     background-color: var(--hl) !important;
   }
   .btn-octicon {
