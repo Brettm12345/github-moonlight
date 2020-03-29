@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.3.9
+@version      1.4.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -405,7 +405,6 @@
   .full-commit .commit-meta,
   .file-commit-form--full,
   .diff-table tr:not(:last-child) .line-comments,
-  .discussion-timeline-actions,
   .ajax-pagination-form .ajax-pagination-btn,
   .user-profile-sticky-bar:after,
   .js-profile-editable-edit-button,
@@ -615,9 +614,9 @@
   .tabnav-tab,
   .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .tabnav--responsive .tabnav-tab,
-  .merge-pr-more-commits-body,
-  .status-meta-body,
   .TimelineItem-body,
+  .TimelineItem .status-meta-body,
+  .TimelineItem .merge-pr-more-commits-body,
   .btn:disabled,
   .btn:disabled:hover,
   div.commit-build-statuses,
@@ -787,12 +786,12 @@
   .SelectMenu-tab,
   .btn-mktg,
   .Header,
-  .merge-pr-more-commits-badge,
-  .status-meta-badge,
   .TimelineItem-badge,
-  .merge-pr-more-commits--condensed .merge-pr-more-commits-badge,
-  .status-meta--condensed .status-meta-badge,
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
   .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .reponav-item.selected,
   .flash,
   .application-main > main > div.border-bottom.border-gray-light,
@@ -908,6 +907,9 @@
   table.files,
   table.files tr.navigation-focus td,
   table.files tr[aria-selected=true] td,
+  .TimelineItem:before,
+  .TimelineItem .status-meta:before,
+  .TimelineItem .merge-pr-more-commits:before,
   .btn,
   .btn:disabled,
   .btn:disabled:hover,
@@ -966,9 +968,6 @@
   .gitako-resize-handler,
   div[style*="height: 1px;"],
   .SelectMenu-divider,
-  .merge-pr-more-commits:before,
-  .status-meta:before,
-  .TimelineItem:before,
   .showcase-page-pattern::after,
   .Counter,
   .incident-container::before {
@@ -1484,12 +1483,12 @@
   }
   .pl-ba,
   .blob-num,
-  .merge-pr-more-commits-badge,
-  .status-meta-badge,
   .TimelineItem-badge,
-  .merge-pr-more-commits--condensed .merge-pr-more-commits-badge,
-  .status-meta--condensed .status-meta-badge,
-  .TimelineItem--condensed .TimelineItem-badge {
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
+  .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
     color: var(--hover) !important;
   }
   .pl-corl,
@@ -1894,6 +1893,13 @@
     filter: invert(1);
   }
   .discussion-item-icon,
+  .discussion-timeline-actions,
+  .TimelineItem-badge,
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
+  .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .reponav-item.selected,
   .toolbar-item:hover,
   .toolbar-item .menu-target:hover {
@@ -2099,14 +2105,14 @@
   .SelectMenu-footer kbd {
     font-size: unset !important;
   }
+  .gh-header {
+    background-color: unset;
+  }
   .TimelineItem--condensed .TimelineItem-badge {
     height: 30px !important;
   }
   .TimelineItem--condensed .TimelineItem-badge {
     width: 30px !important;
-  }
-  .gh-header {
-    background-color: unset;
   }
   .btn,
   .btn:hover,

@@ -273,11 +273,6 @@ div[style*="linear-gradient"]
     c $text $border $bg
     &[aria-selected=true]
       c $cn $border $alt
-.TimelineItem
-  &--condensed &-badge
-    size 30px
-  &-break
-    c 0 $alt transparent
 .TableObject-item--primary
   c $text
 .btn-mktg
@@ -306,15 +301,20 @@ table.files
       c $text
       .octicon-file-directory
         c $blue
-.merge-pr-more-commits,
-.status-meta,
 .TimelineItem
-  &:before
-    c 0 0 $border
-  &-badge, &--condensed &-badge
-    c $hover 0 $bg
-  &-body
-    c $faded
+  &-badge
+    c 0 $hl
+    ../--condensed &
+      size 30px
+  &-break
+    c 0 $alt transparent
+  &, .status-meta, .merge-pr-more-commits
+    &:before
+      c 0 0 $hl
+    &-badge, &--condensed &-badge
+      c $hover $hl $bg
+    &-body
+      c $faded
 .border,
 .rgh-collaborator
   b $b
