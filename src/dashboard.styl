@@ -7,6 +7,17 @@
     c 0 0 $alt
 .github-jobs-logo strong
   inv()
+.discussion-
+  &item-icon
+    c $text $hl $icon
+  &timeline-actions
+    c 0 $border $bg
+  &sidebar-
+    &heading
+      c $text
+    &item
+      c $faded
+      fw 500
 .profile-
   &timeline
     &.discussion-timeline:before
@@ -15,11 +26,13 @@
       c 0 0 $bg
     &-card.bg-white
       c 0 0 $hl
-    &-month-heading:after
-      c 0 0 $border
+    &-month-heading.bg-white, &year-list
+      &:after
+        c 0 0 $hl
+      c 0 0 $bg
   &rollup-wrapper
     &+&
-      bt $b
+      bt 1px solid $hl
 .activity-overview-
   &percentage
     v $cn
@@ -64,9 +77,6 @@
 .team,
 .user-mention
   c $cn
-.profile-timeline-
-  &month-heading.bg-white, &year-list
-    c 0 0 $bg
 .vcard-username
   c $textGray
 .private .mini-repo-list-item

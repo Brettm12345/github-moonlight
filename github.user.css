@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.2.2
+@version      1.2.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1271,6 +1271,22 @@
   .github-jobs-logo strong {
     filter: invert(1);
   }
+  .discussion-item-icon {
+    color: var(--text) !important;
+    border-color: var(--hl) !important;
+    background-color: var(--icon) !important;
+  }
+  .discussion-timeline-actions {
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+  }
+  .discussion-sidebar-heading {
+    color: var(--text) !important;
+  }
+  .discussion-sidebar-item {
+    color: var(--faded) !important;
+    font-weight: 500 !important;
+  }
   .profile-timeline.discussion-timeline:before {
     background-color: var(--hl) !important;
   }
@@ -1280,11 +1296,16 @@
   .profile-timeline-card.bg-white {
     background-color: var(--hl) !important;
   }
-  .profile-timeline-month-heading:after {
-    background-color: var(--border) !important;
+  .profile-timeline-month-heading.bg-white,
+  .profile-timelineyear-list {
+    background-color: var(--bg) !important;
+  }
+  .profile-timeline-month-heading.bg-white:after,
+  .profile-timelineyear-list:after {
+    background-color: var(--hl) !important;
   }
   .profile-rollup-wrapper+.profile-rollup-wrapper {
-    border-top: 1px solid var(--border) !important;
+    border-top: 1px solid var(--hl) !important;
   }
   .activity-overview-percentage {
     fill: var(--cn) !important;
@@ -1357,10 +1378,6 @@
   .team,
   .user-mention {
     color: var(--cn) !important;
-  }
-  .profile-timeline-month-heading.bg-white,
-  .profile-timeline-year-list {
-    background-color: var(--bg) !important;
   }
   .vcard-username {
     color: var(--text-gray) !important;
@@ -1640,22 +1657,6 @@
   }
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang {
     color: var(--cn) !important;
-  }
-  .discussion-item-icon {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--icon) !important;
-  }
-  .discussion-timeline-actions {
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
-  }
-  .discussion-sidebar-heading {
-    color: var(--text) !important;
-  }
-  .discussion-sidebar-item {
-    color: var(--faded) !important;
-    font-weight: 500 !important;
   }
   .previewable-comment-form .comment-form-head.tabnav {
     border-bottom: 1px solid var(--border) !important;
