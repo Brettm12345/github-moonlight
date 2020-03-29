@@ -415,11 +415,18 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
+  .markdown-body pre > code {
+    background-color: transparent !important;
+  }
   .markdown-body code,
   .markdown-body tt {
     border: 1px solid var(--border) !important;
     color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--icon) !important;
     font-weight: 500 !important;
+    margin: 0.4em !important;
+    white-space: nowrap;
     font-family: var(--mono-font) !important;
   }
   .highlight pre,
@@ -751,6 +758,12 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
+  }
+  :target .timeline-comment {
+    box-shadow: 0 0 0 0.2em var(--border) !important;
+  }
+  :target .timeline-comment::before {
+    filter: drop-shadow(-0.28em 0 0 var(--border));
   }
   .timeline-comment-wrapper {
     border: 0 !important;
@@ -1276,6 +1289,10 @@
     font: 14px var(--mono-font);
     box-shadow: inset 0 -1px 0 var(--border) !important;
   }
+  ol,
+  ul {
+    list-style: disc;
+  }
   legend {
     font-size: 0.9em !important;
     font-weight: 600 !important;
@@ -1358,6 +1375,7 @@
     box-shadow: none !important;
   }
   .octicon {
+    margin-bottom: 0.2em !important;
     transform: scale(1.1);
   }
   .octicon.open {

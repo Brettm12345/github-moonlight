@@ -73,6 +73,10 @@ ul.comparison-list
     c 0 $border $alt
 .timeline-comment
   c $text $border $hl
+  /:target &
+    s 0 0 0 0.2em $border
+    &::before
+      filter drop-shadow(-0.28em 0 0 $border)
   &-wrapper
     b 0
     c 0 $border
