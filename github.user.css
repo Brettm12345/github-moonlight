@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.6
+@version      1.1.7
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -831,16 +831,14 @@
   text[text-anchor="middle"] {
     fill: var(--text) !important;
   }
-  .viz {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--alt) !important;
+  .viz .code-frequency {
+    padding: 8px !important;
   }
+  .viz,
   .viz .code-frequency {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
-    padding: 8px !important;
   }
   .cadd {
     color: var(--green) !important;
@@ -853,12 +851,16 @@
     border-color: var(--border) !important;
   }
   .conversation-list-heading .inner {
+    border: 1px solid var(--border) !important;
     color: var(--faded) !important;
+    padding: 0 10px !important;
+    border-radius: 2px !important;
   }
-  .num {
-    color: var(--faded) !important;
-  }
+  .num,
   relative-time {
+    color: var(--faded) !important;
+  }
+  .simple-conversation-list {
     color: var(--faded) !important;
   }
   .simple-conversation-list > li {
@@ -890,12 +892,33 @@
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
   }
+  .summary-stats li,
+  .summary-stats li > .num,
+  .summary-stats li > a {
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .summary-stats li a {
+    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .summary-stats li:hover,
+  .summary-stats li:focus,
+  .summary-stats li:hover > .num,
+  .summary-stats li:focus > .num,
+  .summary-stats li:hover > a,
+  .summary-stats li:focus > a {
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
   .traffic-graph-stats,
   .summary-stats li,
-  .summary-stats li .num {
+  .summary-stats li > .num {
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+  }
+  .pulse-section {
+    color: var(--faded) !important;
   }
   .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
   .exploregrid-item {
@@ -1450,6 +1473,15 @@
   }
   .State--green .octicon {
     fill: var(--teal) !important;
+  }
+  .State--purple {
+    border: 1px solid var(--purple) !important;
+    color: var(--purple) !important;
+    border-color: var(--purple) !important;
+    background-color: var(--purple-trans) !important;
+  }
+  .State--purple .octicon {
+    fill: var(--purple) !important;
   }
   .State--red {
     border: 1px solid var(--red) !important;
@@ -2735,5 +2767,135 @@
   code .mi,
   code .mo {
     color: var(--orange) !important;
+  }
+}
+@-moz-document domain("githubstatus.com") {
+  body {
+    color: var(--text) !important;
+    background-color: var(--bg) !important;
+  }
+  a {
+    color: var(--blue) !important;
+  }
+  .header {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: var(--faded) !important;
+  }
+  img.illo-desktop-header {
+    filter: invert(1);
+  }
+  .layout-content.status.status-index .page-status.status-none {
+    background-color: var(--teal) !important;
+  }
+  rect[fill="#28a745"] {
+    fill: var(--teal) !important;
+  }
+  rect[fill="#e25d10"] {
+    fill: var(--orange) !important;
+  }
+  rect[fill="#c0aa12"] {
+    fill: var(--yellow) !important;
+  }
+  .status-day::before,
+  .incident-list::before {
+    background-color: var(--hl) !important;
+  }
+  .status-day > .date::before {
+    background-color: var(--alt) !important;
+  }
+  .page-title .impact-minor::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width=%2716%27%20height=%2716%27%20viewBox=%270%200%2016%2016%27%20fill=%27none%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M8.89307%201.50072C8.70961%201.19027%208.37325%201%208.00632%201C7.63938%201%207.30302%201.19027%207.11956%201.50072L0.137601%2013.4979C-0.0458669%2013.8083%20-0.0458669%2014.1888%200.137601%2014.4993C0.331261%2014.8097%200.667618%2015%201.02436%2015H14.9883C15.3552%2015%2015.6916%2014.8097%2015.8648%2014.4993C16.0381%2014.1888%2016.0483%2013.8083%2015.875%2013.4979L8.89307%201.50072ZM9.02558%2012.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558%209.99285H6.98705V5.98712H9.02558V9.99285Z%27%20fill=%27%23cb4%27/%3E%3C/svg%3e") !important;
+  }
+  .page-title .impact-major::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width=%2716%27%20height=%2716%27%20viewBox=%270%200%2016%2016%27%20fill=%27none%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M8.89307%201.50072C8.70961%201.19027%208.37325%201%208.00632%201C7.63938%201%207.30302%201.19027%207.11956%201.50072L0.137601%2013.4979C-0.0458669%2013.8083%20-0.0458669%2014.1888%200.137601%2014.4993C0.331261%2014.8097%200.667618%2015%201.02436%2015H14.9883C15.3552%2015%2015.6916%2014.8097%2015.8648%2014.4993C16.0381%2014.1888%2016.0483%2013.8083%2015.875%2013.4979L8.89307%201.50072ZM9.02558%2012.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558%209.99285H6.98705V5.98712H9.02558V9.99285Z%27%20fill=%27%23f3582c%27/%3E%3C/svg%3e") !important;
+  }
+  .page-title .impact-critical::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width=%2716%27%20height=%2716%27%20viewBox=%270%200%2016%2016%27%20fill=%27none%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M8.89307%201.50072C8.70961%201.19027%208.37325%201%208.00632%201C7.63938%201%207.30302%201.19027%207.11956%201.50072L0.137601%2013.4979C-0.0458669%2013.8083%20-0.0458669%2014.1888%200.137601%2014.4993C0.331261%2014.8097%200.667618%2015%201.02436%2015H14.9883C15.3552%2015%2015.6916%2014.8097%2015.8648%2014.4993C16.0381%2014.1888%2016.0483%2013.8083%2015.875%2013.4979L8.89307%201.50072ZM9.02558%2012.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558%209.99285H6.98705V5.98712H9.02558V9.99285Z%27%20fill=%27%23f44%27/%3E%3C/svg%3e") !important;
+  }
+  .page-title .impact-maintenance::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width=%2716%27%20height=%2716%27%20viewBox=%270%200%2016%2016%27%20fill=%27none%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M4.48%207.27001C4.74%207.53001%205.76%208.60001%205.76%208.60001L6.32%208.02001L5.44%207.11001L7.13%205.31001C7.13%205.31001%206.37%204.57001%206.7%204.86001C7.02%203.67001%206.73%202.35001%205.83%201.42001C4.93%200.500006%203.66%200.200006%202.52%200.510006L4.45%202.51001L3.94%204.47001L2.05%204.99001L0.12%202.99001C-0.19%204.17001%200.1%205.48001%201%206.40001C1.94%207.38001%203.29%207.66001%204.48%207.27001ZM10.92%209.21001L8.59%2011.51L12.43%2015.49C12.74%2015.82%2013.16%2015.98%2013.57%2015.98C13.98%2015.98%2014.39%2015.82%2014.71%2015.49C15.34%2014.84%2015.34%2013.79%2014.71%2013.14L10.92%209.21001ZM16%202.53L13.55%200L6.33%207.46L7.21%208.37L2.9%2012.83L1.91%2013.36L0.519998%2015.63L0.869998%2016L3.07%2014.56L3.58%2013.54L7.9%209.08L8.78%209.99L16%202.53Z%27%20fill=%27rgb(/*[[base-color-rgb]]*/)%27/%3E%3C/svg%3e") !important;
+  }
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color: var(--text-alt) !important;
+  }
+  .page-footer > a:first-child::before {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg%20width=%278%27%20height=%2716%27%20viewBox=%270%200%208%2016%27%20fill=%27none%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M5.5%203L7%204.5L3.25%208L7%2011.5L5.5%2013L0.5%208L5.5%203Z%27%20fill=%27rgb(/*[[base-color-rgb]]*/)%27/%3E%3C/svg%3e") no-repeat center center !important;
+  }
+  .incident-container::before {
+    background-color: var(--border) !important;
+  }
+  .incident-container .incident-title::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width=%2714%27%20height=%2716%27%20viewBox=%270%200%2014%2016%27%20fill=%27none%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20fill-rule=%27evenodd%27%20clip-rule=%27evenodd%27%20d=%27M6.99999%202.3C10.14%202.3%2012.7%204.86%2012.7%208C12.7%2011.14%2010.14%2013.7%206.99999%2013.7C3.85999%2013.7%201.29999%2011.14%201.29999%208C1.29999%204.86%203.85999%202.3%206.99999%202.3ZM7%201C3.14%201%200%204.14%200%208C0%2011.86%203.14%2015%207%2015C10.86%2015%2014%2011.86%2014%208C14%204.14%2010.86%201%207%201ZM8%204H6V9H8V4ZM8%2010H6V12H8V10Z%27%20fill=%27%23bebebe%27/%3E%3C/svg%3e") !important;
+    border-color: var(--border) !important;
+    background-color: var(--hl) !important;
+  }
+  .update.resolved > strong {
+    color: var(--green) !important;
+  }
+  .update.investigating > strong {
+    color: var(--yellow) !important;
+  }
+  .component-container {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .components-section::before {
+    color: var(--text) !important;
+  }
+  .components-uptime-link {
+    color: var(--faded) !important;
+  }
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  .layout-content.status.status-index .unresolved-incidents .unresolved-incident.impact-none .updates {
+    border-color: var(--border) !important;
+  }
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  #uptime-tooltip .tooltip-box {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  body::before,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary::before,
+  .grouped-items-selector::before,
+  .layout-content.status.status-full-history .history-nav a.current::before,
+  #uptime-tooltip .tooltip-box::before {
+    border-bottom-color: var(--alt);
+  }
+  body::after,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary::after,
+  .grouped-items-selector::after,
+  .layout-content.status.status-full-history .history-nav a.current::after,
+  #uptime-tooltip .tooltip-box::after {
+    border-bottom-color: var(--alt);
+  }
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color: var(--border) !important;
+  }
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color: var(--alt) !important;
+  }
+}
+@-moz-document url-prefix("https?://github.com/personal") {
+  .illflow-blue .selected {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
   }
 }

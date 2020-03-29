@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.6
+@version      1.1.7
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -91,3 +91,7 @@
   @require './src/gist'
 @-moz-document domain('developer.github.com')
   @require './src/developer'
+@-moz-document domain("githubstatus.com")
+  @require './src/status'
+@-moz-document url-prefix("https?://github.com/personal")
+  @require './src/personal'

@@ -6,24 +6,28 @@ text
   &[fill="#000"], &[fill="#6a737d"], &[text-anchor="middle"]
     v $text
 .viz
-  c $text $border $alt
   .code-frequency
-    c $text $border $alt
+    ../, &
+      c $text $border $alt
     p 8px
-.cadd
-  c $green
-.cdel
-  c $red
+.c
+  &add
+    c $green
+  &del
+    c $red
 .conversation-list-heading
   c $faded $border
   .inner
+    b $b
     c $faded
-.num
+    p 0 10px
+    r 2px
+.num, relative-time
   c $faded
-relative-time
+.simple-conversation-list
   c $faded
-.simple-conversation-list > li
-  c 0 $border
+  & > li
+    c 0 $border
 .graphs
   .dir
     c $text
@@ -41,7 +45,15 @@ table.capped-list
     c $text $border $alt
   tr:nth-child(2n), th
     c $text $border $alt
-.traffic-graph-stats,
-.summary-stats li,
-.summary-stats li .num
-  c $text $border $alt
+.summary-stats li
+  &, & > .num, & > a
+    ease background-color
+  a
+    ease background-color, color
+  &:hover, &:focus
+    &, & > .num, & > a
+      c $cn $border $hl
+  /.traffic-graph-stats, &, & > .num
+    c $text $border $alt
+.pulse-section
+  c $faded
