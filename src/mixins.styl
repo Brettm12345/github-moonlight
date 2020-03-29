@@ -1,18 +1,16 @@
 $i = !important
 prop($p, $x)
-  if ($x is a 'call' || $x is a 'rgba')
+  +cache('x', $x, 'p', $p)
+    if ($x is a 'call' || $x is a 'rgba')
       {$p} $x $i
 /**
  * c <foreground> <border-color> <background>
  * use 0 to omit arguments
  */
 c($x, $y = 0, $z = 0)
-  +cache('x' + $x)
-    prop('color', $x)
-  +cache('y' + $y)
-    prop('border-color', $y)
-  +cache('z' + $z)
-    prop('background-color', $z)
+  prop('color', $x)
+  prop('border-color', $y)
+  prop('background-color', $z)
 /**
  * v <fill> <stroke> <fill-important> <stroke-important>
  * use 0 to omit arguments
@@ -205,8 +203,9 @@ box()
   &:hover, &:focus
     c 0 $blue $hl
 octicon()
-  .octicon
-    c arguments
+  +cache('args' + arguments)
+    .octicon
+      c arguments
 s-1()
   s 0 2px 5px 0 rgba(black, 0.26)
 s-2()
