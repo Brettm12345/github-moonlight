@@ -190,7 +190,7 @@ comment-form
   &divider
     c $text $base1 $base4
   &filters
-    c $text $base1 $base5
+    c $text $base1 $base3
   &no-results
     c $faded $base1 $base4
   &text-filter
@@ -251,6 +251,7 @@ div[style*="linear-gradient"]
 .btn-mktg
   c $cn $base1 $base2
 .Header
+  bb $b
   c $text $base1 $base2
 .gh-header
   background-color unset
@@ -291,17 +292,16 @@ table.files
 .rgh-collaborator
   b $b
 .btn
-  bgi none
-  c $cn $base1 $base6
-  ease background-color, border-color
-  &.btn-sm
-    c 0 0 $base6
-  &:disabled
-    &, &:hover
-      c $faded $base1 $base5
-  &:hover
+  &, &&-sm
     bgi none
-    c $cn $blue $base7
+    ease background-color, border-color
+    c $cn $base1 $base5
+    &:disabled
+      &, &:hover
+        c $faded $base1 $base5
+    &:hover
+      bgi none
+      c $cn $blue $base7
 .auth-form-body
   c $text $base1 $base4
 .numbers-summary li

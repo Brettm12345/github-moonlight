@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.8
+@version      1.4.9
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -480,8 +480,11 @@
   table.files,
   table.files td,
   .btn,
+  .btn.btn-sm,
   .btn:disabled,
+  .btn.btn-sm:disabled,
   .btn:disabled:hover,
+  .btn.btn-sm:disabled:hover,
   .auth-form-body,
   .topic-tag,
   div.listgroup-item,
@@ -633,7 +636,9 @@
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body,
   .btn:disabled,
+  .btn.btn-sm:disabled,
   .btn:disabled:hover,
+  .btn.btn-sm:disabled:hover,
   .numbers-summary li> .nolink,
   .numbers-summary li>a,
   div.commit-build-statuses,
@@ -717,7 +722,9 @@
   .SelectMenu-tab[aria-selected=true],
   .btn-mktg,
   .btn,
+  .btn.btn-sm,
   .btn:hover,
+  .btn.btn-sm:hover,
   .form-group .form-control,
   .form-control,
   .form-select,
@@ -756,6 +763,7 @@
   .ellipsis-expander,
   .hidden-text-expander a,
   .btn:hover,
+  .btn.btn-sm:hover,
   .subnav-item:focus,
   .subnav-item:hover,
   .Box-row--focus-gray.navigation-focus,
@@ -910,7 +918,6 @@
   .tabnav-tab.selected,
   .tabnav-tab.selected.js-blob-edit-code,
   .tabnav-tab.selected.js-blob-edit-preview,
-  .select-menu-filters,
   .pagination a,
   .pagination em,
   .pagination span,
@@ -924,8 +931,12 @@
   .TimelineItem:before,
   .TimelineItem .status-meta:before,
   .TimelineItem .merge-pr-more-commits:before,
+  .btn,
+  .btn.btn-sm,
   .btn:disabled,
+  .btn.btn-sm:disabled,
   .btn:disabled:hover,
+  .btn.btn-sm:disabled:hover,
   .form-group .form-control:focus,
   .menu-item.selected,
   .btn.btn-primary,
@@ -1630,6 +1641,7 @@
   .team-left-column[aria-label="Explore"] > div:hover,
   .team-left-column[aria-label="Explore"] > div:focus,
   .btn:hover,
+  .btn.btn-sm:hover,
   .topic-tag-action,
   .topic-tag-action button,
   .topic-tag-action a,
@@ -1798,6 +1810,7 @@
   .boxed-group-list > li,
   .previewable-comment-form .comment-form-head.tabnav,
   .tabnav,
+  .Header,
   .menu-item,
   .rule,
   hr,
@@ -1906,7 +1919,8 @@
   }
   .reaction-sort-item,
   .UnderlineNav,
-  .btn {
+  .btn,
+  .btn.btn-sm {
     transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .reaction-sort-item {
@@ -1930,6 +1944,7 @@
   .btn.btn-outline.tooltipped.tooltipped-sw,
   body,
   body.page-responsive.pagehead,
+  .select-menu-filters,
   .SelectMenu-list,
   .Popover-message {
     background-color: var(--base-3) !important;
@@ -2184,15 +2199,12 @@
     border: 2px solid var(--base-5) !important;
   }
   .btn,
+  .btn.btn-sm,
   .btn:hover,
+  .btn.btn-sm:hover,
   .pagination-loader-container,
   .Box--responsive .Box-row--unread::before {
     background-image: none !important;
-  }
-  .btn,
-  .btn.btn-sm,
-  .menu-item:hover {
-    background-color: var(--base-6) !important;
   }
   .topic-tag-outline {
     box-shadow: inset 0 0 0 1px var(--base-1) !important;
@@ -2240,6 +2252,9 @@
   .contrib-person path,
   rect[fill="#e25d10"] {
     fill: var(--orange) !important;
+  }
+  .menu-item:hover {
+    background-color: var(--base-6) !important;
   }
   .user-status-container-border-busy,
   .Box-row--yellow,
