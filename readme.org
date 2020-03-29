@@ -1,4 +1,4 @@
-# Created 2020-03-29 Sun 04:04
+# Created 2020-03-29 Sun 04:07
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+html: <div align="center">
@@ -13,6 +13,7 @@ made with :heart:
 #+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
 #+html: <a href="https://discord.gg/PwpA8v"><img src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord&style=flat-square" alt="Discord Server"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/commits/master"><img src="https://img.shields.io/github/commit-activity/m/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Commit Activity"/></a>
+#+html: <a href="https://github.com/Brettm12345/github-moonlight/stargazers"><img src="https://img.shields.io/github/stars/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Stars"/></a>
 #+html: </div>
 
 * Features

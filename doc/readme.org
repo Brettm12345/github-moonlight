@@ -11,6 +11,7 @@ made with :heart:
 {{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
 {{{badge(Discord Server,discord.gg/PwpA8v,discord/693723424190627881?label=discord&logo=discord)}}}
 {{{badge(Commit Activity,github.com/Brettm12345/github-moonlight/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
+{{{badge(Stars,github.com/Brettm12345/github-moonlight/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
 #+HTML: </div>
 
 * Features
