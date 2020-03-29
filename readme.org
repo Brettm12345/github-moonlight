@@ -1,8 +1,6 @@
-# Created 2020-03-29 Sun 03:23
+# Created 2020-03-29 Sun 03:34
 #+TITLE: 
 #+AUTHOR: Brett Mandler
-#+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
-
 #+html: <div align="center">
 
 
@@ -12,6 +10,7 @@ A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vs
 made with :heart:
 
 [[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
+[[https://discord.gg/PwpA8v][https://img.shields.io/discord/693723424190627881?label=discord&logo=discord]]
 #+html: </div>
 
 * Features
@@ -41,6 +40,7 @@ These are the fonts used in the screenshots
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github    |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github        |
 * Screenshots
+#+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
 #+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
 #+html: <details><summary>Commit Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
 #+html: <details><summary>Dashboard</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>
@@ -60,6 +60,8 @@ These are the fonts used in the screenshots
 * Todo
 Feel free to create an issue if you want anything added to the theme
 
+- [ ] Create a custom logo
+- [ ] Create a discord server
 - [X] Add support for github api docs
 - [X] Add styles for [[https://www.githubstatus.com/][githubstatus.com]]
 - [X] Put colors into usercss variables
