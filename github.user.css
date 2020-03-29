@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.7
+@version      1.4.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1257,6 +1257,7 @@
   .legend li[style*="#7bc96f"],
   .legend li[style*="#239a3b"],
   .legend li[style*="#196127"],
+  .branch-action-state-clean .branch-action-icon,
   .blob-code-addition .x,
   .layout-content.status.status-index .page-status.status-none {
     background-color: var(--teal) !important;
@@ -1680,6 +1681,8 @@
     opacity: 0.4 !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
+  .user-list-item+.user-list-item,
+  .issue-list-item+.issue-list-item,
   .SelectMenu-filter,
   .news .Details-content--hidden li,
   .news .Details button,
