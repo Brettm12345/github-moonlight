@@ -1,5 +1,3 @@
-@require "variables"
-@require "mixins"
 @require "common"
 @require "notifications"
 @require "syntax"
@@ -125,13 +123,13 @@ img[src*="octocat-spinner-64.gif"]
     c $faded
   &-play
     c $redLight
-  &-trashcan
+  &-x, &-trashcan
     c $red
   &-repo-push, &-check, &.open
     c $green
   &[style*="#6a737d"]
     c $textGray
-  &-pencil, &-star, &-light-bulb
+  &-alert, &-pencil, &-star, &-light-bulb
     c $yellow
   &-repo-forked, &-issue-opened
     c $teal

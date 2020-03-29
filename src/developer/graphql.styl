@@ -29,9 +29,9 @@ iframe#graphiql
 .graphiql-container
   .graphiql-container .history-contents p
     c $text $border
-  .execute-options > li.selected, .toolbar-menu-items > li.hover, .toolbar-menu-items > li:active, .toolbar-menu-items > li:hover, .toolbar-select-options > li.hover, .toolbar-select-options > li:active, .toolbar-select-options > li:hover, .history-contents > p:hover, .history-contents > p:active
-    c 0 $border $region
-
+  .execute-options > li,  .toolbar-menu-items > li, .toolbar-select-options > li, .history-contents > p
+    &:hover, &.hover, &:active
+      c 0 $border $region
   .search-box
     c 0 $border $bg
     input
