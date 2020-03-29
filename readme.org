@@ -1,155 +1,63 @@
-#+BEGIN_HTML
-  <div align="center">
-#+END_HTML
+# Created 2020-03-29 Sun 03:49
+#+TITLE: 
+#+AUTHOR: Brett Mandler
+#+html: <div align="center">
+
 
 * Github Moonlight
-  :PROPERTIES:
-  :CUSTOM_ID: github-moonlight
-  :END:
 
-A dark usestyle for GitHub inspired by
-[[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
+A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
-[[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][[[https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]]]
-
-#+BEGIN_HTML
-  <a href="https://discord.gg/PwpA8v"><img alt="Discord" src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord"/></a>
-#+END_HTML
-
-#+BEGIN_HTML
-  </div>
-#+END_HTML
+[[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
+#+html: <a href="https://discord.gg/PwpA8v"><img alt="Discord" src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord"/></a>
+#+html: </div>
 
 * Features
-  :PROPERTIES:
-  :CUSTOM_ID: features
-  :END:
-
 *** Custom colors
-    :PROPERTIES:
-    :CUSTOM_ID: custom-colors
-    :END:
-
-All color variables are easily customizable check out
-[[file:src/variables.styl][variables.styl]] and
-[[file:github.user.styl]] for reference
-
+All color variables are easily customizable
+check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
 *** Custom fonts
-    :PROPERTIES:
-    :CUSTOM_ID: custom-fonts
-    :END:
-
-The ui and the monospace fonts are easily customizable through css
-variables
-
+The ui and the monospace fonts are easily customizable through css variables
 *** Complete theme
-    :PROPERTIES:
-    :CUSTOM_ID: complete-theme
-    :END:
-
-This theme changes 100% of the github ui. If you want to teak the colors
-to match the rest of your system go ahead! Forks and pull requests are
-welcome!
-
+This theme changes 100% of the github ui. If you want to teak
+the colors to match the rest of your system go ahead! Forks and pull requests
+are welcome!
 *** Blazing Fast
-    :PROPERTIES:
-    :CUSTOM_ID: blazing-fast
-    :END:
-
-Github-Moonlight uses
-[[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from
-the stylus css preproccessor on top of compression to consolidate and
-minify selectors
-
+Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
+compression to consolidate and minify selectors
 *** Smooth transitions
-    :PROPERTIES:
-    :CUSTOM_ID: smooth-transitions
-    :END:
-
-This theme adds easings from [[https://easings.net][easings.net]] so
-that color changes appear smoother.
-
+This theme adds easings from [[https://easings.net][easings.net]] so that color
+changes appear smoother.
 * Recomended Fonts
-  :PROPERTIES:
-  :CUSTOM_ID: recomended-fonts
-  :END:
-
 These are the fonts used in the screenshots
-
 - UI Font: [[https://rsms.me/inter/][Inter]]
 - Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
-
 * Recomended Extensions
-  :PROPERTIES:
-  :CUSTOM_ID: recomended-extensions
-  :END:
-
 | Extension                                                                   | Description                         |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]                              | GitHub File tree                    |
 | [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]              | Displays notible forks on repo page |
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github    |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github        |
-
 * Screenshots
-  :PROPERTIES:
-  :CUSTOM_ID: screenshots
-  :END:
-
-#+HTML: <details><summary>Code</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png]]"
-alt="Code" width="100%" /></details> #+HTML: <details><summary>Commit
-Tree</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png]]"
-alt="Commit Tree" width="100%" /></details> #+HTML:
-<details><summary>Dashboard</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png]]"
-alt="Dashboard" width="100%" /></details> #+HTML: <details><summary>Pull
-Requests</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png]]"
-alt="Pull Requests" width="100%" /></details> #+HTML:
-<details><summary>File Finder</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file-finder.png]]"
-alt="File Finder" width="100%" /></details> #+HTML:
-<details><summary>Contriubution Tree</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/contributions.png]]"
-alt="Contriubution Tree" width="100%" /></details> #+HTML:
-<details><summary>Markdown</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png]]"
-alt="Markdown" width="100%" /></details> #+HTML:
-<details><summary>Issues</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png]]"
-alt="Issues" width="100%" /></details> #+HTML:
-<details><summary>Diff</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png]]"
-alt="Diff" width="100%" /></details> #+HTML: <details><summary>Gist
-User</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png]]"
-alt="Gist User" width="100%" /></details> #+HTML: <details><summary>Gist
-File</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png]]"
-alt="Gist File" width="100%" /></details> #+HTML: <details><summary>Gist
-File Edit</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file-edit.png]]"
-alt="Gist File Edit" width="100%" /></details> #+HTML:
-<details><summary>Explore</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png]]"
-alt="Explore" width="100%" /></details> #+HTML: <details><summary>Api
-Docs</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png]]"
-alt="Api Docs" width="100%" /></details> #+HTML:
-<details><summary>Actions</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png]]"
-alt="Actions" width="100%" /></details> #+HTML:
-<details><summary>Projects</summary><img
-src="[[https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png]]"
-alt="Projects" width="100%" /></details>
-
+#+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+#+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
+#+html: <details><summary>Commit Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
+#+html: <details><summary>Dashboard</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>
+#+html: <details><summary>Pull Requests</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
+#+html: <details><summary>File Finder</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
+#+html: <details><summary>Contriubution Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/contributions.png" alt="Contriubution Tree" width="100%" /></details>
+#+html: <details><summary>Markdown</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" alt="Markdown" width="100%" /></details>
+#+html: <details><summary>Issues</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" alt="Issues" width="100%" /></details>
+#+html: <details><summary>Diff</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" alt="Diff" width="100%" /></details>
+#+html: <details><summary>Gist User</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png" alt="Gist User" width="100%" /></details>
+#+html: <details><summary>Gist File</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png" alt="Gist File" width="100%" /></details>
+#+html: <details><summary>Gist File Edit</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file-edit.png" alt="Gist File Edit" width="100%" /></details>
+#+html: <details><summary>Explore</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" alt="Explore" width="100%" /></details>
+#+html: <details><summary>Api Docs</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" alt="Api Docs" width="100%" /></details>
+#+html: <details><summary>Actions</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" alt="Actions" width="100%" /></details>
+#+html: <details><summary>Projects</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" alt="Projects" width="100%" /></details>
 * Todo
-  :PROPERTIES:
-  :CUSTOM_ID: todo
-  :END:
-
 Feel free to create an issue if you want anything added to the theme
 
 - [ ] Create a custom logo
