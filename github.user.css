@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.3
+@version      1.5.4
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1452,6 +1452,12 @@
   .pl-ms,
   .pl-mc,
   .pl-pse,
+  .markdown-body h1 .octicon-link,
+  .markdown-body h2 .octicon-link,
+  .markdown-body h3 .octicon-link,
+  .markdown-body h4 .octicon-link,
+  .markdown-body h5 .octicon-link,
+  .markdown-body h6 .octicon-link,
   .cm-operator,
   code .ni {
     color: var(--cyan) !important;
@@ -1623,6 +1629,35 @@
   .blob-code-inner {
     font-family: var(--mono-font) !important;
   }
+  .markdown-body h1:hover .octicon-link,
+  .markdown-body h2:hover .octicon-link,
+  .markdown-body h3:hover .octicon-link,
+  .markdown-body h4:hover .octicon-link,
+  .markdown-body h5:hover .octicon-link,
+  .markdown-body h6:hover .octicon-link,
+  .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
+  .gitako-side-bar .gitako-side-bar-body .octicon:hover,
+  .gitako-side-bar .gitako-side-bar-body .octicon:focus,
+  .reponav-item.selected .octicon {
+    opacity: 1 !important;
+  }
+  .markdown-body h1 .octicon-link,
+  .markdown-body h2 .octicon-link,
+  .markdown-body h3 .octicon-link,
+  .markdown-body h4 .octicon-link,
+  .markdown-body h5 .octicon-link,
+  .markdown-body h6 .octicon-link {
+    transform: scale(1.1);
+    visibility: visible;
+  }
+  .markdown-body h1 .octicon-link,
+  .markdown-body h2 .octicon-link,
+  .markdown-body h3 .octicon-link,
+  .markdown-body h4 .octicon-link,
+  .markdown-body h5 .octicon-link,
+  .markdown-body h6 .octicon-link {
+    opacity: 0 !important;
+  }
   .markdown-body .clippy-wrapper .clippy,
   .dashboard .js-all-activity-header + div .Box,
   .team-left-column[aria-label="Explore"] > div,
@@ -1678,12 +1713,6 @@
   }
   .gitako-toggle-show-button-wrapper .action-icon .octicon {
     opacity: 0.2 !important;
-  }
-  .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
-  .gitako-side-bar .gitako-side-bar-body .octicon:hover,
-  .gitako-side-bar .gitako-side-bar-body .octicon:focus,
-  .reponav-item.selected .octicon {
-    opacity: 1 !important;
   }
   .gitako-toggle-show-button-wrapper.collapsed {
     margin: 1% !important;

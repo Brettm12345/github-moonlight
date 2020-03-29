@@ -27,6 +27,15 @@
     m 0.4em
     white-space nowrap
     mono()
+  h1, h2, h3, h4, h5, h6
+    &:hover
+      .octicon-link
+        o 1
+    .octicon-link
+      c $cyan
+      o 0
+      transform scale(1.1)
+      visibility visible
   /.highlight pre, pre
     b $b
     c 0 $base1 $base2
