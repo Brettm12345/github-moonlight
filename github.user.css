@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.2
+@version      1.0.3
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -428,6 +428,11 @@
     color: var(--cn) !important;
     border-color: var(--border) !important;
     background-color: var(--alt) !important;
+    transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .markdown-body .clippy-wrapper .clippy:hover {
+    border-color: var(--blue) !important;
+    background-color: var(--region) !important;
   }
   .markdown-body .clippy-wrapper .clippy .icon {
     filter: invert(1);
@@ -482,6 +487,14 @@
   .gitako-ready .js-header-wrapper {
     background-color: var(--bg) !important;
   }
+  .gitako-toggle-show-button-wrapper .action-icon .octicon {
+    transition: color, opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+    opacity: 0.2 !important;
+  }
+  .gitako-toggle-show-button-wrapper .action-icon .octicon:hover {
+    color: var(--blue) !important;
+    opacity: 1 !important;
+  }
   .gitako-toggle-show-button-wrapper.collapsed {
     border-color: var(--border) !important;
     background-color: var(--hl) !important;
@@ -501,7 +514,12 @@
     background-color: var(--alt) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .octicon {
+    transition: color, opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+    opacity: 0.2 !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .octicon:hover {
     color: var(--blue) !important;
+    opacity: 1 !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title {
     border-top-color: var(--border) !important;
@@ -1338,7 +1356,7 @@
   .octicon.octicon-file {
     color: var(--indigo) !important;
   }
-  .octicon:not(.text-green):not(.text-red):not(.octicon-check):not(.octicon-smiley):not(.octicon-file) {
+  .octicon:not(.text-green):not(.text-red):not(.octicon-check):not(.octicon-smiley):not(.octicon-file):not(.X):not(.Gear) {
     color: var(--text) !important;
   }
   .muted-link {

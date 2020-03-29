@@ -1,11 +1,19 @@
 .gitako-
   &ready .js-header-wrapper
     c 0 0 $bg
-  &toggle-show-button-wrapper.collapsed
-    c 0 $border $hl
-    m 1%
+  &toggle-show-button-wrapper
     .action-icon
-      c $blue
+      .octicon
+        ease color, opacity
+        o 0.2
+        &:hover
+          c $blue
+          o 1
+    &.collapsed
+      c 0 $border $hl
+      m 1%
+      .action-icon
+        c $blue
   &side-bar
     &, ../resize-handler
       c 0 $border $border
@@ -13,7 +21,11 @@
       brc $border
       c 0 $border $alt
       .octicon
-        c $blue
+        ease color, opacity
+        o 0.2
+        &:hover
+          c $blue
+          o 1
       .gitako-settings-bar
         &-title
           btc $border
