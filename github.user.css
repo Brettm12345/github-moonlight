@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.2.0
+@version      1.2.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -614,6 +614,9 @@
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
   .gitako-side-bar-content .file-explorer .node-item-row {
     background-color: var(--hl) !important;
+  }
+  a.module-linker {
+    color: var(--green) !important;
   }
   .lovely-forks-addon {
     color: var(--text) !important;
