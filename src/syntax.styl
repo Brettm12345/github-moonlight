@@ -16,7 +16,11 @@
 .pl-
   &c /* comment, punctuation.definition.comment, string.comment */
     c $indigo
-  &c1, &s &v /* string variable */
+  &c1
+    c $orange
+  &s
+    c $green
+  &s &v /* string variable */
     c $text
   &e, &en /* entity.name */
     c $blue
@@ -69,6 +73,8 @@
   &mdr /* meta.diff.range */
     c $teal
     fw bold
+  &pse
+    c $cyan
   &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
     c $hover
   &s1, &smi

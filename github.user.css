@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.4
+@version      1.0.5
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
 @homepageURL  https://github.com/brettm12345/github-moonlight
@@ -227,7 +227,12 @@
   .pl-c {
     color: var(--indigo) !important;
   }
-  .pl-c1,
+  .pl-c1 {
+    color: var(--orange) !important;
+  }
+  .pl-s {
+    color: var(--green) !important;
+  }
   .pl-s .pl-v {
     color: var(--text) !important;
   }
@@ -316,6 +321,9 @@
   .pl-mdr {
     color: var(--teal) !important;
     font-weight: bold !important;
+  }
+  .pl-pse {
+    color: var(--cyan) !important;
   }
   .pl-ba {
     color: var(--hover) !important;
@@ -1870,10 +1878,10 @@
   .pl-s > a {
     color: var(--green) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker) {
     color: var(--text) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):hover {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):hover {
     color: var(--blue) !important;
   }
   div.commit-build-statuses,
