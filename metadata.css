@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.1
+@version      1.5.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -20,6 +20,7 @@
 @var color green      "Green"      #c3e88d
 @var color teal       "Teal"       #4fd6be
 @var color blue       "Blue"       #82aaff
+@var color blue-dark   "Blue Dark" #4976eb
 @var color cyan       "Cyan"       #86e1fc
 @var color cyan-light "Light Cyan" #b4f9f8
 @var color pink       "Pink"       #fca7ea
@@ -75,6 +76,7 @@
   --base-9:  /*[[base-9]]*/ ;
   --active: /*[[active]]*/ ;
   --blue:  /*[[blue]]*/ ;
+  --blue-dark: /*[[blue-dark]]*/ ;
   --blue-trans: /*[[blue-trans]]*/ ;
   --cn:  /*[[cn]]*/ ;
   --cyan: /*[[cyan]]*/ ;
