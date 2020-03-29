@@ -2,10 +2,10 @@
   c 0 $base1 $base4
 .filter-item
   ease background-color
-  &:hover
-    c 0 0 $base9
-  &.selected, &[aria-current], &[aria-selected=true]
-    c $cn 0 $base7
+  &, &.selected, &[aria-current], &[aria-selected=true]
+    &:hover
+      c 0 0 $base8
+    c $cn 0 $base6
 .notification-
   &navigation.bg-white
     c 0 0 $base2

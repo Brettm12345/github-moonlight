@@ -680,12 +680,53 @@
     transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .filter-item:hover,
-  .ScreenshotCarousel-navitem:hover,
-  .ScreenshotCarousel-navitem:focus,
-  .commit-tease-contributors,
-  .navigation-focus {
-    background-color: var(--base-9) !important;
+  .filter-item.selected:hover,
+  .filter-item[aria-current]:hover,
+  .filter-item[aria-selected=true]:hover,
+  .notifications-dropdown,
+  .notifications-dropdown-see-all,
+  .markdown-body .clippy-wrapper .clippy:hover,
+  .task-progress .progress-bar .progress,
+  .community-checklist .progress,
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
+  .signup-plan-card:hover,
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  .select-menu-item:hover,
+  ::selection,
+  .blob-code-inner.highlighted,
+  .blob-code-inner .highlighted,
+  .branch-name,
+  .pagination a:hover,
+  .pagination em:hover,
+  .pagination span:hover,
+  .pagination .disabled:hover,
+  .pagination .gap:hover,
+  .pagination [aria-disabled=true]:hover,
+  .topic-tag-link:hover,
+  .menu-item:hover,
+  .checks-list-item.selected .checks-list-item-name,
+  .Box-row[style*="background"],
+  .CodeMirror-hint-active,
+  .graphiql-container .execute-options > li:hover,
+  .graphiql-container .toolbar-menu-items > li:hover,
+  .graphiql-container .toolbar-select-options > li:hover,
+  .graphiql-container .history-contents > p:hover,
+  .graphiql-container .execute-options > li.hover,
+  .graphiql-container .toolbar-menu-items > li.hover,
+  .graphiql-container .toolbar-select-options > li.hover,
+  .graphiql-container .history-contents > p.hover,
+  .graphiql-container .execute-options > li:active,
+  .graphiql-container .toolbar-menu-items > li:active,
+  .graphiql-container .toolbar-select-options > li:active,
+  .graphiql-container .history-contents > p:active,
+  .sidebar-menu h3:hover,
+  .sidebar-menu ul ul li:hover,
+  .sidebar-menu h3 a:hover,
+  .sidebar-menu ul ul li a:hover {
+    background-color: var(--base-8) !important;
   }
+  .filter-item,
   .filter-item.selected,
   .filter-item[aria-current],
   .filter-item[aria-selected=true],
@@ -749,32 +790,13 @@
   .sidebar-module .disable > a {
     color: var(--cn) !important;
   }
+  .filter-item,
   .filter-item.selected,
   .filter-item[aria-current],
   .filter-item[aria-selected=true],
-  .markdown-body code,
-  .markdown-body tt,
-  .__better_github_pr .github-pr-file.github-pr-file-highlight,
-  .__better_github_pr .tree-view_item:hover,
-  .bg-blue,
-  .bg-gray-2,
-  .Progress,
-  .form-group .form-control:focus,
-  .ais-Hits-item:hover,
-  .discussion-item-icon,
-  .pinned-item-checkbox:checked + .pinned-item-name,
-  .pagination .current,
-  .pagination [aria-current],
-  .ellipsis-expander,
-  .hidden-text-expander a,
-  .btn:hover,
-  .btn.btn-sm:hover,
-  .subnav-item:focus,
-  .subnav-item:hover,
-  .Box-row--focus-gray.navigation-focus,
-  .SideNav-item:focus::before,
-  .SideNav-item:hover::before {
-    background-color: var(--base-7) !important;
+  .menu-item:hover,
+  .suggester li[aria-selected="true"] {
+    background-color: var(--base-6) !important;
   }
   .notification-navigation.bg-white,
   .thread-subscription-status,
@@ -1019,49 +1041,6 @@
   .Box-row,
   .border-top {
     border-top: 1px solid var(--base-1) !important;
-  }
-  .notifications-dropdown,
-  .notifications-dropdown-see-all,
-  .markdown-body .clippy-wrapper .clippy:hover,
-  .task-progress .progress-bar .progress,
-  .community-checklist .progress,
-  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
-  .signup-plan-card:hover,
-  .dropdown-item:hover,
-  .dropdown-item:focus,
-  .select-menu-item:hover,
-  ::selection,
-  .blob-code-inner.highlighted,
-  .blob-code-inner .highlighted,
-  .branch-name,
-  .pagination a:hover,
-  .pagination em:hover,
-  .pagination span:hover,
-  .pagination .disabled:hover,
-  .pagination .gap:hover,
-  .pagination [aria-disabled=true]:hover,
-  .topic-tag-link:hover,
-  .menu-item:hover,
-  .checks-list-item.selected .checks-list-item-name,
-  .Box-row[style*="background"],
-  .CodeMirror-hint-active,
-  .graphiql-container .execute-options > li:hover,
-  .graphiql-container .toolbar-menu-items > li:hover,
-  .graphiql-container .toolbar-select-options > li:hover,
-  .graphiql-container .history-contents > p:hover,
-  .graphiql-container .execute-options > li.hover,
-  .graphiql-container .toolbar-menu-items > li.hover,
-  .graphiql-container .toolbar-select-options > li.hover,
-  .graphiql-container .history-contents > p.hover,
-  .graphiql-container .execute-options > li:active,
-  .graphiql-container .toolbar-menu-items > li:active,
-  .graphiql-container .toolbar-select-options > li:active,
-  .graphiql-container .history-contents > p:active,
-  .sidebar-menu h3:hover,
-  .sidebar-menu ul ul li:hover,
-  .sidebar-menu h3 a:hover,
-  .sidebar-menu ul ul li a:hover {
-    background-color: var(--base-8) !important;
   }
   .thread-subscription-status,
   .Toast,
@@ -1614,6 +1593,30 @@
     white-space: nowrap;
   }
   .markdown-body code,
+  .markdown-body tt,
+  .__better_github_pr .github-pr-file.github-pr-file-highlight,
+  .__better_github_pr .tree-view_item:hover,
+  .bg-blue,
+  .bg-gray-2,
+  .Progress,
+  .form-group .form-control:focus,
+  .ais-Hits-item:hover,
+  .discussion-item-icon,
+  .pinned-item-checkbox:checked + .pinned-item-name,
+  .pagination .current,
+  .pagination [aria-current],
+  .ellipsis-expander,
+  .hidden-text-expander a,
+  .btn:hover,
+  .btn.btn-sm:hover,
+  .subnav-item:focus,
+  .subnav-item:hover,
+  .Box-row--focus-gray.navigation-focus,
+  .SideNav-item:focus::before,
+  .SideNav-item:hover::before {
+    background-color: var(--base-7) !important;
+  }
+  .markdown-body code,
   .markdown-body tt {
     margin: 0.4em !important;
   }
@@ -1931,6 +1934,12 @@
   .ScreenshotCarousel-nav,
   .more-repos {
     box-shadow: inset 0 1px 0 var(--base-1) !important;
+  }
+  .ScreenshotCarousel-navitem:hover,
+  .ScreenshotCarousel-navitem:focus,
+  .commit-tease-contributors,
+  .navigation-focus {
+    background-color: var(--base-9) !important;
   }
   .dropdown-signed-commit .dropdown-menu-w::before {
     border-left-color: var(--base-1) !important;
@@ -2277,10 +2286,6 @@
   .contrib-person path,
   rect[fill="#e25d10"] {
     fill: var(--orange) !important;
-  }
-  .menu-item:hover,
-  .suggester li[aria-selected="true"] {
-    background-color: var(--base-6) !important;
   }
   .user-status-container-border-busy,
   .Box-row--yellow,
