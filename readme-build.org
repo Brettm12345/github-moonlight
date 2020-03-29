@@ -1,0 +1,82 @@
+#+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+
+#+HTML: <div align="center">
+
+
+* Github Moonlight
+
+A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
+made with :heart:
+
+[[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
+#+HTML: </div>
+
+* Table of Contents :TOC_3_gh:
+- [[#github-moonlight][Github Moonlight]]
+- [[#features][Features]]
+    - [[#custom-colors][Custom colors]]
+    - [[#custom-fonts][Custom fonts]]
+    - [[#complete-theme][Complete theme]]
+    - [[#blazing-fast][Blazing Fast]]
+    - [[#smooth-transitions][Smooth transitions]]
+- [[#recomended-fonts][Recomended Fonts]]
+- [[#recomended-extensions][Recomended Extensions]]
+- [[#screenshots][Screenshots]]
+- [[#todo][Todo]]
+
+* Features
+*** Custom colors
+All color variables are easily customizable
+check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
+*** Custom fonts
+The ui and the monospace fonts are easily customizable through css variables
+
+*** Complete theme
+This theme changes 100% of the github ui. If you want to teak
+the colors to match the rest of your system go ahead! Forks and pull requests
+are welcome!
+*** Blazing Fast
+Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
+compression to consolidate and minify selectors
+*** Smooth transitions
+This theme adds easings from [[https://easings.net][easings.net]] so that color
+changes appear smoother.
+* Recomended Fonts
+These are the fonts used in the screenshots
+- UI Font: [[https://rsms.me/inter/][Inter]]
+- Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
+* Recomended Extensions
+| Extension           | Description                         |
+| [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
+| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]        | Displays notible forks on repo page |
+| [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github    |
+| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github        |
+* Screenshots
+{{{screenshot(Code,code)}}}
+{{{screenshot(Commit Tree,commits)}}}
+{{{screenshot(Dashboard,dashboard)}}}
+{{{screenshot(Pull Requests,pull-requests)}}}
+{{{screenshot(File Finder,file-finder)}}}
+{{{screenshot(Contriubution Tree,contributions)}}}
+{{{screenshot(Markdown,markdown)}}}
+{{{screenshot(Issues,issues)}}}
+{{{screenshot(Diff,diff)}}}
+{{{screenshot(Gist User,gist-user)}}}
+{{{screenshot(Gist File,gist-file)}}}
+{{{screenshot(Gist File Edit,gist-file-edit)}}}
+{{{screenshot(Explore,explore)}}}
+{{{screenshot(Api Docs,api)}}}
+{{{screenshot(Actions,actions)}}}
+{{{screenshot(Projects,projects)}}}
+* Todo
+Feel free to create an issue if you want anything added to the theme
+
+- [X] Add support for github api docs
+- [X] Add styles for [[https://www.githubstatus.com/][githubstatus.com]]
+- [X] Put colors into usercss variables
+- [X] Add screenshots to readme
+- [X] Add styles for actions
+- [X] Add styles for insights
+- [X] Finish theming pull request creation
+- [X] Setup a usercss with user configurable variables
+- [X] Add badges to readme.org

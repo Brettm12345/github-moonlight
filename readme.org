@@ -1,4 +1,9 @@
-#+HTML: <div align="center">
+# Created 2020-03-29 Sun 03:20
+#+TITLE: 
+#+AUTHOR: Brett Mandler
+#+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+
+#+html: <div align="center">
 
 
 * Github Moonlight
@@ -7,7 +12,7 @@ A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vs
 made with :heart:
 
 [[https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
-#+HTML: </div>
+#+html: </div>
 
 * Table of Contents :TOC_3_gh:
 - [[#github-moonlight][Github Moonlight]]
@@ -20,22 +25,6 @@ made with :heart:
 - [[#recomended-fonts][Recomended Fonts]]
 - [[#recomended-extensions][Recomended Extensions]]
 - [[#screenshots][Screenshots]]
-  - [[#code][Code]]
-  - [[#commit-tree][Commit Tree]]
-  - [[#dashboard][Dashboard]]
-  - [[#pull-requests][Pull Requests]]
-  - [[#file-finder][File Finder]]
-  - [[#contribution-tree][Contribution Tree]]
-  - [[#markdown][Markdown]]
-  - [[#issues][Issues]]
-  - [[#diff][Diff]]
-  - [[#gist-user][Gist User]]
-  - [[#gist-file][Gist File]]
-  - [[#gist-file-edit][Gist File Edit]]
-  - [[#explore][Explore]]
-  - [[#api-docs][Api Docs]]
-  - [[#actions][Actions]]
-  - [[#projects][Projects]]
 - [[#todo][Todo]]
 
 * Features
@@ -60,44 +49,28 @@ These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
 - Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
 * Recomended Extensions
-| Extension           | Description                         |
-| [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
-| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]        | Displays notible forks on repo page |
+| Extension                                                                   | Description                         |
+| [[https://github.com/EnixCoda/Gitako][Gitako]]                              | GitHub File tree                    |
+| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]              | Displays notible forks on repo page |
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github    |
-| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github        |
+| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github        |
 * Screenshots
-** Code
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" width="100%" />
-** Commit Tree
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" width="100%" />
-** Dashboard
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" width="100%" />
-** Pull Requests
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png" width="100%" />
-** File Finder
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file-finder.png" width="100%" />
-** Contribution Tree
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/contributions.png" width="100%" />
-** Markdown
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" width="100%" />
-** Issues
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" width="100%" />
-** Diff
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" width="100%" />
-** Gist User
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png" width="100%" />
-** Gist File
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png" width="100%" />
-** Gist File Edit
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file-edit.png" width="100%" />
-** Explore
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" width="100%" />
-** Api Docs
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" width="100%" />
-** Actions
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" width="100%" />
-** Projects
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" width="100%" />
+#+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
+#+html: <details><summary>Commit Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
+#+html: <details><summary>Dashboard</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>
+#+html: <details><summary>Pull Requests</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
+#+html: <details><summary>File Finder</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
+#+html: <details><summary>Contriubution Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/contributions.png" alt="Contriubution Tree" width="100%" /></details>
+#+html: <details><summary>Markdown</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" alt="Markdown" width="100%" /></details>
+#+html: <details><summary>Issues</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" alt="Issues" width="100%" /></details>
+#+html: <details><summary>Diff</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" alt="Diff" width="100%" /></details>
+#+html: <details><summary>Gist User</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png" alt="Gist User" width="100%" /></details>
+#+html: <details><summary>Gist File</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png" alt="Gist File" width="100%" /></details>
+#+html: <details><summary>Gist File Edit</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file-edit.png" alt="Gist File Edit" width="100%" /></details>
+#+html: <details><summary>Explore</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" alt="Explore" width="100%" /></details>
+#+html: <details><summary>Api Docs</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" alt="Api Docs" width="100%" /></details>
+#+html: <details><summary>Actions</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" alt="Actions" width="100%" /></details>
+#+html: <details><summary>Projects</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" alt="Projects" width="100%" /></details>
 * Todo
 Feel free to create an issue if you want anything added to the theme
 
