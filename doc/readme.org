@@ -59,7 +59,7 @@ These are the fonts used in the screenshots
 Feel free to create an issue if you want anything added to the theme
 
 - [ ] Create a custom logo
-- [ ] Create a discord server
+- [X] Create a discord server
 - [X] Add support for github api docs
 - [X] Add styles for [[https://www.githubstatus.com/][githubstatus.com]]
 - [X] Put colors into usercss variables
