@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.2
+@version      1.5.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -763,7 +763,6 @@
   .ais-Hits-item:hover,
   .discussion-item-icon,
   .pinned-item-checkbox:checked + .pinned-item-name,
-  .blob-code-inner .highlighted,
   .pagination .current,
   .pagination [aria-current],
   .ellipsis-expander,
@@ -1032,6 +1031,8 @@
   .dropdown-item:focus,
   .select-menu-item:hover,
   ::selection,
+  .blob-code-inner.highlighted,
+  .blob-code-inner .highlighted,
   .branch-name,
   .pagination a:hover,
   .pagination em:hover,
