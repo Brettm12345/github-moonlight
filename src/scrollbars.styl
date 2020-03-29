@@ -1,0 +1,15 @@
+*:not(select)
+  sbc $sb $bg
+  sbw $sbWidth
+::-webkit-scrollbar
+  &, .integrations-select-repos&
+    max-size $wbSbSize
+    &, &-corner, &-track, &-track-piece
+      bg $bg
+      &:hover
+        bg $hl
+    &-thumb
+      bg $sb
+      r $wbSbRadius
+      &:hover
+        bg $blue

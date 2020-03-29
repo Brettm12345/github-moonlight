@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.3.5
+@version      1.3.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -48,6 +48,16 @@
 @var color purple-trans "Transparent Purple" #c597f933
 @var color sb           "Scrollbar"          #828bb830
 
+@advanced dropdown sb-width "Scrollbar track width/height" {
+  thin "Firefox Thin" <<<EOT
+  thin EOT;
+  auto "Firefox Auto" <<<EOT
+  auto EOT;
+  none "Firefox None" <<<EOT
+  none EOT;
+}
+@var text wb-sb-size  "Webkit scrollbar width/height" 6px
+@var text wb-sb-radius "Webkit scrollbar border radius" 0px
 @preprocessor uso
 ==/UserStyle== */
 :root {
@@ -77,6 +87,9 @@
   --red-trans: /*[[red-trans]]*/ ;
   --region: /*[[region]]*/ ;
   --sb: /*[[sb]]*/ ;
+  --sb-width: /*[[sb-width]]*/ ;
+  --wb-sb-size: /*[[wb-sb-size]]*/ ;
+  --wb-sb-radius: /*[[wb-sb-radius]]*/ ;
   --teal: /*[[teal]]*/ ;
   --teal-trans: /*[[teal-trans]]*/ ;
   --text: /*[[text-color]]*/ ;
