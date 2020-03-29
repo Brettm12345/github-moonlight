@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.0.8
+@version      1.1.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -389,6 +389,9 @@
   .js-commit-preview .markdown-body {
     background-color: var(--hl) !important;
   }
+  .markdown-body .lead-mktg p {
+    color: var(--faded) !important;
+  }
   .markdown-body a {
     color: var(--text-alt) !important;
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -595,6 +598,9 @@
   }
   .bg-yellow-light {
     background-color: var(--yellow-trans) !important;
+  }
+  .bg-purple-light {
+    background-color: var(--purple-trans) !important;
   }
   .bg-blue {
     background-color: var(--icon) !important;
@@ -931,6 +937,30 @@
     background-color: var(--alt) !important;
     padding-left: 8px !important;
     padding-right: 8px !important;
+  }
+  .form-control.focus,
+  .focus.ais-SearchBox-input,
+  .form-control:focus,
+  .ais-SearchBox-input:focus,
+  .form-select.focus,
+  .form-select:focus {
+    border-color: var(--blue) !important;
+    box-shadow: none !important;
+  }
+  .search-result-intro mark,
+  .search-result-intro .ais-Highlight-highlighted {
+    border-bottom-color: var(--blue) !important;
+  }
+  .ais-Hits-item:hover {
+    background-color: var(--icon) !important;
+  }
+  .ais-SearchBox-input {
+    background: var(--alt) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
+    color: var(--cn) !important;
+    border-color: var(--border) !important;
+  }
+  header #search-results-container {
+    background-color: var(--alt) !important;
   }
   .release-timeline-tags .tag-timeline-date::after {
     border-color: var(--border) !important;
@@ -2157,7 +2187,26 @@
   }
   .pagination-loader-container {
     background-image: none !important;
+    border-top: 1px solid var(--border) !important;
+    padding-top: 16px !important;
+  }
+  .pagination-loader-container .Box {
+    transition: border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .pagination-loader-container .Box > * {
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .pagination-loader-container .Box:hover,
+  .pagination-loader-container .Box:focus {
+    border-color: var(--blue) !important;
+  }
+  .pagination-loader-container .Box:hover > *,
+  .pagination-loader-container .Box:focus > * {
     background-color: var(--hl) !important;
+  }
+  .pagination-loader-container,
+  .pagination-loader-container .bg-white {
+    background-color: var(--alt) !important;
   }
   .ajax-pagination-form .ajax-pagination-btn {
     color: var(--blue) !important;
@@ -2261,6 +2310,9 @@
   }
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 var(--border) !important;
+  }
+  section[style*="#fafbfc"] {
+    background-color: var(--bg) !important;
   }
 }
 @-moz-document domain('gist.github.com') {

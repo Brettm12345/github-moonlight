@@ -559,7 +559,18 @@ div.commit-build-statuses,
   px 10px
 .pagination-loader-container
   bgi none
-  c 0 0 $hl
+  bt $b
+  pt 16px
+  .Box
+    ease border-color
+    & > *
+      ease background-color
+      ../:hover, ../:focus
+        c 0 $blue
+        & > *
+          c 0 0 $hl
+  &, .bg-white
+    c 0 0 $alt
 .ajax-pagination-form .ajax-pagination-btn
   c $blue
 .blankslate
@@ -621,3 +632,5 @@ div.commit-build-statuses,
         c 0 0 $icon
     &:last-child
       s 0 1px 0 $border
+section[style*="#fafbfc"]
+  c 0 0 $bg

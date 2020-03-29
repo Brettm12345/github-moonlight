@@ -21,3 +21,18 @@
   bx $b
   c $text $border $alt
   px 8px
+.form-control.focus, .focus.ais-SearchBox-input, .form-control:focus, .ais-SearchBox-input:focus, .form-select.focus, .form-select:focus
+  c 0 $blue
+  s none
+.ais-
+  /.search-result-intro
+    & mark, & .ais-Highlight-highlighted
+      bbc $blue
+  &Hits-item
+    &:hover
+      c 0 0 $icon
+  &SearchBox-input
+    bg $alt url("/assets/images/octicons/search.svg") no-repeat 6px
+    c $cn $border
+header #search-results-container
+  c 0 0 $alt
