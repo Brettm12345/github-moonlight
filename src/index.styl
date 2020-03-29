@@ -115,15 +115,16 @@ img[src*="octocat-spinner-64.gif"]
     c $blue
 .js-recent-activity-container > div > div
   c 0 0 $base2
-.diffstat-
-  &block-
+.diffstat
+  c $textGray
+  &-block-
     &neutral
       c 0 0 $sb
     &added
       c 0 0 $green
     &deleted
       c 0 0 $red
-  &summary
+  &-summary
     c $text
     strong
       c $purple
@@ -209,7 +210,7 @@ comment-form
 input[type="text"]
   c $cn $base1 $base4
 div[style*="linear-gradient"]
-  bg linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+  bg linear-gradient(to top, $base1, transparent)
 .numbers-summary
   octicon $text
 -expander

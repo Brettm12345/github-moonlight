@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.9
+@version      1.5.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1868,7 +1868,8 @@
     margin-bottom: 0.1em !important;
   }
   .octicon[style*="#6a737d"],
-  .vcard-username {
+  .vcard-username,
+  .diffstat {
     color: var(--text-gray) !important;
   }
   .MarketplaceBackground-reccomendations img {
@@ -2173,7 +2174,7 @@
     border-top-right-radius: 6px !important;
   }
   div[style*="linear-gradient"] {
-    background: linear-gradient(to top, #000, rgba(0,0,0,0)) !important;
+    background: linear-gradient(to top, var(--base-1), transparent) !important;
   }
   .UnderlineNav[style*="margin-top"] {
     border-color: transparent !important;
