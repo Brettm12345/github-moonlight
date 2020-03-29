@@ -2,7 +2,7 @@ code .link-gray
   fw 500
 .signed-commit
   &-header
-    c 0 $green $bg
+    c 0 $green $base2
   &-verified-label
     c $green
   &-badge.verified
@@ -12,41 +12,45 @@ code .link-gray
   .Popover-message
     caret "right"
 .inline-comment-form
-  c 0 $border
+  c 0 $base1
+
+.btn.btn-outline
+  &.BtnGroup-item, &.tooltipped.tooltipped-sw
+    c 0 0 $base3
 .commit
   &-author-section
     c $blue
   &-desc pre
-    c $text 0 $alt
+    c $text 0 $base4
   &s-listing:before
-    c 0 0 $hl
+    c 0 0 $base5
   &-group-title .octicon-git-commit
     c $text
   &-ref
-    c $text $border $bg
+    c $text $base1 $base2
     fn $monoFont
     fw 500
     .user
       c $blue
   &-sha
-    c $yellow $border $hl
+    c $yellow $base1 $base5
   & &-title, &-group-title
     &, a
       c $text
   &-tease
-    c $blue $border $alt
+    c $blue $base1 $base4
     &-sha
       c $blue
     &-contributors
       bt $b
-      c 0 0 $hover
+      c 0 0 $base9
 .commits
   blockquote
     c $text
   &-list-item.navigation-focus
-    c 0 0 $hl
+    c 0 0 $base5
 .full-commit
-  c $blue $border $alt
+  c $blue $base1 $base4
   p.commit-title
     c $blue
   .sha-block
@@ -56,13 +60,13 @@ code .link-gray
     fs 14px
     fw 500
   .commit-meta
-    c 0 $border $hl
+    c 0 $base1 $base5
 .file-commit-form--full
-  c $text $border $bg
+  c $text $base1 $base2
 .commit-form
-  c 0 0 $alt
+  c 0 0 $base4
   caret "right"
 .line-comments
-  c 0 0 $hl
+  c 0 0 $base5
   /.diff-table tr:not(:last-child) &
-    c 0 $border
+    c 0 $base1

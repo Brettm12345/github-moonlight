@@ -1,13 +1,13 @@
 .MarketplaceBackground-
   &buffer
-    c 0 $border $alt
+    c 0 $base1 $base4
   &reccomendations img
      inv()
 .MarketplacePlan--sticky
   div.bg-white
     b $b
     bt none
-    c 0 $border $alt
+    c 0 $base1 $base4
     rb 6px
     s-1()
     .bg-blue
@@ -15,15 +15,15 @@
 .marketplace-plan-emphasis
   c $text
 .ScreenshotCarousel
-  c 0 $border $alt
+  c 0 $base1 $base4
   r 6px
   s-1()
   &-nav
-    s inset 0 1px 0 $border
+    s inset 0 1px 0 $base1
   &-navitem
-    brc $border
+    brc $base1
     ease background-color
     &:hover, &:focus
-      c 0 0 $hover
+      c 0 0 $base9
     &.selected
-      c 0 0 $hl
+      c 0 0 $base5

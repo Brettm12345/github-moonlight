@@ -1,16 +1,16 @@
 .dropdown-
   &divider
-    c 0 $border
+    c 0 $base1
   &signed-commit &menu-w
-    caret "left" $bg
+    caret "left" $base2
   &menu
-    c $text $border $alt
+    c $text $base1 $base4
     &-ne
-      caret "top" $hl
+      caret "top" $base5
     &:after
-      bbc $border
+      bbc $base1
   &item
     c $text
     ease background-color, color
     &:hover, &:focus
-      c $cn 0 $region
+      c $cn 0 $base8

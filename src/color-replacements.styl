@@ -1,13 +1,13 @@
-$bgColors = {
-  gray: $alt
-  gray-light: $alt
-  blue-light: $alt
+$base2Colors = {
+  gray: $base4
+  gray-light: $base4
+  blue-light: $base4
   yellow-light: $yellowTrans
   purple-light: $purpleTrans
-  blue: $icon
-  gray-dark: $bg
-  gray-2: $icon
-  white: $hl
+  blue: $base7
+  gray-dark: $base2
+  gray-2: $base7
+  white: $base5
   pending: $purple
 }
 $textColors = {
@@ -21,7 +21,7 @@ $textColors = {
   red: $red
 }
 .bg-
-  for $k, $v in $bgColors
+  for $k, $v in $base2Colors
     &{$k}
       c 0 0 $v
 .text-

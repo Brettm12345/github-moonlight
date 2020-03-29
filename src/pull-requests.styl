@@ -1,34 +1,34 @@
 .task-progress
   c $faded
   .progress-bar .progress
-    c 0 0 $region
+    c 0 0 $base8
 .compare-pr-placeholder
-  c 0 $border $hl
+  c 0 $base1 $base5
   p
     c $text
 .comment-reactions
   .user-has-reacted
-    c 0 $border $hl
+    c 0 $base1 $base5
   &.has-reactions
-    c 0 $border $alt
+    c 0 $base1 $base4
 .range-editor
-  c 0 $border $alt
+  c 0 $base1 $base4
   &-icon
     c $faded
 .select-menu
   &-tabs
-    c 0 $border
+    c 0 $base1
     ../-tab-nav
       &.selected, &[aria-selected="true"], a.selected, a[aria-selected="true"]
-        bc $border $border $hl
-        c $cn 0 $hl
+        bc $base1 $base1 $base5
+        c $cn 0 $base5
 .blob-code-
   &addition
     c 0 0 $tealTrans
   &deletion
     c 0 0 $redTrans
 .Progress
-  c 0 0 $icon
+  c 0 0 $base7
 .github-pr-file span
   &.deletion
     c 0 0 $red
@@ -36,76 +36,76 @@
     c 0 0 $green
 .SelectMenu-
   &blankslate, &loading, &message
-    c $text $border $alt
+    c $text $base1 $base4
   &item
     ease background-color
     &:hover
-      c 0 0 $hl
+      c 0 0 $base5
 .status-meta,
 .merge-pr-more-commits
   c $faded
 ul.comparison-list
-  c 0 $border $alt
+  c 0 $base1 $base4
   & > li
-    c $text $border $alt
+    c $text $base1 $base4
     em
       c $faded
   & > li.title
-    c $text $border $hl
+    c $text $base1 $base5
 .branch-
   &action-state-clean
     ../action-body::before
-      brc $hl
+      brc $base5
   &action-item-icon.completeness-indicator
     .octicon
-      v $border
+      v $base1
     &-success
-      c $border 0 $green
+      c $base1 0 $green
     &-error
-      c $border 0 $red
+      c $base1 0 $red
   &action-state-clean &action-icon
     .octicon
-      v $border
+      v $base1
   &infobar
-    c 0 $border $alt
+    c 0 $base1 $base4
   &action-body
     b 0
-    c 0 $border $hl
+    c 0 $base1 $base5
     caret "right"
     .merge-
       &branch-form, &message
-        c 0 $border $alt
+        c 0 $base1 $base4
 .merge-status-
   &list
-    c 0 $border
+    c 0 $base1
   &item
-    c 0 $border $alt
+    c 0 $base1 $base4
 .timeline-comment
-  c $text $border $hl
+  c $text $base1 $base5
   /:target &
-    s 0 0 0 0.2em $border
+    s 0 0 0 0.2em $base1
     &::before
-      filter drop-shadow(-0.28em 0 0 $border)
+      filter drop-shadow(-0.28em 0 0 $base1)
   &-wrapper
     b 0
-    c 0 $border
+    c 0 $base1
   &-label.tooltipped.tooltipped-s.tooltipped-multiline
     c $purple $purple $purpleTrans
   &-header
-    c $cn $border $alt
+    c $cn $base1 $base4
   &--caret
     &, &.current-user
       &::before, &::after
-        brc $alt
+        brc $base4
 .composer.composer-responsive .timeline-comment
   caret "right"
 .tabnav
   &-pr &-tab.selected
-    c 0 0 $bg
+    c 0 0 $base2
 .review-
   &thread-reply
-    c 0 $border $alt
+    c 0 $base1 $base4
     .inline-comment-form
-      c 0 0 $hl
+      c 0 0 $base5
   &comment
     c $text

@@ -20,10 +20,10 @@ c($x, $y = 0, $z = 0)
 v($x, $y = 0)
   colorProp 'fill' $x
   colorProp 'stroke' $y
-caret($direction = 'bottom', $popupColor = $alt, $borderColor = $border)
+caret($direction = 'bottom', $popupColor = $base4, $base1Color = $base1)
     $p = 'border-' + $direction + '-color'
     &::before
-      prop $p $borderColor
+      prop $p $base1Color
     &::after
       prop $p $popupColor
 bgi($x...)
@@ -159,10 +159,10 @@ mono()
 inv()
   filter invert(1)
 box()
-  c 0 $border $alt
+  c 0 $base1 $base4
   ease border-color, background-color
   &:hover, &:focus
-    c 0 $blue $hl
+    c 0 $blue $base5
 octicon($x...)
   +cache('x' + $x)
     .octicon

@@ -1,16 +1,16 @@
 .notifications-list-item.notification-unread
-  c 0 $border $alt
+  c 0 $base1 $base4
 .filter-item
   ease background-color
   &:hover
-    c 0 0 $hover
+    c 0 0 $base9
   &.selected, &[aria-current], &[aria-selected=true]
-    c $cn 0 $icon
+    c $cn 0 $base7
 .notification-
   &navigation.bg-white
-    c 0 0 $bg
+    c 0 0 $base2
   &configure-filters
-    octicon $hover
+    octicon $base9
   &navigation &configure-filters
     octicon $text
     &:hover
@@ -19,34 +19,34 @@
   & &-actions svg
     v $text
   &:hover
-    c 0 0 $hl
+    c 0 0 $base5
     .notification-list-item-actions .btn
       ease background-color
       &:hover
-        c $cn $border $border
+        c $cn $base1 $base1
 .notifications-dropdown
-  c 0 $border $border
+  c 0 $base1 $base1
   .notifications-list
     mb 0
   &-arrow
-    c 0 $alt
+    c 0 $base4
   &, &-see-all
     bt $b
-    c 0 $border $region
+    c 0 $base1 $base8
 .thread-subscription-status
-  c $text $border $bg
+  c $text $base1 $base2
 .Toast
   b $b
   s-2()
   &--error &-icon
     c 0 0 $red
   &--warning &-icon
-    c $bg 0 $yellow
+    c $base2 0 $yellow
   &--success &-icon
-    c $bg 0 $teal
+    c $base2 0 $teal
   &, &-content
-    c $text $border $alt
+    c $text $base1 $base4
   &-dismissButton
-    c $red $border $bg
+    c $red $base1 $base2
     min-height 100%
     max-height none

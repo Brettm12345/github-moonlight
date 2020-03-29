@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.4
+@version      1.4.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -13,32 +13,35 @@
 @var text  ui_font    "UI Font"        "Inter V"
 @var text  mono_font  "Monospace Font" "monospace"
 
-@var color red-light  "Light Red"      #ff757f
-@var color red        "Red"            #ff5370
-@var color orange     "Orange"         #ff995e
-@var color yellow     "Yellow"         #ffc777
-@var color green      "Green"          #c3e88d
-@var color teal       "Teal"           #4fd6be
-@var color blue       "Blue"           #82aaff
-@var color cyan       "Cyan"           #86e1fc
-@var color cyan-light "Light Cyan"     #b4f9f8
-@var color pink       "Pink"           #fca7ea
-@var color purple     "Purple"         #c597f9
-@var color indigo     "Indigo"         #7a88cf
-@var color border     "Border"         #131421
-@var color bg         "Background"     #191b28
-@var color alt        "Alt Background" #1e2030
-@var color hl         "Highlight"      #212337
-@var color icon       "Icon"           #2f334d
-@var color region     "Region"         #383e5c
-@var color hover      "Hover"          #444a73
-@var color faded      "Faded"          #7f85a3
-@var color text-color "Text"           #c8d3f5
-@var color text-alt   "Alt Text"       #b4c2f0
-@var color text-gray  "Gray Text"      #a9b8e8
-@var color cn         "Light text"     #ffffff
+@var color red-light  "Light Red"  #ff757f
+@var color red        "Red"        #ff5370
+@var color orange     "Orange"     #ff995e
+@var color yellow     "Yellow"     #ffc777
+@var color green      "Green"      #c3e88d
+@var color teal       "Teal"       #4fd6be
+@var color blue       "Blue"       #82aaff
+@var color cyan       "Cyan"       #86e1fc
+@var color cyan-light "Light Cyan" #b4f9f8
+@var color pink       "Pink"       #fca7ea
+@var color purple     "Purple"     #c597f9
+@var color indigo     "Indigo"     #7a88cf
+@var color base-1     "Base 1"     #131421
+@var color base-2     "Base 2"     #191b28
+@var color base-3     "Base 3"     #1b1d2c
+@var color base-4     "Base 4"     #1e2030
+@var color base-5     "Base 5"     #212337
+@var color base-6     "Base 6"     #222436
+@var color base-7     "Base 7"     #2f334d
+@var color base-8     "Base 8"     #383e5c
+@var color base-9     "Base 9"     #444a73
+@var color text-color "Text"       #c8d3f5
+@var color text-alt   "Alt Text"   #b4c2f0
+@var color text-gray  "Gray Text"  #a9b8e8
+@var color cn         "Light text" #ffffff
 
-
+@var color border-alt   "Alt Border"         #22243660
+@var color active       "Active"             #828bb8aa
+@var color faded        "Faded"              #828bb8ed
 @var color placeholder  "Placeholder"        #c8d3f5aa
 @var color red-trans    "Transparent Red"    #ff537033
 @var color yellow-trans "Transparent Yellow" #ffc77733
@@ -61,20 +64,24 @@
 @preprocessor uso
 ==/UserStyle== */
 :root {
-  --alt:  /*[[alt]]*/ ;
-  --bg:  /*[[bg]]*/ ;
+  --base-1:  /*[[base-1]]*/ ;
+  --base-2:  /*[[base-2]]*/ ;
+  --base-3:  /*[[base-3]]*/ ;
+  --base-4: /*[[base-4]]*/ ;
+  --base-5:  /*[[base-5]]*/ ;
+  --base-6: /*[[base-6]]*/ ;
+  --base-7:  /*[[base-7]]*/ ;
+  --base-8: /*[[base-8]]*/ ;
+  --base-9:  /*[[base-9]]*/ ;
+  --active: /*[[active]]*/ ;
   --blue:  /*[[blue]]*/ ;
   --blue-trans: /*[[blue-trans]]*/ ;
-  --border:  /*[[border]]*/ ;
   --cn:  /*[[cn]]*/ ;
   --cyan: /*[[cyan]]*/ ;
   --cyan-light: /*[[cyan-light]]*/ ;
   --cyan-trans:  /*[[cyan-trans]]*/ ;
   --faded:  /*[[faded]]*/ ;
   --green:  /*[[green]]*/ ;
-  --hl:  /*[[hl]]*/ ;
-  --hover:  /*[[hover]]*/ ;
-  --icon:  /*[[icon]]*/ ;
   --indigo:  /*[[indigo]]*/ ;
   --mono-font:  /*[[mono_font]]*/ ;
   --orange:  /*[[orange]]*/ ;
@@ -85,7 +92,6 @@
   --red:  /*[[red]]*/ ;
   --red-light: /*[[red-light]]*/ ;
   --red-trans: /*[[red-trans]]*/ ;
-  --region: /*[[region]]*/ ;
   --sb: /*[[sb]]*/ ;
   --sb-width: /*[[sb-width]]*/ ;
   --wb-sb-size: /*[[wb-sb-size]]*/ ;
@@ -203,7 +209,6 @@
   .TimelineItem--condensed .TimelineItem-badge,
   .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
-  .btn.btn-sm,
   .auth-form-body,
   .topic-tag,
   .pagehead-tabs-item,
@@ -237,6 +242,7 @@
   .Box-header--blue,
   .Box.Box--condensed .Box-row,
   .SideNav,
+  .js-notice,
   #gist-pjax-container,
   .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
   .discussion-timeline-actions,
@@ -269,7 +275,7 @@
   .layout-content.status.status-full-history .history-nav a.current,
   #uptime-tooltip .tooltip-box,
   .illflow-blue .selected {
-    background-color: var(--alt) !important;
+    background-color: var(--base-4) !important;
   }
   .discussion-sidebar-item+.discussion-sidebar-item,
   .UnderlineNav,
@@ -590,7 +596,7 @@
   .layout-content.status.status-full-history .history-nav a.current,
   #uptime-tooltip .tooltip-box,
   .illflow-blue .selected {
-    border-color: var(--border) !important;
+    border-color: var(--base-1) !important;
   }
   .Subhead-description,
   *::placeholder,
@@ -665,7 +671,7 @@
   .ScreenshotCarousel-navitem:focus,
   .commit-tease-contributors,
   .navigation-focus {
-    background-color: var(--hover) !important;
+    background-color: var(--base-9) !important;
   }
   .filter-item.selected,
   .filter-item[aria-current],
@@ -745,12 +751,13 @@
   .pagination [aria-current],
   .ellipsis-expander,
   .hidden-text-expander a,
+  .btn:hover,
   .subnav-item:focus,
   .subnav-item:hover,
   .Box-row--focus-gray.navigation-focus,
   .SideNav-item:focus::before,
   .SideNav-item:hover::before {
-    background-color: var(--icon) !important;
+    background-color: var(--base-7) !important;
   }
   .notification-navigation.bg-white,
   .thread-subscription-status,
@@ -778,8 +785,6 @@
   .orghead .pagehead-tabs-item.selected,
   .team-left-column > div,
   .hook-delivery-container .tabnav-tab[aria-selected="true"],
-  body,
-  body.page-responsive.pagehead,
   kbd,
   .js-recent-activity-container > div > div,
   .Label--gray,
@@ -790,7 +795,7 @@
   .select-menu-header,
   .select-menu-header .select-menu-title,
   .UnderlineNav[style*="margin-top"],
-  .SelectMenu-list,
+  .SelectMenu-divider,
   .SelectMenu-tab,
   .btn-mktg,
   .Header,
@@ -808,11 +813,12 @@
   .graphiql-container .search-box,
   .graphiql-container .search-box input,
   .content ol li pre code,
-  .libraries-jumbotron {
-    background-color: var(--bg) !important;
+  .libraries-jumbotron,
+  body {
+    background-color: var(--base-2) !important;
   }
   .notification-configure-filters .octicon {
-    color: var(--hover) !important;
+    color: var(--base-9) !important;
   }
   .notification-navigation .notification-configure-filters .octicon,
   .numbers-summary .octicon {
@@ -912,7 +918,6 @@
   .TimelineItem:before,
   .TimelineItem .status-meta:before,
   .TimelineItem .merge-pr-more-commits:before,
-  .btn,
   .btn:disabled,
   .btn:disabled:hover,
   .form-group .form-control:focus,
@@ -961,7 +966,7 @@
   .status-day::before,
   .incident-list::before,
   .incident-container .incident-title::before {
-    background-color: var(--hl) !important;
+    background-color: var(--base-5) !important;
   }
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
   .notifications-dropdown,
@@ -969,11 +974,10 @@
   .gitako-side-bar,
   .gitako-resize-handler,
   div[style*="height: 1px;"],
-  .SelectMenu-divider,
   .showcase-page-pattern::after,
   .Counter,
   .incident-container::before {
-    background-color: var(--border) !important;
+    background-color: var(--base-1) !important;
   }
   .notifications-dropdown .notifications-list {
     margin-bottom: 0 !important;
@@ -981,7 +985,7 @@
   .notifications-dropdown-arrow,
   .TimelineItem-break,
   .showcase-page-pattern::after {
-    border-color: var(--alt) !important;
+    border-color: var(--base-4) !important;
   }
   .notifications-dropdown,
   .notifications-dropdown-see-all,
@@ -994,7 +998,7 @@
   .pagination-loader-container,
   .Box-row,
   .border-top {
-    border-top: 1px solid var(--border) !important;
+    border-top: 1px solid var(--base-1) !important;
   }
   .notifications-dropdown,
   .notifications-dropdown-see-all,
@@ -1014,7 +1018,6 @@
   .pagination .disabled:hover,
   .pagination .gap:hover,
   .pagination [aria-disabled=true]:hover,
-  .btn:hover,
   .topic-tag-link:hover,
   .menu-item:hover,
   .checks-list-item.selected .checks-list-item-name,
@@ -1036,7 +1039,7 @@
   .sidebar-menu ul ul li:hover,
   .sidebar-menu h3 a:hover,
   .sidebar-menu ul ul li a:hover {
-    background-color: var(--region) !important;
+    background-color: var(--base-8) !important;
   }
   .thread-subscription-status,
   .Toast,
@@ -1207,6 +1210,8 @@
   .markdown-body pre,
   .conversation-list-heading .inner,
   .MarketplacePlan--sticky div.bg-white,
+  .email-quoted-reply,
+  .email-signature-reply,
   .user-profile-nav,
   .dashboard-notice,
   .team-left-column[aria-label="Explore"] > div,
@@ -1216,7 +1221,7 @@
   .rgh-collaborator,
   .topic-tag,
   .user-status-container-border-busy {
-    border: 1px solid var(--border) !important;
+    border: 1px solid var(--base-1) !important;
   }
   .Toast,
   .select-menu-modal,
@@ -1234,8 +1239,9 @@
   }
   .Toast--warning .Toast-icon,
   .Toast--success .Toast-icon,
-  .IssueLabel {
-    color: var(--bg) !important;
+  .IssueLabel,
+  .IssueLabel > a[style*="#000"] {
+    color: var(--base-2) !important;
   }
   .Toast--warning .Toast-icon {
     background-color: var(--yellow) !important;
@@ -1494,7 +1500,7 @@
   .TimelineItem--condensed .TimelineItem-badge,
   .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
-    color: var(--hover) !important;
+    color: var(--base-9) !important;
   }
   .pl-corl,
   .markdown-body a,
@@ -1552,6 +1558,8 @@
   .markdown-body a,
   .markdown-body blockquote,
   .text-gray-light,
+  .email-quoted-reply,
+  .email-signature-reply,
   small,
   .layout-content.status .table-row .date,
   .color-secondary,
@@ -1659,7 +1667,7 @@
   .gitako-side-bar .gitako-side-bar-body,
   .ScreenshotCarousel-navitem,
   ol > li::before {
-    border-right-color: var(--border) !important;
+    border-right-color: var(--base-1) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .octicon {
     opacity: 0.4 !important;
@@ -1669,7 +1677,7 @@
   .news .Details-content--hidden li,
   .news .Details button,
   .graphiql-ide {
-    border-top-color: var(--border) !important;
+    border-top-color: var(--base-1) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type="text"].form-control,
   .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control {
@@ -1702,17 +1710,17 @@
     background-color: var(--green) !important;
   }
   .branch-action-body::before {
-    border-right-color: var(--hl) !important;
+    border-right-color: var(--base-5) !important;
   }
   .branch-action-item-icon.completeness-indicator .octicon,
   .branch-action-state-clean .branch-action-icon .octicon {
-    fill: var(--border) !important;
+    fill: var(--base-1) !important;
   }
   .branch-action-item-icon.completeness-indicator-success,
   .branch-action-item-icon.completeness-indicator-error,
   .blob-code-addition .x,
   .blob-code-deletion .x {
-    color: var(--border) !important;
+    color: var(--base-1) !important;
   }
   .branch-action-body,
   .timeline-comment-wrapper {
@@ -1722,19 +1730,19 @@
   .composer.composer-responsive .timeline-comment::before,
   #first-time-contributor .Popover-message::before,
   .commit-form::before {
-    border-right-color: var(--border) !important;
+    border-right-color: var(--base-1) !important;
   }
   .branch-action-body::after,
   .composer.composer-responsive .timeline-comment::after,
   #first-time-contributor .Popover-message::after,
   .commit-form::after {
-    border-right-color: var(--alt) !important;
+    border-right-color: var(--base-4) !important;
   }
   :target .timeline-comment {
-    box-shadow: 0 0 0 0.2em var(--border) !important;
+    box-shadow: 0 0 0 0.2em var(--base-1) !important;
   }
   :target .timeline-comment::before {
-    filter: drop-shadow(-0.28em 0 0 var(--border));
+    filter: drop-shadow(-0.28em 0 0 var(--base-1));
   }
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
   .State--purple,
@@ -1745,10 +1753,10 @@
   .timeline-comment--caret.current-user::before,
   .timeline-comment--caret::after,
   .timeline-comment--caret.current-user::after {
-    border-right-color: var(--alt) !important;
+    border-right-color: var(--base-4) !important;
   }
   line[stroke="#000"] {
-    stroke: var(--border) !important;
+    stroke: var(--base-7) !important;
   }
   .viz .code-frequency,
   .content ol li pre code {
@@ -1785,7 +1793,7 @@
   hr,
   .table-list,
   .border-bottom {
-    border-bottom: 1px solid var(--border) !important;
+    border-bottom: 1px solid var(--base-1) !important;
   }
   .form-control,
   .form-select,
@@ -1801,8 +1809,8 @@
     box-shadow: none !important;
   }
   #commit_search_results .commit {
-    border-left: 1px solid var(--border) !important;
-    border-right: 1px solid var(--border) !important;
+    border-left: 1px solid var(--base-1) !important;
+    border-right: 1px solid var(--base-1) !important;
   }
   #commit_search_results .commit {
     padding-left: 8px !important;
@@ -1818,11 +1826,11 @@
     border-bottom-color: var(--blue) !important;
   }
   .ais-SearchBox-input {
-    background: var(--alt) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
+    background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
   }
   .release-main-section,
   .graphiql-container .resultWrap {
-    border-left-color: var(--border) !important;
+    border-left-color: var(--base-1) !important;
   }
   .octicon {
     color: var(--text);
@@ -1861,26 +1869,26 @@
   }
   .ScreenshotCarousel-nav,
   .more-repos {
-    box-shadow: inset 0 1px 0 var(--border) !important;
+    box-shadow: inset 0 1px 0 var(--base-1) !important;
   }
   .dropdown-signed-commit .dropdown-menu-w::before {
-    border-left-color: var(--border) !important;
+    border-left-color: var(--base-1) !important;
   }
   .dropdown-signed-commit .dropdown-menu-w::after {
-    border-left-color: var(--bg) !important;
+    border-left-color: var(--base-2) !important;
   }
   .dropdown-menu-ne::before,
   .Popover-message--bottom-left::before {
-    border-top-color: var(--border) !important;
+    border-top-color: var(--base-1) !important;
   }
   .dropdown-menu-ne::after {
-    border-top-color: var(--hl) !important;
+    border-top-color: var(--base-5) !important;
   }
   .dropdown-menu:after,
   .SelectMenu-header,
   .access-token,
   #uptime-tooltip .pointer-container .pointer-larger {
-    border-bottom-color: var(--border) !important;
+    border-bottom-color: var(--base-1) !important;
   }
   .reaction-sort-item,
   .UnderlineNav,
@@ -1888,7 +1896,7 @@
     transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .reaction-sort-item {
-    border-color: var(--bg) !important;
+    border-color: var(--base-2) !important;
   }
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
@@ -1897,6 +1905,37 @@
   .topic-tag-action a,
   .alert.note {
     background-color: var(--blue-trans) !important;
+  }
+  .email-quoted-reply,
+  .email-signature-reply {
+    border-left: 4px solid var(--blue) !important;
+  }
+  .email-quoted-reply,
+  .email-signature-reply,
+  .btn.btn-outline.BtnGroup-item,
+  .btn.btn-outline.tooltipped.tooltipped-sw,
+  body,
+  body.page-responsive.pagehead,
+  .SelectMenu-list,
+  .Popover-message {
+    background-color: var(--base-3) !important;
+  }
+  .email-quoted-reply,
+  .email-signature-reply {
+    font-size: italic !important;
+  }
+  .email-quoted-reply,
+  .email-signature-reply {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+  .email-quoted-reply,
+  .email-signature-reply {
+    border-top-right-radius: 6px !important;
+  }
+  .email-quoted-reply,
+  .email-signature-reply {
+    border-bottom-right-radius: 6px !important;
   }
   .signed-commit-header,
   .signed-commit-badge.verified {
@@ -1920,10 +1959,10 @@
   .reponav-item.selected,
   .toolbar-item:hover,
   .toolbar-item .menu-target:hover {
-    border-color: var(--hl) !important;
+    border-color: var(--base-5) !important;
   }
   .profile-rollup-wrapper+.profile-rollup-wrapper {
-    border-top: 1px solid var(--hl) !important;
+    border-top: 1px solid var(--base-5) !important;
   }
   .activity-overview-label,
   .gisthead .pagehead-actions .octicon-mute {
@@ -1947,7 +1986,7 @@
     border-radius: 4px !important;
   }
   *:not(select) {
-    scrollbar-color: var(--sb) var(--bg) !important;
+    scrollbar-color: var(--sb) var(--base-2) !important;
   }
   *:not(select) {
     scrollbar-width: var(--sb-width) !important;
@@ -1970,7 +2009,7 @@
   .integrations-select-repos::-webkit-scrollbar-track-piece,
   .graphiql-container .toolbar-button,
   .graphiql-container .execute-button {
-    background: var(--bg) !important;
+    background: var(--base-2) !important;
   }
   ::-webkit-scrollbar:hover,
   .integrations-select-repos::-webkit-scrollbar:hover,
@@ -1981,7 +2020,7 @@
   ::-webkit-scrollbar-track-piece:hover,
   .integrations-select-repos::-webkit-scrollbar-track-piece:hover,
   .graphiql-container .docExplorerShow {
-    background: var(--hl) !important;
+    background: var(--base-5) !important;
   }
   ::-webkit-scrollbar-thumb,
   .integrations-select-repos::-webkit-scrollbar-thumb {
@@ -2012,7 +2051,7 @@
     font: 14px var(--mono-font);
   }
   kbd {
-    box-shadow: inset 0 -1px 0 var(--border) !important;
+    box-shadow: inset 0 -1px 0 var(--base-1) !important;
   }
   ol,
   ul {
@@ -2079,7 +2118,7 @@
     background-color: var(--sb) !important;
   }
   path[fill="#eee"] {
-    fill: var(--icon) !important;
+    fill: var(--base-7) !important;
   }
   .previewable-comment-form .comment-form-head.tabnav {
     border-left: 0 !important;
@@ -2090,6 +2129,9 @@
   .previewable-comment-form .comment-form-head.tabnav,
   .Box-row:first-of-type {
     border-top: 0 !important;
+  }
+  .tabnav {
+    margin-bottom: 0px !important;
   }
   .container-preview .tabnav-tabs {
     margin-left: 5% !important;
@@ -2125,7 +2167,7 @@
   .TimelineItem--condensed .TimelineItem-badge,
   .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
-    border: 2px solid var(--hl) !important;
+    border: 2px solid var(--base-5) !important;
   }
   .btn,
   .btn:hover,
@@ -2133,8 +2175,12 @@
   .Box--responsive .Box-row--unread::before {
     background-image: none !important;
   }
+  .btn,
+  .btn.btn-sm {
+    background-color: var(--base-6) !important;
+  }
   .topic-tag-outline {
-    box-shadow: inset 0 0 0 1px var(--border) !important;
+    box-shadow: inset 0 0 0 1px var(--base-1) !important;
   }
   .reponav-item {
     border: none !important;
@@ -2152,7 +2198,7 @@
     .pagehead-tabs-item,
     .pagehead,
     .repohead.experiment-repo-nav {
-      color: var(--alt) !important;
+      color: var(--base-4) !important;
     }
 }
   .form-group .form-control .search-input {
@@ -2160,15 +2206,15 @@
   }
   .menu,
   .menu .blankslate {
-    color: var(--alt) !important;
+    color: var(--base-4) !important;
   }
   .table-list-bordered .table-list-cell:first-child,
   .border-left {
-    border-left: 1px solid var(--border) !important;
+    border-left: 1px solid var(--base-1) !important;
   }
   .table-list-bordered .table-list-cell:last-child,
   .border-right {
-    border-right: 1px solid var(--border) !important;
+    border-right: 1px solid var(--base-1) !important;
   }
   .news .Details button:hover {
     background: transparent !important;
@@ -2189,7 +2235,7 @@
   .Popover-message--bottom-right::before,
   .Popover-message--bottom-right::after,
   .Popover-message--bottom-left::after {
-    border-top-color: var(--alt) !important;
+    border-top-color: var(--base-4) !important;
   }
   .Popover-message--top-right::before,
   .Popover-message--top-right::after,
@@ -2198,7 +2244,7 @@
   .grouped-items-selector::after,
   .layout-content.status.status-full-history .history-nav a.current::after,
   #uptime-tooltip .tooltip-box::after {
-    border-bottom-color: var(--alt) !important;
+    border-bottom-color: var(--base-4) !important;
   }
   .Popover-message--top-left::before,
   body::before,
@@ -2206,13 +2252,13 @@
   .grouped-items-selector::before,
   .layout-content.status.status-full-history .history-nav a.current::before,
   #uptime-tooltip .tooltip-box::before {
-    border-bottom-color: var(--border) !important;
+    border-bottom-color: var(--base-1) !important;
   }
   .Popover-message--top-left::after {
-    border-bottom-color: var(--hl) !important;
+    border-bottom-color: var(--base-5) !important;
   }
   .UnderlineNav-item:hover {
-    border-bottom-color: var(--region) !important;
+    border-bottom-color: var(--base-8) !important;
   }
   .gh-header-number {
     font-weight: 400 !important;
@@ -2228,7 +2274,7 @@
     box-shadow: inset 2px 0 0 var(--blue) !important;
   }
   .SideNav-item:last-child {
-    box-shadow: 0 1px 0 var(--border) !important;
+    box-shadow: 0 1px 0 var(--base-1) !important;
   }
 }
 @-moz-document domain('gist.github.com') {
@@ -2243,7 +2289,7 @@
     border-left-color: var(--blue) !important;
   }
   .graphiql-container .topBar {
-    background: var(--alt) !important;
+    background: var(--base-4) !important;
   }
   .alert.product {
     background: var(--purple-trans) !important;
@@ -2272,7 +2318,7 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.99999 2.3C10.14 2.3 12.7 4.86 12.7 8C12.7 11.14 10.14 13.7 6.99999 13.7C3.85999 13.7 1.29999 11.14 1.29999 8C1.29999 4.86 3.85999 2.3 6.99999 2.3ZM7 1C3.14 1 0 4.14 0 8C0 11.86 3.14 15 7 15C10.86 15 14 11.86 14 8C14 4.14 10.86 1 7 1ZM8 4H6V9H8V4ZM8 10H6V12H8V10Z' fill='%23bebebe'/%3E%3C/svg%3e") !important;
   }
   #uptime-tooltip .pointer-container .pointer-smaller {
-    border-bottom-color: var(--alt) !important;
+    border-bottom-color: var(--base-4) !important;
   }
 }
 @-moz-document url-prefix("https?://github.com/personal") {

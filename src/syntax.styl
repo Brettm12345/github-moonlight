@@ -3,12 +3,12 @@
     fw 500
 .cm-s-github-light
   &.CodeMirror
-    c $text $border $hl
+    c $text $base1 $base5
   .CodeMirror-
     /&gutter&linenumbers, &gutters
-      c $indigo $border $alt
+      c $indigo $base1 $base4
     &lines
-      c 0 0 $hl
+      c 0 0 $base5
     &linenumber
       c $indigo
 .code .s1
@@ -76,7 +76,7 @@
   &pse
     c $cyan
   &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
-    c $hover
+    c $base9
   &s1, &smi
     c $pink
   &sg /* sublimelinter.gutter-mark */

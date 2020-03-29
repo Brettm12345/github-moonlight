@@ -1,25 +1,25 @@
 .filter-bar
   bb $b
-  c 0 0 $alt
+  c 0 0 $base4
 .form-control, .form-select
   s none
 .form-control.search-page-label.js-advanced-search-label
   &, & input
-    c 0 0 $hl
+    c 0 0 $base5
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
-    c $text $border $hl
+    c $text $base1 $base5
   &-item
     &.hx_hit-code&-public.repo-specific
-      c 0 0 $bg
+      c 0 0 $base2
 .jump-to-field-active, .js-navigation-item:hover, #jump-to-results:hover
-  c 0 0 $hl
+  c 0 0 $base5
 .jump-to-suggestions
   &-results-container .navigation-focus &-path
-    c 0 0 $region
+    c 0 0 $base8
 #commit_search_results .commit
   bx $b
-  c $text $border $alt
+  c $text $base1 $base4
   px 8px
 .form-control.focus, .focus.ais-SearchBox-input, .form-control:focus, .ais-SearchBox-input:focus, .form-select.focus, .form-select:focus
   c 0 $blue
@@ -30,9 +30,9 @@
       bbc $blue
   &Hits-item
     &:hover
-      c 0 0 $icon
+      c 0 0 $base7
   &SearchBox-input
-    bg $alt url("/assets/images/octicons/search.svg") no-repeat 6px
-    c $cn $border
+    bg $base4 url("/assets/images/octicons/search.svg") no-repeat 6px
+    c $cn $base1
 header #search-results-container
-  c 0 0 $alt
+  c 0 0 $base4

@@ -1,14 +1,25 @@
 .issue-keyword
   c $purple
 .IssueLabel
-  c $bg
+  &, & > a[style*="#000"]
+    c $base2
 .js-selected-navigation-item.subnav-item,
 .js-issue-row
   ease background-color
 .pinned-issue-item
-  c 0 $border $hl
+  c 0 $base1 $base5
 .reaction-sort-item
   ease background-color, border-color
-  c 0 $bg
+  c 0 $base2
   &:hover, &:focus
     c 0 $blue $blueTrans
+.email-
+  &format
+    ../quoted-reply, ../signature-reply
+      b $b
+      bl 4px solid $blue
+      c $textAlt $border $base3
+      fs italic
+      py 6px
+      rtr 6px
+      rbr 6px

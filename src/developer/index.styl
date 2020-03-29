@@ -3,22 +3,22 @@
 .content
   c $text
 .sidebar-menu
-  c $text $border $alt
+  c $text $base1 $base4
   h3, ul ul li
     &:hover, & a:hover
-      c $cn $border $region
-    c $text $border $alt
+      c $cn $base1 $base8
+    c $text $base1 $base4
 .js-current .standalone a, .sidebar-module .disable > a
   blc $blue
-  c $cn $border $hl
+  c $cn $base1 $base5
 .sub-nav
-  c 0 $border
+  c 0 $base1
 body table
   th
-    c $text $border $hl
+    c $text $base1 $base5
   tr td
-    c $text $border $alt
-  c $text $border $alt
+    c $text $base1 $base4
+  c $text $base1 $base4
 .alert
   &.tip
     c $text $teal $tealTrans
@@ -32,23 +32,23 @@ body table
 h1, h2, h3, h4, h5, h6
   c $text
 .content ol li pre code
-  c 0 0 $bg
+  c 0 0 $base2
   p 8px
 ol > li::before
-  brc $border
+  brc $base1
   c $text
 .octokit-language span,
 .lead
   c $faded
 .libraries-jumbotron
-  c $text $border $bg
+  c $text $base1 $base2
 .sidebar-module
-  c 0 $border $hl
+  c 0 $base1 $base5
 .command-line span.output
   c $teal
 .content .sectionbody .dlist dt, .content .verseblock-content, .content dl code, .content h2 code, .content h3 code, .content h4 code, .content ol code, .content p > tt, .content table code, .content ul code, p code,
 pre
-  c $text $border $hl
+  c $text $base1 $base5
 code
   .p
     c $text

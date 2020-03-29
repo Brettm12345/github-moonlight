@@ -1,6 +1,6 @@
 .gitako-
   &ready .js-header-wrapper
-    c 0 0 $bg
+    c 0 0 $base2
   &toggle-show-button-wrapper
     .action-icon
       .octicon
@@ -10,16 +10,16 @@
           c $blue
           o 1
     &.collapsed
-      c 0 $border $hl
+      c 0 $base1 $base5
       m 1%
       .action-icon
         c $blue
   &side-bar
     &, ../resize-handler
-      c 0 $border $border
+      c 0 $base1 $base1
     & &-body
-      brc $border
-      c 0 $border $alt
+      brc $base1
+      c 0 $base1 $base4
       .octicon
         ease color, opacity
         c $indigo
@@ -29,14 +29,14 @@
           o 1
       .gitako-settings-bar
         &-title
-          btc $border
+          btc $base1
         &-content .shadow-shelter
-          c 0 $border $alt
+          c 0 $base1 $base4
         &, .header-row
-          c $text $border $alt
+          c $text $base1 $base4
       &, ../-content
         .meta-bar
-          c $text $border $alt
+          c $text $base1 $base4
         .file-explorer
           .search-input-wrapper input[type="text"].form-control
             b 1px
@@ -44,6 +44,6 @@
           .no-results
             c $faded
           .node-item
-            c $text $border
+            c $text $base1
             &-row
-              c 0 0 $hl
+              c 0 0 $base5

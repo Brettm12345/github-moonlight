@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.4
+@version      1.4.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -13,32 +13,35 @@
 @var text  ui_font    "UI Font"        "Inter V"
 @var text  mono_font  "Monospace Font" "monospace"
 
-@var color red-light  "Light Red"      #ff757f
-@var color red        "Red"            #ff5370
-@var color orange     "Orange"         #ff995e
-@var color yellow     "Yellow"         #ffc777
-@var color green      "Green"          #c3e88d
-@var color teal       "Teal"           #4fd6be
-@var color blue       "Blue"           #82aaff
-@var color cyan       "Cyan"           #86e1fc
-@var color cyan-light "Light Cyan"     #b4f9f8
-@var color pink       "Pink"           #fca7ea
-@var color purple     "Purple"         #c597f9
-@var color indigo     "Indigo"         #7a88cf
-@var color border     "Border"         #131421
-@var color bg         "Background"     #191b28
-@var color alt        "Alt Background" #1e2030
-@var color hl         "Highlight"      #212337
-@var color icon       "Icon"           #2f334d
-@var color region     "Region"         #383e5c
-@var color hover      "Hover"          #444a73
-@var color faded      "Faded"          #7f85a3
-@var color text-color "Text"           #c8d3f5
-@var color text-alt   "Alt Text"       #b4c2f0
-@var color text-gray  "Gray Text"      #a9b8e8
-@var color cn         "Light text"     #ffffff
+@var color red-light  "Light Red"  #ff757f
+@var color red        "Red"        #ff5370
+@var color orange     "Orange"     #ff995e
+@var color yellow     "Yellow"     #ffc777
+@var color green      "Green"      #c3e88d
+@var color teal       "Teal"       #4fd6be
+@var color blue       "Blue"       #82aaff
+@var color cyan       "Cyan"       #86e1fc
+@var color cyan-light "Light Cyan" #b4f9f8
+@var color pink       "Pink"       #fca7ea
+@var color purple     "Purple"     #c597f9
+@var color indigo     "Indigo"     #7a88cf
+@var color base-1     "Base 1"     #131421
+@var color base-2     "Base 2"     #191b28
+@var color base-3     "Base 3"     #1b1d2c
+@var color base-4     "Base 4"     #1e2030
+@var color base-5     "Base 5"     #212337
+@var color base-6     "Base 6"     #222436
+@var color base-7     "Base 7"     #2f334d
+@var color base-8     "Base 8"     #383e5c
+@var color base-9     "Base 9"     #444a73
+@var color text-color "Text"       #c8d3f5
+@var color text-alt   "Alt Text"   #b4c2f0
+@var color text-gray  "Gray Text"  #a9b8e8
+@var color cn         "Light text" #ffffff
 
-
+@var color border-alt   "Alt Border"         #22243660
+@var color active       "Active"             #828bb8aa
+@var color faded        "Faded"              #828bb8ed
 @var color placeholder  "Placeholder"        #c8d3f5aa
 @var color red-trans    "Transparent Red"    #ff537033
 @var color yellow-trans "Transparent Yellow" #ffc77733
@@ -61,20 +64,24 @@
 @preprocessor uso
 ==/UserStyle== */
 :root {
-  --alt:  /*[[alt]]*/ ;
-  --bg:  /*[[bg]]*/ ;
+  --base-1:  /*[[base-1]]*/ ;
+  --base-2:  /*[[base-2]]*/ ;
+  --base-3:  /*[[base-3]]*/ ;
+  --base-4: /*[[base-4]]*/ ;
+  --base-5:  /*[[base-5]]*/ ;
+  --base-6: /*[[base-6]]*/ ;
+  --base-7:  /*[[base-7]]*/ ;
+  --base-8: /*[[base-8]]*/ ;
+  --base-9:  /*[[base-9]]*/ ;
+  --active: /*[[active]]*/ ;
   --blue:  /*[[blue]]*/ ;
   --blue-trans: /*[[blue-trans]]*/ ;
-  --border:  /*[[border]]*/ ;
   --cn:  /*[[cn]]*/ ;
   --cyan: /*[[cyan]]*/ ;
   --cyan-light: /*[[cyan-light]]*/ ;
   --cyan-trans:  /*[[cyan-trans]]*/ ;
   --faded:  /*[[faded]]*/ ;
   --green:  /*[[green]]*/ ;
-  --hl:  /*[[hl]]*/ ;
-  --hover:  /*[[hover]]*/ ;
-  --icon:  /*[[icon]]*/ ;
   --indigo:  /*[[indigo]]*/ ;
   --mono-font:  /*[[mono_font]]*/ ;
   --orange:  /*[[orange]]*/ ;
@@ -85,7 +92,6 @@
   --red:  /*[[red]]*/ ;
   --red-light: /*[[red-light]]*/ ;
   --red-trans: /*[[red-trans]]*/ ;
-  --region: /*[[region]]*/ ;
   --sb: /*[[sb]]*/ ;
   --sb-width: /*[[sb-width]]*/ ;
   --wb-sb-size: /*[[wb-sb-size]]*/ ;

@@ -1,14 +1,14 @@
 .graph-filter .info
   c $text
 line[stroke="#000"]
-  v 0 $border
+  v 0 $base7
 text
   &[fill="#000"], &[fill="#6a737d"], &[text-anchor="middle"]
     v $text
 .viz
   .code-frequency
     ../, &
-      c $text $border $alt
+      c $text $base1 $base4
     p 8px
 .c
   &add
@@ -16,7 +16,7 @@ text
   &del
     c $red
 .conversation-list-heading
-  c $faded $border
+  c $faded $base1
   .inner
     b $b
     c $faded
@@ -27,7 +27,7 @@ text
 .simple-conversation-list
   c $faded
   & > li
-    c 0 $border
+    c 0 $base1
 .graphs
   .dir
     c $text
@@ -39,12 +39,12 @@ text
   .deletion
     v $red
 .community-checklist .progress
-  c 0 0 $region
+  c 0 0 $base8
 table.capped-list
   td
-    c $text $border $alt
+    c $text $base1 $base4
   tr:nth-child(2n), th
-    c $text $border $alt
+    c $text $base1 $base4
 .summary-stats li
   &, & > .num, & > a
     ease background-color
@@ -52,8 +52,8 @@ table.capped-list
     ease background-color, color
   &:hover, &:focus
     &, & > .num, & > a
-      c $cn $border $hl
+      c $cn $base1 $base5
   /.traffic-graph-stats, &, & > .num
-    c $text $border $alt
+    c $text $base1 $base4
 .pulse-section
   c $faded

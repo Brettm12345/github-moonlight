@@ -1,47 +1,47 @@
 iframe#graphiql
   &, .graphiql-ide
-    c 0 $border
+    c 0 $base1
 .graphiql-ide
-  btc $border
+  btc $base1
 .CodeMirror
   &-cursor
     blc $blue
   &-hint
-    c $text $border $alt
+    c $text $base1 $base4
     ease background-color
     &-information
-      c $indigo $border $alt
+      c $indigo $base1 $base4
     &-active
-      c $cn 0 $region
+      c $cn 0 $base8
       fw 500
   &-linenumber
     c $indigo
     fw 500
   &-gutters, &-gutter&-foldgutter
-    c $text $border $alt
+    c $text $base1 $base4
   &.cm-s-graphiql
-    c 0 0 $alt
+    c 0 0 $base4
 .history-, .doc-explorer-
   &contents
-    c $text $border $bg
+    c $text $base1 $base2
   &title-bar
-    c $text $border $alt
+    c $text $base1 $base4
 .graphiql-container
   .graphiql-container .history-contents p
-    c $text $border
+    c $text $base1
   .execute-options > li,  .toolbar-menu-items > li, .toolbar-select-options > li, .history-contents > p
     &:hover, &.hover, &:active
-      c 0 $border $region
+      c 0 $base1 $base8
   .search-box
-    c 0 $border $bg
+    c 0 $base1 $base2
     input
-      c 0 0 $bg
+      c 0 0 $base2
   .result-window .CodeMirror-gutters
-    c 0 $border
+    c 0 $base1
   .doc-category-title
-    c $faded $border
+    c $faded $base1
   .resultWrap
-    blc $border
+    blc $base1
   .arg-name
     c $pink
   .field-name
@@ -53,21 +53,21 @@ iframe#graphiql
   .field-short-description
     c $indigo
   .topBar
-    bg $alt
-    c $text $border $alt
+    bg $base4
+    c $text $base1 $base4
   .toolbar, .execute
     &-button
-      bg $bg
+      bg $base2
       s none
       svg
         v $text
   .variable-editor-title
-    c $text $border $hl
+    c $text $base1 $base5
   .docExplorerShow
-    bg $hl
-    c $text $border $hl
+    bg $base5
+    c $text $base1 $base5
 .result-window .CodeMirror
-  c 0 0 $alt
+  c 0 0 $base4
 .cm-
   &punctuation
     c $text

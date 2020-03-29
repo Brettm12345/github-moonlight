@@ -2,16 +2,16 @@
   &item
     ease background-color
     &:hover
-      c 0 0 $region
+      c 0 0 $base8
   &modal-right.details-reset.details-overlay.mb-2, .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
-    c 0 0 $alt
+    c 0 0 $base4
 .github-jobs-logo strong
   inv()
 .discussion-
   &item-icon
-    c $text $hl $icon
+    c $text $base5 $base7
   &timeline-actions
-    c 0 $hl $bg
+    c 0 $base5 $base2
   &sidebar-
     &heading
       c $text
@@ -21,18 +21,18 @@
 .profile-
   &timeline
     &.discussion-timeline:before
-      c 0 0 $hl
+      c 0 0 $base5
     &-rollup-content li.d-block.mt-1.py-1
-      c 0 0 $bg
+      c 0 0 $base2
     &-card.bg-white
-      c 0 0 $hl
+      c 0 0 $base5
     &-month-heading.bg-white, &year-list
       &:after
-        c 0 0 $hl
-      c 0 0 $bg
+        c 0 0 $base5
+      c 0 0 $base2
   &rollup-wrapper
     &+&
-      bt 1px solid $hl
+      bt 1px solid $base5
 .activity-overview-
   &percentage
     v $cn
@@ -40,40 +40,40 @@
     v $faded
 .ajax-pagination-
   &form &btn
-    c 0 $border $alt
+    c 0 $base1 $base4
 .user-profile-
   &nav
     b $b
     px 10px
     r 8px
   &sticky-bar:after
-    c 0 $border $bg
+    c 0 $base1 $base2
 .js-profile-editable-edit-button
-  c $cn $border $hl
+  c $cn $base1 $base5
 .pinned-item-
   &name
     c $faded
   &checkbox:checked + &name
-    c $text $border $icon
+    c $text $base1 $base7
 .dashboard
   .js-all-activity-header + div
-    c 0 $border
+    c 0 $base1
     .Box
       box()
       r 6px
   &-notice
     b $b
-    c 0 0 $hl
+    c 0 0 $base5
     h2
       c $text
 .repo-list
   p 0 12px
   &, &-item
-    c 0 $border $alt
+    c 0 $base1 $base4
 .mini-repo-list-item
   bt $b
 .navigation-focus
-  c 0 0 $hover
+  c 0 0 $base9
 .team,
 .user-mention
   c $cn
@@ -83,10 +83,10 @@
   &detail
     octicon $faded
 .private .mini-repo-list-item
-  c 0 0 $bg
+  c 0 0 $base2
 .orghead
-  c 0 $border $alt
+  c 0 $base1 $base4
   .org-name
     c $blue
   .pagehead-tabs-item.selected
-    c $blue 0 $bg
+    c $blue 0 $base2
