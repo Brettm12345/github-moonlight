@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.7
+@version      1.5.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -152,9 +152,9 @@
   .SelectMenu-message,
   ul.comparison-list,
   ul.comparison-list > li,
+  .branch-body .merge-branch-form,
+  .branch-body .merge-message,
   .branch-infobar,
-  .branch-action-body .merge-branch-form,
-  .branch-action-body .merge-message,
   .merge-statusitem,
   .timeline-comment-header,
   .review-thread-reply,
@@ -368,10 +368,10 @@
   ul.comparison-list,
   ul.comparison-list > li,
   ul.comparison-list > li.title,
+  .branch-body,
+  .branch-body .merge-branch-form,
+  .branch-body .merge-message,
   .branch-infobar,
-  .branch-action-body,
-  .branch-action-body .merge-branch-form,
-  .branch-action-body .merge-message,
   .merge-statuslist,
   .merge-statusitem,
   .timeline-comment,
@@ -896,7 +896,7 @@
   .select-menu-tab-nav a[aria-selected="true"],
   .SelectMenu-item:hover,
   ul.comparison-list > li.title,
-  .branch-action-body,
+  .branch-body,
   .timeline-comment,
   .review-thread-reply .inline-comment-form,
   .CheckStep-line:hover,
@@ -1254,7 +1254,7 @@
   .legend li[style*="#7bc96f"],
   .legend li[style*="#239a3b"],
   .legend li[style*="#196127"],
-  .branch-action-state-clean .branch-action-icon,
+  .branch-action-state-clean .branch-action-action-icon,
   .blob-code-addition .x,
   .layout-content.status.status-index .page-status.status-none {
     background-color: var(--teal) !important;
@@ -1772,7 +1772,7 @@
     border-right-color: var(--base-5) !important;
   }
   .branch-action-item-icon.completeness-indicator .octicon,
-  .branch-action-state-clean .branch-action-icon .octicon {
+  .branch-action-state-clean .branch-action-action-icon .octicon {
     fill: var(--base-1) !important;
   }
   .branch-action-item-icon.completeness-indicator-success,
@@ -1781,18 +1781,18 @@
   .blob-code-deletion .x {
     color: var(--base-1) !important;
   }
-  .branch-action-body,
+  .branch-body,
   .timeline-comment-wrapper,
   .previewable-comment-form .comment-form-head.tabnav {
     border: 0 !important;
   }
-  .branch-action-body::before,
+  .branch-body::before,
   .composer.composer-responsive .timeline-comment::before,
   #first-time-contributor .Popover-message::before,
   .commit-form::before {
     border-right-color: var(--base-1) !important;
   }
-  .branch-action-body::after,
+  .branch-body::after,
   .composer.composer-responsive .timeline-comment::after,
   #first-time-contributor .Popover-message::after,
   .commit-form::after {
