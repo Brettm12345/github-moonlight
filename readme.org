@@ -1,16 +1,18 @@
-# Created 2020-03-29 Sun 03:54
+# Created 2020-03-29 Sun 04:04
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+html: <div align="center">
 
 
 * Github Moonlight
+#+macro: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
 
 A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
-#+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img alt="Install Directly with Stylus" src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat" /></a>
-#+html: <a href="https://discord.gg/PwpA8v"><img alt="Discord" src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord"/></a>
+#+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
+#+html: <a href="https://discord.gg/PwpA8v"><img src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord&style=flat-square" alt="Discord Server"/></a>
+#+html: <a href="https://github.com/Brettm12345/github-moonlight/commits/master"><img src="https://img.shields.io/github/commit-activity/m/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Commit Activity"/></a>
 #+html: </div>
 
 * Features
