@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.5.9
+@version      1.6.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -628,6 +628,7 @@
   .pulse-section,
   .octicon-mute,
   .octicon-repo,
+  .octicon-rocket,
   .full-commit .sha-block,
   .discussion-sidebar-item,
   .pinned-item-name,
@@ -1958,6 +1959,7 @@
   .dropdown-menu:after,
   .SelectMenu-header,
   .access-token,
+  .deployments-timeline,
   #uptime-tooltip .pointer-container .pointer-larger {
     border-bottom-color: var(--base-1) !important;
   }
@@ -2343,6 +2345,9 @@
   }
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 var(--base-1) !important;
+  }
+  .deployments-timeline-item {
+    border-left-color: var(--base-9) !important;
   }
 }
 @-moz-document domain('gist.github.com') {

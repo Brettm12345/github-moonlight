@@ -2431,6 +2431,11 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+versions@^8.2.7:
+  version "8.2.7"
+  resolved "https://registry.yarnpkg.com/versions/-/versions-8.2.7.tgz#2145f5f5cd71288a8654f3926aaa62b01d25cf3d"
+  integrity sha512-IkNMB30RtkrkXTjNyNYaclAfckivPCCmPu8HZCe8uxmfpnM/sF+ab5Q2x4uywkuKKmd6CGHDuNoe7QvJoNqvxA==
+
 wcwidth@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"

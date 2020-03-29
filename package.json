@@ -6,6 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build:readme": "pandoc -t org-smart -f org-smart doc/readme.org -o readme.org",
+    "patch": "yarn versions patch -c 'yarn build'",
+    "minor": "yarn versions minor -c 'yarn build'",
+    "major": "yarn versions major -c 'yarn build'",
     "build": "cp ./metadata.css ./github.user.css && stylus -p github.user.styl >> ./github.user.css",
     "copy": "yarn build && xclip -i -selection clipboard github.user.css",
     "build:watch": "stylus --watch github.user.styl",
@@ -27,6 +30,7 @@
     "stlint": "^1.0.62",
     "stlint-v4fire": "^1.0.37",
     "stylint": "^2.0.0",
-    "stylus-supremacy": "^2.14.0"
+    "stylus-supremacy": "^2.14.0",
+    "versions": "^8.2.7"
   }
 }
