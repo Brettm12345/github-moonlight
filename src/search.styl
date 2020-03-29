@@ -21,9 +21,12 @@
   bx $b
   c $text $base1 $base4
   px 8px
-.form-control.focus, .focus.ais-SearchBox-input, .form-control:focus, .ais-SearchBox-input:focus, .form-select.focus, .form-select:focus
-  c 0 $blue
-  s none
+.form-group .form-control:focus
+  c 0 $blue $base7
+.form-control, .ais-SearchBox-input, .form-select
+  &.focus, &:focus
+    c 0 $blue
+    s none
 .ais-
   /.search-result-intro
     & mark, & .ais-Highlight-highlighted
@@ -36,3 +39,7 @@
     c $cn $base1
 header #search-results-container
   c 0 0 $base4
+.search_repos
+  fieldset
+    c 0 0 $base2
+    px 16px

@@ -480,7 +480,9 @@ div.commit-build-statuses,
       bg transparent
       td underline
 .Counter
-  c $blue 0 $base1
+  b $b
+  c $blue $border $base2
+  p 0.5em
 *:not(code) .Box
   c 0 $base1 $base4
 .tag
@@ -509,6 +511,8 @@ div.commit-build-statuses,
   &.selected, &[aria-current]
     &:before
       c 0 0 $blue
+  &:hover
+    c 0 0 $base6
 .CheckRun
   c 0 $base1 $base4
   &-header

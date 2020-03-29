@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.4.5
+@version      1.4.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -743,6 +743,7 @@
   .bg-blue,
   .bg-gray-2,
   .Progress,
+  .form-group .form-control:focus,
   .ais-Hits-item:hover,
   .discussion-item-icon,
   .pinned-item-checkbox:checked + .pinned-item-name,
@@ -773,6 +774,7 @@
   .bg-gray-dark,
   .tabnav-pr .tabnav-tab.selected,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
+  .search_repos fieldset,
   .signed-commit-header,
   .commit-ref,
   .file-commit-form--full,
@@ -801,6 +803,7 @@
   .Header,
   .reponav-item.selected,
   .flash,
+  .Counter,
   .application-main > main > div.border-bottom.border-gray-light,
   .application-main > main > .site-subnav + div,
   .diffbar,
@@ -975,7 +978,6 @@
   .gitako-resize-handler,
   div[style*="height: 1px;"],
   .showcase-page-pattern::after,
-  .Counter,
   .incident-container::before {
     background-color: var(--base-1) !important;
   }
@@ -1220,6 +1222,7 @@
   .border,
   .rgh-collaborator,
   .topic-tag,
+  .Counter,
   .user-status-container-border-busy {
     border: 1px solid var(--base-1) !important;
   }
@@ -1609,11 +1612,12 @@
     transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .markdown-body .clippy-wrapper .clippy:hover,
+  .form-group .form-control:focus,
   .form-control.focus,
-  .focus.ais-SearchBox-input,
+  .ais-SearchBox-input.focus,
+  .form-select.focus,
   .form-control:focus,
   .ais-SearchBox-input:focus,
-  .form-select.focus,
   .form-select:focus,
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
@@ -1798,10 +1802,10 @@
   .form-control,
   .form-select,
   .form-control.focus,
-  .focus.ais-SearchBox-input,
+  .ais-SearchBox-input.focus,
+  .form-select.focus,
   .form-control:focus,
   .ais-SearchBox-input:focus,
-  .form-select.focus,
   .form-select:focus,
   .write-content.js-write-bucket,
   .graphiql-container .toolbar-button,
@@ -1827,6 +1831,10 @@
   }
   .ais-SearchBox-input {
     background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
+  }
+  .search_repos fieldset {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
   .release-main-section,
   .graphiql-container .resultWrap {
@@ -2176,7 +2184,8 @@
     background-image: none !important;
   }
   .btn,
-  .btn.btn-sm {
+  .btn.btn-sm,
+  .menu-item:hover {
     background-color: var(--base-6) !important;
   }
   .topic-tag-outline {
@@ -2218,6 +2227,9 @@
   }
   .news .Details button:hover {
     background: transparent !important;
+  }
+  .Counter {
+    padding: 0.5em !important;
   }
   .contrib-person path,
   rect[fill="#e25d10"] {
