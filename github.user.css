@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.5
+@version      1.1.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -999,8 +999,40 @@
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
   }
+  .MarketplacePlan--sticky div.bg-white {
+    border: 1px solid var(--border) !important;
+    border-top: none !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
+  }
+  .MarketplacePlan--sticky div.bg-white .bg-blue {
+    background-color: var(--blue) !important;
+  }
   .marketplace-plan-emphasis {
     color: var(--text) !important;
+  }
+  .ScreenshotCarousel {
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
+  }
+  .ScreenshotCarousel-nav {
+    box-shadow: inset 0 1px 0 var(--border) !important;
+  }
+  .ScreenshotCarousel-navitem {
+    border-right-color: var(--border) !important;
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .ScreenshotCarousel-navitem:hover,
+  .ScreenshotCarousel-navitem:focus {
+    background-color: var(--hover) !important;
+  }
+  .ScreenshotCarousel-navitem.selected {
+    background-color: var(--hl) !important;
   }
   .dropdown-divider {
     border-color: var(--border) !important;
@@ -1337,6 +1369,9 @@
   }
   input {
     caret-color: var(--blue);
+  }
+  img {
+    background-color: var(--alt) !important;
   }
   h1 {
     color: var(--text) !important;
@@ -1823,18 +1858,18 @@
     background-color: var(--alt) !important;
     transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
+  .topic-tag-outline {
+    box-shadow: inset 0 0 0 1px var(--border) !important;
+  }
   .topic-tag-link:hover {
     background-color: var(--region) !important;
   }
-  .topic-tag-action {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--bg) !important;
-  }
-  .topic-tag-action button {
-    color: var(--text) !important;
-    border-color: var(--border) !important;
-    background-color: var(--border) !important;
+  .topic-tag-action,
+  .topic-tag-action button,
+  .topic-tag-action a {
+    color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--blue-trans) !important;
   }
   .access-token {
     border-bottom-color: var(--border) !important;
@@ -2176,6 +2211,11 @@
   }
   .pinned-item-list-item .pinned-item-handle {
     color: var(--faded) !important;
+  }
+  .user-status-container-border-busy {
+    border: 1px solid var(--border) !important;
+    border-color: var(--yellow) !important;
+    background-color: var(--yellow-trans) !important;
   }
   .js-user-status-container {
     background-color: var(--hl) !important;

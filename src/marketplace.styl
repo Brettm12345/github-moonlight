@@ -3,5 +3,27 @@
     c 0 $border $alt
   &reccomendations img
      inv()
+.MarketplacePlan--sticky
+  div.bg-white
+    b $b
+    bt none
+    c 0 $border $alt
+    rb 6px
+    s-1()
+    .bg-blue
+      c 0 0 $blue
 .marketplace-plan-emphasis
   c $text
+.ScreenshotCarousel
+  c 0 $border $alt
+  r 6px
+  s-1()
+  &-nav
+    s inset 0 1px 0 $border
+  &-navitem
+    brc $border
+    ease background-color
+    &:hover, &:focus
+      c 0 0 $hover
+    &.selected
+      c 0 0 $hl

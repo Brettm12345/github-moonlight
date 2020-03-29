@@ -37,6 +37,8 @@ body
     c 0 0 $bg
 input
   caret-color $blue
+img
+  c 0 0 $alt
 h1
   c $text
 mark
@@ -320,14 +322,15 @@ table.files
   c $text $border $alt
 .topic-tag
   b $b
+  &-outline
+    s inset 0 0 0 1px $border
   &-link:hover
     c 0 0 $region
   c $text $border $alt
   ease background-color
   &-action
-    c $text $border $bg
-    button
-      c $text $border $border
+    &, button, a
+      c $blue $blue $blueTrans
 .access-token
   bbc $border
 div.listgroup-item
@@ -527,8 +530,12 @@ div.commit-build-statuses,
   c 0 0 $bg
 .progress-bar
   c 0 0 $hl
-.pinned-item-list-item .pinned-item-handle
-  c $faded
+.pinned-item-
+  &list-item &handle
+    c $faded
+.user-status-container-border-busy
+  b $b
+  c 0 $yellow $yellowTrans
 .js-user-status-container
   c 0 0 $hl
 .protip & >
