@@ -53,8 +53,14 @@ ul.comparison-list
   &action-state-clean
     ../action-body::before
       brc $hl
-  &action-state-clean &action-icon, &action-item-icon
-    c $border 0 $green
+  &action-item-icon.completeness-indicator
+    .octicon
+      v $border
+    &-success
+      c $border 0 $green
+    &-error
+      c $border 0 $red
+  &action-state-clean &action-icon
     .octicon
       v $border
   &infobar
@@ -90,3 +96,5 @@ ul.comparison-list
         brc $alt
 .composer.composer-responsive .timeline-comment
   caret "right"
+.tabnav-pr .tabnav-tab.js-pjax-history-navigate.selected
+  c 0 0 $bg
