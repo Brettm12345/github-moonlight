@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.3.4
+@version      1.3.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1899,6 +1899,9 @@
   .vcard-username,
   .octicon[style*="#6a737d"] {
     color: var(--text-gray) !important;
+  }
+  .vcard-detail .octicon {
+    color: var(--faded) !important;
   }
   .team-left-column[aria-label="Explore"] > div {
     padding-left: 10px !important;

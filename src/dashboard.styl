@@ -77,8 +77,11 @@
 .team,
 .user-mention
   c $cn
-.vcard-username
-  c $textGray
+.vcard-
+  &username
+    c $textGray
+  &detail
+    octicon $faded
 .private .mini-repo-list-item
   c 0 0 $bg
 .orghead
