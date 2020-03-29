@@ -76,11 +76,14 @@ ul.comparison-list
     .merge-
       &branch-form, &message
         c 0 $base1 $base4
-.merge-status-
-  &list
-    c 0 $base1
-  &item
-    c 0 $base1 $base4
+.merge-
+  &branch-description
+    c $faded
+  &status
+    &list
+      c 0 $base1
+    &item
+      c 0 $base1 $base4
 .timeline-comment
   c $text $base1 $base5
   /:target &
