@@ -35,3 +35,18 @@
     c 0 $border $region
 .thread-subscription-status
   c $text $border $bg
+.Toast
+  b $b
+  s-2()
+  &--error &-icon
+    c 0 0 $red
+  &--warning &-icon
+    c $bg 0 $yellow
+  &--success &-icon
+    c $bg 0 $teal
+  &, &-content
+    c $text $border $alt
+  &-dismissButton
+    c $red $border $bg
+    min-height 100%
+    max-height none

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.1.7
+@version      1.1.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -205,6 +205,34 @@
     color: var(--text) !important;
     border-color: var(--border) !important;
     background-color: var(--bg) !important;
+  }
+  .Toast {
+    border: 1px solid var(--border) !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
+  }
+  .Toast--error .Toast-icon {
+    background-color: var(--red) !important;
+  }
+  .Toast--warning .Toast-icon {
+    color: var(--bg) !important;
+    background-color: var(--yellow) !important;
+  }
+  .Toast--success .Toast-icon {
+    color: var(--bg) !important;
+    background-color: var(--teal) !important;
+  }
+  .Toast,
+  .Toast-content {
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    background-color: var(--alt) !important;
+  }
+  .Toast-dismissButton {
+    color: var(--red) !important;
+    border-color: var(--border) !important;
+    background-color: var(--bg) !important;
+    min-height: 100%;
+    max-height: none;
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
