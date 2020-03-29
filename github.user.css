@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.3.7
+@version      1.3.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1059,6 +1059,7 @@
   ul.comparison-list > li,
   ul.comparison-list > li.title,
   .timeline-comment,
+  .review-comment,
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .CheckStep-linecontent,
   .graph-filter .info,
