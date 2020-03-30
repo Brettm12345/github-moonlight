@@ -1,4 +1,4 @@
-# Created 2020-03-30 Mon 15:22
+# Created 2020-03-30 Mon 15:46
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -51,6 +51,8 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github                  |
 * Screenshots
 #+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+#+html: <details><summary>Repo</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Repo" width="100%" /></details>
+#+html: <details><summary>Profile</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/profile.png" alt="Profile" width="100%" /></details>
 #+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
 #+html: <details><summary>Commit Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
 #+html: <details><summary>Dashboard</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>

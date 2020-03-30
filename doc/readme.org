@@ -48,6 +48,8 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github                  |
 * Screenshots
 #+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+{{{screenshot(Repo,repo)}}}
+{{{screenshot(Profile,profile)}}}
 {{{screenshot(Code,code)}}}
 {{{screenshot(Commit Tree,commits)}}}
 {{{screenshot(Dashboard,dashboard)}}}
