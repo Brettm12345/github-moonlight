@@ -5,6 +5,10 @@
 @require "timeline"
 @require "topics"
 @require "buttons"
+@require "pagination"
+@require "profile"
+@require "profile-timeline"
+@require "menu"
 @require "subnav"
 @require "syntax"
 @require "calendar"
@@ -176,15 +180,6 @@ div.listgroup-item
 .more-repos
   c 0 0 $base4
   s inset 0 1px 0 $base1
-.news
-  .alert
-    bt $b
-  .Details
-    &-content--hidden li, button
-      btc $base1
-    button:hover
-      bg transparent
-      td underline
 .Counter
   c $cn $base1 $blueDark
 .note, .help

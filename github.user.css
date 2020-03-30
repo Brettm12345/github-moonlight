@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.7.0
+@version      1.7.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -139,6 +139,9 @@
   .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .topic-tag,
+  .ajax-pagination-form .ajax-pagination-btn,
+  .menu,
+  .menu-heading,
   .site-subnav.bg-wite,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
@@ -180,11 +183,11 @@
   .summary-stats li,
   .summary-stats li > .num,
   .filter-bar,
+  header #search-results-container,
   .form-group .form-control,
   .form-control,
   .form-select,
   #commit_search_results .commit,
-  header #search-results-container,
   .release-timeline-tags .tag-timeline-date::after,
   .branch-infobar,
   .branch-action-body .merge-branch-form,
@@ -204,6 +207,8 @@
   .select-menu-item,
   .select-menu-divider,
   .select-menu-no-results,
+  .select-menu-modal-right.details-reset.details-overlay.mb-2,
+  .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target,
   .gh-header-sticky.is-stuck + .gh-header-shadow,
   .pagehead-tabs-item,
   .pagehead,
@@ -218,9 +223,6 @@
   .commits-list-item,
   .full-commit,
   .commit-form,
-  .select-menu-modal-right.details-reset.details-overlay.mb-2,
-  .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target,
-  .ajax-pagination-form .ajax-pagination-btn,
   .dashboard .js-all-activity-header + div .Box,
   .repo-list,
   .repo-list-item,
@@ -336,6 +338,13 @@
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
   .btn-mktg,
+  .ajax-pagination-form .ajax-pagination-btn,
+  .pinned-item-checkbox:checked + .pinned-item-name,
+  .user-profile-sticky-bar:after,
+  .js-profile-editable-edit-button,
+  .menu,
+  .menu .blankslate,
+  .menu-heading,
   .subnav-item,
   .subnav-item.selected,
   .subnav-item.selected:focus,
@@ -420,8 +429,8 @@
   .code-list .divider .blob-code,
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num,
-  #commit_search_results .commit,
   .ais-SearchBox-input,
+  #commit_search_results .commit,
   .branch-infobar,
   .branch-action-body,
   .branch-action-body .merge-branch-form,
@@ -490,10 +499,6 @@
   .full-commit .commit-meta,
   .file-commit-form--full,
   .diff-table tr:not(:last-child) .line-comments,
-  .ajax-pagination-form .ajax-pagination-btn,
-  .user-profile-sticky-bar:after,
-  .js-profile-editable-edit-button,
-  .pinned-item-checkbox:checked + .pinned-item-name,
   .dashboard .js-all-activity-header + div .Box,
   .repo-list,
   .repo-list-item,
@@ -614,6 +619,9 @@
   .btn.btn-sm:disabled,
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
+  .pinned-item-list-item .pinned-item-handle,
+  .pinned-item-name,
+  .discussion-sidebar-item,
   .pl-sg,
   .markdown-body .lead-mktg p,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
@@ -641,9 +649,6 @@
   .full-commit .sha-block,
   div.commit-build-statuses,
   .link-gray,
-  .discussion-sidebar-item,
-  .pinned-item-list-item .pinned-item-handle,
-  .pinned-item-name,
   .hook-delivery-time,
   .muted-link,
   .numbers-summary li> .nolink,
@@ -659,6 +664,7 @@
   .filter-item,
   .notifications-list-item:hover .notification-list-item-actions .btn,
   .topic-tag,
+  .menu-item,
   .summary-stats li,
   .summary-stats li > .num,
   .summary-stats li > a,
@@ -681,6 +687,8 @@
   .btn.btn-sm:hover,
   .btn-mktg,
   .btn-octicon:hover,
+  .js-profile-editable-edit-button,
+  .menu-heading,
   .pl-ii,
   .pl-c2,
   .pl-mb,
@@ -714,7 +722,6 @@
   .select-menu-tabs a[aria-selected="true"],
   .select-menu-header,
   .select-menu-header .select-menu-title,
-  .js-profile-editable-edit-button,
   .team,
   .user-mention,
   ::selection,
@@ -737,6 +744,8 @@
   .filter-item.selected,
   .filter-item[aria-current],
   .filter-item[aria-selected=true],
+  .menu-item.selected:hover,
+  .menu-item[aria-current]:hover,
   .suggester li[aria-selected="true"] {
     background-color: var(--base-6) !important;
   }
@@ -748,6 +757,7 @@
   .notifications-dropdown-see-all,
   .Box-row[style*="background"],
   .topic-tag-link:hover,
+  .menu-item:hover,
   .markdown-body .clippy-wrapper .clippy:hover,
   .task-progress .progress-bar .progress,
   .community-checklist .progress,
@@ -755,9 +765,9 @@
   .signup-plan-card:hover,
   .dropdown-item:hover,
   .dropdown-item:focus,
+  .select-menu-item:hover,
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted,
-  .select-menu-item:hover,
   ::selection,
   .branch-name,
   .checks-list-item.selected .checks-list-item-name,
@@ -783,6 +793,10 @@
   .notification-navigation.bg-white,
   .Toast-dismissButton,
   .btn-mktg,
+  .user-profile-sticky-bar:after,
+  .profile-timeline-rollup-content li.d-block.mt-1.py-1,
+  .profile-timeline-month-heading.bg-white,
+  .profile-timelineyear-list,
   .application-main > main > .site-subnav + div,
   #tree-finder-field,
   .highlight pre,
@@ -794,8 +808,8 @@
   .pr-toolbar,
   .gitako-ready .js-header-wrapper,
   .bg-gray-dark,
-  .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .search_repos fieldset,
+  .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .SelectMenu-divider,
   .SelectMenu-tab,
   .select-menu-header,
@@ -810,10 +824,6 @@
   .signed-commit-header,
   .commit-ref,
   .file-commit-form--full,
-  .profile-timeline-rollup-content li.d-block.mt-1.py-1,
-  .profile-timeline-month-heading.bg-white,
-  .profile-timelineyear-list,
-  .user-profile-sticky-bar:after,
   .private .mini-repo-list-item,
   .orghead .pagehead-tabs-item.selected,
   .team-left-column > div,
@@ -866,6 +876,13 @@
   .btn.btn-sm:disabled,
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
+  .js-profile-editable-edit-button,
+  .profile-timeline.discussion-timeline:before,
+  .profile-timeline-card.bg-white,
+  .profile-timeline-month-heading.bg-white:after,
+  .profile-timelineyear-list:after,
+  .menu-item.selected,
+  .menu-item[aria-current],
   .subnav-item.selected,
   .subnav-item.selected:focus,
   .subnav-item.selected:hover,
@@ -913,8 +930,8 @@
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num,
   .jump-to-field-active,
-  .js-navigation-item:hover,
-  #jump-to-results:hover,
+  .jump-to- .js-navigation-item:hover,
+  .jump-to- #jump-to-results:hover,
   .branch-action-body,
   .signup-plan-card,
   .ScreenshotCarousel-navitem.selected,
@@ -940,11 +957,6 @@
   .commits-list-item.navigation-focus,
   .full-commit .commit-meta,
   .line-comments,
-  .profile-timeline.discussion-timeline:before,
-  .profile-timeline-card.bg-white,
-  .profile-timeline-month-heading.bg-white:after,
-  .profile-timelineyear-list:after,
-  .js-profile-editable-edit-button,
   .dashboard .js-all-activity-header + div .Box:hover,
   .dashboard .js-all-activity-header + div .Box:focus,
   .dashboard-notice,
@@ -1008,7 +1020,6 @@
   .mini-repo-list-item,
   .footer,
   .site-footer,
-  .news .alert,
   .border-top {
     border-top: 1px solid var(--base-1) !important;
   }
@@ -1018,6 +1029,10 @@
   .Box-row--yellow,
   .topic-tag,
   .tag-name,
+  .pinned-item-checkbox:checked + .pinned-item-name,
+  .discussion-item-icon,
+  .discussion-sidebar-heading,
+  .menu,
   .application-main > main > .site-subnav + div .text-gray-light,
   .cm-s-github-light.CodeMirror,
   .pl-s .pl-v,
@@ -1099,9 +1114,6 @@
   .file-commit-form--full,
   .ellipsis-expander,
   .hidden-text-expander a,
-  .discussion-item-icon,
-  .discussion-sidebar-heading,
-  .pinned-item-checkbox:checked + .pinned-item-name,
   .dashboard-notice h2,
   .hook-delivery-guid,
   body,
@@ -1175,13 +1187,14 @@
   .thread-subscription-status,
   .Box-row--yellow,
   .TimelineItem-break,
-  .markdown-body pre > code,
   .discussion-timeline-actions,
+  .markdown-body pre > code,
   .application-main .flex-wrap {
     background-color: transparent !important;
   }
   .Toast,
   .topic-tag,
+  .user-profile-nav,
   .markdown-body code,
   .markdown-body tt,
   .highlight pre,
@@ -1190,7 +1203,6 @@
   .MarketplacePlan--sticky div.bg-white,
   .email-quoted-reply,
   .email-signature-reply,
-  .user-profile-nav,
   .dashboard-notice,
   .team-left-column[aria-label="Explore"] > div,
   .hook-delivery-guid,
@@ -1262,6 +1274,8 @@
   .topic-tag-action a,
   .tag-info,
   .btn-octicon,
+  .menu-item.selected,
+  .menu-item[aria-current],
   .btn-link:not(.IssueLabel):not(.tabnav-tab),
   .subnav-search-context .btn,
   .pl-e,
@@ -1328,6 +1342,8 @@
   .Box-row--focus-gray.navigation-focus,
   .btn:hover,
   .btn.btn-sm:hover,
+  .pinned-item-checkbox:checked + .pinned-item-name,
+  .discussion-item-icon,
   .subnav-item:focus,
   .subnav-item:hover,
   .markdown-body code,
@@ -1343,9 +1359,7 @@
   .ais-Hits-item:hover,
   .issues-reset-query-icon,
   .ellipsis-expander,
-  .hidden-text-expander a,
-  .discussion-item-icon,
-  .pinned-item-checkbox:checked + .pinned-item-name {
+  .hidden-text-expander a {
     background-color: var(--base-7) !important;
   }
   .Box-row--yellow,
@@ -1361,6 +1375,8 @@
     background-image: none !important;
   }
   .Box--responsive .Box-row--unread::before,
+  .menu-item.selected::before,
+  .menu-item[aria-current]::before,
   .SideNav-item[aria-current="page"]::before,
   .SideNav-item[aria-selected="true"]::before,
   .MarketplacePlan--sticky div.bg-white .bg-blue {
@@ -1475,6 +1491,68 @@
   .suggester {
     background-color: var(--base-3) !important;
   }
+  .github-jobs-logo strong {
+    filter: invert(1);
+  }
+  .profile-rollup-wrapper+.profile-rollup-wrapper {
+    border-top: 1px solid var(--base-5) !important;
+  }
+  .activity-overview-percentage,
+  .calendar-graph text.wday,
+  .calendar-graph text.month {
+    fill: var(--cn) !important;
+  }
+  .activity-overview-label,
+  .gisthead .pagehead-actions .octicon-mute {
+    fill: var(--faded) !important;
+  }
+  .user-profile-nav,
+  .body > div.d-flex {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .user-profile-nav,
+  .newsletter-frequency-choice {
+    border-radius: 8px !important;
+  }
+  .vcard-username,
+  .octicon[style*="#6a737d"],
+  .diffstat {
+    color: var(--text-gray) !important;
+  }
+  .vcard-detail .octicon {
+    color: var(--faded) !important;
+  }
+  .discussion-sidebar-item,
+  .CodeMirror-linenumber.CodeMirror-gutter-elt,
+  .markdown-body code,
+  .markdown-body tt,
+  .highlight pre,
+  .markdown-body pre,
+  .CheckStep-line,
+  code .link-gray,
+  .signed-commit-badge.verified,
+  .commit-ref,
+  .full-commit .sha-block,
+  .CodeMirror-hint-active,
+  .CodeMirror-linenumber {
+    font-weight: 500 !important;
+  }
+  .menu,
+  .menu .blankslate {
+    color: var(--base-4) !important;
+  }
+  .menu-item,
+  .table-list,
+  .filter-bar,
+  .tabnav,
+  .Header,
+  .boxed-group-list > li,
+  .rule,
+  hr,
+  .border-bottom {
+    border-bottom: 1px solid var(--base-1) !important;
+  }
   .subnav-link.selected,
   .subnav-item.selected,
   .subnav-item.selected:focus,
@@ -1492,21 +1570,6 @@
   .team-left-column[aria-label="Explore"] > div,
   .input-contrast {
     transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-  }
-  .CodeMirror-linenumber.CodeMirror-gutter-elt,
-  .markdown-body code,
-  .markdown-body tt,
-  .highlight pre,
-  .markdown-body pre,
-  .CheckStep-line,
-  code .link-gray,
-  .signed-commit-badge.verified,
-  .commit-ref,
-  .full-commit .sha-block,
-  .discussion-sidebar-item,
-  .CodeMirror-hint-active,
-  .CodeMirror-linenumber {
-    font-weight: 500 !important;
   }
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
@@ -1660,7 +1723,6 @@
   body .link-gray-dark:hover,
   body body div.commit-build-statuses-dark:hover,
   body body .link-gray-dark:hover,
-  .news .Details button:hover,
   .protip  > strong,
   .gh-header-number {
     text-decoration: underline !important;
@@ -1699,11 +1761,6 @@
   .legend li[style*="#196127"],
   .calendar-graph rect[fill="#196127"] {
     opacity: 1 !important;
-  }
-  .calendar-graph text.wday,
-  .calendar-graph text.month,
-  .activity-overview-percentage {
-    fill: var(--cn) !important;
   }
   .markdown-body a,
   .markdown-body blockquote,
@@ -1819,8 +1876,6 @@
   .user-list-item+.user-list-item,
   .issue-list-item+.issue-list-item,
   .SelectMenu-filter,
-  .news .Details-content--hidden li,
-  .news .Details button,
   .graphiql-ide {
     border-top-color: var(--base-1) !important;
   }
@@ -1891,16 +1946,6 @@
   .commit-form::after {
     border-right-color: var(--base-4) !important;
   }
-  .table-list,
-  .filter-bar,
-  .tabnav,
-  .Header,
-  .boxed-group-list > li,
-  .rule,
-  hr,
-  .border-bottom {
-    border-bottom: 1px solid var(--base-1) !important;
-  }
   .table-list-bordered .table-list-cell:first-child,
   .border-left {
     border-left: 1px solid var(--base-1) !important;
@@ -1929,9 +1974,9 @@
   .State--red .octicon {
     fill: var(--red) !important;
   }
-  .newsletter-frequency-choice,
-  .user-profile-nav {
-    border-radius: 8px !important;
+  .search_repos fieldset {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
   .form-group .form-control .search-input {
     caret-color: var(--blue);
@@ -1953,6 +1998,9 @@
   .graphiql-container .execute-button {
     box-shadow: none !important;
   }
+  .ais-SearchBox-input {
+    background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
+  }
   #commit_search_results .commit {
     border-left: 1px solid var(--base-1) !important;
     border-right: 1px solid var(--base-1) !important;
@@ -1960,13 +2008,6 @@
   #commit_search_results .commit {
     padding-left: 8px !important;
     padding-right: 8px !important;
-  }
-  .ais-SearchBox-input {
-    background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
-  }
-  .search_repos fieldset {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
   .release-timeline-tags .tag-timeline-date::after {
     border-color: var(--base-7) !important;
@@ -2007,11 +2048,6 @@
   .octicon-repo-forked {
     margin-bottom: 0.1em !important;
   }
-  .octicon[style*="#6a737d"],
-  .diffstat,
-  .vcard-username {
-    color: var(--text-gray) !important;
-  }
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
   }
@@ -2050,7 +2086,7 @@
   .dropdown-menu-ne::after {
     border-top-color: var(--base-5) !important;
   }
-  .Popover-message::before,
+  .Popover-message:not(.Popover-message--bottom-right):not(.Popover-message--top-right):not(.Popover-message--top-left):not(.Popover-message--bottom-left)::before,
   .Popover-message--top-left::before,
   body::before,
   .layout-content.status.status-api .section .example-container .example-opener .color-secondary::before,
@@ -2059,7 +2095,7 @@
   #uptime-tooltip .tooltip-box::before {
     border-bottom-color: var(--base-1) !important;
   }
-  .Popover-message::after,
+  .Popover-message:not(.Popover-message--bottom-right):not(.Popover-message--top-right):not(.Popover-message--top-left):not(.Popover-message--bottom-left)::after,
   .Popover-message--top-right::before,
   .Popover-message--top-right::after,
   body::after,
@@ -2183,26 +2219,8 @@
   body {
     font-size: 14px !important;
   }
-  .github-jobs-logo strong {
-    filter: invert(1);
-  }
-  .profile-rollup-wrapper+.profile-rollup-wrapper {
-    border-top: 1px solid var(--base-5) !important;
-  }
-  .activity-overview-label,
-  .gisthead .pagehead-actions .octicon-mute {
-    fill: var(--faded) !important;
-  }
-  .user-profile-nav,
-  .body > div.d-flex {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
   .repo-list {
     padding: 0 12px !important;
-  }
-  .vcard-detail .octicon {
-    color: var(--faded) !important;
   }
   .team-left-column[aria-label="Explore"] > div {
     padding-left: 10px !important;
@@ -2314,9 +2332,6 @@
   }
   div[style*="linear-gradient"] {
     background: linear-gradient(to top, var(--base-1), transparent) !important;
-  }
-  .news .Details button:hover {
-    background: transparent !important;
   }
   .Counter {
     background-color: var(--blue-dark) !important;

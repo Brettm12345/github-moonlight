@@ -1,6 +1,7 @@
 .Popover-message
   c $text $base1 $base3
-  caret "bottom"
+  &:not(&--bottom-right):not(&--top-right):not(&--top-left):not(&--bottom-left)
+    caret "bottom"
   &--bottom-right
     caret "top" $base4 $base4
   &--top-right
