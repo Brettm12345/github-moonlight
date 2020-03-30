@@ -1,3 +1,5 @@
+.filter-list.small
+  c 0 0 $base3
 .filter-item
   ease color, background-color, border-color
   /.filter-list:not(.small) &
@@ -11,13 +13,11 @@
   /.filter-list.small &
     b $b
     c 0 $base1 $base4
-    .filter-item
-      c 0 0 $base4
-      ease color, background-color, border-color
-      &.selected, &[aria-current], &[aria-selected=true]
-        c 0 0 $base7
-      &:hover, &:focus
-        c 0 0 $base8
+    ease color, background-color, border-color
+    &.selected, &[aria-current], &[aria-selected=true]
+      c 0 0 $base7
+    &:hover, &:focus
+      c 0 0 $base7
 .notification-
   &navigation.bg-white
     c 0 0 $base2
