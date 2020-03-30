@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.8.3
+@version      1.8.4
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -208,6 +208,8 @@
   .MarketplacePlan--sticky div.bg-white,
   .ScreenshotCarousel,
   .dropdown-menu,
+  .js-selected-navigation-item.subnav-item.Box-row--focus-gray,
+  .js-issue-row.Box-row--focus-gray,
   .SelectMenu-item,
   .SelectMenu-modal,
   .SelectMenu-footer,
@@ -859,6 +861,8 @@
   .jump-to- #jump-to-results:hover,
   .signup-plan-card,
   .ScreenshotCarousel-navitem.selected,
+  .js-selected-navigation-item.subnav-item.Box-row--focus-gray:hover,
+  .js-issue-row.Box-row--focus-gray:hover,
   .pinned-issue-item,
   .SelectMenu-item:hover,
   .tabnav--responsive .tabnav-tab[aria-current],
@@ -1944,6 +1948,9 @@
   .legend li[style*="#196127"],
   .calendar-graph rect[fill="#196127"] {
     opacity: 1 !important;
+  }
+  .markdown-body {
+    line-height: 1.9 !important;
   }
   .markdown-body a,
   #readme .Box-header .octicon-pencil,
