@@ -1,8 +1,7 @@
 @require "better-pull-requests"
 @require "gitako"
+@require "refined-github"
 
-.dashboard .js-all-activity-header + div
-  c 0 $base1 $base4
 a.module-linker
   c $green
 .lovely-forks-addon
@@ -10,3 +9,11 @@ a.module-linker
   o 0.7
 .hide-files-btn:hover
   c $blue
+.dashboard .flex-items-baseline.py-3:hover
+  c 0 0 $hl
+.dashboard
+  .js-all-activity-header + div
+    c 0 $base1 $base4
+  .flex-items-baseline
+    .f6.mt-2
+      o 0.6
