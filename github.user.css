@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.7.8
+@version      1.7.9
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -399,6 +399,9 @@
   .cm-s-github-light.CodeMirror,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
+  .user-key-email,
+  .user-key-badge,
+  .user-key-email-unverified,
   .markdown-body h1,
   .markdown-body h2,
   .markdown-body h3,
@@ -664,6 +667,7 @@
   .pinned-item-name,
   .discussion-sidebar-item,
   .pl-sg,
+  p.explain,
   .markdown-body .lead-mktg p,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
   .gitako-side-bar-content .file-explorer .no-results,
@@ -1035,6 +1039,8 @@
   .btn .js-selected-navigation-item.subnav-item,
   .cm-s-github-light.CodeMirror,
   .cm-s-github-light .CodeMirror-lines,
+  .user-key-email,
+  .user-key-badge,
   .graph-before-activity-overview,
   .tree-browser-result[aria-selected="true"],
   .js-commit-preview .markdown-body,
@@ -1548,6 +1554,7 @@
   .review-thread-reply,
   .review-thread-reply .inline-comment-form,
   .site-subnav.bg-white,
+  .user-key-email-unverified,
   .markdown-body table tr td,
   #readme .Box-header,
   .Popover-message,
@@ -1618,6 +1625,7 @@
   .protip  > strong,
   .pl-smw,
   .pl-mi,
+  .user-key-email-unverified,
   .octicon-inbox,
   .octicon-alert,
   .octicon-pencil,
@@ -1789,6 +1797,7 @@
   .pl-sr .pl-sre,
   .pl-sr .pl-sra,
   .pl-mh,
+  .recent-user-key-access,
   a.module-linker,
   .text-green,
   .cadd,
@@ -1886,6 +1895,21 @@
   .pl-mc {
     background-color: var(--cyan-trans) !important;
   }
+  p.explain strong,
+  .markdown-body a,
+  .markdown-body blockquote,
+  .text-gray-light,
+  .email-quoted-reply,
+  .email-signature-reply,
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color: var(--text-alt) !important;
+  }
   .legend li[style*="#ebedf0"] {
     background-color: var(--indigo) !important;
   }
@@ -1920,20 +1944,6 @@
   .legend li[style*="#196127"],
   .calendar-graph rect[fill="#196127"] {
     opacity: 1 !important;
-  }
-  .markdown-body a,
-  .markdown-body blockquote,
-  .text-gray-light,
-  .email-quoted-reply,
-  .email-signature-reply,
-  small,
-  .layout-content.status .table-row .date,
-  .color-secondary,
-  .layout-content.status .grouped-items-selector.inline .grouped-item,
-  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
-  .layout-content.status.status-full-history .history-nav a,
-  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
-    color: var(--text-alt) !important;
   }
   .markdown-body a,
   #readme .Box-header .octicon-pencil,
