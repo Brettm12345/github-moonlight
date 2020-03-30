@@ -1,29 +1,5 @@
-.table-list
-  bb $b
-  &-header
-    c 0 $base1 $base4
-    &-toggle .btn-link
-      &:hover, &.selected
-        c $blue
-  &-cell
-    bt $b
-  &-bordered &-cell
-    &:first-child
-      bl $b
-    &:last-child
-      br $b
-table.files
-  c $text $base1 $base5
-  tr
-    &.navigation-focus, &[aria-selected=true]
-      td
-        c 0 0 $base5
-  td
-    c 0 $base1
-    &.age
-      c $text
-    &.icon
-      c $text
+.branch-infobar
+  c $placeholder $base1 $base4
 .social-count
   c $blue $base1 $base5
   &:hover
@@ -33,10 +9,36 @@ table.files
     ease background-color
     c 0 $base1 $base3
     o 1
+    &:hover
+      c 0 0 $base2
     .octicon-pencil
       c $indigo
       ease color
-    &:hover
-      c 0 0 $base2
-      .octicon-pencil
+      ../:hover ^[2..-1]
         c $blue
+table
+  &.files
+    c $text $base1 $base5
+    td
+      c 0 $base1
+      &.age
+        c $text
+      &.icon
+        c $text
+    tr.navigation-focus, tr[aria-selected=true]
+      td
+        c 0 0 $base5
+  .&-list
+    bb $b
+    &-cell
+      bt $b
+    &-bordered &-cell
+      &:first-child
+        bl $b
+      &:last-child
+        br $b
+    &-header
+      c 0 $base1 $base4
+      &-toggle .btn-link
+        &:hover, &.selected
+          c $blue

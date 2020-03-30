@@ -1,9 +1,8 @@
 .SelectMenu-
-  &item
-    c $text $base1
-    ease background-color
-    &:hover
-      c 0 0 $base5
+  &header
+    bbc $base1
+  &filter
+    btc $base1
   &icon--check
     c $green
   &divider
@@ -12,28 +11,22 @@
     c 0 $base1 $base3
   &item, &modal
     c 0 $base1 $base4
-  &header
-    bbc $base1
+  &blankslate, &loading, &message
+    c $text $base1 $base4
   &footer
     c $text $base1 $base4
     kbd
       fs unset
-  &filter
-    btc $base1
+  &item
+    c $text $base1
+    ease background-color
+    &:hover
+      c 0 0 $base5
   &tab
     c $text $base1 $base2
     &[aria-selected="true"]
       c $cn $base1 $base4
-  &blankslate, &loading, &message
-    c $text $base1 $base4
 .select-menu-
-  &tabs
-    c 0 $base1
-    ../tab-nav
-    &, a
-      &.selected, &[aria-selected="true"]
-        bc $base1 $base1 $base4
-        c $cn 0 $base4
   &header, &header &title
     c $cn $base1 $base2
   &modal, &item
@@ -47,11 +40,17 @@
   &text-filter
     &:first-child, &:last-child
       c 0 $base1
-  &modal
-    s-2()
   &item
     ease background-color
     &:hover
       c 0 0 $base8
-  &modal-right.details-reset.details-overlay.mb-2, .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
-    c 0 0 $base4
+  &tabs
+    c 0 $base1
+    ~/tab-nav, &, a
+      &.selected, &[aria-selected="true"]
+        bc $base1 $base1 $base4
+        c $cn 0 $base4
+  &modal
+    s-2()
+    &-right.details-reset.details-overlay.mb-2, .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
+      c 0 0 $base4

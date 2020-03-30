@@ -13,9 +13,6 @@
     c 0 0 $red
   &.addition
     c 0 0 $green
-.status-meta,
-.merge-pr-more-commits
-  c $faded
 ul.comparison-list
   c 0 $base1 $base4
   & > li
@@ -25,6 +22,8 @@ ul.comparison-list
   & > li.title
     c $text $base1 $base5
 .merge-
+  &pr-more-commits, .status-meta
+    c $faded
   &branch-description
     c $faded
   &status-
