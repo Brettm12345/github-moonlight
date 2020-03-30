@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.7.3
+@version      1.7.4
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -138,11 +138,11 @@
   .TimelineItem--condensed .TimelineItem-badge,
   .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
+  .topic-box.bg-white,
   .topic-tag,
   .ajax-pagination-form .ajax-pagination-btn,
   .menu,
   .menu-heading,
-  .site-subnav.bg-wite,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
   .markdown-body table tr,
@@ -345,6 +345,7 @@
   .menu,
   .menu .blankslate,
   .menu-heading,
+  .site-subnav.bg-white.is-stuck,
   .subnav-item,
   .subnav-item.selected,
   .subnav-item.selected:focus,
@@ -792,11 +793,11 @@
   }
   .notification-navigation.bg-white,
   .Toast-dismissButton,
-  .btn-mktg,
   .user-profile-sticky-bar:after,
   .profile-timeline-rollup-content li.d-block.mt-1.py-1,
   .profile-timeline-month-heading.bg-white,
   .profile-timelineyear-list,
+  .site-subnav.bg-white.is-stuck,
   .application-main > main > .site-subnav + div,
   #tree-finder-field,
   .highlight pre,
@@ -870,6 +871,7 @@
   .TimelineItem:before,
   .TimelineItem .status-meta:before,
   .TimelineItem .merge-pr-more-commits:before,
+  .topic-box.bg-white:hover,
   .btn,
   .btn.btn-sm,
   .btn:disabled,
@@ -1213,7 +1215,6 @@
     border: 1px solid var(--base-1) !important;
   }
   .Toast,
-  .site-subnav.bg-wite,
   .select-menu-modal,
   .box-shadow-large {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
@@ -1429,6 +1430,9 @@
   .deployments-timeline-item {
     border-left-color: var(--base-9) !important;
   }
+  .topic-box.bg-white {
+    transition: background-color, transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
   .topic-tag-outline {
     box-shadow: inset 0 0 0 1px var(--base-1) !important;
   }
@@ -1479,6 +1483,7 @@
   }
   .btn.btn-outline.BtnGroup-item,
   .btn.btn-outline.tooltipped.tooltipped-sw,
+  .site-subnav.bg-white,
   .review-thread-reply,
   .review-thread-reply .inline-comment-form,
   .Popover-message,
@@ -1491,6 +1496,9 @@
   .previewable-comment-form .comment-form-head.tabnav,
   .suggester {
     background-color: var(--base-3) !important;
+  }
+  .btn-mktg {
+    background-color: rgba(0,0,0,0.1) !important;
   }
   .github-jobs-logo strong {
     filter: invert(1);
@@ -1544,6 +1552,8 @@
     color: var(--base-4) !important;
   }
   .menu-item,
+  .site-subnav.bg-white,
+  .site-subnav.bg-white.is-stuck,
   .table-list,
   .filter-bar,
   .tabnav,
@@ -1553,6 +1563,20 @@
   hr,
   .border-bottom {
     border-bottom: 1px solid var(--base-1) !important;
+  }
+  .site-subnav.bg-white {
+    border-color: var(--base-3) !important;
+  }
+  .site-subnav.bg-white {
+    transition: box-shadow, background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .site-subnav.bg-white.is-stuck,
+  .project-card:hover,
+  .MarketplacePlan--sticky div.bg-white,
+  .ScreenshotCarousel,
+  .file:target,
+  .box-shadow-medium {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .subnav-link.selected,
   .subnav-item.selected,
@@ -1837,13 +1861,6 @@
   }
   .project-issue-body-blur {
     background: linear-gradient(0deg, #000, rgba(0,0,0,0)) !important;
-  }
-  .project-card:hover,
-  .MarketplacePlan--sticky div.bg-white,
-  .ScreenshotCarousel,
-  .file:target,
-  .box-shadow-medium {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;

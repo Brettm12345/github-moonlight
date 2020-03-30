@@ -1,6 +1,11 @@
-.site-subnav.bg-wite
-  c 0 0 $base4
-  s-2()
+.site-subnav.bg-white
+  bb $b
+  c 0 $base3 $base3
+  ease box-shadow, background-color, border-color
+  &.is-stuck
+    bb $b
+    c 0 $base1 $base2
+    s-1()
 .subnav-
   &link.selected
     bbc $blue
