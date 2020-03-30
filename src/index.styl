@@ -13,6 +13,7 @@
 @require "code-search"
 @require "blankslate"
 @require "circle-badge"
+@require "form-group"
 @require "protip"
 @require "pagination"
 @require "profile"
@@ -96,8 +97,6 @@ fieldset
   r 6px
 code, pre, tt
   mono()
-.form-select
-  bgi url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23c8d3f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down' %3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E")
 .description
   c $text
 img[src*="octocat-spinner-64.gif"]
@@ -121,15 +120,14 @@ div[style*="linear-gradient"]
   bg linear-gradient(to top, $base1, transparent)
 .numbers-summary
   octicon $text
+  li > .nolink, li > a
+    c $faded
 .js-navigation-open
   ease color
 .border, .rgh-collaborator
   b $b
 .auth-form-body
   c $text $base1 $base4
-.numbers-summary li
-  &> .nolink, &>a
-    c $faded
 .access-token
   bbc $base1
 div.listgroup-item
@@ -184,8 +182,6 @@ div.listgroup-item
     c 0 0 transparent
 .contrib-person path
   v $orange
-.progress-bar
-  c 0 0 $base5
 .toolbar-item
   &, & .menu-target
     &:hover

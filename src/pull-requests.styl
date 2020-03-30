@@ -1,16 +1,7 @@
-.task-progress
-  c $faded
-  .progress-bar .progress
-    c 0 0 $base8
 .compare-pr-placeholder
   c 0 $base1 $base5
   p
     c $text
-.comment-reactions
-  .user-has-reacted
-    c 0 $base1 $base5
-  &.has-reactions
-    c 0 $base1 $base4
 .range-editor
   c 0 $base1 $base4
   &-icon
@@ -41,34 +32,6 @@ ul.comparison-list
       c 0 $base1
     &item
       c 0 $base1 $base4
-.timeline-comment
-  c $text $base1 $base5
-  /:target &
-    s 0 0 0 0.2em $base1
-    &::before
-      filter drop-shadow(-0.28em 0 0 $base1)
-  &-wrapper
-    b 0
-    c 0 $base1
-  &-label.tooltipped.tooltipped-s.tooltipped-multiline
-    c $purple $purple $purpleTrans
-  &-header
-    c $cn $base1 $base4
-  &--caret
-    &, &.current-user
-      &::before, &::after
-        brc $base4
-.composer.composer-responsive .timeline-comment
-  caret "right"
-.js-resolvable-timeline-thread-form
-  c 0 0 $base4
-.review-
-  &thread-reply
-    c 0 $base1 $base3
-    .inline-comment-form
-      c 0 0 $base3
-  &comment
-    c $text $base1 $base4
 .gh-header-number
   c $orange
   fw 400

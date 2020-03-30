@@ -5,33 +5,12 @@ header #search-results-container
   c 0 0 $base4
 .search_repos
   fieldset
-    c 0 0 $base2
+    c 0 0 $base3
     px 16px
 .user, .issue
   &-list-item
     &+&
       btc $base1
-.form-
-  &group &control
-    c $cn $base1 $base4
-    .search-input
-      caret-color $blue
-    &:focus
-      c 0 $blue $base7
-      .form-control, .ais-SearchBox-input, .form-select
-        &.focus, &:focus
-          c 0 $blue
-          s none
-  &control
-    &, ../select
-      ../.search-page-label.js-advanced-search-label
-        &, & input
-          c 0 0 $base5
-      c $cn $base1 $base4
-      s none
-      &.focus, &:focus
-        c $cn $blue 0
-        s none
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c $text $base1 $base5

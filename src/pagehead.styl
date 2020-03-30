@@ -25,11 +25,14 @@ body.page-responsive.pagehead
       c $text
       filter none
       o 1
-.pagehead-tabs-item, .pagehead, .repohead.experiment-repo-nav
-  c 0 $base1 $base4
-  // @stlint-ignore
-  @media (min-width: 768px)
-    c $base4
+.pagehead
+  &-actions .btn
+    c 0 0 $base4
+  &, &-tabs-item, .repohead.experiment-repo-nav
+    c 0 $base1 $base4
+    // @stlint-ignore
+    @media (min-width: 768px)
+      c $base4
 .repohead, .repo-list
   .Label--outline
     c $text $base1

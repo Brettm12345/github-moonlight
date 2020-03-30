@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.8.8
+@version      1.9.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -145,6 +145,9 @@
   .Toast,
   .Toast-content,
   .blankslate,
+  .form-group .form-control,
+  .form-control,
+  .form-select,
   .ajax-pagination-form button,
   .pagination a,
   .pagination .disabled,
@@ -196,9 +199,6 @@
   .summary-stats li > .num,
   .filter-bar,
   header #search-results-container,
-  .form-group .form-control,
-  .form-control,
-  .form-select,
   #commit_search_results .commit,
   .release-timeline-tags .tag-timeline-date::after,
   .branch-infobar,
@@ -231,9 +231,10 @@
   .select-menu-modal-right.details-reset.details-overlay.mb-2,
   .select-menu- .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target,
   .gh-header-sticky.is-stuck + .gh-header-shadow,
-  .pagehead-tabs-item,
+  .pagehead-actions .btn,
   .pagehead,
-  .repohead.experiment-repo-nav,
+  .pagehead-tabs-item,
+  .pagehead .repohead.experiment-repo-nav,
   .site-header,
   .file-diff-split .empty-cell,
   .blob-num,
@@ -372,6 +373,9 @@
   .Toast-dismissButton,
   .blankslate,
   .blankslate code,
+  .form-group .form-control,
+  .form-control,
+  .form-select,
   .protip  > code,
   .ajax-pagination-form button,
   .pagination a,
@@ -466,9 +470,6 @@
   .summary-stats li > .num,
   .newsletter-frequency-choice,
   .newsletter-frequency-choice h3,
-  .form-group .form-control,
-  .form-control,
-  .form-select,
   .code-list .file-box,
   .code-list .code-list-item + .code-list-item,
   .code-list .divider .blob-code,
@@ -537,9 +538,9 @@
   .tabnav-tab.selected.js-blob-edit-preview,
   .gh-header-meta,
   .Header,
-  .pagehead-tabs-item,
   .pagehead,
-  .repohead.experiment-repo-nav,
+  .pagehead-tabs-item,
+  .pagehead .repohead.experiment-repo-nav,
   .repohead .Label--outline,
   .repo-list .Label--outline,
   .site-header,
@@ -677,7 +678,6 @@
   .Subhead-description,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
   .gitako-side-bar-content .file-explorer .no-results,
-  .task-progress,
   .range-editor-icon,
   .status-meta,
   .merge-pr-more-commits,
@@ -702,8 +702,8 @@
   .link-gray,
   .hook-delivery-time,
   .muted-link,
-  .numbers-summary li> .nolink,
-  .numbers-summary li>a,
+  .numbers-summary li > .nolink,
+  .numbers-summary li > a,
   .text,
   .graphiql-container .doc-category-title,
   .octokit-language span,
@@ -737,7 +737,6 @@
   button[data-disable-with='Loading more&hellip;'],
   .bg-gray-dark,
   #readme .Box-header:hover,
-  .search_repos fieldset,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .SelectMenu-divider,
   .SelectMenu-tab,
@@ -808,6 +807,8 @@
   .filter-item.selected,
   .filter-item[aria-current],
   .filter-item[aria-selected=true],
+  .form-control.search-page-label.js-advanced-search-label,
+  .form-control.search-page-label.js-advanced-search-label input,
   .protip  > code,
   .pagination a:hover,
   .js-profile-editable-edit-button,
@@ -857,8 +858,6 @@
   .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
   .exploregrid-item,
   .newsletter-frequency-choice h3,
-  .form-control.search-page-label.js-advanced-search-label,
-  .form-control.search-page-label.js-advanced-search-label input,
   .code-list .file-box,
   .code-list .code-list-item + .code-list-item,
   .code-list .divider .blob-code,
@@ -902,7 +901,6 @@
   .team-left-column[aria-label="Explore"] > div:focus,
   .input-contrast:hover,
   .input-contrast:focus,
-  .progress-bar,
   .js-gist-file-update-container.js-task-list-container.file-box,
   .form-select,
   input[type="text"].form-control,
@@ -957,6 +955,13 @@
   .filter-item.selected,
   .filter-item[aria-current],
   .filter-item[aria-selected=true],
+  .form-group .form-control,
+  .form-control,
+  .form-select,
+  .form-control.focus,
+  .form-select.focus,
+  .form-control:focus,
+  .form-select:focus,
   .js-profile-editable-edit-button,
   .menu-heading,
   .pl-ii,
@@ -973,13 +978,6 @@
   .summary-stats li:focus > .num,
   .summary-stats li:hover > a,
   .summary-stats li:focus > a,
-  .form-group .form-control,
-  .form-control,
-  .form-select,
-  .form-control.focus,
-  .form-select.focus,
-  .form-control:focus,
-  .form-select:focus,
   .ais-SearchBox-input,
   .dropdown-item:hover,
   .dropdown-item:focus,
@@ -1043,7 +1041,6 @@
   .notifications-dropdown-see-all,
   .Box-row[style*="background"],
   .markdown-body .clippy-wrapper .clippy:hover,
-  .task-progress .progress-bar .progress,
   .checks-list-item.selected .checks-list-item-name,
   .community-checklist .progress,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
@@ -1340,6 +1337,7 @@
   .topic-tag-link:hover,
   .btn:hover,
   .btn.btn-sm:hover,
+  .form-group .form-control:focus,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .discussion-item-icon,
   .subnav-item:focus,
@@ -1353,7 +1351,6 @@
   .bg-blue,
   .bg-gray-2,
   .Progress,
-  .form-group .form-control:focus,
   .ais-Hits-item:hover,
   .issues-reset-query-icon,
   .ellipsis-expander,
@@ -1394,6 +1391,7 @@
   .markdown-body pre,
   .new-project-column,
   #readme .Box-header,
+  .search_repos fieldset,
   .Popover-message,
   .email-quoted-reply,
   .email-signature-reply,
@@ -1489,8 +1487,6 @@
   .topic-tag-action a,
   .btn:hover,
   .btn.btn-sm:hover,
-  .markdown-body .clippy-wrapper .clippy:hover,
-  .border-blue-light,
   .form-group .form-control:focus,
   .form-group .form-control:focus .form-control.focus,
   .form-group .form-control:focus .ais-SearchBox-input.focus,
@@ -1502,6 +1498,8 @@
   .form-select.focus,
   .form-control:focus,
   .form-select:focus,
+  .markdown-body .clippy-wrapper .clippy:hover,
+  .border-blue-light,
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
   .reponav-item.selected,
@@ -1639,6 +1637,26 @@
   }
   .topics-row-container {
     height: auto;
+  }
+  .form-group .form-control .search-input {
+    caret-color: var(--blue);
+  }
+  .form-group .form-control:focus .form-control.focus,
+  .form-group .form-control:focus .ais-SearchBox-input.focus,
+  .form-group .form-control:focus .form-select.focus,
+  .form-group .form-control:focus .form-control:focus,
+  .form-group .form-control:focus .ais-SearchBox-input:focus,
+  .form-group .form-control:focus .form-select:focus,
+  .form-control,
+  .form-select,
+  .form-control.focus,
+  .form-select.focus,
+  .form-control:focus,
+  .form-select:focus,
+  .write-content.js-write-bucket,
+  .graphiql-container .toolbar-button,
+  .graphiql-container .execute-button {
+    box-shadow: none !important;
   }
   .protip  > strong,
   .pl-smw,
@@ -2093,9 +2111,6 @@
   .diffstat-block-added {
     background-color: var(--green) !important;
   }
-  :target .timeline-comment::before {
-    filter: drop-shadow(-0.28em 0 0 var(--base-1));
-  }
   .gh-header-number {
     font-weight: 400 !important;
   }
@@ -2132,26 +2147,6 @@
   .search_repos fieldset {
     padding-left: 16px !important;
     padding-right: 16px !important;
-  }
-  .form-group .form-control .search-input {
-    caret-color: var(--blue);
-  }
-  .form-group .form-control:focus .form-control.focus,
-  .form-group .form-control:focus .ais-SearchBox-input.focus,
-  .form-group .form-control:focus .form-select.focus,
-  .form-group .form-control:focus .form-control:focus,
-  .form-group .form-control:focus .ais-SearchBox-input:focus,
-  .form-group .form-control:focus .form-select:focus,
-  .form-control,
-  .form-select,
-  .form-control.focus,
-  .form-select.focus,
-  .form-control:focus,
-  .form-select:focus,
-  .write-content.js-write-bucket,
-  .graphiql-container .toolbar-button,
-  .graphiql-container .execute-button {
-    box-shadow: none !important;
   }
   .ais-SearchBox-input {
     background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
@@ -2309,9 +2304,9 @@
     filter: none;
   }
 @media (min-width: 768px) {
-    .pagehead-tabs-item,
     .pagehead,
-    .repohead.experiment-repo-nav {
+    .pagehead-tabs-item,
+    .pagehead .repohead.experiment-repo-nav {
       color: var(--base-4) !important;
     }
 }
@@ -2463,9 +2458,6 @@
   }
   fieldset {
     padding: 10px !important;
-  }
-  .form-select {
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23c8d3f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down' %3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E") !important;
   }
   img[src*="octocat-spinner-64.gif"] {
     filter: invert(1);
