@@ -1,11 +1,26 @@
 .filter-bar
   bb $b
   c 0 0 $base4
-.form-control, .form-select
-  s none
-.form-control.search-page-label.js-advanced-search-label
-  &, & input
-    c 0 0 $base5
+.form-
+  &group &control
+    c $cn $base1 $base4
+    .search-input
+      caret-color $blue
+    &:focus
+      c 0 $blue $base7
+      .form-control, .ais-SearchBox-input, .form-select
+        &.focus, &:focus
+          c 0 $blue
+          s none
+  &control, &select
+    c $cn $base1 $base4
+    s none
+    &.focus, &:focus
+      c $cn $blue 0
+      s none
+  &control.search-page-label.js-advanced-search-label
+    &, & input
+      c 0 0 $base5
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c $text $base1 $base5
@@ -21,12 +36,6 @@
   bx $b
   c $text $base1 $base4
   px 8px
-.form-group .form-control:focus
-  c 0 $blue $base7
-.form-control, .ais-SearchBox-input, .form-select
-  &.focus, &:focus
-    c 0 $blue
-    s none
 .ais-
   /.search-result-intro
     & mark, & .ais-Highlight-highlighted

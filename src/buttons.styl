@@ -1,0 +1,22 @@
+.btn
+  &, &&-sm
+    bgi none
+    c $cn $base1 $base5
+    ease background-color, border-color
+    &:disabled
+      &, &:hover
+        c $faded $base1 $base5
+    &:hover
+      bgi none
+      c $cn $blue $base7
+  &&-outline
+    &.BtnGroup-item, &.tooltipped.tooltipped-sw
+      c 0 0 $base3
+  &-mktg
+    c $cn $base1 $base2
+  &-octicon
+    c $blue
+    &:hover
+      c $cn
+    &-danger:hover
+      c $red

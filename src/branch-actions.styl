@@ -1,0 +1,26 @@
+.branch-
+  &action-state-clean
+    ../action-body::before
+      brc $base5
+  &action-item-icon.completeness-indicator
+    .octicon
+      v $base1
+    &-success
+      c $base1 0 $green
+    &-error
+      c $base1 0 $red
+    &-problem
+      c $base1 0 $yellow
+  &action-state-clean &action-icon
+    c 0 0 $teal
+    .octicon
+      v $base1
+  &infobar
+    c 0 $base1 $base4
+  &action-body
+    b 0
+    c 0 $base1 $base5
+    caret "right"
+    .merge-
+      &branch-form, &message
+        c 0 $base1 $base4

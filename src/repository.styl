@@ -1,0 +1,30 @@
+.table-list
+  bb $b
+  &-header
+    c 0 $base1 $base4
+    &-toggle .btn-link
+      &:hover, &.selected
+        c $blue
+  &-cell
+    bt $b
+  &-bordered &-cell
+    &:first-child
+      bl $b
+    &:last-child
+      br $b
+table.files
+  c $text $base1 $base5
+  tr
+    &.navigation-focus, &[aria-selected=true]
+      td
+        c 0 0 $base5
+  td
+    c 0 $base1
+    &.age
+      c $text
+    &.icon
+      c $text
+.social-count
+  c $blue 0 $base5
+  &:hover
+    c $cn

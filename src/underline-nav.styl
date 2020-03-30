@@ -1,0 +1,10 @@
+.UnderlineNav
+  c 0 $base1 $base5
+  ease background-color, border-color
+  &[style*="margin-top"]
+    c 0 transparent $base2
+  &-item
+    &.selected, &[aria-current], &[aria-selected=true]
+      bbc $blue
+    &:hover
+      bbc $base8

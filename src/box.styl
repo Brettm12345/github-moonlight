@@ -1,0 +1,27 @@
+*:not(code) .Box
+  c 0 $base1 $base4
+.Box
+  &--responsive, &row--unread
+    s inset 2px 0 0 $blue
+  &-header
+    c 0 $base1 $base4
+    &--blue
+      c $blue $base1 $base4
+  &-row
+    &:first-of-type
+      bt 0
+    bt $b
+    &--focus-gray.navigation-focus
+      c 0 0 $base7
+    &[style*="background"]
+      c 0 0 $base8
+  &&--condensed &-row
+    c 0 $base1 $base4
+  &-row--
+    &focus-gray
+      c 0 0 $base5
+    &yellow
+      c $text $yellow transparent
+    ../--responsive &unread::before
+      bgi none
+      c 0 0 $blue

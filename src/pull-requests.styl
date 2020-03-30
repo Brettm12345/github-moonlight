@@ -15,18 +15,6 @@
   c 0 $base1 $base4
   &-icon
     c $faded
-.select-menu
-  &-tabs
-    c 0 $base1
-    ../-tab-nav
-      &.selected, &[aria-selected="true"], a.selected, a[aria-selected="true"]
-        bc $base1 $base1 $base5
-        c $cn 0 $base5
-.blob-code-
-  &addition
-    c 0 0 $tealTrans
-  &deletion
-    c 0 0 $redTrans
 .Progress
   c 0 0 $base7
 .github-pr-file span
@@ -45,30 +33,6 @@ ul.comparison-list
       c $faded
   & > li.title
     c $text $base1 $base5
-.branch-
-  &action-state-clean
-    ../action-body::before
-      brc $base5
-  &action-item-icon.completeness-indicator
-    .octicon
-      v $base1
-    &-success
-      c $base1 0 $green
-    &-error
-      c $base1 0 $red
-  &action-state-clean &action-icon
-    c 0 0 $teal
-    .octicon
-      v $base1
-  &infobar
-    c 0 $base1 $base4
-  &action-body
-    b 0
-    c 0 $base1 $base5
-    caret "right"
-    .merge-
-      &branch-form, &message
-        c 0 $base1 $base4
 .merge-
   &branch-description
     c $faded
@@ -96,10 +60,12 @@ ul.comparison-list
         brc $base4
 .composer.composer-responsive .timeline-comment
   caret "right"
+.js-resolvable-timeline-thread-form
+  c 0 0 $base4
 .review-
   &thread-reply
-    c 0 $base1 $base4
+    c 0 $base1 $base3
     .inline-comment-form
-      c 0 0 $base5
+      c 0 0 $base3
   &comment
-    c $text
+    c $text $base1 $base4

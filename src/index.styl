@@ -1,25 +1,39 @@
 @require "common"
 @require "notifications"
+@require "box"
+@require "compare-toc"
+@require "timeline"
+@require "topics"
+@require "buttons"
+@require "subnav"
 @require "syntax"
 @require "calendar"
+@require "tree-finder"
 @require "markdown"
 @require "projects"
+@require "sidenav"
 @require "plugins"
 @require "color-replacements"
 @require "pull-requests"
+@require "repository"
 @require "actions"
 @require "insights"
 @require "explore"
 @require "search"
 @require "release"
+@require "branch-actions"
 @require "billing"
 @require "icons"
 @require "marketplace"
 @require "dropdowns"
+@require "popover"
 @require "issues"
+@require "select-menu"
 @require "tabnav"
+@require "pagehead"
 @require "state"
 @require "diff"
+@require "underline-nav"
 @require "commits"
 @require "dashboard"
 @require "team"
@@ -35,10 +49,10 @@ body
   fn $uiFont, sans-serif
   fs 14px
   lh 1.8
-  &.page-responsive.pagehead
-    c 0 0 $base3
 input
   caret-color $blue
+  &[type="text"]
+    c $cn $base1 $base4
 img
   c 0 0 $base4
 h1
@@ -68,45 +82,12 @@ code, pre, tt
   mono()
 .form-select
   bgi url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23c8d3f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down' %3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E")
-.blob-
-  &code-
-    &inner
-      c $text
-      fs 15px
-      lh 1.8
-      mono()
-      &.highlighted, & .highlighted
-        c 0 0 $base8
-    &addition
-      .blob-code-marker::before
-        c $teal
-      .x
-        c 0 0 $teal
-    &deletion
-      .blob-code-marker::before
-        c $red
-      .x
-        c 0 0 $red
-    &addition, &deletion
-      .x
-        c $base1
-  &num
-    c $base9 $base1 $base4
-    fw 600
-  &expanded
-    &code, &num
-      c 0 $base1 $base4
 .file:target
   s-1()
 .description
   c $text
 img[src*="octocat-spinner-64.gif"]
   inv()
-.form
-  &-control, &-select
-    &.focus, &:focus
-      c $cn $blue 0
-      s none
 .muted-link
   c $faded
   &:hover
@@ -131,168 +112,35 @@ comment-form
     c 0 $base1 $base2
 .branch-name
   c $text $base1 $base8
-.pagination
-  .current, [aria-current]
-    c $cn 0 $base7
-  a, em, span, .disabled, .gap, [aria-disabled=true]
-    &:hover
-      c 0 0 $base8
-    ease background-color
-    c 0 $base1 $base5
-input[type="text"]
-  c $cn $base1 $base4
 div[style*="linear-gradient"]
   bg linear-gradient(to top, $base1, transparent)
 .numbers-summary
   octicon $text
--expander
-  .ellipsis&, .hidden-text& a
-    c $text 0 $base7
-.UnderlineNav
-  c 0 $base1 $base5
-  ease background-color, border-color
-  &[style*="margin-top"]
-    c 0 transparent $base2
-  &-item
-    /.subnav-link.selected, &.selected, &[aria-current], &[aria-selected=true]
-      bbc $blue
-.btn-mktg
-  c $cn $base1 $base2
-.Header
-  bb $b
-  c $text $base1 $base2
-.gh-header
-  background-color unset
-  &-sticky.is-stuck + &-shadow
-    c 0 0 $base4
-  &-meta
-    c $text $base1
 .js-navigation-open
   ease color
-table.files
-  c $text $base1 $base5
-  tr
-    &.navigation-focus, &[aria-selected=true]
-      td
-        c 0 0 $base5
-  td
-    c 0 $base1
-    &.age
-      c $text
-    &.icon
-      c $text
-.TimelineItem
-  &-badge
-    c 0 $base5 $base4
-    ../--condensed &
-      size 30px
-  &-break
-    c 0 $base4 transparent
-  &, .status-meta, .merge-pr-more-commits
-    &:before
-      c 0 0 $base5
-    &-badge, &--condensed &-badge
-      b 2px solid $base5
-      c $base9 $base5 $base4
-    &-body
-      c $faded
-.border,
-.rgh-collaborator
+.border, .rgh-collaborator
   b $b
-.btn
-  &, &&-sm
-    bgi none
-    c $cn $base1 $base5
-    ease background-color, border-color
-    &:disabled
-      &, &:hover
-        c $faded $base1 $base5
-    &:hover
-      bgi none
-      c $cn $blue $base7
 .auth-form-body
   c $text $base1 $base4
 .numbers-summary li
   &> .nolink, &>a
     c $faded
-.topic-tag
-  b $b
-  &-outline
-    s inset 0 0 0 1px $base1
-  &-link:hover
-    c 0 0 $base8
-  c $text $base1 $base4
-  ease background-color
-  &-action
-    &, button, a
-      c $blue $blue $blueTrans
 .access-token
   bbc $base1
 div.listgroup-item
   c $text $base1
-.reponav-item
-  b none
-  &.selected
-    bc $blue $base1 transparent
-  &:focus, &:hover
-    c $blue
-  c $blue
-  .octicon
-    c $indigo
-    filter contrast(0.5)
-    o 0.8
-  &.selected
-    bc $base5 $base1 transparent
-    c $blue 0 $base3
-    .octicon
-      c $text
-      filter none
-      o 1
-.pagehead-tabs-item, .pagehead, .repohead.experiment-repo-nav
-  c 0 $base1 $base4
-  // @stlint-ignore
-  @media (min-width: 768px)
-    c $base4
-.repohead, .repo-list
-  .Label--outline
-    c $text $base1
-.site-header
-  c 0 $base1 $base4
 .showcase-page-pattern::after
   c 0 $base4 $base1
 .write-content.js-write-bucket
   s none
-.form-
-  &group &control
-    c $cn $base1 $base4
-    .search-input
-      caret-color $blue
-    &:focus
-      c 0 0 $base5
-  &control, &select
-    c $cn $base1 $base4
 .flash
   c $cn $base1 $base2
   &-warn
     c $yellow $base1 $base4
-.menu
-  c $text $base1 $base4
-  &, .blankslate
-    c $base4 $base1
-  &-heading
-    c $cn $base1 $base4
-  &-item
-    bb $b
-    ease background-color
-    &:hover
-      c 0 0 $base8
-    &.selected
-      c $blue 0 $base5
 .boxed-group
   &-inner, & .heading, & > h3
     c 0 $base1 $base4
-.rule,
-hr
+.rule, hr
   bb $b
 .file
   c 0 $base1
@@ -305,37 +153,14 @@ hr
   c $text
   &:hover
     c $blue
-div.commit-build-statuses, .link-gray
-  c $faded
-  &:hover
-    c $blue
-  &-dark, body &-dark
-    c $blue
-    &:hover, body &:hover
-      td underline
 .access-form-wrapper
   c 0 $base1 $base4
 .discussion-sidebar-heading
   c $text
-.footer,
-.site-footer
+.footer, .site-footer
   bt $b
 .file-wrap
   c 0 $base1
-.table-list
-  bb $b
-  &-header
-    c 0 $base1 $base4
-    &-toggle .btn-link
-      &:hover, &.selected
-        c $blue
-  &-cell
-    bt $b
-  &-bordered &-cell
-    &:first-child
-      bl $b
-    &:last-child
-      br $b
 .breadcrumb
   c $blue
   &-item-selected, &-item[aria-current]
@@ -346,30 +171,8 @@ div.commit-build-statuses, .link-gray
   c $blue $base1 $base4
 .octofication .message, .overall-summary
   c 0 $base1 $base4
-.btn-link:not(.IssueLabel):not(.tabnav-tab), .subnav-search-context .btn
-  c $blue
-.btn.btn-primary, .js-selected-navigation-item.subnav-item
-  c 0 0 $base5
-.social-count
-  c $blue 0 $base5
-  &:hover
-    c $cn
-.subnav-item
-  c 0 $base1
-  ease border-color, background-color
-  &:focus, &:hover
-    c 0 0 $base7
-  &.selected
-    &, &:focus, &:hover
-      c 0 $base1 $base5
 .input-contrast
   box()
-.btn-octicon
-  c $blue
-  &:hover
-    c $cn
-  &-danger:hover
-    c $red
 .more-repos
   c 0 0 $base4
   s inset 0 1px 0 $base1
@@ -384,36 +187,15 @@ div.commit-build-statuses, .link-gray
       td underline
 .Counter
   c $cn $base1 $blueDark
-*:not(code) .Box
-  c 0 $base1 $base4
-.tag
-  &-info
-    c $blue
-    ../-name
-      c $text
 .note, .help
   c $blue
-.site-subnav.bg-wite
-  c 0 0 $base4
-  s-2()
 .application-main
+  & > main > div.border-bottom.border-gray-light
+    c 0 0 $base2
   .flex-wrap
     c 0 0 transparent
-  & > main
-    & > div.border-bottom.border-gray-light
-      c 0 0 $base2
-    & > .site-subnav + div
-      c 0 0 $base2
-      .text-gray-light
-        c $text
 .contrib-person path
   v $orange
-.menu-item
-  &.selected, &[aria-current]
-    &:before
-      c 0 0 $blue
-  &:hover
-    c 0 0 $base6
 .CheckRun
   c 0 $base1 $base4
   &-header
@@ -423,9 +205,6 @@ div.commit-build-statuses, .link-gray
     c $cn 0 $base8
 .progress-bar
   c 0 0 $base5
-.pinned-item-
-  &list-item &handle
-    c $faded
 .user-status-container-border-busy
   b $b
   c 0 $yellow $yellowTrans
@@ -439,21 +218,6 @@ div.commit-build-statuses, .link-gray
     td underline
   svg
     v $yellow
-.Popover-message
-  c $text $base1 $base3
-  &--bottom-right
-    caret "top" $base4 $base4
-  &--top-right
-    caret "bottom" $base4 $base4
-  &--top-left
-    caret "bottom" $base5
-  &--bottom-left
-    caret "top"
-.UnderlineNav-item
-  &:hover
-    bbc $base8
-  &.selected, &[aria-current], &[role="tab"][aria-selected="true"]
-    bbc $blue
 .gh-header-number
   c $orange
   fw 400
@@ -466,53 +230,12 @@ div.commit-build-statuses, .link-gray
     ease color
 .body > div.d-flex
   px 10px
-.pagination-loader-container
-  bgi none
-  bt $b
-  pt 16px
-  .Box
-    ease border-color
-    & > *
-      ease background-color
-      ../:hover, ../:focus
-        c 0 $blue
-        & > *
-          c 0 0 $base5
-  &, .bg-white
-    c 0 0 $base4
-.ajax-pagination-form .ajax-pagination-btn
-  c $blue
 .blankslate
   c $text $base1 $base5
   code
     c $text $base1 $base2
 .content.p-4.text-center.rounded-1.border.border-gray-light
   c 0 0 $base4
-.Box
-  &--responsive, &row--unread
-    s inset 2px 0 0 $blue
-  &-header
-    c 0 $base1 $base4
-    &--blue
-      c $blue $base1 $base4
-  &-row
-    &:first-of-type
-      bt 0
-    bt $b
-    &--focus-gray.navigation-focus
-      c 0 0 $base7
-    &[style*="background"]
-      c 0 0 $base8
-  &&--condensed &-row
-    c 0 $base1 $base4
-  &-row--
-    &focus-gray
-      c 0 0 $base5
-    &yellow
-      c $text $yellow transparent
-    ../--responsive &unread::before
-      bgi none
-      c 0 0 $blue
 .text
   c $faded
 .border-
@@ -526,31 +249,13 @@ div.commit-build-statuses, .link-gray
     bb $b
 .repository-content > div.bg-white:first-child
   c 0 0 $base2
-.SideNav
-  c $text $base1 $base4
-  &-item
-    c 0 $base1
-    ease background-color, color
-    &[aria-current="page"], &[aria-selected="true"]
-      c 0 0 $base5
-      &::before
-        c 0 0 $blue
-    &:focus, &:hover
-      c 0 0 $base5
-      &::before
-        c 0 0 $base7
-    &:last-child
-      s 0 1px 0 $base1
 section[style*="#fafbfc"]
   c 0 0 $base2
+// New repo
 .reponame-suggestion
   c $green
-#tree-finder-field
-  c 0 0 $base2
 .boxed-group-inner
   c $text
-.tree-browser-result[aria-selected="true"]
-  c 0 0 $base5
 .js-notice
   c 0 0 $base4
 .suggester
@@ -559,7 +264,3 @@ section[style*="#fafbfc"]
     c 0 $base1
     &[aria-selected="true"]
       c 0 0 $base6
-.deployments-timeline
-  bbc $base1
-  &-item
-    blc $base9

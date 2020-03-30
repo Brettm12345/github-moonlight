@@ -8,15 +8,10 @@ code .link-gray
   &-badge.verified
     c $green $green $tealTrans
     fw 500
-#first-time-contributor
-  .Popover-message
-    caret "right"
+#first-time-contributor .Popover-message
+  caret "right"
 .inline-comment-form
   c 0 $base1
-
-.btn.btn-outline
-  &.BtnGroup-item, &.tooltipped.tooltipped-sw
-    c 0 0 $base3
 .commit
   &-author-section
     c $blue
@@ -34,9 +29,8 @@ code .link-gray
       c $blue
   &-sha
     c $yellow $base1 $base5
-  & &-title, &-group-title
-    &, a
-      c $text
+  & &-title, &-group-title, a
+    c $text
   &-tease
     c $blue $base1 $base4
     &-sha
@@ -47,18 +41,20 @@ code .link-gray
 .commits
   blockquote
     c $text
-  &-list-item.navigation-focus
-    c 0 0 $base5
+  &-list-item
+    c 0 0 $base4
+    &.navigation-focus
+      c 0 0 $base5
 .full-commit
   c $blue $base1 $base4
   p.commit-title
     c $blue
   .sha-block
-    & > .sha
-      c $blue
     c $faded
     fs 14px
     fw 500
+    & > .sha
+      c $blue
   .commit-meta
     c 0 $base1 $base5
 .file-commit-form--full
@@ -70,3 +66,14 @@ code .link-gray
   c 0 0 $base5
   /.diff-table tr:not(:last-child) &
     c 0 $base1
+div.commit-build-statuses, .link-gray
+  c $faded
+  &:hover
+    c $blue
+  &-dark, body &-dark
+    c $blue
+    &:hover, body &:hover
+      td underline
+-expander
+  .ellipsis&, .hidden-text& a
+    c $text 0 $base7

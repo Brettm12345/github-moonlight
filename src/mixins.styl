@@ -20,12 +20,12 @@ c($x, $y = 0, $z = 0)
 v($x, $y = 0)
   colorProp "fill" $x
   colorProp "stroke" $y
-caret($direction = "bottom", $popupColor = $base4, $base1Color = $base1)
+caret($direction = "bottom", $bg = $base4, $border = $base1)
     $p = "border-" + $direction + "-color"
     &::before
-      prop $p $base1Color
+      prop $p $border
     &::after
-      prop $p $popupColor
+      prop $p $bg
 bgi($x...)
   prop "background-image" $x
 bg($x...)

@@ -1,0 +1,19 @@
+.TimelineItem
+  &-badge
+    c 0 $base5 $base4
+    ../--condensed &
+      size 30px
+  &-break
+    c 0 $base4 transparent
+  &, .status-meta, .merge-pr-more-commits
+    &:before
+      c 0 0 $base5
+    &-badge, &--condensed &-badge
+      b 2px solid $base5
+      c $base9 $base5 $base4
+    &-body
+      c $faded
+.deployments-timeline
+  bbc $base1
+  &-item
+    blc $base9

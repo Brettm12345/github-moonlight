@@ -1,0 +1,24 @@
+.site-subnav.bg-wite
+  c 0 0 $base4
+  s-2()
+.subnav-
+  &link.selected
+    bbc $blue
+  &item
+    c 0 $base1
+    ease border-color, background-color
+    &:focus, &:hover
+      c 0 0 $base7
+    &.selected
+      &, &:focus, &:hover
+        bbc $blue
+        c 0 $base1 $base5
+.btn
+  &-link:not(.IssueLabel):not(.tabnav-tab), .subnav-search-context &
+    c $blue
+  &&-primary, .js-selected-navigation-item.subnav-item
+    c 0 0 $base5
+.application-main > main > .site-subnav + div
+  c 0 0 $base2
+  .text-gray-light
+    c $text

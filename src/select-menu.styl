@@ -22,12 +22,19 @@
     btc $base1
   &tab
     c $text $base1 $base2
-    &[aria-selected=true]
+    &[aria-selected="true"]
       c $cn $base1 $base4
   &blankslate, &loading, &message
     c $text $base1 $base4
 
 .select-menu-
+  &tabs
+    c 0 $base1
+    ../tab-nav
+    &, a
+      &.selected, &[aria-selected="true"]
+        bc $base1 $base1 $base5
+        c $cn 0 $base5
   &header, &header &title
     c $cn $base1 $base2
   &modal, &item

@@ -1,0 +1,17 @@
+.menu
+  c $text $base1 $base4
+  &, .blankslate
+    c $base4 $base1
+  &-heading
+    c $cn $base1 $base4
+  &-item
+    bb $b
+    ease background-color
+    &:hover
+      c 0 0 $base8
+    &.selected, &[aria-current]
+      c $blue 0 $base5
+      &::before
+        c 0 0 $blue
+      &:hover
+        c 0 0 $base6

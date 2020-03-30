@@ -1,11 +1,9 @@
-.notifications-list-item.notification-unread
-  c 0 $base1 $base4
 .filter-item
   ease background-color
   &, &.selected, &[aria-current], &[aria-selected=true]
+    c $cn 0 $base6
     &:hover
       c 0 0 $base8
-    c $cn 0 $base6
 .notification-
   &navigation.bg-white
     c 0 0 $base2
@@ -15,26 +13,29 @@
     octicon $text
     &:hover
       octicon $blue
-.notifications-list-item
-  & &-actions svg
-    v $text
-  &:hover
-    c 0 0 $base5
-    .notification-list-item-actions .btn
-      ease background-color
-      &:hover
-        c $cn $base1 $base1
-.notifications-dropdown
-  c 0 $base1 $base1
-  .notifications-list
-    mb 0
-  &-arrow
-    c 0 $base4
-  &, &-see-all
-    bt $b
-    c 0 $base1 $base8
+.notifications-
+  &list-item
+    &.notification-unread
+      c 0 $base1 $base4
+    & &-actions svg
+      v $text
+    &:hover
+      c 0 0 $base5
+      .notification-list-item-actions .btn
+        ease background-color
+        &:hover
+          c $cn $base1 $base1
+  &dropdown
+    c 0 $base1 $base1
+    .notifications-list
+      mb 0
+    &-arrow
+      c 0 $base4
+    &, &-see-all
+      bt $b
+      c 0 $base1 $base8
 .thread-subscription-status
-  c $text $base1 $base3
+  c $text $base1 transparent
 .Toast
   b $b
   s-2()
