@@ -1,4 +1,4 @@
-# Created 2020-03-30 Mon 15:46
+# Created 2020-03-30 Mon 16:06
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -15,6 +15,7 @@ made with :heart:
 #+html: <a href="https://discord.gg/PwpA8v"><img src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord&style=flat-square" alt="Discord Server"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/commits/master"><img src="https://img.shields.io/github/commit-activity/m/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Commit Activity"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/stargazers"><img src="https://img.shields.io/github/stars/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Stars"/></a>
+#+html: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
 #+html: </div>
 
 * Features
@@ -49,7 +50,7 @@ These are the fonts used in the screenshots
 | [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]              | Displays notible forks on repo page           |
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github              |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github                  |
-* Screenshots
+* More Screenshots
 #+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
 #+html: <details><summary>Repo</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Repo" width="100%" /></details>
 #+html: <details><summary>Profile</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/profile.png" alt="Profile" width="100%" /></details>

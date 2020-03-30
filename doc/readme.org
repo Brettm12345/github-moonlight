@@ -12,6 +12,7 @@ made with :heart:
 {{{badge(Discord Server,discord.gg/PwpA8v,discord/693723424190627881?label=discord&logo=discord)}}}
 {{{badge(Commit Activity,github.com/Brettm12345/github-moonlight/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
 {{{badge(Stars,github.com/Brettm12345/github-moonlight/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
+#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
 #+HTML: </div>
 
 * Features
@@ -46,7 +47,7 @@ These are the fonts used in the screenshots
 | [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]        | Displays notible forks on repo page           |
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github              |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github                  |
-* Screenshots
+* More Screenshots
 #+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
 {{{screenshot(Repo,repo)}}}
 {{{screenshot(Profile,profile)}}}
