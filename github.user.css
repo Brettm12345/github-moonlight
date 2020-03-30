@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.8.2
+@version      1.8.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -201,6 +201,7 @@
   #commit_search_results .commit,
   .release-timeline-tags .tag-timeline-date::after,
   .branch-infobar,
+  .branch-action-body,
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message,
   .MarketplaceBackground-buffer,
@@ -856,7 +857,6 @@
   .jump-to-field-active,
   .jump-to- .js-navigation-item:hover,
   .jump-to- #jump-to-results:hover,
-  .branch-action-body,
   .signup-plan-card,
   .ScreenshotCarousel-navitem.selected,
   .pinned-issue-item,
@@ -1615,6 +1615,9 @@
     max-height: none;
     min-height: 100%;
   }
+  .topics-row-container {
+    height: auto;
+  }
   .protip  > strong,
   .pl-smw,
   .pl-mi,
@@ -1702,6 +1705,10 @@
   .bg-yellow-light,
   .alert.warning {
     background-color: var(--yellow-trans) !important;
+  }
+  .profile-timeline-year-list.bg-white,
+  .news .Details button:hover {
+    background: transparent !important;
   }
   .discussion-sidebar-item,
   .CodeMirror-linenumber.CodeMirror-gutter-elt,
@@ -2325,9 +2332,6 @@
   .full-commit .sha-block,
   body {
     font-size: 14px !important;
-  }
-  .news .Details button:hover {
-    background: transparent !important;
   }
   .repo-list {
     padding: 0 12px !important;
