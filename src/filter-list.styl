@@ -1,9 +1,10 @@
-.filter-list
-  c 0 0 transparent
-.filter-item
-  c 0 0 transparent
-  ease color, background-color, border-color
-  &:hover, &:focus
-    c 0 0 $base6
-  &.selected, &[aria-current], &[aria-selected=true]
-    c $cn 0 $base5
+.filter-
+  &list
+    c 0 0 transparent
+    ~/item
+      c 0 0 transparent
+      ease color, background-color, border-color
+      &:hover, &:focus
+        c 0 0 $base6
+      &.selected, &[aria-current], &[aria-selected=true]
+        c $cn 0 $base5
