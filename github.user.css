@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.6.0
+@version      1.6.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -147,9 +147,6 @@
   .bg-blue-light,
   .comment-reactions.has-reactions,
   .range-editor,
-  .SelectMenu-blankslate,
-  .SelectMenu-loading,
-  .SelectMenu-message,
   ul.comparison-list,
   ul.comparison-list > li,
   .branch-infobar,
@@ -175,6 +172,7 @@
   .MarketplacePlan--sticky div.bg-white,
   .ScreenshotCarousel,
   .dropdown-menu,
+  .file-diff-split .empty-cell,
   .commit-desc pre,
   .commit-tease,
   .full-commit,
@@ -194,17 +192,7 @@
   .blob-num,
   .blob-expandedcode,
   .blob-expandednum,
-  .file-diff-split .empty-cell,
-  .previewable-comment-form .comment-form-head.tabnav,
-  .select-menu-modal,
-  .select-menu-item,
-  .select-menu-divider,
-  .select-menu-no-results,
   input[type="text"],
-  .SelectMenu-item,
-  .SelectMenu-modal,
-  .SelectMenu-footer,
-  .SelectMenu-tab[aria-selected=true],
   .gh-header-sticky.is-stuck + .gh-header-shadow,
   .TimelineItem-badge,
   .TimelineItem .status-meta-badge,
@@ -362,9 +350,6 @@
   .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tab-nav a.selected,
   .select-menu-tab-nav a[aria-selected="true"],
-  .SelectMenu-blankslate,
-  .SelectMenu-loading,
-  .SelectMenu-message,
   ul.comparison-list,
   ul.comparison-list > li,
   ul.comparison-list > li.title,
@@ -411,6 +396,18 @@
   .dropdown-divider,
   .dropdown-menu,
   .pinned-issue-item,
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
+  .tabnav--responsive .tabnav-tab,
+  .tabnav-tab,
+  .tabnav--responsive .tabnav-tab[aria-current],
+  .tabnav-tab[aria-current],
+  .tabnav--responsive .tabnav-tab[aria-selected=true],
+  .tabnav-tab[aria-selected=true],
+  .tabnav--responsive .tabnav-tab.selected,
+  .tabnav-tab.selected,
+  .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav-tab.selected.js-blob-edit-preview,
+  .file-diff-split .empty-cell,
   .inline-comment-form,
   .commit-ref,
   .commit-sha,
@@ -436,32 +433,11 @@
   .blob-num,
   .blob-expandedcode,
   .blob-expandednum,
-  .file-diff-split .empty-cell,
   .Label--gray,
   .Label--outline,
   .AvatarStack-body,
   .AvatarStack-body .avatar,
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
-  .tabnav--responsive .tabnav-tab,
-  .tabnav-tab,
-  .tabnav--responsive .tabnav-tab[aria-current],
-  .tabnav-tab[aria-current],
-  .tabnav--responsive .tabnav-tab[aria-selected=true],
-  .tabnav-tab[aria-selected=true],
-  .tabnav--responsive .tabnav-tab.selected,
-  .tabnav-tab.selected,
-  .tabnav-tab.selected.js-blob-edit-code,
-  .tabnav-tab.selected.js-blob-edit-preview,
   .branch-name,
-  .select-menu-header,
-  .select-menu-header .select-menu-title,
-  .select-menu-modal,
-  .select-menu-item,
-  .select-menu-divider,
-  .select-menu-filters,
-  .select-menu-no-results,
-  .select-menu-text-filter:first-child,
-  .select-menu-text-filter:last-child,
   .pagination a,
   .pagination em,
   .pagination span,
@@ -469,13 +445,6 @@
   .pagination .gap,
   .pagination [aria-disabled=true],
   input[type="text"],
-  .SelectMenu-item,
-  .SelectMenu-divider,
-  .SelectMenu-list,
-  .SelectMenu-modal,
-  .SelectMenu-footer,
-  .SelectMenu-tab,
-  .SelectMenu-tab[aria-selected=true],
   .btn-mktg,
   .Header,
   .gh-header-meta,
@@ -629,16 +598,15 @@
   .octicon-mute,
   .octicon-repo,
   .octicon-rocket,
+  .tabnav-extra,
+  .tabnav-tab,
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
+  .tabnav--responsive .tabnav-tab,
   .full-commit .sha-block,
   .discussion-sidebar-item,
   .pinned-item-name,
   .hook-delivery-time,
   .muted-link,
-  .tabnav-extra,
-  .tabnav-tab,
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
-  .tabnav--responsive .tabnav-tab,
-  .select-menu-no-results,
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body,
@@ -661,7 +629,6 @@
   }
   .filter-item,
   .notifications-list-item:hover .notification-list-item-actions .btn,
-  .SelectMenu-item,
   .summary-stats li,
   .summary-stats li > .num,
   .summary-stats li > a,
@@ -762,12 +729,9 @@
   .form-control:focus,
   .form-select:focus,
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
-  .select-menu-header,
-  .select-menu-header .select-menu-title,
   .pagination .current,
   .pagination [aria-current],
   input[type="text"],
-  .SelectMenu-tab[aria-selected=true],
   .btn-mktg,
   .btn,
   .btn.btn-sm,
@@ -812,9 +776,12 @@
   .pr-toolbar,
   .gitako-ready .js-header-wrapper,
   .bg-gray-dark,
-  .tabnav-pr .tabnav-tab.selected,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .search_repos fieldset,
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
+  .tabnav-pr .tabnav-tab.selected,
+  .tabnav-tab.selected,
+  .diffbar,
   .signed-commit-header,
   .commit-ref,
   .file-commit-form--full,
@@ -832,20 +799,13 @@
   .Label--gray,
   .AvatarStack-body,
   .AvatarStack-body .avatar,
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
-  .tabnav-tab.selected,
-  .select-menu-header,
-  .select-menu-header .select-menu-title,
   .UnderlineNav[style*="margin-top"],
-  .SelectMenu-divider,
-  .SelectMenu-tab,
   .btn-mktg,
   .Header,
   .reponav-item.selected,
   .flash,
   .application-main > main > div.border-bottom.border-gray-light,
   .application-main > main > .site-subnav + div,
-  .diffbar,
   .blankslate code,
   .repository-content > div.bg-white:first-child,
   section[style*="#fafbfc"],
@@ -895,7 +855,6 @@
   .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tab-nav a.selected,
   .select-menu-tab-nav a[aria-selected="true"],
-  .SelectMenu-item:hover,
   ul.comparison-list > li.title,
   .branch-action-body,
   .timeline-comment,
@@ -923,6 +882,14 @@
   .signup-plan-card,
   .ScreenshotCarousel-navitem.selected,
   .pinned-issue-item,
+  .tabnav--responsive .tabnav-tab[aria-current],
+  .tabnav-tab[aria-current],
+  .tabnav--responsive .tabnav-tab[aria-selected=true],
+  .tabnav-tab[aria-selected=true],
+  .tabnav--responsive .tabnav-tab.selected,
+  .tabnav-tab.selected,
+  .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav-tab.selected.js-blob-edit-preview,
   .commits-listing:before,
   .commit-sha,
   .commits-list-item.navigation-focus,
@@ -938,14 +905,6 @@
   .dashboard-notice,
   .team-left-column[aria-label="Explore"] > div:hover,
   .team-left-column[aria-label="Explore"] > div:focus,
-  .tabnav--responsive .tabnav-tab[aria-current],
-  .tabnav-tab[aria-current],
-  .tabnav--responsive .tabnav-tab[aria-selected=true],
-  .tabnav-tab[aria-selected=true],
-  .tabnav--responsive .tabnav-tab.selected,
-  .tabnav-tab.selected,
-  .tabnav-tab.selected.js-blob-edit-code,
-  .tabnav-tab.selected.js-blob-edit-preview,
   .pagination a,
   .pagination em,
   .pagination span,
@@ -982,8 +941,8 @@
   .pagination-loader-container .Box:focus > *,
   .blankslate,
   .Box-row--focus-gray,
-  .SideNav-item[aria-current='page'],
-  .SideNav-item[aria-selected='true'],
+  .SideNav-item[aria-current="page"],
+  .SideNav-item[aria-selected="true"],
   .SideNav-item:focus,
   .SideNav-item:hover,
   .tree-browser-result[aria-selected="true"],
@@ -1009,7 +968,7 @@
   p code,
   pre,
   .status-day::before,
-  .incident-list::before,
+  .status-day .incident-list::before,
   .incident-container .incident-title::before {
     background-color: var(--base-5) !important;
   }
@@ -1062,9 +1021,6 @@
   .text-gray,
   .text-gray-dark,
   .compare-pr-placeholder p,
-  .SelectMenu-blankslate,
-  .SelectMenu-loading,
-  .SelectMenu-message,
   ul.comparison-list > li,
   ul.comparison-list > li.title,
   .timeline-comment,
@@ -1091,6 +1047,13 @@
   .marketplace-plan-emphasis,
   .dropdown-menu,
   .dropdown-item,
+  .tabnav--responsive .tabnav-tab[aria-current],
+  .tabnav-tab[aria-current],
+  .tabnav--responsive .tabnav-tab[aria-selected=true],
+  .tabnav-tab[aria-selected=true],
+  .tabnav--responsive .tabnav-tab.selected,
+  .tabnav-tab.selected,
+  .diffstat-summary,
   .commit-desc pre,
   .commit-group-title .octicon-git-commit,
   .commit-ref,
@@ -1110,27 +1073,11 @@
   kbd,
   .blob-code-inner,
   .description,
-  .diffstat-summary,
   .Label--gray,
   .Label--outline,
-  .tabnav--responsive .tabnav-tab[aria-current],
-  .tabnav-tab[aria-current],
-  .tabnav--responsive .tabnav-tab[aria-selected=true],
-  .tabnav-tab[aria-selected=true],
-  .tabnav--responsive .tabnav-tab.selected,
-  .tabnav-tab.selected,
   .branch-name,
-  .select-menu-modal,
-  .select-menu-item,
-  .select-menu-divider,
-  .select-menu-filters,
   .ellipsis-expander,
   .hidden-text-expander a,
-  .SelectMenu-item,
-  .SelectMenu-divider,
-  .SelectMenu-footer,
-  .SelectMenu-tab,
-  .TableObject-item--primary,
   .Header,
   .gh-header-meta,
   table.files,
@@ -1228,7 +1175,6 @@
     border: 1px solid var(--base-1) !important;
   }
   .Toast,
-  .select-menu-modal,
   .site-subnav.bg-wite {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
   }
@@ -1261,8 +1207,8 @@
     background-color: var(--teal) !important;
   }
   .Toast-dismissButton {
-    min-height: 100%;
     max-height: none;
+    min-height: 100%;
   }
   .Toast-dismissButton,
   .pl-bu,
@@ -1273,6 +1219,7 @@
   .octicon-trashcan,
   .octicon-issue-closed,
   .State--red,
+  .blob-code-deletion .blob-code-marker::before,
   .btn-octicon-danger:hover,
   code .na {
     color: var(--red) !important;
@@ -1320,7 +1267,6 @@
   .octicon.open,
   .signed-commit-verified-label,
   .signed-commit-badge.verified,
-  .SelectMenu-icon--check,
   .pl-s > a,
   .reponame-suggestion,
   .cm-string,
@@ -1349,12 +1295,16 @@
   .gitako-toggle-show-button-wrapper.collapsed .action-icon,
   .gitako-side-bar .gitako-side-bar-body .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:focus,
+  .hide-files-btn:hover,
   .text-blue,
   .text-emphasized,
   .octicon-file-directory,
   .octicon-saved,
   .octicon-project,
   .octicon-eye,
+  .tabnav-tab.selected,
+  .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav-tab.selected.js-blob-edit-preview,
   .commit-author-section,
   .commit-ref .user,
   .commit-tease,
@@ -1365,9 +1315,6 @@
   .orghead .org-name,
   .orghead .pagehead-tabs-item.selected,
   .muted-link:hover,
-  .tabnav-tab.selected,
-  .tabnav-tab.selected.js-blob-edit-code,
-  .tabnav-tab.selected.js-blob-edit-preview,
   .topic-tag-action,
   .topic-tag-action button,
   .topic-tag-action a,
@@ -1384,8 +1331,8 @@
   .link-gray-dark,
   body div.commit-build-statuses-dark,
   body .link-gray-dark,
-  .table-list-header-toggle .btn-link.selected:hover,
   .table-list-header-toggle .btn-link:hover,
+  .table-list-header-toggle .btn-link.selected,
   .breadcrumb,
   .breadcrumb-item-selected,
   .breadcrumb-item[aria-current],
@@ -1487,14 +1434,15 @@
   .octicon-repo-forked,
   .octicon-issue-opened,
   .State--green,
+  .blob-code-addition .blob-code-marker::before,
   .cm-property,
   .command-line span.output {
     color: var(--teal) !important;
   }
   .pl-mi1,
   .blob-code-addition,
-  .signed-commit-badge.verified,
   .State--green,
+  .signed-commit-badge.verified,
   .alert.tip {
     background-color: var(--teal-trans) !important;
   }
@@ -1652,8 +1600,8 @@
   .markdown-body h4 .octicon-link,
   .markdown-body h5 .octicon-link,
   .markdown-body h6 .octicon-link {
-    transform: scale(1.1);
     visibility: visible;
+    transform: scale(1.1);
   }
   .markdown-body h1 .octicon-link,
   .markdown-body h2 .octicon-link,
@@ -1733,7 +1681,6 @@
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
   .user-list-item+.user-list-item,
   .issue-list-item+.issue-list-item,
-  .SelectMenu-filter,
   .news .Details-content--hidden li,
   .news .Details button,
   .graphiql-ide {
@@ -1846,8 +1793,8 @@
     border-radius: 8px !important;
   }
   .filter-bar,
-  .boxed-group-list > li,
   .tabnav,
+  .boxed-group-list > li,
   .Header,
   .menu-item,
   .rule,
@@ -1906,8 +1853,8 @@
     margin-bottom: 0.1em !important;
   }
   .octicon[style*="#6a737d"],
-  .vcard-username,
-  .diffstat {
+  .diffstat,
+  .vcard-username {
     color: var(--text-gray) !important;
   }
   .MarketplaceBackground-reccomendations img {
@@ -1924,8 +1871,8 @@
   .menu-item.selected:before,
   .menu-item[aria-current]:before,
   .Box--responsive .Box-row--unread::before,
-  .SideNav-item[aria-current='page']::before,
-  .SideNav-item[aria-selected='true']::before {
+  .SideNav-item[aria-current="page"]::before,
+  .SideNav-item[aria-selected="true"]::before {
     background-color: var(--blue) !important;
   }
   .ScreenshotCarousel,
@@ -1957,20 +1904,19 @@
     border-top-color: var(--base-5) !important;
   }
   .dropdown-menu:after,
-  .SelectMenu-header,
   .access-token,
   .deployments-timeline,
   #uptime-tooltip .pointer-container .pointer-larger {
     border-bottom-color: var(--base-1) !important;
+  }
+  .reaction-sort-item {
+    border-color: var(--base-2) !important;
   }
   .reaction-sort-item,
   .UnderlineNav,
   .btn,
   .btn.btn-sm {
     transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-  }
-  .reaction-sort-item {
-    border-color: var(--base-2) !important;
   }
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
@@ -1990,8 +1936,7 @@
   .btn.btn-outline.tooltipped.tooltipped-sw,
   body,
   body.page-responsive.pagehead,
-  .select-menu-filters,
-  .SelectMenu-list,
+  .previewable-comment-form .comment-form-head.tabnav,
   .Popover-message,
   .suggester {
     background-color: var(--base-3) !important;
@@ -2007,11 +1952,46 @@
   }
   .email-quoted-reply,
   .email-signature-reply {
-    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
   }
   .email-quoted-reply,
   .email-signature-reply {
-    border-bottom-right-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+  }
+  .tabnav {
+    margin-bottom: 0px !important;
+  }
+  .container-preview .tabnav-tabs {
+    margin-left: 5% !important;
+  }
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab {
+    margin-top: 8px !important;
+  }
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab {
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+  }
+  .State--green {
+    border: 1px solid var(--teal) !important;
+  }
+  .State--green,
+  .alert.tip {
+    border-color: var(--teal) !important;
+  }
+  .State--purple {
+    border: 1px solid var(--purple) !important;
+  }
+  .State--purple .octicon {
+    fill: var(--purple) !important;
+  }
+  .State--red {
+    border: 1px solid var(--red) !important;
+  }
+  .State--red {
+    border-color: var(--red) !important;
+  }
+  .diffstat-block-neutral {
+    background-color: var(--sb) !important;
   }
   .signed-commit-header,
   .signed-commit-badge.verified {
@@ -2168,55 +2148,17 @@
   .blob-code-inner {
     font-size: 15px !important;
   }
-  .State--green {
-    border: 1px solid var(--teal) !important;
-  }
-  .State--green,
-  .alert.tip {
-    border-color: var(--teal) !important;
-  }
-  .State--purple {
-    border: 1px solid var(--purple) !important;
-  }
-  .State--purple .octicon {
-    fill: var(--purple) !important;
-  }
-  .State--red {
-    border: 1px solid var(--red) !important;
-  }
-  .State--red {
-    border-color: var(--red) !important;
-  }
   img[src*="octocat-spinner-64.gif"] {
     filter: invert(1);
   }
-  .diffstat-block-neutral {
-    background-color: var(--sb) !important;
-  }
   path[fill="#eee"] {
     fill: var(--base-7) !important;
-  }
-  .tabnav {
-    margin-bottom: 0px !important;
-  }
-  .container-preview .tabnav-tabs {
-    margin-left: 5% !important;
-  }
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab {
-    margin-top: 8px !important;
-  }
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab {
-    border-top-left-radius: 6px !important;
-    border-top-right-radius: 6px !important;
   }
   div[style*="linear-gradient"] {
     background: linear-gradient(to top, var(--base-1), transparent) !important;
   }
   .UnderlineNav[style*="margin-top"] {
     border-color: transparent !important;
-  }
-  .SelectMenu-footer kbd {
-    font-size: unset !important;
   }
   .gh-header {
     background-color: unset;

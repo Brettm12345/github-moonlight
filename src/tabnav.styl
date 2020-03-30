@@ -1,0 +1,24 @@
+.tabnav
+  bb $b
+  mb 0px
+  /.container-preview &-tabs
+    ml 5%
+  &-extra, &-tab
+    c $faded
+  &-tabs.js-file-editor-nav &-tab
+    c $faded $base1 $base2
+    mt 8px
+    rt 6px
+  &--responsive &-tab, &-tab
+    c $faded $base1
+    &[aria-current], &[aria-selected=true], &.selected
+      c $text $base1 $base5
+  &-pr &-tab.selected
+    c 0 0 $base2
+  &-pr, div
+    ../-tab
+      &.selected
+        &.js-blob-edit-
+          &code, &preview
+            c $blue $base1 $base5
+        c $blue $base1 $base2

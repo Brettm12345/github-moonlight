@@ -17,6 +17,9 @@
 @require "marketplace"
 @require "dropdowns"
 @require "issues"
+@require "tabnav"
+@require "state"
+@require "diff"
 @require "commits"
 @require "dashboard"
 @require "team"
@@ -51,10 +54,7 @@ ol, ul
 legend
   fs 0.9em
   fw 600
-input,
-select,
-button,
-textara
+input, select, button, textara
   &:disabled
     cursor not-allowed
     o 0.5
@@ -69,13 +69,27 @@ code, pre, tt
 .form-select
   bgi url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23c8d3f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down' %3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E")
 .blob-
-  &code-inner
-    c $text
-    fs 15px
-    lh 1.8
-    mono()
-    &.highlighted, & .highlighted
-      c 0 0 $base8
+  &code-
+    &inner
+      c $text
+      fs 15px
+      lh 1.8
+      mono()
+      &.highlighted, & .highlighted
+        c 0 0 $base8
+    &addition
+      .blob-code-marker::before
+        c $teal
+      .x
+        c 0 0 $teal
+    &deletion
+      .blob-code-marker::before
+        c $red
+      .x
+        c 0 0 $red
+    &addition, &deletion
+      .x
+        c $base1
   &num
     c $base9 $base1 $base4
     fw 600
@@ -86,22 +100,6 @@ code, pre, tt
   s-1()
 .description
   c $text
-.State--
-  &green
-    b 1px solid $teal
-    c $teal $teal $tealTrans
-    .octicon
-      v $teal
-  &purple
-    b 1px solid $purple
-    c $purple $purple $purpleTrans
-    .octicon
-      v $purple
-  &red
-    b 1px solid $red
-    c $red $red $redTrans
-    .octicon
-      v $red
 img[src*="octocat-spinner-64.gif"]
   inv()
 .form
@@ -115,31 +113,8 @@ img[src*="octocat-spinner-64.gif"]
     c $blue
 .js-recent-activity-container > div > div
   c 0 0 $base2
-.diffstat
-  c $textGray
-  &-block-
-    &neutral
-      c 0 0 $sb
-    &added
-      c 0 0 $green
-    &deleted
-      c 0 0 $red
-  &-summary
-    c $text
-    strong
-      c $purple
 path[fill="#eee"]
   v $base7
-.file-diff-split .empty-cell
-  c 0 $base1 $base4
-.blob-code-
-  &addition .x
-    c 0 0 $teal
-  &deletion .x
-    c 0 0 $red
-  &addition, &deletion
-    .x
-      c $base1
 .Label--
   &gray
     c $text $base1 $base2
@@ -150,50 +125,12 @@ path[fill="#eee"]
 comment-form
   .previewable-& .&-head.tabnav
     b 0
-    c 0 0 $base4
+    c 0 0 $base3
 .AvatarStack-body
   &, & .avatar
     c 0 $base1 $base2
-.tabnav
-  bb $b
-  mb 0px
-  /.container-preview &-tabs
-    ml 5%
-  &-extra, &-tab
-    c $faded
-  &-tabs.js-file-editor-nav &-tab
-    c $faded $base1 $base2
-    mt 8px
-    rt 6px
-  &--responsive &-tab, &-tab
-    c $faded $base1
-    &[aria-current], &[aria-selected=true], &.selected
-      c $text $base1 $base5
-  .&-pr, div
-    ../-tab
-      &.selected
-        &.js-blob-edit-
-          &code, &preview
-            c $blue $base1 $base5
-        c $blue $base1 $base2
 .branch-name
   c $text $base1 $base8
-.select-menu-
-  &header, &header &title
-    c $cn $base1 $base2
-  &modal, &item
-    c $text $base1 $base4
-  &divider
-    c $text $base1 $base4
-  &filters
-    c $text $base1 $base3
-  &no-results
-    c $faded $base1 $base4
-  &text-filter
-    &:first-child, &:last-child
-      c 0 $base1
-  &modal
-    s-2()
 .pagination
   .current, [aria-current]
     c $cn 0 $base7
@@ -219,31 +156,6 @@ div[style*="linear-gradient"]
   &-item
     /.subnav-link.selected, &.selected, &[aria-current], &[aria-selected=true]
       bbc $blue
-.SelectMenu-
-  &item
-    c $text $base1
-  &icon--check
-    c $green
-  &divider
-    c $text $base1 $base2
-  &list
-    c 0 $base1 $base3
-  &item, &modal
-    c 0 $base1 $base4
-  &header
-    bbc $base1
-  &footer
-    c $text $base1 $base4
-    kbd
-      fs unset
-  &filter
-    btc $base1
-  &tab
-    c $text $base1 $base2
-    &[aria-selected=true]
-      c $cn $base1 $base4
-.TableObject-item--primary
-  c $text
 .btn-mktg
   c $cn $base1 $base2
 .Header
@@ -290,8 +202,8 @@ table.files
 .btn
   &, &&-sm
     bgi none
-    ease background-color, border-color
     c $cn $base1 $base5
+    ease background-color, border-color
     &:disabled
       &, &:hover
         c $faded $base1 $base5
@@ -336,15 +248,12 @@ div.listgroup-item
       c $text
       filter none
       o 1
-.pagehead-tabs-item,
-.pagehead,
-.repohead.experiment-repo-nav
+.pagehead-tabs-item, .pagehead, .repohead.experiment-repo-nav
   c 0 $base1 $base4
   // @stlint-ignore
   @media (min-width: 768px)
     c $base4
-.repohead,
-.repo-list
+.repohead, .repo-list
   .Label--outline
     c $text $base1
 .site-header
@@ -396,8 +305,7 @@ hr
   c $text
   &:hover
     c $blue
-div.commit-build-statuses,
-.link-gray
+div.commit-build-statuses, .link-gray
   c $faded
   &:hover
     c $blue
@@ -409,9 +317,6 @@ div.commit-build-statuses,
   c 0 $base1 $base4
 .discussion-sidebar-heading
   c $text
-.table-list-header-toggle .btn-link.selected
-  &:hover
-    c $blue
 .footer,
 .site-footer
   bt $b
@@ -421,8 +326,9 @@ div.commit-build-statuses,
   bb $b
   &-header
     c 0 $base1 $base4
-    &-toggle .btn-link:hover
-      c $blue
+    &-toggle .btn-link
+      &:hover, &.selected
+        c $blue
   &-cell
     bt $b
   &-bordered &-cell
@@ -438,8 +344,7 @@ div.commit-build-statuses,
     c $cn
 .drag-and-drop
   c $blue $base1 $base4
-.octofication .message,
-.overall-summary
+.octofication .message, .overall-summary
   c 0 $base1 $base4
 .btn-link:not(.IssueLabel):not(.tabnav-tab), .subnav-search-context .btn
   c $blue
@@ -516,8 +421,6 @@ div.commit-build-statuses,
 .checks-list-item
   &.selected &-name
     c $cn 0 $base8
-.diffbar
-  c 0 0 $base2
 .progress-bar
   c 0 0 $base5
 .pinned-item-
@@ -539,7 +442,7 @@ div.commit-build-statuses,
 .Popover-message
   c $text $base1 $base3
   &--bottom-right
-    caret 'top' $base4 $base4
+    caret "top" $base4 $base4
   &--top-right
     caret "bottom" $base4 $base4
   &--top-left
@@ -628,7 +531,7 @@ div.commit-build-statuses,
   &-item
     c 0 $base1
     ease background-color, color
-    &[aria-current='page'], &[aria-selected='true']
+    &[aria-current="page"], &[aria-selected="true"]
       c 0 0 $base5
       &::before
         c 0 0 $blue

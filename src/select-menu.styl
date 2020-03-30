@@ -1,0 +1,45 @@
+.SelectMenu-
+  &item
+    c $text $base1
+    ease background-color
+    &:hover
+      c 0 0 $base5
+  &icon--check
+    c $green
+  &divider
+    c $text $base1 $base2
+  &list
+    c 0 $base1 $base3
+  &item, &modal
+    c 0 $base1 $base4
+  &header
+    bbc $base1
+  &footer
+    c $text $base1 $base4
+    kbd
+      fs unset
+  &filter
+    btc $base1
+  &tab
+    c $text $base1 $base2
+    &[aria-selected=true]
+      c $cn $base1 $base4
+  &blankslate, &loading, &message
+    c $text $base1 $base4
+
+.select-menu-
+  &header, &header &title
+    c $cn $base1 $base2
+  &modal, &item
+    c $text $base1 $base4
+  &divider
+    c $text $base1 $base4
+  &filters
+    c $text $base1 $base3
+  &no-results
+    c $faded $base1 $base4
+  &text-filter
+    &:first-child, &:last-child
+      c 0 $base1
+  &modal
+    s-2()

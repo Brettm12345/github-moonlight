@@ -1,0 +1,10 @@
+state($sel, $color, $background)
+  .State--{$sel}
+    b 1px solid $color
+    c $color $color $background
+    .octicon
+      v $color
+
+state('green', $teal, $tealTrans)
+state('purple', $purple, $purpleTrans)
+state('red', $red, $redTrans)
