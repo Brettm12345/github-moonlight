@@ -1,0 +1,15 @@
+.Toast
+  b $b
+  s-2()
+  &--error &-icon
+    c 0 0 $red
+  &--warning &-icon
+    c $base2 0 $yellow
+  &--success &-icon
+    c $base2 0 $teal
+  &, &-content
+    c $text $base1 $base4
+  &-dismissButton
+    c $red $base1 $base2
+    max-height none
+    min-height 100%
