@@ -1,6 +1,18 @@
 .ajax-pagination-
   &form &btn
     c 0 $base1 $base4
+.pagination
+  a
+    c $text $base1 $base4
+    ease background-color, color
+    &:hover
+      c $blue 0 $base5
+  .current, [aria-current]
+    &, &:hover
+      c $text $base1 $blueDark
+  .disabled, .gap, [aria-disabled=true]
+    &, &:hover
+      c $faded $base1 $base4
 .more-repos
   c 0 0 $base4
   s inset 0 1px 0 $base1

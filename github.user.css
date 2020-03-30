@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.7.6
+@version      1.7.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -149,6 +149,13 @@
   .review-comment,
   .blankslate,
   .ajax-pagination-form .ajax-pagination-btn,
+  .pagination a,
+  .pagination .disabled,
+  .pagination .gap,
+  .pagination [aria-disabled=true],
+  .pagination .disabled:hover,
+  .pagination .gap:hover,
+  .pagination [aria-disabled=true]:hover,
   .more-repos,
   .menu,
   .menu-heading,
@@ -299,6 +306,7 @@
   .reaction-summary-item,
   .jump-to-suggestions-results-container .navigation-item,
   .Box-footer,
+  .oauth-border,
   .graphs.axis,
   .blob-expanded + tr:not(.blob-expanded) .blob-code,
   .blob-expanded + tr:not(.blob-expanded) .blob-num,
@@ -366,6 +374,17 @@
   .blankslate code,
   .protip  > code,
   .ajax-pagination-form .ajax-pagination-btn,
+  .pagination a,
+  .pagination .current,
+  .pagination [aria-current],
+  .pagination .current:hover,
+  .pagination [aria-current]:hover,
+  .pagination .disabled,
+  .pagination .gap,
+  .pagination [aria-disabled=true],
+  .pagination .disabled:hover,
+  .pagination .gap:hover,
+  .pagination [aria-disabled=true]:hover,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .user-profile-sticky-bar:after,
   .js-profile-editable-edit-button,
@@ -635,6 +654,12 @@
   .btn.btn-sm:disabled,
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
+  .pagination .disabled,
+  .pagination .gap,
+  .pagination [aria-disabled=true],
+  .pagination .disabled:hover,
+  .pagination .gap:hover,
+  .pagination [aria-disabled=true]:hover,
   .pinned-item-list-item .pinned-item-handle,
   .pinned-item-name,
   .discussion-sidebar-item,
@@ -715,6 +740,11 @@
   .blankslate,
   .blankslate code,
   .protip  > code,
+  .pagination a,
+  .pagination .current,
+  .pagination [aria-current],
+  .pagination .current:hover,
+  .pagination [aria-current]:hover,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .discussion-item-icon,
   .discussion-sidebar-heading,
@@ -989,6 +1019,7 @@
   .comment-reactions .user-has-reacted,
   .timeline-comment,
   .protip  > code,
+  .pagination a:hover,
   .js-profile-editable-edit-button,
   .js-user-status-container,
   .profile-timeline.discussion-timeline:before,
@@ -1166,6 +1197,11 @@
   .AvatarStack-body,
   .AvatarStack-body .avatar,
   .blankslate code,
+  .CircleBadge[style*="#ffffff"],
+  .CircleBadge[style*="#fff"],
+  .CircleBadge[style*="#FFFFFF"],
+  .CircleBadge[style*="#FFF"],
+  .CircleBadge[style*="#EFF9F9"],
   .user-profile-sticky-bar:after,
   .profile-timeline-rollup-content li.d-block.mt-1.py-1,
   .profile-timeline-month-heading.bg-white,
@@ -1355,6 +1391,7 @@
   .breadcrumb,
   .breadcrumb-item-selected,
   .breadcrumb-item[aria-current],
+  .pagination a:hover,
   .menu-item.selected,
   .menu-item[aria-current],
   .btn-link:not(.IssueLabel):not(.tabnav-tab),
@@ -1609,6 +1646,19 @@
   .starred .octicon-star,
   rect[fill="#c0aa12"] {
     fill: var(--yellow) !important;
+  }
+  .pagination a,
+  .SideNav-item,
+  .summary-stats li a,
+  .dropdown-item {
+    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .pagination .current,
+  .pagination [aria-current],
+  .pagination .current:hover,
+  .pagination [aria-current]:hover,
+  .Counter {
+    background-color: var(--blue-dark) !important;
   }
   .more-repos,
   .ScreenshotCarousel-nav {
@@ -1950,11 +2000,6 @@
   }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
-  }
-  .SideNav-item,
-  .summary-stats li a,
-  .dropdown-item {
-    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 var(--base-1) !important;
@@ -2391,9 +2436,6 @@
   }
   div[style*="linear-gradient"] {
     background: linear-gradient(to top, var(--base-1), transparent) !important;
-  }
-  .Counter {
-    background-color: var(--blue-dark) !important;
   }
   .contrib-person path,
   rect[fill="#e25d10"] {
