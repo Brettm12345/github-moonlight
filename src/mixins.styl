@@ -2,6 +2,12 @@ $i = !important
 prop($p, $x...)
   +cache("x", $x, "p", $p)
     {$p} $x $i
+map-record($rec = {}, $prefix = '', $prop)
+  {$prefix}
+    for $k, $v in $rec
+      &{$k}
+        +cache("x", $v, "p", $prop)
+          {$prop} $v $i
 colorProp($p, $x)
   if ($x is a "call" || $x is a "rgba" || $x == none)
     prop $p $x
@@ -30,6 +36,8 @@ bgi($x...)
   prop "background-image" $x
 bg($x...)
   prop "background" $x
+bgc($x...)
+  prop "background-color" $x
 b($x...)
   prop "border" $x
 bc($x)

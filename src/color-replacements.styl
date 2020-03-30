@@ -1,3 +1,18 @@
+$textColors = {
+  gray-light: $textAlt
+  blue: $blue
+  gray: $text
+  gray-dark: $text
+  emphasized: $blue
+  green: $green
+  purple: $purple
+  red: $red
+}
+map-record($textColors, '.text-', color)
+$borderColors = {
+  blue-light: $blue
+}
+map-record($borderColors, '.border-', border-color)
 $bgColors = {
   gray: $base4
   gray-light: $base4
@@ -11,28 +26,4 @@ $bgColors = {
   white: $base5
   pending: $purple
 }
-$borderColors = {
-  blue-light: $blue
-}
-$textColors = {
-  gray-light: $textAlt
-  blue: $blue
-  gray: $text
-  gray-dark: $text
-  emphasized: $blue
-  green: $green
-  purple: $purple
-  red: $red
-}
-.text-
-  for $k, $v in $textColors
-    &{$k}
-      c $v
-.border-
-  for $k, $v in $borderColors
-    &{$k}
-      c 0 $v
-.bg-
-  for $k, $v in $bgColors
-    &{$k}
-      c 0 0 $v
+map-record($bgColors, '.bg-', background-color)

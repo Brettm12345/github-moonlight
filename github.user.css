@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.9.1
+@version      1.9.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -180,9 +180,6 @@
   .gitako-side-bar .gitako-side-bar-body .meta-bar,
   .gitako-side-bar-content .meta-bar,
   .dashboard .js-all-activity-header + div,
-  .bg-gray,
-  .bg-gray-light,
-  .bg-blue-light,
   .range-editor,
   ul.comparison-list,
   ul.comparison-list > li,
@@ -319,7 +316,6 @@
   tr:not(.blob-expanded) + .blob-expanded .blob-num,
   .branch-action-item + .branch-action-item,
   .branch-action-item + .mergeability-details,
-  .social-count,
   .border-gray-dark,
   .timeline-new-comment .previewable-comment-form .comment-body,
   .subnav-bordered,
@@ -451,6 +447,7 @@
   .table-list-header,
   table.files,
   table.files td,
+  .social-count,
   #readme .Box-header,
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .viz,
@@ -736,7 +733,6 @@
   .pr-toolbar,
   .gitako-ready .js-header-wrapper,
   button[data-disable-with='Loading more&hellip;'],
-  .bg-gray-dark,
   #readme .Box-header:hover,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .SelectMenu-divider,
@@ -842,7 +838,6 @@
   .gitako-toggle-show-button-wrapper.collapsed,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
   .gitako-side-bar-content .file-explorer .node-item-row,
-  .bg-white,
   .compare-pr-placeholder,
   ul.comparison-list > li.title,
   table.files,
@@ -1106,8 +1101,6 @@
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
   .gitako-side-bar-content .file-explorer .node-item,
   .lovely-forks-addon,
-  .text-gray,
-  .text-gray-dark,
   .compare-pr-placeholder p,
   ul.comparison-list > li,
   ul.comparison-list > li.title,
@@ -1276,8 +1269,6 @@
   .gitako-side-bar .gitako-side-bar-body .octicon:focus,
   .hide-files-btn:hover,
   .hide-files-btn:focus,
-  .text-blue,
-  .text-emphasized,
   .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected,
   .social-count,
@@ -1347,8 +1338,6 @@
   .SideNav-item:hover::before,
   .__better_github_pr .github-pr-file.github-pr-file-highlight,
   .__better_github_pr .tree-view_item:hover,
-  .bg-blue,
-  .bg-gray-2,
   .Progress,
   .ais-Hits-item:hover,
   .issues-reset-query-icon,
@@ -1500,7 +1489,6 @@
   .form-control:focus,
   .form-select:focus,
   .markdown-body .clippy-wrapper .clippy:hover,
-  .border-blue-light,
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
   .reponav-item.selected,
@@ -1514,7 +1502,6 @@
   .topic-tag-action,
   .topic-tag-action button,
   .topic-tag-action a,
-  .bg-blue-2,
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
   .alert.note {
@@ -1533,7 +1520,6 @@
   .Toast-dismissButton,
   .pl-bu,
   .pl-md,
-  .text-red,
   .cdel,
   .octicon-x,
   .octicon-trashcan,
@@ -1568,7 +1554,6 @@
   }
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
   .pl-k,
-  .text-purple,
   .octicon.merged,
   .octicon-git-pull-request,
   .issue-keyword,
@@ -1584,7 +1569,6 @@
     border-color: var(--purple) !important;
   }
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .bg-purple-light,
   .State--purple,
   .alert.product {
     background-color: var(--purple-trans) !important;
@@ -1743,7 +1727,6 @@
     color: var(--faded) !important;
   }
   .user-status-container-border-busy,
-  .bg-yellow-light,
   .alert.warning {
     background-color: var(--yellow-trans) !important;
   }
@@ -1840,7 +1823,6 @@
   .pl-mh,
   .recent-user-key-access,
   a.module-linker,
-  .text-green,
   .cadd,
   .octicon-repo-push,
   .octicon-check,
@@ -1938,7 +1920,6 @@
   p.explain strong,
   .markdown-body a,
   .markdown-body blockquote,
-  .text-gray-light,
   .email-quoted-reply,
   .email-signature-reply,
   small,
@@ -2103,6 +2084,53 @@
   }
   .lovely-forks-addon {
     opacity: 0.7 !important;
+  }
+  .text-gray-light {
+    color: var(--text-alt) !important;
+  }
+  .text-blue,
+  .text-emphasized {
+    color: var(--blue) !important;
+  }
+  .text-gray,
+  .text-gray-dark {
+    color: var(--text) !important;
+  }
+  .text-green {
+    color: var(--green) !important;
+  }
+  .text-purple {
+    color: var(--purple) !important;
+  }
+  .text-red {
+    color: var(--red) !important;
+  }
+  .border-blue-light {
+    border-color: var(--blue) !important;
+  }
+  .bg-gray,
+  .bg-gray-light,
+  .bg-blue-light {
+    background-color: var(--base-4) !important;
+  }
+  .bg-yellow-light {
+    background-color: var(--yellow-trans) !important;
+  }
+  .bg-purple-light {
+    background-color: var(--purple-trans) !important;
+  }
+  .bg-blue,
+  .bg-gray-2 {
+    background-color: var(--base-7) !important;
+  }
+  .bg-blue-2 {
+    background-color: var(--blue-trans) !important;
+  }
+  .bg-gray-dark {
+    background-color: var(--base-2) !important;
+  }
+  .bg-white {
+    background-color: var(--base-5) !important;
   }
   .bg-pending {
     background-color: var(--purple) !important;
