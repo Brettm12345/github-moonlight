@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.6.4
+@version      1.6.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -153,7 +153,7 @@
   .branch-infobar,
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message,
-  .merge-statusitem,
+  .merge-status-item,
   .timeline-comment-header,
   .review-thread-reply,
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
@@ -361,8 +361,8 @@
   .branch-action-body,
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message,
-  .merge-statuslist,
-  .merge-statusitem,
+  .merge-status-list,
+  .merge-status-item,
   .timeline-comment,
   .timeline-comment-wrapper,
   .timeline-comment-header,
