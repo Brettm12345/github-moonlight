@@ -1,5 +1,7 @@
 .ajax-pagination-
-  &form &btn
+  &form button
+    ../btn
+      c $blue
     c 0 $base1 $base4
 .pagination
   a
@@ -13,6 +15,9 @@
   .disabled, .gap, [aria-disabled=true]
     &, &:hover
       c $faded $base1 $base4
+  &-loader-container
+    bgi none
+    c 0 0 $base4
 .more-repos
   c 0 0 $base4
   s inset 0 1px 0 $base1

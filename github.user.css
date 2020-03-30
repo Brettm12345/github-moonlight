@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.8.0
+@version      1.8.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -147,7 +147,7 @@
   .js-resolvable-timeline-thread-form,
   .review-comment,
   .blankslate,
-  .ajax-pagination-form .ajax-pagination-btn,
+  .ajax-pagination-form button,
   .pagination a,
   .pagination .disabled,
   .pagination .gap,
@@ -155,6 +155,7 @@
   .pagination .disabled:hover,
   .pagination .gap:hover,
   .pagination [aria-disabled=true]:hover,
+  .pagination-loader-container,
   .more-repos,
   .menu,
   .menu-heading,
@@ -240,7 +241,6 @@
   .commits-list-item,
   .full-commit,
   .commit-form,
-  .dashboard .js-all-activity-header + div .Box,
   .repo-list,
   .repo-list-item,
   .orghead,
@@ -372,7 +372,7 @@
   .blankslate,
   .blankslate code,
   .protip  > code,
-  .ajax-pagination-form .ajax-pagination-btn,
+  .ajax-pagination-form button,
   .pagination a,
   .pagination .current,
   .pagination [aria-current],
@@ -432,7 +432,6 @@
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
   .gitako-side-bar-content .file-explorer .node-item,
   .dashboard .js-all-activity-header + div,
-  .dashboard .flex-items-baseline .f6.mt-2,
   .compare-pr-placeholder,
   .range-editor,
   ul.comparison-list,
@@ -544,7 +543,6 @@
   .full-commit .commit-meta,
   .file-commit-form--full,
   .diff-table tr:not(:last-child) .line-comments,
-  .dashboard .js-all-activity-header + div .Box,
   .repo-list,
   .repo-list-item,
   .orghead,
@@ -713,6 +711,7 @@
   .site-subnav.bg-white,
   .user-key-email-unverified,
   .markdown-body table tr td,
+  .new-project-column,
   #readme .Box-header,
   .Popover-message,
   .email-quoted-reply,
@@ -941,8 +940,6 @@
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
   .reponav-item.selected,
-  .dashboard .js-all-activity-header + div .Box:hover,
-  .dashboard .js-all-activity-header + div .Box:focus,
   .team-left-column[aria-label="Explore"] > div:hover,
   .team-left-column[aria-label="Explore"] > div:focus,
   .input-contrast:hover,
@@ -1118,8 +1115,6 @@
   .commits-list-item.navigation-focus,
   .full-commit .commit-meta,
   .line-comments,
-  .dashboard .js-all-activity-header + div .Box:hover,
-  .dashboard .js-all-activity-header + div .Box:focus,
   .dashboard-notice,
   .team-left-column[aria-label="Explore"] > div:hover,
   .team-left-column[aria-label="Explore"] > div:focus,
@@ -1205,6 +1200,7 @@
   #js-repo-pjax-container,
   .pr-toolbar,
   .gitako-ready .js-header-wrapper,
+  button[data-disable-with='Loading more&hellip;'],
   .bg-gray-dark,
   #readme .Box-header:hover,
   .search_repos fieldset,
@@ -1300,6 +1296,7 @@
   .Box-row,
   .table-list-cell,
   .commit-tease-contributors,
+  .news .alert,
   .mini-repo-list-item,
   .footer,
   .site-footer,
@@ -1414,6 +1411,7 @@
   .breadcrumb,
   .breadcrumb-item-selected,
   .breadcrumb-item[aria-current],
+  .ajax-pagination-btn,
   .pagination a:hover,
   .menu-item.selected,
   .menu-item[aria-current],
@@ -1487,7 +1485,8 @@
   .btn,
   .btn.btn-sm,
   .btn:hover,
-  .btn.btn-sm:hover {
+  .btn.btn-sm:hover,
+  .pagination-loader-container {
     background-image: none !important;
   }
   .Box--responsive .Box-row--unread::before,
@@ -1645,7 +1644,8 @@
   body div.commit-build-statuses-dark:hover,
   body .link-gray-dark:hover,
   body body div.commit-build-statuses-dark:hover,
-  body body .link-gray-dark:hover {
+  body body .link-gray-dark:hover,
+  .news .Details button:hover {
     text-decoration: underline !important;
   }
   .protip  > svg,
@@ -1769,7 +1769,6 @@
   }
   .subnav-item,
   .markdown-body .clippy-wrapper .clippy,
-  .dashboard .js-all-activity-header + div .Box,
   .team-left-column[aria-label="Explore"] > div,
   .input-contrast {
     transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -1979,6 +1978,7 @@
   .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:focus,
+  .dashboard .flex-items-baseline .f6.mt-2,
   #readme .Box-header,
   .reponav-item.selected .octicon {
     opacity: 1 !important;
@@ -2034,6 +2034,8 @@
   .user-list-item+.user-list-item,
   .issue-list-item+.issue-list-item,
   .SelectMenu-filter,
+  .news .Details-content--hidden li,
+  .news .Details button,
   .graphiql-ide {
     border-top-color: var(--base-1) !important;
   }
@@ -2044,9 +2046,6 @@
   .gitako-side-bar .gitako-side-bar-body .file-explorer .search-input-wrapper input[type="text"].form-control,
   .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control {
     border-radius: 0 !important;
-  }
-  .dashboard .flex-items-baseline .f6.mt-2 {
-    opacity: 0.6 !important;
   }
   .lovely-forks-addon {
     opacity: 0.7 !important;
@@ -2330,6 +2329,9 @@
   .full-commit .sha-block,
   body {
     font-size: 14px !important;
+  }
+  .news .Details button:hover {
+    background: transparent !important;
   }
   .repo-list {
     padding: 0 12px !important;

@@ -2,13 +2,22 @@
   .js-all-activity-header + div
     c 0 $base1
     .Box
-      box()
+      c 0 $alt
       r 6px
   &-notice
     b $b
     c 0 0 $base5
     h2
       c $text
+.news
+  .Details
+    &-content--hidden li, button
+      btc $base1
+    button:hover
+      bg transparent
+      td underline
+  .alert
+    bt $b
 .repo-list
   p 0 12px
   &, &-item
@@ -19,11 +28,6 @@
   c 0 0 $base9
 .team, .user-mention
   c $cn
-.vcard-
-  &username
-    c $textGray
-  &detail
-    octicon $faded
 .private .mini-repo-list-item
   c 0 0 $base2
 .orghead
