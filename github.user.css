@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.9.0
+@version      1.9.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -160,6 +160,7 @@
   .more-repos,
   .menu,
   .menu-heading,
+  .subnav-item,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
   .markdown-body .clippy-wrapper .clippy,
@@ -1340,8 +1341,6 @@
   .form-group .form-control:focus,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .discussion-item-icon,
-  .subnav-item:focus,
-  .subnav-item:hover,
   .markdown-body code,
   .markdown-body tt,
   .SideNav-item:focus::before,
@@ -1406,7 +1405,9 @@
   .filter-item:focus,
   .menu-item:hover,
   .menu-item.selected:hover,
-  .menu-item[aria-current]:hover {
+  .menu-item[aria-current]:hover,
+  .subnav-item:focus,
+  .subnav-item:hover {
     background-color: var(--base-6) !important;
   }
   .TimelineItem-badge,
