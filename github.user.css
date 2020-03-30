@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.6.1
+@version      1.6.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -142,6 +142,7 @@
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .header-row,
   .gitako-side-bar .gitako-side-bar-body .meta-bar,
   .gitako-side-bar-content .meta-bar,
+  .dashboard .js-all-activity-header + div,
   .bg-gray,
   .bg-gray-light,
   .bg-blue-light,
@@ -341,6 +342,7 @@
   .gitako-side-bar-content .meta-bar,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
   .gitako-side-bar-content .file-explorer .node-item,
+  .dashboard .js-all-activity-header + div,
   .compare-pr-placeholder,
   .comment-reactions .user-has-reacted,
   .comment-reactions.has-reactions,
@@ -420,7 +422,6 @@
   .user-profile-sticky-bar:after,
   .js-profile-editable-edit-button,
   .pinned-item-checkbox:checked + .pinned-item-name,
-  .dashboard .js-all-activity-header + div,
   .dashboard .js-all-activity-header + div .Box,
   .repo-list,
   .repo-list-item,
