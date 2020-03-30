@@ -15,6 +15,7 @@ made with :heart:
 #+html: <a href="https://discord.gg/PwpA8v"><img src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord&style=flat-square" alt="Discord Server"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/commits/master"><img src="https://img.shields.io/github/commit-activity/m/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Commit Activity"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/stargazers"><img src="https://img.shields.io/github/stars/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Stars"/></a>
+
 #+html: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
 #+html: </div>
 
