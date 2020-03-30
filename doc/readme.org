@@ -39,11 +39,13 @@ These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
 - Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
 * Recomended Extensions
-| Extension           | Description                         |
-| [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                    |
-| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]        | Displays notible forks on repo page |
-| [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github    |
-| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github        |
+| Extension           | Description                                   |
+| [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                              |
+| [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]          | Hides nonsensical files                       |
+| [[https://github.com/sindresorhus/refined-github][Refined Github]]      | Adds a number of small enhancements to github |
+| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]        | Displays notible forks on repo page           |
+| [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github              |
+| [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github                  |
 * Screenshots
 #+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
 {{{screenshot(Code,code)}}}
