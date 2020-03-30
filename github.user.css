@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.7.4
+@version      1.7.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -123,6 +123,9 @@
   .blob-num-hunk,
   .blob-code-expandable,
   .blob-code-hunk,
+  .filter-list:not(.small) .filter-item,
+  .filter-list.small .filter-item,
+  .filter-list.small .filter-item .filter-item,
   .notifications-list-item.notification-unread,
   .Toast,
   .Toast-content,
@@ -140,12 +143,17 @@
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .topic-box.bg-white,
   .topic-tag,
+  .comment-reactions.has-reactions,
+  .timeline-comment-header,
+  .js-resolvable-timeline-thread-form,
+  .review-comment,
+  .blankslate,
   .ajax-pagination-form .ajax-pagination-btn,
+  .more-repos,
   .menu,
   .menu-heading,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
-  .markdown-body table tr,
   .markdown-body .clippy-wrapper .clippy,
   .project-column,
   .btn.btn-outline,
@@ -164,14 +172,11 @@
   .bg-gray,
   .bg-gray-light,
   .bg-blue-light,
-  .comment-reactions.has-reactions,
   .range-editor,
   ul.comparison-list,
   ul.comparison-list > li,
   .merge-status-item,
-  .timeline-comment-header,
-  .js-resolvable-timeline-thread-form,
-  .review-comment,
+  .CheckRun,
   .table-list-header,
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .viz,
@@ -203,6 +208,12 @@
   .SelectMenu-blankslate,
   .SelectMenu-loading,
   .SelectMenu-message,
+  .select-menu-tab-nav.selected,
+  .select-menu-tabs.selected,
+  .select-menu-tabs a.selected,
+  .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tabs[aria-selected="true"],
+  .select-menu-tabs a[aria-selected="true"],
   .select-menu-modal,
   .select-menu-item,
   .select-menu-divider,
@@ -230,6 +241,9 @@
   .team-left-column[aria-label="Explore"] > div,
   .team-left-column[aria-label="Explore"].bg-white,
   .orgs-help-item-octicon,
+  .hook-item,
+  .hook-delivery-container .highlight pre,
+  .hook-delivery-container pre,
   .hook-delivery-guid,
   input[type="text"],
   img,
@@ -239,15 +253,13 @@
   .boxed-group .heading,
   .boxed-group > h3,
   .file-header,
-  .access-form-wrapper,
   .drag-and-drop,
+  .access-form-wrapper,
   .octofication .message,
   .overall-summary,
   .input-contrast,
-  .more-repos,
-  .CheckRun,
-  .content.p-4.text-center.rounded-1.border.border-gray-light,
   .js-notice,
+  .content.p-4.text-center.rounded-1.border.border-gray-light,
   #gist-pjax-container,
   .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
   .discussion-timeline-actions,
@@ -316,8 +328,11 @@
   .border-lg-left,
   .Subhead,
   .repository-lang-stats-graph,
+  .filter-list:not(.small) .filter-item,
+  .filter-list.small .filter-item,
   .notifications-list-item.notification-unread,
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
+  .notifications-list-item:focus .notification-list-item-actions .btn:hover,
   .notifications-dropdown,
   .notifications-dropdown-see-all,
   .thread-subscription-status,
@@ -338,6 +353,18 @@
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
   .btn-mktg,
+  .comment-reactions .user-has-reacted,
+  .comment-reactions.has-reactions,
+  .AvatarStack-body,
+  .AvatarStack-body .avatar,
+  .timeline-comment,
+  .timeline-comment-wrapper,
+  .timeline-comment-header,
+  .review-thread-reply,
+  .review-comment,
+  .blankslate,
+  .blankslate code,
+  .protip  > code,
   .ajax-pagination-form .ajax-pagination-btn,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .user-profile-sticky-bar:after,
@@ -360,7 +387,7 @@
   .markdown-body h5,
   .markdown-body table td,
   .markdown-body table th,
-  .markdown-body table tr,
+  .markdown-body table tr td,
   .markdown-body code,
   .markdown-body tt,
   .highlight pre,
@@ -368,7 +395,6 @@
   .markdown-body blockquote,
   .markdown-body .clippy-wrapper .clippy,
   .project-card:hover,
-  .comment-reactions.has-reactions.js-reactions-container.js-socket-channel.js-updatable-content,
   .SideNav,
   .SideNav-item,
   .__better_github_pr,
@@ -387,22 +413,18 @@
   .dashboard .js-all-activity-header + div,
   .dashboard .flex-items-baseline .f6.mt-2,
   .compare-pr-placeholder,
-  .comment-reactions .user-has-reacted,
-  .comment-reactions.has-reactions,
   .range-editor,
   ul.comparison-list,
   ul.comparison-list > li,
   ul.comparison-list > li.title,
   .merge-status-list,
   .merge-status-item,
-  .timeline-comment,
-  .timeline-comment-wrapper,
-  .timeline-comment-header,
-  .review-thread-reply,
-  .review-comment,
+  .CheckRun,
+  .CheckRun-header,
   .table-list-header,
   table.files,
   table.files td,
+  #readme .Box-header,
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .viz,
   .viz .code-frequency,
@@ -432,6 +454,7 @@
   .code-list-item-private .blob-num,
   .ais-SearchBox-input,
   #commit_search_results .commit,
+  .branch-name,
   .branch-infobar,
   .branch-action-body,
   .branch-action-body .merge-branch-form,
@@ -512,9 +535,6 @@
   kbd,
   .Label--gray,
   .Label--outline,
-  .AvatarStack-body,
-  .AvatarStack-body .avatar,
-  .branch-name,
   .auth-form-body,
   div.listgroup-item,
   .flash,
@@ -523,19 +543,14 @@
   .boxed-group .heading,
   .boxed-group > h3,
   .file,
-  .file-header,
-  .access-form-wrapper,
   .file-wrap,
+  .file-header,
   .drag-and-drop,
+  .access-form-wrapper,
   .octofication .message,
   .overall-summary,
   .input-contrast,
   .Counter,
-  .CheckRun,
-  .CheckRun-header,
-  .protip  > code,
-  .blankslate,
-  .blankslate code,
   .suggester,
   .suggester li,
   input[type="text"].form-control,
@@ -663,374 +678,43 @@
     color: var(--faded) !important;
   }
   .filter-item,
-  .notifications-list-item:hover .notification-list-item-actions .btn,
-  .topic-tag,
-  .menu-item,
-  .summary-stats li,
-  .summary-stats li > .num,
-  .summary-stats li > a,
-  .ScreenshotCarousel-navitem,
-  .js-selected-navigation-item.subnav-item,
-  .js-issue-row,
-  .SelectMenu-item,
-  .select-menu-item,
-  .CodeMirror-hint {
-    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  .filter-list:not(.small) .filter-item,
+  .filter-list.small .filter-item .filter-item {
+    transition: color, background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
-  .filter-item,
-  .filter-item.selected,
-  .filter-item[aria-current],
-  .filter-item[aria-selected=true],
-  .notifications-list-item:hover .notification-list-item-actions .btn:hover,
-  .btn,
-  .btn.btn-sm,
-  .btn:hover,
-  .btn.btn-sm:hover,
-  .btn-mktg,
-  .btn-octicon:hover,
-  .js-profile-editable-edit-button,
-  .menu-heading,
-  .pl-ii,
-  .pl-c2,
-  .pl-mb,
+  .filter-list:not(.small) .filter-item,
+  .filter-list.small .filter-item,
+  .Toast,
+  .topic-tag,
+  .user-profile-nav,
+  .user-status-container-border-busy,
   .markdown-body code,
   .markdown-body tt,
-  .markdown-body .clippy-wrapper .clippy,
-  .timeline-comment-header,
-  .social-count:hover,
-  .summary-stats li:hover,
-  .summary-stats li:focus,
-  .summary-stats li:hover > .num,
-  .summary-stats li:focus > .num,
-  .summary-stats li:hover > a,
-  .summary-stats li:focus > a,
-  .form-group .form-control,
-  .form-control,
-  .form-select,
-  .form-control.focus,
-  .form-select.focus,
-  .form-control:focus,
-  .form-select:focus,
-  .ais-SearchBox-input,
-  .dropdown-item:hover,
-  .dropdown-item:focus,
-  .SelectMenu-tab[aria-selected="true"],
-  .select-menu-tab-nav.selected,
-  .select-menu-tabs.selected,
-  .select-menu-tabs a.selected,
-  .select-menu-tab-nav[aria-selected="true"],
-  .select-menu-tabs[aria-selected="true"],
-  .select-menu-tabs a[aria-selected="true"],
-  .select-menu-header,
-  .select-menu-header .select-menu-title,
-  .team,
-  .user-mention,
-  ::selection,
-  input[type="text"],
-  .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
-  .flash,
-  .breadcrumb strong.final-path,
-  .Counter,
-  .checks-list-item.selected .checks-list-item-name,
-  .CodeMirror-hint-active,
-  .sidebar-menu h3:hover,
-  .sidebar-menu ul ul li:hover,
-  .sidebar-menu h3 a:hover,
-  .sidebar-menu ul ul li a:hover,
-  .js-current .standalone a,
-  .sidebar-module .disable > a {
-    color: var(--cn) !important;
-  }
-  .filter-item,
-  .filter-item.selected,
-  .filter-item[aria-current],
-  .filter-item[aria-selected=true],
-  .menu-item.selected:hover,
-  .menu-item[aria-current]:hover,
-  .suggester li[aria-selected="true"] {
-    background-color: var(--base-6) !important;
-  }
-  .filter-item:hover,
-  .filter-item.selected:hover,
-  .filter-item[aria-current]:hover,
-  .filter-item[aria-selected=true]:hover,
-  .notifications-dropdown,
-  .notifications-dropdown-see-all,
-  .Box-row[style*="background"],
-  .topic-tag-link:hover,
-  .menu-item:hover,
-  .markdown-body .clippy-wrapper .clippy:hover,
-  .task-progress .progress-bar .progress,
-  .community-checklist .progress,
-  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
-  .signup-plan-card:hover,
-  .dropdown-item:hover,
-  .dropdown-item:focus,
-  .select-menu-item:hover,
-  .blob-code-inner.highlighted,
-  .blob-code-inner .highlighted,
-  ::selection,
-  .branch-name,
-  .checks-list-item.selected .checks-list-item-name,
-  .CodeMirror-hint-active,
-  .graphiql-container .execute-options > li:hover,
-  .graphiql-container .toolbar-menu-items > li:hover,
-  .graphiql-container .toolbar-select-options > li:hover,
-  .graphiql-container .history-contents > p:hover,
-  .graphiql-container .execute-options > li.hover,
-  .graphiql-container .toolbar-menu-items > li.hover,
-  .graphiql-container .toolbar-select-options > li.hover,
-  .graphiql-container .history-contents > p.hover,
-  .graphiql-container .execute-options > li:active,
-  .graphiql-container .toolbar-menu-items > li:active,
-  .graphiql-container .toolbar-select-options > li:active,
-  .graphiql-container .history-contents > p:active,
-  .sidebar-menu h3:hover,
-  .sidebar-menu ul ul li:hover,
-  .sidebar-menu h3 a:hover,
-  .sidebar-menu ul ul li a:hover {
-    background-color: var(--base-8) !important;
-  }
-  .notification-navigation.bg-white,
-  .Toast-dismissButton,
-  .user-profile-sticky-bar:after,
-  .profile-timeline-rollup-content li.d-block.mt-1.py-1,
-  .profile-timeline-month-heading.bg-white,
-  .profile-timelineyear-list,
-  .site-subnav.bg-white.is-stuck,
-  .application-main > main > .site-subnav + div,
-  #tree-finder-field,
   .highlight pre,
   .markdown-body pre,
-  .project-header,
-  .d-flex.flex-row.flex-items-center.f6,
-  .comment-reactions.has-reactions.js-reactions-container.js-socket-channel.js-updatable-content,
-  #js-repo-pjax-container,
-  .pr-toolbar,
-  .gitako-ready .js-header-wrapper,
-  .bg-gray-dark,
-  .search_repos fieldset,
-  .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
-  .SelectMenu-divider,
-  .SelectMenu-tab,
-  .select-menu-header,
-  .select-menu-header .select-menu-title,
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
-  .tabnav-pr .tabnav-tab.selected,
-  .tabnav-tab.selected,
-  .Header,
-  .reponav-item.selected,
-  .diffbar,
-  .UnderlineNav[style*="margin-top"],
-  .signed-commit-header,
-  .commit-ref,
-  .file-commit-form--full,
-  .private .mini-repo-list-item,
-  .orghead .pagehead-tabs-item.selected,
-  .team-left-column > div,
-  .hook-delivery-container .tabnav-tab[aria-selected="true"],
-  kbd,
-  .js-recent-activity-container > div > div,
-  .Label--gray,
-  .AvatarStack-body,
-  .AvatarStack-body .avatar,
-  .flash,
-  .application-main > main > div.border-bottom.border-gray-light,
-  .blankslate code,
-  .repository-content > div.bg-white:first-child,
-  section[style*="#fafbfc"],
-  .history-contents,
-  .doc-explorer-contents,
-  .graphiql-container .search-box,
-  .graphiql-container .search-box input,
-  .content ol li pre code,
-  .libraries-jumbotron,
-  body {
-    background-color: var(--base-2) !important;
-  }
-  .notification-configure-filters .octicon {
-    color: var(--base-9) !important;
-  }
-  .notification-navigation .notification-configure-filters .octicon,
-  .numbers-summary .octicon {
-    color: var(--text) !important;
-  }
-  .notification-navigation .notification-configure-filters:hover .octicon {
-    color: var(--blue) !important;
-  }
-  .notifications-list-item .notifications-list-item-actions svg,
-  text[fill="#000"],
-  text[fill="#6a737d"],
-  text[text-anchor="middle"],
-  .graphiql-container .toolbar-button svg,
-  .graphiql-container .execute-button svg {
-    fill: var(--text) !important;
-  }
-  .notifications-list-item:hover,
-  .Box-row--focus-gray,
-  .TimelineItem:before,
-  .TimelineItem .status-meta:before,
-  .TimelineItem .merge-pr-more-commits:before,
-  .topic-box.bg-white:hover,
-  .btn,
-  .btn.btn-sm,
-  .btn:disabled,
-  .btn.btn-sm:disabled,
-  .btn:disabled:hover,
-  .btn.btn-sm:disabled:hover,
-  .js-profile-editable-edit-button,
-  .profile-timeline.discussion-timeline:before,
-  .profile-timeline-card.bg-white,
-  .profile-timeline-month-heading.bg-white:after,
-  .profile-timelineyear-list:after,
-  .menu-item.selected,
-  .menu-item[aria-current],
-  .subnav-item.selected,
-  .subnav-item.selected:focus,
-  .subnav-item.selected:hover,
-  .btn.btn-primary,
-  .btn .js-selected-navigation-item.subnav-item,
-  .cm-s-github-light.CodeMirror,
-  .cm-s-github-light .CodeMirror-lines,
-  .graph-before-activity-overview,
-  .tree-browser-result[aria-selected="true"],
-  .js-commit-preview .markdown-body,
-  .markdown-body img,
-  .markdown-body blockquote,
-  .project-pane.bg-white,
-  .SideNav-item[aria-current="page"],
-  .SideNav-item[aria-selected="true"],
-  .SideNav-item:focus,
-  .SideNav-item:hover,
-  .gitako-toggle-show-button-wrapper.collapsed,
-  .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
-  .gitako-side-bar-content .file-explorer .node-item-row,
-  .bg-white,
-  .compare-pr-placeholder,
-  .comment-reactions .user-has-reacted,
-  ul.comparison-list > li.title,
-  .timeline-comment,
-  table.files,
-  table.files tr.navigation-focus td,
-  table.files tr[aria-selected=true] td,
-  .social-count,
-  .CheckStep-line:hover,
-  .summary-stats li:hover,
-  .summary-stats li:focus,
-  .summary-stats li:hover > .num,
-  .summary-stats li:focus > .num,
-  .summary-stats li:hover > a,
-  .summary-stats li:focus > a,
-  .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
-  .exploregrid-item,
-  .newsletter-frequency-choice h3,
-  .form-control.search-page-label.js-advanced-search-label,
-  .form-control.search-page-label.js-advanced-search-label input,
-  .code-list .file-box,
-  .code-list .code-list-item + .code-list-item,
-  .code-list .divider .blob-code,
-  .code-list .divider .blob-num,
-  .code-list-item-private .blob-num,
-  .jump-to-field-active,
-  .jump-to- .js-navigation-item:hover,
-  .jump-to- #jump-to-results:hover,
-  .branch-action-body,
-  .signup-plan-card,
-  .ScreenshotCarousel-navitem.selected,
-  .pinned-issue-item,
-  .SelectMenu-item:hover,
-  .select-menu-tab-nav.selected,
-  .select-menu-tabs.selected,
-  .select-menu-tabs a.selected,
-  .select-menu-tab-nav[aria-selected="true"],
-  .select-menu-tabs[aria-selected="true"],
-  .select-menu-tabs a[aria-selected="true"],
-  .tabnav--responsive .tabnav-tab[aria-current],
-  .tabnav-tab[aria-current],
-  .tabnav--responsive .tabnav-tab[aria-selected=true],
-  .tabnav-tab[aria-selected=true],
-  .tabnav--responsive .tabnav-tab.selected,
-  .tabnav-tab.selected,
-  .tabnav-tab.selected.js-blob-edit-code,
-  .tabnav-tab.selected.js-blob-edit-preview,
-  .UnderlineNav,
-  .commits-listing:before,
-  .commit-sha,
-  .commits-list-item.navigation-focus,
-  .full-commit .commit-meta,
-  .line-comments,
-  .dashboard .js-all-activity-header + div .Box:hover,
-  .dashboard .js-all-activity-header + div .Box:focus,
+  .conversation-list-heading .inner,
+  .MarketplacePlan--sticky div.bg-white,
+  .email-quoted-reply,
+  .email-signature-reply,
   .dashboard-notice,
-  .team-left-column[aria-label="Explore"] > div:hover,
-  .team-left-column[aria-label="Explore"] > div:focus,
-  .input-contrast:hover,
-  .input-contrast:focus,
-  .progress-bar,
-  .js-user-status-container,
-  .protip  > code,
-  .blankslate,
-  .js-gist-file-update-container.js-task-list-container.file-box,
-  .form-select,
-  input[type="text"].form-control,
-  .graphiql-container .variable-editor-title,
-  .graphiql-container .docExplorerShow,
-  .js-current .standalone a,
-  .sidebar-module .disable > a,
-  body table th,
-  .sidebar-module,
-  .content .sectionbody .dlist dt,
-  .content .verseblock-content,
-  .content dl code,
-  .content h2 code,
-  .content h3 code,
-  .content h4 code,
-  .content ol code,
-  .content p > tt,
-  .content table code,
-  .content ul code,
-  p code,
-  pre,
-  .status-day::before,
-  .status-day .incident-list::before,
-  .incident-container .incident-title::before {
-    background-color: var(--base-5) !important;
+  .team-left-column[aria-label="Explore"] > div,
+  .hook-delivery-guid,
+  fieldset,
+  .border,
+  .rgh-collaborator {
+    border: 1px solid var(--base-1) !important;
   }
-  .notifications-list-item:hover .notification-list-item-actions .btn:hover,
-  .notifications-dropdown,
-  .markdown-body hr,
-  .gitako-side-bar,
-  .gitako-resize-handler,
-  div[style*="height: 1px;"],
-  .showcase-page-pattern::after,
-  .incident-container::before {
-    background-color: var(--base-1) !important;
-  }
-  .notifications-dropdown .notifications-list {
-    margin-bottom: 0 !important;
-  }
-  .notifications-dropdown-arrow,
-  .TimelineItem-break,
-  .showcase-page-pattern::after {
-    border-color: var(--base-4) !important;
-  }
-  .notifications-dropdown,
-  .notifications-dropdown-see-all,
-  .Box-row,
-  .table-list-cell,
-  .commit-tease-contributors,
-  .mini-repo-list-item,
-  .footer,
-  .site-footer,
-  .border-top {
-    border-top: 1px solid var(--base-1) !important;
-  }
+  .filter-list:not(.small) .filter-item,
   .thread-subscription-status,
   .Toast,
   .Toast-content,
   .Box-row--yellow,
   .topic-tag,
-  .tag-name,
+  .timeline-comment,
+  .review-comment,
+  .blankslate,
+  .blankslate code,
+  .protip  > code,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .discussion-item-icon,
   .discussion-sidebar-heading,
@@ -1038,7 +722,7 @@
   .application-main > main > .site-subnav + div .text-gray-light,
   .cm-s-github-light.CodeMirror,
   .pl-s .pl-v,
-  .markdown-body table tr,
+  .markdown-body table tr td,
   .SideNav,
   .__better_github_pr,
   .__better_github_pr_dark_mode,
@@ -1054,8 +738,6 @@
   .compare-pr-placeholder p,
   ul.comparison-list > li,
   ul.comparison-list > li.title,
-  .timeline-comment,
-  .review-comment,
   table.files,
   table.files td.age,
   table.files td.icon,
@@ -1077,6 +759,7 @@
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num,
   #commit_search_results .commit,
+  .branch-name,
   .signup-plan-card,
   .MarketplacePlan--sticky .marketplace-plan-emphasis,
   .dropdown-menu,
@@ -1124,15 +807,11 @@
   .description,
   .Label--gray,
   .Label--outline,
-  .branch-name,
   .auth-form-body,
   div.listgroup-item,
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab),
-  .protip  > code,
   .toolbar-item,
   .toolbar-item .menu-target,
-  .blankslate,
-  .blankslate code,
   .boxed-group-inner,
   .suggester,
   .form-select,
@@ -1186,6 +865,423 @@
   .illflow-blue .selected {
     color: var(--text) !important;
   }
+  .filter-list:not(.small) .filter-item:hover,
+  .filter-list:not(.small) .filter-item:focus,
+  .topic-tag-link:hover,
+  .topic-tag-action,
+  .topic-tag-action button,
+  .topic-tag-action a,
+  .btn:hover,
+  .btn.btn-sm:hover,
+  .markdown-body .clippy-wrapper .clippy:hover,
+  .border-blue-light,
+  .form-group .form-control:focus,
+  .form-group .form-control:focus .form-control.focus,
+  .form-group .form-control:focus .ais-SearchBox-input.focus,
+  .form-group .form-control:focus .form-select.focus,
+  .form-group .form-control:focus .form-control:focus,
+  .form-group .form-control:focus .ais-SearchBox-input:focus,
+  .form-group .form-control:focus .form-select:focus,
+  .form-control.focus,
+  .form-select.focus,
+  .form-control:focus,
+  .form-select:focus,
+  .reaction-sort-item:hover,
+  .reaction-sort-item:focus,
+  .reponav-item.selected,
+  .dashboard .js-all-activity-header + div .Box:hover,
+  .dashboard .js-all-activity-header + div .Box:focus,
+  .team-left-column[aria-label="Explore"] > div:hover,
+  .team-left-column[aria-label="Explore"] > div:focus,
+  .input-contrast:hover,
+  .input-contrast:focus,
+  .alert.note {
+    border-color: var(--blue) !important;
+  }
+  .filter-list:not(.small) .filter-item:hover,
+  .filter-list:not(.small) .filter-item:focus,
+  .menu-item:hover,
+  .menu-item.selected:hover,
+  .menu-item[aria-current]:hover,
+  .suggester li[aria-selected="true"] {
+    background-color: var(--base-6) !important;
+  }
+  .filter-list:not(.small) .filter-item.selected,
+  .filter-list:not(.small) .filter-item[aria-current],
+  .filter-list:not(.small) .filter-item[aria-selected=true],
+  .notifications-list-item:hover .notification-list-item-actions .btn:hover,
+  .notifications-list-item:focus .notification-list-item-actions .btn:hover,
+  .btn,
+  .btn.btn-sm,
+  .btn:hover,
+  .btn.btn-sm:hover,
+  .btn-mktg,
+  .btn-octicon:hover,
+  .timeline-comment-header,
+  .breadcrumb strong.final-path,
+  .js-profile-editable-edit-button,
+  .menu-heading,
+  .pl-ii,
+  .pl-c2,
+  .pl-mb,
+  .markdown-body code,
+  .markdown-body tt,
+  .markdown-body .clippy-wrapper .clippy,
+  .checks-list-item.selected .checks-list-item-name,
+  .social-count:hover,
+  .summary-stats li:hover,
+  .summary-stats li:focus,
+  .summary-stats li:hover > .num,
+  .summary-stats li:focus > .num,
+  .summary-stats li:hover > a,
+  .summary-stats li:focus > a,
+  .form-group .form-control,
+  .form-control,
+  .form-select,
+  .form-control.focus,
+  .form-select.focus,
+  .form-control:focus,
+  .form-select:focus,
+  .ais-SearchBox-input,
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  .SelectMenu-tab[aria-selected="true"],
+  .select-menu-tab-nav.selected,
+  .select-menu-tabs.selected,
+  .select-menu-tabs a.selected,
+  .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tabs[aria-selected="true"],
+  .select-menu-tabs a[aria-selected="true"],
+  .select-menu-header,
+  .select-menu-header .select-menu-title,
+  .team,
+  .user-mention,
+  ::selection,
+  input[type="text"],
+  .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
+  .flash,
+  .Counter,
+  .CodeMirror-hint-active,
+  .sidebar-menu h3:hover,
+  .sidebar-menu ul ul li:hover,
+  .sidebar-menu h3 a:hover,
+  .sidebar-menu ul ul li a:hover,
+  .js-current .standalone a,
+  .sidebar-module .disable > a {
+    color: var(--cn) !important;
+  }
+  .filter-list:not(.small) .filter-item.selected,
+  .filter-list:not(.small) .filter-item[aria-current],
+  .filter-list:not(.small) .filter-item[aria-selected=true],
+  .notifications-list-item:hover,
+  .notifications-list-item:focus,
+  .Box-row--focus-gray,
+  .TimelineItem:before,
+  .TimelineItem .status-meta:before,
+  .TimelineItem .merge-pr-more-commits:before,
+  .topic-box.bg-white:hover,
+  .btn,
+  .btn.btn-sm,
+  .btn:disabled,
+  .btn.btn-sm:disabled,
+  .btn:disabled:hover,
+  .btn.btn-sm:disabled:hover,
+  .comment-reactions .user-has-reacted,
+  .timeline-comment,
+  .protip  > code,
+  .js-profile-editable-edit-button,
+  .js-user-status-container,
+  .profile-timeline.discussion-timeline:before,
+  .profile-timeline-card.bg-white,
+  .profile-timeline-month-heading.bg-white:after,
+  .profile-timelineyear-list:after,
+  .menu-item.selected,
+  .menu-item[aria-current],
+  .subnav-item.selected,
+  .subnav-item.selected:focus,
+  .subnav-item.selected:hover,
+  .btn.btn-primary,
+  .btn .js-selected-navigation-item.subnav-item,
+  .cm-s-github-light.CodeMirror,
+  .cm-s-github-light .CodeMirror-lines,
+  .graph-before-activity-overview,
+  .tree-browser-result[aria-selected="true"],
+  .js-commit-preview .markdown-body,
+  .markdown-body img,
+  .markdown-body blockquote,
+  .project-pane.bg-white,
+  .SideNav-item[aria-current="page"],
+  .SideNav-item[aria-selected="true"],
+  .SideNav-item:focus,
+  .SideNav-item:hover,
+  .gitako-toggle-show-button-wrapper.collapsed,
+  .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
+  .gitako-side-bar-content .file-explorer .node-item-row,
+  .bg-white,
+  .compare-pr-placeholder,
+  ul.comparison-list > li.title,
+  table.files,
+  table.files tr.navigation-focus td,
+  table.files tr[aria-selected=true] td,
+  .social-count,
+  .CheckStep-line:hover,
+  .summary-stats li:hover,
+  .summary-stats li:focus,
+  .summary-stats li:hover > .num,
+  .summary-stats li:focus > .num,
+  .summary-stats li:hover > a,
+  .summary-stats li:focus > a,
+  .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
+  .exploregrid-item,
+  .newsletter-frequency-choice h3,
+  .form-control.search-page-label.js-advanced-search-label,
+  .form-control.search-page-label.js-advanced-search-label input,
+  .code-list .file-box,
+  .code-list .code-list-item + .code-list-item,
+  .code-list .divider .blob-code,
+  .code-list .divider .blob-num,
+  .code-list-item-private .blob-num,
+  .jump-to-field-active,
+  .jump-to- .js-navigation-item:hover,
+  .jump-to- #jump-to-results:hover,
+  .branch-action-body,
+  .signup-plan-card,
+  .ScreenshotCarousel-navitem.selected,
+  .pinned-issue-item,
+  .SelectMenu-item:hover,
+  .tabnav--responsive .tabnav-tab[aria-current],
+  .tabnav-tab[aria-current],
+  .tabnav--responsive .tabnav-tab[aria-selected=true],
+  .tabnav-tab[aria-selected=true],
+  .tabnav--responsive .tabnav-tab.selected,
+  .tabnav-tab.selected,
+  .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav-tab.selected.js-blob-edit-preview,
+  .UnderlineNav,
+  .commits-listing:before,
+  .commit-sha,
+  .commits-list-item.navigation-focus,
+  .full-commit .commit-meta,
+  .line-comments,
+  .dashboard .js-all-activity-header + div .Box:hover,
+  .dashboard .js-all-activity-header + div .Box:focus,
+  .dashboard-notice,
+  .team-left-column[aria-label="Explore"] > div:hover,
+  .team-left-column[aria-label="Explore"] > div:focus,
+  .input-contrast:hover,
+  .input-contrast:focus,
+  .progress-bar,
+  .js-gist-file-update-container.js-task-list-container.file-box,
+  .form-select,
+  input[type="text"].form-control,
+  .graphiql-container .variable-editor-title,
+  .graphiql-container .docExplorerShow,
+  .js-current .standalone a,
+  .sidebar-module .disable > a,
+  body table th,
+  .sidebar-module,
+  .content .sectionbody .dlist dt,
+  .content .verseblock-content,
+  .content dl code,
+  .content h2 code,
+  .content h3 code,
+  .content h4 code,
+  .content ol code,
+  .content p > tt,
+  .content table code,
+  .content ul code,
+  p code,
+  pre,
+  .status-day::before,
+  .status-day .incident-list::before,
+  .incident-container .incident-title::before {
+    background-color: var(--base-5) !important;
+  }
+  .filter-list.small .filter-item .filter-item.selected,
+  .filter-list.small .filter-item .filter-item[aria-current],
+  .filter-list.small .filter-item .filter-item[aria-selected=true],
+  .Box-row--focus-gray.navigation-focus,
+  .topic-tag-link:hover,
+  .btn:hover,
+  .btn.btn-sm:hover,
+  .pinned-item-checkbox:checked + .pinned-item-name,
+  .discussion-item-icon,
+  .subnav-item:focus,
+  .subnav-item:hover,
+  .markdown-body code,
+  .markdown-body tt,
+  .SideNav-item:focus::before,
+  .SideNav-item:hover::before,
+  .__better_github_pr .github-pr-file.github-pr-file-highlight,
+  .__better_github_pr .tree-view_item:hover,
+  .bg-blue,
+  .bg-gray-2,
+  .Progress,
+  .form-group .form-control:focus,
+  .ais-Hits-item:hover,
+  .issues-reset-query-icon,
+  .ellipsis-expander,
+  .hidden-text-expander a {
+    background-color: var(--base-7) !important;
+  }
+  .filter-list.small .filter-item .filter-item:hover,
+  .filter-list.small .filter-item .filter-item:focus,
+  .notifications-dropdown,
+  .notifications-dropdown-see-all,
+  .Box-row[style*="background"],
+  .markdown-body .clippy-wrapper .clippy:hover,
+  .task-progress .progress-bar .progress,
+  .checks-list-item.selected .checks-list-item-name,
+  .community-checklist .progress,
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
+  .branch-name,
+  .signup-plan-card:hover,
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  .select-menu-item:hover,
+  .blob-code-inner.highlighted,
+  .blob-code-inner .highlighted,
+  ::selection,
+  .CodeMirror-hint-active,
+  .graphiql-container .execute-options > li:hover,
+  .graphiql-container .toolbar-menu-items > li:hover,
+  .graphiql-container .toolbar-select-options > li:hover,
+  .graphiql-container .history-contents > p:hover,
+  .graphiql-container .execute-options > li.hover,
+  .graphiql-container .toolbar-menu-items > li.hover,
+  .graphiql-container .toolbar-select-options > li.hover,
+  .graphiql-container .history-contents > p.hover,
+  .graphiql-container .execute-options > li:active,
+  .graphiql-container .toolbar-menu-items > li:active,
+  .graphiql-container .toolbar-select-options > li:active,
+  .graphiql-container .history-contents > p:active,
+  .sidebar-menu h3:hover,
+  .sidebar-menu ul ul li:hover,
+  .sidebar-menu h3 a:hover,
+  .sidebar-menu ul ul li a:hover {
+    background-color: var(--base-8) !important;
+  }
+  .notification-navigation.bg-white,
+  .Toast-dismissButton,
+  .AvatarStack-body,
+  .AvatarStack-body .avatar,
+  .blankslate code,
+  .user-profile-sticky-bar:after,
+  .profile-timeline-rollup-content li.d-block.mt-1.py-1,
+  .profile-timeline-month-heading.bg-white,
+  .profile-timelineyear-list,
+  .site-subnav.bg-white.is-stuck,
+  .application-main > main > .site-subnav + div,
+  #tree-finder-field,
+  .highlight pre,
+  .markdown-body pre,
+  .project-header,
+  .d-flex.flex-row.flex-items-center.f6,
+  #js-repo-pjax-container,
+  .pr-toolbar,
+  .gitako-ready .js-header-wrapper,
+  .bg-gray-dark,
+  #readme .Box-header:hover,
+  .search_repos fieldset,
+  .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
+  .SelectMenu-divider,
+  .SelectMenu-tab,
+  .select-menu-header,
+  .select-menu-header .select-menu-title,
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
+  .tabnav-pr .tabnav-tab.selected,
+  .tabnav-tab.selected,
+  .Header,
+  .reponav-item.selected,
+  .diffbar,
+  .UnderlineNav[style*="margin-top"],
+  .signed-commit-header,
+  .commit-ref,
+  .file-commit-form--full,
+  .private .mini-repo-list-item,
+  .orghead .pagehead-tabs-item.selected,
+  .team-left-column > div,
+  .hook-delivery-container .tabnav-tab[aria-selected="true"],
+  kbd,
+  .js-recent-activity-container > div > div,
+  .Label--gray,
+  .flash,
+  .application-main > main > div.border-bottom.border-gray-light,
+  .repository-content > div.bg-white:first-child,
+  section[style*="#fafbfc"],
+  .history-contents,
+  .doc-explorer-contents,
+  .graphiql-container .search-box,
+  .graphiql-container .search-box input,
+  .content ol li pre code,
+  .libraries-jumbotron,
+  body {
+    background-color: var(--base-2) !important;
+  }
+  .notification-configure-filters .octicon {
+    color: var(--base-9) !important;
+  }
+  .notification-navigation .notification-configure-filters .octicon,
+  .numbers-summary .octicon {
+    color: var(--text) !important;
+  }
+  .notification-navigation .notification-configure-filters:hover .octicon,
+  .notification-navigation .notification-configure-filters:focus .octicon {
+    color: var(--blue) !important;
+  }
+  .notifications-list-item .notifications-list-item-actions svg,
+  text[fill="#000"],
+  text[fill="#6a737d"],
+  text[text-anchor="middle"],
+  .graphiql-container .toolbar-button svg,
+  .graphiql-container .execute-button svg {
+    fill: var(--text) !important;
+  }
+  .notifications-list-item:hover .notification-list-item-actions .btn,
+  .notifications-list-item:focus .notification-list-item-actions .btn,
+  .topic-tag,
+  #readme .Box-header,
+  .summary-stats li,
+  .summary-stats li > .num,
+  .summary-stats li > a,
+  .ScreenshotCarousel-navitem,
+  .js-selected-navigation-item.subnav-item,
+  .js-issue-row,
+  .SelectMenu-item,
+  .select-menu-item,
+  .CodeMirror-hint {
+    transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .notifications-list-item:hover .notification-list-item-actions .btn:hover,
+  .notifications-list-item:focus .notification-list-item-actions .btn:hover,
+  .notifications-dropdown,
+  .markdown-body hr,
+  .gitako-side-bar,
+  .gitako-resize-handler,
+  div[style*="height: 1px;"],
+  .showcase-page-pattern::after,
+  .incident-container::before {
+    background-color: var(--base-1) !important;
+  }
+  .notifications-dropdown .notifications-list {
+    margin-bottom: 0 !important;
+  }
+  .notifications-dropdown-arrow,
+  .TimelineItem-break,
+  .showcase-page-pattern::after {
+    border-color: var(--base-4) !important;
+  }
+  .notifications-dropdown,
+  .notifications-dropdown-see-all,
+  .Box-row,
+  .table-list-cell,
+  .commit-tease-contributors,
+  .mini-repo-list-item,
+  .footer,
+  .site-footer,
+  .border-top {
+    border-top: 1px solid var(--base-1) !important;
+  }
   .thread-subscription-status,
   .Box-row--yellow,
   .TimelineItem-break,
@@ -1193,26 +1289,6 @@
   .markdown-body pre > code,
   .application-main .flex-wrap {
     background-color: transparent !important;
-  }
-  .Toast,
-  .topic-tag,
-  .user-profile-nav,
-  .markdown-body code,
-  .markdown-body tt,
-  .highlight pre,
-  .markdown-body pre,
-  .conversation-list-heading .inner,
-  .MarketplacePlan--sticky div.bg-white,
-  .email-quoted-reply,
-  .email-signature-reply,
-  .dashboard-notice,
-  .team-left-column[aria-label="Explore"] > div,
-  .hook-delivery-guid,
-  fieldset,
-  .border,
-  .rgh-collaborator,
-  .user-status-container-border-busy {
-    border: 1px solid var(--base-1) !important;
   }
   .Toast,
   .select-menu-modal,
@@ -1271,11 +1347,14 @@
     box-shadow: inset 2px 0 0 var(--blue) !important;
   }
   .Box-header--blue,
+  .tag-info,
   .topic-tag-action,
   .topic-tag-action button,
   .topic-tag-action a,
-  .tag-info,
   .btn-octicon,
+  .breadcrumb,
+  .breadcrumb-item-selected,
+  .breadcrumb-item[aria-current],
   .menu-item.selected,
   .menu-item[aria-current],
   .btn-link:not(.IssueLabel):not(.tabnav-tab),
@@ -1295,6 +1374,7 @@
   .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected,
   .social-count,
+  #readme .Box-header:hover .octicon-pencil,
   .octicon-file-directory,
   .octicon-saved,
   .octicon-project,
@@ -1323,11 +1403,8 @@
   .orghead .pagehead-tabs-item.selected,
   .muted-link:hover,
   .file-header,
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):hover,
-  .breadcrumb,
-  .breadcrumb-item-selected,
-  .breadcrumb-item[aria-current],
   .drag-and-drop,
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):hover,
   .note,
   .help,
   .toolbar-item:hover,
@@ -1340,29 +1417,6 @@
   }
   .Box-row:first-of-type {
     border-top: 0 !important;
-  }
-  .Box-row--focus-gray.navigation-focus,
-  .btn:hover,
-  .btn.btn-sm:hover,
-  .pinned-item-checkbox:checked + .pinned-item-name,
-  .discussion-item-icon,
-  .subnav-item:focus,
-  .subnav-item:hover,
-  .markdown-body code,
-  .markdown-body tt,
-  .SideNav-item:focus::before,
-  .SideNav-item:hover::before,
-  .__better_github_pr .github-pr-file.github-pr-file-highlight,
-  .__better_github_pr .tree-view_item:hover,
-  .bg-blue,
-  .bg-gray-2,
-  .Progress,
-  .form-group .form-control:focus,
-  .ais-Hits-item:hover,
-  .issues-reset-query-icon,
-  .ellipsis-expander,
-  .hidden-text-expander a {
-    background-color: var(--base-7) !important;
   }
   .Box-row--yellow,
   .user-status-container-border-busy,
@@ -1439,36 +1493,6 @@
   .topic-tag-action,
   .topic-tag-action button,
   .topic-tag-action a,
-  .btn:hover,
-  .btn.btn-sm:hover,
-  .markdown-body .clippy-wrapper .clippy:hover,
-  .border-blue-light,
-  .form-group .form-control:focus,
-  .form-group .form-control:focus .form-control.focus,
-  .form-group .form-control:focus .ais-SearchBox-input.focus,
-  .form-group .form-control:focus .form-select.focus,
-  .form-group .form-control:focus .form-control:focus,
-  .form-group .form-control:focus .ais-SearchBox-input:focus,
-  .form-group .form-control:focus .form-select:focus,
-  .form-control.focus,
-  .form-select.focus,
-  .form-control:focus,
-  .form-select:focus,
-  .reaction-sort-item:hover,
-  .reaction-sort-item:focus,
-  .reponav-item.selected,
-  .dashboard .js-all-activity-header + div .Box:hover,
-  .dashboard .js-all-activity-header + div .Box:focus,
-  .team-left-column[aria-label="Explore"] > div:hover,
-  .team-left-column[aria-label="Explore"] > div:focus,
-  .input-contrast:hover,
-  .input-contrast:focus,
-  .alert.note {
-    border-color: var(--blue) !important;
-  }
-  .topic-tag-action,
-  .topic-tag-action button,
-  .topic-tag-action a,
   .bg-blue-2,
   .reaction-sort-item:hover,
   .reaction-sort-item:focus,
@@ -1483,9 +1507,12 @@
   }
   .btn.btn-outline.BtnGroup-item,
   .btn.btn-outline.tooltipped.tooltipped-sw,
-  .site-subnav.bg-white,
+  .previewable-comment-form .comment-form-head.tabnav,
   .review-thread-reply,
   .review-thread-reply .inline-comment-form,
+  .site-subnav.bg-white,
+  .markdown-body table tr td,
+  #readme .Box-header,
   .Popover-message,
   .email-quoted-reply,
   .email-signature-reply,
@@ -1493,12 +1520,99 @@
   .select-menu-filters,
   body.page-responsive.pagehead,
   body,
-  .previewable-comment-form .comment-form-head.tabnav,
   .suggester {
     background-color: var(--base-3) !important;
   }
   .btn-mktg {
     background-color: rgba(0,0,0,0.1) !important;
+  }
+  .previewable-comment-form .comment-form-head.tabnav,
+  .timeline-comment-wrapper,
+  .branch-action-body {
+    border: 0 !important;
+  }
+  .composer.composer-responsive .timeline-comment::before,
+  .branch-action-body::before,
+  #first-time-contributor .Popover-message::before,
+  .commit-form::before {
+    border-right-color: var(--base-1) !important;
+  }
+  .composer.composer-responsive .timeline-comment::after,
+  .branch-action-body::after,
+  #first-time-contributor .Popover-message::after,
+  .commit-form::after {
+    border-right-color: var(--base-4) !important;
+  }
+  :target .timeline-comment {
+    box-shadow: 0 0 0 0.2em var(--base-1) !important;
+  }
+  :target .timeline-comment::before {
+    filter: drop-shadow(-0.28em 0 0 var(--base-1));
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
+  .pl-k,
+  .text-purple,
+  .octicon.merged,
+  .octicon-git-pull-request,
+  .issue-keyword,
+  .State--purple,
+  .diffstat-summary strong,
+  .graphiql-container .keyword,
+  .cm-keyword {
+    color: var(--purple) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
+  .State--purple,
+  .alert.product {
+    border-color: var(--purple) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
+  .bg-purple-light,
+  .State--purple,
+  .alert.product {
+    background-color: var(--purple-trans) !important;
+  }
+  .timeline-comment--caret::before,
+  .timeline-comment--caret.current-user::before,
+  .timeline-comment--caret::after,
+  .timeline-comment--caret.current-user::after {
+    border-right-color: var(--base-4) !important;
+  }
+  .protip  > strong,
+  .pl-smw,
+  .pl-mi,
+  .octicon-inbox,
+  .octicon-alert,
+  .octicon-pencil,
+  .octicon-light-bulb,
+  .commit-sha,
+  mark,
+  .flash-warn,
+  .cm-attribute,
+  .graphiql-container .type-name,
+  .update.investigating > strong {
+    color: var(--yellow) !important;
+  }
+  .protip  > strong,
+  .pl-corl,
+  .markdown-body a,
+  .gh-header-number,
+  div.commit-build-statuses-dark:hover,
+  .link-gray-dark:hover,
+  body div.commit-build-statuses-dark:hover,
+  body .link-gray-dark:hover,
+  body body div.commit-build-statuses-dark:hover,
+  body body .link-gray-dark:hover {
+    text-decoration: underline !important;
+  }
+  .protip  > svg,
+  .starred .octicon-star,
+  rect[fill="#c0aa12"] {
+    fill: var(--yellow) !important;
+  }
+  .more-repos,
+  .ScreenshotCarousel-nav {
+    box-shadow: inset 0 1px 0 var(--base-1) !important;
   }
   .github-jobs-logo strong {
     filter: invert(1);
@@ -1532,6 +1646,11 @@
   .vcard-detail .octicon {
     color: var(--faded) !important;
   }
+  .user-status-container-border-busy,
+  .bg-yellow-light,
+  .alert.warning {
+    background-color: var(--yellow-trans) !important;
+  }
   .discussion-sidebar-item,
   .CodeMirror-linenumber.CodeMirror-gutter-elt,
   .markdown-body code,
@@ -1563,6 +1682,9 @@
   hr,
   .border-bottom {
     border-bottom: 1px solid var(--base-1) !important;
+  }
+  .menu-item {
+    transition: background-color, border-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .site-subnav.bg-white {
     border-color: var(--base-3) !important;
@@ -1601,6 +1723,7 @@
   .cm-s-github-light .CodeMirror-linenumber,
   .pl-c,
   .gitako-side-bar .gitako-side-bar-body .octicon,
+  #readme .Box-header .octicon-pencil,
   .CheckStep-line-number,
   .octicon-smiley,
   .octicon-file,
@@ -1636,10 +1759,10 @@
   }
   .pl-c1,
   .pl-ml,
+  .gh-header-number,
   .octicon-package,
   .octicon-rss,
   .octicon-flame,
-  .gh-header-number,
   code .mf,
   code .mh,
   code .mi,
@@ -1652,18 +1775,6 @@
   .pl-sr .pl-cce,
   .octicon-play {
     color: var(--red-light) !important;
-  }
-  .pl-k,
-  .text-purple,
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .octicon.merged,
-  .octicon-git-pull-request,
-  .issue-keyword,
-  .State--purple,
-  .diffstat-summary strong,
-  .graphiql-container .keyword,
-  .cm-keyword {
-    color: var(--purple) !important;
   }
   .pl-s .pl-pse .pl-s1,
   .pl-pds,
@@ -1687,21 +1798,6 @@
   .pl-smi,
   .graphiql-container .arg-name {
     color: var(--pink) !important;
-  }
-  .pl-smw,
-  .pl-mi,
-  .octicon-inbox,
-  .octicon-alert,
-  .octicon-pencil,
-  .octicon-light-bulb,
-  .commit-sha,
-  mark,
-  .flash-warn,
-  .protip  > strong,
-  .cm-attribute,
-  .graphiql-container .type-name,
-  .update.investigating > strong {
-    color: var(--yellow) !important;
   }
   .pl-c2::before {
     content: "^M";
@@ -1739,18 +1835,6 @@
   }
   .pl-mc {
     background-color: var(--cyan-trans) !important;
-  }
-  .pl-corl,
-  .markdown-body a,
-  div.commit-build-statuses-dark:hover,
-  .link-gray-dark:hover,
-  body div.commit-build-statuses-dark:hover,
-  body .link-gray-dark:hover,
-  body body div.commit-build-statuses-dark:hover,
-  body body .link-gray-dark:hover,
-  .protip  > strong,
-  .gh-header-number {
-    text-decoration: underline !important;
   }
   .legend li[style*="#ebedf0"] {
     background-color: var(--indigo) !important;
@@ -1802,6 +1886,7 @@
     color: var(--text-alt) !important;
   }
   .markdown-body a,
+  #readme .Box-header .octicon-pencil,
   .js-navigation-open,
   .toolbar-item,
   .toolbar-item .menu-target {
@@ -1836,6 +1921,7 @@
   .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:focus,
+  #readme .Box-header,
   .reponav-item.selected .octicon {
     opacity: 1 !important;
   }
@@ -1912,17 +1998,6 @@
   .lovely-forks-addon {
     opacity: 0.7 !important;
   }
-  .bg-yellow-light,
-  .user-status-container-border-busy,
-  .alert.warning {
-    background-color: var(--yellow-trans) !important;
-  }
-  .bg-purple-light,
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .State--purple,
-  .alert.product {
-    background-color: var(--purple-trans) !important;
-  }
   .bg-pending {
     background-color: var(--purple) !important;
   }
@@ -1931,39 +2006,11 @@
   .diffstat-block-added {
     background-color: var(--green) !important;
   }
-  :target .timeline-comment {
-    box-shadow: 0 0 0 0.2em var(--base-1) !important;
-  }
   :target .timeline-comment::before {
     filter: drop-shadow(-0.28em 0 0 var(--base-1));
   }
-  .timeline-comment-wrapper,
-  .branch-action-body,
-  .previewable-comment-form .comment-form-head.tabnav {
-    border: 0 !important;
-  }
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .State--purple,
-  .alert.product {
-    border-color: var(--purple) !important;
-  }
-  .timeline-comment--caret::before,
-  .timeline-comment--caret.current-user::before,
-  .timeline-comment--caret::after,
-  .timeline-comment--caret.current-user::after {
-    border-right-color: var(--base-4) !important;
-  }
-  .composer.composer-responsive .timeline-comment::before,
-  .branch-action-body::before,
-  #first-time-contributor .Popover-message::before,
-  .commit-form::before {
-    border-right-color: var(--base-1) !important;
-  }
-  .composer.composer-responsive .timeline-comment::after,
-  .branch-action-body::after,
-  #first-time-contributor .Popover-message::after,
-  .commit-form::after {
-    border-right-color: var(--base-4) !important;
+  .gh-header-number {
+    font-weight: 400 !important;
   }
   .table-list-bordered .table-list-cell:first-child,
   .border-left {
@@ -1986,10 +2033,12 @@
   .conversation-list-heading .inner {
     border-radius: 2px !important;
   }
-  .code-frequency .addition {
+  .code-frequency .addition,
+  .donut-chart .success {
     fill: var(--green) !important;
   }
   .code-frequency .deletion,
+  .donut-chart .failure,
   .State--red .octicon {
     fill: var(--red) !important;
   }
@@ -2057,11 +2106,6 @@
   .octicon-star {
     stroke: var(--yellow) !important;
   }
-  .starred .octicon-star,
-  .protip  > svg,
-  rect[fill="#c0aa12"] {
-    fill: var(--yellow) !important;
-  }
   .octicon-repo,
   .octicon-repo-push,
   .octicon-repo-forked {
@@ -2081,10 +2125,6 @@
   .dashboard .js-all-activity-header + div .Box,
   fieldset {
     border-radius: 6px !important;
-  }
-  .ScreenshotCarousel-nav,
-  .more-repos {
-    box-shadow: inset 0 1px 0 var(--base-1) !important;
   }
   .ScreenshotCarousel-navitem:hover,
   .ScreenshotCarousel-navitem:focus,
@@ -2358,9 +2398,6 @@
   .contrib-person path,
   rect[fill="#e25d10"] {
     fill: var(--orange) !important;
-  }
-  .gh-header-number {
-    font-weight: 400 !important;
   }
 }
 @-moz-document domain('gist.github.com') {

@@ -5,6 +5,10 @@
 @require "timeline"
 @require "topics"
 @require "buttons"
+@require "comments"
+@require "breadcrumb"
+@require "blankslate"
+@require "protip"
 @require "pagination"
 @require "profile"
 @require "profile-timeline"
@@ -86,8 +90,6 @@ code, pre, tt
   mono()
 .form-select
   bgi url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23c8d3f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down' %3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E")
-.file:target
-  s-1()
 .description
   c $text
 img[src*="octocat-spinner-64.gif"]
@@ -107,15 +109,6 @@ path[fill="#eee"]
     c $text $base1
 .repository-lang-stats ol.repository-lang-stats-numbers li .lang
   c $cn
-comment-form
-  .previewable-& .&-head.tabnav
-    b 0
-    c 0 0 $base3
-.AvatarStack-body
-  &, & .avatar
-    c 0 $base1 $base2
-.branch-name
-  c $text $base1 $base8
 div[style*="linear-gradient"]
   bg linear-gradient(to top, $base1, transparent)
 .numbers-summary
@@ -147,10 +140,15 @@ div.listgroup-item
 .rule, hr
   bb $b
 .file
-  c 0 $base1
+  &:target
+    s-1()
+  &, &-wrap
+    c 0 $base1
   &-header
     c $blue $base1 $base4
     m 0
+.drag-and-drop
+  c $blue $base1 $base4
 .pl-s > a
   c $green
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab)
@@ -163,23 +161,10 @@ div.listgroup-item
   c $text
 .footer, .site-footer
   bt $b
-.file-wrap
-  c 0 $base1
-.breadcrumb
-  c $blue
-  &-item-selected, &-item[aria-current]
-    c $blue
-  strong.final-path
-    c $cn
-.drag-and-drop
-  c $blue $base1 $base4
 .octofication .message, .overall-summary
   c 0 $base1 $base4
 .input-contrast
   box()
-.more-repos
-  c 0 0 $base4
-  s inset 0 1px 0 $base1
 .Counter
   c $cn $base1 $blueDark
 .note, .help
@@ -191,32 +176,8 @@ div.listgroup-item
     c 0 0 transparent
 .contrib-person path
   v $orange
-.CheckRun
-  c 0 $base1 $base4
-  &-header
-    c 0 $base1
-.checks-list-item
-  &.selected &-name
-    c $cn 0 $base8
 .progress-bar
   c 0 0 $base5
-.user-status-container-border-busy
-  b $b
-  c 0 $yellow $yellowTrans
-.js-user-status-container
-  c 0 0 $base5
-.protip & >
-  code
-    c $text $base1 $base5
-  strong
-    c $yellow
-    td underline
-  svg
-    v $yellow
-.gh-header-number
-  c $orange
-  fw 400
-  td underline
 .toolbar-item
   &, & .menu-target
     &:hover
@@ -225,11 +186,7 @@ div.listgroup-item
     ease color
 .body > div.d-flex
   px 10px
-.blankslate
-  c $text $base1 $base5
-  code
-    c $text $base1 $base2
-.content.p-4.text-center.rounded-1.border.border-gray-light
+.js-notice, .content.p-4.text-center.rounded-1.border.border-gray-light
   c 0 0 $base4
 .text
   c $faded
@@ -251,8 +208,6 @@ section[style*="#fafbfc"]
   c $green
 .boxed-group-inner
   c $text
-.js-notice
-  c 0 0 $base4
 .suggester
   c $text $base1 $base3
   li

@@ -1,9 +1,23 @@
 .filter-item
-  ease background-color
-  &, &.selected, &[aria-current], &[aria-selected=true]
-    c $cn 0 $base6
-    &:hover
-      c 0 0 $base8
+  ease color, background-color, border-color
+  /.filter-list:not(.small) &
+    b $b
+    c $text $base1 $base4
+    ease color, background-color, border-color
+    &:hover, &:focus
+      c 0 $blue $base6
+    &.selected, &[aria-current], &[aria-selected=true]
+      c $cn 0 $base5
+  /.filter-list.small &
+    b $b
+    c 0 $base1 $base4
+    .filter-item
+      c 0 0 $base4
+      ease color, background-color, border-color
+      &.selected, &[aria-current], &[aria-selected=true]
+        c 0 0 $base7
+      &:hover, &:focus
+        c 0 0 $base8
 .notification-
   &navigation.bg-white
     c 0 0 $base2
@@ -11,7 +25,7 @@
     octicon $base9
   &navigation &configure-filters
     octicon $text
-    &:hover
+    &:hover, &:focus
       octicon $blue
 .notifications-
   &list-item
@@ -19,7 +33,7 @@
       c 0 $base1 $base4
     & &-actions svg
       v $text
-    &:hover
+    &:hover, &:focus
       c 0 0 $base5
       .notification-list-item-actions .btn
         ease background-color

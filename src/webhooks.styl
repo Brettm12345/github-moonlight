@@ -1,11 +1,16 @@
 .boxed-group-list > li
   bb $b
-.hook-delivery-
-  &container
-    .tabnav-tab[aria-selected="true"]
-      c 0 0 $base2
-  &guid
-    b $b
-    c $text $base1 $base4
-  &time
-    c $faded
+.hook-
+  &item
+    c 0 0 $base4
+  &delivery-
+    &container
+      .highlight pre, pre
+        c 0 0 $base4
+      .tabnav-tab[aria-selected="true"]
+        c 0 0 $base2
+    &guid
+      b $b
+      c $text $base1 $base4
+    &time
+      c $faded

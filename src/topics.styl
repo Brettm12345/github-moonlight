@@ -1,3 +1,7 @@
+.tag-info
+  c $blue
+  ../-name
+    c $text
 .topic-
   &box.bg-white
     ease background-color, transform
@@ -6,17 +10,12 @@
       c 0 0 $base5
   &tag
     b $b
+    c $text $base1 $base4
+    ease background-color
     &-outline
       s inset 0 0 0 1px $base1
     &-link:hover
-      c 0 0 $base8
-    c $text $base1 $base4
-    ease background-color
+      c 0 $blue $base7
     &-action
       &, button, a
         c $blue $blue $blueTrans
-.tag
-  &-info
-    c $blue
-    ../-name
-      c $text
