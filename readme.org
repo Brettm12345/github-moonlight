@@ -1,6 +1,7 @@
-# Created 2020-03-29 Sun 22:31
+# Created 2020-03-30 Mon 15:22
 #+TITLE: 
 #+AUTHOR: Brett Mandler
+#+export_file_name: ../readme
 #+html: <div align="center">
 
 
