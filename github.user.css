@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.8.4
+@version      1.8.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -164,6 +164,8 @@
   .project-column,
   .btn.btn-outline,
   .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2,
+  .wiki-pages-box + div .d-block.border-dashed,
+  .wiki-footer .d-block.border-dashed,
   .SideNav,
   .code-review.blob-code.blob-code-context,
   .__better_github_pr,
@@ -334,7 +336,6 @@
   .border-bottom,
   .border-right,
   .border-lg-left,
-  .Subhead,
   .repository-lang-stats-graph,
   .notifications-list-item.notification-unread,
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
@@ -346,6 +347,8 @@
   .Box-header,
   .Box-header--blue,
   .Box.Box--condensed .Box-row,
+  .suggester,
+  .suggester li,
   .select-menu-item+.semantic-toc-file:after,
   .semantic-toc-symbol:not(.last-visible):after,
   .topic-tag,
@@ -415,6 +418,7 @@
   .markdown-body blockquote,
   .markdown-body .clippy-wrapper .clippy,
   .project-card:hover,
+  .Subhead,
   .SideNav,
   .SideNav-item,
   .__better_github_pr,
@@ -520,7 +524,17 @@
   .tabnav-tab[aria-selected=true],
   .tabnav--responsive .tabnav-tab.selected,
   .tabnav-tab.selected,
+  .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-code,
+  .tabnav-tab[aria-current].js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab[aria-selected=true].js-blob-edit-code,
+  .tabnav-tab[aria-selected=true].js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab.selected.js-blob-edit-code,
   .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-preview,
+  .tabnav-tab[aria-current].js-blob-edit-preview,
+  .tabnav--responsive .tabnav-tab[aria-selected=true].js-blob-edit-preview,
+  .tabnav-tab[aria-selected=true].js-blob-edit-preview,
+  .tabnav--responsive .tabnav-tab.selected.js-blob-edit-preview,
   .tabnav-tab.selected.js-blob-edit-preview,
   .gh-header-meta,
   .Header,
@@ -568,8 +582,6 @@
   .overall-summary,
   .input-contrast,
   .Counter,
-  .suggester,
-  .suggester li,
   input[type="text"].form-control,
   iframe#graphiql,
   iframe#graphiql .graphiql-ide,
@@ -643,7 +655,6 @@
   .illflow-blue .selected {
     border-color: var(--base-1) !important;
   }
-  .Subhead-description,
   *::placeholder,
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
@@ -664,6 +675,7 @@
   .pl-sg,
   p.explain,
   .markdown-body .lead-mktg p,
+  .Subhead-description,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
   .gitako-side-bar-content .file-explorer .no-results,
   .task-progress,
@@ -718,8 +730,6 @@
   .site-subnav.bg-white.is-stuck,
   .application-main > main > .site-subnav + div,
   #tree-finder-field,
-  .highlight pre,
-  .markdown-body pre,
   .project-header,
   .d-flex.flex-row.flex-items-center.f6,
   #js-repo-pjax-container,
@@ -734,9 +744,8 @@
   .SelectMenu-tab,
   .select-menu-header,
   .select-menu-header .select-menu-title,
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .tabnav-pr .tabnav-tab.selected,
-  .tabnav-tab.selected,
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .Header,
   .reponav-item.selected,
   .diffbar,
@@ -748,6 +757,7 @@
   .orghead .pagehead-tabs-item.selected,
   .team-left-column > div,
   .hook-delivery-container .tabnav-tab[aria-selected="true"],
+  body,
   kbd,
   .js-recent-activity-container > div > div,
   .Label--gray,
@@ -759,8 +769,7 @@
   .graphiql-container .search-box,
   .graphiql-container .search-box input,
   .content ol li pre code,
-  .libraries-jumbotron,
-  body {
+  .libraries-jumbotron {
     background-color: var(--base-2) !important;
   }
   .notification-configure-filters .octicon {
@@ -871,7 +880,17 @@
   .tabnav-tab[aria-selected=true],
   .tabnav--responsive .tabnav-tab.selected,
   .tabnav-tab.selected,
+  .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-code,
+  .tabnav-tab[aria-current].js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab[aria-selected=true].js-blob-edit-code,
+  .tabnav-tab[aria-selected=true].js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab.selected.js-blob-edit-code,
   .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-preview,
+  .tabnav-tab[aria-current].js-blob-edit-preview,
+  .tabnav--responsive .tabnav-tab[aria-selected=true].js-blob-edit-preview,
+  .tabnav-tab[aria-selected=true].js-blob-edit-preview,
+  .tabnav--responsive .tabnav-tab.selected.js-blob-edit-preview,
   .tabnav-tab.selected.js-blob-edit-preview,
   .UnderlineNav,
   .commits-listing:before,
@@ -1058,6 +1077,7 @@
   }
   .thread-subscription-status,
   .Box-row--yellow,
+  .suggester,
   .topic-tag,
   .timeline-comment,
   .review-comment,
@@ -1170,7 +1190,6 @@
   .toolbar-item,
   .toolbar-item .menu-target,
   .boxed-group-inner,
-  .suggester,
   .form-select,
   input[type="text"].form-control,
   .CodeMirror-hint,
@@ -1271,8 +1290,17 @@
   .octicon-saved,
   .octicon-project,
   .octicon-eye,
-  .tabnav-tab.selected,
+  .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-code,
+  .tabnav-tab[aria-current].js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab[aria-selected=true].js-blob-edit-code,
+  .tabnav-tab[aria-selected=true].js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab.selected.js-blob-edit-code,
   .tabnav-tab.selected.js-blob-edit-code,
+  .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-preview,
+  .tabnav-tab[aria-current].js-blob-edit-preview,
+  .tabnav--responsive .tabnav-tab[aria-selected=true].js-blob-edit-preview,
+  .tabnav-tab[aria-selected=true].js-blob-edit-preview,
+  .tabnav--responsive .tabnav-tab.selected.js-blob-edit-preview,
   .tabnav-tab.selected.js-blob-edit-preview,
   .reponav-item,
   .reponav-item:focus,
@@ -1359,6 +1387,36 @@
   .SideNav-item[aria-selected="true"]::before,
   .MarketplacePlan--sticky div.bg-white .bg-blue {
     background-color: var(--blue) !important;
+  }
+  .suggester,
+  .btn.btn-outline.BtnGroup-item,
+  .btn.btn-outline.tooltipped.tooltipped-sw,
+  .previewable-comment-form .comment-form-head.tabnav,
+  .review-thread-reply,
+  .review-thread-reply .inline-comment-form,
+  .site-subnav.bg-white,
+  .user-key-email-unverified,
+  .markdown-body table tr td,
+  .highlight pre,
+  .markdown-body pre,
+  .new-project-column,
+  #readme .Box-header,
+  .Popover-message,
+  .email-quoted-reply,
+  .email-signature-reply,
+  .SelectMenu-list,
+  .select-menu-filters,
+  body.page-responsive.pagehead,
+  img {
+    background-color: var(--base-3) !important;
+  }
+  .suggester li[aria-selected="true"],
+  .filter-list:not(.small) .filter-item:hover,
+  .filter-list:not(.small) .filter-item:focus,
+  .menu-item:hover,
+  .menu-item.selected:hover,
+  .menu-item[aria-current]:hover {
+    background-color: var(--base-6) !important;
   }
   .TimelineItem-badge,
   .TimelineItem .status-meta-badge,
@@ -1476,27 +1534,6 @@
   .UnderlineNav {
     transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
-  .btn.btn-outline.BtnGroup-item,
-  .btn.btn-outline.tooltipped.tooltipped-sw,
-  .previewable-comment-form .comment-form-head.tabnav,
-  .review-thread-reply,
-  .review-thread-reply .inline-comment-form,
-  .site-subnav.bg-white,
-  .user-key-email-unverified,
-  .markdown-body table tr td,
-  .new-project-column,
-  #readme .Box-header,
-  .Popover-message,
-  .email-quoted-reply,
-  .email-signature-reply,
-  .SelectMenu-list,
-  .select-menu-filters,
-  body.page-responsive.pagehead,
-  body,
-  img,
-  .suggester {
-    background-color: var(--base-3) !important;
-  }
   .btn-mktg {
     background-color: rgba(0,0,0,0.1) !important;
   }
@@ -1569,14 +1606,6 @@
   .filter-item,
   .filter-list:not(.small) .filter-item {
     transition: color, background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-  }
-  .filter-list:not(.small) .filter-item:hover,
-  .filter-list:not(.small) .filter-item:focus,
-  .menu-item:hover,
-  .menu-item.selected:hover,
-  .menu-item[aria-current]:hover,
-  .suggester li[aria-selected="true"] {
-    background-color: var(--base-6) !important;
   }
   .filter-list.small .filter-item {
     transition: color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -1812,7 +1841,6 @@
   .signed-commit-verified-label,
   .signed-commit-badge.verified,
   .pl-s > a,
-  .reponame-suggestion,
   .cm-string,
   .cm-string-2,
   code .s,
@@ -2018,6 +2046,10 @@
   }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
+  }
+  .wiki-pages-box + div .d-block.border-dashed,
+  .wiki-footer .d-block.border-dashed {
+    border: 1px dashed var(--base-3) !important;
   }
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 var(--base-1) !important;

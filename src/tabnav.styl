@@ -4,6 +4,8 @@
     ml 5%
   &-extra, &-tab
     c $faded
+  &-pr &-tab.selected
+    c 0 0 $base2
   &-tabs.js-file-editor-nav &-tab
     c $faded $base1 $base2
     mt 8px
@@ -12,12 +14,6 @@
     c $faded $base1
     &[aria-current], &[aria-selected=true], &.selected
       c $text $base1 $base5
-  &-pr &-tab.selected
-    c 0 0 $base2
-  &-pr, div
-    ../-tab
-      &.selected
-        c $blue $base1 $base2
-        &.js-blob-edit-
-          &code, &preview
-            c $blue $base1 $base5
+      &.js-blob-edit-
+        &code, &preview
+          c $blue $base1 $base5

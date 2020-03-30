@@ -1,6 +1,7 @@
 @require "common"
 @require "notifications"
 @require "box"
+@require "suggester"
 @require "compare-toc"
 @require "timeline"
 @require "topics"
@@ -24,6 +25,8 @@
 @require "tree-finder"
 @require "markdown"
 @require "projects"
+@require "subhead"
+@require "wiki"
 @require "sidenav"
 @require "plugins"
 @require "color-replacements"
@@ -58,7 +61,7 @@
 ::placeholder
   c $placeholder
 body
-  c $text 0 $base3
+  c $text 0 $base2
   fn $uiFont, sans-serif
   fs 14px
   lh 1.8
@@ -208,17 +211,8 @@ div.listgroup-item
   c 0 0 $base2
 section[style*="#fafbfc"]
   c 0 0 $base2
-// New repo
-.reponame-suggestion
-  c $green
 .boxed-group-inner
   c $text
-.suggester
-  c $text $base1 $base3
-  li
-    c 0 $base1
-    &[aria-selected="true"]
-      c 0 0 $base6
 .box-shadow-
   &medium
     s-1()
