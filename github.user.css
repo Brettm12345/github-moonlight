@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.7.2
+@version      1.7.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1214,7 +1214,8 @@
   }
   .Toast,
   .site-subnav.bg-wite,
-  .select-menu-modal {
+  .select-menu-modal,
+  .box-shadow-large {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
   }
   .Toast--error .Toast-icon,
@@ -1840,7 +1841,8 @@
   .project-card:hover,
   .MarketplacePlan--sticky div.bg-white,
   .ScreenshotCarousel,
-  .file:target {
+  .file:target,
+  .box-shadow-medium {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .project-card:focus {
