@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.6.2
+@version      1.6.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1402,7 +1402,6 @@
   .octicon-inbox,
   .octicon-alert,
   .octicon-pencil,
-  .octicon-star,
   .octicon-light-bulb,
   .commit-sha,
   mark,
@@ -1552,6 +1551,7 @@
   .Progress,
   .form-group .form-control:focus,
   .ais-Hits-item:hover,
+  .issues-reset-query-icon,
   .discussion-item-icon,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .pagination .current,
@@ -1848,6 +1848,17 @@
   .octicon {
     color: var(--text);
   }
+  .octicon-star {
+    fill: none !important;
+  }
+  .octicon-star {
+    stroke: var(--yellow) !important;
+  }
+  .starred .octicon-star,
+  .protip  > svg,
+  rect[fill="#c0aa12"] {
+    fill: var(--yellow) !important;
+  }
   .octicon-repo,
   .octicon-repo-push,
   .octicon-repo-forked {
@@ -1958,9 +1969,6 @@
   .email-quoted-reply,
   .email-signature-reply {
     border-top-right-radius: 6px !important;
-  }
-  .tabnav {
-    margin-bottom: 0px !important;
   }
   .container-preview .tabnav-tabs {
     margin-left: 5% !important;
@@ -2237,10 +2245,6 @@
   .Box-row--yellow,
   .alert.warning {
     border-color: var(--yellow) !important;
-  }
-  .protip  > svg,
-  rect[fill="#c0aa12"] {
-    fill: var(--yellow) !important;
   }
   .Popover-message--bottom-right::before,
   .Popover-message--bottom-right::after,
