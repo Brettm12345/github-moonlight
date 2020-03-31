@@ -114,11 +114,8 @@
   .Label--gray,
   .Toast-dismissButton,
   .blankslate code,
-  .CircleBadge[style*="#ffffff"],
   .CircleBadge[style*="#fff"],
-  .CircleBadge[style*="#FFFFFF"],
-  .CircleBadge[style*="#FFF"],
-  .CircleBadge[style*="#EFF9F9"],
+  .CircleBadge[style*="#eff9f9"],
   .user-profile-sticky-bar:after,
   .profile-timeline-rollup-content li.d-block.mt-1.py-1,
   .profile-timeline-month-heading.bg-white,
@@ -648,9 +645,9 @@
   .team-left-column[aria-label="Explore"].bg-white,
   .orgs-help-item-octicon,
   .hook-item,
+  .hook-delivery-guid,
   .hook-delivery-container .highlight pre,
   .hook-delivery-container pre,
-  .hook-delivery-guid,
   #gist-pjax-container,
   #gist-pjax-container .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
   #gist-pjax-container .discussion-timeline-actions,
@@ -708,8 +705,8 @@
   .form-control.search-page-label.js-advanced-search-label input,
   .protip  > code,
   .pagination a:hover,
-  .js-profile-editable-edit-button,
   .js-user-status-container,
+  .js-profile-editable-edit-button,
   .profile-timeline.discussion-timeline:before,
   .profile-timeline-card.bg-white,
   .profile-timeline-month-heading.bg-white:after,
@@ -750,8 +747,8 @@
   .summary-stats li:focus > .num,
   .summary-stats li:hover > a,
   .summary-stats li:focus > a,
-  .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
   .exploregrid-item,
+  .height-full.border.border-gray-light.rounded-1.p-3.p-md-5.my-5,
   .newsletter-frequency-choice h3,
   .code-list .file-box,
   .code-list .code-list-item + .code-list-item,
@@ -916,10 +913,10 @@
   .notifications-dropdown-see-all,
   .Box-row,
   .table-list-cell,
+  .news .alert,
   .footer,
   .site-footer,
   .commit-tease-contributors,
-  .news .alert,
   .mini-repo-list-item {
     border-top: 1px solid var(--base-1) !important;
   }
@@ -1625,13 +1622,13 @@
   .pl-corl,
   .markdown-body a,
   .gh-header-number,
+  .news .Details button:hover,
   div.commit-build-statuses-dark:hover,
   .link-gray-dark:hover,
   body div.commit-build-statuses-dark:hover,
   body .link-gray-dark:hover,
   body body div.commit-build-statuses-dark:hover,
-  body body .link-gray-dark:hover,
-  .news .Details button:hover {
+  body body .link-gray-dark:hover {
     text-decoration: underline !important;
   }
   .protip  > svg,
@@ -1717,7 +1714,6 @@
   .filter-bar,
   .tabnav,
   .Header,
-  .boxed-group-list > li,
   hr {
     border-bottom: 1px solid var(--base-1) !important;
   }
@@ -2019,11 +2015,11 @@
     opacity: 0.4 !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
+  .news .Details-content--hidden li,
+  .news .Details button,
   .user-list-item+.user-list-item,
   .issue-list-item+.issue-list-item,
   .SelectMenu-filter,
-  .news .Details-content--hidden li,
-  .news .Details button,
   .graphiql-ide {
     border-top-color: var(--base-1) !important;
   }

@@ -1,7 +1,3 @@
-.CircleBadge
-  &[style*="#ffffff"],
-  &[style*="#fff"],
-  &[style*="#FFFFFF"],
-  &[style*="#FFF"],
-  &[style*="#EFF9F9"]
+for $c in #ffffff #fff #FFFFFF #FFF #EFF9F9
+  {selector('.CircleBadge[style*="' + $c + '"]')}
     c 0 0 $base2
