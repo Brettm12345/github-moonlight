@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.9.6
+@version      2.0.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -132,6 +132,7 @@
   .pr-toolbar,
   .gitako-ready .js-header-wrapper,
   .js-more-repos-form.ajax-pagination-form button,
+  section[style*="#fafbfc"],
   #readme .Box-header:hover,
   .js-recent-activity-container > div > div,
   .repository-content > div.bg-white:first-child,
@@ -154,7 +155,6 @@
   .hook-delivery-container .tabnav-tab[aria-selected="true"],
   body,
   kbd,
-  section[style*="#fafbfc"],
   .history-contents,
   .doc-explorer-contents,
   .graphiql-container .search-box,
@@ -643,6 +643,7 @@
   .repo-list,
   .repo-list-item,
   .content.p-4.text-center.rounded-1.border.border-gray-light,
+  .application-main main div.border-bottom.border-gray,
   .team-left-column[aria-label="Explore"] > div,
   .team-left-column[aria-label="Explore"].bg-white,
   .orgs-help-item-octicon,
@@ -727,7 +728,6 @@
   .graph-before-activity-overview,
   .tree-browser-result[aria-selected="true"],
   .js-commit-preview .markdown-body,
-  .markdown-body img,
   .markdown-body blockquote,
   .project-pane.bg-white,
   .SideNav-item[aria-current="page"],
@@ -1068,6 +1068,10 @@
   .hook-delivery-guid,
   body,
   h1,
+  h2,
+  h3,
+  h4,
+  h5,
   kbd,
   .CodeMirror-hint,
   .CodeMirror-gutters,
@@ -1091,10 +1095,6 @@
   .alert.note,
   .alert.warning,
   .alert.product,
-  h2,
-  h3,
-  h4,
-  h5,
   h6,
   ol > li::before,
   .libraries-jumbotron,
@@ -1120,7 +1120,7 @@
   .filter-item,
   .discussion-timeline-actions,
   .markdown-body pre > code,
-  .application-main .flex-wrap {
+  .application-main > .flex-wrap {
     background-color: transparent !important;
   }
   .Box--responsive,
@@ -1246,6 +1246,11 @@
   .MarketplacePlan--sticky div.bg-white .bg-blue {
     background-color: var(--blue) !important;
   }
+  .body > div.d-flex,
+  .user-profile-nav {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
   .suggester,
   .btn.btn-outline.BtnGroup-item,
   .btn.btn-outline.tooltipped.tooltipped-sw,
@@ -1254,6 +1259,7 @@
   .review-thread-reply .inline-comment-form,
   .site-subnav.bg-white,
   .user-key-email-unverified,
+  .markdown-body img,
   .markdown-body table tr td,
   .highlight pre,
   .markdown-body pre,
@@ -1265,8 +1271,7 @@
   .email-signature-reply,
   .SelectMenu-list,
   .select-menu-filters,
-  body.page-responsive.pagehead,
-  img {
+  body.page-responsive.pagehead {
     background-color: var(--base-3) !important;
   }
   .suggester li[aria-selected="true"],
@@ -1540,8 +1545,7 @@
   .github-pr-file span.deletion,
   .branch-action-item-icon.completeness-indicator-error,
   .diffstat-block-deleted,
-  .blob-code-deletion .x,
-  .application-main > main > div.border-bottom.border-gray-light {
+  .blob-code-deletion .x {
     background-color: var(--red) !important;
   }
   .Toast--warning .Toast-icon,
@@ -1667,11 +1671,6 @@
     fill: var(--faded) !important;
   }
   .user-profile-nav,
-  .body > div.d-flex {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  .user-profile-nav,
   .newsletter-frequency-choice {
     border-radius: 8px !important;
   }
@@ -1714,11 +1713,11 @@
   .site-subnav.bg-white,
   .site-subnav.bg-white.is-stuck,
   .table-list,
+  .rule,
   .filter-bar,
   .tabnav,
   .Header,
   .boxed-group-list > li,
-  .rule,
   hr {
     border-bottom: 1px solid var(--base-1) !important;
   }
@@ -1772,6 +1771,18 @@
   .cm-keyword,
   .text-purple {
     color: var(--purple) !important;
+  }
+  code,
+  pre,
+  tt,
+  .markdown-body code,
+  .markdown-body tt,
+  .highlight pre,
+  .markdown-body pre,
+  .CheckStep-line,
+  .blob-code-inner,
+  .commit-ref {
+    font-family: var(--mono-font) !important;
   }
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
@@ -1940,18 +1951,6 @@
   .markdown-body code,
   .markdown-body tt {
     margin: 0.4em !important;
-  }
-  .markdown-body code,
-  .markdown-body tt,
-  .highlight pre,
-  .markdown-body pre,
-  .CheckStep-line,
-  .blob-code-inner,
-  .commit-ref,
-  code,
-  pre,
-  tt {
-    font-family: var(--mono-font) !important;
   }
   .markdown-body h1:hover .octicon-link,
   .markdown-body h2:hover .octicon-link,
@@ -2186,6 +2185,9 @@
   .octicon-repo-push,
   .octicon-repo-forked {
     margin-bottom: 0.1em !important;
+  }
+  img[src*="octocat-spinner-64.gif"] {
+    filter: invert(1);
   }
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
@@ -2432,9 +2434,6 @@
   }
   fieldset {
     padding: 10px !important;
-  }
-  img[src*="octocat-spinner-64.gif"] {
-    filter: invert(1);
   }
 }
 @-moz-document domain('gist.github.com') {
