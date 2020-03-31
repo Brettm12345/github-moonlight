@@ -10,10 +10,10 @@
     td underline
     &:hover
       c $blue
-  h1, h2, h3, h4, h5
-    c 0 $base1
   img
     c 0 0 $base3
+  hr
+    c 0 0 $base1
   table
     td, th
       c 0 $base1
@@ -31,14 +31,14 @@
     mono()
     white-space nowrap
   h1, h2, h3, h4, h5, h6
-    &:hover
-      .octicon-link
-        o 1
+    c 0 $base1
     .octicon-link
       c $cyan
       o 0
       visibility visible
       transform scale(1.1)
+    &:hover .octicon-link
+      o 1
   /.highlight pre, pre
     b $b
     c 0 $base1 $base3
@@ -46,8 +46,6 @@
     mono()
   blockquote
     c $textAlt $base1 $base5
-  hr
-    c 0 0 $base1
   .clippy-wrapper .clippy
     c $cn $base1 $base4
     ease border-color, background-color

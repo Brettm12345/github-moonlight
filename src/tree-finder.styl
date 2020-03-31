@@ -1,6 +1,7 @@
 #tree-finder-field
   c 0 0 $base2
-.tree-browser-result[aria-selected="true"]
-  c 0 0 $base5
+.tree-browser-result
+  &.selected, &[aria-selected="true"], &[aria-current]
+    c 0 0 $base5
   .octicon-chevron-right
     c $blue

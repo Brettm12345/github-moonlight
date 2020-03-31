@@ -24,7 +24,7 @@
       c 0 0 $base5
   &tab
     c $text $base1 $base2
-    &[aria-selected="true"]
+    &.selected, &[aria-selected="true"], &[aria-current]
       c $cn $base1 $base4
 .select-menu-
   &header, &header &title
@@ -47,7 +47,7 @@
   &tabs
     c 0 $base1
     ~/tab-nav, &, a
-      &.selected, &[aria-selected="true"]
+      &.selected, &[aria-selected="true"], &[aria-current]
         bc $base1 $base1 $base4
         c $cn 0 $base4
   &modal
