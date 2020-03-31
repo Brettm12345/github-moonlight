@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.0.3
+@version      2.0.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -117,6 +117,7 @@
   .Box-row--yellow,
   .boxed-group-inner,
   .branch-name,
+  .timeline-comment,
   .review-comment,
   .commit-desc pre,
   .commit-icon .octicon,
@@ -211,7 +212,6 @@
   .tabnav-tab[aria-selected="true"],
   .tabnav--responsive .tabnav-tab[aria-current],
   .tabnav-tab[aria-current],
-  .timeline-comment,
   .Toast,
   .Toast-content,
   .toolbar-item,
@@ -296,14 +296,13 @@
   .btn.btn-sm:disabled:hover,
   .btn-mktg,
   .saved-reply-form,
-  .comment-form .previewable-comment-form .comment-body,
   .comment-reactions .user-has-reacted,
   .comment-reactions.has-reactions,
-  .inline-comment-form,
+  .timeline-comment,
+  .timeline-comment-wrapper,
+  .timeline-comment-header,
   .review-thread-reply,
   .review-comment,
-  .conversation-list-heading,
-  .simple-conversation-list > li,
   .commit-ref,
   .commit-sha,
   .commit-tease,
@@ -336,6 +335,8 @@
   .form-select,
   .viz,
   .viz .code-frequency,
+  .conversation-list-heading,
+  .simple-conversation-list > li,
   .graphs.axis,
   table.capped-list td,
   table.capped-list tr:nth-child(2n),
@@ -526,9 +527,6 @@
   .team-left-column[aria-label="Explore"] > div,
   .orgs-help-item-octicon,
   .timeline-new-comment .previewable-comment-form .comment-body,
-  .timeline-comment,
-  .timeline-comment-wrapper,
-  .timeline-comment-header,
   .Toast,
   .Toast-content,
   .Toast-dismissButton,
@@ -610,9 +608,9 @@
   .branch-action-body .merge-message,
   div[style*="#fcfdfd"],
   .comment-reactions.has-reactions,
+  .timeline-comment-header,
   .js-resolvable-timeline-thread-form,
   .review-comment,
-  .conversation-list-heading .inner,
   .commit-desc pre,
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
@@ -626,6 +624,7 @@
   .repo-list-item,
   .content.p-4.text-center.rounded-1.border.border-gray-light,
   .application-main main div.border-bottom.border-gray,
+  .js-file-content,
   .file-diff-split .empty-cell,
   .blob-code-expandable,
   .blob-num-expandable,
@@ -643,6 +642,7 @@
   .form-select,
   .viz,
   .viz .code-frequency,
+  .conversation-list-heading .inner,
   table.capped-list td,
   table.capped-list tr:nth-child(2n),
   table.capped-list th,
@@ -744,7 +744,6 @@
   .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge,
   .timeline-commits .hidden-text-expander .ellipsis-expander,
-  .timeline-comment-header,
   .Toast,
   .Toast-content,
   .topic-box.bg-white,
@@ -838,6 +837,7 @@
   .btn.btn-sm:disabled:hover,
   .graph-before-activity-overview,
   .comment-reactions .user-has-reacted,
+  .timeline-comment,
   .commits-listing:before,
   .commit-sha,
   .commits-list-item.navigation-focus,
@@ -934,7 +934,6 @@
   .TimelineItem:before,
   .TimelineItem .status-meta:before,
   .TimelineItem .merge-pr-more-commits:before,
-  .timeline-comment,
   .topic-box.bg-white:hover,
   .tree-browser-result.selected,
   .tree-browser-result[aria-selected="true"],
@@ -1268,20 +1267,20 @@
     background-color: var(--teal) !important;
   }
   .branch-action-body,
-  .comment-form .previewable-comment-form-head.tabnav,
+  .previewable-comment-form .comment-form-head.tabnav,
   .timeline-comment-wrapper {
     border: 0 !important;
   }
   .branch-action-body::before,
+  .composer.composer-responsive .timeline-comment::before,
   .commit-form::before,
-  #first-time-contributor .Popover-message::before,
-  .composer.composer-responsive .timeline-comment::before {
+  #first-time-contributor .Popover-message::before {
     border-right-color: var(--base-1) !important;
   }
   .branch-action-body::after,
+  .composer.composer-responsive .timeline-comment::after,
   .commit-form::after,
-  #first-time-contributor .Popover-message::after,
-  .composer.composer-responsive .timeline-comment::after {
+  #first-time-contributor .Popover-message::after {
     border-right-color: var(--base-4) !important;
   }
   .breadcrumb strong.final-path,
@@ -1291,6 +1290,7 @@
   .btn.btn-sm:hover,
   .btn-mktg,
   .btn-octicon:hover,
+  .timeline-comment-header,
   .team,
   .user-mention,
   .dropdown-item:hover,
@@ -1342,7 +1342,6 @@
   .pl-ii,
   .pl-c2,
   .pl-mb,
-  .timeline-comment-header,
   ::selection,
   .CodeMirror-hint-active,
   .sidebar-menu h3:hover,
@@ -1364,9 +1363,6 @@
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
   .text,
-  .conversation-list-heading,
-  .conversation-list-heading .inner,
-  .simple-conversation-list,
   .full-commit .sha-block,
   div.commit-build-statuses,
   .link-gray,
@@ -1374,8 +1370,11 @@
   .octicon-mute,
   .octicon-repo,
   .octicon-rocket,
+  .conversation-list-heading,
+  .conversation-list-heading .inner,
   .num,
   relative-time,
+  .simple-conversation-list,
   .pulse-section,
   .muted-link,
   .markdown-body .lead-mktg p,
@@ -1444,7 +1443,7 @@
   }
   .btn.btn-outline.BtnGroup-item,
   .btn.btn-outline.tooltipped.tooltipped-sw,
-  .comment-form .previewable-comment-form-head.tabnav,
+  .previewable-comment-form .comment-form-head.tabnav,
   .review-thread-reply,
   .review-thread-reply .inline-comment-form,
   .email-quoted-reply,
@@ -1595,8 +1594,8 @@
     border-bottom: 1px solid var(--base-1) !important;
   }
   .border,
-  .conversation-list-heading .inner,
   .dashboard-notice,
+  .conversation-list-heading .inner,
   .email-quoted-reply,
   .email-signature-reply,
   .markdown-body code,
@@ -1617,11 +1616,37 @@
   path[fill="#eee"] {
     fill: var(--base-7) !important;
   }
-  .conversation-list-heading .inner {
-    padding: 0 10px !important;
+  :target .timeline-comment {
+    box-shadow: 0 0 0 0.2em var(--base-1) !important;
   }
-  .conversation-list-heading .inner {
-    border-radius: 2px !important;
+  :target .timeline-comment::before {
+    filter: drop-shadow(-0.28em 0 0 var(--base-1));
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
+  .diffstat-summary strong,
+  .octicon.merged,
+  .octicon-git-pull-request,
+  .issue-keyword,
+  .State--purple,
+  .pl-k,
+  .graphiql-container .keyword {
+    color: var(--purple) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
+  .State--purple,
+  .alert.product {
+    border-color: var(--purple) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
+  .State--purple,
+  .alert.product {
+    background-color: var(--purple-trans) !important;
+  }
+  .timeline-comment--caret::before,
+  .timeline-comment--caret.current-user::before,
+  .timeline-comment--caret::after,
+  .timeline-comment--caret.current-user::after {
+    border-right-color: var(--base-4) !important;
   }
   .signed-commit-header,
   .signed-commit-badge.verified {
@@ -1706,16 +1731,6 @@
   }
   .diffstat-block-neutral {
     background-color: var(--sb) !important;
-  }
-  .diffstat-summary strong,
-  .octicon.merged,
-  .octicon-git-pull-request,
-  .issue-keyword,
-  .State--purple,
-  .pl-k,
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .graphiql-container .keyword {
-    color: var(--purple) !important;
   }
   .blob-code-deletion,
   .State--red,
@@ -1926,6 +1941,12 @@
   .viz .code-frequency,
   .content ol li pre code {
     padding: 8px !important;
+  }
+  .conversation-list-heading .inner {
+    padding: 0 10px !important;
+  }
+  .conversation-list-heading .inner {
+    border-radius: 2px !important;
   }
   .summary-stats li,
   .summary-stats li > .num,
@@ -2320,16 +2341,6 @@
   .State--purple {
     border: 1px solid var(--purple) !important;
   }
-  .State--purple,
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .alert.product {
-    border-color: var(--purple) !important;
-  }
-  .State--purple,
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
-  .alert.product {
-    background-color: var(--purple-trans) !important;
-  }
   .State--purple .octicon {
     fill: var(--purple) !important;
   }
@@ -2411,17 +2422,8 @@
   .deployments-timeline-item {
     border-left-color: var(--base-9) !important;
   }
-  :target .timeline-comment {
-    box-shadow: 0 0 0 0.2em var(--base-1) !important;
-  }
   :target .timeline-comment::before {
     filter: drop-shadow(-0.28em 0 0 var(--base-1));
-  }
-  .timeline-comment--caret::before,
-  .timeline-comment--caret.current-user::before,
-  .timeline-comment--caret::after,
-  .timeline-comment--caret.current-user::after {
-    border-right-color: var(--base-4) !important;
   }
   .Toast-dismissButton {
     max-height: none;

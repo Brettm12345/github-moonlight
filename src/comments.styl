@@ -2,21 +2,38 @@
   c 0 $base1
 .comment-
   &form
-    .previewable-comment-form
-      .comment-body
-        c 0 $base1
-      &-head.tabnav
-        b 0
-        c 0 0 $base3
+    .previewable-comment-form &-head.tabnav
+      b 0
+      c 0 0 $base3
   &reactions
     .user-has-reacted
       c 0 $base1 $base5
     &.has-reactions
       c 0 $base1 $base4
+.AvatarStack-body
+  &, & .avatar
+    c 0 $base1 $base2
+.timeline-comment
+  c $text $base1 $base5
+  /.composer.composer-responsive &
+    caret "right"
+  /:target &
+    s 0 0 0 0.2em $base1
+    &::before
+      filter drop-shadow(-0.28em 0 0 $base1)
+  &-wrapper
+    b 0
+    c 0 $base1
+  &-label.tooltipped.tooltipped-s.tooltipped-multiline
+    c $purple $purple $purpleTrans
+  &-header
+    c $cn $base1 $base4
+  &--caret
+    &, &.current-user
+      &::before, &::after
+        brc $base4
 .js-resolvable-timeline-thread-form
   c 0 0 $base4
-.inline-comment-form
-  c 0 $base1
 .review-
   &thread-reply
     c 0 $base1 $base3
@@ -24,15 +41,3 @@
       c 0 0 $base3
   &comment
     c $text $base1 $base4
-conversation-list
-  .&-heading
-    c $faded $base1
-    .inner
-      b $b
-      c $faded 0 $base4
-      p 0 10px
-      r 2px
-  .simple-&
-    c $faded
-    & > li
-      c 0 $base1
