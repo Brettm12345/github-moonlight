@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.0.2
+@version      2.0.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -124,7 +124,7 @@
   .commit-ref,
   .commit .commit-title,
   .commit-group-title,
-  commit a,
+  .commit a,
   .commits blockquote,
   .file-commit-form--full,
   .ellipsis-expander,
@@ -307,7 +307,8 @@
   .commit-ref,
   .commit-sha,
   .commit-tease,
-  .full-commit-meta,
+  .full-commit,
+  .full-commit .commit-meta,
   .file-commit-form--full,
   .diff-table tr:not(:last-child) .line-comments,
   .select-menu-item+.semantic-toc-file:after,
@@ -617,6 +618,7 @@
   .commit-group-title .octicon-git-commit,
   .commit-tease,
   .commits-list-item,
+  .full-commit,
   .commit-form,
   .select-menu-item+.semantic-toc-file:after,
   .semantic-toc-symbol:not(.last-visible):after,
@@ -795,9 +797,9 @@
     font-family: var(--mono-font) !important;
   }
   .CheckStep-line,
+  .signed-commit-badge.verified,
   .commit-ref,
   .full-commit .sha-block,
-  .signed-commit-badge.verified,
   code .link-gray,
   .markdown-body code,
   .markdown-body tt,
@@ -838,8 +840,8 @@
   .comment-reactions .user-has-reacted,
   .commits-listing:before,
   .commit-sha,
-  .full-commit-meta,
   .commits-list-item.navigation-focus,
+  .full-commit .commit-meta,
   .line-comments,
   .dashboard-notice,
   .exploregrid-item,
@@ -965,8 +967,8 @@
   .CircleBadge[style*="#fff"],
   .CircleBadge[style*="#eff9f9"],
   section[style*="#fafbfc"],
-  .commit-ref,
   .signed-commit-header,
+  .commit-ref,
   .file-commit-form--full,
   .private .mini-repo-list-item,
   .diffbar,
@@ -1076,14 +1078,15 @@
   .commit-ref .user,
   .commit-tease,
   .commit-tease-sha,
-  p.full-commit-title,
+  .full-commit,
+  .full-commit p.commit-title,
   .full-commit .sha-block > .sha,
   div.commit-build-statuses:hover,
-  commit .link-gray:hover,
+  .link-gray:hover,
   div.commit-build-statuses-dark,
-  commit .link-gray-dark,
+  .link-gray-dark,
   body div.commit-build-statuses-dark,
-  body commit .link-gray-dark,
+  body .link-gray-dark,
   .drag-and-drop,
   .file-header,
   .octicon-file-directory,
@@ -1366,7 +1369,7 @@
   .simple-conversation-list,
   .full-commit .sha-block,
   div.commit-build-statuses,
-  commit .link-gray,
+  .link-gray,
   .dropdown-header,
   .octicon-mute,
   .octicon-repo,
@@ -1620,30 +1623,6 @@
   .conversation-list-heading .inner {
     border-radius: 2px !important;
   }
-  .commit-sha,
-  .octicon-inbox,
-  .octicon-alert,
-  .octicon-pencil,
-  .octicon-light-bulb,
-  .protip  > strong,
-  .flash-warn,
-  .user-key-email-unverified,
-  .pl-smw,
-  .pl-mi,
-  mark,
-  .graphiql-container .type-name {
-    color: var(--yellow) !important;
-  }
-  .commit-tease-contributors,
-  .navigation-focus,
-  .ScreenshotCarousel-navitem:hover,
-  .ScreenshotCarousel-navitem:focus {
-    background-color: var(--base-9) !important;
-  }
-  .full-commit .sha-block,
-  body {
-    font-size: 14px !important;
-  }
   .signed-commit-header,
   .signed-commit-badge.verified {
     border-color: var(--green) !important;
@@ -1675,12 +1654,36 @@
   .alert.tip {
     background-color: var(--teal-trans) !important;
   }
+  .commit-sha,
+  .octicon-inbox,
+  .octicon-alert,
+  .octicon-pencil,
+  .octicon-light-bulb,
+  .protip  > strong,
+  .flash-warn,
+  .user-key-email-unverified,
+  .pl-smw,
+  .pl-mi,
+  mark,
+  .graphiql-container .type-name {
+    color: var(--yellow) !important;
+  }
+  .commit-tease-contributors,
+  .navigation-focus,
+  .ScreenshotCarousel-navitem:hover,
+  .ScreenshotCarousel-navitem:focus {
+    background-color: var(--base-9) !important;
+  }
+  .full-commit .sha-block,
+  body {
+    font-size: 14px !important;
+  }
   div.commit-build-statuses-dark:hover,
-  commit .link-gray-dark:hover,
+  .link-gray-dark:hover,
   body div.commit-build-statuses-dark:hover,
-  body commit .link-gray-dark:hover,
+  body .link-gray-dark:hover,
   body body div.commit-build-statuses-dark:hover,
-  body body commit .link-gray-dark:hover,
+  body body .link-gray-dark:hover,
   .news .Details button:hover,
   .markdown-body a,
   .protip  > strong,

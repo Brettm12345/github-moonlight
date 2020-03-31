@@ -1,73 +1,73 @@
-commit
-  .&-author-section
+.signed-commit
+  &-header
+    c 0 $green $base2
+  &-verified-label
+    c $green
+  &-badge.verified
+    c $green $green $tealTrans
+    fw 500
+.commit
+  &-author-section
     c $blue
-  .&-desc pre
+  &-desc pre
     c $text 0 $base4
-  .&s-listing:before
+  &s-listing:before
     c 0 0 $base5
-  .&-icon .octicon, .&-group-title .octicon-git-commit
+  &-icon .octicon, &-group-title .octicon-git-commit
     c $text 0 $base4
-  .&-ref
+  &-ref
     c $text $base1 $base2
     fn $monoFont
     fw 500
     .user
       c $blue
-  .&-sha
+  &-sha
     c $yellow $base1 $base5
-  .& .&-title, .&-group-title, a
+  & &-title, &-group-title, a
     c $text
-  .&-tease
+  &-tease
     c $blue $base1 $base4
     &-sha
       c $blue
     &-contributors
       bt $b
       c 0 0 $base9
-  .full-&
-    p&-title
-      c $blue
-    .sha-block
-      c $faded
-      fs 14px
-      fw 500
-      & > .sha
-        c $blue
-    &-meta
-      c 0 $base1 $base5
-  .&s
-    blockquote
-      c $text
-    &-list-item
-      c 0 0 $base4
-      &.navigation-focus
-        c 0 0 $base5
-  .signed-&
-    &-header
-      c 0 $green $base2
-    &-verified-label
-      c $green
-    &-badge.verified
-      c $green $green $tealTrans
-      fw 500
-  &-form
-    .&
-      c 0 0 $base4
-      caret "right"
-    .file-&--full
-      c $text $base1 $base2
-  /div.&-build-statuses, .link-gray
+.commits
+  blockquote
+    c $text
+  &-list-item
+    c 0 0 $base4
+    &.navigation-focus
+      c 0 0 $base5
+.full-commit
+  c $blue $base1 $base4
+  p.commit-title
+    c $blue
+  .sha-block
     c $faded
-    &:hover
+    fs 14px
+    fw 500
+    & > .sha
       c $blue
-    &-dark, body &-dark
-      c $blue
-      &:hover, body &:hover
-        td underline
--expander
-  .ellipsis&, .hidden-text& a
-    c $text 0 $base7
+  .commit-meta
+    c 0 $base1 $base5
+.file-commit-form--full
+  c $text $base1 $base2
+.commit-form
+  c 0 0 $base4
+  caret "right"
 .line-comments
   c 0 0 $base5
   /.diff-table tr:not(:last-child) &
     c 0 $base1
+div.commit-build-statuses, .link-gray
+  c $faded
+  &:hover
+    c $blue
+  &-dark, body &-dark
+    c $blue
+    &:hover, body &:hover
+      td underline
+-expander
+  .ellipsis&, .hidden-text& a
+    c $text 0 $base7
