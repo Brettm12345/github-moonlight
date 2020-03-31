@@ -2,7 +2,7 @@
   &.discussion-timeline:before
     c 0 0 $base5
   &-year-list.bg-white
-    bg transparent
+    bg $t
   &-rollup-content li.d-block.mt-1.py-1
     c 0 0 $base2
   &-card.bg-white
@@ -15,10 +15,12 @@
   &item-icon
     c $text $base5 $base7
   &timeline-actions
-    c 0 $base5 transparent
+    c 0 $base5 $t
   &sidebar-
     &heading
       c $text
     &item
       c $faded
       fw 500
+      &+&
+        c 0 $border

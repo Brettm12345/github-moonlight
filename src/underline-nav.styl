@@ -1,8 +1,10 @@
 .UnderlineNav
   c 0 $base1 $base5
   ease background-color, border-color
+  /nav& + div.border.d-md-block
+    c 0 0 $base4
   &[style*="margin-top"]
-    c 0 transparent $base2
+    c 0 $t $base2
   &-item
     &.selected, &[aria-current], &[aria-selected=true]
       bbc $blue

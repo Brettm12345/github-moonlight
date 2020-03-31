@@ -1,3 +1,19 @@
+input
+  caret-color $blue
+  &[type="text"]
+    c $cn $base1 $base4
+.input-contrast
+  box()
+.drag-and-drop
+  c $blue $base1 $base4
+.file
+  &:target
+    s-1()
+  &, &-wrap
+    c 0 $base1
+  &-header
+    c $blue $base1 $base4
+    m 0
 .form-
   &group &control
     c $cn $base1 $base4
@@ -19,3 +35,5 @@
       &.focus, &:focus
         c $cn $blue 0
         s none
+.write-content.js-write-bucket
+  s none

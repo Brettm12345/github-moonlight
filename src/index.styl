@@ -1,15 +1,21 @@
-@require "common"
 @require "notifications"
+@require "auth"
 @require "box"
 @require "suggester"
 @require "compare-toc"
 @require "timeline"
 @require "topics"
+@require "avatars"
 @require "buttons"
+@require "shadows"
+@require "links"
+@require "toolbar"
 @require "comments"
+@require "label"
 @require "breadcrumb"
 @require "filter-list"
 @require "toast"
+@require "listgroup"
 @require "code-search"
 @require "blankslate"
 @require "circle-badge"
@@ -66,10 +72,6 @@ body
   fn $uiFont, sans-serif
   fs 14px
   lh 1.8
-input
-  caret-color $blue
-  &[type="text"]
-    c $cn $base1 $base4
 img
   c 0 0 $base3
 h1
@@ -85,10 +87,6 @@ ol, ul
 legend
   fs 0.9em
   fw 600
-input, select, button, textara
-  &:disabled
-    cursor not-allowed
-    o 0.5
 fieldset
   b $b
   m 0
@@ -97,120 +95,18 @@ fieldset
   r 6px
 code, pre, tt
   mono()
-.description
-  c $text
 img[src*="octocat-spinner-64.gif"]
   inv()
-.muted-link
-  c $faded
-  &:hover
-    c $blue
-.js-recent-activity-container > div > div
-  c 0 0 $base2
-path[fill="#eee"]
-  v $base7
-.Label--
-  &gray
-    c $text $base1 $base2
-  &outline
-    c $text $base1
-.repository-lang-stats ol.repository-lang-stats-numbers li .lang
-  c $cn
-div[style*="linear-gradient"]
-  bg linear-gradient(to top, $base1, transparent)
-.numbers-summary
-  octicon $text
-  li > .nolink, li > a
-    c $faded
-.js-navigation-open
-  ease color
-.border, .rgh-collaborator
-  b $b
-.auth-form-body
-  c $text $base1 $base4
-.access-token
-  bbc $base1
-div.listgroup-item
-  c $text $base1
-.showcase-page-pattern::after
-  c 0 $base4 $base1
-.write-content.js-write-bucket
-  s none
-.flash
-  c $cn $base1 $base4
-  &-warn
-    c $yellow
-.boxed-group
-  &-inner, & .heading, & > h3
-    c 0 $base1 $base4
-.rule, hr
-  bb $b
-.file
-  &:target
-    s-1()
-  &, &-wrap
-    c 0 $base1
-  &-header
-    c $blue $base1 $base4
-    m 0
-.drag-and-drop
-  c $blue $base1 $base4
-.pl-s > a
-  c $green
-:not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab)
-  c $text
-  &:hover
-    c $blue
-.access-form-wrapper
-  c 0 $base1 $base4
-.discussion-sidebar-heading
-  c $text
-.footer, .site-footer
-  bt $b
-.octofication .message, .overall-summary
-  c 0 $base1 $base4
-.input-contrast
-  box()
-.Counter
-  c $cn $base1 $blueDark
-.note, .help
-  c $blue
-.application-main
-  & > main > div.border-bottom.border-gray-light
-    c 0 0 $base2
-  .flex-wrap
-    c 0 0 transparent
-.contrib-person path
-  v $orange
-.toolbar-item
-  &, & .menu-target
-    &:hover
-      c $blue $base5
-    c $text
-    ease color
-.body > div.d-flex
-  px 10px
-.js-notice, .content.p-4.text-center.rounded-1.border.border-gray-light
-  c 0 0 $base4
-.text
-  c $faded
-.border-
-  &top
-    bt $b
-  &left
-    bl $b
-  &right
-    br $b
-  &bottom
-    bb $b
-.repository-content > div.bg-white:first-child
-  c 0 0 $base2
 section[style*="#fafbfc"]
   c 0 0 $base2
-.boxed-group-inner
-  c $text
-.box-shadow-
-  &medium
-    s-1()
-  &large
-    s-2()
+.application-main
+  & > main > div.border-bottom.border-gray-light
+    c 0 0 $red
+  .flex-wrap
+    c 0 0 $t
+.body > div.d-flex
+  px 10px
+.rule, hr
+  bb $b
+.showcase-page-pattern::after
+  c 0 $base4 $base1

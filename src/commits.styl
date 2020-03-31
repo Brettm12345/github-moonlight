@@ -12,6 +12,8 @@ code .link-gray
   caret "right"
 .inline-comment-form
   c 0 $base1
+.description
+  c $text
 .commit
   &-author-section
     c $blue
@@ -19,8 +21,8 @@ code .link-gray
     c $text 0 $base4
   &s-listing:before
     c 0 0 $base5
-  &-group-title .octicon-git-commit
-    c $text
+  &-icon .octicon, &-group-title .octicon-git-commit
+    c $text 0 $base4
   &-ref
     c $text $base1 $base2
     fn $monoFont

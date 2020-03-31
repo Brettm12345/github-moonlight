@@ -11,6 +11,8 @@ $textColors = {
 map-record($textColors, '.text-', color)
 $borderColors = {
   blue-light: $blue
+  gray-dark: $base1
+  lg-left: $base1
 }
 map-record($borderColors, '.border-', border-color)
 $bgColors = {
@@ -27,3 +29,15 @@ $bgColors = {
   pending: $purple
 }
 map-record($bgColors, '.bg-', background-color)
+for $direction in top left right bottom
+  $x = 'border-' + $direction
+  .{$x}
+    {$x} $b $i
+.border
+  b $b
+.text
+  c $faded
+div[style*="#fcfdfd"]
+  c 0 0 $base4
+path[fill="#eee"]
+  v $base7

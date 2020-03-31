@@ -19,7 +19,7 @@ text
   c $faded $base1
   .inner
     b $b
-    c $faded
+    c $faded 0 $base4
     p 0 10px
     r 2px
 .num, relative-time
@@ -29,6 +29,8 @@ text
   & > li
     c 0 $base1
 .graphs
+  &.axis
+    c 0 $base1
   .dir
     c $text
   .area
@@ -57,3 +59,7 @@ table.capped-list
     c $text $base1 $base4
 .pulse-section
   c $faded
+.contrib-person path
+  v $orange
+#contributors-master svg.viz
+  c 0 0 $base4

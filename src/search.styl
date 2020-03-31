@@ -8,21 +8,25 @@ header #search-results-container
     c 0 0 $base3
     px 16px
 .user, .issue
-  &-list-item
-    &+&
-      btc $base1
+  {adjacent('&-list-item')}
+    btc $base1
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c $text $base1 $base5
   &-item
     &.hx_hit-code&-public.repo-specific
       c 0 0 $base2
+.js-navigation-open
+  ease color
 .jump-to-
   &field-active, .js-navigation-item:hover, #jump-to-results:hover
     c 0 0 $base5
   &suggestions
-    &-results-container .navigation-focus &-path
-      c 0 0 $base8
+    &-results-container .navigation-
+      &item
+        c 0 0 $base4
+      &focus &-path
+        c 0 0 $base8
 .ais-
   /.search-result-intro
     & mark, & .ais-Highlight-highlighted

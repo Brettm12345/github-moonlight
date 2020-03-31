@@ -13,9 +13,16 @@
       c $purple
 .diffbar
   c 0 0 $base2
-.file-diff-split .empty-cell
-  c 0 $base1 $base4
+.file-diff-split
+  .empty-cell
+    c 0 $base1 $base4
+  .blob-
+    &code + &num
+      c 0 $base1
 .blob-
+  &code, &num
+    &-expandable, &-hunk
+      c 0 0 $base4
   &code-
     &addition
       c 0 0 $tealTrans
@@ -45,5 +52,6 @@
     c $base9 $base1 $base4
     fw 600
   &expanded
-    &code, &num
-      c 0 $base1 $base4
+    & + tr:not(&), tr:not(&) + &
+      ~/code, ~/num
+        c 0 $base1 $base4

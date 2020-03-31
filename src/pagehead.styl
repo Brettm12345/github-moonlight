@@ -10,7 +10,7 @@
 body.page-responsive.pagehead
   c 0 0 $base3
 .reponav-item
-  b none
+  b 1px solid $t
   c $blue
   .octicon
     c $indigo
@@ -19,8 +19,8 @@ body.page-responsive.pagehead
   &:focus, &:hover
     c $blue
   &.selected
-    bc $blue $base1 transparent
-    c $blue 0 $base2
+    bbc $t
+    c $blue $base1 $base2
     .octicon
       c $text
       filter none
@@ -38,3 +38,7 @@ body.page-responsive.pagehead
     c $text $base1
 .site-header
   c 0 $base1 $base4
+.footer, .site-footer
+  bt $b
+.Counter
+  c $cn $base1 $blueDark

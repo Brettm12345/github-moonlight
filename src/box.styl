@@ -1,12 +1,16 @@
 *:not(code) .Box
   c 0 $base1 $base4
 .Box
+  &-body
+    c 0 $base1
   &--responsive, &row--unread
     s inset 2px 0 0 $blue
   &-header
     c 0 $base1 $base4
     &--blue
       c $blue $base1 $base4
+  &-footer
+    c 0 $base1
   &-row
     &:first-of-type
       bt 0
@@ -21,7 +25,9 @@
     &focus-gray
       c 0 0 $base5
     &yellow
-      c $text $yellow transparent
+      c $text $yellow $t
     ../--responsive &unread::before
       bgi none
       c 0 0 $blue
+.tint-box
+  c 0 0 $base4
