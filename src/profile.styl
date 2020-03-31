@@ -6,10 +6,12 @@
   &checkbox:checked + &name
     c $text $base1 $base7
 .profile-rollup-
-  {adjacent('&summarized')}
-    c 0 $base1
-  {adjacent('&wrapper')}
-    bt 1px solid $base5
+  &summarized
+    &+&
+      c 0 $base1
+  &wrapper
+    &+&
+      bt 1px solid $base5
 .activity-overview-
   &percentage
     v $cn

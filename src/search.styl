@@ -8,8 +8,9 @@ header #search-results-container
     c 0 0 $base3
     px 16px
 .user, .issue
-  {adjacent('&-list-item')}
-    btc $base1
+  &-list-item
+    &+&
+      btc $base1
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c $text $base1 $base5

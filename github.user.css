@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      1.9.5
+@version      1.9.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -244,7 +244,7 @@
   .pagination .gap:hover,
   .pagination [aria-disabled=true]:hover,
   .pinned-item-checkbox:checked + .pinned-item-name,
-  .profile-rollup- .profile-rollup-summarized.profile-rollup-summarized,
+  .profile-rollup-summarized+.profile-rollup-summarized,
   .user-profile-sticky-bar:after,
   .js-profile-editable-edit-button,
   .menu,
@@ -1654,7 +1654,7 @@
   .github-jobs-logo strong {
     filter: invert(1);
   }
-  .profile-rollup- .profile-rollup-wrapper.profile-rollup-wrapper {
+  .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--base-5) !important;
   }
   .activity-overview-percentage,
@@ -2020,10 +2020,8 @@
     opacity: 0.4 !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
-  .user .user-list-item.user-list-item,
-  .issue .user-list-item.user-list-item,
-  .user .issue-list-item.issue-list-item,
-  .issue .issue-list-item.issue-list-item,
+  .user-list-item+.user-list-item,
+  .issue-list-item+.issue-list-item,
   .SelectMenu-filter,
   .news .Details-content--hidden li,
   .news .Details button,
