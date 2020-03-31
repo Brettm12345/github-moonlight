@@ -1,4 +1,4 @@
-# Created 2020-03-30 Mon 16:06
+# Created 2020-03-30 Mon 23:01
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -37,8 +37,8 @@ This theme adds easings from [[https://easings.net][easings.net]] so that color
 changes appear smoother.
 *** Extendible Code
 The theme being written in stylus and with many mixins minimizes boilerplate and
-allows for an optimized development workflow. Making it easy to create themes
-based off of this one and customize all aspects of the theme.
+allows for an optimized development workflow. All of the files are organized
+into files with relivant names making it easy to structure and locate code.
 * Recomended Fonts
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
