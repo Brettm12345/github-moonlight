@@ -331,7 +331,7 @@
   .timeline-comment-header,
   .review-thread-reply,
   .review-comment,
-  .conversation-list,
+  .conversation-list-heading,
   .simple-conversation-list > li,
   .commit-ref,
   .commit-sha,
@@ -672,7 +672,7 @@
   .timeline-comment-header,
   .js-resolvable-timeline-thread-form,
   .review-comment,
-  .conversation-list .inner,
+  .conversation-list-heading .inner,
   .commit-desc pre,
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
@@ -1353,8 +1353,8 @@
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
   .text,
-  .conversation-list,
-  .conversation-list .inner,
+  .conversation-list-heading,
+  .conversation-list-heading .inner,
   .simple-conversation-list,
   .commits-list-item .commit-desc pre,
   .commits-list-item .commit-author,
@@ -1479,7 +1479,7 @@
   }
   .blankslate > .Box.bg-gray,
   .border,
-  .conversation-list .inner,
+  .conversation-list-heading .inner,
   .dashboard-notice,
   .email-quoted-reply,
   .email-signature-reply,
@@ -2053,10 +2053,10 @@
   .timeline-comment--caret.current-user::after {
     border-right-color: var(--base-4) !important;
   }
-  .conversation-list .inner {
+  .conversation-list-heading .inner {
     padding: 0 10px !important;
   }
-  .conversation-list .inner {
+  .conversation-list-heading .inner {
     border-radius: 2px !important;
   }
   .commit-tease-contributors,
