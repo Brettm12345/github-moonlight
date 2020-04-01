@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.0.5
+@version      2.0.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -450,6 +450,7 @@
   .code-list .divider .blob-code,
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num,
+  .jump-to-suggestions-results-container .navigation-item,
   .ais-SearchBox-input,
   #commit_search_results .commit,
   .SelectMenu-divider,
@@ -703,7 +704,6 @@
   .flash,
   .filter-bar,
   header #search-results-container,
-  .jump-to-suggestions-results-container .navigation-item,
   #commit_search_results .commit,
   .SelectMenu-item,
   .SelectMenu-modal,
@@ -895,8 +895,8 @@
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num,
   .jump-to-field-active,
-  .jump-to- .js-navigation-item:hover,
-  .jump-to- #jump-to-results:hover,
+  .js-navigation-item:hover,
+  #jump-to-results:hover,
   .SelectMenu-item:hover,
   .user-key-email,
   .user-key-badge,
@@ -988,6 +988,7 @@
   #readme .Box-header:hover,
   .js-recent-activity-container > div > div,
   .repository-content > div.bg-white:first-child,
+  .search_repos fieldset,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .SelectMenu-divider,
   .SelectMenu-tab,
@@ -1027,7 +1028,7 @@
   .notifications-dropdown-see-all,
   .progress-bar .progress,
   .checks-list-item.selected .checks-list-item-name,
-  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-results-container .navigation--path,
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
   .select-menu-item:hover,
   ::selection,
   .CodeMirror-hint-active,
@@ -1456,7 +1457,6 @@
   .Popover-message,
   .new-project-column,
   #readme .Box-header,
-  .search_repos fieldset,
   .SelectMenu-list,
   .select-menu-filters,
   .user-key-email-unverified,
@@ -2016,7 +2016,6 @@
   }
   .markdown-body a,
   #readme .Box-header .octicon-pencil,
-  .js-navigation-open,
   .toolbar-item,
   .toolbar-item .menu-target {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -2297,6 +2296,9 @@
   .search_repos fieldset {
     padding-left: 16px !important;
     padding-right: 16px !important;
+  }
+  .form-group .form-control .search-input {
+    caret-color: var(--blue);
   }
   .search-result-intro mark,
   .search-result-intro .ais-Highlight-highlighted,

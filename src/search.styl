@@ -5,29 +5,49 @@ header #search-results-container
   c 0 0 $base4
 .search_repos
   fieldset
-    c 0 0 $base3
+    c 0 0 $base2
     px 16px
 .user, .issue
   &-list-item
     &+&
       btc $base1
+.form-
+  &group &control
+    c $cn $base1 $base4
+    .search-input
+      caret-color $blue
+    &:focus
+      c 0 $blue $base7
+      .form-control, .ais-SearchBox-input, .form-select
+        &.focus, &:focus
+          c 0 $blue
+          s none
+  &control
+    &, ~/select
+      ^[1].search-page-label.js-advanced-search-label
+        &, & input
+          c 0 0 $base5
+      c $cn $base1 $base4
+      s none
+      &.focus, &:focus
+        c $cn $blue 0
+        s none
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c $text $base1 $base5
   &-item
     &.hx_hit-code&-public.repo-specific
       c 0 0 $base2
-.js-navigation-open
-  ease color
 .jump-to-
-  &field-active, .js-navigation-item:hover, #jump-to-results:hover
+  &field-active, /.js-navigation-item:hover, /#jump-to-results:hover
     c 0 0 $base5
   &suggestions
-    &-results-container .navigation-
-      &item
-        c 0 0 $base4
-      &focus &-path
-        c 0 0 $base8
+    &-results-container
+      .navigation-
+        &focus ^[1]-path
+          c 0 0 $base8
+        &item
+          c 0 $base1
 .ais-
   /.search-result-intro
     & mark, & .ais-Highlight-highlighted
