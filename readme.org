@@ -1,10 +1,11 @@
-# Created 2020-03-31 Tue 21:49
+# Created 2020-03-31 Tue 21:52
 #+TITLE: 
 #+AUTHOR: Brett Mandler
-* Github Moonlight
 #+export_file_name: ../readme
 #+html: <div align="center">
 #+macro: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
+
+* Github Moonlight
 
 A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
@@ -26,24 +27,37 @@ You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on 
 
 **** Customization
 ***** Colors
+
 All color variables are easily customizable
 check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
+
 ***** Fonts
+
 The ui and the monospace fonts are easily customizable through css variables
+
 **** Completeness
+
 This theme changes 100% of the github ui. If you want to teak
 the colors to match the rest of your system go ahead! Forks and pull requests
 are welcome!
+
 **** Speed
+
 Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
 compression to consolidate and minify selectors
+
 **** Transitions
+
 This theme adds easings from [[https://easings.net][easings.net]] so that color
 changes appear smoother.
+
 **** Clean Code
+
 The theme being written in [[https://stylus-lang.com/][stylus-lang]] utilizing several [[https://github.com/Brettm12345/github-moonlight/blob/master/src/mixins.styl][mixins]] in order to
 minimize boilerplate.
+
 **** Organization
+
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 

@@ -1,7 +1,8 @@
-* Github Moonlight
 #+EXPORT_FILE_NAME: ../readme
 #+HTML: <div align="center">
 #+MACRO: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
+
+* Github Moonlight
 
 A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
