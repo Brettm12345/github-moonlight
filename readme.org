@@ -1,4 +1,4 @@
-# Created 2020-03-31 Tue 21:58
+# Created 2020-03-31 Tue 22:17
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -79,6 +79,7 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Profile</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/profile.png" alt="Profile" width="100%" /></details>
 #+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
 #+html: <details><summary>Commit Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
+#+html: <details><summary>Search</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/search.png" alt="Search" width="100%" /></details>
 #+html: <details><summary>Dashboard</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>
 #+html: <details><summary>Pull Requests</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
 #+html: <details><summary>File Finder</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
