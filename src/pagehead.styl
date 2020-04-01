@@ -22,16 +22,12 @@ body.page-responsive.pagehead
     .octicon
       c $base9
       va middle
-    &:focus, &:hover
-      c $blue
-      octicon $blue
+    &.selected, &:focus, &:hover
+      &, & .octicon
+        c $textAlt
     &.selected
       bbc $t
       c $text $base1 $base2
-      .octicon
-        c $textAlt
-        filter none
-        o 1
 .pagehead
   &-actions .btn
     c 0 0 $base4

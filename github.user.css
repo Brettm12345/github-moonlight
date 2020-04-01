@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.5
+@version      2.5.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1307,7 +1307,12 @@
   .markdown-body a,
   .markdown-body span.frame span span,
   .manage-member-meta-item > octicon,
+  .reponav-item.selected,
+  .reponav-item:focus,
+  .reponav-item:hover,
   .reponav-item.selected .octicon,
+  .reponav-item:focus .octicon,
+  .reponav-item:hover .octicon,
   p.explain strong,
   .orgs-help-item-content,
   .table-list-header-meta {
@@ -1681,8 +1686,6 @@
   .menu-item[aria-current],
   .orghead .org-name,
   .orghead .pagehead-tabs-item.selected,
-  .reponav-item:focus,
-  .reponav-item:hover,
   .ajax-pagination-btn,
   .pagination a:hover,
   .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
@@ -2433,7 +2436,6 @@
   .markdown-body h4:hover .octicon-link,
   .markdown-body h5:hover .octicon-link,
   .markdown-body h6:hover .octicon-link,
-  .reponav-item.selected .octicon,
   .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:focus,
@@ -2493,8 +2495,6 @@
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
   .notification-navigation .notification-configure-filters:focus .octicon,
-  .reponav-item:focus .octicon,
-  .reponav-item:hover .octicon,
   .orgs-help-item-octicon .octicon {
     color: var(--blue) !important;
   }
@@ -2519,9 +2519,6 @@
   }
   .reponav-item.selected {
     border-bottom-color: transparent !important;
-  }
-  .reponav-item.selected .octicon {
-    filter: none;
   }
   .pagehead .octicon,
   .pagehead-tabs-item .octicon,
