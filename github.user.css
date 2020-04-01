@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.0.9
+@version      2.1.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1005,6 +1005,7 @@
   .tabnav-pr .tabnav-tab.selected,
   .tabnav-pr .tabnav-tab[aria-selected="true"],
   .tabnav-pr .tabnav-tab[aria-current],
+  .tabnav-tabs[aria-label="Stargazers"] .tabnav-tab.selected,
   .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .team-left-column > div,
   .Toast-dismissButton,
@@ -1415,6 +1416,7 @@
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body,
+  .follow-list-info,
   .hook-delivery-time,
   .graphiql-container .doc-category-title,
   .octokit-language span,
@@ -2399,6 +2401,9 @@
   }
   .container-preview .tabnav-tabs {
     margin-left: 5% !important;
+  }
+  .tabnav-tabs[aria-label="Stargazers"] .tabnav-tab:not(.selected) {
+    filter: saturate(0.6);
   }
   .tabnav-tabs.js-file-editor-nav .tabnav-tab {
     margin-top: 8px !important;
