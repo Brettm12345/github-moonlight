@@ -25,7 +25,7 @@ You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on 
 **** Customization
 
 All color and font variables are easily customizable
-check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
+check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference.
 
 **** Completeness
 
@@ -36,7 +36,7 @@ are welcome!
 **** Speed
 
 Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
-compression to consolidate and minify selectors
+compression to consolidate and minify selectors.
 
 **** Transitions
 
@@ -53,7 +53,7 @@ minimize boilerplate.
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 
-** Reccommendations
+** Recommendations
 *** Fonts
 
 These are the fonts used in the screenshots
@@ -97,15 +97,15 @@ These are the fonts used in the screenshots
 
 If you find any places where this theme is incomplete please do not hesitate to
 create an issue. Most likely I have never visited the area of the site that
-is incomplete
+is incomplete.
 
 ** Discord Server
 
-Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for support/inqueries or just to chat.
+Feel free to join our [[https://discord.gg/n5meNsX][discord server]] for support/inqueries or just to chat.
 
 ** Contributions
 
-Contributions are welcome! Please refer to the [[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]
+Contributions are welcome! Please refer to the [[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]].
 
 ** Todo
 
