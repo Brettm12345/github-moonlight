@@ -12,22 +12,24 @@
   c $text $base1 $base2
 body.page-responsive.pagehead
   c 0 0 $base3
-.reponav-item
-  b 1px solid $t
-  c $blue
-  .octicon
-    c $indigo
-    filter contrast(0.5)
-    o 0.8
-  &:focus, &:hover
+.reponav
+  c 0 0 $base4
+  &-item
+    b 1px solid $t
     c $blue
-  &.selected
-    bbc $t
-    c $blue $base1 $base2
     .octicon
-      c $text
-      filter none
-      o 1
+      c $indigo
+      filter contrast(0.5)
+      o 0.8
+    &:focus, &:hover
+      c $blue
+    &.selected
+      bbc $t
+      c $blue $base1 $base2
+      .octicon
+        c $text
+        filter none
+        o 1
 .pagehead
   &-actions .btn
     c 0 0 $base4

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.9
+@version      2.2.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -671,6 +671,7 @@
   .notifications-list-item.notification-unread,
   .orghead,
   .gh-header-sticky.is-stuck + .gh-header-shadow,
+  .reponav,
   .pagehead-actions .btn,
   .site-header,
   .ajax-pagination-form:not(.js-more-repos-form) button,
