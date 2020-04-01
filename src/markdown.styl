@@ -1,5 +1,7 @@
 .markdown-body
   lh 1.9
+  del
+    c $base9
   /.js-commit-preview &
     c 0 0 $base5
   .lead-mktg p
@@ -22,7 +24,7 @@
     tr td
       c $text $base1 $base3
   p
-    o 0.8
+    c $textParagraph
   pre > code
     c 0 0 $t
   .csv-data
@@ -59,7 +61,10 @@
     span span
       c $textAlt
   blockquote
-    c $textAlt $base1 $base5
+    bg linear-gradient(to right, $base6, $base3)
+    c 0 $base7 $base5
+    p
+      c $textDark
   .clippy-wrapper .clippy
     c $cn $base1 $base4
     ease border-color, background-color

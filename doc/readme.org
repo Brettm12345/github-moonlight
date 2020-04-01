@@ -1,6 +1,7 @@
 #+EXPORT_FILE_NAME: ../readme
 #+HTML: <div align="center">
 #+MACRO: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
+#+MACRO: screenshot-dir https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots
 
 * Github Moonlight
 
@@ -12,7 +13,7 @@ made with :heart:
 {{{badge(Commit Activity,github.com/Brettm12345/github-moonlight/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
 {{{badge(Stars,github.com/Brettm12345/github-moonlight/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
 
-#+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
+#+HTML: <img src="{{{screenshot-dir}}}/repo.png" alt="Screenshot" />
 #+HTML: </div>
 
 ** Installation
@@ -62,6 +63,7 @@ These are the fonts used in the screenshots
 *** Extensions
 
 | Extension           | Description                                   |
+|---------------------+-----------------------------------------------|
 | [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                              |
 | [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]          | Hides nonsensical files                       |
 | [[https://github.com/sindresorhus/refined-github][Refined Github]]      | Adds a number of small enhancements to github |
@@ -70,7 +72,7 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github                  |
 
 ** Additional Screenshots
-#+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+#+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="{{{screenshot-dir}}}/$2.png" alt="$1" width="100%" /></details>
 
 {{{screenshot(Repo,repo)}}}
 {{{screenshot(Profile,profile)}}}
@@ -103,7 +105,7 @@ Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for su
 
 ** Contributions
 
-Contributions are welcome! Please refer to the *[[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]*
+Contributions are welcome! Please refer to the [[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]
 
 ** Todo
 

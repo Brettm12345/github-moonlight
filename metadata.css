@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.3
+@version      2.5.4
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -35,10 +35,13 @@
 @var color base-7     "Base 7"     #2f334d
 @var color base-8     "Base 8"     #383e5c
 @var color base-9     "Base 9"     #444a73
-@var color text-color "Text"       #c8d3f5
-@var color text-alt   "Alt Text"   #b4c2f0
-@var color text-gray  "Gray Text"  #a9b8e8
-@var color cn         "Light text" #ffffff
+
+@var color text-color     "Text"           #c8d3f5
+@var color text-alt       "Alt Text"       #b4c2f0
+@var color text-gray      "Gray Text"      #a9b8e8
+@var color text-dark      "Dark Text"      #828bb8
+@var color text-paragraph "Paragraph Text" #c0cdf3
+@var color cn             "Light text"     #e2e8fa
 
 @var color border-alt   "Alt Border"         #22243660
 @var color active       "Active"             #828bb8aa
@@ -104,6 +107,8 @@
   --text: /*[[text-color]]*/ ;
   --text-alt: /*[[text-alt]]*/ ;
   --text-gray: /*[[text-gray]]*/ ;
+  --text-dark: /*[[text-dark]]*/ ;
+  --text-paragraph: /*[[text-paragraph]]*/ ;
   --ui-font: /*[[ui_font]]*/ ;
   --yellow: /*[[yellow]]*/ ;
   --yellow-trans: /*[[yellow-trans]]*/ ;

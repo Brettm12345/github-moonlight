@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.3
+@version      2.5.4
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -35,10 +35,13 @@
 @var color base-7     "Base 7"     #2f334d
 @var color base-8     "Base 8"     #383e5c
 @var color base-9     "Base 9"     #444a73
-@var color text-color "Text"       #c8d3f5
-@var color text-alt   "Alt Text"   #b4c2f0
-@var color text-gray  "Gray Text"  #a9b8e8
-@var color cn         "Light text" #ffffff
+
+@var color text-color     "Text"           #c8d3f5
+@var color text-alt       "Alt Text"       #b4c2f0
+@var color text-gray      "Gray Text"      #a9b8e8
+@var color text-dark      "Dark Text"      #828bb8
+@var color text-paragraph "Paragraph Text" #c0cdf3
+@var color cn             "Light text"     #e2e8fa
 
 @var color border-alt   "Alt Border"         #22243660
 @var color active       "Active"             #828bb8aa
@@ -104,6 +107,8 @@
   --text: /*[[text-color]]*/ ;
   --text-alt: /*[[text-alt]]*/ ;
   --text-gray: /*[[text-gray]]*/ ;
+  --text-dark: /*[[text-dark]]*/ ;
+  --text-paragraph: /*[[text-paragraph]]*/ ;
   --ui-font: /*[[ui_font]]*/ ;
   --yellow: /*[[yellow]]*/ ;
   --yellow-trans: /*[[yellow-trans]]*/ ;
@@ -406,7 +411,6 @@
   .highlight pre,
   .markdown-body pre,
   .markdown-body span.frame > span,
-  .markdown-body blockquote,
   .markdown-body .clippy-wrapper .clippy,
   .MarketplaceBackground-buffer,
   .MarketplacePlan--sticky div.bg-white,
@@ -1303,7 +1307,6 @@
   .list-group-item-summary a,
   .markdown-body a,
   .markdown-body span.frame span span,
-  .markdown-body blockquote,
   .manage-member-meta-item > octicon,
   p.explain strong,
   .orgs-help-item-content,
@@ -1547,6 +1550,7 @@
     color: var(--base-1) !important;
   }
   .blob-num,
+  .markdown-body del,
   .pl-ba,
   .TimelineItem-badge,
   .TimelineItem .status-meta-badge,
@@ -2375,9 +2379,8 @@
   .toolbar-item .menu-target {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
-  .markdown-body p,
-  .reponav-item .octicon {
-    opacity: 0.8 !important;
+  .markdown-body p {
+    color: var(--text-paragraph) !important;
   }
   .markdown-body code,
   .markdown-body tt {
@@ -2434,6 +2437,17 @@
   .dashboard .flex-items-baseline .f6.mt-2,
   #readme .Box-header {
     opacity: 1 !important;
+  }
+  .markdown-body blockquote {
+    background: linear-gradient(to right, var(--base-6), var(--base-3)) !important;
+  }
+  .markdown-body blockquote,
+  .release-timeline-tags .tag-timeline-date::after,
+  .release-entry *[class*="border"] {
+    border-color: var(--base-7) !important;
+  }
+  .markdown-body blockquote p {
+    color: var(--text-dark) !important;
   }
   .markdown-body .clippy-wrapper .clippy .icon {
     filter: invert(1);
@@ -2499,6 +2513,9 @@
   }
   .reponav-item .octicon {
     filter: contrast(0.5);
+  }
+  .reponav-item .octicon {
+    opacity: 0.8 !important;
   }
   .reponav-item.selected {
     border-bottom-color: transparent !important;
@@ -2570,10 +2587,6 @@
   }
   .gh-header-number {
     font-weight: 400 !important;
-  }
-  .release-timeline-tags .tag-timeline-date::after,
-  .release-entry *[class*="border"] {
-    border-color: var(--base-7) !important;
   }
   .release-main-section {
     border-left-color: var(--base-7) !important;
