@@ -1,18 +1,15 @@
-.signed-commit
-  &-header
-    c 0 $green $base2
-  &-verified-label
-    c $green
-  &-badge.verified
-    c $green $green $tealTrans
-    fw 500
 .commit
+  &-loader .loader-error
+    c $red
+  &-link
+    c $yellow
   &-author-section
     c $blue
-  &-desc pre
-    c $text 0 $base4
-  &s-listing:before
-    c 0 0 $base5
+  &-desc
+    &+^[0]-branches
+      btc $base1
+    pre
+      c $text 0 $base4
   &-icon .octicon, &-group-title .octicon-git-commit
     c $text 0 $base4
   &s-list-item
@@ -28,6 +25,8 @@
       c $blue
   &-sha
     c $yellow $base1 $base5
+  & &-title .issue-link
+    c $blue
   & &-title, &-group-title, a
     c $text
   &-tease
@@ -40,18 +39,38 @@
 .commits
   blockquote
     c $text
+  &-listing:before
+    c 0 0 $base5
   &-list-item
     c 0 0 $base4
+    &+&
+      btc $base1
     &.navigation-focus
       c 0 0 $base5
+    .commit-
+      &desc pre, &author
+        c $faded
 .full-commit
   c $blue $base1 $base4
+  .branches-list li
+    c $textGray
+    &.loading, &.pull-request
+      c $faded
+  .btn-outline
+    &:not(:disabled):hover
+      c $blue $blue
+    &, &:disabled
+      c 0 $base1
   p.commit-title
     c $blue
   .sha-block
     c $faded
     fs 14px
     fw 500
+    & > a
+      c $text $borderAlt
+      &:hover
+        c 0 $base1
     & > .sha
       c $blue
   .commit-meta
@@ -65,6 +84,8 @@
   c 0 0 $base5
   /.diff-table tr:not(:last-child) &
     c 0 $base1
+  /.empty-cell + &, & + &
+    blc $base1
 div.commit-build-statuses, .link-gray
   c $faded
   &:hover

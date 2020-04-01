@@ -1,6 +1,13 @@
 progress
   .&-bar
     c 0 0 $base5
+    &-inline &
+      c 0 $base1
+  .reverse-&-
+    &bar, &container
+      c 0 0 $base5
+    &container
+      bgi linear-gradient(90deg, $green, $blue, $purple, $red, $orange)
   .task-&
     c $faded
     .^[0]-bar .^[0]

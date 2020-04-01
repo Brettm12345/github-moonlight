@@ -1,7 +1,23 @@
 .boxed-group
+  .Counter
+    c $cn 0 $base7
+  &-table th
+    c 0 $base1 $base4
+  &-warning
+    c $cn $yellow $yellowTrans
   &-list > li
+    &:first-child
+      bt $b
     bb $b
+    &.selected
+      c 0 $base4
+  &.dangerzone > h3
+    c $cn $red $redTrans
   &-inner
     c $text
+    .help
+      c $faded
     &, ~/ .heading, ~/ > h3
       c 0 $base1 $base4
+      a^[0]-breadcrumb
+        c $faded

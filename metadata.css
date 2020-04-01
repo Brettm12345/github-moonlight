@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.2.2
+@version      2.5.0
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -74,6 +74,7 @@
   --base-7:  /*[[base-7]]*/ ;
   --base-8: /*[[base-8]]*/ ;
   --base-9:  /*[[base-9]]*/ ;
+  --border-alt: /*[[border-alt]]*/ ;
   --active: /*[[active]]*/ ;
   --blue:  /*[[blue]]*/ ;
   --blue-dark: /*[[blue-dark]]*/ ;

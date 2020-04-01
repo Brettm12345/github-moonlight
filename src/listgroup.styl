@@ -1,3 +1,17 @@
+.list-group-item
+  c 0 $base1
+  &-link
+    c $textAlt
+  &.closed
+    c 0 0 $base4
+  &.selected
+    c 0 0 $base5
+  &.navigation-focus, &[aria-selected="true"]
+    c 0 0 $base3
+  &-summary a
+    c $textAlt
+    &.quiet
+      c $textGray
 .listgroup
   c 0 $base1
   &-item

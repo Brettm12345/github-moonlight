@@ -4,16 +4,19 @@
   &signed-commit &menu-w
     caret "left" $base2
   &menu
-    c $text $base1 $base4
-    .octicon
-      c $indigo
-      o 0.6
-      mb 3px
-      mr 2px
-    &-ne
-      caret "top" $base5
-    &:after
-      bbc $base1
+    &, &-dark
+      c $text $base1 $base4
+      .octicon
+        c $indigo
+        o 0.6
+        mb 3px
+        mr 2px
+      &-ne
+        caret "top" $base5
+      &-w, &-sw
+        caret "bottom"
+      &-e, &-se
+        caret "left" $base2
   &header
     c $faded
   &item

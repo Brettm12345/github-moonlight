@@ -1,0 +1,23 @@
+$iconColors = {
+  removed: $red
+  renamed: $cyan
+  modified: $purple
+  added: $green
+}
+
+.toc-select
+  .select-menu
+    &-item
+      &-text
+        c $cn
+      &-icon
+        map-record($iconColors, '&.octicon-diff-', color)
+.table-of-contents
+  map-record($iconColors, '.octicon-diff-', color)
+  li
+    & + &
+      btc $base1
+
+.select-menu-item + .semantic-toc-file:after,
+.semantic-toc-symbol:not(.last-visible):after
+  c 0 $base1 $base3

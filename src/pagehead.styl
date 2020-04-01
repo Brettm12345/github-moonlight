@@ -7,9 +7,9 @@
 .Header
   bb $b
   c $text $base1 $base2
-.Header-old
-  bb $b
-  c $text $base1 $base2
+  &-old
+    bb $b
+    c $text $base1 $base2
 body.page-responsive.pagehead
   c 0 0 $base3
 .reponav
@@ -46,5 +46,3 @@ body.page-responsive.pagehead
   c 0 $base1 $base4
 .footer, .site-footer
   bt $b
-.Counter
-  c $cn $base1 $blueDark
