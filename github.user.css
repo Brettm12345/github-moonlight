@@ -114,6 +114,7 @@
   .signup-plan-card,
   .blankslate,
   .blankslate code,
+  .blob-code-inner,
   .Box-row--yellow,
   .boxed-group-inner,
   .branch-name,
@@ -132,7 +133,6 @@
   .hidden-text-expander a,
   .dashboard-notice h2,
   .diffstat-summary,
-  .blob-code-inner,
   .discussion-item-icon,
   .discussion-sidebar-heading,
   .dropdown-menu,
@@ -273,6 +273,11 @@
   .signup-plan-card,
   .blankslate,
   .blankslate code,
+  .blob-num,
+  .blob-code,
+  .CopyBlock:active,
+  .CopyBlock:focus,
+  .CopyBlock:hover,
   *:not(code) .Box,
   .Box-body,
   .Box-header,
@@ -320,8 +325,6 @@
   .repo-list-item,
   .file-diff-split .empty-cell,
   .file-diff-split .blob-code + .file-diff-split .blob-num,
-  .blob-num,
-  .blob-code,
   .discussion-sidebar-item,
   .dropdown-divider,
   .dropdown-menu,
@@ -601,6 +604,12 @@
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .auth-form-body,
   .blankslate,
+  .blob-code-expandable,
+  .blob-num-expandable,
+  .blob-code-hunk,
+  .blob-num-hunk,
+  .blob-num,
+  .blob-code,
   *:not(code) .Box,
   .Box-header,
   .Box-header--blue,
@@ -634,12 +643,6 @@
   .application-main main div.border-bottom.border-gray,
   .js-file-content,
   .file-diff-split .empty-cell,
-  .blob-code-expandable,
-  .blob-num-expandable,
-  .blob-code-hunk,
-  .blob-num-hunk,
-  .blob-num,
-  .blob-code,
   .dropdown-menu,
   input[type="text"],
   .input-contrast,
@@ -790,8 +793,8 @@
     background-color: var(--base-4) !important;
   }
   .CheckStep-line,
-  .commit-ref,
   .blob-code-inner,
+  .commit-ref,
   .markdown-body code,
   .markdown-body tt,
   .highlight pre,
@@ -1048,10 +1051,10 @@
     color: var(--yellow) !important;
   }
   .signup-plan-card:hover,
-  .Box-row[style*="background"],
-  .branch-name,
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted,
+  .Box-row[style*="background"],
+  .branch-name,
   .dropdown-item:hover,
   .dropdown-item:focus,
   .community-checklist .progress,
@@ -1096,6 +1099,120 @@
   .notifications-dropdown-arrow,
   .TimelineItem-break {
     border-color: var(--base-4) !important;
+  }
+  .blob-code-addition,
+  .signed-commit-badge.verified,
+  .State--green,
+  .pl-mi1,
+  .alert.tip {
+    background-color: var(--teal-trans) !important;
+  }
+  .blob-code-deletion,
+  .State--red,
+  .pl-md {
+    background-color: var(--red-trans) !important;
+  }
+  .blob-code-inner {
+    font-size: 15px !important;
+  }
+  .blob-code-inner,
+  body {
+    line-height: 1.8 !important;
+  }
+  .blob-code-addition .blob-code-marker::before,
+  .octicon-repo-forked,
+  .octicon-issue-opened,
+  .State--green,
+  .pl-mi1,
+  .pl-mdr,
+  .command-line span.output {
+    color: var(--teal) !important;
+  }
+  .blob-code-addition .x,
+  .branch-action-state-clean .branch-action-icon,
+  .legend li[style*="#c6e48b"],
+  .legend li[style*="#7bc96f"],
+  .legend li[style*="#239a3b"],
+  .legend li[style*="#196127"],
+  .Toast--success .Toast-icon {
+    background-color: var(--teal) !important;
+  }
+  .blob-code-deletion .blob-code-marker::before,
+  .btn-octicon-danger:hover,
+  .octicon-x,
+  .octicon-trashcan,
+  .octicon-issue-closed,
+  .cdel,
+  .State--red,
+  .pl-bu,
+  .pl-md,
+  .Toast-dismissButton,
+  code .na {
+    color: var(--red) !important;
+  }
+  .blob-code-deletion .x,
+  .branch-action-item-icon.completeness-indicator-error,
+  .diffstat-block-deleted,
+  .github-pr-file span.deletion,
+  .pl-ii,
+  .pl-c2,
+  .Toast--error .Toast-icon {
+    background-color: var(--red) !important;
+  }
+  .blob-code-addition .x,
+  .blob-code-deletion .x,
+  .branch-action-item-icon.completeness-indicator-success,
+  .branch-action-item-icon.completeness-indicator-error,
+  .branch-action-item-icon.completeness-indicator-problem {
+    color: var(--base-1) !important;
+  }
+  .blob-num,
+  .pl-ba,
+  .TimelineItem-badge,
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
+  .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
+    color: var(--base-9) !important;
+  }
+  .blob-num,
+  legend {
+    font-weight: 600 !important;
+  }
+  .CopyBlock,
+  .reponav-item {
+    border: 1px solid transparent !important;
+  }
+  .CopyBlock,
+  .input-contrast,
+  .markdown-body .clippy-wrapper .clippy,
+  .subnav-item,
+  .team-left-column[aria-label="Explore"] > div {
+    transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .CopyBlock:active,
+  .CopyBlock:focus,
+  .CopyBlock:hover,
+  .Box-row--focus-gray.navigation-focus,
+  .btn:hover,
+  .btn.btn-sm:hover,
+  .ellipsis-expander,
+  .hidden-text-expander a,
+  .discussion-item-icon,
+  .form-group .form-control:focus,
+  .issues-reset-query-icon,
+  .markdown-body code,
+  .markdown-body tt,
+  .__better_github_pr .github-pr-file.github-pr-file-highlight,
+  .__better_github_pr .tree-view_item:hover,
+  .pinned-item-checkbox:checked + .pinned-item-name,
+  .Progress,
+  .ais-Hits-item:hover,
+  .SideNav-item:focus::before,
+  .SideNav-item:hover::before,
+  .topic-tag-link:hover {
+    background-color: var(--base-7) !important;
   }
   .Box--responsive,
   .Boxrow--unread {
@@ -1190,26 +1307,6 @@
   .table-list-cell {
     border-top: 1px solid var(--base-1) !important;
   }
-  .Box-row--focus-gray.navigation-focus,
-  .btn:hover,
-  .btn.btn-sm:hover,
-  .ellipsis-expander,
-  .hidden-text-expander a,
-  .discussion-item-icon,
-  .form-group .form-control:focus,
-  .issues-reset-query-icon,
-  .markdown-body code,
-  .markdown-body tt,
-  .__better_github_pr .github-pr-file.github-pr-file-highlight,
-  .__better_github_pr .tree-view_item:hover,
-  .pinned-item-checkbox:checked + .pinned-item-name,
-  .Progress,
-  .ais-Hits-item:hover,
-  .SideNav-item:focus::before,
-  .SideNav-item:hover::before,
-  .topic-tag-link:hover {
-    background-color: var(--base-7) !important;
-  }
   .Box-row--yellow,
   .application-main > .flex-wrap,
   .discussion-timeline-actions,
@@ -1262,38 +1359,13 @@
     fill: var(--base-1) !important;
   }
   .branch-action-item-icon.completeness-indicator-success,
-  .branch-action-item-icon.completeness-indicator-error,
-  .branch-action-item-icon.completeness-indicator-problem,
-  .blob-code-addition .x,
-  .blob-code-deletion .x {
-    color: var(--base-1) !important;
-  }
-  .branch-action-item-icon.completeness-indicator-success,
   .diffstat-block-added,
   .github-pr-file span.addition {
     background-color: var(--green) !important;
   }
-  .branch-action-item-icon.completeness-indicator-error,
-  .diffstat-block-deleted,
-  .blob-code-deletion .x,
-  .github-pr-file span.deletion,
-  .pl-ii,
-  .pl-c2,
-  .Toast--error .Toast-icon {
-    background-color: var(--red) !important;
-  }
   .branch-action-item-icon.completeness-indicator-problem,
   .Toast--warning .Toast-icon {
     background-color: var(--yellow) !important;
-  }
-  .branch-action-state-clean .branch-action-icon,
-  .legend li[style*="#c6e48b"],
-  .legend li[style*="#7bc96f"],
-  .legend li[style*="#239a3b"],
-  .legend li[style*="#196127"],
-  .blob-code-addition .x,
-  .Toast--success .Toast-icon {
-    background-color: var(--teal) !important;
   }
   .branch-action-body,
   .previewable-comment-form .comment-form-head.tabnav,
@@ -1496,19 +1568,6 @@
   .btn-mktg {
     background-color: rgba(0,0,0,0.1) !important;
   }
-  .btn-octicon-danger:hover,
-  .blob-code-deletion .blob-code-marker::before,
-  .octicon-x,
-  .octicon-trashcan,
-  .octicon-issue-closed,
-  .cdel,
-  .State--red,
-  .pl-bu,
-  .pl-md,
-  .Toast-dismissButton,
-  code .na {
-    color: var(--red) !important;
-  }
   .legend li[style*="#ebedf0"] {
     background-color: var(--indigo) !important;
   }
@@ -1709,13 +1768,6 @@
   code .s2 {
     color: var(--green) !important;
   }
-  .signed-commit-badge.verified,
-  .blob-code-addition,
-  .State--green,
-  .pl-mi1,
-  .alert.tip {
-    background-color: var(--teal-trans) !important;
-  }
   .commit-tease-contributors,
   .navigation-focus,
   .ScreenshotCarousel-navitem:hover,
@@ -1758,41 +1810,6 @@
   }
   .diffstat-block-neutral {
     background-color: var(--sb) !important;
-  }
-  .blob-code-deletion,
-  .State--red,
-  .pl-md {
-    background-color: var(--red-trans) !important;
-  }
-  .blob-code-inner {
-    font-size: 15px !important;
-  }
-  .blob-code-inner,
-  body {
-    line-height: 1.8 !important;
-  }
-  .blob-code-addition .blob-code-marker::before,
-  .octicon-repo-forked,
-  .octicon-issue-opened,
-  .State--green,
-  .pl-mi1,
-  .pl-mdr,
-  .command-line span.output {
-    color: var(--teal) !important;
-  }
-  .blob-num,
-  .pl-ba,
-  .TimelineItem-badge,
-  .TimelineItem .status-meta-badge,
-  .TimelineItem .merge-pr-more-commits-badge,
-  .TimelineItem--condensed .TimelineItem-badge,
-  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
-  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
-    color: var(--base-9) !important;
-  }
-  .blob-num,
-  legend {
-    font-weight: 600 !important;
   }
   .discussion-item-icon,
   .discussion-timeline-actions,
@@ -1878,12 +1895,6 @@
   }
   input {
     caret-color: var(--blue);
-  }
-  .input-contrast,
-  .markdown-body .clippy-wrapper .clippy,
-  .subnav-item,
-  .team-left-column[aria-label="Explore"] > div {
-    transition: border-color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .file:target,
   .MarketplacePlan--sticky div.bg-white,
@@ -2158,9 +2169,6 @@
   }
   .gh-header {
     background-color: unset;
-  }
-  .reponav-item {
-    border: 1px solid transparent !important;
   }
   .reponav-item .octicon {
     filter: contrast(0.5);

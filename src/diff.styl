@@ -21,39 +21,3 @@
   .blob-
     &code + &num
       c 0 $base1
-.blob-
-  &code, &num
-    &-expandable, &-hunk
-      c 0 0 $base4
-  &code-
-    &addition
-      c 0 0 $tealTrans
-    &deletion
-      c 0 0 $redTrans
-    &inner
-      c $text
-      fs 15px
-      lh 1.8
-      mono()
-      &.highlighted, & .highlighted
-        c 0 0 $base8
-    &addition
-      .blob-code-marker::before
-        c $teal
-      .x
-        c 0 0 $teal
-    &deletion
-      .blob-code-marker::before
-        c $red
-      .x
-        c 0 0 $red
-    &addition, &deletion
-      .x
-        c $base1
-  &num
-    c $base9 $base1 $base4
-    fw 600
-  &expanded
-    & + tr:not(&), tr:not(&) + &
-      ~/code, ~/num
-        c 0 $base1 $base4
