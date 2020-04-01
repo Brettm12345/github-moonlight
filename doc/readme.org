@@ -76,6 +76,7 @@ These are the fonts used in the screenshots
 {{{screenshot(Profile,profile)}}}
 {{{screenshot(Code,code)}}}
 {{{screenshot(Commit Tree,commits)}}}
+{{{screenshot(Search,search)}}}
 {{{screenshot(Dashboard,dashboard)}}}
 {{{screenshot(Pull Requests,pull-requests)}}}
 {{{screenshot(File Finder,file-finder)}}}
