@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.5
+@version      2.1.6
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -2051,6 +2051,10 @@
   }
   .email-quoted-reply,
   .email-signature-reply {
+    font-style: italic;
+  }
+  .email-quoted-reply,
+  .email-signature-reply {
     border-left: 4px solid var(--blue) !important;
   }
   .email-quoted-reply,
@@ -2062,10 +2066,6 @@
   .orgs-help-item-content,
   .table-list-header-meta {
     color: var(--text-alt) !important;
-  }
-  .email-quoted-reply,
-  .email-signature-reply {
-    font-size: italic !important;
   }
   .email-quoted-reply,
   .email-signature-reply {
