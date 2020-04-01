@@ -217,6 +217,7 @@
   .toolbar-item,
   .toolbar-item .menu-target,
   .topic-tag,
+  .typeahead-result,
   .hook-delivery-guid,
   body,
   h1,
@@ -267,6 +268,7 @@
   }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .auth-form-body,
+  .autocomplete-results,
   .AvatarStack-body,
   .AvatarStack-body .avatar,
   .signup-plan-card,
@@ -494,6 +496,7 @@
   .oauth-border,
   .access-form-wrapper,
   .license-container,
+  .email-preference-exceptions .exception,
   .orgs-help-item-octicon,
   .SideNav,
   .SideNav-item,
@@ -960,6 +963,51 @@
   pre {
     background-color: var(--base-5) !important;
   }
+  .autocomplete-results,
+  .blankslate,
+  .btn.btn-outline.BtnGroup-item,
+  .btn.btn-outline.tooltipped.tooltipped-sw,
+  .previewable-comment-form .comment-form-head.tabnav,
+  .review-thread-reply,
+  .review-thread-reply .inline-comment-form,
+  input[type="text"],
+  .drag-and-drop,
+  .email-quoted-reply,
+  .email-signature-reply,
+  .markdown-body img,
+  .markdown-body table tr td,
+  .highlight pre,
+  .markdown-body pre,
+  body.page-responsive.pagehead,
+  .pagehead,
+  .pagehead-tabs-item,
+  .pagehead .repohead.experiment-repo-nav,
+  .Popover-message,
+  .new-project-column,
+  #readme .Box-header,
+  .search_repos fieldset,
+  .SelectMenu-list,
+  .select-menu-filters,
+  .user-key-email-unverified,
+  .orgs-help-shelf,
+  .site-subnav.bg-white,
+  .suggester,
+  .table-list,
+  .team-left-column.bg-white,
+  .team-left-column > div,
+  .UnderlineNav {
+    background-color: var(--base-3) !important;
+  }
+  .autocomplete-results,
+  .file:target,
+  .MarketplacePlan--sticky div.bg-white,
+  .ScreenshotCarousel,
+  .project-card:hover,
+  .box-shadow-medium,
+  .orgs-help-shelf,
+  .site-subnav.bg-white.is-stuck {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
+  }
   .AvatarStack-body,
   .AvatarStack-body .avatar,
   .blankslate code,
@@ -1089,40 +1137,6 @@
   .notifications-dropdown-arrow,
   .TimelineItem-break {
     border-color: var(--base-4) !important;
-  }
-  .blankslate,
-  .btn.btn-outline.BtnGroup-item,
-  .btn.btn-outline.tooltipped.tooltipped-sw,
-  .previewable-comment-form .comment-form-head.tabnav,
-  .review-thread-reply,
-  .review-thread-reply .inline-comment-form,
-  input[type="text"],
-  .drag-and-drop,
-  .email-quoted-reply,
-  .email-signature-reply,
-  .markdown-body img,
-  .markdown-body table tr td,
-  .highlight pre,
-  .markdown-body pre,
-  body.page-responsive.pagehead,
-  .pagehead,
-  .pagehead-tabs-item,
-  .pagehead .repohead.experiment-repo-nav,
-  .Popover-message,
-  .new-project-column,
-  #readme .Box-header,
-  .search_repos fieldset,
-  .SelectMenu-list,
-  .select-menu-filters,
-  .user-key-email-unverified,
-  .orgs-help-shelf,
-  .site-subnav.bg-white,
-  .suggester,
-  .table-list,
-  .team-left-column.bg-white,
-  .team-left-column > div,
-  .UnderlineNav {
-    background-color: var(--base-3) !important;
   }
   .blankslate > .Box.bg-gray,
   .border,
@@ -1461,6 +1475,7 @@
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body,
+  .member-suggestion .member-name,
   .UnderlineNav-octicon,
   .follow-list-info,
   .hook-delivery-time,
@@ -1919,15 +1934,6 @@
   }
   input {
     caret-color: var(--blue);
-  }
-  .file:target,
-  .MarketplacePlan--sticky div.bg-white,
-  .ScreenshotCarousel,
-  .project-card:hover,
-  .box-shadow-medium,
-  .orgs-help-shelf,
-  .site-subnav.bg-white.is-stuck {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
   .file-header,
   fieldset {
