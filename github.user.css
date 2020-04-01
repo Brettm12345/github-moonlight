@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.0.7
+@version      2.0.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -304,6 +304,8 @@
   .timeline-comment-header,
   .review-thread-reply,
   .review-comment,
+  .conversation-list,
+  .simple-conversation-list > li,
   .commit-ref,
   .commit-sha,
   .commit-tease,
@@ -337,8 +339,6 @@
   .form-select,
   .viz,
   .viz .code-frequency,
-  .conversation-list-heading,
-  .simple-conversation-list > li,
   .graphs.axis,
   table.capped-list td,
   table.capped-list tr:nth-child(2n),
@@ -422,6 +422,7 @@
   .gitako-side-bar-content .meta-bar,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
   .gitako-side-bar-content .file-explorer .node-item,
+  button.reaction-summary-item,
   .Popover-message,
   .pinned-item-checkbox:checked + .pinned-item-name,
   .profile-rollup-summarized+.profile-rollup-summarized,
@@ -616,6 +617,7 @@
   .timeline-comment-header,
   .js-resolvable-timeline-thread-form,
   .review-comment,
+  .conversation-list .inner,
   .commit-desc pre,
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit,
@@ -647,7 +649,6 @@
   .form-select,
   .viz,
   .viz .code-frequency,
-  .conversation-list-heading .inner,
   table.capped-list td,
   table.capped-list tr:nth-child(2n),
   table.capped-list th,
@@ -1370,6 +1371,9 @@
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
   .text,
+  .conversation-list,
+  .conversation-list .inner,
+  .simple-conversation-list,
   .full-commit .sha-block,
   div.commit-build-statuses,
   .link-gray,
@@ -1378,11 +1382,8 @@
   .octicon-mute,
   .octicon-repo,
   .octicon-rocket,
-  .conversation-list-heading,
-  .conversation-list-heading .inner,
   .num,
   relative-time,
-  .simple-conversation-list,
   .pulse-section,
   .muted-link,
   .markdown-body .lead-mktg p,
@@ -1600,8 +1601,8 @@
     border-bottom: 1px solid var(--base-1) !important;
   }
   .border,
+  .conversation-list .inner,
   .dashboard-notice,
-  .conversation-list-heading .inner,
   .email-quoted-reply,
   .email-signature-reply,
   .markdown-body code,
@@ -1653,6 +1654,12 @@
   .timeline-comment--caret::after,
   .timeline-comment--caret.current-user::after {
     border-right-color: var(--base-4) !important;
+  }
+  .conversation-list .inner {
+    padding: 0 10px !important;
+  }
+  .conversation-list .inner {
+    border-radius: 2px !important;
   }
   .signed-commit-header,
   .signed-commit-badge.verified {
@@ -1963,12 +1970,6 @@
   .viz .code-frequency,
   .content ol li pre code {
     padding: 8px !important;
-  }
-  .conversation-list-heading .inner {
-    padding: 0 10px !important;
-  }
-  .conversation-list-heading .inner {
-    border-radius: 2px !important;
   }
   .summary-stats li,
   .summary-stats li > .num,
