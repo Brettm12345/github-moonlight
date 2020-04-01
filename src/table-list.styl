@@ -1,0 +1,17 @@
+.table-list
+  bb $b
+  c $text $base1 $base3
+  &-cell
+    bt $b
+  &-bordered &-cell
+    &:first-child
+      bl $b
+    &:last-child
+      br $b
+  &-header
+    c 0 $base1 $base4
+    &-meta
+      c $textAlt
+    &-toggle .btn-link
+      &:hover, &.selected
+        c $blue

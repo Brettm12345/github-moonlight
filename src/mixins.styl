@@ -51,18 +51,28 @@ bt($x...)
   prop "border-top" $x
 btc($x)
   prop "border-top-color" $x
+btw($x)
+  prop "border-top-width" $x
 bl($x...)
   prop "border-left" $x
+blw($x)
+  prop "border-top-width" $x
 blc($x)
   prop "border-left-color" $x
 br($x...)
   prop "border-right" $x
+brw($x)
+  prop "border-right-width" $x
 brc($x)
   prop "border-right-color" $x
 by($x...)
   +cache("x", $x)
     for $d in top bottom
       border-{$d} $x $i
+byw($x)
+  +cache("x", $x)
+    for $d in top bottom
+      border-{$d}-width $x $i
 byc($x)
   +cache("x", $x)
     for $d in top bottom
@@ -71,6 +81,10 @@ bx($x...)
   +cache("x", $x)
     for $d in left right
       border-{$d} $x $i
+bxw($x)
+  +cache("x", $x)
+    for $d in left right
+      border-{$d}-width $x $i
 bxc($x...)
   +cache("x" + $x)
     for $d in left right

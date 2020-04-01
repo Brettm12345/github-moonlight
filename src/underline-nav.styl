@@ -1,12 +1,16 @@
 .UnderlineNav
-  c 0 $base1 $base5
+  c 0 $base1 $base3
   ease background-color, border-color
   /nav& + div.border.d-md-block
     c 0 0 $base4
   &[style*="margin-top"]
     c 0 $t $base2
   &-item
-    &.selected, &[aria-selected="true"], &[aria-current]
+    ~/-octicon
+      c $faded
+      ../.selected &
+        c $cn
+    &.selected
       bbc $blue
     &:hover
       bbc $base8

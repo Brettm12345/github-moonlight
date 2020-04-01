@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.3
+@version      2.1.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -207,6 +207,7 @@
   .suggester,
   .cm-s-github-light.CodeMirror,
   .pl-s .pl-v,
+  .table-list,
   .tabnav--responsive .tabnav-tab.selected,
   .tabnav-tab.selected,
   .tabnav--responsive .tabnav-tab[aria-selected="true"],
@@ -388,6 +389,7 @@
   .notifications-dropdown,
   .notifications-dropdown-see-all,
   .thread-subscription-status,
+  .orghead,
   .gh-header-meta,
   .Header,
   .Header-old,
@@ -448,7 +450,6 @@
   #readme .Box-header,
   table.files,
   table.files td,
-  .table-list-header,
   .repository-lang-stats-graph,
   .flash,
   .code-list .file-box,
@@ -496,6 +497,7 @@
   .oauth-border,
   .access-form-wrapper,
   .license-container,
+  .orgs-help-item-octicon,
   .SideNav,
   .SideNav-item,
   .Subhead,
@@ -510,6 +512,8 @@
   .cm-s-github-light.CodeMirror,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
+  .table-list,
+  .table-list-header,
   .tabnav-tabs.js-file-editor-nav .tabnav-tab,
   .tabnav--responsive .tabnav-tab,
   .tabnav-tab,
@@ -531,9 +535,9 @@
   .tabnav-tab[aria-selected="true"].js-blob-edit-preview,
   .tabnav--responsive .tabnav-tab[aria-current].js-blob-edit-preview,
   .tabnav-tab[aria-current].js-blob-edit-preview,
+  .team-left-column.bg-white,
   .team-left-column > div,
   .team-left-column[aria-label="Explore"] > div,
-  .orgs-help-item-octicon,
   .timeline-new-comment .previewable-comment-form .comment-body,
   .Toast,
   .Toast-content,
@@ -603,7 +607,6 @@
   }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .auth-form-body,
-  .blankslate,
   .blob-code-expandable,
   .blob-num-expandable,
   .blob-code-hunk,
@@ -671,6 +674,7 @@
   .menu,
   .menu-heading,
   .notifications-list-item.notification-unread,
+  .orghead,
   .gh-header-sticky.is-stuck + .gh-header-shadow,
   .pagehead-actions .btn,
   .pagehead,
@@ -709,7 +713,6 @@
   .overall-summary,
   .release-timeline-tags .tag-timeline-date::after,
   .branch-infobar,
-  .table-list-header,
   .flash,
   .filter-bar,
   header #search-results-container,
@@ -739,13 +742,13 @@
   .select-menu-modal-right.details-reset.details-overlay.mb-2,
   .select-menu-modal .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target,
   .access-form-wrapper,
+  .orgs-help-item-octicon,
   .SideNav,
   .subnav-item,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
   .cm-s-github-light .CodeMirror-gutters,
+  .table-list-header,
   .team-left-column[aria-label="Explore"] > div,
-  .team-left-column[aria-label="Explore"].bg-white,
-  .orgs-help-item-octicon,
   .TimelineItem-badge,
   .TimelineItem .status-meta-badge,
   .TimelineItem .merge-pr-more-commits-badge,
@@ -837,6 +840,7 @@
   }
   .CheckStep-line:hover,
   .signup-plan-card,
+  .blankslate > .Box.bg-gray,
   .Box-row--focus-gray,
   .btn,
   .btn.btn-sm,
@@ -946,7 +950,6 @@
   .tree-browser-result.selected,
   .tree-browser-result[aria-selected="true"],
   .tree-browser-result[aria-current],
-  .UnderlineNav,
   .js-user-status-container,
   .js-gist-file-update-container.js-task-list-container.file-box,
   .graphiql-container .variable-editor-title,
@@ -982,6 +985,7 @@
   .diffbar,
   .Label--gray,
   .notification-navigation.bg-white,
+  .orghead .pagehead-tabs-item.selected,
   .Header,
   .Header-old,
   .reponav-item.selected,
@@ -1011,7 +1015,7 @@
   .tabnav-pr .tabnav-tab[aria-current],
   .tabnav-tabs[aria-label="Stargazers"] .tabnav-tab.selected,
   .tabnav-tabs.js-file-editor-nav .tabnav-tab,
-  .team-left-column > div,
+  .team-left-column[aria-label="Explore"].bg-white,
   .Toast-dismissButton,
   #tree-finder-field,
   .UnderlineNav[style*="margin-top"],
@@ -1099,6 +1103,63 @@
   .notifications-dropdown-arrow,
   .TimelineItem-break {
     border-color: var(--base-4) !important;
+  }
+  .blankslate,
+  .btn.btn-outline.BtnGroup-item,
+  .btn.btn-outline.tooltipped.tooltipped-sw,
+  .previewable-comment-form .comment-form-head.tabnav,
+  .review-thread-reply,
+  .review-thread-reply .inline-comment-form,
+  .email-quoted-reply,
+  .email-signature-reply,
+  .markdown-body img,
+  .markdown-body table tr td,
+  .highlight pre,
+  .markdown-body pre,
+  body.page-responsive.pagehead,
+  .Popover-message,
+  .new-project-column,
+  #readme .Box-header,
+  .SelectMenu-list,
+  .select-menu-filters,
+  .user-key-email-unverified,
+  .orgs-help-shelf,
+  .site-subnav.bg-white,
+  .suggester,
+  .table-list,
+  .team-left-column.bg-white,
+  .team-left-column > div,
+  .UnderlineNav {
+    background-color: var(--base-3) !important;
+  }
+  .blankslate > .Box.bg-gray,
+  .border,
+  .conversation-list .inner,
+  .dashboard-notice,
+  .email-quoted-reply,
+  .email-signature-reply,
+  .markdown-body code,
+  .markdown-body tt,
+  .highlight pre,
+  .markdown-body pre,
+  .MarketplacePlan--sticky div.bg-white,
+  .rgh-collaborator,
+  .user-profile-nav,
+  .orgs-help-shelf,
+  .team-discussions .UnderlineNav,
+  .team-left-column[aria-label="Explore"] > div,
+  .Toast,
+  .topic-tag,
+  .user-status-container-border-busy,
+  .hook-delivery-guid,
+  fieldset {
+    border: 1px solid var(--base-1) !important;
+  }
+  .blankslate > .Box.bg-gray,
+  .dashboard .js-all-activity-header + div .Box,
+  .ScreenshotCarousel,
+  fieldset {
+    border-radius: 6px !important;
   }
   .blob-code-addition,
   .signed-commit-badge.verified,
@@ -1247,6 +1308,8 @@
   .markdown-body a:hover,
   .menu-item.selected,
   .menu-item[aria-current],
+  .orghead .org-name,
+  .orghead .pagehead-tabs-item.selected,
   .reponav-item,
   .reponav-item:focus,
   .reponav-item:hover,
@@ -1262,12 +1325,12 @@
   .hide-files-btn:focus,
   .social-count,
   #readme .Box-header:hover .octicon-pencil,
-  .table-list-header-toggle .btn-link:hover,
-  .table-list-header-toggle .btn-link.selected,
   .btn-link:not(.IssueLabel):not(.tabnav-tab),
   .subnav-search-context .btn,
   .pl-e,
   .pl-en,
+  .table-list-header-toggle .btn-link:hover,
+  .table-list-header-toggle .btn-link.selected,
   .tabnav--responsive .tabnav-tab.selected.js-blob-edit-code,
   .tabnav-tab.selected.js-blob-edit-code,
   .tabnav--responsive .tabnav-tab[aria-selected="true"].js-blob-edit-code,
@@ -1343,10 +1406,10 @@
   .menu-item,
   .Header,
   .Header-old,
-  .table-list,
   .filter-bar,
   .site-subnav.bg-white,
   .site-subnav.bg-white.is-stuck,
+  .table-list,
   .tabnav,
   hr {
     border-bottom: 1px solid var(--base-1) !important;
@@ -1416,7 +1479,6 @@
   .markdown-body code,
   .markdown-body tt,
   .markdown-body .clippy-wrapper .clippy,
-  .menu-heading,
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
   .notifications-list-item:focus .notification-list-item-actions .btn:hover,
   .Counter,
@@ -1443,6 +1505,7 @@
   .pl-ii,
   .pl-c2,
   .pl-mb,
+  .UnderlineNav-item.selected .UnderlineNav-octicon,
   ::selection,
   .CodeMirror-hint-active,
   .sidebar-menu h3:hover,
@@ -1480,6 +1543,7 @@
   .pulse-section,
   .muted-link,
   .markdown-body .lead-mktg p,
+  .manage-member-meta-item,
   .pagination .disabled,
   .pagination .gap,
   .pagination [aria-disabled=true],
@@ -1500,6 +1564,7 @@
   .numbers-summary li > a,
   .select-menu-no-results,
   p.explain,
+  .orgs-help-lead,
   .Subhead-description,
   .pl-sg,
   .tabnav-extra,
@@ -1509,6 +1574,7 @@
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body,
+  .UnderlineNav-octicon,
   .follow-list-info,
   .hook-delivery-time,
   .graphiql-container .doc-category-title,
@@ -1542,28 +1608,6 @@
   .topic-tag-action a,
   .alert.note {
     border-color: var(--blue) !important;
-  }
-  .btn.btn-outline.BtnGroup-item,
-  .btn.btn-outline.tooltipped.tooltipped-sw,
-  .previewable-comment-form .comment-form-head.tabnav,
-  .review-thread-reply,
-  .review-thread-reply .inline-comment-form,
-  .email-quoted-reply,
-  .email-signature-reply,
-  .markdown-body img,
-  .markdown-body table tr td,
-  .highlight pre,
-  .markdown-body pre,
-  body.page-responsive.pagehead,
-  .Popover-message,
-  .new-project-column,
-  #readme .Box-header,
-  .SelectMenu-list,
-  .select-menu-filters,
-  .user-key-email-unverified,
-  .site-subnav.bg-white,
-  .suggester {
-    background-color: var(--base-3) !important;
   }
   .btn-mktg {
     background-color: rgba(0,0,0,0.1) !important;
@@ -1681,26 +1725,6 @@
   .border-bottom {
     border-bottom: 1px solid var(--base-1) !important;
   }
-  .border,
-  .conversation-list .inner,
-  .dashboard-notice,
-  .email-quoted-reply,
-  .email-signature-reply,
-  .markdown-body code,
-  .markdown-body tt,
-  .highlight pre,
-  .markdown-body pre,
-  .MarketplacePlan--sticky div.bg-white,
-  .rgh-collaborator,
-  .user-profile-nav,
-  .team-left-column[aria-label="Explore"] > div,
-  .Toast,
-  .topic-tag,
-  .user-status-container-border-busy,
-  .hook-delivery-guid,
-  fieldset {
-    border: 1px solid var(--base-1) !important;
-  }
   path[fill="#eee"] {
     fill: var(--base-7) !important;
   }
@@ -1715,6 +1739,7 @@
   .octicon.merged,
   .octicon-git-pull-request,
   .issue-keyword,
+  .org-user-notice-content strong,
   .State--purple,
   .pl-k,
   .graphiql-container .keyword {
@@ -1795,16 +1820,12 @@
   .site-subnav.bg-white {
     border-color: var(--base-3) !important;
   }
-  .dashboard .js-all-activity-header + div .Box,
-  .ScreenshotCarousel,
-  fieldset {
-    border-radius: 6px !important;
-  }
   .repo-list {
     padding: 0 12px !important;
   }
   .diffstat,
   .octicon[style*="#6a737d"],
+  .menu-heading,
   .vcard-username {
     color: var(--text-gray) !important;
   }
@@ -1901,6 +1922,7 @@
   .ScreenshotCarousel,
   .project-card:hover,
   .box-shadow-medium,
+  .orgs-help-shelf,
   .site-subnav.bg-white.is-stuck {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26) !important;
   }
@@ -2035,7 +2057,10 @@
   .email-signature-reply,
   .markdown-body a,
   .markdown-body blockquote,
-  p.explain strong {
+  .manage-member-meta-item > octicon,
+  p.explain strong,
+  .orgs-help-item-content,
+  .table-list-header-meta {
     color: var(--text-alt) !important;
   }
   .email-quoted-reply,
@@ -2106,7 +2131,8 @@
   .markdown-body h3 .octicon-link,
   .markdown-body h4 .octicon-link,
   .markdown-body h5 .octicon-link,
-  .markdown-body h6 .octicon-link {
+  .markdown-body h6 .octicon-link,
+  .edit-profile-avatar .manual-file-chooser {
     opacity: 0 !important;
   }
   .markdown-body h1:hover .octicon-link,
@@ -2130,6 +2156,7 @@
     filter: invert(1);
   }
   .MarketplacePlan--sticky div.bg-white,
+  .org-repo-mini-item:first-child .org-repo-mini-cell,
   .user-status-container-border-busy {
     border-top: none !important;
   }
@@ -2161,11 +2188,25 @@
     color: var(--text) !important;
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
-  .notification-navigation .notification-configure-filters:focus .octicon {
+  .notification-navigation .notification-configure-filters:focus .octicon,
+  .orgs-help-item-octicon .octicon {
     color: var(--blue) !important;
   }
   .notifications-dropdown .notifications-list {
     margin-bottom: 0 !important;
+  }
+  .orghead {
+    border-bottom: none !important;
+  }
+  .orghead .pagehead-tabs-item {
+    border-bottom-color: transparent !important;
+  }
+  .orghead .pagehead-tabs-item {
+    border-top-width: 1px !important;
+  }
+  .orghead .pagehead-tabs-item {
+    margin-left: 0.5% !important;
+    margin-right: 0.5% !important;
   }
   .gh-header {
     background-color: unset;
@@ -2178,6 +2219,12 @@
   }
   .reponav-item.selected .octicon {
     filter: none;
+  }
+  .pagehead .octicon,
+  .pagehead-tabs-item .octicon,
+  .pagehead .repohead.experiment-repo-nav .octicon,
+  .vcard-detail .octicon {
+    color: var(--faded) !important;
   }
 @media (min-width: 768px) {
     .pagehead,
@@ -2244,9 +2291,6 @@
   .gisthead .pagehead-actions .octicon-mute {
     fill: var(--faded) !important;
   }
-  .vcard-detail .octicon {
-    color: var(--faded) !important;
-  }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
   }
@@ -2263,12 +2307,6 @@
   .branch-infobar,
   ::placeholder {
     color: var(--placeholder) !important;
-  }
-  .table-list-bordered .table-list-cell:first-child {
-    border-left: 1px solid var(--base-1) !important;
-  }
-  .table-list-bordered .table-list-cell:last-child {
-    border-right: 1px solid var(--base-1) !important;
   }
   *:not(select) {
     scrollbar-color: var(--sb) var(--base-2) !important;
@@ -2332,9 +2370,7 @@
   .subnav-item.selected,
   .subnav-item.selected:focus,
   .subnav-item.selected:hover,
-  .UnderlineNav-item.selected,
-  .UnderlineNav-item[aria-selected="true"],
-  .UnderlineNav-item[aria-current] {
+  .UnderlineNav-item.selected {
     border-bottom-color: var(--blue) !important;
   }
   .ais-SearchBox-input {
@@ -2355,6 +2391,18 @@
   .box-shadow-large,
   .Toast {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important;
+  }
+  .orgs-help-shelf {
+    margin: 3% 4% !important;
+  }
+  .orgs-help-shelf,
+  .team-discussions .UnderlineNav,
+  .team-left-column[aria-label="Explore"] > div {
+    border-radius: 4px !important;
+  }
+  .orgs-help-shelf > .container-lg {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 var(--base-1) !important;
@@ -2414,6 +2462,12 @@
   .pl-mc {
     background-color: var(--cyan-trans) !important;
   }
+  .table-list-bordered .table-list-cell:first-child {
+    border-left: 1px solid var(--base-1) !important;
+  }
+  .table-list-bordered .table-list-cell:last-child {
+    border-right: 1px solid var(--base-1) !important;
+  }
   .container-preview .tabnav-tabs {
     margin-left: 5% !important;
   }
@@ -2429,9 +2483,6 @@
   }
   .team-left-column[aria-label="Explore"] > div {
     padding-left: 10px !important;
-  }
-  .team-left-column[aria-label="Explore"] > div {
-    border-radius: 4px !important;
   }
   .TimelineItem--condensed .TimelineItem-badge {
     height: 30px !important;
