@@ -9,13 +9,16 @@ A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vs
 made with :heart:
 
 {{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
-{{{badge(Discord Server,discord.gg/PwpA8v,discord/693723424190627881?label=discord&logo=discord)}}}
+{{{badge(Discord Server,discord.gg/n5meNsX,discord/693723424190627881?label=discord&logo=discord)}}}
 {{{badge(Commit Activity,github.com/Brettm12345/github-moonlight/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
 {{{badge(Stars,github.com/Brettm12345/github-moonlight/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
 
 #+HTML: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
 #+HTML: </div>
 
+* Installation
+You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on the install link below.
+{{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
 * Features
 *** Custom Colors
 All color variables are easily customizable
@@ -68,6 +71,8 @@ These are the fonts used in the screenshots
 {{{screenshot(Api Docs,api)}}}
 {{{screenshot(Actions,actions)}}}
 {{{screenshot(Projects,projects)}}}
+* Discord
+Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for support/inqueries or just to chat.
 * Todo
 Feel free to create an issue if you want anything added to the theme
 

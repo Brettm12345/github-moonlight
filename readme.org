@@ -1,4 +1,4 @@
-# Created 2020-03-30 Mon 23:01
+# Created 2020-03-31 Tue 20:59
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -12,13 +12,16 @@ A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vs
 made with :heart:
 
 #+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
-#+html: <a href="https://discord.gg/PwpA8v"><img src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord&style=flat-square" alt="Discord Server"/></a>
+#+html: <a href="https://discord.gg/n5meNsX"><img src="https://img.shields.io/discord/693723424190627881?label=discord&logo=discord&style=flat-square" alt="Discord Server"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/commits/master"><img src="https://img.shields.io/github/commit-activity/m/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Commit Activity"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/stargazers"><img src="https://img.shields.io/github/stars/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Stars"/></a>
 
 #+html: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
 #+html: </div>
 
+* Installation
+You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on the install link below.
+#+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
 * Features
 *** Custom Colors
 All color variables are easily customizable
@@ -71,6 +74,8 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Api Docs</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" alt="Api Docs" width="100%" /></details>
 #+html: <details><summary>Actions</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" alt="Actions" width="100%" /></details>
 #+html: <details><summary>Projects</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" alt="Projects" width="100%" /></details>
+* Discord
+Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for support/inqueries or just to chat.
 * Todo
 Feel free to create an issue if you want anything added to the theme
 
