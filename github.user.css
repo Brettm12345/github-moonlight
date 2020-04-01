@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.0
+@version      2.1.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1022,6 +1022,30 @@
   .libraries-jumbotron {
     background-color: var(--base-2) !important;
   }
+  .RecentBranches,
+  .Box-row--yellow,
+  .alert.warning {
+    border-color: var(--yellow) !important;
+  }
+  .RecentBranches,
+  .alert.warning {
+    background-color: var(--yellow-trans) !important;
+  }
+  .RecentBranches-item,
+  .commit-sha,
+  .octicon-inbox,
+  .octicon-alert,
+  .octicon-pencil,
+  .octicon-light-bulb,
+  .protip  > strong,
+  .flash-warn,
+  .user-key-email-unverified,
+  .pl-smw,
+  .pl-mi,
+  mark,
+  .graphiql-container .type-name {
+    color: var(--yellow) !important;
+  }
   .signup-plan-card:hover,
   .Box-row[style*="background"],
   .branch-name,
@@ -1184,10 +1208,6 @@
   .SideNav-item:hover::before,
   .topic-tag-link:hover {
     background-color: var(--base-7) !important;
-  }
-  .Box-row--yellow,
-  .alert.warning {
-    border-color: var(--yellow) !important;
   }
   .Box-row--yellow,
   .application-main > .flex-wrap,
@@ -1694,20 +1714,6 @@
   .pl-mi1,
   .alert.tip {
     background-color: var(--teal-trans) !important;
-  }
-  .commit-sha,
-  .octicon-inbox,
-  .octicon-alert,
-  .octicon-pencil,
-  .octicon-light-bulb,
-  .protip  > strong,
-  .flash-warn,
-  .user-key-email-unverified,
-  .pl-smw,
-  .pl-mi,
-  mark,
-  .graphiql-container .type-name {
-    color: var(--yellow) !important;
   }
   .commit-tease-contributors,
   .navigation-focus,
@@ -2497,9 +2503,6 @@
   }
   .graphiql-container .topBar {
     background: var(--base-4) !important;
-  }
-  .alert.warning {
-    background-color: var(--yellow-trans) !important;
   }
   .alert.product {
     background: var(--purple-trans) !important;
