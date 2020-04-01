@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.2
+@version      2.1.3
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -605,6 +605,7 @@
   .Box-header,
   .Box-header--blue,
   .Box.Box--condensed .Box-row,
+  .Box-row--gray,
   .tint-box,
   .boxed-group-inner,
   .boxed-group .heading,
@@ -1092,7 +1093,6 @@
     background-color: var(--base-1) !important;
   }
   .showcase-page-pattern::after,
-  .Box--gray,
   .notifications-dropdown-arrow,
   .TimelineItem-break {
     border-color: var(--base-4) !important;
