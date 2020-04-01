@@ -16,18 +16,20 @@ body.page-responsive.pagehead
   c 0 0 $base4
   &-item
     b 1px solid $t
-    c $blue
+    c $textDark
+    &, & .octicon
+      ease color
     .octicon
-      c $indigo
-      filter contrast(0.5)
-      o 0.8
+      c $base9
+      va middle
     &:focus, &:hover
       c $blue
+      octicon $blue
     &.selected
       bbc $t
-      c $blue $base1 $base2
+      c $text $base1 $base2
       .octicon
-        c $text
+        c $textAlt
         filter none
         o 1
 .pagehead

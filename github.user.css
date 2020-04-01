@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.4
+@version      2.5.5
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -169,7 +169,7 @@
   .summary-stats li > .num,
   .Label--gray,
   .Label--outline,
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab),
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item),
   .listgroup-item,
   .markdown-body table tr td,
   .menu,
@@ -177,7 +177,7 @@
   .gh-header-meta,
   .Header,
   .Header-old,
-  .reponav-item.selected .octicon,
+  .reponav-item.selected,
   .repohead .Label--outline,
   .repo-list .Label--outline,
   .pagination a,
@@ -867,7 +867,6 @@
   .dropdown-menu-dark .octicon,
   .octicon-smiley,
   .octicon-file,
-  .reponav-item .octicon,
   .gitako-side-bar .gitako-side-bar-body .octicon,
   #readme .Box-header .octicon-pencil,
   .cm-s-github-light .CodeMirror-gutter.cm-s-github-light .CodeMirror-linenumbers,
@@ -1308,6 +1307,7 @@
   .markdown-body a,
   .markdown-body span.frame span span,
   .manage-member-meta-item > octicon,
+  .reponav-item.selected .octicon,
   p.explain strong,
   .orgs-help-item-content,
   .table-list-header-meta {
@@ -1551,6 +1551,7 @@
   }
   .blob-num,
   .markdown-body del,
+  .reponav-item .octicon,
   .pl-ba,
   .TimelineItem-badge,
   .TimelineItem .status-meta-badge,
@@ -1673,17 +1674,15 @@
   .octicon-saved,
   .octicon-project,
   .octicon-eye,
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):hover,
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):hover,
   .muted-link:hover,
   .markdown-body a:hover,
   .menu-item.selected,
   .menu-item[aria-current],
   .orghead .org-name,
   .orghead .pagehead-tabs-item.selected,
-  .reponav-item,
   .reponav-item:focus,
   .reponav-item:hover,
-  .reponav-item.selected,
   .ajax-pagination-btn,
   .pagination a:hover,
   .gitako-toggle-show-button-wrapper .action-icon .octicon:hover,
@@ -1832,6 +1831,7 @@
   .pl-ii,
   .pl-c2,
   .pl-mb,
+  .timeline-comment-header .author,
   .UnderlineNav-item.selected .UnderlineNav-octicon,
   ::selection,
   .CodeMirror-hint-active,
@@ -2346,7 +2346,8 @@
   .contrib-person path {
     fill: var(--orange) !important;
   }
-  .issue-meta-section .octicon {
+  .issue-meta-section .octicon,
+  .reponav-item .octicon {
     vertical-align: middle !important;
   }
   .IssueLabel,
@@ -2373,6 +2374,8 @@
     line-height: 1.9 !important;
   }
   .markdown-body a,
+  .reponav-item,
+  .reponav-item .octicon,
   #readme .Box-header .octicon-pencil,
   .select-menu-action,
   .toolbar-item,
@@ -2446,7 +2449,8 @@
   .release-entry *[class*="border"] {
     border-color: var(--base-7) !important;
   }
-  .markdown-body blockquote p {
+  .markdown-body blockquote p,
+  .reponav-item {
     color: var(--text-dark) !important;
   }
   .markdown-body .clippy-wrapper .clippy .icon {
@@ -2489,6 +2493,8 @@
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
   .notification-navigation .notification-configure-filters:focus .octicon,
+  .reponav-item:focus .octicon,
+  .reponav-item:hover .octicon,
   .orgs-help-item-octicon .octicon {
     color: var(--blue) !important;
   }
@@ -2510,12 +2516,6 @@
   }
   .gh-header {
     background-color: unset;
-  }
-  .reponav-item .octicon {
-    filter: contrast(0.5);
-  }
-  .reponav-item .octicon {
-    opacity: 0.8 !important;
   }
   .reponav-item.selected {
     border-bottom-color: transparent !important;
