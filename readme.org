@@ -1,4 +1,4 @@
-# Created 2020-03-31 Tue 22:17
+# Created 2020-04-01 Wed 01:50
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -7,7 +7,7 @@
 
 * Github Moonlight
 
-A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
+A dark userstyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
 #+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
@@ -55,7 +55,7 @@ minimize boilerplate.
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 
-** Reccomendations
+** Reccommendations
 *** Fonts
 
 These are the fonts used in the screenshots

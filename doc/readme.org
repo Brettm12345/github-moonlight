@@ -4,7 +4,7 @@
 
 * Github Moonlight
 
-A dark usestyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
+A dark userstyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
 {{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
@@ -52,7 +52,7 @@ minimize boilerplate.
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 
-** Reccomendations
+** Reccommendations
 *** Fonts
 
 These are the fonts used in the screenshots
