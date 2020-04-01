@@ -1,4 +1,4 @@
-# Created 2020-03-31 Tue 21:08
+# Created 2020-03-31 Tue 21:22
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -20,9 +20,12 @@ made with :heart:
 #+html: </div>
 
 * Installation
+
 You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on the install link below.
 #+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
+
 * Features
+
 *** Customization
 **** Colors
 All color variables are easily customizable
@@ -45,19 +48,26 @@ minimize boilerplate.
 *** Organization
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
+
 * Recomended Fonts
+
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
 - Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
+
 * Recomended Extensions
+
 | Extension                                                                   | Description                                   |
+| -------------------                                                         | --------------------------------------------- |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]                              | GitHub File tree                              |
 | [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]        | Hides nonsensical files                       |
 | [[https://github.com/sindresorhus/refined-github][Refined Github]]          | Adds a number of small enhancements to github |
 | [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]              | Displays notible forks on repo page           |
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github              |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github                  |
+
 * Additional Screenshots
+
 #+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
 #+html: <details><summary>Repo</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Repo" width="100%" /></details>
 #+html: <details><summary>Profile</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/profile.png" alt="Profile" width="100%" /></details>
@@ -77,9 +87,13 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Api Docs</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" alt="Api Docs" width="100%" /></details>
 #+html: <details><summary>Actions</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" alt="Actions" width="100%" /></details>
 #+html: <details><summary>Projects</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" alt="Projects" width="100%" /></details>
+
 * Discord Server
+
 Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for support/inqueries or just to chat.
+
 * Todo
+
 Feel free to create an issue if you want anything added to the theme
 
 - [ ] Create a custom logo
