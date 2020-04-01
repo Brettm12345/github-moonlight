@@ -1,4 +1,4 @@
-# Created 2020-03-31 Tue 21:52
+# Created 2020-03-31 Tue 21:58
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -24,16 +24,10 @@ You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on 
 #+html: <a href="https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat-square" alt="Install Directly with Stylus"/></a>
 
 ** Features
-
 **** Customization
-***** Colors
 
-All color variables are easily customizable
+All color and font variables are easily customizable
 check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
-
-***** Fonts
-
-The ui and the monospace fonts are easily customizable through css variables
 
 **** Completeness
 
@@ -61,16 +55,16 @@ minimize boilerplate.
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 
-** Recomended Fonts
+** Reccomendations
+*** Fonts
 
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
 - Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
 
-** Recomended Extensions
+*** Extensions
 
 | Extension                                                                   | Description                                   |
-| -------------------                                                         | --------------------------------------------- |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]                              | GitHub File tree                              |
 | [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]        | Hides nonsensical files                       |
 | [[https://github.com/sindresorhus/refined-github][Refined Github]]          | Adds a number of small enhancements to github |
@@ -79,8 +73,8 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github                  |
 
 ** Additional Screenshots
-
 #+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+
 #+html: <details><summary>Repo</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Repo" width="100%" /></details>
 #+html: <details><summary>Profile</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/profile.png" alt="Profile" width="100%" /></details>
 #+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
@@ -103,6 +97,10 @@ These are the fonts used in the screenshots
 ** Discord Server
 
 Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for support/inqueries or just to chat.
+
+** Contributions
+
+Contributions are welcome! Please refer to the *[[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]*
 
 ** Todo
 

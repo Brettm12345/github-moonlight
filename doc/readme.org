@@ -21,16 +21,10 @@ You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on 
 {{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
 
 ** Features
-
 **** Customization
-***** Colors
 
-All color variables are easily customizable
+All color and font variables are easily customizable
 check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference
-
-***** Fonts
-
-The ui and the monospace fonts are easily customizable through css variables
 
 **** Completeness
 
@@ -58,16 +52,16 @@ minimize boilerplate.
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 
-** Recomended Fonts
+** Reccomendations
+*** Fonts
 
 These are the fonts used in the screenshots
 - UI Font: [[https://rsms.me/inter/][Inter]]
 - Code Font: [[https://www.jetbrains.com/lp/mono/][JetBrains Mono]]
 
-** Recomended Extensions
+*** Extensions
 
 | Extension           | Description                                   |
-| ------------------- | --------------------------------------------- |
 | [[https://github.com/EnixCoda/Gitako][Gitako]]              | GitHub File tree                              |
 | [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]          | Hides nonsensical files                       |
 | [[https://github.com/sindresorhus/refined-github][Refined Github]]      | Adds a number of small enhancements to github |
@@ -76,8 +70,8 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github                  |
 
 ** Additional Screenshots
-
 #+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+
 {{{screenshot(Repo,repo)}}}
 {{{screenshot(Profile,profile)}}}
 {{{screenshot(Code,code)}}}
@@ -100,6 +94,10 @@ These are the fonts used in the screenshots
 ** Discord Server
 
 Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for support/inqueries or just to chat.
+
+** Contributions
+
+Contributions are welcome! Please refer to the *[[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]*
 
 ** Todo
 
