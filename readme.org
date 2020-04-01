@@ -1,9 +1,10 @@
-# Created 2020-04-01 Wed 11:41
+# Created 2020-04-01 Wed 13:42
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
-#+html: <div align="center">
 #+macro: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
+#+macro: screenshot-dir https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots
+#+html: <div align="center">
 
 * Github Moonlight
 
@@ -15,7 +16,7 @@ made with :heart:
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/commits/master"><img src="https://img.shields.io/github/commit-activity/m/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Commit Activity"/></a>
 #+html: <a href="https://github.com/Brettm12345/github-moonlight/stargazers"><img src="https://img.shields.io/github/stars/brettm12345/github-moonlight?logo=github&style=flat-square" alt="Stars"/></a>
 
-#+html: <img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Screenshot" />
+[[file:screenshots/repo.png]]
 #+html: </div>
 
 ** Installation
@@ -65,6 +66,7 @@ These are the fonts used in the screenshots
 *** Extensions
 
 | Extension                                                                   | Description                                   |
+|-----------------------------------------------------------------------------+-----------------------------------------------|
 | [[https://github.com/EnixCoda/Gitako][Gitako]]                              | GitHub File tree                              |
 | [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]        | Hides nonsensical files                       |
 | [[https://github.com/sindresorhus/refined-github][Refined Github]]          | Adds a number of small enhancements to github |
@@ -73,27 +75,27 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github                  |
 
 ** Additional Screenshots
-#+macro: screenshot #+HTML: <details><summary>$1</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/$2.png" alt="$1" width="100%" /></details>
+#+macro: screenshot #+HTML: <details><summary>$1</summary><img src="screenshots/$2.png" alt="$1" width="100%" /></details>
 
-#+html: <details><summary>Repo</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/repo.png" alt="Repo" width="100%" /></details>
-#+html: <details><summary>Profile</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/profile.png" alt="Profile" width="100%" /></details>
-#+html: <details><summary>Code</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/code.png" alt="Code" width="100%" /></details>
-#+html: <details><summary>Commit Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
-#+html: <details><summary>Search</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/search.png" alt="Search" width="100%" /></details>
-#+html: <details><summary>Dashboard</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>
-#+html: <details><summary>Pull Requests</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
-#+html: <details><summary>File Finder</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
-#+html: <details><summary>Contriubution Tree</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/contributions.png" alt="Contriubution Tree" width="100%" /></details>
-#+html: <details><summary>Markdown</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/markdown.png" alt="Markdown" width="100%" /></details>
-#+html: <details><summary>Issues</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/issues.png" alt="Issues" width="100%" /></details>
-#+html: <details><summary>Diff</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/diff.png" alt="Diff" width="100%" /></details>
-#+html: <details><summary>Gist User</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-user.png" alt="Gist User" width="100%" /></details>
-#+html: <details><summary>Gist File</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file.png" alt="Gist File" width="100%" /></details>
-#+html: <details><summary>Gist File Edit</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/gist-file-edit.png" alt="Gist File Edit" width="100%" /></details>
-#+html: <details><summary>Explore</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/explore.png" alt="Explore" width="100%" /></details>
-#+html: <details><summary>Api Docs</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" alt="Api Docs" width="100%" /></details>
-#+html: <details><summary>Actions</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" alt="Actions" width="100%" /></details>
-#+html: <details><summary>Projects</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" alt="Projects" width="100%" /></details>
+#+html: <details><summary>Repo</summary><img src="screenshots/repo.png" alt="Repo" width="100%" /></details>
+#+html: <details><summary>Profile</summary><img src="screenshots/profile.png" alt="Profile" width="100%" /></details>
+#+html: <details><summary>Code</summary><img src="screenshots/code.png" alt="Code" width="100%" /></details>
+#+html: <details><summary>Commit Tree</summary><img src="screenshots/commits.png" alt="Commit Tree" width="100%" /></details>
+#+html: <details><summary>Search</summary><img src="screenshots/search.png" alt="Search" width="100%" /></details>
+#+html: <details><summary>Dashboard</summary><img src="screenshots/dashboard.png" alt="Dashboard" width="100%" /></details>
+#+html: <details><summary>Pull Requests</summary><img src="screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
+#+html: <details><summary>File Finder</summary><img src="screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
+#+html: <details><summary>Contriubution Tree</summary><img src="screenshots/contributions.png" alt="Contriubution Tree" width="100%" /></details>
+#+html: <details><summary>Markdown</summary><img src="screenshots/markdown.png" alt="Markdown" width="100%" /></details>
+#+html: <details><summary>Issues</summary><img src="screenshots/issues.png" alt="Issues" width="100%" /></details>
+#+html: <details><summary>Diff</summary><img src="screenshots/diff.png" alt="Diff" width="100%" /></details>
+#+html: <details><summary>Gist User</summary><img src="screenshots/gist-user.png" alt="Gist User" width="100%" /></details>
+#+html: <details><summary>Gist File</summary><img src="screenshots/gist-file.png" alt="Gist File" width="100%" /></details>
+#+html: <details><summary>Gist File Edit</summary><img src="screenshots/gist-file-edit.png" alt="Gist File Edit" width="100%" /></details>
+#+html: <details><summary>Explore</summary><img src="screenshots/explore.png" alt="Explore" width="100%" /></details>
+#+html: <details><summary>Api Docs</summary><img src="screenshots/api.png" alt="Api Docs" width="100%" /></details>
+#+html: <details><summary>Actions</summary><img src="screenshots/actions.png" alt="Actions" width="100%" /></details>
+#+html: <details><summary>Projects</summary><img src="screenshots/projects.png" alt="Projects" width="100%" /></details>
 ** Issues
 
 If you find any places where this theme is incomplete please do not hesitate to
@@ -106,7 +108,7 @@ Feel free to join our discord server [[https://discord.gg/n5meNsX][here]] for su
 
 ** Contributions
 
-Contributions are welcome! Please refer to the *[[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]*
+Contributions are welcome! Please refer to the [[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]]
 
 ** Todo
 

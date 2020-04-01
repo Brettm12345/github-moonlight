@@ -1,7 +1,7 @@
 #+EXPORT_FILE_NAME: ../readme
-#+HTML: <div align="center">
 #+MACRO: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
 #+MACRO: screenshot-dir https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots
+#+HTML: <div align="center">
 
 * Github Moonlight
 
@@ -13,7 +13,7 @@ made with :heart:
 {{{badge(Commit Activity,github.com/Brettm12345/github-moonlight/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
 {{{badge(Stars,github.com/Brettm12345/github-moonlight/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
 
-#+HTML: <img src="{{{screenshot-dir}}}/repo.png" alt="Screenshot" />
+[[file:screenshots/repo.png]]
 #+HTML: </div>
 
 ** Installation
@@ -72,7 +72,7 @@ These are the fonts used in the screenshots
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]          | Links dependencies on github                  |
 
 ** Additional Screenshots
-#+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="{{{screenshot-dir}}}/$2.png" alt="$1" width="100%" /></details>
+#+MACRO: screenshot #+HTML: <details><summary>$1</summary><img src="screenshots/$2.png" alt="$1" width="100%" /></details>
 
 {{{screenshot(Repo,repo)}}}
 {{{screenshot(Profile,profile)}}}
