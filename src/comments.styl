@@ -1,10 +1,12 @@
-.saved-reply-form
-  c 0 $base1
+.previewable-comment-form
+  c 0 $base1 $base3
+  .comment-form-head.tabnav
+    c 0 0 $base4
+    .tabnav-tab
+      c 0 0 $base2
+      &.selected, &[aria-selected="true"], &[aria-current]
+        c $cn 0 $base3
 .comment-
-  &form
-    .previewable-comment-form &-head.tabnav
-      b 0
-      c 0 0 $base3
   &reactions
     .user-has-reacted
       c 0 $base1 $base5
@@ -15,6 +17,8 @@
     c 0 $base1 $base2
 .timeline-comment
   c $text $base1 $base5
+  &:last-child
+    c 0 0 $base3
   /.composer.composer-responsive &
     caret "right"
   /:target &

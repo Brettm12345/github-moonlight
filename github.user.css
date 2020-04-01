@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.2.0
+@version      2.2.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -301,7 +301,7 @@
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover,
   .btn-mktg,
-  .saved-reply-form,
+  .previewable-comment-form,
   .comment-reactions .user-has-reacted,
   .comment-reactions.has-reactions,
   .timeline-comment,
@@ -626,6 +626,7 @@
   .branch-action-body .merge-branch-form,
   .branch-action-body .merge-message,
   div[style*="#fcfdfd"],
+  .previewable-comment-form .comment-form-head.tabnav,
   .comment-reactions.has-reactions,
   .timeline-comment-header,
   .js-resolvable-timeline-thread-form,
@@ -967,7 +968,11 @@
   .blankslate,
   .btn.btn-outline.BtnGroup-item,
   .btn.btn-outline.tooltipped.tooltipped-sw,
-  .previewable-comment-form .comment-form-head.tabnav,
+  .previewable-comment-form,
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab.selected,
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab[aria-selected="true"],
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab[aria-current],
+  .timeline-comment:last-child,
   .review-thread-reply,
   .review-thread-reply .inline-comment-form,
   input[type="text"],
@@ -1014,6 +1019,7 @@
   .CircleBadge[style*="#fff"],
   .CircleBadge[style*="#eff9f9"],
   section[style*="#fafbfc"],
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab,
   .signed-commit-header,
   .commit-ref,
   .file-commit-form--full,
@@ -1501,7 +1507,6 @@
     background-color: var(--yellow) !important;
   }
   .branch-action-body,
-  .previewable-comment-form .comment-form-head.tabnav,
   .timeline-comment-wrapper {
     border: 0 !important;
   }
@@ -1524,6 +1529,9 @@
   .btn.btn-sm:hover,
   .btn-mktg,
   .btn-octicon:hover,
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab.selected,
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab[aria-selected="true"],
+  .previewable-comment-form .comment-form-head.tabnav .tabnav-tab[aria-current],
   .timeline-comment-header,
   .team,
   .user-mention,
