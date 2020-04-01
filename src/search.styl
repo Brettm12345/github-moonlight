@@ -5,7 +5,7 @@ header #search-results-container
   c 0 0 $base4
 .search_repos
   fieldset
-    c 0 0 $base2
+    c 0 0 $base3
     px 16px
 .user, .issue
   &-list-item
@@ -34,7 +34,7 @@ header #search-results-container
         s none
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
-    c $text $base1 $base5
+    c $text $base1
   &-item
     &.hx_hit-code&-public.repo-specific
       c 0 0 $base2
@@ -58,7 +58,3 @@ header #search-results-container
   &SearchBox-input
     bg $base4 url("/assets/images/octicons/search.svg") no-repeat 6px
     c $cn $base1
-#commit_search_results .commit
-  bx $b
-  c $text $base1 $base4
-  px 8px

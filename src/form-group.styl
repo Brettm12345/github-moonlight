@@ -1,11 +1,14 @@
 input
   caret-color $blue
   &[type="text"]
-    c $cn $base1 $base4
+    c $cn $base1 $base3
+    ease background-color, border-color
+    &:focus
+      c 0 $blue $base5
 .input-contrast
   box()
 .drag-and-drop
-  c $blue $base1 $base4
+  c $blue $base1 $base3
 .file
   &:target
     s-1()

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.8
+@version      2.1.9
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -189,7 +189,6 @@
   .code-list .divider .blob-code,
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num,
-  #commit_search_results .commit,
   .SelectMenu-divider,
   .SelectMenu-blankslate,
   .SelectMenu-loading,
@@ -458,7 +457,6 @@
   .code-list-item-private .blob-num,
   .jump-to-suggestions-results-container .navigation-item,
   .ais-SearchBox-input,
-  #commit_search_results .commit,
   .SelectMenu-divider,
   .SelectMenu-list,
   .SelectMenu-item,
@@ -646,9 +644,7 @@
   .js-file-content,
   .file-diff-split .empty-cell,
   .dropdown-menu,
-  input[type="text"],
   .input-contrast,
-  .drag-and-drop,
   .file-header,
   .form-group .form-control,
   .form-control,
@@ -676,9 +672,6 @@
   .orghead,
   .gh-header-sticky.is-stuck + .gh-header-shadow,
   .pagehead-actions .btn,
-  .pagehead,
-  .pagehead-tabs-item,
-  .pagehead .repohead.experiment-repo-nav,
   .site-header,
   .ajax-pagination-form:not(.js-more-repos-form) button,
   .pagination a,
@@ -715,7 +708,6 @@
   .flash,
   .filter-bar,
   header #search-results-container,
-  #commit_search_results .commit,
   .SelectMenu-item,
   .SelectMenu-modal,
   .SelectMenu-blankslate,
@@ -862,6 +854,7 @@
   .filter-item.selected,
   .filter-item[aria-selected="true"],
   .filter-item[aria-current],
+  input[type="text"]:focus,
   .input-contrast:hover,
   .input-contrast:focus,
   .form-control.search-page-label.js-advanced-search-label,
@@ -900,11 +893,6 @@
   table.files,
   table.files tr.navigation-focus td,
   table.files tr[aria-selected=true] td,
-  .code-list .file-box,
-  .code-list .code-list-item + .code-list-item,
-  .code-list .divider .blob-code,
-  .code-list .divider .blob-num,
-  .code-list-item-private .blob-num,
   .jump-to-field-active,
   .js-navigation-item:hover,
   #jump-to-results:hover,
@@ -1001,7 +989,6 @@
   #readme .Box-header:hover,
   .js-recent-activity-container > div > div,
   .repository-content > div.bg-white:first-child,
-  .search_repos fieldset,
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific,
   .SelectMenu-divider,
   .SelectMenu-tab,
@@ -1067,7 +1054,6 @@
   .progress-bar .progress,
   .checks-list-item.selected .checks-list-item-name,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
-  .select-menu-item:hover,
   ::selection,
   .CodeMirror-hint-active,
   .graphiql-container .execute-options > li:hover,
@@ -1109,6 +1095,8 @@
   .previewable-comment-form .comment-form-head.tabnav,
   .review-thread-reply,
   .review-thread-reply .inline-comment-form,
+  input[type="text"],
+  .drag-and-drop,
   .email-quoted-reply,
   .email-signature-reply,
   .markdown-body img,
@@ -1116,9 +1104,13 @@
   .highlight pre,
   .markdown-body pre,
   body.page-responsive.pagehead,
+  .pagehead,
+  .pagehead-tabs-item,
+  .pagehead .repohead.experiment-repo-nav,
   .Popover-message,
   .new-project-column,
   #readme .Box-header,
+  .search_repos fieldset,
   .SelectMenu-list,
   .select-menu-filters,
   .user-key-email-unverified,
@@ -1370,6 +1362,8 @@
     border-top: 1px solid var(--base-1) !important;
   }
   .Box-row--yellow,
+  .commits-list-item,
+  .commits-list-item:hover,
   .application-main > .flex-wrap,
   .discussion-timeline-actions,
   .filter-list,
@@ -1578,12 +1572,14 @@
   }
   .btn,
   .btn.btn-sm,
+  input[type="text"],
   .reaction-sort-item,
   .UnderlineNav {
     transition: background-color, border-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .btn:hover,
   .btn.btn-sm:hover,
+  input[type="text"]:focus,
   .input-contrast:hover,
   .input-contrast:focus,
   .form-group .form-control:focus,
@@ -1794,6 +1790,17 @@
   code .s2 {
     color: var(--green) !important;
   }
+  .commits-list-item+.commits-list-item,
+  .news .Details-content--hidden li,
+  .news .Details button,
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
+  .user-list-item+.user-list-item,
+  .issue-list-item+.issue-list-item,
+  .SelectMenu-filter,
+  .topic-list-item+.topic-list-item,
+  .graphiql-ide {
+    border-top-color: var(--base-1) !important;
+  }
   .commit-tease-contributors,
   .navigation-focus,
   .ScreenshotCarousel-navitem:hover,
@@ -1880,15 +1887,6 @@
   .SideNav-item {
     transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
-  .news .Details-content--hidden li,
-  .news .Details button,
-  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
-  .user-list-item+.user-list-item,
-  .issue-list-item+.issue-list-item,
-  .SelectMenu-filter,
-  .graphiql-ide {
-    border-top-color: var(--base-1) !important;
-  }
   .news .Details button:hover,
   .profile-timeline-year-list.bg-white {
     background: transparent !important;
@@ -1909,6 +1907,8 @@
   .menu-item:hover,
   .menu-item.selected:hover,
   .menu-item[aria-current]:hover,
+  .select-menu-item:hover,
+  .select-menu-item:focus,
   .subnav-item:focus,
   .subnav-item:hover,
   .suggester li.selected,
@@ -2380,14 +2380,6 @@
   }
   .ais-SearchBox-input {
     background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
-  }
-  #commit_search_results .commit {
-    border-left: 1px solid var(--base-1) !important;
-    border-right: 1px solid var(--base-1) !important;
-  }
-  #commit_search_results .commit {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
   }
   .SelectMenu-footer kbd {
     font-size: unset !important;
