@@ -87,6 +87,10 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Api Docs</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/api.png" alt="Api Docs" width="100%" /></details>
 #+html: <details><summary>Actions</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/actions.png" alt="Actions" width="100%" /></details>
 #+html: <details><summary>Projects</summary><img src="https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots/projects.png" alt="Projects" width="100%" /></details>
+* Contributing
+
+Contributions are welcome! Please see the [[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]] for information on the code structure, style
+and dependencies
 
 * Discord Server
 
