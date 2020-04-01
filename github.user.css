@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.0.8
+@version      2.0.9
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -268,7 +268,6 @@
   }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end,
   .auth-form-body,
-  .avatar-before-user-status,
   .AvatarStack-body,
   .AvatarStack-body .avatar,
   .signup-plan-card,
@@ -538,6 +537,7 @@
   .Toast-dismissButton,
   .topic-tag,
   .UnderlineNav,
+  .avatar-before-user-status,
   .hook-delivery-guid,
   kbd,
   iframe#graphiql,
@@ -879,7 +879,6 @@
   .gitako-toggle-show-button-wrapper.collapsed,
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
   .gitako-side-bar-content .file-explorer .node-item-row,
-  .js-user-status-container,
   .js-profile-editable-edit-button,
   .profile-timeline.discussion-timeline:before,
   .profile-timeline-card.bg-white,
@@ -944,6 +943,7 @@
   .tree-browser-result[aria-selected="true"],
   .tree-browser-result[aria-current],
   .UnderlineNav,
+  .js-user-status-container,
   .js-gist-file-update-container.js-task-list-container.file-box,
   .graphiql-container .variable-editor-title,
   .graphiql-container .docExplorerShow,
@@ -1185,7 +1185,6 @@
     background-color: var(--base-7) !important;
   }
   .Box-row--yellow,
-  .user-status-container-border-busy,
   .alert.warning {
     border-color: var(--yellow) !important;
   }
@@ -1612,10 +1611,10 @@
   .MarketplacePlan--sticky div.bg-white,
   .rgh-collaborator,
   .user-profile-nav,
-  .user-status-container-border-busy,
   .team-left-column[aria-label="Explore"] > div,
   .Toast,
   .topic-tag,
+  .user-status-container-border-busy,
   .hook-delivery-guid,
   fieldset {
     border: 1px solid var(--base-1) !important;
@@ -1641,11 +1640,13 @@
   }
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
   .State--purple,
+  .user-status-container-border-busy,
   .alert.product {
     border-color: var(--purple) !important;
   }
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline,
   .State--purple,
+  .user-status-container-border-busy,
   .alert.product {
     background-color: var(--purple-trans) !important;
   }
@@ -2108,7 +2109,8 @@
   .MarketplaceBackground-reccomendations img {
     filter: invert(1);
   }
-  .MarketplacePlan--sticky div.bg-white {
+  .MarketplacePlan--sticky div.bg-white,
+  .user-status-container-border-busy {
     border-top: none !important;
   }
   .MarketplacePlan--sticky div.bg-white {
@@ -2227,10 +2229,6 @@
   }
   .vcard-detail .octicon {
     color: var(--faded) !important;
-  }
-  .user-status-container-border-busy,
-  .alert.warning {
-    background-color: var(--yellow-trans) !important;
   }
   .project-card:focus {
     box-shadow: 0 0 0 0.2em var(--blue-trans) !important;
@@ -2494,6 +2492,9 @@
   }
   .graphiql-container .topBar {
     background: var(--base-4) !important;
+  }
+  .alert.warning {
+    background-color: var(--yellow-trans) !important;
   }
   .alert.product {
     background: var(--purple-trans) !important;
