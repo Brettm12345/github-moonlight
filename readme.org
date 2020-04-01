@@ -55,7 +55,7 @@ minimize boilerplate.
 Unlike virtually every other usercss. This project is organized into relivant
 files making it easy to manage and extend the code.
 
-** Reccomendations
+** Recommendations
 *** Fonts
 
 These are the fonts used in the screenshots
