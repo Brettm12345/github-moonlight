@@ -91,6 +91,11 @@ These are the fonts used in the screenshots
 {{{screenshot(Api Docs,api)}}}
 {{{screenshot(Actions,actions)}}}
 {{{screenshot(Projects,projects)}}}
+** Issues
+
+If you find any places where this theme is incomplete please do not hesitate to
+create an issue. Most likely I have never visited the area of the site that
+is incomplete
 
 ** Discord Server
 
