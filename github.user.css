@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.7
+@version      2.5.8
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -171,6 +171,7 @@
   .Label--outline,
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item),
   .listgroup-item,
+  .markdown-body table th,
   .markdown-body table tr td,
   .menu,
   .thread-subscription-status,
@@ -397,8 +398,8 @@
   .list-group-item,
   .listgroup,
   .listgroup-item,
-  .markdown-body table td,
   .markdown-body table th,
+  .markdown-body table td,
   .markdown-body table tr td,
   .markdown-body code,
   .markdown-body tt,
@@ -997,7 +998,6 @@
   .graphiql-container .docExplorerShow,
   .js-current .standalone a,
   .sidebar-module .disable > a,
-  body table th,
   .sidebar-module,
   .content .sectionbody .dlist dt,
   .content .verseblock-content,
@@ -1085,6 +1085,7 @@
   .private .mini-repo-list-item,
   .diffbar,
   .Label--gray,
+  .markdown-body table th,
   .notification-navigation.bg-white,
   .orghead .pagehead-tabs-item.selected,
   .Header,
@@ -1128,6 +1129,7 @@
   .doc-explorer-contents,
   .graphiql-container .search-box,
   .graphiql-container .search-box input,
+  body table th,
   .content ol li pre code,
   .libraries-jumbotron {
     background-color: var(--base-2) !important;
