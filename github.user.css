@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.6
+@version      2.5.7
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1956,17 +1956,21 @@
     height: auto;
   }
   .text-gray-light {
-    color: var(--text-alt) !important;
+    color: var(--text-dark) !important;
   }
   .text-blue,
-  .text-emphasized,
   .cm-def {
     color: var(--blue) !important;
   }
   .text-gray,
-  .text-gray-dark,
   .cm-punctuation {
     color: var(--text) !important;
+  }
+  .text-gray-dark {
+    color: var(--cn) !important;
+  }
+  .text-emphasized {
+    color: var(--text-alt) !important;
   }
   .text-green,
   .cm-string,
