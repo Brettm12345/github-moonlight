@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.1.6
+@version      2.1.7
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -152,7 +152,6 @@
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab),
   .listgroup-item,
   .markdown-body table tr td,
-  .MarketplacePlan--sticky .marketplace-plan-emphasis,
   .menu,
   .thread-subscription-status,
   .gh-header-meta,
@@ -1825,6 +1824,7 @@
   }
   .diffstat,
   .octicon[style*="#6a737d"],
+  .marketplace-plan-emphasis,
   .menu-heading,
   .vcard-username {
     color: var(--text-gray) !important;
