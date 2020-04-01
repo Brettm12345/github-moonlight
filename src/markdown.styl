@@ -10,6 +10,8 @@
     td underline
     &:hover
       c $blue
+  .absent
+    c $red
   img
     c 0 0 $base3
   hr
@@ -23,6 +25,11 @@
     o 0.8
   pre > code
     c 0 0 $t
+  .csv-data
+    .blob-num
+      c 0 $base3
+    th
+      c 0 $base4
   code, tt
     b $b
     c $cn $base1 $base7
@@ -30,6 +37,8 @@
     m 0.4em
     mono()
     white-space nowrap
+  h6
+    c $faded
   h1, h2, h3, h4, h5, h6
     c 0 $base1
     .octicon-link
@@ -44,6 +53,11 @@
     c 0 $base1 $base3
     fw 500
     mono()
+  span.frame
+    & > span
+      c 0 $base1
+    span span
+      c $textAlt
   blockquote
     c $textAlt $base1 $base5
   .clippy-wrapper .clippy

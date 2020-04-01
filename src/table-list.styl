@@ -8,6 +8,9 @@
       bl $b
     &:last-child
       br $b
+  &-item
+    &.unread ^[0]-cell:first-child
+      s inset 2px 0 0 $blue
   &-header
     c 0 $base1 $base4
     &-meta

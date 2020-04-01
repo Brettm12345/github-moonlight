@@ -2,5 +2,9 @@
   c $text $base1 $base3
   li
     c 0 $base1
+    small
+      c 0 0 $faded
+    &.navigation-focus, &:hover, &[aria-selected="true"]
+      c 0 0 $blueDark
     &.selected, &[aria-selected="true"], &[aria-current]
       c 0 0 $base6

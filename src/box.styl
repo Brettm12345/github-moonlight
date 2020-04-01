@@ -3,8 +3,13 @@
 .Box
   &-body
     c 0 $base1
+    .help
+      c $faded
   &--responsive, &row--unread
     s inset 2px 0 0 $blue
+  &--overlay
+    c 0 $base1 $base2
+    s-1()
   &-header
     c 0 $base1 $base4
     &--blue

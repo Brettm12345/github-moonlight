@@ -9,6 +9,7 @@ $base6 = var(--base-6)
 $base7 = var(--base-7)
 $base8 = var(--base-8)
 $base9 = var(--base-9)
+$borderAlt = var(--border-alt)
 $active = var(--active)
 $b = 1px solid $base1
 $blue = var(--blue)
@@ -45,7 +46,7 @@ $yellowTrans = var(--yellow-trans)
 
 @require './src/mixins'
 
-@-moz-document domain('github.com'), domain('githubusercontent.com')
+@-moz-document domain('github.com'), domain('raw.githubusercontent.com')
   @require './src'
 @-moz-document domain('gist.github.com')
   @require './src/gist'

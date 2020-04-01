@@ -6,3 +6,72 @@ div[style*="height: 1px;"]
   c 0 0 $base1
 .showcase-page-pattern::after
   c 0 $base4 $base1
+.plan-notice
+  btc $base1
+
+.plan-choice
+  c 0 $base1 $base3
+  ease background-color
+  &--experiment
+    experiment-color($sel, $color)
+      &^[0]--{$sel}
+        &.open, &.selected
+          c 0 $color
+          ~/-icon
+            c 0 0 $color
+    experiment-color('green', $green)
+    experiment-color('purple', $purple)
+  &.open, &.selected
+    c 0 0 $base4
+.billing-
+  &box-
+    &progressBars span:nth-child(2)
+      blc $base1
+    &accordian
+      &-state .octicon
+        c $textGray
+        ../:hover &
+          c $textAlt
+  &plans
+    tbody > .selected, .current
+      c 0 0 $base5
+    .coupon
+      &-label:after
+        bbc $teal
+      &.expiring td
+        c $yellow $yellow $yellowTrans
+      td
+        c $teal $teal $tealTrans
+  &line-item
+    btc $base1
+  &manager-banner
+    c 0 $base1 $base4
+    &-icon
+      c $faded
+    &-title
+      c $textAlt
+    &-text
+      c $text
+.payment-history
+  $statusColors = {
+    currency: $text
+    succeded: $green
+    refunded: $faded
+    failed: $red
+  }
+  for $k, $v in $statusColors
+    .{$k} .status
+      c $v
+  .failed
+  .failed, .refunded
+    c 0 0 $base4
+.discounted-original-price
+  c $faded
+.golden-ticket-banner
+  btc $yellow
+.bt-pp-cancel
+  c $red
+.paypal-container
+  c 0 0 $base2
+.braintree-paypal-loggedin
+  c 0 $base1

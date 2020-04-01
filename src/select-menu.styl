@@ -1,4 +1,6 @@
 .SelectMenu-
+  &closeButton
+    c $faded
   &header
     bbc $base1
   &filter
@@ -20,13 +22,52 @@
   &item
     c $text $base1
     ease background-color
-    &:hover
-      c 0 0 $base5
+    @media (hover: hover)
+      &:not([aria-selected="true"])
+        &:hover
+          c $cn 0 $base7
+        &:active
+          c $cn 0 $base8
+      &:hover
+        c 0 0 $base5
+      &:active
+        c 0 0 $base3
+      &:focus
+        c 0 0 $base6
+    &[aria-checked="true"]
+      c $cn
+  &tabs
+    btc $base1
   &tab
     c $text $base1 $base2
-    &.selected, &[aria-selected="true"], &[aria-current]
+    &[aria-selected="true"]
       c $cn $base1 $base4
+      @media (min-width: 544px)
+        c 0 $base1
+    &:not([aria-checked="true"])
+      &:active, &:hover
+        @media(hover: hover)
+          c 0 $base2
 .select-menu-
+  &button.primary
+    &:after
+      btc $base2
+    &:active
+      c 0 $green $greenTrans
+  &blankslate
+    h3
+      c $text
+    svg
+      v $textAlt
+  &loading-overlay
+    c 0 0 $base2
+  &header
+    octicon $faded
+  &action
+    c $faded
+    ease color
+    &:hover
+      c $blue
   &header, &header &title
     c $cn $base1 $base2
   &modal, &item
@@ -40,8 +81,26 @@
   &text-filter
     &:first-child, &:last-child
       c 0 $base1
+    &::placeholder
+      c $placeholder
+  &new-item-form .octicon
+    c $blue
   &item
     ease background-color
+    &-text .description
+      &, &-inline
+        c $faded
+      &-warning
+        c $red
+    .excluded
+      c 0 0 $base3
+    .octicon-circle-slash
+      &, ^[1].selected &^[1]-icon
+        c $faded
+    &.disabled, &.disabled.selected, &[aria-disabled="true"], &[disabled]
+      &, & .description
+        c $faded
+        o 0.6
     &:hover, &:focus
       c 0 0 $base6
   &tabs

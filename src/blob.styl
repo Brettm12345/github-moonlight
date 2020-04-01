@@ -30,6 +30,10 @@
   &num
     c $base9 $base1 $base4
     fw 600
+    &-expandable
+      .diff, .directional
+        &-expander:hover
+          c 0 $blue $blue
   &expanded
     & + tr:not(&), tr:not(&) + &
       ~/code, ~/num

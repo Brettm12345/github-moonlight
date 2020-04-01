@@ -1,5 +1,13 @@
 .octicon
   color $text
+  /.draft&
+    c $faded
+  /.closed&, /.reverted&
+    c $red
+  /.open&
+    c $green
+  /.merged
+    c $purple
   &-star
     v none $yellow
   /.starred &-star
@@ -35,6 +43,9 @@
     c $orange
   &-smiley, &-file
     c $indigo
+.lfs-data-icon
+  &, &.dark
+    c $text
 .donut-chart
   .success
     v $green
