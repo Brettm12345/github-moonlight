@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.5.8
+@version      2.5.9
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -2362,7 +2362,8 @@
   .IssueLabel,
   .IssueLabel > a[style*="#000"],
   .Toast--warning .Toast-icon,
-  .Toast--success .Toast-icon {
+  .Toast--success .Toast-icon,
+  .Toast--success .Toast-icon .octicon-check {
     color: var(--base-2) !important;
   }
   .reaction-sort-item {
