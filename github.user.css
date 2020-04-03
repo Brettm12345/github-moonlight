@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.8.6
+@version      2.8.7
 
 @license      MIT
 @description  A dark blue github theme
@@ -366,17 +366,51 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
+  .blob-code.blob-code-addition,
+  .blob-num.blob-num-addition,
+  .blob-code-addition,
+  .blob-num-addition {
+    color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .blob-code.blob-code-addition .blob-code-marker::before,
+  .blob-num.blob-num-addition .blob-code-marker::before,
+  .blob-code-addition .blob-code-marker::before,
+  .blob-num-addition .blob-code-marker::before {
+    color: var(--teal) !important;
+  }
+  .blob-code.blob-code-addition .x,
+  .blob-num.blob-num-addition .x,
+  .blob-code-addition .x,
+  .blob-num-addition .x {
+    color: var(--base-1) !important;
+    background-color: var(--teal) !important;
+  }
+  .blob-code.blob-code-deletion,
+  .blob-num.blob-num-deletion,
+  .blob-code-deletion,
+  .blob-num-deletion {
+    color: var(--red) !important;
+    background-color: var(--red-transparent) !important;
+  }
+  .blob-code.blob-code-deletion .blob-code-marker::before,
+  .blob-num.blob-num-deletion .blob-code-marker::before,
+  .blob-code-deletion .blob-code-marker::before,
+  .blob-num-deletion .blob-code-marker::before {
+    color: var(--red) !important;
+  }
+  .blob-code.blob-code-deletion .x,
+  .blob-num.blob-num-deletion .x,
+  .blob-code-deletion .x,
+  .blob-num-deletion .x {
+    color: var(--base-1) !important;
+    background-color: var(--red) !important;
+  }
   .blob-code-expandable,
   .blob-num-expandable,
   .blob-code-hunk,
   .blob-num-hunk {
     background-color: var(--base-4) !important;
-  }
-  .blob-code-addition {
-    background-color: var(--teal-transparent) !important;
-  }
-  .blob-code-deletion {
-    background-color: var(--red-transparent) !important;
   }
   .blob-code-inner {
     color: var(--fg-primary) !important;
@@ -387,22 +421,6 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted {
     background-color: var(--base-8) !important;
-  }
-  .blob-code-addition .blob-code-marker::before {
-    color: var(--teal) !important;
-  }
-  .blob-code-addition .x {
-    background-color: var(--teal) !important;
-  }
-  .blob-code-deletion .blob-code-marker::before {
-    color: var(--red) !important;
-  }
-  .blob-code-deletion .x {
-    background-color: var(--red) !important;
-  }
-  .blob-code-addition .x,
-  .blob-code-deletion .x {
-    color: var(--base-1) !important;
   }
   .blob-num {
     color: var(--base-9) !important;
@@ -1194,6 +1212,9 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .file-diff-split .blob-code + .file-diff-split .blob-num {
     border-color: var(--base-1) !important;
   }
+  .review-comment:target {
+    box-shadow: var(--elevation-1) !important;
+  }
   .discussion-item-icon {
     color: var(--fg-primary) !important;
     border-color: var(--base-5) !important;
@@ -1573,8 +1594,9 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .octicon-repo-forked {
     margin-bottom: 0.1em !important;
   }
-  .octicon.merged,
-  .octicon c $purple,
+  .octicon.merged {
+    color: var(--purple) !important;
+  }
   .octicon-file-directory,
   .octicon-saved {
     color: var(--blue) !important;
@@ -1875,7 +1897,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .markdown-body table tr:nth-child(2n) {
     background-color: var(--base-3);
   }
-  .markdown-body table tr td {
+  .markdown-body table tr td:not([class*="blob"]) {
     color: var(--fg-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
