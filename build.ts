@@ -78,6 +78,10 @@ const userVariables = pipe(
     [{ ...palette, calendar: palette.teal }],
     [text, { handleKey: k => `text-${k}` }],
     [
+      { thumb: text.dark + 30, track: gray[2] },
+      { handleKey: k => `scrollbar-${k}` }
+    ],
+    [
       {
         bg: palette.blue,
         fg: text.light

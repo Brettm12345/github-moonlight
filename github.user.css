@@ -32,6 +32,8 @@
 @var color text-placeholder "Text Placeholder" #c8d3f5aa
 @var color text-primary "Text Primary" #c8d3f5
 @var color text-secondary "Text Secondary" #b4c2f0
+@var color scrollbar-thumb "Scrollbar Thumb" #828bb830
+@var color scrollbar-track "Scrollbar Track" #1b1d2c
 @var color selection-bg "Selection Bg" #82aaff
 @var color selection-fg "Selection Fg" #e2e8fa
 @var color blue-transparent "Blue Transparent" #82aaff33
@@ -90,6 +92,8 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     --text-placeholder: /*[[text-placeholder]]*/;
     --text-primary: /*[[text-primary]]*/;
     --text-secondary: /*[[text-secondary]]*/;
+    --scrollbar-thumb: /*[[scrollbar-thumb]]*/;
+    --scrollbar-track: /*[[scrollbar-track]]*/;
     --selection-bg: /*[[selection-bg]]*/;
     --selection-fg: /*[[selection-fg]]*/;
     --blue-transparent: /*[[blue-transparent]]*/;
