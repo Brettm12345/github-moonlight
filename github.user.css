@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.9.2
+@version      2.10.0
 
 @license      MIT
 @description  A dark blue github theme
@@ -2313,7 +2313,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .awesome-autocomplete .tt-cursor {
-    color: var(--blue) !important;
+    background-color: var(--base-7) !important;
   }
   .awesome-autocomplete .tt-dropdown-menu {
     border-color: var(--base-1) !important;

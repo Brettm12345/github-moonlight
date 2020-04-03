@@ -1,0 +1,64 @@
+// TODO: Clean this up
+.aa-popup
+  h1
+    bb $b
+  h2
+    c fg('primary')
+  p
+    c fg('paragraph')
+  button
+    c fg('light') base(1) base(2)
+  a
+    c $blue
+// common
+.awesome-autocomplete
+  .tt-
+    &hint
+      c fg("primary") base(1) base(4)
+    &cursor
+      c 0 0 base(7)
+    &dropdown-menu
+      c 0 base(1) base(4)
+      bs 0 3px 12px rgba(0,0,0,0.15)
+      octicon fg('pimary')
+      .aa-query
+        c fg('pimary')
+        .aa-query-cursor strong, .aa-query-default em
+          c fg('dark')
+      .aa-branding
+        c fg('pimary')
+      .aa-category
+        c fg('dark') 0 base(3)
+      ../suggestion
+        bb $b
+        em
+          c fg('dark') 0 base(5)
+        .aa-suggestion
+          .aa-infos
+            c fg('primary')
+          &.aa-user
+            .aa-thumbnail
+              c 0 0 base(3)
+            .aa-login
+              c fg('primary')
+            .aa-company
+              c fg('dark')
+              i
+                c fg('primary')
+          &.aa-repo
+            .aa-thumbnail
+              c 0 0 base(3)
+            .aa-description
+              c fg('primary')
+          &.aa-issue
+            .aa-thumbnail
+              c 0 0 base(3)
+            .aa-repo-name
+              c fg('primary')
+            .aa-issue-number
+              c fg('primary')
+            .aa-issue-body
+              c fg('primary')
+form#search_form .awesome-autocomplete .twitter-typeahead .tt-input:focus
+  c 0 $teal
+  bs inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5)
