@@ -2529,6 +2529,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
+  :root {
+    --background: var(--base-4);
+  }
   .dashboard .js-all-activity-header + div {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
