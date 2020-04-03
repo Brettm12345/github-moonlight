@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.7.0
+@version      2.7.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -839,6 +839,9 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .comment-form-head.tabnav {
     background-color: var(--base-4) !important;
   }
+  .page-responsive .comment-form-head.tabnav {
+    background-color: var(--base-3) !important;
+  }
   .comment-form-head.tabnav .tabnav-tab {
     background-color: var(--base-2) !important;
   }
@@ -1177,6 +1180,9 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     border-color: var(--base-5) !important;
     background-color: transparent !important;
   }
+  .discussion-timeline-actions .js-new-comment-form .timeline-comment {
+    background-color: var(--base-3) !important;
+  }
   .discussion-sidebar-heading {
     color: var(--fg-primary) !important;
   }
@@ -1184,6 +1190,94 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     color: var(--fg-faded) !important;
     border-color: var(--base-1) !important;
     font-weight: 500 !important;
+  }
+  .TimelineItem-badge {
+    border-color: var(--base-5) !important;
+    background-color: var(--base-4) !important;
+  }
+  .TimelineItem:target .TimelineItem-badge-bage {
+    border-color: var(--blue) !important;
+  }
+  .TimelineItem--condensed .TimelineItem-badge {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .TimelineItem-break {
+    border-color: var(--base-4) !important;
+    background-color: transparent !important;
+  }
+  .TimelineItem:before,
+  .TimelineItem .status-meta:before,
+  .TimelineItem .merge-pr-more-commits:before {
+    background-color: var(--base-5) !important;
+  }
+  .TimelineItem-badge,
+  .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits-badge,
+  .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
+  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
+    border: 2px solid var(--base-5) !important;
+    color: var(--base-9) !important;
+    border-color: var(--base-5) !important;
+    background-color: var(--base-4) !important;
+  }
+  .TimelineItem-body,
+  .TimelineItem .status-meta-body,
+  .TimelineItem .merge-pr-more-commits-body {
+    color: var(--fg-faded) !important;
+  }
+  .deployments-timeline {
+    border-bottom-color: var(--base-1) !important;
+  }
+  .deployments-timeline-item {
+    border-left-color: var(--base-9) !important;
+  }
+  .timeline-commits .hidden-text-expander .ellipsis-expander {
+    background-color: var(--base-4) !important;
+  }
+  .timeline-new-comment .previewable-comment-form .comment-body {
+    border-color: var(--base-1) !important;
+  }
+  .timeline-comment {
+    color: var(--fg-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-5) !important;
+  }
+  .composer.composer-responsive .timeline-comment::before {
+    border-right-color: var(--base-1) !important;
+  }
+  .composer.composer-responsive .timeline-comment::after {
+    border-right-color: var(--base-4) !important;
+  }
+  :target .timeline-comment {
+    box-shadow: 0 0 0 0.2em var(--base-1) !important;
+  }
+  :target .timeline-comment::before {
+    filter: drop-shadow(-0.28em 0 0 var(--base-1));
+  }
+  .timeline-comment-wrapper {
+    border: 0 !important;
+    border-color: var(--base-1) !important;
+  }
+  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline {
+    color: var(--purple) !important;
+    border-color: var(--purple) !important;
+    background-color: var(---transparent) !important;
+  }
+  .timeline-comment-header {
+    color: var(--fg-light) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-4) !important;
+  }
+  .timeline-comment-header .author {
+    color: var(--fg-light) !important;
+  }
+  .timeline-comment--caret::before,
+  .timeline-comment--caret.current-user::before,
+  .timeline-comment--caret::after,
+  .timeline-comment--caret.current-user::after {
+    border-right-color: var(--base-4) !important;
   }
   .dropdown-divider {
     border-color: var(--base-1) !important;
@@ -3403,94 +3497,6 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   }
   .team-left-column[aria-label="Explore"].bg-white {
     background-color: var(--base-2) !important;
-  }
-  .TimelineItem-badge {
-    border-color: var(--base-5) !important;
-    background-color: var(--base-4) !important;
-  }
-  .TimelineItem:target .TimelineItem-badge-bage {
-    border-color: var(--blue) !important;
-  }
-  .TimelineItem--condensed .TimelineItem-badge {
-    height: 30px !important;
-    width: 30px !important;
-  }
-  .TimelineItem-break {
-    border-color: var(--base-4) !important;
-    background-color: transparent !important;
-  }
-  .TimelineItem:before,
-  .TimelineItem .status-meta:before,
-  .TimelineItem .merge-pr-more-commits:before {
-    background-color: var(--base-5) !important;
-  }
-  .TimelineItem-badge,
-  .TimelineItem .status-meta-badge,
-  .TimelineItem .merge-pr-more-commits-badge,
-  .TimelineItem--condensed .TimelineItem-badge,
-  .TimelineItem .status-meta--condensed .TimelineItem .status-meta-badge,
-  .TimelineItem .merge-pr-more-commits--condensed .TimelineItem .merge-pr-more-commits-badge {
-    border: 2px solid var(--base-5) !important;
-    color: var(--base-9) !important;
-    border-color: var(--base-5) !important;
-    background-color: var(--base-4) !important;
-  }
-  .TimelineItem-body,
-  .TimelineItem .status-meta-body,
-  .TimelineItem .merge-pr-more-commits-body {
-    color: var(--fg-faded) !important;
-  }
-  .deployments-timeline {
-    border-bottom-color: var(--base-1) !important;
-  }
-  .deployments-timeline-item {
-    border-left-color: var(--base-9) !important;
-  }
-  .timeline-commits .hidden-text-expander .ellipsis-expander {
-    background-color: var(--base-4) !important;
-  }
-  .timeline-new-comment .previewable-comment-form .comment-body {
-    border-color: var(--base-1) !important;
-  }
-  .timeline-comment {
-    color: var(--fg-primary) !important;
-    border-color: var(--base-1) !important;
-    background-color: var(--base-5) !important;
-  }
-  .composer.composer-responsive .timeline-comment::before {
-    border-right-color: var(--base-1) !important;
-  }
-  .composer.composer-responsive .timeline-comment::after {
-    border-right-color: var(--base-4) !important;
-  }
-  :target .timeline-comment {
-    box-shadow: 0 0 0 0.2em var(--base-1) !important;
-  }
-  :target .timeline-comment::before {
-    filter: drop-shadow(-0.28em 0 0 var(--base-1));
-  }
-  .timeline-comment-wrapper {
-    border: 0 !important;
-    border-color: var(--base-1) !important;
-  }
-  .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline {
-    color: var(--purple) !important;
-    border-color: var(--purple) !important;
-    background-color: var(---transparent) !important;
-  }
-  .timeline-comment-header {
-    color: var(--fg-light) !important;
-    border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
-  }
-  .timeline-comment-header .author {
-    color: var(--fg-light) !important;
-  }
-  .timeline-comment--caret::before,
-  .timeline-comment--caret.current-user::before,
-  .timeline-comment--caret::after,
-  .timeline-comment--caret.current-user::after {
-    border-right-color: var(--base-4) !important;
   }
   .Toast {
     border: 1px solid var(--base-1) !important;

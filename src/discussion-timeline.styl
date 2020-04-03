@@ -3,9 +3,59 @@
     c fg("primary") base(5) base(7)
   &timeline-actions
     c 0 base(5) $t
+    .js-new-comment-form .timeline-comment
+      c 0 0 base(3)
   &sidebar-
     &heading
       c fg("primary")
     &item
       c fg("faded") base(1)
       fw 500
+.TimelineItem
+  &-badge
+    c 0 base(5) base(4)
+    ~/:target &-bage
+      c 0 $blue
+    ~/--condensed &
+      size 30px
+  &-break
+    c 0 base(4) $t
+  &, .status-meta, .merge-pr-more-commits
+    &:before
+      c 0 0 base(5)
+    &-badge, &--condensed &-badge
+      b 2px solid base(5)
+      c base(9) base(5) base(4)
+    &-body
+      c fg("faded")
+timeline
+  .deployments-&
+    bbc base(1)
+    &-item
+      blc base(9)
+  .&-commits .hidden-text-expander .ellipsis-expander
+    c 0 0 base(4)
+  .&-
+    &new-comment .previewable-comment-form .comment-body
+      c 0 base(1)
+    &comment
+      c fg("primary") base(1) base(5)
+      /.composer.composer-responsive &
+        caret "right"
+      /:target &
+        shadow 0 0 0 0.2em base(1)
+        &::before
+          filter drop-shadow(-0.28em 0 0 base(1))
+      &-wrapper
+        b 0
+        c 0 base(1)
+      &-label.tooltipped.tooltipped-s.tooltipped-multiline
+        c $purple $purple t("purple")
+      &-header
+        c fg("light") base(1) base(4)
+        .author
+          c fg("light")
+      &--caret
+        &, &.current-user
+          &::before, &::after
+            brc base(4)
