@@ -1,7 +1,8 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.8.2
+@version      2.8.4
+
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -2102,6 +2103,43 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     color: var(--fg-primary) !important;
     border-color: var(--base-1) !important;
     background-color: transparent !important;
+  }
+  .oauth-org-access-details {
+    background-color: var(--base-2) !important;
+  }
+  .oauth-org-access-details .oauth-org-item.revoked {
+    background-color: var(--base-2) !important;
+  }
+  .oauth-org-access-details .oauth-org-item.on strong {
+    color: var(--fg-light) !important;
+  }
+  .oauth-org-access-details .oauth-org-item:hover {
+    background-color: var(--base-3) !important;
+  }
+  .oauth-permissions-details.open a.btn-sm {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .oauth-permissions-details .permission-title {
+    color: var(--fg-faded) !important;
+  }
+  .oauth-permissions-details .permission-summary em.highlight {
+    border: 1px solid var(--base-1) !important;
+    color: var(--fg-light) !important;
+    border-color: var(--base-0) !important;
+    background-color: var(--base-0) !important;
+  }
+  .oauth-org-access-details {
+    background-color: var(--base-2) !important;
+  }
+  .oauth-org-access-details .oauth-org-item.revoked {
+    background-color: var(--base-2) !important;
+  }
+  .oauth-org-access-details .oauth-org-item.on strong {
+    color: var(--fg-light) !important;
+  }
+  .oauth-org-access-details .oauth-org-item:hover {
+    background-color: var(--base-3) !important;
   }
   .manage-member-meta-item {
     color: var(--fg-faded) !important;
