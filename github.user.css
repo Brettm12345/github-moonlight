@@ -2211,10 +2211,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--text-secondary) !important;
   }
   .reponav-item.selected {
-    border-bottom-color: transparent !important;
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
+    border-bottom-color: transparent !important;
   }
   .pagehead-actions .btn {
     background-color: var(--base-4) !important;
