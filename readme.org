@@ -1,4 +1,4 @@
-# Created 2020-04-01 Wed 13:45
+# Created 2020-04-03 Fri 06:27
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -109,19 +109,3 @@ Feel free to join our [[https://discord.gg/n5meNsX][discord server]] for support
 ** Contributions
 
 Contributions are welcome! Please refer to the [[https://github.com/Brettm12345/github-moonlight/blob/master/.github/CONTRIBUTING.org][contribution guide]].
-
-** Todo
-
-Feel free to create an issue if you want anything added to the theme
-
-- [ ] Create a custom logo
-- [X] Create a discord server
-- [X] Add support for github api docs
-- [X] Add styles for [[https://www.githubstatus.com/][githubstatus.com]]
-- [X] Put colors into usercss variables
-- [X] Add screenshots to readme
-- [X] Add styles for actions
-- [X] Add styles for insights
-- [X] Finish theming pull request creation
-- [X] Setup a usercss with user configurable variables
-- [X] Add badges to readme.org
