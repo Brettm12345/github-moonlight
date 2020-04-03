@@ -1,6 +1,6 @@
 {
   "name": "github-moonlight",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "main": "index.js",
   "author": "brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)",
   "description": "A dark blue github theme",
@@ -15,9 +15,9 @@
   "license": "MIT",
   "scripts": {
     "build:readme": "emacsclient -e '(progn (find-file \"doc/readme.org\") (org-org-export-to-org))'",
-    "patch": "yarn versions patch -c 'yarn build'",
-    "minor": "yarn versions minor -c 'yarn build'",
-    "major": "yarn versions major -c 'yarn build'",
+    "patch": "versions patch -c 'yarn build' package.json",
+    "minor": "versions minor -c 'yarn build' package.json",
+    "major": "versions major -c 'yarn build' package.json",
     "build": "ts-node build",
     "copy": "yarn build && xclip -i -selection clipboard github.user.css",
     "build:watch": "stylus --watch github.user.styl",
