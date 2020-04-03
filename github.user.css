@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name         GitHub-Moonlight
+@name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.8.7
+@version      2.9.0
 
 @license      MIT
 @description  A dark blue github theme
@@ -10,41 +10,40 @@
 @supportURL   https://github.com/brettm12345/github-moonlight/issues
 @updateURL    https://github.com/brettm12345/github-moonlight/raw/master/github.user.css
 
-@var text  ui-font    "UI Font"        "Inter V"
-@var text  mono-font  "Monospace Font" "monospace"
-
-@var color red    "Red"    #ff5370
-@var color orange "Orange" #ff995e
-@var color yellow "Yellow" #ffc777
-@var color green  "Green"  #c3e88d
-@var color teal   "Teal"   #4fd6be
-@var color cyan   "Cyan"   #86e1fc
-@var color blue   "Blue"   #82aaff
-@var color pink   "Pink"   #fca7ea
-@var color purple "Purple" #c597f9
+@var color blue "Blue" #82aaff
+@var color blue-dark "Blue Dark" #4976eb
+@var color cyan "Cyan" #86e1fc
+@var color cyan-light "Cyan Light" #b4f9f8
+@var color green "Green" #c3e88d
 @var color indigo "Indigo" #7a88cf
-
-@var color red-light  "Light Red"  #ff757f
-@var color cyan-light "Light Cyan" #b4f9f8
-@var color blue-dark  "Dark Blue"  #4976eb
-
-@var color calendar "Contribution Calendar" #4fd6be
-
-@var color red-transparent    "Transparent Red"    #ff537033
-@var color orange-transparent "Transparent Orange" #ff995e33
-@var color yellow-transparent "Transparent Yellow" #ffc77733
-@var color green-transparent  "Transparent Green"  #c3e88d33
-@var color teal-transparent   "Transparent Teal"   #4fd6be33
-@var color blue-transparent   "Transparent Blue"   #82aaff33
-@var color cyan-transparent   "Transparent Cyan"   #86e1fc33
-@var color pink-transparent   "Transparent Pink"   #fca7ea33
-@var color purple-transparent "Transparent Purple" #c597f933
-@var color indigo-transparent "Transparent Indigo" #7a88cf33
- 
-@var color red-light-transparent  "Transparent Light Red"  #ff757f33
-@var color cyan-light-transparent "Transparent Light Cyan" #b4f9f833
-@var color blue-dark-transparent  "Transparent Dark Blue"  #4976eb33
-
+@var color orange "Orange" #ff995e
+@var color pink "Pink" #fca7ea
+@var color purple "Purple" #c597f9
+@var color red "Red" #ff5370
+@var color red-light "Red Light" #ff757f
+@var color teal "Teal" #4fd6be
+@var color yellow "Yellow" #ffc777
+@var color text-dark "Text Dark" #828bb8
+@var color text-faded "Text Faded" #828bb8ed
+@var color text-gray "Text Gray" #a9b8e8
+@var color text-light "Text Light" #e2e8fa
+@var color text-paragraph "Text Paragraph" #c0cdf3
+@var color text-placeholder "Text Placeholder" #c8d3f5aa
+@var color text-primary "Text Primary" #c8d3f5
+@var color text-secondary "Text Secondary" #b4c2f0
+@var color blue-transparent "Blue Transparent" #82aaff33
+@var color blue-dark-transparent "Blue Dark Transparent" #4976eb33
+@var color cyan-transparent "Cyan Transparent" #86e1fc33
+@var color cyan-light-transparent "Cyan Light Transparent" #b4f9f833
+@var color green-transparent "Green Transparent" #c3e88d33
+@var color indigo-transparent "Indigo Transparent" #7a88cf33
+@var color orange-transparent "Orange Transparent" #ff995e33
+@var color pink-transparent "Pink Transparent" #fca7ea33
+@var color purple-transparent "Purple Transparent" #c597f933
+@var color red-transparent "Red Transparent" #ff537033
+@var color red-light-transparent "Red Light Transparent" #ff757f33
+@var color teal-transparent "Teal Transparent" #4fd6be33
+@var color yellow-transparent "Yellow Transparent" #ffc77733
 @var color base-1 "Base 1" #131421
 @var color base-2 "Base 2" #191b28
 @var color base-3 "Base 3" #1b1d2c
@@ -54,107 +53,61 @@
 @var color base-7 "Base 7" #2f334d
 @var color base-8 "Base 8" #383e5c
 @var color base-9 "Base 9" #444a73
-
-@var color fg-light       "Light text"     #e2e8fa
-@var color fg-primary     "Primary Text"   #c8d3f5
-@var color fg-paragraph   "Paragraph Text" #c0cdf3
-@var color fg-secondary   "Secondary Text" #b4c2f0
-@var color fg-gray        "Gray Text"      #a9b8e8
-@var color fg-dark        "Dark Text"      #828bb8
-@var color fg-faded       "Faded"          #828bb8ed
-@var color fg-placeholder "Placeholder"    #c8d3f5aa
-
-@var color selection-bg     "Selection Background" #82aaff
-@var color selection-fg     "Selection Foreground" #e2e8fa
-@var text  selection-border "Selection Border"     "none"
-
-@var text elevation-1 "Elevation Level 1" "0 2px 5px 0 rgba(0, 0, 0, 0.26)"
-@var text elevation-2 "Elevation Level 2" "0 4px 8px 0 rgba(0, 0, 0, 0.4)"
-
-@var      color    scrollbar-thumb         "Scrollbar Thumb" #828bb830
-@var      color    scrollbar-track         "Scrollbar Track" #191b28
-@var      text     scrollbar-chrome-size   "Webkit scrollbar width/height"  6px
-@var      text     scrollbar-chrome-radius "Webkit scrollbar border radius" 0px
-@advanced dropdown scrollbar-width         "Scrollbar track width/height" {
-  thin "Firefox Thin" <<<EOT
-  thin EOT;
-  auto "Firefox Auto" <<<EOT
-  auto EOT;
-  none "Firefox None" <<<EOT
-  none EOT;
-}
+@var text mono-font "Mono Font" monospace
+@var text ui-font "Ui Font" Inter V
 @preprocessor uso
 ==/UserStyle== */
 @-moz-document domain('raw.githubusercontent.com'),
-regexp('https?://((developer|gist)\.)?github\.com/.*') {
+regexp('https?://((developer|gist).)?github.com/.*') {
   :root {
-    --mono-font: /*[[mono-font]]*/ ;
-    --ui-font:   /*[[ui_font]]*/   ;
-
-    --base-1: /*[[base-1]]*/ ;
-    --base-2: /*[[base-2]]*/ ;
-    --base-3: /*[[base-3]]*/ ;
-    --base-4: /*[[base-4]]*/ ;
-    --base-5: /*[[base-5]]*/ ;
-    --base-6: /*[[base-6]]*/ ;
-    --base-7: /*[[base-7]]*/ ;
-    --base-8: /*[[base-8]]*/ ;
-    --base-9: /*[[base-9]]*/ ;
-
-    --fg-primary:     /*[[fg-primary]]*/     ;    
-    --fg-secondary:   /*[[fg-secondary]]*/   ;  
-    --fg-faded:       /*[[fg-faded]]*/       ;      
-    --fg-gray:        /*[[fg-gray]]*/        ;       
-    --fg-light:       /*[[fg-light]]*/       ;      
-    --fg-dark:        /*[[fg-dark]]*/        ;       
-    --fg-paragraph:   /*[[fg-paragraph]]*/   ;  
-    --fg-placeholder: /*[[fg-placeholder]]*/ ;
-
-    --red:     /*[[red]]*/    ;
-    --orange:  /*[[orange]]*/ ;
-    --yellow:  /*[[yellow]]*/ ;
-    --green:   /*[[green]]*/  ;
-    --teal:    /*[[teal]]*/   ;
-    --cyan:    /*[[cyan]]*/   ;
-    --blue:    /*[[blue]]*/   ;
-    --pink:    /*[[pink]]*/   ;
-    --purple:  /*[[purple]]*/ ;
-    --indigo:  /*[[indigo]]*/ ;
-
-    --red-light:  /*[[red-light]]*/  ;
-    --cyan-light: /*[[cyan-light]]*/ ;
-    --blue-dark:  /*[[blue-dark]]*/  ;
-
-    --calendar: /*[[calendar]]*/ ;
-
-    --red-transparent:     /*[[red-transparent]]*/    ;
-    --orange-transparent:  /*[[orange-transparent]]*/ ;
-    --yellow-transparent:  /*[[yellow-transparent]]*/ ;
-    --green-transparent:   /*[[green-transparent]]*/  ;
-    --teal-transparent:    /*[[teal-transparent]]*/   ;
-    --cyan-transparent:    /*[[cyan-transparent]]*/   ;
-    --blue-transparent:    /*[[blue-transparent]]*/   ;
-    --pink-transparent:    /*[[pink-transparent]]*/   ;
-    --purple-transparent:  /*[[purple-transparent]]*/ ;
-    --indigo-transparent:  /*[[indigo-transparent]]*/ ;
-
-    --red-light-transparent:  /*[[red-light-transparent]]*/  ;
-    --cyan-light-transparent: /*[[cyan-light-transparent]]*/ ;
-    --blue-dark-transparent:  /*[[blue-dark-transparent]]*/  ;
-
-    --elevation-1: /*[[elevation-1]]*/ ;
-    --elevation-2: /*[[elevation-2]]*/ ;
-
-    --selection-bg:     /*[[selection-bg]]*/     ;
-    --selection-fg:     /*[[selection-fg]]*/     ;
-    --selection-border: /*[[selection-border]]*/ ;
-
-    --scrollbar-thumb:         /*[[scrollbar-thumb]]*/       ;
-    --scrollbar-width:         /*[[scrollbar-width]]*/       ;
-    --scrollbar-chrome-size:   /*[[scrollbar-chrome-size]]*/ ;
-    --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius*/ ;
+    --blue: /*[[blue]]*/ #82aaff;
+    --blue-dark: /*[[blue-dark]]*/ #4976eb;
+    --cyan: /*[[cyan]]*/ #86e1fc;
+    --cyan-light: /*[[cyan-light]]*/ #b4f9f8;
+    --green: /*[[green]]*/ #c3e88d;
+    --indigo: /*[[indigo]]*/ #7a88cf;
+    --orange: /*[[orange]]*/ #ff995e;
+    --pink: /*[[pink]]*/ #fca7ea;
+    --purple: /*[[purple]]*/ #c597f9;
+    --red: /*[[red]]*/ #ff5370;
+    --red-light: /*[[red-light]]*/ #ff757f;
+    --teal: /*[[teal]]*/ #4fd6be;
+    --yellow: /*[[yellow]]*/ #ffc777;
+    --text-dark: /*[[text-dark]]*/ #828bb8;
+    --text-faded: /*[[text-faded]]*/ #828bb8ed;
+    --text-gray: /*[[text-gray]]*/ #a9b8e8;
+    --text-light: /*[[text-light]]*/ #e2e8fa;
+    --text-paragraph: /*[[text-paragraph]]*/ #c0cdf3;
+    --text-placeholder: /*[[text-placeholder]]*/ #c8d3f5aa;
+    --text-primary: /*[[text-primary]]*/ #c8d3f5;
+    --text-secondary: /*[[text-secondary]]*/ #b4c2f0;
+    --blue-transparent: /*[[blue-transparent]]*/ #82aaff33;
+    --blue-dark-transparent: /*[[blue-dark-transparent]]*/ #4976eb33;
+    --cyan-transparent: /*[[cyan-transparent]]*/ #86e1fc33;
+    --cyan-light-transparent: /*[[cyan-light-transparent]]*/ #b4f9f833;
+    --green-transparent: /*[[green-transparent]]*/ #c3e88d33;
+    --indigo-transparent: /*[[indigo-transparent]]*/ #7a88cf33;
+    --orange-transparent: /*[[orange-transparent]]*/ #ff995e33;
+    --pink-transparent: /*[[pink-transparent]]*/ #fca7ea33;
+    --purple-transparent: /*[[purple-transparent]]*/ #c597f933;
+    --red-transparent: /*[[red-transparent]]*/ #ff537033;
+    --red-light-transparent: /*[[red-light-transparent]]*/ #ff757f33;
+    --teal-transparent: /*[[teal-transparent]]*/ #4fd6be33;
+    --yellow-transparent: /*[[yellow-transparent]]*/ #ffc77733;
+    --base-1: /*[[base-1]]*/ #131421;
+    --base-2: /*[[base-2]]*/ #191b28;
+    --base-3: /*[[base-3]]*/ #1b1d2c;
+    --base-4: /*[[base-4]]*/ #1e2030;
+    --base-5: /*[[base-5]]*/ #212337;
+    --base-6: /*[[base-6]]*/ #222436;
+    --base-7: /*[[base-7]]*/ #2f334d;
+    --base-8: /*[[base-8]]*/ #383e5c;
+    --base-9: /*[[base-9]]*/ #444a73;
+    --mono-font: /*[[mono-font]]*/ monospace;
+    --ui-font: /*[[ui-font]]*/ Inter V;
   }
 }
+
 @-moz-document domain('github.com'), domain('raw.githubusercontent.com') {
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--fg-primary) !important;
