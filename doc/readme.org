@@ -25,7 +25,7 @@ You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on 
 **** Customization
 
 All color and font variables are easily customizable
-check out [[file:src/variables.styl][variables.styl]] and [[file:github.user.styl][github.user.styl]] for reference.
+check out [[file:build.ts][build.ts]] and [[file:github.user.css][github.user.css]] for reference.
 
 **** Completeness
 
