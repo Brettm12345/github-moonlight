@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.8.4
+@version      2.8.5
 
 @license      MIT
 @description  A dark blue github theme
@@ -1574,9 +1574,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     margin-bottom: 0.1em !important;
   }
   .octicon.merged,
-  .octicon-git-pull-request {
-    color: var(--purple) !important;
-  }
+  .octicon c $purple,
   .octicon-file-directory,
   .octicon-saved {
     color: var(--blue) !important;
@@ -1594,7 +1592,8 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   }
   .octicon-repo-push,
   .octicon-check,
-  .octicon.open {
+  .octicon.open,
+  .octicon-git-pull-request {
     color: var(--green) !important;
   }
   .octicon-rocket {
