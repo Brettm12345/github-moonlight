@@ -1,31 +1,31 @@
 .site-subnav.bg-white
   bb $b
-  c 0 $base3 $base3
+  c 0 base(3) base(3)
   ease box-shadow, background-color, border-color
   &.is-stuck
     bb $b
-    c 0 $base1 $base2
-    s-1()
+    c 0 base(1) base(2)
+    elevation 1
 .subnav-
   &link.selected
     bbc $blue
   &bordered
-    c 0 $base1
+    c 0 base(1)
   &item
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
     ease border-color, background-color
     &:focus, &:hover
-      c 0 0 $base6
+      c 0 0 base(6)
     &.selected
       &, &:focus, &:hover
         bbc $blue
-        c 0 $base1 $base5
+        c 0 base(1) base(5)
 .btn
   &-link:not(.IssueLabel):not(.tabnav-tab), .subnav-search-context &
     c $blue
   &&-primary, .js-selected-navigation-item.subnav-item
-    c 0 0 $base5
+    c 0 0 base(5)
 .application-main > main > .site-subnav + div
-  c 0 0 $base2
+  c 0 0 base(2)
   .text-gray-light
-    c $text
+    c fg("primary")

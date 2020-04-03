@@ -2,22 +2,22 @@
   &form:not(.js-more-repos-form) button
     ../btn
       c $blue
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
 .pagination
   a
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
     ease background-color, color
     &:hover
-      c $blue 0 $base5
+      c $blue 0 base(5)
   .current, [aria-current]
     &, &:hover
-      c $text $base1 $blueDark
+      c fg("primary") base(1) dark("blue")
   .disabled, .gap, [aria-disabled=true]
     &, &:hover
-      c $faded $base1 $base4
+      c fg("faded") base(1) base(4)
   &-loader-container
     bgi none
-    c 0 0 $base4
+    c 0 0 base(4)
 .more-repos
-  c 0 0 $base4
-  s inset 0 1px 0 $base1
+  c 0 0 base(4)
+  shadow inset 0 1px 0 base(1)

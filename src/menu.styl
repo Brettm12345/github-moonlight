@@ -1,17 +1,17 @@
 .menu
-  c $text $base1 $base4
+  c fg("primary") base(1) base(4)
   &, .blankslate
-    c $base4 $base1
+    c base(4) base(1)
   &-heading
-    c $textGray $base1 $base4
+    c fg("gray") base(1) base(4)
   &-item
     bb $b
     ease background-color, border-color, color
     &:hover
-      c 0 0 $base6
+      c 0 0 base(6)
     &.selected, &[aria-current]
-      c $blue 0 $base5
+      c $blue 0 base(5)
       &::before
         c 0 0 $blue
       &:hover
-        c 0 0 $base6
+        c 0 0 base(6)

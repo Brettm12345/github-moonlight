@@ -7,87 +7,87 @@
     c $blue
   &-desc
     &+^[0]-branches
-      btc $base1
+      btc base(1)
     pre
-      c $text 0 $base4
+      c fg("primary") 0 base(4)
   &-icon .octicon, &-group-title .octicon-git-commit
-    c $text 0 $base4
+    c fg("primary") 0 base(4)
   &s-list-item
     &, &:hover
       c 0 0 $t
     &+&
-      btc $base1
+      btc base(1)
   &-ref
-    c $text $base1 $base2
-    fn $monoFont
+    c fg("primary") base(1) base(2)
+    fn font("mono")
     fw 500
     .user
       c $blue
   &-sha
-    c $yellow $base1 $base5
+    c $yellow base(1) base(5)
   & &-title .issue-link
     c $blue
   & &-title, &-group-title, a
-    c $text
+    c fg("primary")
   &-tease
-    c $blue $base1 $base4
+    c $blue base(1) base(4)
     &-sha
       c $blue
     &-contributors
       bt $b
-      c 0 0 $base9
+      c 0 0 base(9)
 .commits
   blockquote
-    c $text
+    c fg("primary")
   &-listing:before
-    c 0 0 $base5
+    c 0 0 base(5)
   &-list-item
-    c 0 0 $base4
+    c 0 0 base(4)
     &+&
-      btc $base1
+      btc base(1)
     &.navigation-focus
-      c 0 0 $base5
+      c 0 0 base(5)
     .commit-
       &desc pre, &author
-        c $faded
+        c fg("faded")
 .full-commit
-  c $blue $base1 $base4
+  c $blue base(1) base(4)
   .branches-list li
-    c $textGray
+    c fg("gray")
     &.loading, &.pull-request
-      c $faded
+      c fg("faded")
   .btn-outline
     &:not(:disabled):hover
       c $blue $blue
     &, &:disabled
-      c 0 $base1
+      c 0 base(1)
   p.commit-title
     c $blue
   .sha-block
-    c $faded
+    c fg("faded")
     fs 14px
     fw 500
     & > a
-      c $text $borderAlt
+      c fg("primary") base(6)
       &:hover
-        c 0 $base1
+        c 0 base(1)
     & > .sha
       c $blue
   .commit-meta
-    c 0 $base1 $base5
+    c 0 base(1) base(5)
 .file-commit-form--full
-  c $text $base1 $base2
+  c fg("primary") base(1) base(2)
 .commit-form
-  c 0 0 $base4
+  c 0 0 base(4)
   caret "right"
 .line-comments
-  c 0 0 $base5
+  c 0 0 base(5)
   /.diff-table tr:not(:last-child) &
-    c 0 $base1
+    c 0 base(1)
   /.empty-cell + &, & + &
-    blc $base1
+    blc base(1)
 div.commit-build-statuses, .link-gray
-  c $faded
+  c fg("faded")
   &:hover
     c $blue
   &-dark, body &-dark
@@ -96,4 +96,4 @@ div.commit-build-statuses, .link-gray
       td underline
 -expander
   .ellipsis&, .hidden-text& a
-    c $text 0 $base7
+    c fg("primary") 0 base(7)

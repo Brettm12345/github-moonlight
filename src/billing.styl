@@ -1,77 +1,76 @@
 .signup-plan-card
-  c $text $base1 $base5
+  c fg("primary") base(1) base(5)
   &:hover
-    c 0 0 $base8
+    c 0 0 base(8)
 div[style*="height: 1px;"]
-  c 0 0 $base1
+  c 0 0 base(1)
 .showcase-page-pattern::after
-  c 0 $base4 $base1
-.plan-notice
-  btc $base1
-
-.plan-choice
-  c 0 $base1 $base3
-  ease background-color
-  &--experiment
-    experiment-color($sel, $color)
-      &^[0]--{$sel}
-        &.open, &.selected
-          c 0 $color
-          ~/-icon
-            c 0 0 $color
-    experiment-color('green', $green)
-    experiment-color('purple', $purple)
-  &.open, &.selected
-    c 0 0 $base4
+  c 0 base(4) base(1)
+.plan-
+    &notice
+      btc base(1)
+    &choice
+      c 0 base(1) base(3)
+      ease background-color
+      &--experiment
+        experiment-color($sel, $color)
+          &^[0]--{$sel}
+            &.open, &.selected
+              c 0 $color
+              ~/-icon
+                c 0 0 $color
+        experiment-color('green', $green)
+        experiment-color('purple', $purple)
+      &.open, &.selected
+        c 0 0 base(4)
 .billing-
   &box-
     &progressBars span:nth-child(2)
-      blc $base1
+      blc base(1)
     &accordian
       &-state .octicon
-        c $textGray
+        c fg("gray")
         ../:hover &
-          c $textAlt
+          c fg("secondary")
   &plans
     tbody > .selected, .current
-      c 0 0 $base5
+      c 0 0 base(5)
     .coupon
       &-label:after
         bbc $teal
       &.expiring td
-        c $yellow $yellow $yellowTrans
+        c $yellow $yellow t("yellow")
       td
-        c $teal $teal $tealTrans
+        c $teal $teal t("teal")
   &line-item
-    btc $base1
+    btc base(1)
   &manager-banner
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
     &-icon
-      c $faded
+      c fg("faded")
     &-title
-      c $textAlt
+      c fg("secondary")
     &-text
-      c $text
+      c fg("primary")
 .payment-history
   $statusColors = {
-    currency: $text
+    currency: fg("primary")
     succeded: $green
-    refunded: $faded
+    refunded: fg("faded")
     failed: $red
   }
   for $k, $v in $statusColors
     .{$k} .status
       c $v
-  .failed
   .failed, .refunded
-    c 0 0 $base4
+    c 0 0 base(4)
 .discounted-original-price
-  c $faded
+  c fg("faded")
 .golden-ticket-banner
   btc $yellow
 .bt-pp-cancel
   c $red
 .paypal-container
-  c 0 0 $base2
+  c 0 0 base(2)
 .braintree-paypal-loggedin
-  c 0 $base1
+  c 0 base(1)

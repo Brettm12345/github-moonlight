@@ -86,22 +86,24 @@
 @require "wiki"
 
 ::selection
-  c $cn 0 $base8
+  b selection('border')
+  c selection('fg') 0 selection('bg')
 ::placeholder
-  c $placeholder
+  c fg("placeholder")
 body
-  c $text 0 $base2
-  fn $uiFont, sans-serif
+  c fg("primary") 0 base(2)
+  fn font("ui"), sans-serif
   fs 14px
   lh 1.8
 h1, h2, h3, h4, h5
-  c $text
+  c fg("primary")
 mark
   c $yellow
 kbd
-  c $text $base1 $base2
-  font 14px $monoFont
-  s inset 0 -1px 0 $base1
+  c fg("primary") base(1) base(2)
+  fs 14px
+  mono()
+  shadow inset 0 -1px 0 base(1)
 ol, ul
   list-style disc
 legend

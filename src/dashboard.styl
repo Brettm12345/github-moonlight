@@ -1,32 +1,41 @@
 .dashboard
+  .ajax-pagination-
+    &form
+      b none
+    &btn
+      b none
+      bt $b
   .js-all-activity-header + div
-    c 0 $base1
+    b $b
+    r 6px
+    & > div:last-of-type > .body > .border-bottom
+      bb none
     .Box
-      c 0 $base3
+      c 0 0 base(5)
       r 6px
   &-notice
     b $b
-    c 0 0 $base5
+    c 0 0 base(5)
     h2
-      c $text
+      c fg("primary")
   &-rollup-items .body
-    c 0 $base1
+    c 0 base(1)
 .repo-list
   p 0 12px
   &, &-item
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
 .mini-repo-list-item
   bt $b
 .navigation-focus
-  c 0 0 $base9
+  c 0 0 base(9)
 .team, .user-mention
-  c $cn
+  c fg("light")
 .private .mini-repo-list-item
-  c 0 0 $base2
+  c 0 0 base(2)
 .content.p-4.text-center.rounded-1.border.border-gray-light
-  c 0 0 $base4
+  c 0 0 base(4)
 .application-main
   & > .flex-wrap
     c 0 0 $t
   main div.border-bottom.border-gray
-    c 0 0 $base4
+    c 0 0 base(4)

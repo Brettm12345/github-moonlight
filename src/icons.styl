@@ -1,7 +1,7 @@
 .octicon
-  color $text
+  color fg("primary")
   /.draft&
-    c $faded
+    c fg("faded")
   /.closed&, /.reverted&
     c $red
   /.open&
@@ -9,9 +9,9 @@
   /.merged
     c $purple
   &-star
-    v none $yellow
+    vc none $yellow
   /.starred &-star
-    v $yellow
+    vc $yellow
   &-repo
     &, &-push, &-forked
       mb 0.1em
@@ -20,17 +20,17 @@
   &-file-directory, &-saved
     c $blue
   &-mute, &-repo
-    c $faded
+    c fg("faded")
   &-play
-    c $redLight
+    c light("red")
   &-x, &-trashcan
     c $red
   &-repo-push, &-check, &.open
     c $green
   &-rocket
-    c $faded
+    c fg("faded")
   &[style*="#6a737d"]
-    c $textGray
+    c fg("gray")
   &-inbox, &-alert, &-pencil, &-light-bulb
     c $yellow
   &-repo-forked, &-issue-opened
@@ -45,11 +45,11 @@
     c $indigo
 .lfs-data-icon
   &, &.dark
-    c $text
+    c fg("primary")
 .donut-chart
   .success
-    v $green
+    vc $green
   .failure
-    v $red
+    vc $red
 img[src*="octocat-spinner-64.gif"]
   inv()

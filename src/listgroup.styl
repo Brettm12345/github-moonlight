@@ -1,18 +1,18 @@
 .list-group-item
-  c 0 $base1
+  c 0 base(1)
   &-link
-    c $textAlt
+    c fg("secondary")
   &.closed
-    c 0 0 $base4
+    c 0 0 base(4)
   &.selected
-    c 0 0 $base5
+    c 0 0 base(5)
   &.navigation-focus, &[aria-selected="true"]
-    c 0 0 $base3
+    c 0 0 base(3)
   &-summary a
-    c $textAlt
+    c fg("secondary")
     &.quiet
-      c $textGray
+      c fg("gray")
 .listgroup
-  c 0 $base1
+  c 0 base(1)
   &-item
-    c $text $base1
+    c fg("primary") base(1)

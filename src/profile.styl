@@ -2,32 +2,32 @@
   inv()
 .pinned-item-
   &list-item &handle, &name
-    c $faded
+    c fg("faded")
   &checkbox:checked + &name
-    c $text $base1 $base7
+    c fg("primary") base(1) base(7)
 .profile-rollup-
   &summarized
     &+&
-      c 0 $base1
+      c 0 base(1)
   &wrapper
     &+&
-      bt 1px solid $base5
+      bt 1px solid base(5)
 .activity-overview-
   &percentage
-    v $cn
+    vc fg("light")
   &label
-    v $faded
+    vc fg("faded")
 .user-profile-
   &nav
     b $b
     px 10px
     r 8px
   &sticky-bar:after
-    c 0 $base1 $base2
+    c 0 base(1) base(2)
 .vcard-
   &username
-    c $textGray
+    c fg("gray")
   &detail
-    octicon $faded
+    octicon fg("faded")
 .js-profile-editable-edit-button
-  c $cn $base1 $base5
+  c fg("light") base(1) base(5)

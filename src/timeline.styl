@@ -1,48 +1,48 @@
 .TimelineItem
   &-badge
-    c 0 $base5 $base4
+    c 0 base(5) base(4)
     ~/:target &-bage
       c 0 $blue
     ~/--condensed &
       size 30px
   &-break
-    c 0 $base4 $t
+    c 0 base(4) $t
   &, .status-meta, .merge-pr-more-commits
     &:before
-      c 0 0 $base5
+      c 0 0 base(5)
     &-badge, &--condensed &-badge
-      b 2px solid $base5
-      c $base9 $base5 $base4
+      b 2px solid base(5)
+      c base(9) base(5) base(4)
     &-body
-      c $faded
+      c fg("faded")
 timeline
   .deployments-&
-    bbc $base1
+    bbc base(1)
     &-item
-      blc $base9
+      blc base(9)
   .&-commits .hidden-text-expander .ellipsis-expander
-    c 0 0 $base4
+    c 0 0 base(4)
   .&-
     &new-comment .previewable-comment-form .comment-body
-      c 0 $base1
+      c 0 base(1)
     &comment
-      c $text $base1 $base5
+      c fg("primary") base(1) base(5)
       /.composer.composer-responsive &
         caret "right"
       /:target &
-        s 0 0 0 0.2em $base1
+        shadow 0 0 0 0.2em base(1)
         &::before
-          filter drop-shadow(-0.28em 0 0 $base1)
+          filter drop-shadow(-0.28em 0 0 base(1))
       &-wrapper
         b 0
-        c 0 $base1
+        c 0 base(1)
       &-label.tooltipped.tooltipped-s.tooltipped-multiline
-        c $purple $purple $purpleTrans
+        c $purple $purple t("purple")
       &-header
-        c $cn $base1 $base4
+        c fg("light") base(1) base(4)
         .author
-          c $cn
+          c fg("light")
       &--caret
         &, &.current-user
           &::before, &::after
-            brc $base4
+            brc base(4)

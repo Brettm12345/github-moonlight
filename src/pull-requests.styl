@@ -1,50 +1,50 @@
 .compare-pr-placeholder
-  c 0 $base1 $base5
+  c 0 base(1) base(5)
   p
-    c $text
+    c fg("primary")
 .range-editor
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
   &-icon
-    c $faded
+    c fg("faded")
 .Progress
-  c 0 0 $base7
+  c 0 0 base(7)
 .github-pr-file span
   &.deletion
     c 0 0 $red
   &.addition
     c 0 0 $green
 ul.comparison-list
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
   & > li
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
     &.title
-      c $text $base1 $base5
+      c fg("primary") base(1) base(5)
     em
-      c $faded
+      c fg("faded")
 .merge-
   &pr-more-commits, .status-meta
-    c $faded
+    c fg("faded")
   &branch-description
-    c $faded
+    c fg("faded")
   &status-
     &list
-      c 0 $base1
+      c 0 base(1)
     &item
-      c 0 $base1 $base4
+      c 0 base(1) base(4)
 .gh-header-number
   c $orange
   fw 400
   td underline
 .CheckRun
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
   &-header
-    c 0 $base1
+    c 0 base(1)
 .checks-list-item
   &.selected &-name
-    c $cn 0 $base8
+    c fg("light") 0 base(8)
 .octofication .message, .overall-summary
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
 .numbers-summary
-  octicon $text
+  octicon fg("primary")
   li > .nolink, li > a
-    c $faded
+    c fg("faded")

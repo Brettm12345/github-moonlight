@@ -1,15 +1,15 @@
 .email-
   &format
     ~/hidden-toggle a
-      c $text 0 $base4
+      c fg("primary") 0 base(4)
       &:hover
-        c 0 0 $base6
+        c 0 0 base(6)
       &:active
-        c 0 0 $blueDark
+        c 0 0 dark("blue")
     ~/quoted-reply, ~/signature-reply
       b $b
       bl 4px solid $blue
-      c $textAlt $base1 $base3
+      c fg("secondary") base(1) base(3)
       font-style italic
       py 6px
       rbr 6px

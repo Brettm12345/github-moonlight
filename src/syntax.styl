@@ -1,6 +1,6 @@
 $cmColors = {
   attribute: $yellow
-  punctuation: $text
+  punctuation: fg("primary")
   comment: $indigo
   def: $blue
   property: $teal
@@ -17,12 +17,12 @@ code, pre, tt
     fw 500
 .cm-s-github-light
   &.CodeMirror
-    c $text $base1 $base5
+    c fg("primary") base(1) base(5)
   .CodeMirror-
     /&gutter&linenumbers, &gutters
-      c $indigo $base1 $base4
+      c $indigo base(1) base(4)
     &lines
-      c 0 0 $base5
+      c 0 0 base(5)
     &linenumber
       c $indigo
 .code .s1
@@ -35,11 +35,11 @@ code, pre, tt
   &s, &s > a
     c $green
   &s &v /* string variable */
-    c $text
+    c fg("primary")
   &e, &en /* entity.name */
     c $blue
   &ent, &smi, &s &s1 /* string source */
-    c $redLight
+    c light("red")
   &k /* keyword, storage, storage.type */
     c $purple
   &s &pse &s1, &pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */
@@ -47,7 +47,7 @@ code, pre, tt
   &sr /* string.regexp */
     c $cyan
   &sr &cce /* string.regexp constant.character.escape */
-    c $redLight
+    c light("red")
   &s, &sr &sre, &sr &sra /* string.regexp string.regexp.arbitrary-repitition */
     c $green
   &v /* variable */
@@ -57,13 +57,13 @@ code, pre, tt
   &bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
     c $red
   &ii /* invalid.illegal */
-    c $cn 0 $red
+    c fg("light") 0 $red
   &c2 /* carriage-return */
-    c $cn 0 $red
+    c fg("light") 0 $red
   &c2::before /* carriage-return */
     content "^M"
   &sr &cce /* string.regexp constant.character.escape */
-    c $redLight
+    c light("red")
     fw bold
   &ml /* markup.list */
     c $orange
@@ -76,24 +76,24 @@ code, pre, tt
     c $yellow
     font-style italic
   &mb /* markup.bold */
-    c $cn
+    c fg("light")
     fw bold
   &md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
-    c $red 0 $redTrans
+    c $red 0 t("red")
   &mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
-    c $teal 0 $tealTrans
+    c $teal 0 t("teal")
   &mc /* markup.changed, punctuation.definition.changed */
-    c $cyan 0 $cyanTrans
+    c $cyan 0 t("cyan")
   &mdr /* meta.diff.range */
     c $teal
     fw bold
   &pse
     c $cyan
   &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
-    c $base9
+    c base(9)
   &s1, &smi
     c $pink
   &sg /* sublimelinter.gutter-mark */
-    c $faded
+    c fg("faded")
   &corl /* constant.other.reference.link, string.other.link */
     td underline

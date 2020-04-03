@@ -1,24 +1,24 @@
 .tag-info
   c $blue
   ../-name
-    c $text
+    c fg("primary")
 .topic-
   &box.bg-white
     ease background-color, transform
-    c 0 0 $base4
+    c 0 0 base(4)
     &:hover
-      c 0 0 $base5
+      c 0 0 base(5)
   &list-item
     &+&
-      btc $base1
+      btc base(1)
   &tag
     b $b
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
     ease background-color
     &-outline
-      s inset 0 0 0 1px $base1
+      shadow inset 0 0 0 1px base(1)
     &-link:hover
-      c 0 $blue $base7
+      c 0 $blue base(7)
     &-action
       &, button, a
-        c $blue $blue $blueTrans
+        c $blue $blue t("blue")

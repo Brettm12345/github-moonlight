@@ -1,16 +1,16 @@
 .branch-infobar
-  c $placeholder $base1 $base4
+  c fg("placeholder") base(1) base(4)
 .social-count
-  c $blue $base1 $base5
+  c $blue base(1) base(5)
   &:hover
-    c $cn
+    c fg("light")
 #readme
   .Box-header
     ease background-color
-    c 0 $base1 $base3
+    c 0 base(1) base(3)
     o 1
     &:hover
-      c 0 0 $base2
+      c 0 0 base(2)
     .octicon-pencil
       c $indigo
       ease color
@@ -18,26 +18,26 @@
         c $blue
 table
   &.files
-    c $text $base1 $base5
+    c fg("primary") base(1) base(5)
     td
-      c 0 $base1
+      c 0 base(1)
       &.age
-        c $text
+        c fg("primary")
       &.icon
-        c $text
+        c fg("primary")
     tr.navigation-focus, tr[aria-selected=true]
       td
-        c 0 0 $base5
+        c 0 0 base(5)
 .js-recent-activity-container > div > div
-  c 0 0 $base2
+  c 0 0 base(2)
 .repository-lang-stats-
   ol&numbers li .lang
-    c $cn
+    c fg("light")
   &graph
-    c 0 $base1
+    c 0 base(1)
 .repository-content > div.bg-white:first-child
-  c 0 0 $base2
+  c 0 0 base(2)
 .flash
-  c $cn $base1 $base4
+  c fg("light") base(1) base(4)
   &-warn
     c $yellow

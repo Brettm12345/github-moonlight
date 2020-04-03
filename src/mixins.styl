@@ -1,15 +1,23 @@
+map($fn, $list)
+  for $val, $i in $list
+    $list[$i] = $fn($val)
+  $list
+
+$bw = 1px
+$bs = solid
+$bc = base(1)
+$b = $bw $bs $bc
 $i = !important
 $t = transparent
 prop($p, $x...)
-  +cache("x", $x, "p", $p)
-    {$p} $x $i
+  {$p} $x $i
 map-record($rec = {}, $prefix = '', $prop)
   {$prefix}
     for $k, $v in $rec
       &{$k}
         +cache("x", $v, "p", $prop)
           {$prop} $v $i
-colorProp($p, $x)
+color-prop($p, $x)
   if ($x is a "call" || $x is a "rgba" || $x == none)
     prop $p $x
 /**
@@ -17,17 +25,17 @@ colorProp($p, $x)
  * use 0 to omit arguments
  */
 c($x, $y = 0, $z = 0)
-  colorProp "color" $x
-  colorProp "border-color" $y
-  colorProp "background-color" $z
+  color-prop "color" $x
+  color-prop "border-color" $y
+  color-prop "background-color" $z
 /**
- * v <fill> <stroke> <fill-important> <stroke-important>
+ * vc <fill> <stroke> <fill-important> <stroke-important>
  * use 0 to omit arguments
  */
-v($x, $y = 0)
-  colorProp "fill" $x
-  colorProp "stroke" $y
-caret($direction = "bottom", $bg = $base4, $border = $base1)
+vc($x, $y = 0)
+  color-prop "fill" $x
+  color-prop "stroke" $y
+caret($direction = "bottom", $bg = base(4), $border = base(1))
     $p = "border-" + $direction + "-color"
     &::before
       prop $p $border
@@ -39,118 +47,154 @@ bg($x...)
   prop "background" $x
 bgc($x...)
   prop "background-color" $x
+
 b($x...)
   prop "border" $x
-bc($x)
+bw($x = $bw)
+  prop "border-width" $x
+bs($x = $bs)
+  prop "border-style" $x
+bc($x = $bc)
   prop "border-color" $x
-bb($x...)
-  prop "border-bottom" $x
-bbc($x)
-  prop "border-bottom-color" $x
-bt($x...)
-  prop "border-top" $x
-btc($x)
-  prop "border-top-color" $x
-btw($x)
-  prop "border-top-width" $x
-bl($x...)
-  prop "border-left" $x
-blw($x)
-  prop "border-top-width" $x
-blc($x)
-  prop "border-left-color" $x
-br($x...)
-  prop "border-right" $x
-brw($x)
-  prop "border-right-width" $x
-brc($x)
-  prop "border-right-color" $x
+
 by($x...)
   +cache("x", $x)
     for $d in top bottom
       border-{$d} $x $i
-byw($x)
-  +cache("x", $x)
-    for $d in top bottom
-      border-{$d}-width $x $i
-byc($x)
+byc($x = $bc)
   +cache("x", $x)
     for $d in top bottom
       border-{$d}-color $x $i
+byw($x = $bw)
+  +cache("x", $x)
+    for $d in top bottom
+      border-{$d}-width $x $i
+bys($x = $bs)
+  +cache("x", $x)
+    for $d in top bottom
+      border-{$d}-style $x $i
+
 bx($x...)
   +cache("x", $x)
     for $d in left right
       border-{$d} $x $i
-bxw($x)
+bxw($x = $bw)
   +cache("x", $x)
     for $d in left right
       border-{$d}-width $x $i
-bxc($x...)
+bxs($x = $bs)
+  +cache("x", $x)
+    for $d in left right
+      border-{$d}-style $x $i
+bxc($x = $bc)
   +cache("x" + $x)
     for $d in left right
       border-{$d}-color $x $i
-      border-{$d}-color $x $i
+
+bt($x...)
+  prop "border-top" $x
+btw($x = $bw)
+  prop "border-top-width" $x
+bts($x = $bs)
+  prop "border-top-style" $x
+btc($x = $bc)
+  prop "border-top-color" $x
+
+bb($x...)
+  prop "border-bottom" $x
+bbw($x = $bw)
+  prop "border-bottom-width" $x
+bbs($x = $bs)
+  prop "border-bottom-style" $x
+bbc($x = $bc)
+  prop "border-bottom-color" $x
+
+bl($x...)
+  prop "border-left" $x
+blw($x = $bw)
+  prop "border-left-width" $x
+bls($x = $bs)
+  prop "border-left-style" $x
+blc($x = $bc)
+  prop "border-left-color" $x
+
+br($x...)
+  prop "border-right" $x
+brw($x = $bw)
+  prop "border-right-width" $x
+brs($x = $bs)
+  prop "border-right-style" $x
+brc($x = $bc)
+  prop "border-right-color" $x
+
 r($x...)
   prop "border-radius" $x
-rtl($x...)
+rtl($x)
   prop "border-top-left-radius" $x
-rtr($x...)
+rtr($x)
   prop "border-top-right-radius" $x
-rb($x...)
+rbl($x)
+  prop "border-bottom-left-radius" $x
+rbr($x)
+  prop "border-bottom-right-radius" $x
+rr($x)
+  +cache("x" + $x)
+    for $d in top bottom
+      border-{$d}-right-radius $x $i
+rl($x)
+  +cache("x" + $x)
+    for $d in top bottom
+      border-{$d}-left-radius $x $i
+rb($x)
   +cache("x" + $x)
     for $d in left right
       border-bottom-{$d}-radius $x $i
-rt($x...)
+rt($x)
   +cache("x" + $x)
     for $d in left right
       border-top-{$d}-radius $x $i
-rbl($x...)
-  prop "border-bottom-left-radius" $x
-rbr($x...)
-  prop "border-bottom-right-radius" $x
 m($x...)
   prop "margin" $x
-mt($x...)
-  prop "margin-top" $x
-mb($x...)
-  prop "margin-bottom" $x
-ml($x...)
-  prop "margin-left" $x
-mr($x...)
-  prop "margin-right" $x
-my($x...)
+my($x)
   +cache("x" + $x)
     for $d in top bottom
       margin-{$d} $x $i
-mx($x...)
+mx($x)
   +cache("x" + $x)
     for $d in left right
       margin-{$d} $x $i
-lh($x...)
-  prop "line-height" $x
+mt($x)
+  prop "margin-top" $x
+mb($x)
+  prop "margin-bottom" $x
+ml($x)
+  prop "margin-left" $x
+mr($x)
+  prop "margin-right" $x
+
 p($x...)
   prop "padding" $x
-pt($x...)
+pt($x)
   prop "padding-top" $x
-pb($x...)
+pb($x)
   prop "padding-bottom" $x
-pl($x...)
+pl($x)
   prop "padding-left" $x
-pr($x...)
+pr($x)
   prop "padding-right" $x
-py($x...)
+py($x)
   +cache("x" + $x)
     for $d in top bottom
       padding-{$d} $x $i
-px($x...)
+px($x)
   +cache("x" + $x)
     for $d in left right
       padding-{$d} $x $i
-po($x...)
+lh($x)
+  prop "line-height" $x
+po($x)
   prop "position" $x
-s($x...)
-  prop "box-shadow" $x
-o($x...)
+o($x)
   prop "opacity" $x
 a($x...)
   prop "animation" $x
@@ -159,46 +203,49 @@ tr($x...)
 ease($x...)
   +cache("x" + $x)
     tr $x 300ms $easeInOutCubic
-fn($x...)
+fn($x)
   prop "font-family" $x
-fs($x...)
+fs($x)
   prop "font-size" $x
-fw($x...)
+fw($x)
   prop "font-weight" $x
-td($x...)
+td($x)
   prop "text-decoration" $x
-sbc($x...)
+sbc($x)
   prop "scrollbar-color" $x
-sbw($x...)
+sbw($x)
   prop "scrollbar-width" $x
-va($x...)
+va($x)
   prop "vertical-align" $x
-max-size($w, $h = $w)
-  prop "max-height" $h
-  prop "max-width" $w
+w($x)
+  prop "width" $x
+h($x)
+  prop "height" $x
 size($w, $h = $w)
   prop "height" $h
   prop "width" $w
+min-size($w, $h = $w)
+  prop "min-height" $h
+  prop "min-width" $w
+max-size($w, $h = $w)
+  prop "max-height" $h
+  prop "max-width" $w
 mono()
-  fn $monoFont
+  fn font("mono")
 inv()
   filter invert(1)
 box()
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
   ease border-color, background-color
   &:hover, &:focus
-    c 0 $blue $base5
+    c 0 $blue base(5)
 octicon($x...)
   +cache("x" + $x)
     .octicon
       c $x
-mw($x...)
-  prop "max-width" $x
-mh($x...)
-  prop "max-height" $x
 fade-out()
-  bg linear-gradient(to top, $base1, $t)
-s-1()
-  s 0 2px 5px 0 rgba(black, 0.26)
-s-2()
-  s 0 4px 8px 0 rgba(black, 0.4)
+  bg linear-gradient(to top, base(1), $t)
+shadow($x...)
+  prop "box-shadow" $x
+elevation($x)
+  shadow v(s("elevation-%s", $x))

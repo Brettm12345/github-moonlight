@@ -1,32 +1,32 @@
 .notification-
   &navigation.bg-white
-    c 0 0 $base2
+    c 0 0 base(2)
   &configure-filters
-    octicon $base9
+    octicon base(9)
   &navigation &configure-filters
-    octicon $text
+    octicon fg("primary")
     &:hover, &:focus
       octicon $blue
 .notifications-
   &list-item
     &.notification-unread
-      c 0 $base1 $base4
+      c 0 base(1) base(4)
     & &-actions svg
-      v $text
+      vc fg("primary")
     &:hover, &:focus
-      c 0 0 $base5
+      c 0 0 base(5)
       .notification-list-item-actions .btn
         ease background-color
         &:hover
-          c $cn $base1 $base1
+          c fg("light") base(1) base(1)
   &dropdown
-    c 0 $base1 $base1
+    c 0 base(1) base(1)
     .notifications-list
       mb 0
     &-arrow
-      c 0 $base4
+      c 0 base(4)
     &, &-see-all
       bt $b
-      c 0 $base1 $base8
+      c 0 base(1) base(8)
 .thread-subscription-status
-  c $text $base1 $t
+  c fg("primary") base(1) $t

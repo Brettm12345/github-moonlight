@@ -1,6 +1,6 @@
 .table-list
   bb $b
-  c $text $base1 $base3
+  c fg("primary") base(1) base(3)
   &-cell
     bt $b
   &-bordered &-cell
@@ -10,11 +10,11 @@
       br $b
   &-item
     &.unread ^[0]-cell:first-child
-      s inset 2px 0 0 $blue
+      shadow inset 2px 0 0 $blue
   &-header
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
     &-meta
-      c $textAlt
+      c fg("secondary")
     &-toggle .btn-link
       &:hover, &.selected
         c $blue

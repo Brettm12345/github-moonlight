@@ -1,46 +1,45 @@
 .gh-header
   background-color unset
   &-sticky.is-stuck + &-shadow
-    c 0 0 $base4
+    c 0 0 base(4)
   &-meta
-    c $text $base1
+    c fg("primary") base(1)
 .Header
   bb $b
-  c $text $base1 $base2
+  c fg("primary") base(1) base(2)
   &-old
     bb $b
-    c $text $base1 $base2
+    c fg("primary") base(1) base(2)
 body.page-responsive.pagehead
-  c 0 0 $base3
-.reponav
-  c 0 0 $base4
-  &-item
+  c 0 0 base(3)
+.reponav-
+  &item
     b 1px solid $t
-    c $textDark
+    c fg("dark")
     &, & .octicon
       ease color
     .octicon
-      c $base9
+      c base(9)
       va middle
     &.selected, &:focus, &:hover
       &, & .octicon
-        c $textAlt
+        c fg("secondary")
     &.selected
       bbc $t
-      c $text $base1 $base2
+      c fg("primary") base(1) base(2)
 .pagehead
   &-actions .btn
-    c 0 0 $base4
+    c 0 0 base(4)
   &, &-tabs-item, .repohead.experiment-repo-nav
-    c 0 $base1 $base3
-    octicon $faded
+    c 0 base(1) base(3)
+    octicon fg("faded")
     // @stlint-ignore
     @media (min-width: 768px)
-      c $base4
+      c base(4)
 .repohead, .repo-list
   .Label--outline
-    c $text $base1
+    c fg("primary") base(1)
 .site-header
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
 .footer, .site-footer
   bt $b

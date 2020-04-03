@@ -2,20 +2,20 @@
   &issue-body-blur
     fade-out()
   &column
-    c 0 0 $base4
+    c 0 0 base(4)
   &pane.bg-white
-    c 0 0 $base5
+    c 0 0 base(5)
   &header
-    c 0 0 $base2
+    c 0 0 base(2)
   &card
     &:hover
-      c 0 $base1
-      s-1()
+      c 0 base(1)
+      elevation 1
     &:focus
-      s 0 0 0 0.2em $blueTrans
+      shadow 0 0 0 0.2em t("blue")
 .btn.btn-outline, .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2
-  c 0 0 $base4
+  c 0 0 base(4)
 .d-flex.flex-row.flex-items-center.f6
-  c 0 0 $base2
+  c 0 0 base(2)
 .new-project-column
-  c 0 0 $base3
+  c 0 0 base(3)

@@ -1,14 +1,14 @@
 .graph-filter .info
-  c $text
+  c fg("primary")
 line[stroke="#000"]
-  v 0 $base7
+  vc 0 base(7)
 text
   &[fill="#000"], &[fill="#6a737d"], &[text-anchor="middle"]
-    v $text
+    vc fg("primary")
 .viz
   .code-frequency
     ../, &
-      c $text $base1 $base4
+      c fg("primary") base(1) base(4)
     p 8px
 .c
   &add
@@ -16,26 +16,26 @@ text
   &del
     c $red
 .num, relative-time
-  c $faded
+  c fg("faded")
 .graphs
   &.axis
-    c 0 $base1
+    c 0 base(1)
   .dir
-    c $text
+    c fg("primary")
   .area
-    v $teal
+    vc $teal
 .code-frequency
   .addition
-    v $green
+    vc $green
   .deletion
-    v $red
+    vc $red
 .community-checklist .progress
-  c 0 0 $base8
+  c 0 0 base(8)
 table.capped-list
   td
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
   tr:nth-child(2n), th
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
 .summary-stats li
   &, & > .num, & > a
     ease background-color
@@ -43,14 +43,14 @@ table.capped-list
     ease background-color, color
   &:hover, &:focus
     &, & > .num, & > a
-      c $cn $base1 $base5
+      c fg("light") base(1) base(5)
   /.traffic-graph-stats, &, & > .num
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
 .pulse-section
-  c $faded
+  c fg("faded")
 .contrib-person path
-  v $orange
+  vc $orange
 #contributors-master svg.viz
-  c 0 0 $base4
+  c 0 0 base(4)
 .rule
   bb $b

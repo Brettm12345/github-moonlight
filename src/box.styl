@@ -1,42 +1,42 @@
 *:not(code) .Box
-  c 0 $base1 $base4
+  c 0 base(1) base(4)
 .Box
   &-body
-    c 0 $base1
+    c 0 base(1)
     .help
-      c $faded
+      c fg("faded")
   &--responsive, &row--unread
-    s inset 2px 0 0 $blue
+    shadow inset 2px 0 0 $blue
   &--overlay
-    c 0 $base1 $base2
-    s-1()
+    c 0 base(1) base(2)
+    elevation 1
   &-header
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
     &--blue
-      c $blue $base1 $base4
+      c $blue base(1) base(4)
   &-footer
-    c 0 $base1
+    c 0 base(1)
   &-row
     &:first-of-type
       bt 0
     bt $b
     &--focus-gray.navigation-focus
-      c 0 0 $base7
+      c 0 0 base(7)
     &[style*="background"]
-      c 0 0 $base8
+      c 0 0 base(8)
   &&--condensed &-row
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
   &-row--
     &gray
-      c o o $base4
+      c o o base(4)
     &focus-gray
-      c 0 0 $base5
+      c 0 0 base(5)
     &yellow
-      c $text $yellow $t
+      c fg("primary") $yellow $t
     ../--responsive &unread::before
       bgi none
       c 0 0 $blue
 .tint-box
-  c 0 0 $base4
+  c 0 0 base(4)
 .body > div.d-flex
   px 10px

@@ -1,15 +1,15 @@
 .SideNav
-  c $text $base1 $base4
+  c fg("primary") base(1) base(4)
   &-item
-    c 0 $base1
+    c 0 base(1)
     ease background-color, color
     &[aria-current="page"], &[aria-selected="true"]
-      c 0 0 $base5
+      c 0 0 base(5)
       &::before
         c 0 0 $blue
     &:focus, &:hover
-      c 0 0 $base5
+      c 0 0 base(5)
       &::before
-        c 0 0 $base7
+        c 0 0 base(7)
     &:last-child
-      s 0 1px 0 $base1
+      shadow 0 1px 0 base(1)

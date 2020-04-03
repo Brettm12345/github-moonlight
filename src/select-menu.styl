@@ -1,115 +1,115 @@
 .SelectMenu-
   &closeButton
-    c $faded
+    c fg("faded")
   &header
-    bbc $base1
+    bbc base(1)
   &filter
-    btc $base1
+    btc base(1)
   &icon--check
     c $green
   &divider
-    c $text $base1 $base2
+    c fg("primary") base(1) base(2)
   &list
-    c 0 $base1 $base3
+    c 0 base(1) base(3)
   &item, &modal
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
   &blankslate, &loading, &message
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
   &footer
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
     kbd
       fs unset
   &item
-    c $text $base1
+    c fg("primary") base(1)
     ease background-color
     @media (hover: hover)
       &:not([aria-selected="true"])
         &:hover
-          c $cn 0 $base7
+          c fg("light") 0 base(7)
         &:active
-          c $cn 0 $base8
+          c fg("light") 0 base(8)
       &:hover
-        c 0 0 $base5
+        c 0 0 base(5)
       &:active
-        c 0 0 $base3
+        c 0 0 base(3)
       &:focus
-        c 0 0 $base6
+        c 0 0 base(6)
     &[aria-checked="true"]
-      c $cn
+      c fg("light")
   &tabs
-    btc $base1
+    btc base(1)
   &tab
-    c $text $base1 $base2
+    c fg("primary") base(1) base(2)
     &[aria-selected="true"]
-      c $cn $base1 $base4
+      c fg("light") base(1) base(4)
       @media (min-width: 544px)
-        c 0 $base1
+        c 0 base(1)
     &:not([aria-checked="true"])
       &:active, &:hover
         @media(hover: hover)
-          c 0 $base2
+          c 0 base(2)
 .select-menu-
   &button.primary
     &:after
-      btc $base2
+      btc base(2)
     &:active
-      c 0 $green $greenTrans
+      c 0 $green t("green")
   &blankslate
     h3
-      c $text
+      c fg("primary")
     svg
-      v $textAlt
+      vc fg("secondary")
   &loading-overlay
-    c 0 0 $base2
+    c 0 0 base(2)
   &header
-    octicon $faded
+    octicon fg("faded")
   &action
-    c $faded
+    c fg("faded")
     ease color
     &:hover
       c $blue
   &header, &header &title
-    c $cn $base1 $base2
+    c fg("light") base(1) base(2)
   &modal, &item
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
   &divider
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
   &filters
-    c $text $base1 $base3
+    c fg("primary") base(1) base(3)
   &no-results
-    c $faded $base1 $base4
+    c fg("faded") base(1) base(4)
   &text-filter
     &:first-child, &:last-child
-      c 0 $base1
+      c 0 base(1)
     &::placeholder
-      c $placeholder
+      c fg("placeholder")
   &new-item-form .octicon
     c $blue
   &item
     ease background-color
     &-text .description
       &, &-inline
-        c $faded
+        c fg("faded")
       &-warning
         c $red
     .excluded
-      c 0 0 $base3
+      c 0 0 base(3)
     .octicon-circle-slash
       &, ^[1].selected &^[1]-icon
-        c $faded
+        c fg("faded")
     &.disabled, &.disabled.selected, &[aria-disabled="true"], &[disabled]
       &, & .description
-        c $faded
+        c fg("faded")
         o 0.6
     &:hover, &:focus
-      c 0 0 $base6
+      c 0 0 base(6)
   &tabs
-    c 0 $base1
+    c 0 base(1)
     ~/tab-nav, &, a
       &.selected, &[aria-selected="true"], &[aria-current]
-        bc $base1 $base1 $base4
-        c $cn 0 $base4
+        bc base(1) base(1) base(4)
+        c fg("light") 0 base(4)
   &modal
-    s-2()
+    elevation 2
     &-right.details-reset.details-overlay.mb-2, .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target
-      c 0 0 $base4
+      c 0 0 base(4)

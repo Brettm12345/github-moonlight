@@ -1,23 +1,23 @@
 .boxed-group
   .Counter
-    c $cn 0 $base7
+    c fg("light") 0 base(7)
   &-table th
-    c 0 $base1 $base4
+    c 0 base(1) base(4)
   &-warning
-    c $cn $yellow $yellowTrans
+    c fg("light") $yellow t("yellow")
   &-list > li
     &:first-child
       bt $b
     bb $b
     &.selected
-      c 0 $base4
+      c 0 base(4)
   &.dangerzone > h3
-    c $cn $red $redTrans
+    c fg("light") $red t("red")
   &-inner
-    c $text
+    c fg("primary")
     .help
-      c $faded
+      c fg("faded")
     &, ~/ .heading, ~/ > h3
-      c 0 $base1 $base4
+      c 0 base(1) base(4)
       a^[0]-breadcrumb
-        c $faded
+        c fg("faded")

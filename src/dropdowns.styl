@@ -1,28 +1,28 @@
 .dropdown-
   &divider
-    c 0 $base1
+    c 0 base(1)
   &signed-commit &menu-w
-    caret "left" $base2
+    caret "left" base(2)
   &menu
     &, &-dark
-      c $text $base1 $base4
+      c fg("primary") base(1) base(4)
       .octicon
         c $indigo
         o 0.6
         mb 3px
         mr 2px
       &-ne, &-nw, &-n
-        caret "top" $base5
+        caret "top" base(5)
       &-sw, &-se, &-s
         caret "bottom"
       &-w
         caret "right"
       &-e
-        caret "left" $base2
+        caret "left" base(2)
   &header
-    c $faded
+    c fg("faded")
   &item
-    c $text
+    c fg("primary")
     ease background-color, color
     &:hover, &:focus
-      c $cn 0 $base8
+      c fg("light") 0 base(8)

@@ -1,10 +1,10 @@
 .suggester
-  c $text $base1 $base3
+  c fg("primary") base(1) base(3)
   li
-    c 0 $base1
+    c 0 base(1)
     small
-      c 0 0 $faded
+      c 0 0 fg("faded")
     &.navigation-focus, &:hover, &[aria-selected="true"]
-      c 0 0 $blueDark
+      c 0 0 dark("blue")
     &.selected, &[aria-selected="true"], &[aria-current]
-      c 0 0 $base6
+      c 0 0 base(6)

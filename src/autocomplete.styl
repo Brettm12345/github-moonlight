@@ -1,7 +1,7 @@
 .autocomplete-
   &item
     &.navigation-focus, &.selected, &:hover, &[aria-selected="true"]
-      c $text 0 $base4
-.autocomplete-results
-  c 0 $base1 $base3
-  s-1()
+      c fg("primary") 0 base(4)
+  &results
+    c 0 base(1) base(3)
+    elevation 1

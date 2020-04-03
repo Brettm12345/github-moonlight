@@ -1,16 +1,16 @@
 .UnderlineNav
-  c 0 $base1 $base3
+  c 0 base(1) base(3)
   ease background-color, border-color
   /nav& + div.border.d-md-block
-    c 0 0 $base4
+    c 0 0 base(4)
   &[style*="margin-top"]
-    c 0 $t $base2
+    c 0 $t base(2)
   &-item
     ~/-octicon
-      c $faded
+      c fg("faded")
       ../.selected &
-        c $cn
+        c fg("light")
     &.selected
       bbc $blue
     &:hover
-      bbc $base8
+      bbc base(8)

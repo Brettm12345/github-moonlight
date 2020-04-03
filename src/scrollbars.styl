@@ -1,15 +1,15 @@
 *:not(select)
-  sbc $sb $base2
-  sbw $sbWidth
+  sbc scrollbar("thumb") base(2)
+  sbw scrollbar("width")
 ::-webkit-scrollbar
   &, .integrations-select-repos&
-    max-size $wbSbSize
+    max-size scrollbar("chrome-size")
     &, &-corner, &-track, &-track-piece
-      bg $base2
+      bg base(2)
       &:hover
-        bg $base5
+        bg base(5)
     &-thumb
-      bg $sb
-      r $wbSbRadius
+      bg scrollbar("thumb")
+      r scrollbar("chrome-radius")
       &:hover
         bg $blue

@@ -1,13 +1,13 @@
 .Popover-message
-  c $text $base1 $base3
+  c fg("primary") base(1) base(3)
   &:not(&--bottom-right):not(&--top-right):not(&--top-left):not(&--bottom-left)
     caret "bottom"
   &--bottom-right
-    caret "top" $base4 $base4
+    caret "top" base(4) base(4)
   &--top-right
-    caret "bottom" $base4 $base4
+    caret "bottom" base(4) base(4)
   &--top-left
-    caret "bottom" $base5
+    caret "bottom" base(5)
   &--bottom-left
     caret "top"
   /#first-time-contributor &

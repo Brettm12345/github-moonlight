@@ -1,13 +1,13 @@
 .markdown-body
   lh 1.9
   del
-    c $base9
+    c base(9)
   /.js-commit-preview &
-    c 0 0 $base5
+    c 0 0 base(5)
   .lead-mktg p
-    c $faded
+    c fg("faded")
   a
-    c $textAlt
+    c fg("secondary")
     ease color
     td underline
     &:hover
@@ -15,36 +15,36 @@
   .absent
     c $red
   img
-    c 0 0 $base3
+    c 0 0 base(3)
   hr
-    c 0 0 $base1
+    c 0 0 base(1)
   table
     th
-      c $text $base1 $base2
+      c fg("primary") base(1) base(2)
     td, th
-      c 0 $base1
+      c 0 base(1)
     tr td
-      c $text $base1 $base3
+      c fg("primary") base(1) base(3)
   p
-    c $textParagraph
+    c fg("paragraph")
   pre > code
     c 0 0 $t
   .csv-data
     .blob-num
-      c 0 $base3
+      c 0 base(3)
     th
-      c 0 $base4
+      c 0 base(4)
   code, tt
     b $b
-    c $cn $base1 $base7
+    c fg("light") base(1) base(7)
     fw 500
     m 0.4em
     mono()
     white-space nowrap
   h6
-    c $faded
+    c fg("faded")
   h1, h2, h3, h4, h5, h6
-    c 0 $base1
+    c 0 base(1)
     .octicon-link
       c $cyan
       o 0
@@ -54,23 +54,23 @@
       o 1
   /.highlight pre, pre
     b $b
-    c 0 $base1 $base3
+    c 0 base(1) base(3)
     fw 500
     mono()
   span.frame
     & > span
-      c 0 $base1
+      c 0 base(1)
     span span
-      c $textAlt
+      c fg("secondary")
   blockquote
-    bg linear-gradient(to right, $base6, $base3)
-    c 0 $base7 $base5
+    bg linear-gradient(to right, base(6), base(3))
+    c 0 base(7) base(5)
     p
-      c $textDark
+      c fg("dark")
   .clippy-wrapper .clippy
-    c $cn $base1 $base4
+    c fg("light") base(1) base(4)
     ease border-color, background-color
     &:hover
-      c 0 $blue $base8
+      c 0 $blue base(8)
     .icon
       inv()

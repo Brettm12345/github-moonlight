@@ -1,18 +1,18 @@
 .Toast
   b $b
-  s-2()
+  elevation 2
   &--error &-icon
     c 0 0 $red
   &--warning &-icon
-    c $base2 0 $yellow
+    c base(2) 0 $yellow
   &--success &-icon
     .octicon-check
-      c $base2
-    c $base2 0 $teal
+      c base(2)
+    c base(2) 0 $teal
   &, &-content
-    c $text $base1 $base4
+    c fg("primary") base(1) base(4)
   &-dismissButton
-    c $faded $base1 $base2
+    c fg("faded") base(1) base(2)
     max-height none
     min-height 100%
     &:focus, &:hover, &:active

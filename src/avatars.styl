@@ -1,14 +1,14 @@
-.avatar-child
-  c 0 0 $base2
-  s-1()
-.AvatarStack-body
-  &, & .avatar
-    c 0 $base1 $base2
 .avatar
+  /.AvatarStack-body
+    &, & ^[0]
+      c 0 base(1) base(2)
+  &-child
+    c 0 0 base(2)
+    elevation 1
   &&-more
     &, /.AvatarStack-right &
-      bg $base3
+      bg base(3)
       &::before
-        bg $textAlt
+        bg fg("secondary")
       &::after
-        bg $textGray
+        bg fg("gray")

@@ -3,24 +3,24 @@
   /.container-preview &-tabs
     ml 5%
   &-extra, &-tab
-    c $faded
+    c fg("faded")
   &-pr &-tab
     &.selected, &[aria-selected="true"], &[aria-current]
-      c 0 0 $base2
+      c 0 0 base(2)
   &-tabs
     &[aria-label="Stargazers"] ^[0]-tab
       &:not(.selected)
         filter saturate(0.6)
       &.selected
-        c 0 0 $base2
+        c 0 0 base(2)
     &.js-file-editor-nav ^[0]-tab
-      c $faded $base1 $base2
+      c fg("faded") base(1) base(2)
       mt 8px
       rt 6px
   &--responsive &-tab, &-tab
-    c $faded $base1
+    c fg("faded") base(1)
     &.selected, &[aria-selected="true"], &[aria-current]
-      c $text $base1 $base5
+      c fg("primary") base(1) base(5)
       &.js-blob-edit-
         &code, &preview
-          c $blue $base1 $base5
+          c $blue base(1) base(5)

@@ -1,31 +1,31 @@
-$textColors = {
-  gray-light: $textDark
+$fgColors = {
+  gray-light: fg("dark")
   blue: $blue
-  gray: $text
-  gray-dark: $cn
-  emphasized: $textAlt
+  gray: fg("primary")
+  gray-dark: fg("light")
+  emphasized: fg("secondary")
   green: $green
   purple: $purple
   red: $red
 }
-map-record($textColors, '.text-', color)
+map-record($fgColors, '.text-', color)
 $borderColors = {
   blue-light: $blue
-  gray-dark: $base1
-  lg-left: $base1
+  gray-dark: base(1)
+  lg-left: base(1)
 }
 map-record($borderColors, '.border-', border-color)
 $bgColors = {
-  gray: $base4
-  gray-light: $base4
-  blue-light: $base4
-  yellow-light: $yellowTrans
-  purple-light: $purpleTrans
-  blue: $base7
-  blue-2: $blueTrans
-  gray-dark: $base2
-  gray-2: $base7
-  white: $base5
+  gray: base(4)
+  gray-light: base(4)
+  blue-light: base(4)
+  yellow-light: t("yellow")
+  purple-light: t("purple")
+  blue: base(7)
+  blue-2: t("blue")
+  gray-dark: base(2)
+  gray-2: base(7)
+  white: base(5)
   pending: $purple
 }
 map-record($bgColors, '.bg-', background-color)
@@ -36,10 +36,10 @@ for $direction in top left right bottom
 .border
   b $b
 .text
-  c $faded
+  c fg("faded")
 div[style*="#fcfdfd"]
-  c 0 0 $base4
+  c 0 0 base(4)
 path[fill="#eee"]
-  v $base7
+  vc base(7)
 section[style*="#fafbfc"]
-  c 0 0 $base2
+  c 0 0 base(2)

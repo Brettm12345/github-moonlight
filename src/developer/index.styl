@@ -1,57 +1,57 @@
 @require "graphql"
 
 .content
-  c $text
+  c fg("primary")
 .sidebar-menu
-  c $text $base1 $base4
+  c fg("primary") base(1) base(4)
   h3, ul ul li
     &:hover, & a:hover
-      c $cn $base1 $base8
-    c $text $base1 $base4
+      c fg("light") base(1) base(8)
+    c fg("primary") base(1) base(4)
 .js-current .standalone a, .sidebar-module .disable > a
   blc $blue
-  c $cn $base1 $base5
+  c fg("light") base(1) base(5)
 .sub-nav
-  c 0 $base1
+  c 0 base(1)
 body table
   th
-    c $text $base1 $base2
+    c fg("primary") base(1) base(2)
   tr td
-    c $text $base1 $base4
-  c $text $base1 $base4
+    c fg("primary") base(1) base(4)
+  c fg("primary") base(1) base(4)
 .alert
   &.tip
-    c $text $teal $tealTrans
+    c fg("primary") $teal t("teal")
   &.note
-    c $text $blue $blueTrans
+    c fg("primary") $blue t("blue")
   &.warning
-    c $text $yellow $yellowTrans
+    c fg("primary") $yellow t("yellow")
   &.product
-    bg $purpleTrans
-    c $text $purple $purpleTrans
+    bg t("purple")
+    c fg("primary") $purple t("purple")
 h1, h2, h3, h4, h5, h6
-  c $text
+  c fg("primary")
 .content ol li pre code
-  c 0 0 $base2
+  c 0 0 base(2)
   p 8px
 ol > li::before
-  brc $base1
-  c $text
+  brc base(1)
+  c fg("primary")
 .octokit-language span,
 .lead
-  c $faded
+  c fg("faded")
 .libraries-jumbotron
-  c $text $base1 $base2
+  c fg("primary") base(1) base(2)
 .sidebar-module
-  c 0 $base1 $base5
+  c 0 base(1) base(5)
 .command-line span.output
   c $teal
 .content .sectionbody .dlist dt, .content .verseblock-content, .content dl code, .content h2 code, .content h3 code, .content h4 code, .content ol code, .content p > tt, .content table code, .content ul code, p code,
 pre
-  c $text $base1 $base5
+  c fg("primary") base(1) base(5)
 code
   .p
-    c $text
+    c fg("primary")
   .nt
     c $blue
   .s, .s2

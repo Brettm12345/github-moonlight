@@ -1,22 +1,22 @@
 .btn
   &, &&-sm
     bgi none
-    c $cn $base1 $base5
+    c fg("light") base(1) base(5)
     ease background-color, border-color
     &:disabled
       &, &:hover
-        c $faded $base1 $base5
+        c fg("faded") base(1) base(5)
     &:hover
       bgi none
-      c $cn $blue $base7
+      c fg("light") $blue base(7)
   &&-outline
     &.BtnGroup-item, &.tooltipped.tooltipped-sw
-      c 0 0 $base3
+      c 0 0 base(3)
   &-mktg
-    c $cn $base1 rgba(black, 0.1)
+    c fg("light") base(1) rgba(black, 0.1)
   &-octicon
     c $blue
     &:hover
-      c $cn
+      c fg("light")
     &-danger:hover
       c $red

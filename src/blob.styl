@@ -1,19 +1,19 @@
 .blob-
   &code, &num
     &-expandable, &-hunk
-      c 0 0 $base4
+      c 0 0 base(4)
   &code-
     &addition
-      c 0 0 $tealTrans
+      c 0 0 t("teal")
     &deletion
-      c 0 0 $redTrans
+      c 0 0 t("red")
     &inner
-      c $text
+      c fg("primary")
       fs 15px
       lh 1.8
       mono()
       &.highlighted, & .highlighted
-        c 0 0 $base8
+        c 0 0 base(8)
     &addition
       .blob-code-marker::before
         c $teal
@@ -26,9 +26,9 @@
         c 0 0 $red
     &addition, &deletion
       .x
-        c $base1
+        c base(1)
   &num
-    c $base9 $base1 $base4
+    c base(9) base(1) base(4)
     fw 600
     &-expandable
       .diff, .directional
@@ -37,9 +37,9 @@
   &expanded
     & + tr:not(&), tr:not(&) + &
       ~/code, ~/num
-        c 0 $base1 $base4
+        c 0 base(1) base(4)
 .CopyBlock
   b 1px solid $t
   ease border-color, background-color
   &:active, &:focus, &:hover
-    c 0 $base1 $base7
+    c 0 base(1) base(7)
