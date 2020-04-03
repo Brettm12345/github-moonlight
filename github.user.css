@@ -1107,7 +1107,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .dashboard .js-all-activity-header + div > div:last-of-type > .body > .border-bottom {
     border-bottom: none !important;
   }
-  .dashboard .js-all-activity-header + div .Box {
+  .dashboard .js-all-activity-header + div > .Box {
     background-color: var(--base-5) !important;
     border-radius: 6px !important;
   }
