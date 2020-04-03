@@ -146,7 +146,7 @@ ${userVariables
 @-moz-document domain('raw.githubusercontent.com'),
 regexp('https?://((developer|gist)\.)?github\.com/.*') {
   :root {
-${userVariables.map(([_, k]) => `    --${k}: /*[[${k}]]*/;`).join("\n")}
+${userVariables.map(([_, k]) => `--${k}: /*[[${k}]]*/;`).join("\n")}
   }
 }
 

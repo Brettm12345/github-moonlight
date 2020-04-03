@@ -70,61 +70,61 @@
 @-moz-document domain('raw.githubusercontent.com'),
 regexp('https?://((developer|gist).)?github.com/.*') {
   :root {
-    --blue: /*[[blue]]*/;
-    --blue-dark: /*[[blue-dark]]*/;
-    --calendar: /*[[calendar]]*/;
-    --cyan: /*[[cyan]]*/;
-    --cyan-light: /*[[cyan-light]]*/;
-    --green: /*[[green]]*/;
-    --indigo: /*[[indigo]]*/;
-    --orange: /*[[orange]]*/;
-    --pink: /*[[pink]]*/;
-    --purple: /*[[purple]]*/;
-    --red: /*[[red]]*/;
-    --red-light: /*[[red-light]]*/;
-    --teal: /*[[teal]]*/;
-    --yellow: /*[[yellow]]*/;
-    --text-dark: /*[[text-dark]]*/;
-    --text-faded: /*[[text-faded]]*/;
-    --text-gray: /*[[text-gray]]*/;
-    --text-light: /*[[text-light]]*/;
-    --text-paragraph: /*[[text-paragraph]]*/;
-    --text-placeholder: /*[[text-placeholder]]*/;
-    --text-primary: /*[[text-primary]]*/;
-    --text-secondary: /*[[text-secondary]]*/;
-    --scrollbar-thumb: /*[[scrollbar-thumb]]*/;
-    --scrollbar-track: /*[[scrollbar-track]]*/;
-    --selection-bg: /*[[selection-bg]]*/;
-    --selection-fg: /*[[selection-fg]]*/;
-    --blue-transparent: /*[[blue-transparent]]*/;
-    --blue-dark-transparent: /*[[blue-dark-transparent]]*/;
-    --cyan-transparent: /*[[cyan-transparent]]*/;
-    --cyan-light-transparent: /*[[cyan-light-transparent]]*/;
-    --green-transparent: /*[[green-transparent]]*/;
-    --indigo-transparent: /*[[indigo-transparent]]*/;
-    --orange-transparent: /*[[orange-transparent]]*/;
-    --pink-transparent: /*[[pink-transparent]]*/;
-    --purple-transparent: /*[[purple-transparent]]*/;
-    --red-transparent: /*[[red-transparent]]*/;
-    --red-light-transparent: /*[[red-light-transparent]]*/;
-    --teal-transparent: /*[[teal-transparent]]*/;
-    --yellow-transparent: /*[[yellow-transparent]]*/;
-    --base-1: /*[[base-1]]*/;
-    --base-2: /*[[base-2]]*/;
-    --base-3: /*[[base-3]]*/;
-    --base-4: /*[[base-4]]*/;
-    --base-5: /*[[base-5]]*/;
-    --base-6: /*[[base-6]]*/;
-    --base-7: /*[[base-7]]*/;
-    --base-8: /*[[base-8]]*/;
-    --base-9: /*[[base-9]]*/;
-    --mono-font: /*[[mono-font]]*/;
-    --ui-font: /*[[ui-font]]*/;
-    --selection-border: /*[[selection-border]]*/;
-    --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/;
-    --scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/;
-    --elevation-1: /*[[elevation-1]]*/;
-    --elevation-2: /*[[elevation-2]]*/;
+--blue: /*[[blue]]*/;
+--blue-dark: /*[[blue-dark]]*/;
+--calendar: /*[[calendar]]*/;
+--cyan: /*[[cyan]]*/;
+--cyan-light: /*[[cyan-light]]*/;
+--green: /*[[green]]*/;
+--indigo: /*[[indigo]]*/;
+--orange: /*[[orange]]*/;
+--pink: /*[[pink]]*/;
+--purple: /*[[purple]]*/;
+--red: /*[[red]]*/;
+--red-light: /*[[red-light]]*/;
+--teal: /*[[teal]]*/;
+--yellow: /*[[yellow]]*/;
+--text-dark: /*[[text-dark]]*/;
+--text-faded: /*[[text-faded]]*/;
+--text-gray: /*[[text-gray]]*/;
+--text-light: /*[[text-light]]*/;
+--text-paragraph: /*[[text-paragraph]]*/;
+--text-placeholder: /*[[text-placeholder]]*/;
+--text-primary: /*[[text-primary]]*/;
+--text-secondary: /*[[text-secondary]]*/;
+--scrollbar-thumb: /*[[scrollbar-thumb]]*/;
+--scrollbar-track: /*[[scrollbar-track]]*/;
+--selection-bg: /*[[selection-bg]]*/;
+--selection-fg: /*[[selection-fg]]*/;
+--blue-transparent: /*[[blue-transparent]]*/;
+--blue-dark-transparent: /*[[blue-dark-transparent]]*/;
+--cyan-transparent: /*[[cyan-transparent]]*/;
+--cyan-light-transparent: /*[[cyan-light-transparent]]*/;
+--green-transparent: /*[[green-transparent]]*/;
+--indigo-transparent: /*[[indigo-transparent]]*/;
+--orange-transparent: /*[[orange-transparent]]*/;
+--pink-transparent: /*[[pink-transparent]]*/;
+--purple-transparent: /*[[purple-transparent]]*/;
+--red-transparent: /*[[red-transparent]]*/;
+--red-light-transparent: /*[[red-light-transparent]]*/;
+--teal-transparent: /*[[teal-transparent]]*/;
+--yellow-transparent: /*[[yellow-transparent]]*/;
+--base-1: /*[[base-1]]*/;
+--base-2: /*[[base-2]]*/;
+--base-3: /*[[base-3]]*/;
+--base-4: /*[[base-4]]*/;
+--base-5: /*[[base-5]]*/;
+--base-6: /*[[base-6]]*/;
+--base-7: /*[[base-7]]*/;
+--base-8: /*[[base-8]]*/;
+--base-9: /*[[base-9]]*/;
+--mono-font: /*[[mono-font]]*/;
+--ui-font: /*[[ui-font]]*/;
+--selection-border: /*[[selection-border]]*/;
+--scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/;
+--scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/;
+--elevation-1: /*[[elevation-1]]*/;
+--elevation-2: /*[[elevation-2]]*/;
   }
 }
 
@@ -2322,7 +2322,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .awesome-autocomplete .tt-dropdown-menu {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
-    border-style: 0 !important;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15) !important;
   }
   .awesome-autocomplete .tt-dropdown-menu .octicon {
     color: var(--text-pimary) !important;
@@ -2383,7 +2383,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   form#search_form .awesome-autocomplete .twitter-typeahead .tt-input:focus {
     border-color: var(--teal) !important;
-    border-style: inset 0 1px 2px rgba(0,0,0,0.075) !important;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075), 0 0 5px rgba(81,167,232,0.5) !important;
   }
   .code-review.blob-code.blob-code-context {
     background-color: var(--base-4) !important;
