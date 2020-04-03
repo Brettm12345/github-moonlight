@@ -1854,11 +1854,15 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .markdown-body table th {
     color: var(--fg-primary) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-2) !important;
+    background-color: var(--base-2);
   }
   .markdown-body table td,
   .markdown-body table th {
     border-color: var(--base-1) !important;
+  }
+  .markdown-body table tr,
+  .markdown-body table tr:nth-child(2n) {
+    background-color: var(--base-3);
   }
   .markdown-body table tr td {
     color: var(--fg-primary) !important;
@@ -2408,6 +2412,9 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   }
   button.reaction-summary-item {
     border-color: var(--base-1) !important;
+  }
+  button.reaction-summary-item a {
+    background-color: var(--base-2) !important;
   }
   a.module-linker {
     color: var(--green) !important;

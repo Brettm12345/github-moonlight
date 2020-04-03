@@ -20,11 +20,15 @@
     c 0 0 base(1)
   table
     th
-      c fg("primary") base(1) base(2)
+      c fg("primary") base(1)
+      background-color base(2)
     td, th
       c 0 base(1)
-    tr td
-      c fg("primary") base(1) base(3)
+    tr
+      &, &:nth-child(2n)
+        background-color base(3)
+      td
+        c fg("primary") base(1) base(3)
   p
     c fg("paragraph")
   pre > code
