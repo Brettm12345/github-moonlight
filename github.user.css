@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.9.1
+@version      2.9.2
 
 @license      MIT
 @description  A dark blue github theme
@@ -57,7 +57,7 @@
 @var color base-8 "Base 8" #383e5c
 @var color base-9 "Base 9" #444a73
 @var text mono-font "Mono Font" monospace
-@var text ui-font "Ui Font" Inter V
+@var text ui-font "Ui Font" 'Inter', 'Inter V', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji
 @var text selection-border "Selection Border" none
 @var text scrollbar-chrome-radius "Scrollbar Chrome Radius" 0px
 @var text scrollbar-chrome-size "Scrollbar Chrome Size" 6px
@@ -68,65 +68,65 @@
 @-moz-document domain('raw.githubusercontent.com'),
 regexp('https?://((developer|gist).)?github.com/.*') {
   :root {
-    --blue: /*[[blue]]*/ #82aaff;
-    --blue-dark: /*[[blue-dark]]*/ #4976eb;
-    --calendar: /*[[calendar]]*/ #4fd6be;
-    --cyan: /*[[cyan]]*/ #86e1fc;
-    --cyan-light: /*[[cyan-light]]*/ #b4f9f8;
-    --green: /*[[green]]*/ #c3e88d;
-    --indigo: /*[[indigo]]*/ #7a88cf;
-    --orange: /*[[orange]]*/ #ff995e;
-    --pink: /*[[pink]]*/ #fca7ea;
-    --purple: /*[[purple]]*/ #c597f9;
-    --red: /*[[red]]*/ #ff5370;
-    --red-light: /*[[red-light]]*/ #ff757f;
-    --teal: /*[[teal]]*/ #4fd6be;
-    --yellow: /*[[yellow]]*/ #ffc777;
-    --text-dark: /*[[text-dark]]*/ #828bb8;
-    --text-faded: /*[[text-faded]]*/ #828bb8ed;
-    --text-gray: /*[[text-gray]]*/ #a9b8e8;
-    --text-light: /*[[text-light]]*/ #e2e8fa;
-    --text-paragraph: /*[[text-paragraph]]*/ #c0cdf3;
-    --text-placeholder: /*[[text-placeholder]]*/ #c8d3f5aa;
-    --text-primary: /*[[text-primary]]*/ #c8d3f5;
-    --text-secondary: /*[[text-secondary]]*/ #b4c2f0;
-    --selection-bg: /*[[selection-bg]]*/ #82aaff;
-    --selection-fg: /*[[selection-fg]]*/ #e2e8fa;
-    --blue-transparent: /*[[blue-transparent]]*/ #82aaff33;
-    --blue-dark-transparent: /*[[blue-dark-transparent]]*/ #4976eb33;
-    --cyan-transparent: /*[[cyan-transparent]]*/ #86e1fc33;
-    --cyan-light-transparent: /*[[cyan-light-transparent]]*/ #b4f9f833;
-    --green-transparent: /*[[green-transparent]]*/ #c3e88d33;
-    --indigo-transparent: /*[[indigo-transparent]]*/ #7a88cf33;
-    --orange-transparent: /*[[orange-transparent]]*/ #ff995e33;
-    --pink-transparent: /*[[pink-transparent]]*/ #fca7ea33;
-    --purple-transparent: /*[[purple-transparent]]*/ #c597f933;
-    --red-transparent: /*[[red-transparent]]*/ #ff537033;
-    --red-light-transparent: /*[[red-light-transparent]]*/ #ff757f33;
-    --teal-transparent: /*[[teal-transparent]]*/ #4fd6be33;
-    --yellow-transparent: /*[[yellow-transparent]]*/ #ffc77733;
-    --base-1: /*[[base-1]]*/ #131421;
-    --base-2: /*[[base-2]]*/ #191b28;
-    --base-3: /*[[base-3]]*/ #1b1d2c;
-    --base-4: /*[[base-4]]*/ #1e2030;
-    --base-5: /*[[base-5]]*/ #212337;
-    --base-6: /*[[base-6]]*/ #222436;
-    --base-7: /*[[base-7]]*/ #2f334d;
-    --base-8: /*[[base-8]]*/ #383e5c;
-    --base-9: /*[[base-9]]*/ #444a73;
-    --mono-font: /*[[mono-font]]*/ monospace;
-    --ui-font: /*[[ui-font]]*/ Inter V;
-    --selection-border: /*[[selection-border]]*/ none;
-    --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/ 0px;
-    --scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/ 6px;
-    --elevation-1: /*[[elevation-1]]*/ 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    --elevation-2: /*[[elevation-2]]*/ 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    --blue: /*[[blue]]*/;
+    --blue-dark: /*[[blue-dark]]*/;
+    --calendar: /*[[calendar]]*/;
+    --cyan: /*[[cyan]]*/;
+    --cyan-light: /*[[cyan-light]]*/;
+    --green: /*[[green]]*/;
+    --indigo: /*[[indigo]]*/;
+    --orange: /*[[orange]]*/;
+    --pink: /*[[pink]]*/;
+    --purple: /*[[purple]]*/;
+    --red: /*[[red]]*/;
+    --red-light: /*[[red-light]]*/;
+    --teal: /*[[teal]]*/;
+    --yellow: /*[[yellow]]*/;
+    --text-dark: /*[[text-dark]]*/;
+    --text-faded: /*[[text-faded]]*/;
+    --text-gray: /*[[text-gray]]*/;
+    --text-light: /*[[text-light]]*/;
+    --text-paragraph: /*[[text-paragraph]]*/;
+    --text-placeholder: /*[[text-placeholder]]*/;
+    --text-primary: /*[[text-primary]]*/;
+    --text-secondary: /*[[text-secondary]]*/;
+    --selection-bg: /*[[selection-bg]]*/;
+    --selection-fg: /*[[selection-fg]]*/;
+    --blue-transparent: /*[[blue-transparent]]*/;
+    --blue-dark-transparent: /*[[blue-dark-transparent]]*/;
+    --cyan-transparent: /*[[cyan-transparent]]*/;
+    --cyan-light-transparent: /*[[cyan-light-transparent]]*/;
+    --green-transparent: /*[[green-transparent]]*/;
+    --indigo-transparent: /*[[indigo-transparent]]*/;
+    --orange-transparent: /*[[orange-transparent]]*/;
+    --pink-transparent: /*[[pink-transparent]]*/;
+    --purple-transparent: /*[[purple-transparent]]*/;
+    --red-transparent: /*[[red-transparent]]*/;
+    --red-light-transparent: /*[[red-light-transparent]]*/;
+    --teal-transparent: /*[[teal-transparent]]*/;
+    --yellow-transparent: /*[[yellow-transparent]]*/;
+    --base-1: /*[[base-1]]*/;
+    --base-2: /*[[base-2]]*/;
+    --base-3: /*[[base-3]]*/;
+    --base-4: /*[[base-4]]*/;
+    --base-5: /*[[base-5]]*/;
+    --base-6: /*[[base-6]]*/;
+    --base-7: /*[[base-7]]*/;
+    --base-8: /*[[base-8]]*/;
+    --base-9: /*[[base-9]]*/;
+    --mono-font: /*[[mono-font]]*/;
+    --ui-font: /*[[ui-font]]*/;
+    --selection-border: /*[[selection-border]]*/;
+    --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/;
+    --scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/;
+    --elevation-1: /*[[elevation-1]]*/;
+    --elevation-2: /*[[elevation-2]]*/;
   }
 }
 
 @-moz-document domain('github.com'), domain('raw.githubusercontent.com') {
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -138,13 +138,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--indigo) !important;
   }
   .CheckStep-linecontent {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .CheckStep-line:hover {
     background-color: var(--base-5) !important;
   }
   .auth-form-body {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -152,7 +152,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .autocomplete-item.selected,
   .autocomplete-item:hover,
   .autocomplete-item[aria-selected="true"] {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     background-color: var(--base-4) !important;
   }
   .autocomplete-results {
@@ -175,11 +175,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .avatar.avatar-more::before,
   .AvatarStack-right .avatar.avatar-more::before {
-    background: var(--fg-secondary) !important;
+    background: var(--text-secondary) !important;
   }
   .avatar.avatar-more::after,
   .AvatarStack-right .avatar.avatar-more::after {
-    background: var(--fg-gray) !important;
+    background: var(--text-gray) !important;
   }
   .RecentBranches {
     border-color: var(--yellow) !important;
@@ -189,7 +189,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--yellow) !important;
   }
   .signup-plan-card {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -248,10 +248,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-left-color: var(--base-1) !important;
   }
   .billing-box-accordian-state .octicon {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .billing-box-accordian:hover .billing-box-accordian-state .octicon {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .billing-plans tbody > .selected,
   .billing-plans .current {
@@ -278,22 +278,22 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .billing-manager-banner-icon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .billing-manager-banner-title {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .billing-manager-banner-text {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .payment-history .currency .status {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .payment-history .succeded .status {
     color: var(--green) !important;
   }
   .payment-history .refunded .status {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .payment-history .failed .status {
     color: var(--red) !important;
@@ -303,7 +303,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .discounted-original-price {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .golden-ticket-banner {
     border-top-color: var(--yellow) !important;
@@ -318,12 +318,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .blankslate {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
   .blankslate-icon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .blankslate > .Box.bg-gray {
     border: 1px solid var(--base-1) !important;
@@ -331,7 +331,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-radius: 6px !important;
   }
   .blankslate code {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -382,7 +382,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .blob-code-inner {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     font-size: 15px !important;
     line-height: 1.8 !important;
     font-family: var(--mono-font) !important;
@@ -431,7 +431,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .Box-body .help {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .Box--responsive,
   .Boxrow--unread {
@@ -477,7 +477,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .Box-row--yellow {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--yellow) !important;
     background-color: transparent !important;
   }
@@ -494,7 +494,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     padding-right: 10px !important;
   }
   .boxed-group .Counter {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-7) !important;
   }
   .boxed-group-table th {
@@ -502,7 +502,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .boxed-group-warning {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--yellow) !important;
     background-color: var(--yellow-transparent) !important;
   }
@@ -516,15 +516,15 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-4) !important;
   }
   .boxed-group.dangerzone > h3 {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--red) !important;
     background-color: var(--red-transparent) !important;
   }
   .boxed-group-inner {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .boxed-group-inner .help {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .boxed-group-inner,
   .boxed-group .heading,
@@ -533,13 +533,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   a.boxed-group-breadcrumb {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .status-meta {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .branch-name {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-8) !important;
   }
@@ -595,12 +595,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   .breadcrumb strong.final-path {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .btn,
   .btn.btn-sm {
     background-image: none !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -615,14 +615,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .btn.btn-sm:disabled,
   .btn:disabled:hover,
   .btn.btn-sm:disabled:hover {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
   .btn:hover,
   .btn.btn-sm:hover {
     background-image: none !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--blue) !important;
     background-color: var(--base-7) !important;
   }
@@ -631,7 +631,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-3) !important;
   }
   .btn-mktg {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: rgba(0,0,0,0.1) !important;
   }
@@ -639,7 +639,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   .btn-octicon:hover {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .btn-octicon-danger:hover {
     color: var(--red) !important;
@@ -689,7 +689,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .calendar-graph text.wday,
   .calendar-graph text.month {
-    fill: var(--fg-light) !important;
+    fill: var(--text-light) !important;
   }
   .capped-card {
     border-color: var(--base-1) !important;
@@ -699,7 +699,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-bottom-color: var(--base-1) !important;
   }
   .capped-card > p {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .capped-card-content {
     background-color: var(--base-4) !important;
@@ -723,7 +723,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     height: auto;
   }
   .text-gray-light {
-    color: var(--fg-dark) !important;
+    color: var(--text-dark) !important;
   }
   .text-blue,
   .cm-def {
@@ -731,13 +731,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .text-gray,
   .cm-punctuation {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .text-gray-dark {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .text-emphasized {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .text-green,
   .cm-string,
@@ -801,7 +801,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border: 1px solid var(--base-1) !important;
   }
   .text {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   div[style*="#fcfdfd"] {
     background-color: var(--base-4) !important;
@@ -813,7 +813,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .review-comment {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -853,12 +853,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .previewable-comment-form .comment-form-head.tabnav .tabnav-tab:hover {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .previewable-comment-form .comment-form-head.tabnav .tabnav-tab.selected,
   .previewable-comment-form .comment-form-head.tabnav .tabnav-tab[aria-selected="true"],
   .previewable-comment-form .comment-form-head.tabnav .tabnav-tab[aria-current] {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-4) !important;
   }
   .comment-form-textarea.dragover {
@@ -878,18 +878,18 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .conversation-list-heading {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
   }
   .conversation-list-heading .inner {
     border: 1px solid var(--base-1) !important;
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     background-color: var(--base-4) !important;
     padding: 0 10px !important;
     border-radius: 2px !important;
   }
   .simple-conversation-list {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .simple-conversation-list > li {
     border-color: var(--base-1) !important;
@@ -907,12 +907,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-top-color: var(--base-1) !important;
   }
   .commit-desc pre {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     background-color: var(--base-4) !important;
   }
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     background-color: var(--base-4) !important;
   }
   .commits-list-item,
@@ -923,7 +923,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-top-color: var(--base-1) !important;
   }
   .commit-ref {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
     font-family: var(--mono-font) !important;
@@ -943,7 +943,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .commit .commit-title,
   .commit-group-title,
   .commit a {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .commit-tease {
     color: var(--blue) !important;
@@ -958,7 +958,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-9) !important;
   }
   .commits blockquote {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .commits-listing:before {
     background-color: var(--base-5) !important;
@@ -974,7 +974,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .commits-list-item .commit-desc pre,
   .commits-list-item .commit-author {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .full-commit {
     color: var(--blue) !important;
@@ -982,11 +982,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .full-commit .branches-list li {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .full-commit .branches-list li.loading,
   .full-commit .branches-list li.pull-request {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .full-commit .btn-outline:not(:disabled):hover {
     color: var(--blue) !important;
@@ -1000,12 +1000,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   .full-commit .sha-block {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     font-size: 14px !important;
     font-weight: 500 !important;
   }
   .full-commit .sha-block > a {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-6) !important;
   }
   .full-commit .sha-block > a:hover {
@@ -1019,7 +1019,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .file-commit-form--full {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -1044,7 +1044,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   div.commit-build-statuses,
   .link-gray {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   div.commit-build-statuses:hover,
   .link-gray:hover {
@@ -1066,7 +1066,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .ellipsis-expander,
   .hidden-text-expander a {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     background-color: var(--base-7) !important;
   }
   .select-menu-item+.semantic-toc-file:after,
@@ -1075,17 +1075,17 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .Counter {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--blue-dark) !important;
   }
   .Counter--gray {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
   .Counter--gray-light {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-6) !important;
   }
@@ -1112,7 +1112,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .dashboard-notice h2 {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .dashboard-rollup-items .body {
     border-color: var(--base-1) !important;
@@ -1133,7 +1133,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .team,
   .user-mention {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .private .mini-repo-list-item {
     background-color: var(--base-2) !important;
@@ -1151,7 +1151,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-bottom-color: var(--base-1) !important;
   }
   .diffstat {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .diffstat-block-neutral {
     background-color: var(--scrollbar-thumb) !important;
@@ -1163,7 +1163,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--red) !important;
   }
   .diffstat-summary {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .diffstat-summary strong {
     color: var(--purple) !important;
@@ -1185,7 +1185,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     box-shadow: var(--elevation-1) !important;
   }
   .discussion-item-icon {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-5) !important;
     background-color: var(--base-7) !important;
   }
@@ -1197,10 +1197,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .discussion-sidebar-heading {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .discussion-sidebar-item {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     font-weight: 500 !important;
   }
@@ -1238,7 +1238,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .TimelineItem-body,
   .TimelineItem .status-meta-body,
   .TimelineItem .merge-pr-more-commits-body {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .deployments-timeline {
     border-bottom-color: var(--base-1) !important;
@@ -1253,7 +1253,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .timeline-comment {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -1279,12 +1279,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--purple-transparent) !important;
   }
   .timeline-comment-header {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .timeline-comment-header .author {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .timeline-comment--caret::before,
   .timeline-comment--caret.current-user::before,
@@ -1303,7 +1303,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .dropdown-menu,
   .dropdown-menu-dark {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -1363,17 +1363,17 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-left-color: var(--base-2) !important;
   }
   .dropdown-header {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .dropdown-item {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .dropdown-item {
     transition: background 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .dropdown-item:hover,
   .dropdown-item:focus {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-7) !important;
   }
   .shaded-background {
@@ -1383,7 +1383,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .email-hidden-toggle a {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     background-color: var(--base-4) !important;
   }
   .email-hidden-toggle a:hover {
@@ -1396,7 +1396,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .email-signature-reply {
     border: 1px solid var(--base-1) !important;
     border-left: 4px solid var(--blue) !important;
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
     font-style: italic;
@@ -1450,14 +1450,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .filter-item.selected,
   .filter-item[aria-selected="true"],
   .filter-item[aria-current] {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-5) !important;
   }
   input {
     caret-color: var(--blue);
   }
   input[type="text"] {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
@@ -1493,7 +1493,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     margin: 0 !important;
   }
   .form-group .form-control {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -1515,7 +1515,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .form-control,
   .form-select {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
     box-shadow: none !important;
@@ -1528,7 +1528,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .form-select.focus,
   .form-control:focus,
   .form-select:focus {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--blue) !important;
     box-shadow: none !important;
   }
@@ -1536,10 +1536,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     box-shadow: none !important;
   }
   .octicon {
-    color: var(--fg-primary);
+    color: var(--text-primary);
   }
   .draft.octicon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .closed.octicon,
   .reverted.octicon {
@@ -1572,7 +1572,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .octicon-mute,
   .octicon-repo {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .octicon-play {
     color: var(--red-light) !important;
@@ -1588,10 +1588,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--green) !important;
   }
   .octicon-rocket {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .octicon[style*="#6a737d"] {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .octicon-inbox,
   .octicon-alert,
@@ -1621,7 +1621,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .lfs-data-icon,
   .lfs-data-icon.dark {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .donut-chart .success {
     fill: var(--green) !important;
@@ -1633,7 +1633,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     filter: invert(1);
   }
   .graph-filter .info {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   line[stroke="#000"] {
     stroke: var(--base-7) !important;
@@ -1641,14 +1641,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   text[fill="#000"],
   text[fill="#6a737d"],
   text[text-anchor="middle"] {
-    fill: var(--fg-primary) !important;
+    fill: var(--text-primary) !important;
   }
   .viz .code-frequency {
     padding: 8px !important;
   }
   .viz,
   .viz .code-frequency {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -1660,13 +1660,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .num,
   relative-time {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .graphs.axis {
     border-color: var(--base-1) !important;
   }
   .graphs .dir {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .graphs .area {
     fill: var(--teal) !important;
@@ -1681,13 +1681,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-8) !important;
   }
   table.capped-list td {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   table.capped-list tr:nth-child(2n),
   table.capped-list th {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -1702,19 +1702,19 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .summary-stats li:focus > .num,
   .summary-stats li:hover > a,
   .summary-stats li:focus > a {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
   .traffic-graph-stats,
   .summary-stats li,
   .summary-stats li > .num {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .pulse-section {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .contrib-person path {
     fill: var(--orange) !important;
@@ -1763,7 +1763,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .Label--gray {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -1774,7 +1774,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--orange) !important;
   }
   .Label--outline {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .Label--outline-green {
@@ -1785,13 +1785,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-weight: 500 !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item) {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):hover {
     color: var(--blue) !important;
   }
   .muted-link {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .muted-link:hover {
     color: var(--blue) !important;
@@ -1800,7 +1800,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .list-group-item-link {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .list-group-item.closed {
     background-color: var(--base-4) !important;
@@ -1813,16 +1813,16 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-3) !important;
   }
   .list-group-item-summary a {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .list-group-item-summary a.quiet {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .listgroup {
     border-color: var(--base-1) !important;
   }
   .listgroup-item {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .markdown-body {
@@ -1835,10 +1835,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .markdown-body .lead-mktg p {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .markdown-body a {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
     text-decoration: underline !important;
   }
   .markdown-body a:hover {
@@ -1854,7 +1854,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-1) !important;
   }
   .markdown-body table th {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2);
   }
@@ -1867,12 +1867,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-3);
   }
   .markdown-body table tr td:not([class*="blob"]) {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
   .markdown-body p {
-    color: var(--fg-paragraph) !important;
+    color: var(--text-paragraph) !important;
   }
   .markdown-body pre > code {
     background-color: transparent !important;
@@ -1886,7 +1886,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .markdown-body code,
   .markdown-body tt {
     border: 1px solid var(--base-1) !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-7) !important;
     font-weight: 500 !important;
@@ -1894,7 +1894,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-family: var(--mono-font) !important;
   }
   .markdown-body h6 {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .markdown-body h1,
   .markdown-body h2,
@@ -1935,7 +1935,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .markdown-body span.frame span span {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .markdown-body blockquote {
     background: linear-gradient(to right, var(--base-6), var(--base-3)) !important;
@@ -1943,10 +1943,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .markdown-body blockquote p {
-    color: var(--fg-dark) !important;
+    color: var(--text-dark) !important;
   }
   .markdown-body .clippy-wrapper .clippy {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -1958,7 +1958,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     filter: invert(1);
   }
   .marketplace-plan-emphasis {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .MarketplaceBackground-buffer {
     border-color: var(--base-1) !important;
@@ -2001,7 +2001,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .menu {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2011,7 +2011,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .menu-heading {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2048,7 +2048,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .notification-navigation .notification-configure-filters .octicon,
   .numbers-summary .octicon {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
   .notification-navigation .notification-configure-filters:focus .octicon,
@@ -2060,7 +2060,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .notifications-list-item .notifications-list-item-actions svg {
-    fill: var(--fg-primary) !important;
+    fill: var(--text-primary) !important;
   }
   .notifications-list-item:hover,
   .notifications-list-item:focus {
@@ -2068,7 +2068,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
   .notifications-list-item:focus .notification-list-item-actions .btn:hover {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-1) !important;
   }
@@ -2089,7 +2089,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-8) !important;
   }
   .thread-subscription-status {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: transparent !important;
   }
@@ -2100,7 +2100,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .oauth-org-access-details .oauth-org-item.on strong {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .oauth-org-access-details .oauth-org-item:hover {
     background-color: var(--base-3) !important;
@@ -2110,11 +2110,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-3) !important;
   }
   .oauth-permissions-details .permission-title {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .oauth-permissions-details .permission-summary em.highlight {
     border: 1px solid var(--base-1) !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-0) !important;
     background-color: var(--base-0) !important;
   }
@@ -2125,16 +2125,16 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .oauth-org-access-details .oauth-org-item.on strong {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .oauth-org-access-details .oauth-org-item:hover {
     background-color: var(--base-3) !important;
   }
   .manage-member-meta-item {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .manage-member-meta-item > .octicon {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .org-repo-mini-item:first-child .org-repo-mini-cell {
     border-top: none !important;
@@ -2172,18 +2172,18 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .gh-header-meta {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .Header {
     border-bottom: 1px solid var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
   .Header-old {
     border-bottom: 1px solid var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -2192,7 +2192,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .reponav-item {
     border: 1px solid transparent !important;
-    color: var(--fg-dark) !important;
+    color: var(--text-dark) !important;
   }
   .reponav-item .octicon {
     color: var(--base-9) !important;
@@ -2204,11 +2204,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .reponav-item.selected .octicon,
   .reponav-item:focus .octicon,
   .reponav-item:hover .octicon {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .reponav-item.selected {
     border-bottom-color: transparent !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -2226,7 +2226,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .pagehead .repohead.experiment-repo-nav .octicon,
   .vcard-detail .octicon,
   .select-menu-header .octicon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
 @media (min-width: 768px) {
     .pagehead,
@@ -2237,7 +2237,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
 }
   .repohead .Label--outline,
   .repo-list .Label--outline {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .site-header {
@@ -2256,7 +2256,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   .pagination a {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2268,7 +2268,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .pagination [aria-current],
   .pagination .current:hover,
   .pagination [aria-current]:hover {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--blue-dark) !important;
   }
@@ -2278,7 +2278,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .pagination .disabled:hover,
   .pagination .gap:hover,
   .pagination [aria-disabled=true]:hover {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2290,6 +2290,97 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
     box-shadow: inset 0 1px 0 var(--base-1) !important;
   }
+  .aa-popup h1 {
+    border-bottom: 1px solid var(--base-1) !important;
+  }
+  .aa-popup h2 {
+    color: var(--text-primary) !important;
+  }
+  .aa-popup p {
+    color: var(--text-paragraph) !important;
+  }
+  .aa-popup button {
+    color: var(--text-light) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .aa-popup a {
+    color: var(--blue) !important;
+  }
+  .awesome-autocomplete .tt-hint {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-4) !important;
+  }
+  .awesome-autocomplete .tt-cursor {
+    color: var(--blue) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-4) !important;
+    border-style: 0 !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .octicon {
+    color: var(--text-pimary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .aa-query {
+    color: var(--text-pimary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .aa-query .aa-query-cursor strong,
+  .awesome-autocomplete .tt-dropdown-menu .aa-query .aa-query-default em {
+    color: var(--text-dark) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .aa-branding {
+    color: var(--text-pimary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .aa-category {
+    color: var(--text-dark) !important;
+    background-color: var(--base-3) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion {
+    border-bottom: 1px solid var(--base-1) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion em {
+    color: var(--text-dark) !important;
+    background-color: var(--base-5) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion .aa-infos {
+    color: var(--text-primary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-user .aa-thumbnail {
+    background-color: var(--base-3) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-user .aa-login {
+    color: var(--text-primary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-user .aa-company {
+    color: var(--text-dark) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-user .aa-company i {
+    color: var(--text-primary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-repo .aa-thumbnail {
+    background-color: var(--base-3) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-repo .aa-description {
+    color: var(--text-primary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-issue .aa-thumbnail {
+    background-color: var(--base-3) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-issue .aa-repo-name {
+    color: var(--text-primary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-issue .aa-issue-number {
+    color: var(--text-primary) !important;
+  }
+  .awesome-autocomplete .tt-dropdown-menu .tt-suggestion .aa-suggestion.aa-issue .aa-issue-body {
+    color: var(--text-primary) !important;
+  }
+  form#search_form .awesome-autocomplete .twitter-typeahead .tt-input:focus {
+    border-color: var(--teal) !important;
+    border-style: inset 0 1px 2px rgba(0,0,0,0.075) !important;
+  }
   .code-review.blob-code.blob-code-context {
     background-color: var(--base-4) !important;
   }
@@ -2299,7 +2390,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .__better_github_pr,
   .__better_github_pr_dark_mode {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2357,13 +2448,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar,
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .header-row {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .meta-bar,
   .gitako-side-bar-content .meta-bar {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2374,11 +2465,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .no-results,
   .gitako-side-bar-content .file-explorer .no-results {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item,
   .gitako-side-bar-content .file-explorer .node-item {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
@@ -2386,42 +2477,42 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   i[class*="octotree-icon"]::before {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .octotree-sidebar .octotree-ads {
     border: 1px solid var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--blue) !important;
     background-color: var(--blue-transparent) !important;
   }
   .octotree-sidebar .octotree-ads a {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-toggle > .octotree-toggle-icon::before {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-toggle > span {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-views {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-default .jstree-anchor {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-no-dots .jstree-open > .jstree-ocl::before {
     color: var(--blue) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-no-dots .jstree-closed > .jstree-ocl::before {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-wholerow-hovered {
     background: var(--base-6) !important;
@@ -2430,7 +2521,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background: var(--base-5) !important;
   }
   .octotree-view-header {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
@@ -2458,7 +2549,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--green) !important;
   }
   .lovely-forks-addon {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     opacity: 0.7 !important;
   }
   .hide-files-btn:hover,
@@ -2466,7 +2557,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   .Popover-message {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
@@ -2511,10 +2602,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .pinned-item-list-item .pinned-item-handle,
   .pinned-item-name {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .pinned-item-checkbox:checked + .pinned-item-name {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-7) !important;
   }
@@ -2525,10 +2616,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-top: 1px solid var(--base-5) !important;
   }
   .activity-overview-percentage {
-    fill: var(--fg-light) !important;
+    fill: var(--text-light) !important;
   }
   .activity-overview-label {
-    fill: var(--fg-faded) !important;
+    fill: var(--text-faded) !important;
   }
   .user-profile-nav {
     border: 1px solid var(--base-1) !important;
@@ -2539,10 +2630,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .vcard-username {
-    color: var(--fg-gray) !important;
+    color: var(--text-gray) !important;
   }
   .js-profile-editable-edit-button {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -2580,7 +2671,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-image: linear-gradient(90deg, var(--green), var(--blue), var(--purple), var(--red), var(--orange)) !important;
   }
   .task-progress {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .progress-bar .progress {
     background-color: var(--base-8) !important;
@@ -2615,7 +2706,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-3) !important;
   }
   .protip  > code {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -2631,14 +2722,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .compare-pr-placeholder p {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .range-editor {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .range-editor-icon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .Progress {
     background-color: var(--base-7) !important;
@@ -2654,24 +2745,24 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   ul.comparison-list > li {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   ul.comparison-list > li.title {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
   ul.comparison-list > li em {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .merge-pr-more-commits,
   .merge- .status-meta {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .merge-branch-description {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .merge-status-list {
     border-color: var(--base-1) !important;
@@ -2693,7 +2784,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .checks-list-item.selected .checks-list-item-name {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-8) !important;
   }
   .octofication .message,
@@ -2703,7 +2794,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .numbers-summary li > .nolink,
   .numbers-summary li > a {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .release-timeline-tags .tag-timeline-date::after {
     border-color: var(--base-7) !important;
@@ -2716,10 +2807,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-7) !important;
   }
   .description {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .branch-infobar {
-    color: var(--fg-placeholder) !important;
+    color: var(--text-placeholder) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2729,7 +2820,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-5) !important;
   }
   .social-count:hover {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   #readme .Box-header {
     border-color: var(--base-1) !important;
@@ -2746,7 +2837,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   table.files {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -2754,10 +2845,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   table.files td.age {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   table.files td.icon {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   table.files tr.navigation-focus td,
   table.files tr[aria-selected=true] td {
@@ -2767,7 +2858,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   ol.repository-lang-stats-numbers li .lang {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .repository-lang-stats-graph {
     border-color: var(--base-1) !important;
@@ -2776,7 +2867,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .flash {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2840,7 +2931,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-top-color: var(--base-1) !important;
   }
   .form-group .form-control {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2862,7 +2953,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .form-control,
   .form-select {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
     box-shadow: none !important;
@@ -2875,7 +2966,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .form-select.focus,
   .form-control:focus,
   .form-select:focus {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--blue) !important;
     box-shadow: none !important;
   }
@@ -2884,7 +2975,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .code-list .divider .blob-code,
   .code-list .divider .blob-num,
   .code-list-item-private .blob-num {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .code-list-item.hx_hit-code.code-list-item-public.repo-specific {
@@ -2910,11 +3001,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .ais-SearchBox-input {
     background: var(--base-4) url("/assets/images/octicons/search.svg") no-repeat 6px !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
   }
   .SelectMenu-closeButton {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .SelectMenu-header {
     border-bottom-color: var(--base-1) !important;
@@ -2926,7 +3017,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--green) !important;
   }
   .SelectMenu-divider {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -2942,12 +3033,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .SelectMenu-blankslate,
   .SelectMenu-loading,
   .SelectMenu-message {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .SelectMenu-footer {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -2955,16 +3046,16 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-size: unset !important;
   }
   .SelectMenu-item {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
 @media (hover: hover) {
     .SelectMenu-item:not([aria-selected="true"]):hover {
-      color: var(--fg-light) !important;
+      color: var(--text-light) !important;
       background-color: var(--base-7) !important;
     }
     .SelectMenu-item:not([aria-selected="true"]):active {
-      color: var(--fg-light) !important;
+      color: var(--text-light) !important;
       background-color: var(--base-8) !important;
     }
     .SelectMenu-item:hover {
@@ -2978,18 +3069,18 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     }
 }
   .SelectMenu-item[aria-checked="true"] {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .SelectMenu-tabs {
     border-top-color: var(--base-1) !important;
   }
   .SelectMenu-tab {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
   .SelectMenu-tab[aria-selected="true"] {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3012,44 +3103,44 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--green-transparent) !important;
   }
   .select-menu-blankslate h3 {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .select-menu-blankslate svg {
-    fill: var(--fg-secondary) !important;
+    fill: var(--text-secondary) !important;
   }
   .select-menu-loading-overlay {
     background-color: var(--base-2) !important;
   }
   .select-menu-action {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .select-menu-action:hover {
     color: var(--blue) !important;
   }
   .select-menu-header,
   .select-menu-header .select-menu-title {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
   .select-menu-modal,
   .select-menu-item {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .select-menu-divider {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .select-menu-filters {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
   .select-menu-no-results {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3058,14 +3149,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .select-menu-text-filter::placeholder {
-    color: var(--fg-placeholder) !important;
+    color: var(--text-placeholder) !important;
   }
   .select-menu-new-item-form .octicon {
     color: var(--blue) !important;
   }
   .select-menu-item-text .description,
   .select-menu-item-text .description-inline {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .select-menu-item-text .description-warning {
     color: var(--red) !important;
@@ -3075,7 +3166,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .select-menu-item .octicon-circle-slash,
   .select-menu-item.selected .select-menu-item .octicon-circle-slash.select-menu-item-icon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .select-menu-item.disabled,
   .select-menu-item.disabled.selected,
@@ -3085,7 +3176,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .select-menu-item.disabled.selected .description,
   .select-menu-item[aria-disabled="true"] .description,
   .select-menu-item[disabled] .description {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     opacity: 0.6 !important;
   }
   .select-menu-item:hover,
@@ -3105,7 +3196,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .select-menu-tabs[aria-current],
   .select-menu-tabs a[aria-current] {
     border-color: var(--base-1) !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-4) !important;
   }
   .select-menu-modal {
@@ -3136,16 +3227,16 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--green) !important;
   }
   p.explain {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   p.explain strong {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .access-token {
     border-bottom-color: var(--base-1) !important;
   }
   .token-scope {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .license-container {
     border-color: var(--base-1) !important;
@@ -3174,17 +3265,17 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     padding-right: 0px !important;
   }
   .orgs-help-lead {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .orgs-help-item-octicon {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .orgs-help-item-content {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .SideNav {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3224,7 +3315,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-weight: 500 !important;
   }
   .signed-commit-signer-name .signer {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .State--green {
     border: 1px solid var(--teal) !important;
@@ -3257,7 +3348,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .Subhead-description {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .site-subnav.bg-white {
     border-bottom: 1px solid var(--base-1) !important;
@@ -3306,10 +3397,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .application-main > main > .site-subnav + div .text-gray-light {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .suggester {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
@@ -3317,7 +3408,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .suggester li small {
-    background-color: var(--fg-faded) !important;
+    background-color: var(--text-faded) !important;
   }
   .suggester li.navigation-focus,
   .suggester li:hover,
@@ -3350,7 +3441,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-weight: 500 !important;
   }
   .cm-s-github-light.CodeMirror {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -3380,7 +3471,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--green) !important;
   }
   .pl-s .pl-v {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .pl-e,
   .pl-en {
@@ -3419,11 +3510,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--red) !important;
   }
   .pl-ii {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--red) !important;
   }
   .pl-c2 {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--red) !important;
   }
   .pl-c2::before {
@@ -3449,7 +3540,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-style: italic;
   }
   .pl-mb {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     font-weight: bold !important;
   }
   .pl-md {
@@ -3479,14 +3570,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--pink) !important;
   }
   .pl-sg {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .pl-corl {
     text-decoration: underline !important;
   }
   .table-list {
     border-bottom: 1px solid var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
@@ -3507,7 +3598,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .table-list-header-meta {
-    color: var(--fg-secondary) !important;
+    color: var(--text-secondary) !important;
   }
   .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected {
@@ -3521,7 +3612,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .tabnav-extra,
   .tabnav-tab {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .tabnav-pr .tabnav-tab.selected,
   .tabnav-pr .tabnav-tab[aria-selected="true"],
@@ -3535,7 +3626,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .tabnav-tabs.js-file-editor-nav .tabnav-tab {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
     margin-top: 8px !important;
@@ -3546,7 +3637,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .tabnav--responsive .tabnav-tab,
   .tabnav-tab {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
   }
   .tabnav--responsive .tabnav-tab.selected,
@@ -3555,7 +3646,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .tabnav-tab[aria-selected="true"],
   .tabnav--responsive .tabnav-tab[aria-current],
   .tabnav-tab[aria-current] {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -3619,12 +3710,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .Toast,
   .Toast-content {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .Toast-dismissButton {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
     max-height: none;
@@ -3637,7 +3728,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .toolbar-item,
   .toolbar-item .menu-target {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .toolbar-item:hover,
   .toolbar-item .menu-target:hover {
@@ -3661,7 +3752,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .topic-tag {
     border: 1px solid var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3691,10 +3782,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--blue) !important;
   }
   .member-suggestion .member-name {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .typeahead-result {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .UnderlineNav {
     border-color: var(--base-1) !important;
@@ -3708,10 +3799,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .UnderlineNav-octicon {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .UnderlineNav-item.selected .UnderlineNav-octicon {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
   }
   .UnderlineNav-item.selected {
     border-bottom-color: var(--blue) !important;
@@ -3732,7 +3823,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--red) !important;
   }
   .follow-list-info {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .avatar-before-user-status {
     border-color: var(--base-1) !important;
@@ -3750,11 +3841,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .hook-delivery-time {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .hook-delivery-guid {
     border: 1px solid var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3784,10 +3875,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--selection-bg) !important;
   }
   ::placeholder {
-    color: var(--fg-placeholder) !important;
+    color: var(--text-placeholder) !important;
   }
   body {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     background-color: var(--base-2) !important;
     font-family: var(--ui-font) !important;
     font-size: 14px !important;
@@ -3798,13 +3889,13 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   h3,
   h4,
   h5 {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   mark {
     color: var(--yellow) !important;
   }
   kbd {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
     font-size: 14px !important;
@@ -3841,7 +3932,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     margin-bottom: 16px !important;
   }
   .gisthead .pagehead-actions .octicon-mute {
-    fill: var(--fg-faded) !important;
+    fill: var(--text-faded) !important;
   }
   #gist-pjax-container {
     background-color: var(--base-4) !important;
@@ -3869,7 +3960,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-left-color: var(--blue) !important;
   }
   .CodeMirror-hint {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3879,7 +3970,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .CodeMirror-hint-active {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-8) !important;
     font-weight: 500 !important;
   }
@@ -3889,7 +3980,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .CodeMirror-gutters,
   .CodeMirror-gutter.CodeMirror-foldgutter {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3898,18 +3989,18 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .history-contents,
   .doc-explorer-contents {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
   .history-title-bar,
   .doc-explorer-title-bar {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .graphiql-container .history-contents p {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
   }
   .graphiql-container .execute-options > li:hover,
@@ -3938,7 +4029,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   .graphiql-container .doc-category-title {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
   }
   .graphiql-container .resultWrap {
@@ -3961,7 +4052,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .graphiql-container .topBar {
     background: var(--base-4) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -3972,16 +4063,16 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .graphiql-container .toolbar-button svg,
   .graphiql-container .execute-button svg {
-    fill: var(--fg-primary) !important;
+    fill: var(--text-primary) !important;
   }
   .graphiql-container .variable-editor-title {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
   .graphiql-container .docExplorerShow {
     background: var(--base-5) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -3989,16 +4080,16 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .content {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .sidebar-menu {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .sidebar-menu h3,
   .sidebar-menu ul ul li {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
@@ -4006,14 +4097,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .sidebar-menu ul ul li:hover,
   .sidebar-menu h3 a:hover,
   .sidebar-menu ul ul li a:hover {
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-8) !important;
   }
   .js-current .standalone a,
   .sidebar-module .disable > a {
     border-left-color: var(--blue) !important;
-    color: var(--fg-light) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -4021,38 +4112,38 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   body table {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   body table th {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
   body table tr td {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
   .alert.tip {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--teal) !important;
     background-color: var(--teal-transparent) !important;
   }
   .alert.note {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--blue) !important;
     background-color: var(--blue-transparent) !important;
   }
   .alert.warning {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--yellow) !important;
     background-color: var(--yellow-transparent) !important;
   }
   .alert.product {
     background: var(--purple-transparent) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--purple) !important;
     background-color: var(--purple-transparent) !important;
   }
@@ -4062,7 +4153,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   h4,
   h5,
   h6 {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .content ol li pre code {
     background-color: var(--base-2) !important;
@@ -4070,14 +4161,14 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   ol > li::before {
     border-right-color: var(--base-1) !important;
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   .octokit-language span,
   .lead {
-    color: var(--fg-faded) !important;
+    color: var(--text-faded) !important;
   }
   .libraries-jumbotron {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
@@ -4100,12 +4191,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .content ul code,
   p code,
   pre {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
   code .p {
-    color: var(--fg-primary) !important;
+    color: var(--text-primary) !important;
   }
   code .nt {
     color: var(--blue) !important;

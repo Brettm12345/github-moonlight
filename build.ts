@@ -8,7 +8,8 @@ import * as stylus from "stylus";
 import * as pkg from "./package.json";
 
 const fonts = {
-  ui: "Inter V",
+  ui:
+    "'Inter', 'Inter V', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji",
   mono: "monospace"
 };
 
@@ -141,7 +142,7 @@ ${userVariables
 @-moz-document domain('raw.githubusercontent.com'),
 regexp('https?://((developer|gist)\.)?github\.com/.*') {
   :root {
-${userVariables.map(([_, k, v]) => `    --${k}: /*[[${k}]]*/ ${v};`).join("\n")}
+${userVariables.map(([_, k]) => `    --${k}: /*[[${k}]]*/;`).join("\n")}
   }
 }
 
