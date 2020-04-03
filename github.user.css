@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.8.1
+@version      2.8.2
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -1774,10 +1774,10 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     font-weight: 500 !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item) {
-    color: var(--fg-primary);
+    color: var(--fg-primary) !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):hover {
-    color: var(--blue);
+    color: var(--blue) !important;
   }
   .muted-link {
     color: var(--fg-faded) !important;
