@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "no-descending-specificity": null,
+    "declaration-block-no-shorthand-property-overrides": null,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": ["relative-time"]
+      }
+    ],
+    "no-duplicate-selectors": null
+  }
+}

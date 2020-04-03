@@ -543,7 +543,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-8) !important;
   }
-  .branch-action-body::before state-clean {
+  .branch-action-state-clean .branch-action-body::before {
     border-right-color: var(--base-5) !important;
   }
   .branch-action-item + .branch-action-item,
@@ -2133,7 +2133,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .manage-member-meta-item {
     color: var(--fg-faded) !important;
   }
-  .manage-member-meta-item > octicon {
+  .manage-member-meta-item > .octicon {
     color: var(--fg-secondary) !important;
   }
   .org-repo-mini-item:first-child .org-repo-mini-cell {
