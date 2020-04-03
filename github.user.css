@@ -224,6 +224,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .notifications-list-item:hover .notification-list-item-actions .btn,
   .notifications-list-item:focus .notification-list-item-actions .btn,
   #readme .Box-header,
+  table.files tr,
   .SelectMenu-item,
   .select-menu-item,
   .topic-tag,
