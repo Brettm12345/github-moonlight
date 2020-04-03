@@ -1,6 +1,6 @@
 #+EXPORT_FILE_NAME: ../readme
-#+MACRO: badge #+HTML: <a href="https://$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
-#+MACRO: screenshot-dir https://raw.githubusercontent.com/Brettm12345/github-moonlight/master/screenshots
+#+MACRO: badge #+HTML: <a href="$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
+#+MACRO: install {{{badge(Install Directly with Stylus,https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
 #+HTML: <div align="center">
 
 * Github Moonlight
@@ -8,18 +8,18 @@
 A dark userstyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
-{{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
-{{{badge(Discord Server,discord.gg/n5meNsX,discord/693723424190627881?label=discord&logo=discord)}}}
-{{{badge(Commit Activity,github.com/Brettm12345/github-moonlight/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
-{{{badge(Stars,github.com/Brettm12345/github-moonlight/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
-
+{{{install}}}
+{{{badge(Discord Server,https://discord.gg/n5meNsX,discord/693723424190627881?label=discord&logo=discord)}}}
+{{{badge(Commit Activity,/commits/master,github/commit-activity/m/brettm12345/github-moonlight?logo=github)}}}
+{{{badge(Stars,/stargazers,github/stars/brettm12345/github-moonlight?logo=github)}}}
+{{{badge(Latest Release,/releases,github/v/tag/brettm12345/github-moonlight?logo=git)}}}
 [[file:screenshots/repo.png]]
 #+HTML: </div>
 
 ** Installation
 
 You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on the install link below.
-{{{badge(Install Directly with Stylus,raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
+{{{install}}}
 
 ** Features
 **** Customization
