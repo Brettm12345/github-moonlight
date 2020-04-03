@@ -12,6 +12,7 @@
 
 @var color blue "Blue" #82aaff
 @var color blue-dark "Blue Dark" #4976eb
+@var color calendar "Calendar" #4fd6be
 @var color cyan "Cyan" #86e1fc
 @var color cyan-light "Cyan Light" #b4f9f8
 @var color green "Green" #c3e88d
@@ -31,6 +32,8 @@
 @var color text-placeholder "Text Placeholder" #c8d3f5aa
 @var color text-primary "Text Primary" #c8d3f5
 @var color text-secondary "Text Secondary" #b4c2f0
+@var color selection-bg "Selection Bg" #82aaff
+@var color selection-fg "Selection Fg" #e2e8fa
 @var color blue-transparent "Blue Transparent" #82aaff33
 @var color blue-dark-transparent "Blue Dark Transparent" #4976eb33
 @var color cyan-transparent "Cyan Transparent" #86e1fc33
@@ -55,6 +58,11 @@
 @var color base-9 "Base 9" #444a73
 @var text mono-font "Mono Font" monospace
 @var text ui-font "Ui Font" Inter V
+@var text selection-border "Selection Border" none
+@var text scrollbar-chrome-radius "Scrollbar Chrome Radius" 0px
+@var text scrollbar-chrome-size "Scrollbar Chrome Size" 6px
+@var text elevation-1 "Elevation 1" 0 2px 5px 0 rgba(0, 0, 0, 0.26)
+@var text elevation-2 "Elevation 2" 0 4px 8px 0 rgba(0, 0, 0, 0.4)
 @preprocessor uso
 ==/UserStyle== */
 @-moz-document domain('raw.githubusercontent.com'),
@@ -62,6 +70,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   :root {
     --blue: /*[[blue]]*/ #82aaff;
     --blue-dark: /*[[blue-dark]]*/ #4976eb;
+    --calendar: /*[[calendar]]*/ #4fd6be;
     --cyan: /*[[cyan]]*/ #86e1fc;
     --cyan-light: /*[[cyan-light]]*/ #b4f9f8;
     --green: /*[[green]]*/ #c3e88d;
@@ -81,6 +90,8 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     --text-placeholder: /*[[text-placeholder]]*/ #c8d3f5aa;
     --text-primary: /*[[text-primary]]*/ #c8d3f5;
     --text-secondary: /*[[text-secondary]]*/ #b4c2f0;
+    --selection-bg: /*[[selection-bg]]*/ #82aaff;
+    --selection-fg: /*[[selection-fg]]*/ #e2e8fa;
     --blue-transparent: /*[[blue-transparent]]*/ #82aaff33;
     --blue-dark-transparent: /*[[blue-dark-transparent]]*/ #4976eb33;
     --cyan-transparent: /*[[cyan-transparent]]*/ #86e1fc33;
@@ -105,6 +116,11 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     --base-9: /*[[base-9]]*/ #444a73;
     --mono-font: /*[[mono-font]]*/ monospace;
     --ui-font: /*[[ui-font]]*/ Inter V;
+    --selection-border: /*[[selection-border]]*/ none;
+    --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/ 0px;
+    --scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/ 6px;
+    --elevation-1: /*[[elevation-1]]*/ 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    --elevation-2: /*[[elevation-2]]*/ 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   }
 }
 

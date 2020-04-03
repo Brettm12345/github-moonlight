@@ -9,7 +9,7 @@ import * as pkg from "./package.json";
 
 const fonts = {
   ui: "Inter V",
-  mono: "monospace",
+  mono: "monospace"
 };
 
 const palette = {
@@ -25,7 +25,7 @@ const palette = {
   "blue-dark": "#4976eb",
   pink: "#fca7ea",
   purple: "#c597f9",
-  indigo: "#7a88cf",
+  indigo: "#7a88cf"
 };
 
 const text = (() => {
@@ -35,12 +35,12 @@ const text = (() => {
     paragraph: "#c0cdf3",
     secondary: "#b4c2f0",
     gray: "#a9b8e8",
-    dark: "#828bb8",
+    dark: "#828bb8"
   };
   return {
     ...base,
     faded: base.dark + "ed",
-    placeholder: base.primary + "aa",
+    placeholder: base.primary + "aa"
   };
 })();
 
@@ -53,7 +53,7 @@ const gray = [
   "#222436",
   "#2f334d",
   "#383e5c",
-  "#444a73",
+  "#444a73"
 ];
 
 interface VariableOptions {
@@ -74,22 +74,46 @@ const vars = variables("text");
 
 const userVariables = pipe(
   [
-    [palette],
-    [text, { handleKey: (k) => `text-${k}` }],
+    [{ ...palette, calendar: palette.teal }],
+    [text, { handleKey: k => `text-${k}` }],
+    [
+      {
+        bg: palette.blue,
+        fg: text.light
+      },
+      { handleKey: k => `selection-${k}` }
+    ],
     [
       palette,
       {
-        handleKey: (k) => `${k}-transparent`,
-        handleValue: (v) => v + 33,
-      },
+        handleKey: k => `${k}-transparent`,
+        handleValue: v => v + 33
+      }
     ],
-    [gray, { handleKey: (i) => `base-${i}` }],
+    [gray, { handleKey: i => `base-${i}` }]
   ],
   chain(tupled(colors))
 ).concat(
-  vars(fonts, {
-    handleKey: (k) => `${k}-font`,
-  })
+  pipe(
+    [
+      [
+        fonts,
+        {
+          handleKey: k => `${k}-font`
+        }
+      ],
+      [{ "selection-border": "none" }],
+      [
+        { size: "6px", radius: "0px" },
+        { handleKey: k => `scrollbar-chrome-${k}` }
+      ],
+      [
+        ["0 2px 5px 0 rgba(0, 0, 0, 0.26)", "0 4px 8px 0 rgba(0, 0, 0, 0.4)"],
+        { handleKey: k => `elevation-${k}` }
+      ]
+    ],
+    chain(tupled(vars))
+  )
 );
 
 stylus.render('@import "github.user";', (err, css) => {
