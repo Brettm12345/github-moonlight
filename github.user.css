@@ -2846,7 +2846,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   table.files {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-5) !important;
+    background-color: var(--base-4) !important;
   }
   table.files td {
     border-color: var(--base-1) !important;
