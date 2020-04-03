@@ -7,6 +7,8 @@ assignees: Brettm12345
 
 ---
 
-** URL **
+**URL:**
+Post a link to the plugin's website or GitHub page.
 
-** Description **
+**Description:**
+What does the plugin do?
