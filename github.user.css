@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.8.5
+@version      2.8.6
 
 @license      MIT
 @description  A dark blue github theme
@@ -1901,7 +1901,6 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     font-weight: 500 !important;
     margin: 0.4em !important;
     font-family: var(--mono-font) !important;
-    white-space: nowrap;
   }
   .markdown-body h6 {
     color: var(--fg-faded) !important;
