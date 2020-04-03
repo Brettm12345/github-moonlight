@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub-Moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.7.1
+@version      2.8.1
 @license      MIT
 @description  A dark blue github theme
 @author       brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)
@@ -213,7 +213,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   }
   .RecentBranches {
     border-color: var(--yellow) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--yellow-transparent) !important;
   }
   .RecentBranches-item {
     color: var(--yellow) !important;
@@ -293,12 +293,12 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .billing-plans .coupon.expiring td {
     color: var(--yellow) !important;
     border-color: var(--yellow) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--yellow-transparent) !important;
   }
   .billing-plans .coupon td {
     color: var(--teal) !important;
     border-color: var(--teal) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--teal-transparent) !important;
   }
   .billing-line-item {
     border-top-color: var(--base-1) !important;
@@ -372,10 +372,10 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     background-color: var(--base-4) !important;
   }
   .blob-code-addition {
-    background-color: var(---transparent) !important;
+    background-color: var(--teal-transparent) !important;
   }
   .blob-code-deletion {
-    background-color: var(---transparent) !important;
+    background-color: var(--red-transparent) !important;
   }
   .blob-code-inner {
     color: var(--fg-primary) !important;
@@ -516,7 +516,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .boxed-group-warning {
     color: var(--fg-light) !important;
     border-color: var(--yellow) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--yellow-transparent) !important;
   }
   .boxed-group-list > li {
     border-bottom: 1px solid var(--base-1) !important;
@@ -530,7 +530,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .boxed-group.dangerzone > h3 {
     color: var(--fg-light) !important;
     border-color: var(--red) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--red-transparent) !important;
   }
   .boxed-group-inner {
     color: var(--fg-primary) !important;
@@ -775,14 +775,18 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .bg-blue-light {
     background-color: var(--base-4) !important;
   }
-  .bg-yellow-light,
-  .bg-purple-light,
-  .bg-blue-2 {
-    background-color: var(---transparent) !important;
+  .bg-yellow-light {
+    background-color: var(--yellow-transparent) !important;
+  }
+  .bg-purple-light {
+    background-color: var(--purple-transparent) !important;
   }
   .bg-blue,
   .bg-gray-2 {
     background-color: var(--base-7) !important;
+  }
+  .bg-blue-2 {
+    background-color: var(--blue-transparent) !important;
   }
   .bg-gray-dark {
     background-color: var(--base-2) !important;
@@ -857,7 +861,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .comment-form-error {
     color: var(--red) !important;
     border-color: var(--red) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--red-transparent) !important;
   }
   .comment-reactions .user-has-reacted {
     border-color: var(--base-1) !important;
@@ -1263,7 +1267,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .timeline-comment-label.tooltipped.tooltipped-s.tooltipped-multiline {
     color: var(--purple) !important;
     border-color: var(--purple) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--purple-transparent) !important;
   }
   .timeline-comment-header {
     color: var(--fg-light) !important;
@@ -1742,7 +1746,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .reaction-sort-item:hover,
   .reaction-sort-item:focus {
     border-color: var(--blue) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--blue-transparent) !important;
   }
   .reaction-summary-item {
     background-color: var(--base-4) !important;
@@ -1770,10 +1774,10 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     font-weight: 500 !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item) {
-    color: var(--fg-primary) !important;
+    color: var(--fg-primary);
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):hover {
-    color: var(--blue) !important;
+    color: var(--blue);
   }
   .muted-link {
     color: var(--fg-faded) !important;
@@ -2339,6 +2343,55 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .gitako-side-bar-content .file-explorer .node-item-row {
     background-color: var(--base-5) !important;
   }
+  i[class*="octotree-icon"]::before {
+    color: var(--fg-faded) !important;
+  }
+  .octotree-sidebar .octotree-ads {
+    border: 1px solid var(--base-1) !important;
+    color: var(--fg-primary) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--blue-transparent) !important;
+  }
+  .octotree-sidebar .octotree-ads a {
+    color: var(--fg-light) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-toggle > .octotree-toggle-icon::before {
+    color: var(--fg-faded) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-toggle > span {
+    color: var(--fg-primary) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-4) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view {
+    color: var(--fg-primary) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-default .jstree-anchor {
+    color: var(--fg-secondary) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-no-dots .jstree-open > .jstree-ocl::before {
+    color: var(--blue) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-no-dots .jstree-closed > .jstree-ocl::before {
+    color: var(--fg-faded) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-wholerow-hovered {
+    background: var(--base-6) !important;
+  }
+  .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-tree-view .jstree-wholerow-clicked {
+    background: var(--base-5) !important;
+  }
+  .octotree-view-header {
+    color: var(--fg-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
   .dashboard .js-all-activity-header + div {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
@@ -2504,7 +2557,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     box-shadow: var(--elevation-1) !important;
   }
   .project-card:focus {
-    box-shadow: 0 0 0 0.2em var(---transparent) !important;
+    box-shadow: 0 0 0 0.2em var(--blue-transparent) !important;
   }
   .btn.btn-outline,
   .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2 {
@@ -2911,7 +2964,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   }
   .select-menu-button.primary:active {
     border-color: var(--green) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--green-transparent) !important;
   }
   .select-menu-blankslate h3 {
     color: var(--fg-primary) !important;
@@ -3119,7 +3172,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .signed-commit-badge.verified {
     color: var(--teal) !important;
     border-color: var(--teal) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--teal-transparent) !important;
     font-weight: 500 !important;
   }
   .signed-commit-signer-name .signer {
@@ -3129,7 +3182,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     border: 1px solid var(--teal) !important;
     color: var(--teal) !important;
     border-color: var(--teal) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--teal-transparent) !important;
   }
   .State--green .octicon {
     fill: var(--teal) !important;
@@ -3138,7 +3191,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     border: 1px solid var(--purple) !important;
     color: var(--purple) !important;
     border-color: var(--purple) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--purple-transparent) !important;
   }
   .State--purple .octicon {
     fill: var(--purple) !important;
@@ -3147,7 +3200,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     border: 1px solid var(--red) !important;
     color: var(--red) !important;
     border-color: var(--red) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--red-transparent) !important;
   }
   .State--red .octicon {
     fill: var(--red) !important;
@@ -3353,15 +3406,15 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   }
   .pl-md {
     color: var(--red) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--red-transparent) !important;
   }
   .pl-mi1 {
     color: var(--teal) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--teal-transparent) !important;
   }
   .pl-mc {
     color: var(--cyan) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--cyan-transparent) !important;
   }
   .pl-mdr {
     color: var(--teal) !important;
@@ -3576,7 +3629,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .topic-tag-action a {
     color: var(--blue) !important;
     border-color: var(--blue) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--blue-transparent) !important;
   }
   #tree-finder-field {
     background-color: var(--base-2) !important;
@@ -3640,7 +3693,7 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
     border-top: none !important;
     border: 1px solid var(--base-1) !important;
     border-color: var(--purple) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--purple-transparent) !important;
   }
   .js-user-status-container {
     background-color: var(--base-5) !important;
@@ -3937,23 +3990,23 @@ regexp('https?://((developer|gist)\.)?github\.com/.*') {
   .alert.tip {
     color: var(--fg-primary) !important;
     border-color: var(--teal) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--teal-transparent) !important;
   }
   .alert.note {
     color: var(--fg-primary) !important;
     border-color: var(--blue) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--blue-transparent) !important;
   }
   .alert.warning {
     color: var(--fg-primary) !important;
     border-color: var(--yellow) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--yellow-transparent) !important;
   }
   .alert.product {
-    background: var(---transparent) !important;
+    background: var(--purple-transparent) !important;
     color: var(--fg-primary) !important;
     border-color: var(--purple) !important;
-    background-color: var(---transparent) !important;
+    background-color: var(--purple-transparent) !important;
   }
   h1,
   h2,

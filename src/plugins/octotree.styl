@@ -1,0 +1,39 @@
+i[class*="octotree-icon"]::before
+  c fg("faded")
+.octotree-
+  &sidebar
+    & ^[0]ads
+      b $b
+      c fg("primary") $blue t("blue")
+      a
+        c fg("light")
+  &sidebar&github-sidebar
+    & ^[0]toggle
+      c 0 base(1) base(3)
+      & > ^[0]toggle-icon::before
+        c fg("faded")
+      & > span
+        c fg("primary")
+    & ^[0]views
+      c 0 base(1) base(4)
+      & ^[0]view
+        c fg("primary")
+      & ^[0]tree-view
+        .jstree-
+          &default
+            & ^[-2..-2]anchor
+              c fg("secondary")
+            $icon = {
+              open: $blue
+              closed: fg("faded")
+            }
+            for $k, $v in $icon
+              ^[4]no-dots ^[-2..-2]{$k} > ^[-2..-2]ocl::before
+                c $v
+            ^[4]wholerow-
+              &hovered
+                bg base(6)
+              &clicked
+                bg base(5)
+  &view-header
+    c fg("primary") base(1) base(3)
