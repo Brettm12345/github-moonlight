@@ -1,15 +1,24 @@
 {
   "name": "github-moonlight",
-  "version": "1.0.0",
+  "version": "2.9.0",
   "main": "index.js",
-  "author": "brettm12345",
+  "author": "brettm12345 <brettmandler@gmail.com> (https://github.com/brettm12345)",
+  "description": "A dark blue github theme",
+  "homepage": "https://github.com/brettm12345/github-moonlight",
+  "bugs": {
+    "url": "https://github.com/brettm12345/github-moonlight/issues"
+  },
+  "repository": {
+    "url": "git",
+    "type": "https://github.com/brettm12345/github-moonlight.git"
+  },
   "license": "MIT",
   "scripts": {
     "build:readme": "emacsclient -e '(progn (find-file \"doc/readme.org\") (org-org-export-to-org))'",
     "patch": "yarn versions patch -c 'yarn build'",
     "minor": "yarn versions minor -c 'yarn build'",
     "major": "yarn versions major -c 'yarn build'",
-    "build": "cp ./metadata.css ./github.user.css && stylus -p github.user.styl >> ./github.user.css",
+    "build": "ts-node build",
     "copy": "yarn build && xclip -i -selection clipboard github.user.css",
     "build:watch": "stylus --watch github.user.styl",
     "lint": "stlint src",
@@ -26,11 +35,19 @@
     "stylus": "^0.54.7"
   },
   "devDependencies": {
+    "@types/mustache": "^4.0.1",
+    "@types/stylus": "^0.48.32",
+    "change-case": "^4.1.1",
+    "color": "^3.1.2",
+    "elm-node": "^1.1.6",
+    "fp-ts": "^2.5.3",
     "husky": "^4.2.3",
+    "mustache": "^4.0.1",
     "stlint": "^1.0.62",
     "stlint-v4fire": "^1.0.37",
     "stylint": "^2.0.0",
     "stylus-supremacy": "^2.14.0",
+    "typescript": "^3.8.3",
     "versions": "^8.2.7"
   }
 }
