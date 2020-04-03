@@ -1122,6 +1122,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .dashboard-rollup-items .body {
     border-color: var(--base-1) !important;
   }
+  .dashboard-sidebar input[type="text"] {
+    background-color: var(--base-6) !important;
+  }
   .repo-list {
     padding: 0 12px !important;
   }
@@ -2551,7 +2554,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
   }
   button.reaction-summary-item a {
-    background-color: var(--base-2) !important;
+    background-color: var(--base-3) !important;
   }
   a.module-linker {
     color: var(--green) !important;
