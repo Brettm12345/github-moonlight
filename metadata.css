@@ -67,6 +67,8 @@
 @var text wb-sb-radius "Webkit scrollbar border radius" 0px
 @preprocessor uso
 ==/UserStyle== */
+@-moz-document domain('raw.githubusercontent.com'),
+regexp('https?://((developer|gist)\.)?github\.com/.*') {
 :root {
   --base-1:  /*[[base-1]]*/ ;
   --base-2:  /*[[base-2]]*/ ;
@@ -112,4 +114,5 @@
   --ui-font: /*[[ui_font]]*/ ;
   --yellow: /*[[yellow]]*/ ;
   --yellow-trans: /*[[yellow-trans]]*/ ;
+}
 }
