@@ -1,5 +1,5 @@
 state($sel, $color, $background)
-  .State--{$sel}
+  .State.State--{$sel}
     b 1px solid $color
     c $color $color $background
     .octicon
@@ -8,3 +8,5 @@ state($sel, $color, $background)
 state('green', v("teal"), t("teal"))
 state('purple', v("purple"), t("purple"))
 state('red', v("red"), t("red"))
+.state, .State
+  c fg("primary") 0 base(7)

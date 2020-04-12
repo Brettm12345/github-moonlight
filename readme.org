@@ -1,4 +1,4 @@
-# Created 2020-04-12 Sun 12:11
+# Created 2020-04-12 Sun 14:03
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+startup: nofold
@@ -86,6 +86,7 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Dashboard (with Refined GitHub)</summary><img src="screenshots/dashboard.png" alt="Dashboard (with Refined GitHub)" width="100%" /></details>
 #+html: <details><summary>Dashboard</summary><img src="screenshots/dashboard-vanilla.png" alt="Dashboard" width="100%" /></details>
 #+html: <details><summary>Pull Requests</summary><img src="screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
+#+html: <details><summary>Pull Request Review</summary><img src="screenshots/pull-requests-review.png" alt="Pull Request Review" width="100%" /></details>
 #+html: <details><summary>File Finder</summary><img src="screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
 #+html: <details><summary>Contribution Tree</summary><img src="screenshots/contributions.png" alt="Contribution Tree" width="100%" /></details>
 #+html: <details><summary>Markdown</summary><img src="screenshots/markdown.png" alt="Markdown" width="100%" /></details>

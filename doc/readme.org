@@ -83,6 +83,7 @@ These are the fonts used in the screenshots
 {{{screenshot(Dashboard (with Refined GitHub),dashboard)}}}
 {{{screenshot(Dashboard,dashboard-vanilla)}}}
 {{{screenshot(Pull Requests,pull-requests)}}}
+{{{screenshot(Pull Request Review,pull-requests-review)}}}
 {{{screenshot(File Finder,file-finder)}}}
 {{{screenshot(Contribution Tree,contributions)}}}
 {{{screenshot(Markdown,markdown)}}}

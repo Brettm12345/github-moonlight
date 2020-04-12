@@ -1060,6 +1060,12 @@
     background: url("/images/modules/site/patterns/dots-small.svg") var(--base-2) !important;
     background-blend-mode: color-burn;
   }
+  .bg-green .octicon {
+    color: var(--base-1) !important;
+  }
+  .bg-yellow-light {
+    color: var(--yellow) !important;
+  }
   g.bar {
     fill: var(--green) !important;
   }
@@ -3186,6 +3192,9 @@
   .pr-toolbar {
     background-color: var(--base-2) !important;
   }
+  .__better_github_pr_resizer {
+    background-color: var(--base-2) !important;
+  }
   .__better_github_pr,
   .__better_github_pr_dark_mode {
     color: var(--text-primary) !important;
@@ -4219,32 +4228,37 @@
     background-repeat: no-repeat !important;
     background-position: 50% 50% !important;
   }
-  .State--green {
+  .State.State--green {
     border: 1px solid var(--teal) !important;
     color: var(--teal) !important;
     border-color: var(--teal) !important;
     background-color: var(--teal-transparent) !important;
   }
-  .State--green .octicon {
+  .State.State--green .octicon {
     fill: var(--teal) !important;
   }
-  .State--purple {
+  .State.State--purple {
     border: 1px solid var(--purple) !important;
     color: var(--purple) !important;
     border-color: var(--purple) !important;
     background-color: var(--purple-transparent) !important;
   }
-  .State--purple .octicon {
+  .State.State--purple .octicon {
     fill: var(--purple) !important;
   }
-  .State--red {
+  .State.State--red {
     border: 1px solid var(--red) !important;
     color: var(--red) !important;
     border-color: var(--red) !important;
     background-color: var(--red-transparent) !important;
   }
-  .State--red .octicon {
+  .State.State--red .octicon {
     fill: var(--red) !important;
+  }
+  .state,
+  .State {
+    color: var(--text-primary) !important;
+    background-color: var(--base-7) !important;
   }
   .Subhead {
     border-color: var(--base-6) !important;
