@@ -1,15 +1,18 @@
 $commentDark = base(2)
 $commentBg = base(3)
 
-.review-comment:target
-  elevation 1
+.markdown-toolbar.Details
+  c 0 base(1)
+.pagination-loader-container
+  bgi url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E")
+  c 0 0 base(4)
 .discussion-
   &item-icon
     c fg("primary") base(5) base(7)
   &timeline-actions
     c 0 base(5) $t
     .js-new-comment-form .timeline-comment
-      c 0 0 base(4)
+      c 0 0 $commentBg
   &sidebar-
     &toggle .octicon
       c fg("faded")
@@ -51,7 +54,7 @@ timeline
     &comment
       c fg("primary") base(1) $commentBg
       /.composer.composer-responsive &
-        caret "right"
+        caret "right" base(2)
       /:target &
         shadow 0 0 0 0.2em base(1)
         &::before
@@ -67,17 +70,13 @@ timeline
           c fg("light")
       &--caret
         &, &.current-user
-          &::before, &::after
-            brc base(4)
-.markdown-toolbar.Details
-  c 0 base(1)
-.pagination-loader-container
-  bgi url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E")
-  c 0 0 base(4)
+          caret "right" $commentDark
 comment
   /.review-
     &^[0]
-      c fg("primary") base(1) base(4)
+      c fg("primary") base(1) $commentDark
+      &:target
+        elevation 1
     &thread-reply
       c 0 base(1) $commentBg
       .inline-^[0]-form
@@ -105,7 +104,7 @@ comment
       .user-has-reacted
         c 0 base(1) base(5)
       &.has-reactions
-        c 0 base(1) base(4)
+        c 0 base(1) $commentBg
 conversation-list
   .&-heading
     c fg("faded") base(6)
@@ -118,3 +117,15 @@ conversation-list
     c fg("faded")
     & > li
       c 0 base(6)
+button.reaction-summary-item
+  c 0 base(1)
+  img
+    c 0 0 $commentBg
+  a
+    c 0 0 $commentDark
+.js-reaction-option-item.border-gray-dark.bg-blue-light
+  c 0 base(1) base(7)
+  r 4px
+.timeline-comment
+  pre
+    c 0 0 $commentDark

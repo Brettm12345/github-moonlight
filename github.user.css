@@ -1491,8 +1491,12 @@
   .file-diff-split .blob-code + .file-diff-split .blob-num {
     border-color: var(--base-1) !important;
   }
-  .review-comment:target {
-    box-shadow: var(--elevation-1) !important;
+  .markdown-toolbar.Details {
+    border-color: var(--base-1) !important;
+  }
+  .pagination-loader-container {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E") !important;
+    background-color: var(--base-4) !important;
   }
   .discussion-item-icon {
     color: var(--text-primary) !important;
@@ -1504,7 +1508,7 @@
     background-color: transparent !important;
   }
   .discussion-timeline-actions .js-new-comment-form .timeline-comment {
-    background-color: var(--base-4) !important;
+    background-color: var(--base-3) !important;
   }
   .discussion-sidebar-toggle .octicon {
     color: var(--text-faded) !important;
@@ -1578,7 +1582,7 @@
     border-right-color: var(--base-1) !important;
   }
   .composer.composer-responsive .timeline-comment::after {
-    border-right-color: var(--base-4) !important;
+    border-right-color: var(--base-2) !important;
   }
   :target .timeline-comment {
     box-shadow: 0 0 0 0.2em var(--base-1) !important;
@@ -1604,22 +1608,20 @@
     color: var(--text-light) !important;
   }
   .timeline-comment--caret::before,
-  .timeline-comment--caret.current-user::before,
+  .timeline-comment--caret.current-user::before {
+    border-right-color: var(--base-1) !important;
+  }
   .timeline-comment--caret::after,
   .timeline-comment--caret.current-user::after {
-    border-right-color: var(--base-4) !important;
-  }
-  .markdown-toolbar.Details {
-    border-color: var(--base-1) !important;
-  }
-  .pagination-loader-container {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E") !important;
-    background-color: var(--base-4) !important;
+    border-right-color: var(--base-2) !important;
   }
   .review-comment {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
+    background-color: var(--base-2) !important;
+  }
+  .review-comment:target {
+    box-shadow: var(--elevation-1) !important;
   }
   .review-thread-reply {
     border-color: var(--base-1) !important;
@@ -1666,7 +1668,7 @@
   }
   .comment-reactions.has-reactions {
     border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
+    background-color: var(--base-3) !important;
   }
   .conversation-list-heading {
     color: var(--text-faded) !important;
@@ -1684,6 +1686,23 @@
   }
   .simple-conversation-list > li {
     border-color: var(--base-6) !important;
+  }
+  button.reaction-summary-item {
+    border-color: var(--base-1) !important;
+  }
+  button.reaction-summary-item img {
+    background-color: var(--base-3) !important;
+  }
+  button.reaction-summary-item a {
+    background-color: var(--base-2) !important;
+  }
+  .js-reaction-option-item.border-gray-dark.bg-blue-light {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-7) !important;
+    border-radius: 4px !important;
+  }
+  .timeline-comment pre {
+    background-color: var(--base-2) !important;
   }
   .dropdown-divider {
     border-color: var(--base-1) !important;
@@ -2626,7 +2645,7 @@
   .thread-subscription-status {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
-    background-color: transparent !important;
+    background-color: var(--base-2) !important;
   }
   div#network.network > div > canvas,
   img[alt="FOSSA Status"],
