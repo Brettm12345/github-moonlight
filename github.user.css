@@ -5403,28 +5403,29 @@
   .content {
     color: var(--text-primary) !important;
   }
-  .sidebar-menu {
-    color: var(--text-primary) !important;
-    border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
-  }
+  .sidebar-menu,
   .sidebar-menu h3,
   .sidebar-menu ul ul li {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
+  .sidebar-menu:hover,
   .sidebar-menu h3:hover,
   .sidebar-menu ul ul li:hover,
+  .sidebar-menu a:hover,
   .sidebar-menu h3 a:hover,
   .sidebar-menu ul ul li a:hover {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-8) !important;
+    background-color: var(--base-6) !important;
   }
-  .js-current .standalone a,
-  .sidebar-module .disable > a {
+  .js-current .standalone a {
     border-left-color: var(--blue) !important;
+    color: var(--text-light) !important;
+    background-color: var(--base-5) !important;
+  }
+  .sidebar-module .disable > a {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
@@ -5498,13 +5499,14 @@
     background-color: var(--base-5) !important;
   }
   .command-line em {
-    color: var(--yellow) !important;
+    color: var(--blue) !important;
+    text-decoration: underline !important;
   }
   .command-line span.comment {
     color: var(--indigo) !important;
   }
   .command-line span.output {
-    color: var(--teal) !important;
+    color: var(--text-gray) !important;
   }
   .content .sectionbody .dlist dt,
   .content .verseblock-content,
@@ -5521,28 +5523,6 @@
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
-  }
-  code .p {
-    color: var(--text-primary) !important;
-  }
-  code .nt {
-    color: var(--blue) !important;
-  }
-  code .s,
-  code .s2 {
-    color: var(--green) !important;
-  }
-  code .ni {
-    color: var(--cyan) !important;
-  }
-  code .na {
-    color: var(--red) !important;
-  }
-  code .mf,
-  code .mh,
-  code .mi,
-  code .mo {
-    color: var(--orange) !important;
   }
   .headlines > li {
     cursor: pointer;
@@ -5587,5 +5567,137 @@
   .site-header-nav .dropdown-menu a:hover {
     color: var(--text-light) !important;
     background-color: var(--base-3) !important;
+  }
+  code .bp {
+    color: var(--text-dark) !important;
+  }
+  code .c1 {
+    color: var(--indigo) !important;
+  }
+  code .c {
+    color: var(--indigo) !important;
+  }
+  code .cm {
+    color: var(--indigo) !important;
+  }
+  code .cp {
+    color: var(--indigo) !important;
+  }
+  code .cs {
+    color: var(--indigo) !important;
+  }
+  code .go {
+    color: var(--text-dark) !important;
+  }
+  code .gr {
+    color: var(--red) !important;
+  }
+  code .gt {
+    color: var(--red) !important;
+  }
+  code .gu {
+    color: var(--text-light) !important;
+  }
+  code .il {
+    color: var(--teal) !important;
+  }
+  code .kt {
+    color: var(--blue) !important;
+  }
+  code .m {
+    color: var(--green) !important;
+  }
+  code .mf {
+    color: var(--orange) !important;
+  }
+  code .mh {
+    color: var(--orange) !important;
+  }
+  code .mi {
+    color: var(--orange) !important;
+  }
+  code .mo {
+    color: var(--orange) !important;
+  }
+  code .kp {
+    color: var(--orange) !important;
+  }
+  code .na {
+    color: var(--purple) !important;
+  }
+  code .no {
+    color: var(--yellow) !important;
+  }
+  code .ni {
+    color: var(--cyan) !important;
+  }
+  code .nf {
+    color: var(--blue) !important;
+  }
+  code .nb {
+    color: var(--purple) !important;
+  }
+  code .k {
+    color: var(--purple) !important;
+  }
+  code .nc {
+    color: var(--yellow) !important;
+  }
+  code .nn {
+    color: var(--yellow) !important;
+  }
+  code .nt {
+    color: var(--red) !important;
+  }
+  code .o {
+    color: var(--cyan) !important;
+  }
+  code .p {
+    color: var(--text-dark) !important;
+  }
+  code .s {
+    color: var(--green) !important;
+  }
+  code .s1 {
+    color: var(--green) !important;
+  }
+  code .s2 {
+    color: var(--green) !important;
+  }
+  code .sb {
+    color: var(--green) !important;
+  }
+  code .sc {
+    color: var(--green) !important;
+  }
+  code .sd {
+    color: var(--green) !important;
+  }
+  code .se {
+    color: var(--green) !important;
+  }
+  code .sh {
+    color: var(--green) !important;
+  }
+  code .si {
+    color: var(--cyan) !important;
+  }
+  code .sx {
+    color: var(--green) !important;
+  }
+  code .sr {
+    color: var(--green) !important;
+  }
+  code .ss {
+    color: var(--purple) !important;
+  }
+  code .vc {
+    color: var(--pink) !important;
+  }
+  code .vg {
+    color: var(--pink) !important;
+  }
+  code .vi {
+    color: var(--pink) !important;
   }
 }
