@@ -2522,10 +2522,13 @@
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link) {
+  a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link) {
+    color: var(--text-primary);
+  }
+  a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link).link-gray:hover {
     color: var(--text-primary) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link):hover {
+  a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link):hover {
     color: var(--blue) !important;
   }
   .muted-link {
@@ -2625,11 +2628,11 @@
     color: var(--text-faded) !important;
   }
   .markdown-body a {
-    color: var(--text-secondary) !important;
-    text-decoration: underline !important;
+    color: var(--blue) !important;
   }
   .markdown-body a:hover {
-    color: var(--blue) !important;
+    color: var(--blue-light) !important;
+    text-decoration: underline !important;
   }
   .markdown-body .absent {
     color: var(--red) !important;
