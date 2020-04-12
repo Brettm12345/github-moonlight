@@ -1,0 +1,192 @@
+.lia-
+  /.default-menu-option
+    &:active,
+    &.lia-link-active:hover,
+    ^[0]common-dropdown-toggle:active,
+    ^[0]common-dropdown-toggle^[0]link-active
+      &:hover, &:focus
+        c 0 base(1) base(3)
+  &thread-reply &quilt-forum-message
+    c 0 base(6) base(3)
+  &accepted-solution &quilt-forum-message &quilt-row-footer
+    c 0 0 base(3)
+  &forum-topic-page-reply-count
+    c fg("light")
+  /.MessageListTaplet &panel-content > &list-standard > li
+    c 0 base(1)
+  &link-
+    &navigation.kudos-count-link&disabled
+      &, &:hover, &:focus
+        c fg("faded") 0 base(3)
+  /.user-navigation-settings-drop-down
+    & .dropdown-, &-inner > ^[0]list-standard ^[0], ^[0]menu-dropdown-items ^[0]
+      &separator
+        c 0 0 base(1)
+  &fa, &mentions-gte-v2-block &mentions-load-more-link::after
+    c fg("faded")
+  &link-ticket-post-action
+    c fg("primary") base(1) base(4)
+  &message-view-
+    &display .default-menu-option
+      c 0 0 base(5)
+    &blog-message&display ^[0]quilt-row-header ^[0]message-post-date
+      c fg("dark")
+  &button
+    &:not(input)&-primary, &:not(input)&-secondary, ^[0]quilt-post-page &wrapper-Submit-action &primary&secondary
+      bgi none
+      c fg("primary") $teal t("teal")
+      ease background-color, border-color, color
+      &:hover, &:focus
+        background-position 0
+        c base(1) 0 $teal
+  &quilt-
+    for $s in forum forum-message group-reply group-topic blog-topic-message blog-message blog-topic blog-reply idea-reply contest-reply tkb-reply media reviews
+      ^[0]message-view-{$s}
+        &, &-display
+          & ^[1]row-footer
+            c 0 base(1) base(2)
+      &forum-message ^[0]component-go-to-solution-link
+        c $teal $teal t("teal")
+    &blog-
+      &message
+        &, ^[2]topic-message
+          & > ^[1]row-header
+            c 0 base(1)
+      &message, &article-page, ^[0]message-view-forum-message
+        .kudos-link
+          c 0 base(1)
+        &, ^[1]blog-article-page, ^[0]message-view-forum-message
+          ^[0]button-image-kudos-count
+            c 0 base(1)
+            .kudos-count-link
+              c 0 0 base(3)
+  &panel,
+  &panel-message,
+  &message-view-display,
+  &tkb-article-summary-view,
+  &spoiler-container,
+  &top-quilt > &quilt-row-footer,
+  &tkb-content-finder &search-tag-filter
+    c 0 base(1) base(2)
+  &message-stats-label,
+  &count-label,
+  &recent-message-count-label
+    c fg("faded")
+  &data-cell-secondary &component-messages-column-
+    for $x in message-replies message-views thread-replies topic-views message-kudos contributors
+      &{$x}-count
+        c fg("faded")
+  &autocomplete-
+    &header
+      c fg("dark")
+    &content, &footer
+      &, &-inline
+        &, & > ul > li, /.user-navigation-settings-drop-down-inner > ^[0]list-standard
+          &, & .SearchToggleFieldFilter, & .type-filter-alternative
+            ease background-color
+            &:hover, &:focus, &.selected
+              c 0 0 base(3)
+  &autocomplete,
+  &autocomplete-container,
+  &menu-dropdown-items,
+  &common-dropdown-menu,
+  &token-input-dropdown,
+  &metadata-application-tool-panel,
+  &search-typeahead .dropdown-menu,
+  /.mce-tinymce-inline.mce-container,
+  /.ui-datepicker,
+  /.user-navigation-settings-drop-down-inner>&list-standard
+    c 0 base(1) base(3)
+    shadow none
+    & > ^[0]button-active > a
+      &:hover, &:focus
+        c 0 0 $blue
+    & > li a
+      c fg("primary")
+      ease color, background-color
+      &:hover, &:focus
+        c fg("light") 0 base(4)
+  &content
+    ^[0]form-
+      /input[type="text"],
+      /select,
+      /textarea,
+      &subject-input,
+      &tiny-mce-editor-input,
+      &type-text,
+      &input-wrapper ^[0]token-input-list,
+      ^[0]message-editor,
+      /.mce-edit-area.mce-panel,
+      /.mce-form .mce-textbox
+        c fg("primary") base(1) base(3)
+        caret-color $blue
+        ease border-color, color, background-color
+        &:hover, &:focus
+          c fg("light") $blue base(6)
+          shadow none
+  &list-
+    &wide tbody > tr > td
+      c 0 base(6)
+    &wide, &row
+      c 0 base(4) base(2)
+  &panel
+    b none
+    c 0 base(1)
+    &-content
+      c 0 0 base(2)
+  &quilt-row-
+    &main
+      ^[0]panel-heading-bar
+        c fg("primary") base(1) base(2)
+      &-header
+        c fg("primary") base(1) base(2)
+    &sub-header
+      c fg("primary") base(1) base(3)
+  &faq-section-title
+    ^[0]link-navigation
+      c fg("primary")
+      ease color
+      &::before
+        vc 0 $blue
+      &:hover
+        c $blue
+    c 0 base(1)
+  &component-
+    &author-rank
+      c fg("alt") base(1) base(5)
+    &faq-toggleable-contents
+      c 0 base(1) base(3)
+    &forms-widget-board-browser-list
+      /a, .board-title ^[0]link-navigation
+        c $blue
+      ^[0]browser-category-heading
+        c 0 base(1) base(2)
+        & > h2, & .board-count, & .category-title
+          c fg("light")
+    &quilt-
+      /body, ^[0]content &header
+        c fg("primary") base(1) base(2)
+      &community-hero
+        c 0 0 base(2)
+.gh-flash
+  c fg("primary") $blue t("blue")
+mark
+  c fg("primary") base(1) base(3)
+a[href="/"] img
+  filter invert(1)
+.kudos-link
+  bgi none
+  bg base(4)
+  c 0 base(1)
+  &::before
+    filter invert(1)
+.final-crumb span
+  c fg("light")
+pre
+  c fg("primary") base(1) base(2)
+font[color="#808000"]
+  c $yellow
+.custom-solution-mark .is-solution
+  bgi none
+  bg $teal
+  c base(1) 0 $teal

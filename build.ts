@@ -110,7 +110,7 @@ const userVariables = pipe(
             "Segoe UI Emoji"
           ].join(","),
           weight: "400",
-          size: "75%"
+          size: "14px"
         },
         {
           handleKey: k => `ui-font-${k}`
@@ -162,8 +162,7 @@ ${userVariables
   .join("\n")}
 @preprocessor uso
 ==/UserStyle== */
-@-moz-document domain('raw.githubusercontent.com'),
-regexp('https?://((developer|gist)\.)?github\.com/.*') {
+@-moz-document domain('githubusercontent.com'), regexp('https?://((developer|gist)\.)?github\.com/.*'), domain('github.community') {
   :root {
 ${userVariables.map(([_, k]) => `--${k}: /*[[${k}]]*/;`).join("\n")}
   }

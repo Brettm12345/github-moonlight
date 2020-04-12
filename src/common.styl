@@ -1,0 +1,29 @@
+::selection
+  b selection('border')
+  c selection('fg') 0 selection('bg')
+::placeholder
+  c fg("placeholder")
+body
+  c fg("primary") 0 base(2)
+  lh 1.8
+  set-font "ui"
+h1, h2, h3, h4, h5
+  c fg("primary")
+mark
+  c $yellow
+kbd
+  c fg("primary") base(1) base(2)
+  fs 14px
+  set-font "mono"
+  shadow inset 0 -1px 0 base(1)
+legend
+  fs 0.9em
+  fw 600
+fieldset
+  b $b
+  m 0
+  mb 6px
+  p 10px
+  r 6px
+hr
+  bb $b

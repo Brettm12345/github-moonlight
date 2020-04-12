@@ -1,10 +1,12 @@
-@require "./src/easings"
-@require "./src/mixins"
-@require "./src/css-variables"
-
-@-moz-document domain('github.com'), domain('raw.githubusercontent.com')
-  @require './src'
-@-moz-document domain('gist.github.com')
-  @require './src/gist'
-@-moz-document domain('developer.github.com')
-  @require './src/developer'
+@-moz-document regexp(".*github.*")
+  @require "./src/easings"
+  @require "./src/mixins"
+  @require "./src/css-variables"
+  @require "./src/common"
+  @require "./src"
+@-moz-document domain("github.community")
+  @require "./src/community"
+@-moz-document domain("gist.github.com")
+  @require "./src/gist"
+@-moz-document domain("developer.github.com")
+  @require "./src/developer"

@@ -59,7 +59,7 @@
 @var color base-8 "Base 8" #383e5c
 @var color base-9 "Base 9" #444a73
 @var text ui-font-family "Ui Font Family" 'Inter V','Inter',sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji
-@var text ui-font-size "Ui Font Size" 75%
+@var text ui-font-size "Ui Font Size" 14px
 @var text ui-font-weight "Ui Font Weight" 400
 @var text mono-font-family "Mono Font Family" monospace
 @var text mono-font-size "Mono Font Size" 100%
@@ -71,8 +71,7 @@
 @var text elevation-2 "Elevation 2" 0 4px 8px 0 rgba(0, 0, 0, 0.4)
 @preprocessor uso
 ==/UserStyle== */
-@-moz-document domain('raw.githubusercontent.com'),
-regexp('https?://((developer|gist).)?github.com/.*') {
+@-moz-document domain('githubusercontent.com'), regexp('https?://((developer|gist).)?github.com/.*'), domain('github.community') {
   :root {
 --blue: /*[[blue]]*/;
 --blue-dark: /*[[blue-dark]]*/;
@@ -136,7 +135,57 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
 }
 
-@-moz-document domain('github.com'), domain('raw.githubusercontent.com') {
+@-moz-document regexp(".*github.*") {
+  ::selection {
+    border: var(--selection-border) !important;
+    color: var(--selection-fg) !important;
+    background-color: var(--selection-bg) !important;
+  }
+  ::placeholder {
+    color: var(--text-placeholder) !important;
+  }
+  body {
+    color: var(--text-primary) !important;
+    background-color: var(--base-2) !important;
+    line-height: 1.8 !important;
+    font-family: var(--ui-font-family) !important;
+    font-weight: var(--ui-font-weight) !important;
+    font-size: var(--ui-font-size) !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--text-primary) !important;
+  }
+  mark {
+    color: var(--yellow) !important;
+  }
+  kbd {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+    font-size: 14px !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
+    box-shadow: inset 0 -1px 0 var(--base-1) !important;
+  }
+  legend {
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+  }
+  fieldset {
+    border: 1px solid var(--base-1) !important;
+    margin: 0 !important;
+    margin-bottom: 6px !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+  }
+  hr {
+    border-bottom: 1px solid var(--base-1) !important;
+  }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
@@ -237,6 +286,33 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .SelectMenu-item,
   .select-menu-item,
   .topic-tag,
+  .lia-autocomplete-content,
+  .lia-autocomplete-footer,
+  .lia-autocomplete-content-inline,
+  .lia-autocomplete-footer-inline,
+  .lia-autocomplete-content > ul > li,
+  .lia-autocomplete-footer > ul > li,
+  .lia-autocomplete-content-inline > ul > li,
+  .lia-autocomplete-footer-inline > ul > li,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard,
+  .lia-autocomplete-content .SearchToggleFieldFilter,
+  .lia-autocomplete-footer .SearchToggleFieldFilter,
+  .lia-autocomplete-content-inline .SearchToggleFieldFilter,
+  .lia-autocomplete-footer-inline .SearchToggleFieldFilter,
+  .lia-autocomplete-content > ul > li .SearchToggleFieldFilter,
+  .lia-autocomplete-footer > ul > li .SearchToggleFieldFilter,
+  .lia-autocomplete-content-inline > ul > li .SearchToggleFieldFilter,
+  .lia-autocomplete-footer-inline > ul > li .SearchToggleFieldFilter,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .SearchToggleFieldFilter,
+  .lia-autocomplete-content .type-filter-alternative,
+  .lia-autocomplete-footer .type-filter-alternative,
+  .lia-autocomplete-content-inline .type-filter-alternative,
+  .lia-autocomplete-footer-inline .type-filter-alternative,
+  .lia-autocomplete-content > ul > li .type-filter-alternative,
+  .lia-autocomplete-footer > ul > li .type-filter-alternative,
+  .lia-autocomplete-content-inline > ul > li .type-filter-alternative,
+  .lia-autocomplete-footer-inline > ul > li .type-filter-alternative,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .type-filter-alternative,
   .CodeMirror-hint {
     transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
@@ -867,7 +943,8 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   #readme .Box-header .octicon-pencil,
   .select-menu-action,
   .toolbar-item,
-  .toolbar-item .menu-target {
+  .toolbar-item .menu-target,
+  .lia-link-navigation {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .previewable-comment-form .comment-form-head.tabnav .tabnav-tab:hover {
@@ -2041,7 +2118,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .menu-item {
     border-bottom: 1px solid var(--base-1) !important;
   }
-  .menu-item {
+  .menu-item,
+  .lia-button:not(input).lia-button-primary,
+  .lia-button:not(input).lia-button-secondary,
+  .lia-quilt-post-page .lia-buttonwrapper-Submit-action .lia-buttonprimary.lia-buttonsecondary {
     transition: background-color, border-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .menu-item:hover {
@@ -2284,7 +2364,17 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .ajax-pagination-form:not(.js-more-repos-form) .ajax-pagination-btn,
-  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item {
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item,
+  .lia-autocomplete > li a,
+  .lia-autocomplete-container > li a,
+  .lia-menu-dropdown-items > li a,
+  .lia-common-dropdown-menu > li a,
+  .lia-token-input-dropdown > li a,
+  .lia-metadata-application-tool-panel > li a,
+  .lia-search-typeahead .dropdown-menu > li a,
+  .mce-tinymce-inline.mce-container > li a,
+  .ui-datepicker > li a,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard > li a {
     transition: color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .ajax-pagination-form:not(.js-more-repos-form) .ajax-pagination-btn:hover,
@@ -3967,58 +4057,576 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .js-notice {
     background-color: var(--base-4) !important;
   }
-  ::selection {
-    border: var(--selection-border) !important;
-    color: var(--selection-fg) !important;
-    background-color: var(--selection-bg) !important;
+}
+@-moz-document domain("github.community") {
+  .default-menu-option:active:hover,
+  .default-menu-option.lia-link-active:hover:hover,
+  .lia-common-dropdown-toggle:active:hover,
+  .lia-common-dropdown-toggle.lia-link-active:hover,
+  .default-menu-option:active:focus,
+  .default-menu-option.lia-link-active:hover:focus,
+  .lia-common-dropdown-toggle:active:focus,
+  .lia-common-dropdown-toggle.lia-link-active:focus {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
   }
-  ::placeholder {
-    color: var(--text-placeholder) !important;
+  .lia-thread-reply .lia-quilt-forum-message {
+    border-color: var(--base-6) !important;
+    background-color: var(--base-3) !important;
   }
-  body {
+  .lia-accepted-solution .lia-quilt-forum-message .lia-quilt-row-footer {
+    background-color: var(--base-3) !important;
+  }
+  .lia-forum-topic-page-reply-count {
+    color: var(--text-light) !important;
+  }
+  .MessageListTaplet .lia-panel-content > .lia-list-standard > li {
+    border-color: var(--base-1) !important;
+  }
+  .lia-link-navigation.kudos-count-link.lia-link-disabled,
+  .lia-link-navigation.kudos-count-link.lia-link-disabled:hover,
+  .lia-link-navigation.kudos-count-link.lia-link-disabled:focus {
+    color: var(--text-faded) !important;
+    background-color: var(--base-3) !important;
+  }
+  .user-navigation-settings-drop-down .dropdown-separator,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .lia-separator,
+  .lia-menu-dropdown-items .lia-separator {
+    background-color: var(--base-1) !important;
+  }
+  .lia-fa,
+  .lia-mentions-gte-v2-block .lia-mentions-load-more-link::after {
+    color: var(--text-faded) !important;
+  }
+  .lia-link-ticket-post-action {
     color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-4) !important;
+  }
+  .lia-message-view-display .default-menu-option {
+    background-color: var(--base-5) !important;
+  }
+  .lia-message-view-blog-message.lia-message-view-display .lia-quilt-row-header .lia-message-post-date {
+    color: var(--text-dark) !important;
+  }
+  .lia-button:not(input).lia-button-primary,
+  .lia-button:not(input).lia-button-secondary,
+  .lia-quilt-post-page .lia-buttonwrapper-Submit-action .lia-buttonprimary.lia-buttonsecondary {
+    background-image: none !important;
+    color: var(--text-primary) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-button:not(input).lia-button-primary:hover,
+  .lia-button:not(input).lia-button-secondary:hover,
+  .lia-quilt-post-page .lia-buttonwrapper-Submit-action .lia-buttonprimary.lia-buttonsecondary:hover,
+  .lia-button:not(input).lia-button-primary:focus,
+  .lia-button:not(input).lia-button-secondary:focus,
+  .lia-quilt-post-page .lia-buttonwrapper-Submit-action .lia-buttonprimary.lia-buttonsecondary:focus {
+    background-position: 0;
+    color: var(--base-1) !important;
+    background-color: var(--teal) !important;
+  }
+  .lia-message-view-forum .lia-quilt-row-footer,
+  .lia-message-view-forum-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
-    line-height: 1.8 !important;
-    font-family: var(--ui-font-family) !important;
-    font-weight: var(--ui-font-weight) !important;
-    font-size: var(--ui-font-size) !important;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-forum-message .lia-quilt-row-footer,
+  .lia-message-view-forum-message-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-group-reply .lia-quilt-row-footer,
+  .lia-message-view-group-reply-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-group-topic .lia-quilt-row-footer,
+  .lia-message-view-group-topic-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-blog-topic-message .lia-quilt-row-footer,
+  .lia-message-view-blog-topic-message-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-blog-message .lia-quilt-row-footer,
+  .lia-message-view-blog-message-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-blog-topic .lia-quilt-row-footer,
+  .lia-message-view-blog-topic-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-blog-reply .lia-quilt-row-footer,
+  .lia-message-view-blog-reply-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-idea-reply .lia-quilt-row-footer,
+  .lia-message-view-idea-reply-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-contest-reply .lia-quilt-row-footer,
+  .lia-message-view-contest-reply-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-tkb-reply .lia-quilt-row-footer,
+  .lia-message-view-tkb-reply-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-media .lia-quilt-row-footer,
+  .lia-message-view-media-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-message-view-reviews .lia-quilt-row-footer,
+  .lia-message-view-reviews-display .lia-quilt-row-footer {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-quilt-forum-message .lia-component-go-to-solution-link {
+    color: var(--teal) !important;
+    border-color: var(--teal) !important;
+    background-color: var(--teal-transparent) !important;
+  }
+  .lia-quilt-blog-message > .lia-quilt-row-header,
+  .lia-quilt-blog-topic-message > .lia-quilt-row-header {
+    border-color: var(--base-1) !important;
+  }
+  .lia-quilt-blog-message .kudos-link,
+  .lia-quilt-blog-article-page .kudos-link,
+  .lia-message-view-forum-message .kudos-link {
+    border-color: var(--base-1) !important;
+  }
+  .lia-button-image-kudos-count {
+    border-color: var(--base-1) !important;
+  }
+  .lia-button-image-kudos-count .kudos-count-link {
+    background-color: var(--base-3) !important;
+  }
+  .lia-panel,
+  .lia-panel-message,
+  .lia-message-view-display,
+  .lia-tkb-article-summary-view,
+  .lia-spoiler-container,
+  .lia-top-quilt > .lia-quilt-row-footer,
+  .lia-tkb-content-finder .lia-search-tag-filter {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-message-stats-label,
+  .lia-count-label,
+  .lia-recent-message-count-label {
+    color: var(--text-faded) !important;
+  }
+  .lia-data-cell-secondary .lia-component-messages-column-message-replies-count {
+    color: var(--text-faded) !important;
+  }
+  .lia-data-cell-secondary .lia-component-messages-column-message-views-count {
+    color: var(--text-faded) !important;
+  }
+  .lia-data-cell-secondary .lia-component-messages-column-thread-replies-count {
+    color: var(--text-faded) !important;
+  }
+  .lia-data-cell-secondary .lia-component-messages-column-topic-views-count {
+    color: var(--text-faded) !important;
+  }
+  .lia-data-cell-secondary .lia-component-messages-column-message-kudos-count {
+    color: var(--text-faded) !important;
+  }
+  .lia-data-cell-secondary .lia-component-messages-column-contributors-count {
+    color: var(--text-faded) !important;
+  }
+  .lia-autocomplete-header {
+    color: var(--text-dark) !important;
+  }
+  .lia-autocomplete-content:hover,
+  .lia-autocomplete-footer:hover,
+  .lia-autocomplete-content-inline:hover,
+  .lia-autocomplete-footer-inline:hover,
+  .lia-autocomplete-content > ul > li:hover,
+  .lia-autocomplete-footer > ul > li:hover,
+  .lia-autocomplete-content-inline > ul > li:hover,
+  .lia-autocomplete-footer-inline > ul > li:hover,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard:hover,
+  .lia-autocomplete-content .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-footer .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-content-inline .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-footer-inline .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-content > ul > li .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-footer > ul > li .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-content-inline > ul > li .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-footer-inline > ul > li .SearchToggleFieldFilter:hover,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .SearchToggleFieldFilter:hover,
+  .lia-autocomplete-content .type-filter-alternative:hover,
+  .lia-autocomplete-footer .type-filter-alternative:hover,
+  .lia-autocomplete-content-inline .type-filter-alternative:hover,
+  .lia-autocomplete-footer-inline .type-filter-alternative:hover,
+  .lia-autocomplete-content > ul > li .type-filter-alternative:hover,
+  .lia-autocomplete-footer > ul > li .type-filter-alternative:hover,
+  .lia-autocomplete-content-inline > ul > li .type-filter-alternative:hover,
+  .lia-autocomplete-footer-inline > ul > li .type-filter-alternative:hover,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .type-filter-alternative:hover,
+  .lia-autocomplete-content:focus,
+  .lia-autocomplete-footer:focus,
+  .lia-autocomplete-content-inline:focus,
+  .lia-autocomplete-footer-inline:focus,
+  .lia-autocomplete-content > ul > li:focus,
+  .lia-autocomplete-footer > ul > li:focus,
+  .lia-autocomplete-content-inline > ul > li:focus,
+  .lia-autocomplete-footer-inline > ul > li:focus,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard:focus,
+  .lia-autocomplete-content .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-footer .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-content-inline .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-footer-inline .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-content > ul > li .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-footer > ul > li .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-content-inline > ul > li .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-footer-inline > ul > li .SearchToggleFieldFilter:focus,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .SearchToggleFieldFilter:focus,
+  .lia-autocomplete-content .type-filter-alternative:focus,
+  .lia-autocomplete-footer .type-filter-alternative:focus,
+  .lia-autocomplete-content-inline .type-filter-alternative:focus,
+  .lia-autocomplete-footer-inline .type-filter-alternative:focus,
+  .lia-autocomplete-content > ul > li .type-filter-alternative:focus,
+  .lia-autocomplete-footer > ul > li .type-filter-alternative:focus,
+  .lia-autocomplete-content-inline > ul > li .type-filter-alternative:focus,
+  .lia-autocomplete-footer-inline > ul > li .type-filter-alternative:focus,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .type-filter-alternative:focus,
+  .lia-autocomplete-content.selected,
+  .lia-autocomplete-footer.selected,
+  .lia-autocomplete-content-inline.selected,
+  .lia-autocomplete-footer-inline.selected,
+  .lia-autocomplete-content > ul > li.selected,
+  .lia-autocomplete-footer > ul > li.selected,
+  .lia-autocomplete-content-inline > ul > li.selected,
+  .lia-autocomplete-footer-inline > ul > li.selected,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard.selected,
+  .lia-autocomplete-content .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-footer .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-content-inline .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-footer-inline .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-content > ul > li .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-footer > ul > li .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-content-inline > ul > li .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-footer-inline > ul > li .SearchToggleFieldFilter.selected,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .SearchToggleFieldFilter.selected,
+  .lia-autocomplete-content .type-filter-alternative.selected,
+  .lia-autocomplete-footer .type-filter-alternative.selected,
+  .lia-autocomplete-content-inline .type-filter-alternative.selected,
+  .lia-autocomplete-footer-inline .type-filter-alternative.selected,
+  .lia-autocomplete-content > ul > li .type-filter-alternative.selected,
+  .lia-autocomplete-footer > ul > li .type-filter-alternative.selected,
+  .lia-autocomplete-content-inline > ul > li .type-filter-alternative.selected,
+  .lia-autocomplete-footer-inline > ul > li .type-filter-alternative.selected,
+  .user-navigation-settings-drop-down-inner > .lia-list-standard .type-filter-alternative.selected {
+    background-color: var(--base-3) !important;
+  }
+  .lia-autocomplete,
+  .lia-autocomplete-container,
+  .lia-menu-dropdown-items,
+  .lia-common-dropdown-menu,
+  .lia-token-input-dropdown,
+  .lia-metadata-application-tool-panel,
+  .lia-search-typeahead .dropdown-menu,
+  .mce-tinymce-inline.mce-container,
+  .ui-datepicker,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+    box-shadow: none !important;
+  }
+  .lia-autocomplete > .lia-button-active > a:hover,
+  .lia-autocomplete-container > .lia-button-active > a:hover,
+  .lia-menu-dropdown-items > .lia-button-active > a:hover,
+  .lia-common-dropdown-menu > .lia-button-active > a:hover,
+  .lia-token-input-dropdown > .lia-button-active > a:hover,
+  .lia-metadata-application-tool-panel > .lia-button-active > a:hover,
+  .lia-search-typeahead .dropdown-menu > .lia-button-active > a:hover,
+  .mce-tinymce-inline.mce-container > .lia-button-active > a:hover,
+  .ui-datepicker > .lia-button-active > a:hover,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard > .lia-button-active > a:hover,
+  .lia-autocomplete > .lia-button-active > a:focus,
+  .lia-autocomplete-container > .lia-button-active > a:focus,
+  .lia-menu-dropdown-items > .lia-button-active > a:focus,
+  .lia-common-dropdown-menu > .lia-button-active > a:focus,
+  .lia-token-input-dropdown > .lia-button-active > a:focus,
+  .lia-metadata-application-tool-panel > .lia-button-active > a:focus,
+  .lia-search-typeahead .dropdown-menu > .lia-button-active > a:focus,
+  .mce-tinymce-inline.mce-container > .lia-button-active > a:focus,
+  .ui-datepicker > .lia-button-active > a:focus,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard > .lia-button-active > a:focus {
+    background-color: var(--blue) !important;
+  }
+  .lia-autocomplete > li a,
+  .lia-autocomplete-container > li a,
+  .lia-menu-dropdown-items > li a,
+  .lia-common-dropdown-menu > li a,
+  .lia-token-input-dropdown > li a,
+  .lia-metadata-application-tool-panel > li a,
+  .lia-search-typeahead .dropdown-menu > li a,
+  .mce-tinymce-inline.mce-container > li a,
+  .ui-datepicker > li a,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard > li a {
     color: var(--text-primary) !important;
   }
-  mark {
-    color: var(--yellow) !important;
+  .lia-autocomplete > li a:hover,
+  .lia-autocomplete-container > li a:hover,
+  .lia-menu-dropdown-items > li a:hover,
+  .lia-common-dropdown-menu > li a:hover,
+  .lia-token-input-dropdown > li a:hover,
+  .lia-metadata-application-tool-panel > li a:hover,
+  .lia-search-typeahead .dropdown-menu > li a:hover,
+  .mce-tinymce-inline.mce-container > li a:hover,
+  .ui-datepicker > li a:hover,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard > li a:hover,
+  .lia-autocomplete > li a:focus,
+  .lia-autocomplete-container > li a:focus,
+  .lia-menu-dropdown-items > li a:focus,
+  .lia-common-dropdown-menu > li a:focus,
+  .lia-token-input-dropdown > li a:focus,
+  .lia-metadata-application-tool-panel > li a:focus,
+  .lia-search-typeahead .dropdown-menu > li a:focus,
+  .mce-tinymce-inline.mce-container > li a:focus,
+  .ui-datepicker > li a:focus,
+  .user-navigation-settings-drop-down-inner>.lia-list-standard > li a:focus {
+    color: var(--text-light) !important;
+    background-color: var(--base-4) !important;
   }
-  kbd {
+  input[type="text"],
+  select,
+  textarea,
+  .lia-form-subject-input,
+  .lia-form-tiny-mce-editor-input,
+  .lia-form-type-text,
+  .lia-form-input-wrapper .lia-token-input-list,
+  .lia-message-editor,
+  .mce-edit-area.mce-panel,
+  .mce-form .mce-textbox {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+    caret-color: var(--blue);
+  }
+  input[type="text"],
+  select,
+  textarea,
+  .lia-form-subject-input,
+  .lia-form-tiny-mce-editor-input,
+  .lia-form-type-text,
+  .lia-form-input-wrapper .lia-token-input-list,
+  .lia-message-editor,
+  .mce-edit-area.mce-panel,
+  .mce-form .mce-textbox {
+    transition: border-color, color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  input[type="text"]:hover,
+  select:hover,
+  textarea:hover,
+  .lia-form-subject-input:hover,
+  .lia-form-tiny-mce-editor-input:hover,
+  .lia-form-type-text:hover,
+  .lia-form-input-wrapper .lia-token-input-list:hover,
+  .lia-message-editor:hover,
+  .mce-edit-area.mce-panel:hover,
+  .mce-form .mce-textbox:hover,
+  input[type="text"]:focus,
+  select:focus,
+  textarea:focus,
+  .lia-form-subject-input:focus,
+  .lia-form-tiny-mce-editor-input:focus,
+  .lia-form-type-text:focus,
+  .lia-form-input-wrapper .lia-token-input-list:focus,
+  .lia-message-editor:focus,
+  .mce-edit-area.mce-panel:focus,
+  .mce-form .mce-textbox:focus {
+    color: var(--text-light) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--base-6) !important;
+    box-shadow: none !important;
+  }
+  .lia-list-wide tbody > tr > td {
+    border-color: var(--base-6) !important;
+  }
+  .lia-list-wide,
+  .lia-list-row {
+    border-color: var(--base-4) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-panel {
+    border: none !important;
+    border-color: var(--base-1) !important;
+  }
+  .lia-panel-content {
+    background-color: var(--base-2) !important;
+  }
+  .lia-panel-heading-bar {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
-    font-size: 14px !important;
-    font-family: var(--mono-font-family) !important;
-    font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
-    box-shadow: inset 0 -1px 0 var(--base-1) !important;
   }
-  legend {
-    font-size: 0.9em !important;
-    font-weight: 600 !important;
+  .lia-quilt-row-main-header {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
   }
-  fieldset {
-    border: 1px solid var(--base-1) !important;
-    margin: 0 !important;
-    margin-bottom: 6px !important;
-    padding: 10px !important;
-    border-radius: 6px !important;
+  .lia-quilt-row-sub-header {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
   }
-  hr {
-    border-bottom: 1px solid var(--base-1) !important;
+  .lia-faq-section-title {
+    border-color: var(--base-1) !important;
+  }
+  .lia-link-navigation {
+    color: var(--text-primary) !important;
+  }
+  .lia-link-navigation::before {
+    stroke: var(--blue) !important;
+  }
+  .lia-link-navigation:hover {
+    color: var(--blue) !important;
+  }
+  .lia-component-author-rank {
+    color: var(--text-alt) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-5) !important;
+  }
+  .lia-component-faq-toggleable-contents {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  a,
+  .board-title .lia-link-navigation {
+    color: var(--blue) !important;
+  }
+  .lia-browser-category-heading {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-browser-category-heading > h2,
+  .lia-browser-category-heading .board-count,
+  .lia-browser-category-heading .category-title {
+    color: var(--text-light) !important;
+  }
+  body,
+  .lia-content .lia-component-quilt-header {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .lia-component-quilt-community-hero {
+    background-color: var(--base-2) !important;
+  }
+  .gh-flash {
+    color: var(--text-primary) !important;
+    border-color: var(--blue) !important;
+    background-color: var(--blue-transparent) !important;
+  }
+  mark {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  a[href="/"] img {
+    filter: invert(1);
+  }
+  .kudos-link {
+    background-image: none !important;
+    background: var(--base-4) !important;
+    border-color: var(--base-1) !important;
+  }
+  .kudos-link::before {
+    filter: invert(1);
+  }
+  .final-crumb span {
+    color: var(--text-light) !important;
+  }
+  pre {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  font[color="#808000"] {
+    color: var(--yellow) !important;
+  }
+  .custom-solution-mark .is-solution {
+    background-image: none !important;
+    background: var(--teal) !important;
+    color: var(--base-1) !important;
+    background-color: var(--teal) !important;
   }
 }
-@-moz-document domain('gist.github.com') {
+@-moz-document domain("gist.github.com") {
   .js-gist-file-update-container.js-task-list-container.file-box {
     background-color: var(--base-5) !important;
   }
@@ -4045,7 +4653,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
 }
-@-moz-document domain('developer.github.com') {
+@-moz-document domain("developer.github.com") {
   iframe#graphiql,
   iframe#graphiql .graphiql-ide {
     border-color: var(--base-1) !important;
