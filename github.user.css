@@ -1765,6 +1765,9 @@
   .donut-chart .failure {
     fill: var(--red) !important;
   }
+  img[src*="octocat-spinner-64.gif"] {
+    filter: invert(1);
+  }
   .graph-filter .info {
     color: var(--text-primary) !important;
   }
@@ -2009,9 +2012,11 @@
   .markdown-body .csv-data th {
     border-color: var(--base-4) !important;
   }
-  .markdown-body code,
   .markdown-body tt {
     border: 1px solid var(--base-1) !important;
+  }
+  .markdown-body code,
+  .markdown-body tt {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-7) !important;
@@ -2082,12 +2087,18 @@
     border-color: var(--blue) !important;
     background-color: var(--base-8) !important;
   }
+  .markdown-body .clippy-wrapper .clippy .icon {
+    filter: invert(1);
+  }
   .marketplace-plan-emphasis {
     color: var(--text-gray) !important;
   }
   .MarketplaceBackground-buffer {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
+  }
+  .MarketplaceBackground-reccomendations img {
+    filter: invert(1);
   }
   .MarketplacePlan--sticky div.bg-white {
     border: 1px solid var(--base-1) !important;
@@ -2807,6 +2818,9 @@
   }
   #first-time-contributor .Popover-message::after {
     border-right-color: var(--base-4) !important;
+  }
+  .github-jobs-logo strong {
+    filter: invert(1);
   }
   .pinned-item-list-item .pinned-item-handle,
   .pinned-item-name {
