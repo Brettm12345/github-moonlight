@@ -198,7 +198,6 @@
   .CheckStep-line {
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   .CheckStep-line-number {
     color: var(--indigo) !important;
@@ -498,9 +497,9 @@
   .blob-code-inner {
     color: var(--text-primary) !important;
     line-height: 1.8 !important;
+    font-size: var(--mono-font-size) !important;
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted {
@@ -739,6 +738,12 @@
   .branch-action-item-icon.completeness-indicator-problem {
     color: var(--base-1) !important;
     background-color: var(--yellow) !important;
+  }
+  .branch-action-state-dirty .branch-action-icon {
+    background-color: var(--red) !important;
+  }
+  .branch-action-state-dirty .branch-action-icon .octicon {
+    fill: var(--base-1) !important;
   }
   .branch-action-state-clean .branch-action-icon {
     background-color: var(--teal) !important;
@@ -1010,7 +1015,7 @@
     background-color: var(--base-2) !important;
   }
   .bg-white {
-    background-color: rgba(255,255,255,0.018) !important;
+    background-color: rgba(255,255,255,0.005) !important;
   }
   .border-top {
     border-top: 1px solid var(--base-5) !important;
@@ -1102,7 +1107,6 @@
     background-color: var(--base-2) !important;
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   .commit-ref .user {
     color: var(--blue) !important;
@@ -1258,7 +1262,6 @@
     line-height: 1.8 !important;
     font-family: var(--ui-font-family) !important;
     font-weight: var(--ui-font-weight) !important;
-    font-size: var(--ui-font-size) !important;
   }
   h1,
   h2,
@@ -1277,7 +1280,6 @@
     font-size: 14px !important;
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
     box-shadow: inset 0 -1px 0 var(--base-1) !important;
   }
   legend {
@@ -1500,7 +1502,10 @@
   }
   .pagination-loader-container {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E") !important;
-    background-color: var(--base-4) !important;
+    background-color: transparent !important;
+  }
+  .discussion-item-header {
+    color: var(--text-dark) !important;
   }
   .discussion-item-icon {
     color: var(--text-primary) !important;
@@ -1619,6 +1624,13 @@
   .timeline-comment--caret.current-user::after {
     border-right-color: var(--base-2) !important;
   }
+  .comment-body .bg-gray-light {
+    background-color: var(--base-3) !important;
+  }
+  .comment-body .blob-code,
+  .comment-body .blob-num {
+    background-color: var(--base-2) !important;
+  }
   .review-comment {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
@@ -1629,6 +1641,9 @@
   }
   .review-thread-reply {
     border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .review-thread-reply .form-control {
     background-color: var(--base-3) !important;
   }
   .inline-comment-form {
@@ -2470,7 +2485,6 @@
   code .link-gray {
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name) {
     color: var(--text-primary) !important;
@@ -2530,6 +2544,8 @@
   }
   .markdown-body {
     line-height: 1.9 !important;
+    font-family: var(--ui-font-family) !important;
+    font-weight: var(--ui-font-weight) !important;
   }
   .markdown-body details[open=""] summary {
     border-bottom: 1px solid var(--base-7) !important;
@@ -2628,9 +2644,9 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-7) !important;
     margin: 0.4em !important;
+    font-size: var(--mono-font-size) !important;
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   .markdown-body h6 {
     color: var(--text-faded) !important;
@@ -2669,7 +2685,6 @@
     background-color: var(--base-3) !important;
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   .markdown-body span.frame > span {
     border-color: var(--base-1) !important;
@@ -2679,6 +2694,7 @@
   }
   .markdown-body blockquote {
     background: linear-gradient(to right, var(--base-6), var(--base-3)) !important;
+    color: var(--text-secondary) !important;
     border-color: var(--base-7) !important;
     background-color: var(--base-5) !important;
   }
@@ -3402,10 +3418,6 @@
   .hide-files-btn:hover,
   .hide-files-btn:focus {
     color: var(--blue) !important;
-  }
-  .thread-subscription-status {
-    border-color: var(--base-6) !important;
-    background-color: var(--base-3) !important;
   }
   button.reaction-summary-item {
     border-color: var(--base-1) !important;
@@ -4336,7 +4348,6 @@
   tt {
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
-    font-size: var(--mono-font-size) !important;
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
@@ -4558,7 +4569,7 @@
   .tabnav-tab[aria-current] {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-5) !important;
+    background-color: var(--base-3) !important;
     border-bottom-color: transparent !important;
   }
   .tabnav--responsive .tabnav-tab.selected.js-blob-edit-code,
@@ -4575,7 +4586,7 @@
   .tabnav-tab[aria-current].js-blob-edit-preview {
     color: var(--blue) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-5) !important;
+    background-color: var(--base-3) !important;
   }
   .team-discussions .UnderlineNav {
     border: 1px solid var(--base-1) !important;

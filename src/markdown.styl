@@ -1,5 +1,6 @@
 .markdown-body
   lh 1.9
+  set-font "ui"
   details[open=""] summary
     bb 1px solid base(7)
     my 16px
@@ -60,6 +61,7 @@
   code, tt
     c fg("light") base(1) base(7)
     m 0.4em
+    fs font("mono", "size")
     set-font "mono"
   h6
     c fg("faded")
@@ -83,7 +85,7 @@
       c fg("secondary")
   blockquote
     bg linear-gradient(to right, base(6), base(3))
-    c 0 base(7) base(5)
+    c fg("secondary") base(7) base(5)
     p
       c fg("dark")
   .clippy-wrapper .clippy
