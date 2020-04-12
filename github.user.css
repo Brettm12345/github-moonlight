@@ -228,7 +228,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .summary-stats li > .num,
   .summary-stats li > a,
   .js-selected-navigation-item.subnav-item,
-  .js-issue-row,
+  .js-selected-navigation-item .js-issue-row,
   .ScreenshotCarousel-navitem,
   .notifications-list-item:hover .notification-list-item-actions .btn,
   .notifications-list-item:focus .notification-list-item-actions .btn,
@@ -1108,6 +1108,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-6) !important;
   }
+  .dashboard :not(code) .Box {
+    background-color: var(--base-3) !important;
+  }
   .dashboard .ajax-pagination-form {
     border: none !important;
   }
@@ -1116,19 +1119,18 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-top: 1px solid var(--base-1) !important;
   }
   .dashboard .js-all-activity-header + div {
-    border: 1px solid var(--base-1) !important;
-    border-radius: 6px !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+  }
+  .dashboard .js-all-activity-header + div .Box {
+    background-color: var(--base-3) !important;
   }
   .dashboard .js-all-activity-header + div > div:last-of-type > .body > .border-bottom {
     border-bottom: none !important;
   }
-  .dashboard .js-all-activity-header + div > .Box {
-    background-color: var(--base-5) !important;
-    border-radius: 6px !important;
-  }
   .dashboard-notice {
     border: 1px solid var(--base-1) !important;
-    background-color: var(--base-5) !important;
+    background-color: var(--base-2) !important;
   }
   .dashboard-notice h2 {
     color: var(--text-primary) !important;
@@ -1145,7 +1147,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .repo-list,
   .repo-list-item {
     border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
+    background-color: var(--base-2) !important;
   }
   .mini-repo-list-item {
     border-top: 1px solid var(--base-1) !important;
@@ -1161,12 +1163,21 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-2) !important;
   }
   .content.p-4.text-center.rounded-1.border.border-gray-light {
-    background-color: var(--base-4) !important;
+    background-color: var(--base-2) !important;
   }
   .application-main > .flex-wrap {
     background-color: transparent !important;
   }
-  .application-main main div.border-bottom.border-gray {
+  .github-jobs-logo strong {
+    filter: invert(1);
+  }
+  .news .Details button,
+  .summary-stats li a,
+  .pagination a,
+  .SideNav-item {
+    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .news .Details button:hover {
     background-color: var(--base-4) !important;
   }
   .DashedConnection::before {
@@ -1713,11 +1724,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
-  .summary-stats li a,
-  .pagination a,
-  .SideNav-item {
-    transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-  }
   .summary-stats li:hover,
   .summary-stats li:focus,
   .summary-stats li:hover > .num,
@@ -1757,12 +1763,15 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .issues-reset-query-icon {
     background-color: var(--base-7) !important;
   }
+  .js-selected-navigation-item.Header-link {
+    border-top: none !important;
+  }
   .js-selected-navigation-item.subnav-item.Box-row--focus-gray,
-  .js-issue-row.Box-row--focus-gray {
+  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray {
     background-color: var(--base-4) !important;
   }
   .js-selected-navigation-item.subnav-item.Box-row--focus-gray:hover,
-  .js-issue-row.Box-row--focus-gray:hover {
+  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray:hover {
     background-color: var(--base-5) !important;
   }
   .pinned-issue-item {
@@ -2263,14 +2272,25 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .footer,
   .site-footer {
-    border-top: 1px solid var(--base-1) !important;
+    border-top-color: var(--base-1) !important;
   }
-  .ajax-pagination-form:not(.js-more-repos-form) button {
+  .ajax-pagination-form.js-more-repos-form button {
+    background-color: var(--base-3) !important;
+    box-shadow: inset 0 1px 0 var(--base-1) !important;
+  }
+  .ajax-pagination-form:not(.js-more-repos-form) .ajax-pagination-btn {
+    color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
-  .ajax-pagination-btn {
+  .ajax-pagination-form:not(.js-more-repos-form) .ajax-pagination-btn,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item {
+    transition: color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .ajax-pagination-form:not(.js-more-repos-form) .ajax-pagination-btn:hover,
+  .ajax-pagination-form:not(.js-more-repos-form) .ajax-pagination-btn:focus {
     color: var(--blue) !important;
+    background-color: var(--base-6) !important;
   }
   .pagination a {
     color: var(--text-primary) !important;
@@ -2302,10 +2322,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .pagination-loader-container {
     background-image: none !important;
     background-color: var(--base-4) !important;
-  }
-  .more-repos {
-    background-color: var(--base-4) !important;
-    box-shadow: inset 0 1px 0 var(--base-1) !important;
   }
   .aa-popup h1 {
     border-bottom: 1px solid var(--base-1) !important;
@@ -2453,9 +2469,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .gitako-side-bar .gitako-side-bar-body .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:focus {
     color: var(--blue) !important;
-  }
-  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item {
-    transition: color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item .octicon {
     color: var(--indigo) !important;
@@ -2609,19 +2622,18 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
-  .dashboard .js-all-activity-header + div {
+  .rgh-remove-diff-signs .dashboard .js-all-activity-header + div {
     border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
+    background-color: var(--base-3) !important;
   }
-  .dashboard .flex-items-baseline .f6.mt-2 {
+  .rgh-remove-diff-signs .dashboard .js-all-activity-header + div .Box {
+    background-color: transparent !important;
+  }
+  .rgh-remove-diff-signs .dashboard .flex-items-baseline .f6.mt-2 {
     opacity: 1 !important;
   }
   .rgh-collaborator {
     border: 1px solid var(--base-1) !important;
-  }
-  .js-more-repos-form.ajax-pagination-form button {
-    color: var(--blue) !important;
-    background-color: var(--base-2) !important;
   }
   button.reaction-summary-item {
     border-color: var(--base-1) !important;

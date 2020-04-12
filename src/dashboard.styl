@@ -1,4 +1,6 @@
 .dashboard
+  :not(code) .Box
+    c 0 0 base(3)
   .ajax-pagination-
     &form
       b none
@@ -6,16 +8,14 @@
       b none
       bt $b
   .js-all-activity-header + div
-    b $b
-    r 6px
+    c 0 base(1) base(2)
+    .Box
+      c 0 0 base(3)
     & > div:last-of-type > .body > .border-bottom
       bb none
-    & > .Box
-      c 0 0 base(5)
-      r 6px
   &-notice
     b $b
-    c 0 0 base(5)
+    c 0 0 base(2)
     h2
       c fg("primary")
   &-rollup-items .body
@@ -25,7 +25,7 @@
 .repo-list
   p 0 12px
   &, &-item
-    c 0 base(1) base(4)
+    c 0 base(1) base(2)
 .mini-repo-list-item
   bt $b
 .navigation-focus
@@ -35,9 +35,12 @@
 .private .mini-repo-list-item
   c 0 0 base(2)
 .content.p-4.text-center.rounded-1.border.border-gray-light
-  c 0 0 base(4)
-.application-main
-  & > .flex-wrap
-    c 0 0 $t
-  main div.border-bottom.border-gray
+  c 0 0 base(2)
+.application-main > .flex-wrap
+  c 0 0 $t
+.github-jobs-logo strong
+  filter invert(1)
+.news .Details button
+  ease background-color, color
+  &:hover
     c 0 0 base(4)

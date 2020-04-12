@@ -1,8 +1,12 @@
 .ajax-pagination-
-  &form:not(.js-more-repos-form) button
-    ../btn
-      c $blue
-    c 0 base(1) base(4)
+  &form.js-more-repos-form button
+    c 0 0 base(3)
+    shadow inset 0 1px 0 base(1)
+  &form:not(.js-more-repos-form) &btn
+    c fg("faded") base(1) base(4)
+    ease color, background-color
+    &:hover, &:focus
+      c $blue 0 base(6)
 .pagination
   a
     c fg("primary") base(1) base(4)
@@ -18,6 +22,3 @@
   &-loader-container
     bgi none
     c 0 0 base(4)
-.more-repos
-  c 0 0 base(4)
-  shadow inset 0 1px 0 base(1)
