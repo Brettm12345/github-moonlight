@@ -1867,9 +1867,6 @@
   .cdel {
     color: var(--red) !important;
   }
-  .num {
-    color: var(--text-faded) !important;
-  }
   .graphs.axis {
     border-color: var(--base-1) !important;
   }
@@ -1969,6 +1966,15 @@
   }
   .reaction-summary-item {
     background-color: var(--base-4) !important;
+  }
+  ol.repository-lang-stats-numbers li .lang {
+    color: var(--text-light) !important;
+  }
+  .repository-lang-stats-graph {
+    border-color: var(--base-1) !important;
+  }
+  .repository-lang-stats-graph .language-color:not(:first-child) {
+    border-left-color: var(--base-1) !important;
   }
   .Label--gray {
     color: var(--text-primary) !important;
@@ -3169,12 +3175,6 @@
   .js-recent-activity-container > div > div {
     background-color: var(--base-2) !important;
   }
-  ol.repository-lang-stats-numbers li .lang {
-    color: var(--text-light) !important;
-  }
-  .repository-lang-stats-graph {
-    border-color: var(--base-1) !important;
-  }
   .repository-content > div.bg-white:first-child {
     background-color: var(--base-2) !important;
   }
@@ -3185,6 +3185,9 @@
   }
   .flash-warn {
     color: var(--yellow) !important;
+  }
+  .num {
+    color: var(--text-secondary) !important;
   }
   *:not(select) {
     scrollbar-color: var(--scrollbar-thumb) var(--base-2) !important;
