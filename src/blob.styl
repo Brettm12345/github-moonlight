@@ -1,17 +1,16 @@
-blob($x, $c)
-  .blob-
-    &code, &num
-      &&-{$x}, &-{$x}
-        c v($c) 0 t($c)
-        .blob-code-marker::before
-          c v($c)
-        .x
-          c base(1) 0 v($c)
-
-blob('addition', 'teal')
-blob('deletion', 'red')
-
 .blob-
+  $states = {
+    addition: 'teal'
+    deletion: 'red'
+  }
+  for $k, $v in $states
+    &code, &num
+      &&-{$k}, &-{$k}
+        c v($v) 0 t($v)
+        ^[0]code-marker::before
+          c v($v)
+        .x
+          c base(1) 0 v($v)
   &code, &num
     &-expandable, &-hunk
       c 0 0 base(4)
@@ -26,10 +25,8 @@ blob('deletion', 'red')
   &num
     c fg("dark") base(1) base(2)
     fw 600
-    &-expandable
-      .diff, .directional
-        &-expander:hover
-          c 0 $blue $blue
+    {selector("&-expandable", ".diff, .directional", "&-expander:hover")}
+      c 0 $blue $blue
   &expanded
     & + tr:not(&), tr:not(&) + &
       & ^[0]num
@@ -41,3 +38,13 @@ blob('deletion', 'red')
   ease border-color, background-color
   &:active, &:focus, &:hover
     c 0 base(1) base(7)
+.TagsearchPopover-
+  &item, &list-item
+    &, {selector('.blob-', '&num, &code', '&, &-inner')}
+      ease background-color
+      c 0 0 base(4)
+      ^[1]:hover &
+        c 0 0 base(2)
+.pl-token
+  &.active, &:hover
+    c 0 0 base(8)

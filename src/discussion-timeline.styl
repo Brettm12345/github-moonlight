@@ -1,3 +1,6 @@
+$commentDark = base(2)
+$commentBg = base(3)
+
 .review-comment:target
   elevation 1
 .discussion-
@@ -46,7 +49,7 @@ timeline
     &new-comment .previewable-comment-form .comment-body
       c 0 base(1)
     &comment
-      c fg("primary") base(1) base(4)jjjj
+      c fg("primary") base(1) $commentBg
       /.composer.composer-responsive &
         caret "right"
       /:target &
@@ -59,7 +62,7 @@ timeline
       &-label.tooltipped.tooltipped-s.tooltipped-multiline
         c $purple $purple t("purple")
       &-header
-        c fg("light") base(1) base(4)
+        c fg("light") base(1) $commentDark
         .author
           c fg("light")
       &--caret
@@ -71,3 +74,47 @@ timeline
 .pagination-loader-container
   bgi url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E")
   c 0 0 base(4)
+comment
+  /.review-
+    &^[0]
+      c fg("primary") base(1) base(4)
+    &thread-reply
+      c 0 base(1) $commentBg
+      .inline-^[0]-form
+        c 0 0 $commentBg
+  &-form
+    .previewable-&
+      c 0 base(1) $commentBg
+      textarea
+        c 0 0 $commentDark
+      & .^[1]-head.tabnav
+        .tabnav-tab, &, /.page-responsive &, .toolbar-commenting
+          c fg("dark") 0 $commentDark
+        .tabnav-tab
+          ease color
+          &:hover
+            c fg("primary")
+          &.selected, &[aria-selected="true"], &[aria-current]
+            c fg("light") base(1) $commentBg
+    .&-textarea.dragover
+      c 0 $blue
+    .&-error
+      c $red $red t("red")
+  .&-
+    &reactions
+      .user-has-reacted
+        c 0 base(1) base(5)
+      &.has-reactions
+        c 0 base(1) base(4)
+conversation-list
+  .&-heading
+    c fg("faded") base(6)
+    .inner
+      b $b
+      c fg("faded") 0 base(4)
+      p 0 10px
+      r 2px
+  .simple-&
+    c fg("faded")
+    & > li
+      c 0 base(6)

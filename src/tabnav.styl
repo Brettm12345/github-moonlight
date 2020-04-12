@@ -6,9 +6,10 @@
     &.selected, &[aria-selected="true"], &[aria-current]
       c 0 0 base(2)
   &-tabs
+    mb -2px
     & ^[0]-tab
       &:not(.selected)
-        filter saturate(0.6)
+        c fg("dark")
       &.selected
         c fg("light") 0 base(2)
     &.js-file-editor-nav ^[0]-tab
@@ -16,13 +17,16 @@
       mt 8px
       rt 6px
   &--responsive &-tab, &-tab
-    c fg("faded") base(1)
+    c fg("faded")
     ease color
     rt 6px
+    &[aria-selected="false"]
+      bb $b
     &:hover, &:focus
       c fg("primary")
     &.selected, &[aria-selected="true"], &[aria-current]
       c fg("light") base(1) base(5)
+      bbc $t
       &.js-blob-edit-
         &code, &preview
           c $blue base(1) base(5)
