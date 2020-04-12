@@ -28,7 +28,10 @@
         c 0 base(1) base(5)
 .btn
   &-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link), .subnav-search-context &
-    c v("blue")
+    c fg("dark")
+    ease color
+    &:hover, &.selected
+      c v("blue")
   &&-primary, .js-selected-navigation-item.subnav-item
     c 0 0 base(5)
 .application-main > main > .site-subnav + div

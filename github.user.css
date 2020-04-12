@@ -195,15 +195,105 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
+  .CheckStep .ansibg-b {
+    background-color: var(--indigo) !important;
+  }
+  .CheckStep .ansifg-b {
+    color: var(--indigo) !important;
+  }
+  .CheckStep .ansibg-r {
+    background-color: var(--red) !important;
+  }
+  .CheckStep .ansifg-r {
+    color: var(--red) !important;
+  }
+  .CheckStep .ansibg-g {
+    background-color: var(--green) !important;
+  }
+  .CheckStep .ansifg-g {
+    color: var(--green) !important;
+  }
+  .CheckStep .ansibg-y {
+    background-color: var(--yellow) !important;
+  }
+  .CheckStep .ansifg-y {
+    color: var(--yellow) !important;
+  }
+  .CheckStep .ansibg-bl {
+    background-color: var(--blue) !important;
+  }
+  .CheckStep .ansifg-bl {
+    color: var(--blue) !important;
+  }
+  .CheckStep .ansibg-m {
+    background-color: var(--purple) !important;
+  }
+  .CheckStep .ansifg-m {
+    color: var(--purple) !important;
+  }
+  .CheckStep .ansibg-c {
+    background-color: var(--cyan) !important;
+  }
+  .CheckStep .ansifg-c {
+    color: var(--cyan) !important;
+  }
+  .CheckStep .ansibg-w {
+    background-color: var(--text-primary) !important;
+  }
+  .CheckStep .ansifg-w {
+    color: var(--text-primary) !important;
+  }
+  .CheckStep .ansibg-gr {
+    background-color: var(--text-dark) !important;
+  }
+  .CheckStep .ansifg-gr {
+    color: var(--text-dark) !important;
+  }
+  .CheckStep .log-line-command {
+    color: var(--blue) !important;
+  }
+  .CheckStep .log-line-debug {
+    color: var(--purple) !important;
+  }
+  .CheckStep .log-line-error {
+    color: var(--red) !important;
+  }
+  .CheckStep .log-line-verbose {
+    color: var(--text-dark) !important;
+  }
+  .CheckStep .log-line-warning {
+    color: var(--yellow) !important;
+  }
+  .CheckStep .log-line-section {
+    color: var(--teal) !important;
+  }
+  .CheckStep-header {
+    color: var(--text-dark) !important;
+  }
+  .CheckStep-header-timestamp {
+    color: var(--text-secondary) !important;
+  }
   .CheckStep-line {
+    color: var(--text-primary) !important;
+    background-color: var(--base-3) !important;
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
   }
+  .CheckStep-line .CheckStep-line-timestamp {
+    color: var(--text-secondary) !important;
+  }
   .CheckStep-line-number {
-    color: var(--indigo) !important;
+    color: var(--base-9) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
+    border-right: 1px solid var(--base-1) !important;
+    padding-right: 18px !important;
   }
   .CheckStep-linecontent {
     color: var(--text-primary) !important;
+  }
+  .CheckStep-line.selected {
+    background-color: var(--base-6) !important;
   }
   .CheckStep-line:hover {
     background-color: var(--base-5) !important;
@@ -213,6 +303,9 @@
   }
   .Box.rounded-2.d-flex.flex-column.overflow-hidden.width-full.flex-auto.mb-4 .d-flex.flex-justify-between.px-4.pt-3.pb-4 {
     background-color: var(--base-6) !important;
+  }
+  .js-checks-log-display-container {
+    border: 1px solid var(--base-1) !important;
   }
   .auth-form-body {
     color: var(--text-primary) !important;
@@ -1239,27 +1332,11 @@
   .line-comments + .line-comments {
     border-left-color: var(--base-1) !important;
   }
-  div.commit-build-statuses,
-  .link-gray {
+  .commit-build-statuses {
     color: var(--text-faded) !important;
   }
-  div.commit-build-statuses:hover,
-  .link-gray:hover {
+  .commit-build-statuses:hover {
     color: var(--blue) !important;
-  }
-  div.commit-build-statuses-dark,
-  .link-gray-dark,
-  body div.commit-build-statuses-dark,
-  body .link-gray-dark {
-    color: var(--blue) !important;
-  }
-  div.commit-build-statuses-dark:hover,
-  .link-gray-dark:hover,
-  body div.commit-build-statuses-dark:hover,
-  body .link-gray-dark:hover,
-  body body div.commit-build-statuses-dark:hover,
-  body body .link-gray-dark:hover {
-    text-decoration: underline !important;
   }
   .ellipsis-expander,
   .hidden-text-expander a {
@@ -1319,6 +1396,10 @@
   }
   relative-time {
     color: var(--text-secondary) !important;
+  }
+  .text-mono {
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
   }
   .compare-cutoff,
   .diff-cutoff {
@@ -1455,6 +1536,8 @@
   .select-menu-action,
   .select-menu-tab-nav,
   .select-menu-tabs a,
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link),
+  .subnav-search-context .btn,
   .tabnav--responsive .tabnav-tab,
   .tabnav-tab,
   .toolbar-item,
@@ -2538,10 +2621,15 @@
     color: var(--blue) !important;
   }
   .link-gray-dark {
-    color: var(--blue) !important;
+    color: var(--text-light) !important;
   }
-  .link-gray-dark .octicon {
-    color: var(--text-dark) !important;
+  .link-gray-dark .octicon,
+  .notification-navigation .notification-configure-filters .octicon,
+  .numbers-summary .octicon,
+  .UnderlineNav-item:hover .octicon,
+  .UnderlineNav-item:focus .octicon,
+  .follow-list .follow-list-info > a:hover > span .octicon {
+    color: var(--text-primary) !important;
   }
   .link-gray-dark:hover {
     color: var(--blue-light) !important;
@@ -2872,13 +2960,6 @@
   }
   .notification-configure-filters .octicon {
     color: var(--base-9) !important;
-  }
-  .notification-navigation .notification-configure-filters .octicon,
-  .numbers-summary .octicon,
-  .UnderlineNav-item:hover .octicon,
-  .UnderlineNav-item:focus .octicon,
-  .follow-list .follow-list-info > a:hover > span .octicon {
-    color: var(--text-primary) !important;
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
   .notification-navigation .notification-configure-filters:focus .octicon,
@@ -4370,6 +4451,12 @@
   }
   .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link),
   .subnav-search-context .btn {
+    color: var(--text-dark) !important;
+  }
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):hover,
+  .subnav-search-context .btn:hover,
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link).selected,
+  .subnav-search-context .btn.selected {
     color: var(--blue) !important;
   }
   .btn.btn-primary,
@@ -4589,10 +4676,6 @@
   }
   .table-list-header-meta {
     color: var(--text-secondary) !important;
-  }
-  .table-list-header-toggle .btn-link:hover,
-  .table-list-header-toggle .btn-link.selected {
-    color: var(--blue) !important;
   }
   .tabnav {
     border-bottom: 1px solid var(--base-1) !important;
