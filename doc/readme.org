@@ -94,6 +94,7 @@ These are the fonts used in the screenshots
 {{{screenshot(Explore,explore)}}}
 {{{screenshot(Api Docs,api)}}}
 {{{screenshot(Actions,actions)}}}
+{{{screenshot(File Editor,file-editor)}}}
 {{{screenshot(Projects,projects)}}}
 {{{screenshot(Community,community)}}}
 ** Issues
