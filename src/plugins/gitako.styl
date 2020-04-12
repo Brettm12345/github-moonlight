@@ -21,20 +21,48 @@
       brc base(1)
       c 0 base(1) base(4)
       .octicon
-        c $indigo
-        ease color, opacity
-        o 0.4
+        c fg("faded")
+        ease color
         &:hover, &:focus
           c $blue
-          o 1
-      .gitako-settings-bar
+      & ^[1]-content
+        .file-explorer
+          .node-item
+            ease color, background-color
+            .octicon
+              c $indigo
+              ease color, opacity
+              o 0.4
+            &:hover, &:focus
+              .octicon
+                c $blue
+                o 1
+        .node-item, .search-input-wrapper .search-input
+          c 0 base(1) base(3)
+          &:focus-within
+            c 0 $blue base(6)
+            .TextInput-icon
+              c $blue
+          .TextInput-icon
+            c fg("faded")
+            ease color
+      & ^[0]settings-bar
+        &-content .settings-section .field select
+          c fg("primary") base(1) base(3)
+          &:focus
+            c 0 $blue
+          outline none
+        .access-token-input
+          c 0 base(1) base(3)
+          &:focus-within
+            c 0 $blue base(6)
         &-title
           btc base(1)
         &-content .shadow-shelter
           c 0 base(1) base(4)
         &, .header-row
           c fg("primary") base(1) base(4)
-      &, ../-content
+      &, ^[1]-content
         .meta-bar
           c fg("primary") base(1) base(4)
         .file-explorer
@@ -47,3 +75,16 @@
             c fg("primary") base(1)
             &-row
               c 0 0 base(5)
+// Disable Shadows
+.drJOih, .jOtAYC
+  shadow none
+// Settings Input
+.drJOih
+  c 0 base(1) base(3)
+  &:focus-within
+    c 0 $blue base(6)
+// Button
+.jOtAYC
+  c fg("primary") base(1) base(3)
+  &:disabled
+    c fg("faded") base(1) base(2)

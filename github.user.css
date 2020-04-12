@@ -851,6 +851,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .markdown-body a,
   .reponav-item,
   .reponav-item .octicon,
+  .gitako-side-bar .gitako-side-bar-body .octicon,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item .TextInput-icon,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input .TextInput-icon,
   #readme .Box-header .octicon-pencil,
   .select-menu-action,
   .toolbar-item,
@@ -1299,6 +1302,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .timeline-comment--caret::after,
   .timeline-comment--caret.current-user::after {
     border-right-color: var(--base-4) !important;
+  }
+  .markdown-toolbar.Details {
+    border-color: var(--base-1) !important;
   }
   .dropdown-divider {
     border-color: var(--base-1) !important;
@@ -2198,6 +2204,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   body.page-responsive.pagehead {
     background-color: var(--base-3) !important;
   }
+  .reponav-wrapper {
+    background-color: var(--base-3) !important;
+  }
   .reponav-item {
     border: 1px solid transparent !important;
     color: var(--text-dark) !important;
@@ -2413,7 +2422,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     opacity: 0.2 !important;
   }
   .gitako-toggle-show-button-wrapper .action-icon .octicon,
-  .gitako-side-bar .gitako-side-bar-body .octicon {
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item .octicon {
     transition: color, opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .gitako-toggle-show-button-wrapper .action-icon .octicon:hover {
@@ -2439,13 +2448,58 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .octicon {
-    color: var(--indigo) !important;
-    opacity: 0.4 !important;
+    color: var(--text-faded) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .octicon:hover,
   .gitako-side-bar .gitako-side-bar-body .octicon:focus {
     color: var(--blue) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item {
+    transition: color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item .octicon {
+    color: var(--indigo) !important;
+    opacity: 0.4 !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:hover .octicon,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:focus .octicon {
+    color: var(--blue) !important;
     opacity: 1 !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item:focus-within,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input:focus-within {
+    border-color: var(--blue) !important;
+    background-color: var(--base-6) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item:focus-within .TextInput-icon,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input:focus-within .TextInput-icon {
+    color: var(--blue) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item .TextInput-icon,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input .TextInput-icon {
+    color: var(--text-faded) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .settings-section .field select {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+    outline: none;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .settings-section .field select:focus {
+    border-color: var(--blue) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .access-token-input {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .access-token-input:focus-within {
+    border-color: var(--blue) !important;
+    background-color: var(--base-6) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title {
     border-top-color: var(--base-1) !important;
@@ -2483,6 +2537,28 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .gitako-side-bar .gitako-side-bar-body .file-explorer .node-item-row,
   .gitako-side-bar-content .file-explorer .node-item-row {
     background-color: var(--base-5) !important;
+  }
+  .drJOih,
+  .jOtAYC {
+    box-shadow: none !important;
+  }
+  .drJOih {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .drJOih:focus-within {
+    border-color: var(--blue) !important;
+    background-color: var(--base-6) !important;
+  }
+  .jOtAYC {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .jOtAYC:disabled {
+    color: var(--text-faded) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-2) !important;
   }
   i[class*="octotree-icon"]::before {
     color: var(--text-faded) !important;
