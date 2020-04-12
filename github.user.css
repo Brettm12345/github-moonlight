@@ -4003,10 +4003,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     font-size: var(--mono-font-size) !important;
     box-shadow: inset 0 -1px 0 var(--base-1) !important;
   }
-  ol,
-  ul {
-    list-style: disc;
-  }
   legend {
     font-size: 0.9em !important;
     font-weight: 600 !important;
