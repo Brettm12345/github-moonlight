@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      2.10.10
+@version      2.10.11
 
 @license      MIT
 @description  A dark blue github theme
@@ -1742,7 +1742,7 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .IssueLabel,
   .IssueLabel > a[style*="#000"] {
-    color: var(--base-2) !important;
+    background-color: var(--base-1) !important;
   }
   .issues-reset-query-icon {
     background-color: var(--base-7) !important;
