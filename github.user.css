@@ -3805,7 +3805,13 @@
   }
   table.files tr td.age,
   table.files tr td.icon {
-    color: var(--text-primary) !important;
+    color: var(--text-dark) !important;
+  }
+  .hide-files-btn {
+    color: var(--text-secondary) !important;
+  }
+  .hide-files-list a {
+    color: var(--text-dark) !important;
   }
   *:not(select) {
     scrollbar-color: var(--scrollbar-thumb) var(--base-2) !important;
