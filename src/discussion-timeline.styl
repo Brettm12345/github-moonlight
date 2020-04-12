@@ -18,7 +18,7 @@ $commentBg = base(3)
       c fg("faded")
       ease color
       &:hover, &:focus
-        c $blue
+        c v("blue")
     &heading
       c fg("primary")
     &item
@@ -28,7 +28,7 @@ $commentBg = base(3)
   &-badge
     c 0 base(5) base(4)
     ~/:target &-bage
-      c 0 $blue
+      c 0 v("blue")
     ~/--condensed &
       size 30px
   &-break
@@ -63,7 +63,7 @@ timeline
         b 0
         c 0 base(1)
       &-label.tooltipped.tooltipped-s.tooltipped-multiline
-        c $purple $purple t("purple")
+        c v("purple") v("purple") t("purple")
       &-header
         c fg("light") base(1) $commentDark
         .author
@@ -96,9 +96,9 @@ comment
           &.selected, &[aria-selected="true"], &[aria-current]
             c fg("light") base(1) $commentBg
     .&-textarea.dragover
-      c 0 $blue
+      c 0 v("blue")
     .&-error
-      c $red $red t("red")
+      c v("red") v("red") t("red")
   .&-
     &reactions
       .user-has-reacted

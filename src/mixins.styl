@@ -1,14 +1,37 @@
-map($fn, $list)
-  for $val, $i in $list
-    $list[$i] = $fn($val)
-  $list
-
+$easeInOutCubic = cubic-bezier(0.645, 0.045, 0.355, 1)
 $bw = 1px
 $bs = solid
 $bc = base(1)
 $b = $bw $bs $bc
 $i = !important
 $t = transparent
+
+S($x, $y)
+  s($x, unquote($y))
+v($x)
+  var(S("--%s", $x))
+fg($x)
+  v(S("text-%s", $x))
+selection($x)
+  v(S("selection-%s", $x))
+font($x, $y)
+  v(s("%s-font-%s", unquote($x), unquote($y)))
+t($x)
+  v(S("%s-transparent", $x))
+alt($x)
+  v(S("%s-alt", $x))
+light($x)
+  v(S("%s-light", $x))
+dark($x)
+  v(S("%s-dark", $x))
+scrollbar($x)
+  v(S("scrollbar-%s", $x))
+base($x)
+  v(s("base-%s", $x))
+map($fn, $list)
+  for $val, $i in $list
+    $list[$i] = $fn($val)
+  $list
 prop($p, $x...)
   {$p} $x $i
 map-record($rec = {}, $prefix = '', $prop)
@@ -62,7 +85,6 @@ bc($x...)
   prop "border-color" $x
 bs($x...)
   prop "border-style" $x
-
 by($x...)
   +cache("x", $x)
     for $d in top bottom
@@ -244,7 +266,7 @@ box()
   c 0 base(1) base(4)
   ease border-color, background-color
   &:hover, &:focus
-    c 0 $blue base(5)
+    c 0 v("blue") base(5)
 octicon($x...)
   +cache("x" + $x)
     .octicon

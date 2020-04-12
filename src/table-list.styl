@@ -10,11 +10,11 @@
       br $b
   &-item
     &.unread ^[0]-cell:first-child
-      shadow inset 2px 0 0 $blue
+      shadow inset 2px 0 0 v("blue")
   &-header
     c 0 base(1) base(4)
     &-meta
       c fg("secondary")
     &-toggle .btn-link
       &:hover, &.selected
-        c $blue
+        c v("blue")

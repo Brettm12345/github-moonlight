@@ -2,13 +2,13 @@
   b $b
   elevation 2
   &--error &-icon
-    c 0 0 $red
+    c 0 0 v("red")
   &--warning &-icon
-    c base(2) 0 $yellow
+    c base(2) 0 v("yellow")
   &--success &-icon
     .octicon-check
       c base(2)
-    c base(2) 0 $teal
+    c base(2) 0 v("teal")
   &, &-content
     c fg("primary") base(1) base(4)
   &-dismissButton
@@ -16,4 +16,4 @@
     max-height none
     min-height 100%
     &:focus, &:hover, &:active
-      c $red
+      c v("red")

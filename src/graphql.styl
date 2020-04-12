@@ -1,0 +1,102 @@
+.highlight-graphql
+  $rec = {
+    k: 'purple'
+    n: 'orange'
+  }
+  for $k, $v in $rec
+    .{$k}
+      c v($v)
+.history-, .doc-explorer-
+  $rec = {
+    contents: 2
+    title-bar: 4
+  }
+  for $k, $v in $rec
+    &{$k}
+      c fg("primary") base(1) base($v)
+.CodeMirror
+  /.result-window &
+    c 0 0 base(4)
+  &-cursor
+    blc v("blue")
+  &-hint
+    c fg("primary") base(1) base(4)
+    ease background-color
+    &-information
+      c v("indigo") base(1) base(4)
+    &-active
+      c fg("light") 0 base(8)
+      fw 500
+  &-linenumber
+    c v("indigo")
+    fw 500
+  &-gutters, &-gutter&-foldgutter
+    c fg("primary") base(1) base(4)
+  &.cm-s-graphiql
+    c 0 0 base(4)
+iframe#graphiql
+  c 0 base(6)
+  html::selection
+    b selection('border')
+    c selection('fg') 0 selection('bg')
+  body
+    c 0 0 base(3)
+.graphiql-
+  &ide
+    btc base(1)
+    c 0 base(1)
+  &container
+    $colors = {
+      arg-default-value: "text-gray"
+      doc-explorer-back: "blue"
+      arg-name: "pink"
+      field-name: "blue"
+      keyword: "purple"
+      type-name: "yellow"
+      field-short-description: "indigo"
+    }
+    for $k, $v in $colors
+      .{$k}
+        c v($v)
+    & .history-contents p
+      c fg("primary") base(1)
+      &:hover, &.hover, &:active
+        c 0 base(1) base(8)
+    {selector('.execute-options, .toolbar-menu-items, .toolbar-select-options', '& > li', '&:hover, &.hover, &:active')}
+      c 0 base(1) base(8)
+    .show-btn
+      c fg("primary") base(1) base(3)
+      ease color, background-color
+      &:hover, &:focus
+        c fg("light") 0 base(6)
+    .search-box
+      c 0 0 base(2)
+      input
+        c 0 0 base(2)
+    .result-window .CodeMirror-gutters
+      c 0 base(1)
+    .doc-
+      &deprecation
+        c v("yellow") 0 t("yellow")
+        shadow inset 0 0 1px v("yellow")
+      &category-
+        &item
+          c fg("secondary")
+        &title
+          /.search-box, &
+            c 0 base(6)
+          c fg("faded")
+    .resultWrap
+      blc base(1)
+    .variable-editor-title, .docExplorerShow, .topBar
+      bg base(4)
+      c fg("primary") base(1) base(4)
+    .docExplorerShow, .doc-explorer-back
+      for $x in left top
+        &::before
+          border-{$x}-color v("blue")
+    .toolbar-button, .execute-button
+      bg base(2)
+      shadow none
+      svg
+        vc fg("primary")

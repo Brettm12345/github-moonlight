@@ -1,18 +1,18 @@
 $fgColors = {
   gray-light: fg("dark")
-  blue: $blue
-  blue-mktg: $blue
+  blue: v("blue")
+  blue-mktg: v("blue")
   gray: fg("primary")
   gray-dark: fg("light")
   emphasized: fg("secondary")
-  green: $green
-  purple: $purple
-  red: $red
+  green: v("green")
+  purple: v("purple")
+  red: v("red")
   white: fg("light")
 }
 map-record($fgColors, '.text-', color)
 $borderColors = {
-  blue-light: $blue
+  blue-light: v("blue")
   gray-dark: base(1)
   lg-left: base(1)
   lg-top: base(6)
@@ -24,15 +24,15 @@ $bgColors = {
   blue-light: base(4)
   yellow-light: t("yellow")
   purple-light: t("purple")
-  purple: $purple
-  red: $red
-  green: $green
+  purple: v("purple")
+  red: v("red")
+  green: v("green")
   blue: base(7)
   blue-2: t("blue")
   gray-dark: base(2)
   gray-2: base(7)
   white: base(5)
-  pending: $purple
+  pending: v("purple")
 }
 map-record($bgColors, '.bg-', background-color)
 for $direction in top left right bottom

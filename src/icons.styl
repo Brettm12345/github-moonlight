@@ -3,53 +3,53 @@
   /.draft&
     c fg("faded")
   /.closed&, /.reverted&
-    c $red
+    c v("red")
   /.open&
-    c $green
+    c v("green")
   /.merged
-    c $purple
+    c v("purple")
   &-star
-    vc none $yellow
+    vc none v("yellow")
   /.starred &-star
-    vc $yellow
+    vc v("yellow")
   &-repo
     &, &-push, &-forked
       mb 0.1em
   &.merged
-    c $purple
+    c v("purple")
   &-file-directory, &-saved
-    c $blue
+    c v("blue")
   &-mute, &-repo
     c fg("faded")
   &-play
     c light("red")
   &-x, &-trashcan
-    c $red
+    c v("red")
   &-repo-push, &-check, &.open, &-git-pull-request
-    c $green
+    c v("green")
   &-rocket
     c fg("faded")
   &[style*="#6a737d"]
     c fg("gray")
   &-inbox, &-alert, &-pencil, &-light-bulb
-    c $yellow
+    c v("yellow")
   &-repo-forked, &-issue-opened
-    c $teal
+    c v("teal")
   &-issue-closed
-    c $red
+    c v("red")
   &-project, &-eye
-    c $blue
+    c v("blue")
   &-package, &-rss, &-flame
-    c $orange
+    c v("orange")
   &-smiley, &-file
-    c $indigo
+    c v("indigo")
 .lfs-data-icon
   &, &.dark
     c fg("primary")
 .donut-chart
   .success
-    vc $green
+    vc v("green")
   .failure
-    vc $red
+    vc v("red")
 img[src*="octocat-spinner-64.gif"]
   inv()

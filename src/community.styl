@@ -34,11 +34,11 @@
   &button
     &:not(input)&-primary, &:not(input)&-secondary, ^[0]quilt-post-page &wrapper-Submit-action &primary&secondary
       bgi none
-      c fg("primary") $teal t("teal")
+      c fg("primary") v("teal") t("teal")
       ease background-color, border-color, color
       &:hover, &:focus
         background-position 0
-        c base(1) 0 $teal
+        c base(1) 0 v("teal")
   &quilt-
     for $s in forum forum-message group-reply group-topic blog-topic-message blog-message blog-topic blog-reply idea-reply contest-reply tkb-reply media reviews
       ^[0]message-view-{$s}
@@ -46,7 +46,7 @@
           & ^[1]row-footer
             c 0 base(1) base(2)
       &forum-message ^[0]component-go-to-solution-link
-        c $teal $teal t("teal")
+        c v("teal") v("teal") t("teal")
     &blog-
       &message
         &, ^[2]topic-message
@@ -100,7 +100,7 @@
     shadow none
     & > ^[0]button-active > a
       &:hover, &:focus
-        c 0 0 $blue
+        c 0 0 v("blue")
     & > li a
       c fg("primary")
       ease color, background-color
@@ -119,10 +119,10 @@
       /.mce-edit-area.mce-panel,
       /.mce-form .mce-textbox
         c fg("primary") base(1) base(3)
-        caret-color $blue
+        caret-color v("blue")
         ease border-color, color, background-color
         &:hover, &:focus
-          c fg("light") $blue base(6)
+          c fg("light") v("blue") base(6)
           shadow none
   &list-
     &wide tbody > tr > td
@@ -147,9 +147,9 @@
       c fg("primary")
       ease color
       &::before
-        vc 0 $blue
+        vc 0 v("blue")
       &:hover
-        c $blue
+        c v("blue")
     c 0 base(1)
   &component-
     &author-rank
@@ -158,7 +158,7 @@
       c 0 base(1) base(3)
     &forms-widget-board-browser-list
       /a, .board-title ^[0]link-navigation
-        c $blue
+        c v("blue")
       ^[0]browser-category-heading
         c 0 base(1) base(2)
         & > h2, & .board-count, & .category-title
@@ -169,7 +169,7 @@
       &community-hero
         c 0 0 base(2)
 .gh-flash
-  c fg("primary") $blue t("blue")
+  c fg("primary") v("blue") t("blue")
 mark
   c fg("primary") base(1) base(3)
 a[href="/"] img
@@ -185,8 +185,8 @@ a[href="/"] img
 pre
   c fg("primary") base(1) base(2)
 font[color="#808000"]
-  c $yellow
+  c v("yellow")
 .custom-solution-mark .is-solution
   bgi none
-  bg $teal
-  c base(1) 0 $teal
+  bg v("teal")
+  c base(1) 0 v("teal")

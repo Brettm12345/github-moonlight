@@ -97,6 +97,7 @@ These are the fonts used in the screenshots
 {{{screenshot(File Editor,file-editor)}}}
 {{{screenshot(Projects,projects)}}}
 {{{screenshot(Community,community)}}}
+{{{screenshot(GraphQL Explorer,graphql)}}}
 ** Issues
 
 If you find any places where this theme is incomplete please do not hesitate to

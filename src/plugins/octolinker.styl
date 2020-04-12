@@ -1,13 +1,13 @@
 a.module-linker
   c inherit
-  --hover-colour $teal
+  --hover-colour v("teal")
   $ballColors = {
-    default: $cyan
-    docs: $purple
-    external: $blue
-    maybe: $yellow
-    relative: $pink
-    stdlib: $teal
+    default: v("cyan")
+    docs: v("purple")
+    external: v("blue")
+    maybe: v("yellow")
+    relative: v("pink")
+    stdlib: v("teal")
   }
   for $k, $v in $ballColors
     --ball-colour-{$k} $v

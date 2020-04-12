@@ -11,13 +11,13 @@
     c fg("faded") base(1) base(4)
     ease color, background-color
     &:hover, &:focus
-      c $blue 0 base(6)
+      c v("blue") 0 base(6)
 .pagination
   a
     c fg("primary") base(1) base(4)
     ease background-color, color
     &:hover
-      c $blue 0 base(5)
+      c v("blue") 0 base(5)
   .current, [aria-current]
     &, &:hover
       c fg("primary") base(1) dark("blue")

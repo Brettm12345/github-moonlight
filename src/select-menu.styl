@@ -6,7 +6,7 @@
   &filter
     btc base(1)
   &icon--check
-    c $green
+    c v("green")
   &divider
     c fg("primary") base(1) base(2)
   &list
@@ -53,7 +53,7 @@
     &:after
       btc base(2)
     &:active
-      c 0 $green t("green")
+      c 0 v("green") t("green")
   &blankslate
     h3
       c fg("primary")
@@ -67,7 +67,7 @@
     c fg("faded")
     ease color
     &:hover
-      c $blue
+      c v("blue")
   &header, &header &title
     c fg("light") base(1) base(2)
   &modal, &item
@@ -84,14 +84,14 @@
     &::placeholder
       c fg("placeholder")
   &new-item-form .octicon
-    c $blue
+    c v("blue")
   &item
     ease background-color, color
     &-text .description
       &, &-inline
         c fg("faded")
       &-warning
-        c $red
+        c v("red")
     .excluded
       c 0 0 base(3)
     .octicon-circle-slash

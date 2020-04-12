@@ -2,20 +2,20 @@ code .link-gray
   set-font "mono"
 a
   ease color
-:not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code)
+:not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name)
   c fg("primary")
   &:hover
-    c $blue
+    c v("blue")
 .muted-link
   c fg("faded")
   &:hover
-    c $blue
+    c v("blue")
 .link-gray-dark
-  c $blue
+  c v("blue")
   octicon fg("dark")
   &:hover
     c light("blue")
 .link-mktg
-  shadow 0 1px 0 0 $blue
+  shadow 0 1px 0 0 v("blue")
   &:hover
     shadow 0 1px 0 0 light("blue")

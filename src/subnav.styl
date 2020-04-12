@@ -8,7 +8,7 @@
     elevation 1
 .subnav-
   &link.selected
-    bbc $blue
+    bbc v("blue")
   &bordered
     c 0 base(1)
   &item
@@ -18,11 +18,11 @@
       c 0 0 base(6)
     &.selected
       &, &:focus, &:hover
-        bbc $blue
+        bbc v("blue")
         c 0 base(1) base(5)
 .btn
   &-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item), .subnav-search-context &
-    c $blue
+    c v("blue")
   &&-primary, .js-selected-navigation-item.subnav-item
     c 0 0 base(5)
 .application-main > main > .site-subnav + div

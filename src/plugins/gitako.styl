@@ -7,13 +7,13 @@
         ease color, opacity
         o 0.2
         &:hover
-          c $blue
+          c v("blue")
           o 1
     &.collapsed
       c 0 base(1) base(5)
       m 1%
       .action-icon
-        c $blue
+        c v("blue")
   &side-bar
     &, ../resize-handler
       c 0 base(1) base(1)
@@ -24,25 +24,25 @@
         c fg("faded")
         ease color
         &:hover, &:focus
-          c $blue
+          c v("blue")
       & ^[1]-content
         .file-explorer
           .node-item
             ease color, background-color
             .octicon
-              c $indigo
+              c v("indigo")
               ease color, opacity
               o 0.4
             &:hover, &:focus
               .octicon
-                c $blue
+                c v("blue")
                 o 1
         .node-item, .search-input-wrapper .search-input
           c 0 base(1) base(3)
           &:focus-within
-            c 0 $blue base(6)
+            c 0 v("blue") base(6)
             .TextInput-icon
-              c $blue
+              c v("blue")
           .TextInput-icon
             c fg("faded")
             ease color
@@ -50,12 +50,12 @@
         &-content .settings-section .field select
           c fg("primary") base(1) base(3)
           &:focus
-            c 0 $blue
+            c 0 v("blue")
           outline none
         .access-token-input
           c 0 base(1) base(3)
           &:focus-within
-            c 0 $blue base(6)
+            c 0 v("blue") base(6)
         &-title
           btc base(1)
         &-content .shadow-shelter
@@ -82,7 +82,7 @@
 .drJOih
   c 0 base(1) base(3)
   &:focus-within
-    c 0 $blue base(6)
+    c 0 v("blue") base(6)
 // Button
 .jOtAYC
   c fg("primary") base(1) base(3)

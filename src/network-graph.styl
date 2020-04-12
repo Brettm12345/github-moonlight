@@ -14,5 +14,5 @@ div#network.network > div > canvas, img[alt="FOSSA Status"], img[data-canonical-
     l: "data:image/gif;base64,R0lGODlhFAAaAIAAAMzMzP///yH5BAEAAAEALAAAAAAUABoAAAIejI+pG8APY5O0uorfzRzt3n1g5pSTOabqyrbuC68FADs="
   }
   for $k, $v in $images
-    {s('&[src$="%s.png"]', unquote($k))}
+    {S('&[src$="%s.png"]', $k)}
       bgi url($v)

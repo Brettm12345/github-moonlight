@@ -1,6 +1,6 @@
 .filter-bar
-  bb $b
-  c 0 0 base(4)
+  bb 2px solid base(1)
+  c 0 0 base(2)
 header #search-results-container
   c 0 0 base(4)
 .search_repos
@@ -15,12 +15,12 @@ header #search-results-container
   &group &control
     c fg("light") base(1) base(4)
     .search-input
-      caret-color $blue
+      caret-color v("blue")
     &:focus
-      c 0 $blue base(7)
+      c 0 v("blue") base(7)
       .form-control, .ais-SearchBox-input, .form-select
         &.focus, &:focus
-          c 0 $blue
+          c 0 v("blue")
           shadow none
   &control
     &, ~/select
@@ -30,7 +30,7 @@ header #search-results-container
       c fg("light") base(1) base(4)
       shadow none
       &.focus, &:focus
-        c fg("light") $blue 0
+        c fg("light") v("blue") 0
         shadow none
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
@@ -51,7 +51,7 @@ header #search-results-container
 .ais-
   /.search-result-intro
     & mark, & .ais-Highlight-highlighted
-      bbc $blue
+      bbc v("blue")
   &Hits-item
     &:hover
       c 0 0 base(7)

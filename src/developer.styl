@@ -1,5 +1,3 @@
-@require "graphql"
-
 .content
   c fg("primary")
 .sidebar-menu
@@ -9,7 +7,7 @@
       c fg("light") base(1) base(8)
     c fg("primary") base(1) base(4)
 .js-current .standalone a, .sidebar-module .disable > a
-  blc $blue
+  blc v("blue")
   c fg("light") base(1) base(5)
 .sub-nav
   c 0 base(1)
@@ -21,14 +19,14 @@ body table
   c fg("primary") base(1) base(4)
 .alert
   &.tip
-    c fg("primary") $teal t("teal")
+    c fg("primary") v("teal") t("teal")
   &.note
-    c fg("primary") $blue t("blue")
+    c fg("primary") v("blue") t("blue")
   &.warning
-    c fg("primary") $yellow t("yellow")
+    c fg("primary") v("yellow") t("yellow")
   &.product
     bg t("purple")
-    c fg("primary") $purple t("purple")
+    c fg("primary") v("purple") t("purple")
 h1, h2, h3, h4, h5, h6
   c fg("primary")
 .content ol li pre code
@@ -44,8 +42,14 @@ ol > li::before
   c fg("primary") base(1) base(2)
 .sidebar-module
   c 0 base(1) base(5)
-.command-line span.output
-  c $teal
+.command-line
+  em
+    c v("yellow")
+  span
+    &.comment
+      c v("indigo")
+    &.output
+      c v("teal")
 .content .sectionbody .dlist dt, .content .verseblock-content, .content dl code, .content h2 code, .content h3 code, .content h4 code, .content ol code, .content p > tt, .content table code, .content ul code, p code,
 pre
   c fg("primary") base(1) base(5)
@@ -53,12 +57,12 @@ code
   .p
     c fg("primary")
   .nt
-    c $blue
+    c v("blue")
   .s, .s2
-    c $green
+    c v("green")
   .ni
-    c $cyan
+    c v("cyan")
   .na
-    c $red
+    c v("red")
   .mf, .mh, .mi, .mo
-    c $orange
+    c v("orange")

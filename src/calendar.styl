@@ -1,4 +1,4 @@
-cal($opacity, $target, $color = $calendar)
+cal($opacity, $target, $color = v("calendar"))
   .legend li[style*=\"{$target}\"]
     c 0 0 $color
     o $opacity
@@ -6,7 +6,7 @@ cal($opacity, $target, $color = $calendar)
     o $opacity
     vc $color
 
-cal(0.05, "#ebedf0", $indigo)
+cal(0.05, "#ebedf0", v("indigo"))
 cal(0.25, "#c6e48b")
 cal(0.5, "#7bc96f")
 cal(0.75, "#239a3b")

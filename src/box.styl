@@ -6,7 +6,7 @@
     .help
       c fg("faded")
   &--responsive, &row--unread
-    shadow inset 2px 0 0 $blue
+    shadow inset 2px 0 0 v("blue")
   &--overlay
     c 0 base(1) base(2)
     elevation 1
@@ -15,7 +15,7 @@
     c 0 base(1) base(4)
     m 0
     &&--blue
-      c $blue base(1) base(4)
+      c v("blue") base(1) base(4)
   &-footer
     c 0 base(1)
   &-row
@@ -41,10 +41,10 @@
       &.navigation-focus
         c 0 0 base(6)
     &yellow
-      c fg("primary") $yellow $t
+      c fg("primary") base(6) $t
     ../--responsive &unread::before
       bgi none
-      c 0 0 $blue
+      c 0 0 v("blue")
 .tint-box
   c 0 0 base(4)
 .body > div.d-flex

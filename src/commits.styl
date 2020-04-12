@@ -1,10 +1,10 @@
 .commit
   &-loader .loader-error
-    c $red
+    c v("red")
   &-link
-    c $yellow
+    c v("yellow")
   &-author-section
-    c $blue
+    c v("blue")
   &-desc
     &+^[0]-branches
       btc base(1)
@@ -21,17 +21,17 @@
     c fg("primary") base(1) base(2)
     set-font "mono"
     .user
-      c $blue
+      c v("blue")
   &-sha
-    c $yellow base(1) base(5)
+    c v("yellow") base(1) base(5)
   & &-title .issue-link
-    c $blue
+    c v("blue")
   & &-title, &-group-title, a
     c fg("primary")
   &-tease
-    c $blue base(1) base(4)
+    c v("blue") base(1) base(4)
     &-sha
-      c $blue
+      c v("blue")
     &-contributors
       bt $b
       c 0 0 base(9)
@@ -50,18 +50,18 @@
       &desc pre, &author
         c fg("faded")
 .full-commit
-  c $blue base(1) base(4)
+  c v("blue") base(1) base(4)
   .branches-list li
     c fg("gray")
     &.loading, &.pull-request
       c fg("faded")
   .btn-outline
     &:not(:disabled):hover
-      c $blue $blue
+      c v("blue") v("blue")
     &, &:disabled
       c 0 base(1)
   p.commit-title
-    c $blue
+    c v("blue")
   .sha-block
     c fg("faded")
     fs 14px
@@ -71,7 +71,7 @@
       &:hover
         c 0 base(1)
     & > .sha
-      c $blue
+      c v("blue")
   .commit-meta
     c 0 base(1) base(5)
 .file-commit-form--full
@@ -88,9 +88,9 @@
 div.commit-build-statuses, .link-gray
   c fg("faded")
   &:hover
-    c $blue
+    c v("blue")
   &-dark, body &-dark
-    c $blue
+    c v("blue")
     &:hover, body &:hover
       td underline
 -expander

@@ -19,8 +19,8 @@ div[style*="height: 1px;"]
               c 0 $color
               ~/-icon
                 c 0 0 $color
-        experiment-color('green', $green)
-        experiment-color('purple', $purple)
+        experiment-color('green', v("green"))
+        experiment-color('purple', v("purple"))
       &.open, &.selected
         c 0 0 base(4)
 .billing-
@@ -37,11 +37,11 @@ div[style*="height: 1px;"]
       c 0 0 base(5)
     .coupon
       &-label:after
-        bbc $teal
+        bbc v("teal")
       &.expiring td
-        c $yellow $yellow t("yellow")
+        c v("yellow") v("yellow") t("yellow")
       td
-        c $teal $teal t("teal")
+        c v("teal") v("teal") t("teal")
   &line-item
     btc base(1)
   &manager-banner
@@ -55,9 +55,9 @@ div[style*="height: 1px;"]
 .payment-history
   $statusColors = {
     currency: fg("primary")
-    succeded: $green
+    succeded: v("green")
     refunded: fg("faded")
-    failed: $red
+    failed: v("red")
   }
   for $k, $v in $statusColors
     .{$k} .status
@@ -67,9 +67,9 @@ div[style*="height: 1px;"]
 .discounted-original-price
   c fg("faded")
 .golden-ticket-banner
-  btc $yellow
+  btc v("yellow")
 .bt-pp-cancel
-  c $red
+  c v("red")
 .paypal-container
   c 0 0 base(2)
 .braintree-paypal-loggedin

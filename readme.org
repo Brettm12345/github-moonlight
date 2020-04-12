@@ -1,4 +1,5 @@
-# Created 2020-04-12 Sun 05:13
+# Created 2020-04-12 Sun 12:11
+#+TITLE: 
 #+AUTHOR: Brett Mandler
 #+startup: nofold
 #+macro: badge #+HTML: <a href="$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
@@ -99,6 +100,7 @@ These are the fonts used in the screenshots
 #+html: <details><summary>File Editor</summary><img src="screenshots/file-editor.png" alt="File Editor" width="100%" /></details>
 #+html: <details><summary>Projects</summary><img src="screenshots/projects.png" alt="Projects" width="100%" /></details>
 #+html: <details><summary>Community</summary><img src="screenshots/community.png" alt="Community" width="100%" /></details>
+#+html: <details><summary>GraphQL Explorer</summary><img src="screenshots/graphql.png" alt="GraphQL Explorer" width="100%" /></details>
 ** Issues
 
 If you find any places where this theme is incomplete please do not hesitate to

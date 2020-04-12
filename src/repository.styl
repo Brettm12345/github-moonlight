@@ -3,7 +3,7 @@
 .num
   c fg("secondary")
 .social-count
-  c $blue base(1) base(5)
+  c v("blue") base(1) base(5)
   &:hover
     c fg("light")
 .js-recent-activity-container > div > div,
@@ -17,10 +17,10 @@
     &:hover
       c 0 0 base(2)
     .octicon-pencil
-      c $indigo
+      c v("indigo")
       ease color
       ../:hover ^[2..-1]
-        c $blue
+        c v("blue")
 table
   &.files
     c fg("primary") base(1) base(4)
@@ -35,7 +35,7 @@ table
           ease background-color, border-color, color
           &:hover, &:focus
             b $b
-            c $blue base(1) base(2)
+            c v("blue") base(1) base(2)
             td none
       td
         c 0 base(1)

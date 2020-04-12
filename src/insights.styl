@@ -12,25 +12,25 @@ text
     p 8px
 .c
   &add
-    c $green
+    c v("green")
   &del
-    c $red
+    c v("red")
 .graphs
   .path
-    vc 0 $teal
+    vc 0 v("teal")
   .dot
-    vc $teal $teal
+    vc v("teal") v("teal")
   &.axis
     c 0 base(1)
   .dir
     c fg("primary")
   .area
-    vc $teal
+    vc v("teal")
 .code-frequency
   .addition
-    vc $green
+    vc v("green")
   .deletion
-    vc $red
+    vc v("red")
 .community-checklist .progress
   c 0 0 base(8)
 table.capped-list
@@ -51,10 +51,10 @@ table.capped-list
 .pulse-section
   c fg("faded")
 .contrib-person path
-  vc $orange
+  vc v("orange")
 #contributors-master svg.viz
   c 0 0 base(4)
 .rule
   bb $b
 .community-checklist .progress-bar
-  bg linear-gradient(90deg,$yellow,$orange,$green)
+  bg linear-gradient(90deg,v("yellow"),v("orange"),v("green"))

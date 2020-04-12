@@ -1,15 +1,15 @@
 $cmColors = {
-  atom: $blue
-  attribute: $yellow
+  atom: v("blue")
+  attribute: v("yellow")
   punctuation: fg("primary")
-  comment: $indigo
-  def: $blue
-  number: $orange
-  property: $teal
-  operator: $cyan
-  string: $green
-  string-2: $green
-  keyword: $purple
+  comment: v("indigo")
+  def: v("blue")
+  number: v("orange")
+  property: v("teal")
+  operator: v("cyan")
+  string: v("green")
+  string-2: v("green")
+  keyword: v("purple")
 }
 map-record($cmColors, '.cm-', color)
 code, pre, tt
@@ -22,87 +22,77 @@ code, pre, tt
     c fg("primary") base(1) base(5)
   .CodeMirror-
     /&gutter&linenumbers, &gutters
-      c $indigo base(1) base(4)
+      c v("indigo") base(1) base(4)
     &lines
       c 0 0 base(5)
     &linenumber
-      c $indigo
+      c v("indigo")
 .code .s1
-  c $green
+  c v("green")
 .pl-
-  &c /* comment, punctuation.definition.comment, string.comment */
-    &, & a
-      c $indigo
+  &c, &c a
+    c v("indigo")
   &c1
-    c $purple
-  &s, &s > a
-    c $green
-  &s &v /* string variable */
+    c v("purple")
+  &sr &sre, &sr &sra, &s
+    &, & a
+      c v("green")
+  &s1, &s &v
     c fg("primary")
-  &e, &en /* entity.name */
-    c $blue
+  &e, &en
+    c v("blue")
   &s1 &kos
-    c $cyan
-  &ent /* string source */
+    c v("cyan")
+  &v, &s > &smi, &ent
     c alt("red")
-  &k /* keyword, storage, storage.type */
-    c $purple
-  &s &pse &s1, &pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */
-    c $cyan
-  &sr /* string.regexp */
-    c $cyan
-  &sr &cce /* string.regexp constant.character.escape */
-    c alt("red")
-  &s, &sr &sre, &sr &sra /* string.regexp string.regexp.arbitrary-repitition */
-    c $green
-  &v /* variable */
-    c alt("red")
-  &smw /* sublimelinter.mark.warning */
-    c $yellow
-  &bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
-    c $red
-  &ii /* invalid.illegal */
-    c fg("light") 0 $red
-  &c2 /* carriage-return */
-    c fg("light") 0 $red
-  &c2::before /* carriage-return */
+  &k
+    c v("purple")
+  &s &pse &s1, &pds
+    c v("cyan")
+  &sr
+    c v("cyan")
+    ^[0]cce
+      c alt("red")
+      fw bold
+  &smw
+    c v("yellow")
+  &bu
+    c v("red")
+  &c2, &ii
+    c fg("light") 0 v("red")
+  &c2::before
     content "^M"
-  &sr &cce /* string.regexp constant.character.escape */
-    c alt("red")
+  &ml
+    c v("orange")
+  &mh &en, &ms
+    c v("cyan")
+  &mh
+    c v("green")
     fw bold
-  &ml /* markup.list */
-    c $orange
-  &mh &en, &ms /* met,.separator */
-    c $cyan
-  &mh /* markup.heading */
-    c $green
-    fw bold
-  &mi /* markup.italic */
-    c $yellow
+  &mi
+    c v("yellow")
     font-style italic
-  &mb /* markup.bold */
+  &mb
     c fg("light")
     fw bold
-  &md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
-    c $red 0 t("red")
-  &mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
-    c $teal 0 t("teal")
-  &mc /* markup.changed, punctuation.definition.changed */
-    c $cyan 0 t("cyan")
-  &mdr /* meta.diff.range */
-    c $teal
+  &md
+    c v("red") 0 t("red")
+  &mi1
+    c v("teal") 0 t("teal")
+  &mc
+    c v("cyan") 0 t("cyan")
+  &mdr
+    c v("teal")
     fw bold
   &pse
-    c $cyan
-  &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
+    c v("cyan")
+  &ba
     c base(9)
-  &s1
-    c fg("primary")
   &smi
-    c $yellow
+    c v("yellow")
   &kos
     c fg("secondary")
-  &sg /* sublimelinter.gutter-mark */
+  &sg
     c fg("faded")
-  &corl /* constant.other.reference.link, string.other.link */
+  &corl
     td underline

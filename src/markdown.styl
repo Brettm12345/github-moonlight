@@ -16,7 +16,7 @@
     &:hover
       c 0 0 base(2)
       &::marker
-        c $blue
+        c v("blue")
   del
     c base(9)
   /.js-commit-preview &
@@ -28,9 +28,9 @@
     ease color
     td underline
     &:hover
-      c $blue
+      c v("blue")
   .absent
-    c $red
+    c v("red")
   img
     c 0 0 base(4)
   hr
@@ -66,7 +66,7 @@
   h1, h2, h3, h4, h5, h6
     c 0 base(7)
     .octicon-link
-      c $cyan
+      c v("cyan")
       o 0
       visibility visible
       transform scale(1.1)
@@ -90,6 +90,6 @@
     c fg("light") base(1) base(4)
     ease border-color, background-color
     &:hover
-      c 0 $blue base(8)
+      c 0 v("blue") base(8)
     .icon
       inv()

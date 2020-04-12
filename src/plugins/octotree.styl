@@ -4,7 +4,7 @@ i[class*="octotree-icon"]::before
   &sidebar
     & ^[0]ads
       b $b
-      c fg("primary") $blue t("blue")
+      c fg("primary") v("blue") t("blue")
       a
         c fg("light")
   &sidebar&github-sidebar
@@ -24,7 +24,7 @@ i[class*="octotree-icon"]::before
             & ^[-2..-2]anchor
               c fg("secondary")
             $icon = {
-              open: $blue
+              open: v("blue")
               closed: fg("faded")
             }
             for $k, $v in $icon
