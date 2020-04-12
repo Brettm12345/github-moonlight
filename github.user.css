@@ -3776,7 +3776,8 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
-  table.files tr.navigation-focus {
+  table.files tr.navigation-focus td,
+  table.files tr[aria-selected=true] td {
     background-color: var(--base-6) !important;
   }
   table.files tr.up-tree {
@@ -3796,13 +3797,10 @@
   table.files tr td {
     border-color: var(--base-1) !important;
   }
-  table.files tr.navigation-focus table.files tr td,
-  table.files tr[aria-selected=true] table.files tr td {
-    background-color: var(--base-6) !important;
+  table.files tr td.message {
+    color: var(--text-faded) !important;
   }
-  table.files tr td.age {
-    color: var(--text-primary) !important;
-  }
+  table.files tr td.age,
   table.files tr td.icon {
     color: var(--text-primary) !important;
   }

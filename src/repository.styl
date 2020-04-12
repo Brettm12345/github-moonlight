@@ -26,8 +26,9 @@ table
     c fg("primary") base(1) base(4)
     tr
       ease background-color
-      &.navigation-focus
-        c 0 0 base(6)
+      &.navigation-focus, &[aria-selected=true]
+        td
+          c 0 0 base(6)
       &.up-tree
         c 0 base(1)
         a
@@ -39,9 +40,7 @@ table
             td none
       td
         c 0 base(1)
-        ^[2].navigation-focus &, ^[2][aria-selected=true] &
-          c 0 0 base(6)
-        &.age
-          c fg("primary")
-        &.icon
+        &.message
+          c fg("faded")
+        &.age, &.icon
           c fg("primary")
