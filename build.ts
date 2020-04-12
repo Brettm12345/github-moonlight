@@ -7,6 +7,8 @@ import * as fs from "fs";
 import * as stylus from "stylus";
 import * as pkg from "./package.json";
 
+const Color = require("color");
+
 type Dictionary = Record<string, string>;
 
 const palette = {
@@ -68,29 +70,51 @@ const variables = (type: "color" | "text" | "select") => (
 
 const colors = variables("color");
 const textVars = variables("text");
+const prefix = (str: string): Endomorphism<string> => x => `${str}-${x}`;
+const suffix = (str: string): Endomorphism<string> => x => `${x}-${str}`;
 const userVariables = pipe(
   [
     [{ ...palette, calendar: palette.teal }],
-    [text, { handleKey: k => `text-${k}` }],
+    [text, { handleKey: prefix("text") }],
     [
       { thumb: text.dark + 30, track: gray[2] },
-      { handleKey: k => `scrollbar-${k}` }
+      { handleKey: prefix("scrollbar") }
     ],
     [
       {
         bg: palette.blue,
         fg: text.light
       },
-      { handleKey: k => `selection-${k}` }
+      { handleKey: prefix("selection") }
     ],
     [
       palette,
       {
-        handleKey: k => `${k}-transparent`,
+        handleKey: suffix("desaturated"),
+        handleValue: hex =>
+          Color({ hex })
+            .desaturate(0.5)
+            .hex()
+      }
+    ],
+    [
+      palette,
+      {
+        handleKey: suffix("light"),
+        handleValue: hex =>
+          Color({ hex })
+            .lighten(0.1)
+            .hex()
+      }
+    ],
+    [
+      palette,
+      {
+        handleKey: suffix("transparent"),
         handleValue: v => v + 33
       }
     ],
-    [gray, { handleKey: i => `base-${i}` }]
+    [gray, { handleKey: prefix("base") }]
   ],
   chain(tupled(colors))
 ).concat(
@@ -114,9 +138,10 @@ const userVariables = pipe(
           size: "14px"
         },
         {
-          handleKey: k => `ui-font-${k}`
+          handleKey: prefix("ui-font")
         }
       ],
+
       [
         {
           family: "monospace",
@@ -124,17 +149,17 @@ const userVariables = pipe(
           size: "100%"
         },
         {
-          handleKey: k => `mono-font-${k}`
+          handleKey: prefix("mono-font")
         }
       ],
-      [{ "selection-border": "none" }],
+      [{ "selection-border": "none", "max-width": "1012px" }],
       [
         { size: "6px", radius: "0px" },
-        { handleKey: k => `scrollbar-chrome-${k}` }
+        { handleKey: prefix("scrollbar-chrome") }
       ],
       [
         ["0 2px 5px 0 rgba(0, 0, 0, 0.26)", "0 4px 8px 0 rgba(0, 0, 0, 0.4)"],
-        { handleKey: k => `elevation-${k}` }
+        { handleKey: prefix("elevation") }
       ]
     ],
     chain(tupled(textVars))
