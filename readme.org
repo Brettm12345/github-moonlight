@@ -1,5 +1,5 @@
-# Created 2020-04-12 Sun 14:03
-#+TITLE: 
+# Created 2020-04-12 Sun 15:49
+#+OPTIONS: title:nil date:nil '
 #+AUTHOR: Brett Mandler
 #+startup: nofold
 #+macro: badge #+HTML: <a href="$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
