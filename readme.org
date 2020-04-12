@@ -1,4 +1,4 @@
-# Created 2020-04-11 Sat 23:18
+# Created 2020-04-12 Sun 02:10
 #+TITLE: 
 #+AUTHOR: Brett Mandler
 #+export_file_name: ../readme
@@ -97,6 +97,7 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Api Docs</summary><img src="screenshots/api.png" alt="Api Docs" width="100%" /></details>
 #+html: <details><summary>Actions</summary><img src="screenshots/actions.png" alt="Actions" width="100%" /></details>
 #+html: <details><summary>Projects</summary><img src="screenshots/projects.png" alt="Projects" width="100%" /></details>
+#+html: <details><summary>Community</summary><img src="screenshots/community.png" alt="Community" width="100%" /></details>
 ** Issues
 
 If you find any places where this theme is incomplete please do not hesitate to

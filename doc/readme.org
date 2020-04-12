@@ -94,6 +94,7 @@ These are the fonts used in the screenshots
 {{{screenshot(Api Docs,api)}}}
 {{{screenshot(Actions,actions)}}}
 {{{screenshot(Projects,projects)}}}
+{{{screenshot(Community,community)}}}
 ** Issues
 
 If you find any places where this theme is incomplete please do not hesitate to
