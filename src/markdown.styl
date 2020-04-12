@@ -1,5 +1,22 @@
 .markdown-body
   lh 1.9
+  details[open=""] summary
+    bb 1px solid base(7)
+    my 16px
+  details summary
+    b 1px solid $t
+    ease background-color, border-color, color
+    p 5px 10px
+    m 3px -10px
+    &::marker
+      c fg("faded")
+      ease color
+    &:focus
+      outline-color fg("faded")
+    &:hover
+      c 0 0 base(2)
+      &::marker
+        c $blue
   del
     c base(9)
   /.js-commit-preview &
