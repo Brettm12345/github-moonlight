@@ -162,7 +162,7 @@ ${userVariables
   .join("\n")}
 @preprocessor uso
 ==/UserStyle== */
-@-moz-document domain('githubusercontent.com'), regexp('https?://((developer|gist)\.)?github\.com/.*'), domain('github.community') {
+@-moz-document regexp('.*github.*') {
   :root {
 ${userVariables.map(([_, k]) => `--${k}: /*[[${k}]]*/;`).join("\n")}
   }

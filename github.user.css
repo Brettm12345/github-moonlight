@@ -71,7 +71,7 @@
 @var text elevation-2 "Elevation 2" 0 4px 8px 0 rgba(0, 0, 0, 0.4)
 @preprocessor uso
 ==/UserStyle== */
-@-moz-document domain('githubusercontent.com'), regexp('https?://((developer|gist).)?github.com/.*'), domain('github.community') {
+@-moz-document regexp('.*github.*') {
   :root {
 --blue: /*[[blue]]*/;
 --blue-dark: /*[[blue-dark]]*/;
