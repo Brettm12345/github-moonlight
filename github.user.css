@@ -237,6 +237,9 @@
     padding: 10px !important;
     border-radius: 6px !important;
   }
+  p {
+    color: var(--text-paragraph);
+  }
   hr {
     border-bottom: 1px solid var(--base-1) !important;
   }
@@ -2157,7 +2160,8 @@
     background-color: var(--base-4) !important;
   }
   .markdown-body hr {
-    background-color: var(--base-1) !important;
+    border-color: var(--base-5) !important;
+    background-color: var(--base-5) !important;
   }
   .markdown-body table th {
     color: var(--text-primary) !important;
@@ -4909,7 +4913,10 @@
 }
 @-moz-document domain("gist.github.com") {
   .js-gist-file-update-container.js-task-list-container.file-box {
-    background-color: var(--base-5) !important;
+    background-color: var(--base-3) !important;
+  }
+  .js-gist-file-update-container.js-task-list-container.file-box pre {
+    background-color: var(--base-4) !important;
   }
   .cm-s-github-light .CodeMirror-linenumber {
     color: var(--indigo) !important;
@@ -4920,18 +4927,22 @@
   .gisthead .pagehead-actions .octicon-mute {
     fill: var(--text-faded) !important;
   }
-  #gist-pjax-container {
+  .reponav-item-selected {
     background-color: var(--base-4) !important;
   }
-  #gist-pjax-container .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit,
-  #gist-pjax-container .discussion-timeline-actions,
-  #gist-pjax-container .reponav.js-repo-nav,
-  #gist-pjax-container .reponav-item,
-  #gist-pjax-container .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit.selected,
-  #gist-pjax-container .discussion-timeline-actions.selected,
-  #gist-pjax-container .reponav.js-repo-nav.selected,
-  #gist-pjax-container .reponav-item.selected {
-    background-color: var(--base-4) !important;
+  .reponav,
+  .reponav-item {
+    background-color: var(--base-3) !important;
+  }
+  .gist-banner {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
+  }
+  .gist-banner.gist-detail-intro {
+    background-image: none !important;
+  }
+  .gist-banner .lead {
+    color: var(--text-dark) !important;
   }
 }
 @-moz-document domain("developer.github.com") {

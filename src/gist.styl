@@ -1,13 +1,21 @@
 .js-gist-file-update-container.js-task-list-container.file-box
-  c 0 0 base(5)
+  c 0 0 base(3)
+  pre
+    c 0 0 base(4)
 .cm-s-github-light .CodeMirror-linenumber
   c $indigo
 .application-main
   mb 16px
 .gisthead .pagehead-actions .octicon-mute
   vc fg("faded")
-#gist-pjax-container
-  c 0 0 base(4)
-  .timeline-comment-wrapper.timeline-new-comment.js-comment-container.width-fit, .discussion-timeline-actions, .reponav.js-repo-nav, .reponav-item
-    &, &.selected
-      c 0 0 base(4)
+.reponav
+  &-item-selected
+    c 0 0 base(4)
+  &, &-item
+    c 0 0 base(3)
+.gist-banner
+  c 0 base(1) base(3)
+  &.gist-detail-intro
+    bgi none
+  .lead
+    c fg("dark")
