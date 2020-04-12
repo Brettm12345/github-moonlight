@@ -1,0 +1,13 @@
+a.module-linker
+  c inherit
+  --hover-colour $teal
+  $ballColors = {
+    default: $cyan
+    docs: $purple
+    external: $blue
+    maybe: $yellow
+    relative: $pink
+    stdlib: $teal
+  }
+  for $k, $v in $ballColors
+    --ball-colour-{$k} $v

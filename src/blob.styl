@@ -1,29 +1,30 @@
-blob($x, $c, $b)
+blob($x, $c)
   .blob-
     &code, &num
       &&-{$x}, &-{$x}
-        c $c 0 t($b)
+        c v($c) 0 t($c)
         .blob-code-marker::before
-          c $c
+          c v($c)
         .x
-          c base(1) 0 $c
+          c base(1) 0 v($c)
 
-blob('addition', $teal, 'teal')
-blob('deletion', $red, 'red')
+blob('addition', 'teal')
+blob('deletion', 'red')
 
 .blob-
   &code, &num
     &-expandable, &-hunk
       c 0 0 base(4)
-  &code-
-    &inner
+  &code
+    c 0 0 base(3)
+    &-inner
       c fg("primary")
       lh 1.8
       set-font "mono"
       &.highlighted, & .highlighted
         c 0 0 base(8)
   &num
-    c base(9) base(1) base(4)
+    c fg("dark") base(1) base(2)
     fw 600
     &-expandable
       .diff, .directional
@@ -31,8 +32,10 @@ blob('deletion', $red, 'red')
           c 0 $blue $blue
   &expanded
     & + tr:not(&), tr:not(&) + &
-      ~/code, ~/num
-        c 0 base(1) base(4)
+      & ^[0]num
+        c 0 base(1) base(2)
+      & ^[0]code
+        c 0 base(1) base(3)
 .CopyBlock
   b 1px solid $t
   ease border-color, background-color

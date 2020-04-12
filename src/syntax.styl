@@ -33,15 +33,17 @@ code, pre, tt
   &c /* comment, punctuation.definition.comment, string.comment */
     c $indigo
   &c1
-    c $orange
+    c $purple
   &s, &s > a
     c $green
   &s &v /* string variable */
     c fg("primary")
   &e, &en /* entity.name */
     c $blue
-  &ent, &smi, &s &s1 /* string source */
-    c light("red")
+  &s1 &kos
+    c $cyan
+  &ent /* string source */
+    c alt("red")
   &k /* keyword, storage, storage.type */
     c $purple
   &s &pse &s1, &pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */
@@ -49,11 +51,11 @@ code, pre, tt
   &sr /* string.regexp */
     c $cyan
   &sr &cce /* string.regexp constant.character.escape */
-    c light("red")
+    c alt("red")
   &s, &sr &sre, &sr &sra /* string.regexp string.regexp.arbitrary-repitition */
     c $green
   &v /* variable */
-    c $pink
+    c alt("red")
   &smw /* sublimelinter.mark.warning */
     c $yellow
   &bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
@@ -65,7 +67,7 @@ code, pre, tt
   &c2::before /* carriage-return */
     content "^M"
   &sr &cce /* string.regexp constant.character.escape */
-    c light("red")
+    c alt("red")
     fw bold
   &ml /* markup.list */
     c $orange
@@ -93,8 +95,12 @@ code, pre, tt
     c $cyan
   &ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
     c base(9)
-  &s1, &smi
-    c $pink
+  &s1
+    c fg("primary")
+  &smi
+    c $yellow
+  &kos
+    c fg("secondary")
   &sg /* sublimelinter.gutter-mark */
     c fg("faded")
   &corl /* constant.other.reference.link, string.other.link */

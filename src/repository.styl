@@ -1,9 +1,14 @@
 .branch-infobar
   c fg("placeholder") base(1) base(4)
+.num
+  c fg("secondary")
 .social-count
   c $blue base(1) base(5)
   &:hover
     c fg("light")
+.js-recent-activity-container > div > div,
+.repository-content > div.bg-white:first-child
+  c 0 0 base(2)
 #readme
   .Box-header
     ease background-color
@@ -19,24 +24,24 @@
 table
   &.files
     c fg("primary") base(1) base(4)
-    td
-      c 0 base(1)
-      &.age
-        c fg("primary")
-      &.icon
-        c fg("primary")
     tr
       ease background-color
-    tr.navigation-focus, tr[aria-selected=true]
+      &.navigation-focus
+        c 0 0 base(6)
+      &.up-tree
+        c 0 base(1)
+        a
+          b 1px solid $t
+          ease background-color, border-color, color
+          &:hover, &:focus
+            b $b
+            c $blue base(1) base(2)
+            td none
       td
-        c 0 0 base(5)
-.js-recent-activity-container > div > div
-  c 0 0 base(2)
-.repository-content > div.bg-white:first-child
-  c 0 0 base(2)
-.flash
-  c fg("light") base(1) base(4)
-  &-warn
-    c $yellow
-.num
-  c fg("secondary")
+        c 0 base(1)
+        ^[2].navigation-focus &, ^[2][aria-selected=true] &
+          c 0 0 base(6)
+        &.age
+          c fg("primary")
+        &.icon
+          c fg("primary")

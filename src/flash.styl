@@ -1,0 +1,12 @@
+.flash
+  c fg("light") base(1) base(4)
+  $states = {
+    error: "red"
+    success: "green"
+    warn: "yellow"
+  }
+  for $k, $v in $states
+    &-{$k}
+      c v($v) v($v) t($v)
+      .btn
+        c base(2) base(1) v($v)

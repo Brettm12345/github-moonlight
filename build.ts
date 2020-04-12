@@ -13,13 +13,13 @@ type Dictionary = Record<string, string>;
 
 const palette = {
   red: "#ff5370",
-  "red-light": "#ff757f",
+  "red-alt": "#ff757f",
   orange: "#ff995e",
   yellow: "#ffc777",
   green: "#c3e88d",
   teal: "#4fd6be",
   cyan: "#86e1fc",
-  "cyan-light": "#b4f9f8",
+  "cyan-alt": "#b4f9f8",
   blue: "#82aaff",
   "blue-dark": "#4976eb",
   pink: "#fca7ea",
