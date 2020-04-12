@@ -3297,6 +3297,10 @@
     color: var(--indigo) !important;
     opacity: 0.4 !important;
   }
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:hover,
+  .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:focus {
+    background-color: var(--base-4) !important;
+  }
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:hover .octicon,
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:focus .octicon {
     color: var(--blue) !important;
@@ -3309,7 +3313,6 @@
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item:focus-within,
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input:focus-within {
-    border-color: var(--blue) !important;
     background-color: var(--base-6) !important;
   }
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .node-item:focus-within .TextInput-icon,
