@@ -1,11 +1,17 @@
 code .link-gray
-  fw 500
+  set-font "mono"
+a
+  ease color
 :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item)
   c fg("primary")
-  ease color
   &:hover
     c $blue
 .muted-link
   c fg("faded")
   &:hover
     c $blue
+.link-gray-dark
+  c $blue
+  octicon fg("dark")
+  &:hover
+    c light("blue")

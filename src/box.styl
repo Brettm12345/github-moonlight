@@ -22,8 +22,6 @@
     &:first-of-type
       bt 0
     bt $b
-    &--focus-gray.navigation-focus
-      c 0 0 base(7)
     &[style*="background"]
       c 0 0 base(8)
   &&--condensed &-row
@@ -32,7 +30,9 @@
     &gray
       c o o base(4)
     &focus-gray
-      c 0 0 base(5)
+      c 0 0 base(3)
+      &.navigation-focus
+        c 0 0 base(6)
     &yellow
       c fg("primary") $yellow $t
     ../--responsive &unread::before

@@ -3,17 +3,17 @@
     c $purple
   &meta-section .octicon
     va middle
-.issues-reset-query-icon
-  c 0 0 base(7)
+.issues-reset-query-
+  &icon
+    c 0 0 base(7)
 .js-selected-navigation-item
   // Fixes https://github.com/Brettm12345/github-moonlight/issues/34
   &.Header-link
     bt none
   &.subnav-item, .js-issue-row
-    ease background-color
-    &.Box-row--focus-gray
-      c 0 0 base(4)
-      &:hover
+    &, &.Box-row--focus-gray
+      ease background-color
+      &.navigation-focus, &:hover, &:focus
         c 0 0 base(5)
 .pinned-issue-item
   c 0 base(1) base(5)
