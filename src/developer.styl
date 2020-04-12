@@ -135,3 +135,22 @@ code
   for $k, $v in $rec
     .{$k}
       c v($v)
+.text-alpha, .text-beta, .text-delta, .text-gamma, h1, h2, h3, h4, h5
+  c fg("gray")
+.card
+  c 0 base(1) base(3)
+  ease background-color
+  /a&.bg-gray-light
+    &:hover, &:focus
+      c 0 0 base(6)
+.bg-blue
+  c 0 0 base(2)
+.text-black
+  c fg("light")
+.bg-custom-gradient
+  bg linear-gradient(180deg,base(3),$t)
+.link-mono
+  ease box-shadow, color
+  shadow 0 1px 0 0 t("blue")
+  &:hover
+    shadow 0 1px 0 0 v("blue")
