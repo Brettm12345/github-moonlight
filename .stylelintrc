@@ -7,7 +7,7 @@
     "selector-type-no-unknown": [
       true,
       {
-        "ignoreTypes": ["relative-time"]
+        "ignoreTypes": ["relative-time", "tab-container"]
       }
     ],
     "no-duplicate-selectors": null
