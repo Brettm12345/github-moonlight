@@ -2527,7 +2527,7 @@
     color: var(--blue) !important;
   }
   .muted-link {
-    color: var(--text-faded) !important;
+    color: var(--text-primary) !important;
   }
   .muted-link:hover {
     color: var(--blue) !important;
@@ -3532,7 +3532,7 @@
     background-color: var(--base-7) !important;
   }
   .profile-rollup-summarized+.profile-rollup-summarized {
-    border-color: var(--base-1) !important;
+    border-color: var(--base-6) !important;
   }
   .profile-rollup-wrapper+.profile-rollup-wrapper {
     border-top: 1px solid var(--base-5) !important;
@@ -4266,30 +4266,36 @@
     background-repeat: no-repeat !important;
     background-position: 50% 50% !important;
   }
+  .State--green,
   .State.State--green {
     border: 1px solid var(--teal) !important;
     color: var(--teal) !important;
     border-color: var(--teal) !important;
     background-color: var(--teal-transparent) !important;
   }
+  .State--green .octicon,
   .State.State--green .octicon {
     fill: var(--teal) !important;
   }
+  .State--purple,
   .State.State--purple {
     border: 1px solid var(--purple) !important;
     color: var(--purple) !important;
     border-color: var(--purple) !important;
     background-color: var(--purple-transparent) !important;
   }
+  .State--purple .octicon,
   .State.State--purple .octicon {
     fill: var(--purple) !important;
   }
+  .State--red,
   .State.State--red {
     border: 1px solid var(--red) !important;
     color: var(--red) !important;
     border-color: var(--red) !important;
     background-color: var(--red-transparent) !important;
   }
+  .State--red .octicon,
   .State.State--red .octicon {
     fill: var(--red) !important;
   }
@@ -4347,7 +4353,7 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link),
   .subnav-search-context .btn {
     color: var(--blue) !important;
   }
