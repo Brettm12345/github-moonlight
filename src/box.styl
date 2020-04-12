@@ -24,8 +24,13 @@
     bt $b
     &[style*="background"]
       c 0 0 base(8)
-  &&--condensed &-row
-    c 0 base(1) base(4)
+  &&--condensed
+    ^[0]-header
+      c 0 0 base(2)
+      & + ul
+        br $b
+    ^[0]-row
+      c 0 base(1) base(3)
   &-row--
     &gray
       c o o base(4)

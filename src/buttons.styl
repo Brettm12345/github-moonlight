@@ -4,19 +4,24 @@
     c fg("light") base(1) base(5)
     ease background-color, border-color
     &:disabled
-      &, &:hover
+      &, &:hover, &:focus
         c fg("faded") base(1) base(5)
-    &:hover
+    &:hover, &:focus
       bgi none
-      c fg("light") $blue base(7)
+      c fg("light") 0 base(7)
+      shadow none
   &&-outline
-    &.BtnGroup-item, &.tooltipped.tooltipped-sw
+    &, &.BtnGroup-item, &.tooltipped.tooltipped-sw
+      ease all
       c 0 0 base(3)
+      &:hover, &:focus
+        c 0 0 base(5)
   &-mktg
     c fg("light") base(1) rgba(black, 0.1)
   &-octicon
     c $blue
-    &:hover
+    &:hover, &:focus
       c fg("light")
-    &-danger:hover
-      c $red
+    &-danger
+      &:hover, &:focus
+        c $red

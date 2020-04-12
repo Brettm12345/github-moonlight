@@ -105,7 +105,11 @@
       c 0 0 base(6)
   &tabs
     c 0 base(1)
-    ~/tab-nav, &, a
+    ^[0]tab-nav, & a
+      c fg("dark")
+      ease color
+      &:hover, &:focus
+        c fg("primary")
       &.selected, &[aria-selected="true"], &[aria-current]
         bc base(1) base(1) base(4)
         c fg("light") 0 base(4)
