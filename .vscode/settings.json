@@ -1,8 +1,15 @@
 {
-  "cSpell.words": ["octicon", "pagehead", "reponav"],
+  "cSpell.words": [
+    "easings",
+    "octicon",
+    "pagehead",
+    "reponav",
+    "usercss",
+    "userstyle"
+  ],
   "stylelint.autoFix": true,
   "stylelint.additionalDocumentSelectors": ["stylus"],
-  "cSpell.enabled": false,
+  "cSpell.enabled": true,
   "stylusSupremacy.insertNewLineAroundBlocks": false,
   "stylusSupremacy.insertBraces": false,
   "stylusSupremacy.ignoreFiles": ["src/*.styl"],

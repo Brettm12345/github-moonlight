@@ -1,4 +1,4 @@
-# Created 2020-04-12 Sun 02:59
+# Created 2020-04-12 Sun 03:05
 #+AUTHOR: Brett Mandler
 #+startup: nofold
 #+macro: badge #+HTML: <a href="$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
@@ -7,6 +7,7 @@
 #+html: <div align="center">
 
 * Github Moonlight
+
 A dark userstyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
@@ -37,7 +38,7 @@ are welcome!
 
 **** Speed
 
-Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preproccessor on top of
+Github-Moonlight uses [[https://stylus-lang.com/docs/bifs.html#cachekeys][cached mixins]] from the stylus css preprocessor on top of
 compression to consolidate and minify selectors.
 
 **** Transitions
@@ -52,7 +53,7 @@ minimize boilerplate.
 
 **** Organization
 
-Unlike virtually every other usercss. This project is organized into relivant
+Unlike virtually every other usercss. This project is organized into relevant
 files making it easy to manage and extend the code.
 
 ** Recommendations
@@ -69,7 +70,7 @@ These are the fonts used in the screenshots
 | [[https://github.com/EnixCoda/Gitako][Gitako]]                              | GitHub File tree                              |
 | [[https://github.com/sindresorhus/hide-files-on-github][Hide Files]]        | Hides nonsensical files                       |
 | [[https://github.com/sindresorhus/refined-github][Refined Github]]          | Adds a number of small enhancements to github |
-| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]              | Displays notible forks on repo page           |
+| [[https://github.com/musically-ut/lovely-forks][Lovely Forks]]              | Displays notable forks on repo page           |
 | [[https://github.com/dderevjanik/github-vscode-icons][github-vscode-icons]] | Adds vscode like icons to github              |
 | [[https://github.com/OctoLinker/OctoLinker][OctoLinker]]                    | Links dependencies on github                  |
 
@@ -85,7 +86,7 @@ These are the fonts used in the screenshots
 #+html: <details><summary>Dashboard</summary><img src="screenshots/dashboard-vanilla.png" alt="Dashboard" width="100%" /></details>
 #+html: <details><summary>Pull Requests</summary><img src="screenshots/pull-requests.png" alt="Pull Requests" width="100%" /></details>
 #+html: <details><summary>File Finder</summary><img src="screenshots/file-finder.png" alt="File Finder" width="100%" /></details>
-#+html: <details><summary>Contriubution Tree</summary><img src="screenshots/contributions.png" alt="Contriubution Tree" width="100%" /></details>
+#+html: <details><summary>Contribution Tree</summary><img src="screenshots/contributions.png" alt="Contribution Tree" width="100%" /></details>
 #+html: <details><summary>Markdown</summary><img src="screenshots/markdown.png" alt="Markdown" width="100%" /></details>
 #+html: <details><summary>Issues</summary><img src="screenshots/issues.png" alt="Issues" width="100%" /></details>
 #+html: <details><summary>Diff</summary><img src="screenshots/diff.png" alt="Diff" width="100%" /></details>
@@ -105,7 +106,7 @@ is incomplete
 
 ** Discord Server
 
-Feel free to join our [[https://discord.gg/n5meNsX][discord server]] for support/inqueries or just to chat.
+Feel free to join our [[https://discord.gg/n5meNsX][discord server]] for support/inquiries or just to chat.
 
 ** Contributions
 
