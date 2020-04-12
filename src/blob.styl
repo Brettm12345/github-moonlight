@@ -12,8 +12,8 @@
         .x
           c base(1) 0 v($v)
   &code, &num
-    &-expandable, &-hunk
-      c 0 0 base(4)
+    &&-expandable, &&-hunk
+      c 0 0 base(7)
   &code
     c 0 0 base(3)
     &-inner
@@ -26,8 +26,13 @@
   &num
     c fg("dark") base(1) base(2)
     fw 600
-    {selector("&-expandable", ".diff, .directional", "&-expander:hover")}
-      c 0 v("blue") v("blue")
+    &-expandable
+      .diff, .directional
+        &-expander
+          ease background-color
+          c 0 0 base(7)
+          &:hover, &:focus
+            c 0 dark("blue") dark("blue")
   &expanded
     & + tr:not(&), tr:not(&) + &
       & ^[0]num

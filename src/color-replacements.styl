@@ -14,8 +14,10 @@ map-record($fgColors, '.text-', color)
 $borderColors = {
   blue-light: v("blue")
   gray-dark: base(1)
-  lg-left: base(1)
+  lg-left: base(6)
   lg-top: base(6)
+  lg-right: base(6)
+  lg-bottom: base(6)
 }
 map-record($borderColors, '.border-', border-color)
 $bgColors = {
@@ -32,7 +34,7 @@ $bgColors = {
   gray-dark: base(2)
   gray-2: base(7)
   pending: v("purple")
-  white: rgba(white, 0.005)
+  white: rgba(white, 0.008)
 }
 map-record($bgColors, '.bg-', background-color)
 for $direction in top left right bottom

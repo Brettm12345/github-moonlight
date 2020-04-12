@@ -33,8 +33,12 @@ body.page-responsive.pagehead
   &-actions .btn
     c 0 0 base(4)
   &, &-tabs-item, .repohead.experiment-repo-nav
-    c 0 base(1) base(3)
+    c fg("dark") $t base(3)
     octicon fg("faded")
+    &.selected
+      c fg("light") base(1)
+      bbc $t
+      octicon fg("secondary")
     // @stlint-ignore
     @media (min-width: 768px)
       c base(4)

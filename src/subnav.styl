@@ -7,8 +7,14 @@
     c 0 base(1) base(2)
     elevation 1
 .subnav-
-  &link.selected
-    bbc v("blue")
+  &link
+    c fg("dark")
+    &:hover
+      bbc base(9)
+      c fg("primary")
+    &.selected
+      bbc v("blue")
+      c fg("light")
   &bordered
     c 0 base(1)
   &item

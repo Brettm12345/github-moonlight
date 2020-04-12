@@ -279,6 +279,8 @@
     background-color: var(--base-3) !important;
   }
   .plan-choice,
+  .blob-num-expandable .diff-expander,
+  .blob-num-expandable .directional-expander,
   .TagsearchPopover-item,
   .TagsearchPopover-list-item,
   .TagsearchPopover-item .TagsearchPopover-item .blob-num,
@@ -485,11 +487,11 @@
     color: var(--base-1) !important;
     background-color: var(--red) !important;
   }
-  .blob-code-expandable,
-  .blob-num-expandable,
-  .blob-code-hunk,
-  .blob-num-hunk {
-    background-color: var(--base-4) !important;
+  .blob-code.blob-code-expandable,
+  .blob-num.blob-num-expandable,
+  .blob-code.blob-code-hunk,
+  .blob-num.blob-num-hunk {
+    background-color: var(--base-7) !important;
   }
   .blob-code {
     background-color: var(--base-3) !important;
@@ -511,10 +513,16 @@
     background-color: var(--base-2) !important;
     font-weight: 600 !important;
   }
-  .blob-num .blob-num-expandable .diff-expander:hover,
-  .blob-num .blob-num-expandable .directional-expander:hover {
-    border-color: var(--blue) !important;
-    background-color: var(--blue) !important;
+  .blob-num-expandable .diff-expander,
+  .blob-num-expandable .directional-expander {
+    background-color: var(--base-7) !important;
+  }
+  .blob-num-expandable .diff-expander:hover,
+  .blob-num-expandable .directional-expander:hover,
+  .blob-num-expandable .diff-expander:focus,
+  .blob-num-expandable .directional-expander:focus {
+    border-color: var(--blue-dark) !important;
+    background-color: var(--blue-dark) !important;
   }
   .blob-expanded + tr:not(.blob-expanded) .blob-num,
   tr:not(.blob-expanded) + .blob-expanded .blob-num {
@@ -593,6 +601,9 @@
   .Box-body {
     border-color: var(--base-1) !important;
   }
+  .Box-body .topic-tag {
+    background-color: var(--base-3) !important;
+  }
   .Box-body .help {
     color: var(--text-faded) !important;
   }
@@ -629,7 +640,7 @@
     background-color: var(--base-8) !important;
   }
   .Box.Box--condensed .Box-header {
-    background-color: var(--base-2) !important;
+    background-color: var(--base-3) !important;
   }
   .Box.Box--condensed .Box-header--blue {
     background-color: var(--base-4) !important;
@@ -974,11 +985,13 @@
   .border-blue-light {
     border-color: var(--blue) !important;
   }
-  .border-gray-dark,
-  .border-lg-left {
+  .border-gray-dark {
     border-color: var(--base-1) !important;
   }
-  .border-lg-top {
+  .border-lg-left,
+  .border-lg-top,
+  .border-lg-right,
+  .border-lg-bottom {
     border-color: var(--base-6) !important;
   }
   .bg-gray,
@@ -1015,7 +1028,7 @@
     background-color: var(--base-2) !important;
   }
   .bg-white {
-    background-color: rgba(255,255,255,0.005) !important;
+    background-color: rgba(255,255,255,0.008) !important;
   }
   .border-top {
     border-top: 1px solid var(--base-5) !important;
@@ -1201,7 +1214,7 @@
   }
   .full-commit .commit-meta {
     border-color: var(--base-1) !important;
-    background-color: var(--base-5) !important;
+    background-color: var(--base-4) !important;
   }
   .file-commit-form--full {
     color: var(--text-primary) !important;
@@ -1640,20 +1653,20 @@
   .review-comment {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-2) !important;
+    background-color: var(--base-3) !important;
   }
   .review-comment:target {
     box-shadow: var(--elevation-1) !important;
   }
   .review-thread-reply {
     border-color: var(--base-1) !important;
-    background-color: var(--base-2) !important;
+    background-color: var(--base-3) !important;
   }
   .review-thread-reply .form-control {
-    background-color: var(--base-3) !important;
+    background-color: var(--base-2) !important;
   }
   .inline-comment-form {
-    background-color: var(--base-3) !important;
+    background-color: var(--base-2) !important;
   }
   .previewable-comment-form {
     border-color: var(--base-1) !important;
@@ -1728,6 +1741,10 @@
   }
   .timeline-comment pre {
     background-color: var(--base-2) !important;
+  }
+  .bg-gray.p-2.js-resolvable-thread-toggler-container.border-bottom {
+    border-color: var(--base-1) !important;
+    background-color: var(--base-3) !important;
   }
   .dropdown-divider {
     border-color: var(--base-1) !important;
@@ -1875,6 +1892,17 @@
   .newsletter-frequency-choice h3 {
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
+  }
+  .topic .bg-white {
+    background-color: var(--base-3) !important;
+  }
+  article.bg-white,
+  .border.rounded-1.box-shadow-medium.bg-white {
+    background-color: var(--base-3) !important;
+  }
+  .tabnav-tabs[aria-label="Repository menu"] .tabnav-tab[aria-current] {
+    color: var(--text-light) !important;
+    background-color: var(--base-4) !important;
   }
   .drag-and-drop {
     color: var(--blue) !important;
@@ -2492,10 +2520,10 @@
     font-family: var(--mono-font-family) !important;
     font-weight: var(--mono-font-weight) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name) {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link) {
     color: var(--text-primary) !important;
   }
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):hover {
+  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item):not(.btn):not(.rgh-linkified-code):not(.field-name):not(.type-name):not(.subnav-link):hover {
     color: var(--blue) !important;
   }
   .muted-link {
@@ -3017,7 +3045,8 @@
   .pagehead,
   .pagehead-tabs-item,
   .pagehead .repohead.experiment-repo-nav {
-    border-color: var(--base-1) !important;
+    color: var(--text-dark) !important;
+    border-color: transparent !important;
     background-color: var(--base-3) !important;
   }
   .pagehead .octicon,
@@ -3026,6 +3055,18 @@
   .vcard-detail .octicon,
   .select-menu-header .octicon {
     color: var(--text-faded) !important;
+  }
+  .pagehead.selected,
+  .pagehead-tabs-item.selected,
+  .pagehead .repohead.experiment-repo-nav.selected {
+    color: var(--text-light) !important;
+    border-color: var(--base-1) !important;
+    border-bottom-color: transparent !important;
+  }
+  .pagehead.selected .octicon,
+  .pagehead-tabs-item.selected .octicon,
+  .pagehead .repohead.experiment-repo-nav.selected .octicon {
+    color: var(--text-secondary) !important;
   }
 @media (min-width: 768px) {
     .pagehead,
@@ -3526,9 +3567,6 @@
   }
   .profile-timeline-rollup-content li.d-block.mt-1.py-1 {
     background-color: var(--base-2) !important;
-  }
-  .profile-timeline-card.bg-white {
-    background-color: var(--base-5) !important;
   }
   .profile-timeline-month-heading.bg-white,
   .profile-timelineyear-list {
@@ -4280,8 +4318,16 @@
     background-color: var(--base-2) !important;
     box-shadow: var(--elevation-1) !important;
   }
+  .subnav-link {
+    color: var(--text-dark) !important;
+  }
+  .subnav-link:hover {
+    border-bottom-color: var(--base-9) !important;
+    color: var(--text-primary) !important;
+  }
   .subnav-link.selected {
     border-bottom-color: var(--blue) !important;
+    color: var(--text-light) !important;
   }
   .subnav-bordered {
     border-color: var(--base-1) !important;
@@ -4695,8 +4741,9 @@
   .topic-tag-outline {
     box-shadow: inset 0 0 0 1px var(--base-1) !important;
   }
-  .topic-tag-link:hover {
-    border-color: var(--blue) !important;
+  .topic-tag-link:hover,
+  .topic-tag-link:focus {
+    color: var(--text-light) !important;
     background-color: var(--base-7) !important;
   }
   .topic-tag-action,

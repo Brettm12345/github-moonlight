@@ -82,15 +82,15 @@ comment
       c 0 0 $commentDark
   /.review-
     &^[0]
-      c fg("primary") base(1) $commentDark
+      c fg("primary") base(1) $commentBg
       &:target
         elevation 1
     &thread-reply
-      c 0 base(1) $commentDark
+      c 0 base(1) $commentBg
       .form-control
-        c 0 0 $commentBg
+        c 0 0 $commentDark
       .inline-^[0]-form
-        c 0 0 $commentBg
+        c 0 0 $commentDark
   &-form
     .previewable-&
       c 0 base(1) $commentBg
@@ -139,3 +139,5 @@ button.reaction-summary-item
 .timeline-comment
   pre
     c 0 0 $commentDark
+.bg-gray.p-2.js-resolvable-thread-toggler-container.border-bottom
+  c 0 base(1) base(3)
