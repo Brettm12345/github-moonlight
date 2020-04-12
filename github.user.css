@@ -1805,17 +1805,13 @@
     border-bottom-color: var(--base-4) !important;
   }
   .dropdown-menu-w::before,
-  .dropdown-menu-dark-w::before {
-    border-right-color: var(--base-1) !important;
-  }
-  .dropdown-menu-w::after,
-  .dropdown-menu-dark-w::after {
-    border-right-color: var(--base-4) !important;
-  }
+  .dropdown-menu-dark-w::before,
   .dropdown-menu-e::before,
   .dropdown-menu-dark-e::before {
     border-left-color: var(--base-1) !important;
   }
+  .dropdown-menu-w::after,
+  .dropdown-menu-dark-w::after,
   .dropdown-menu-e::after,
   .dropdown-menu-dark-e::after {
     border-left-color: var(--base-2) !important;
