@@ -1,3 +1,10 @@
 .follow-list
-  &-info
-    c fg("faded")
+  & &-info
+    & > a:hover > span
+      octicon fg("primary")
+      c fg("light")
+    &, & > a > span
+      c fg("dark")
+      octicon fg("secondary")
+      &, & .octicon
+        ease color

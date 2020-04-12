@@ -7,8 +7,6 @@
       c 0 0 base(3)
     .help
       c fg("faded")
-  &--responsive, &row--unread
-    shadow inset 2px 0 0 v("blue")
   &--overlay
     c 0 base(1) base(2)
     elevation 1
@@ -21,11 +19,13 @@
   &-footer
     c 0 base(1)
   &-row
-    &:first-of-type
-      bt 0
     bt $b
+    &--unread
+      shadow inset 2px 0 0 v("blue")
     &[style*="background"]
       c 0 0 base(8)
+    &:first-of-type
+      bt 0
   &&--condensed
     & ^[0]-header
       c 0 0 base(3)

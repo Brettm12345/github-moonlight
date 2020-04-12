@@ -607,10 +607,6 @@
   .Box-body .help {
     color: var(--text-faded) !important;
   }
-  .Box--responsive,
-  .Boxrow--unread {
-    box-shadow: inset 2px 0 0 var(--blue) !important;
-  }
   .Box--overlay {
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
@@ -633,11 +629,14 @@
   .Box-row {
     border-top: 1px solid var(--base-1) !important;
   }
-  .Box-row:first-of-type {
-    border-top: 0 !important;
+  .Box-row--unread {
+    box-shadow: inset 2px 0 0 var(--blue) !important;
   }
   .Box-row[style*="background"] {
     background-color: var(--base-8) !important;
+  }
+  .Box-row:first-of-type {
+    border-top: 0 !important;
   }
   .Box.Box--condensed .Box-header {
     background-color: var(--base-3) !important;
@@ -1461,6 +1460,10 @@
   .toolbar-item,
   .toolbar-item .menu-target,
   .UnderlineNav-octicon,
+  .follow-list .follow-list-info,
+  .follow-list .follow-list-info > a > span,
+  .follow-list .follow-list-info .octicon,
+  .follow-list .follow-list-info > a > span .octicon,
   .lia-link-navigation,
   .sub-nav ul a {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
@@ -2274,6 +2277,7 @@
   .octicon-repo-forked {
     margin-bottom: 0.1em !important;
   }
+  .octicon-git-pull-request,
   .octicon.merged {
     color: var(--purple) !important;
   }
@@ -2294,8 +2298,7 @@
   }
   .octicon-repo-push,
   .octicon-check,
-  .octicon.open,
-  .octicon-git-pull-request {
+  .octicon.open {
     color: var(--green) !important;
   }
   .octicon-rocket {
@@ -2436,6 +2439,9 @@
   }
   .community-checklist .progress-bar {
     background: linear-gradient(90deg, var(--yellow), var(--orange), var(--green)) !important;
+  }
+  .summary-stats li .octicon-git-branch {
+    color: var(--green) !important;
   }
   .issue-keyword,
   .issue-meta-section .octicon {
@@ -2867,7 +2873,8 @@
   .notification-navigation .notification-configure-filters .octicon,
   .numbers-summary .octicon,
   .UnderlineNav-item:hover .octicon,
-  .UnderlineNav-item:focus .octicon {
+  .UnderlineNav-item:focus .octicon,
+  .follow-list .follow-list-info > a:hover > span .octicon {
     color: var(--text-primary) !important;
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
@@ -3061,7 +3068,9 @@
   }
   .pagehead.selected .octicon,
   .pagehead-tabs-item.selected .octicon,
-  .pagehead .repohead.experiment-repo-nav.selected .octicon {
+  .pagehead .repohead.experiment-repo-nav.selected .octicon,
+  .follow-list .follow-list-info .octicon,
+  .follow-list .follow-list-info > a > span .octicon {
     color: var(--text-secondary) !important;
   }
 @media (min-width: 768px) {
@@ -4829,8 +4838,12 @@
   .usage-bar.exceeded .progress {
     background-color: var(--red) !important;
   }
-  .follow-list-info {
-    color: var(--text-faded) !important;
+  .follow-list .follow-list-info > a:hover > span {
+    color: var(--text-light) !important;
+  }
+  .follow-list .follow-list-info,
+  .follow-list .follow-list-info > a > span {
+    color: var(--text-dark) !important;
   }
   .avatar-before-user-status {
     border-color: var(--base-1) !important;
