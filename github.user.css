@@ -284,7 +284,6 @@
   #readme .Box-header,
   table.files tr,
   .SelectMenu-item,
-  .select-menu-item,
   .topic-tag,
   .lia-autocomplete-content,
   .lia-autocomplete-footer,
@@ -775,8 +774,11 @@
     opacity: 1 !important;
     fill: var(--calendar) !important;
   }
+  .activity-overview-box.border-top {
+    border-top: none !important;
+  }
   .graph-before-activity-overview {
-    background-color: var(--base-5) !important;
+    background-color: var(--base-4) !important;
   }
   .calendar-graph text.wday,
   .calendar-graph text.month {
@@ -877,16 +879,16 @@
     background-color: var(--purple) !important;
   }
   .border-top {
-    border-top: 1px solid var(--base-1) !important;
+    border-top: 1px solid var(--base-5) !important;
   }
   .border-left {
-    border-left: 1px solid var(--base-1) !important;
+    border-left: 1px solid var(--base-5) !important;
   }
   .border-right {
-    border-right: 1px solid var(--base-1) !important;
+    border-right: 1px solid var(--base-5) !important;
   }
   .border-bottom {
-    border-bottom: 1px solid var(--base-1) !important;
+    border-bottom: 1px solid var(--base-5) !important;
   }
   .border {
     border: 1px solid var(--base-1) !important;
@@ -1185,6 +1187,7 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-6) !important;
   }
+  .dashboard .Details-content--hidden,
   .dashboard :not(code) .Box {
     background-color: var(--base-3) !important;
   }
@@ -1249,8 +1252,11 @@
     filter: invert(1);
   }
   .news .Details button,
+  .details-reset[role="button"],
+  .details-reset[role="button"] > summary,
   .summary-stats li a,
   .pagination a,
+  .select-menu-item,
   .SideNav-item {
     transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
@@ -1259,6 +1265,19 @@
   }
   .DashedConnection::before {
     border-bottom-color: var(--base-1) !important;
+  }
+  .details-reset[role="button"],
+  .details-reset[role="button"] > summary {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+    background-color: var(--base-4) !important;
+  }
+  .details-reset[role="button"]:hover,
+  .details-reset[role="button"] > summary:hover,
+  .details-reset[role="button"]:focus,
+  .details-reset[role="button"] > summary:focus {
+    color: var(--blue) !important;
+    background-color: var(--base-6) !important;
   }
   .diffstat {
     color: var(--text-gray) !important;
@@ -1427,6 +1446,10 @@
     margin-bottom: 3px !important;
     margin-right: 2px !important;
   }
+  .dropdown-menu .octicon-check,
+  .dropdown-menu-dark .octicon-check {
+    color: var(--green) !important;
+  }
   .dropdown-menu-ne::before,
   .dropdown-menu-dark-ne::before,
   .dropdown-menu-nw::before,
@@ -1482,12 +1505,12 @@
     color: var(--text-primary) !important;
   }
   .dropdown-item {
-    transition: background 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+    transition: background, color, background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .dropdown-item:hover,
   .dropdown-item:focus {
     color: var(--text-light) !important;
-    background-color: var(--base-7) !important;
+    background-color: var(--base-6) !important;
   }
   .shaded-background {
     background: linear-gradient(var(--base-2), var(--base-5)) !important;
@@ -1749,8 +1772,7 @@
     stroke: var(--base-7) !important;
   }
   text[fill="#000"],
-  text[fill="#6a737d"],
-  text[text-anchor="middle"] {
+  text[fill="#6a737d"] {
     fill: var(--text-primary) !important;
   }
   .viz .code-frequency {
@@ -3388,10 +3410,6 @@
   .select-menu-modal {
     box-shadow: var(--elevation-2) !important;
   }
-  .select-menu-modal-right.details-reset.details-overlay.mb-2,
-  .select-menu-modal .js-org-filter-link.f6.py-1.pr-2.pl-1.rounded-1.mr-2.mb-2.subnav-item.css-truncate.css-truncate-target {
-    background-color: var(--base-4) !important;
-  }
   .user-key-email,
   .user-key-badge {
     border-color: var(--base-1) !important;
@@ -3571,7 +3589,7 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
-  .btn-link:not(.IssueLabel):not(.tabnav-tab),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item),
   .subnav-search-context .btn {
     color: var(--blue) !important;
   }
