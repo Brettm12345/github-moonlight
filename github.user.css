@@ -1746,10 +1746,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .issue-meta-section .octicon {
     vertical-align: middle !important;
   }
-  .IssueLabel,
-  .IssueLabel > a[style*="#000"] {
-    background-color: var(--base-1) !important;
-  }
   .issues-reset-query-icon {
     background-color: var(--base-7) !important;
   }
