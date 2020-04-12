@@ -7,6 +7,8 @@ import * as fs from "fs";
 import * as stylus from "stylus";
 import * as pkg from "./package.json";
 
+type Dictionary = Record<string, string>;
+
 const palette = {
   red: "#ff5370",
   "red-light": "#ff757f",
@@ -55,8 +57,8 @@ interface VariableOptions {
   handleKey?: Endomorphism<string>;
   handleValue?: Endomorphism<string>;
 }
-const variables = (type: "color" | "text") => (
-  rec: string[] | Record<string, string>,
+const variables = (type: "color" | "text" | "select") => (
+  rec: string[] | Dictionary,
   { handleKey = identity, handleValue = identity }: VariableOptions = {}
 ) =>
   pipe(
@@ -65,8 +67,7 @@ const variables = (type: "color" | "text") => (
   );
 
 const colors = variables("color");
-const vars = variables("text");
-
+const textVars = variables("text");
 const userVariables = pipe(
   [
     [{ ...palette, calendar: palette.teal }],
@@ -136,7 +137,7 @@ const userVariables = pipe(
         { handleKey: k => `elevation-${k}` }
       ]
     ],
-    chain(tupled(vars))
+    chain(tupled(textVars))
   )
 );
 

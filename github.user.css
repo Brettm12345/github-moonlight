@@ -3103,8 +3103,8 @@
     color: var(--yellow) !important;
   }
   *:not(select) {
-    scrollbar-color: var(--scrollbar-thumb) !important;
-    scrollbar-width: var(--scrollbar-width) !important;
+    scrollbar-color: var(--scrollbar-thumb) var(--base-2) !important;
+    scrollbar-width: thin !important;
   }
   ::-webkit-scrollbar,
   .integrations-select-repos::-webkit-scrollbar {
