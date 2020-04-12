@@ -938,6 +938,16 @@
   .bg-purple-light {
     background-color: var(--purple-transparent) !important;
   }
+  .bg-purple,
+  .bg-pending {
+    background-color: var(--purple) !important;
+  }
+  .bg-red {
+    background-color: var(--red) !important;
+  }
+  .bg-green {
+    background-color: var(--green) !important;
+  }
   .bg-blue,
   .bg-gray-2 {
     background-color: var(--base-7) !important;
@@ -950,9 +960,6 @@
   }
   .bg-white {
     background-color: var(--base-5) !important;
-  }
-  .bg-pending {
-    background-color: var(--purple) !important;
   }
   .border-top {
     border-top: 1px solid var(--base-5) !important;
@@ -1057,7 +1064,7 @@
   }
   .conversation-list-heading {
     color: var(--text-faded) !important;
-    border-color: var(--base-1) !important;
+    border-color: var(--base-6) !important;
   }
   .conversation-list-heading .inner {
     border: 1px solid var(--base-1) !important;
@@ -1070,7 +1077,20 @@
     color: var(--text-faded) !important;
   }
   .simple-conversation-list > li {
-    border-color: var(--base-1) !important;
+    border-color: var(--base-6) !important;
+  }
+  g.bar {
+    fill: var(--green) !important;
+  }
+  g.mini {
+    fill: var(--orange) !important;
+  }
+  g.active rect {
+    fill: var(--red) !important;
+  }
+  .dot text,
+  circle.focus {
+    fill: var(--text-primary) !important;
   }
   .commit-loader .loader-error {
     color: var(--red) !important;
@@ -1761,6 +1781,9 @@
   .write-content.js-write-bucket {
     box-shadow: none !important;
   }
+  .graph-canvas .activity {
+    color: var(--text-primary) !important;
+  }
   .octicon {
     color: var(--text-primary);
   }
@@ -1864,6 +1887,7 @@
   line[stroke="#000"] {
     stroke: var(--base-7) !important;
   }
+  text,
   text[fill="#000"],
   text[fill="#6a737d"] {
     fill: var(--text-primary) !important;
@@ -1882,6 +1906,13 @@
   }
   .cdel {
     color: var(--red) !important;
+  }
+  .graphs .path {
+    stroke: var(--teal) !important;
+  }
+  .graphs .dot {
+    fill: var(--teal) !important;
+    stroke: var(--teal) !important;
   }
   .graphs.axis {
     border-color: var(--base-1) !important;
@@ -1940,6 +1971,9 @@
   }
   .rule {
     border-bottom: 1px solid var(--base-1) !important;
+  }
+  .community-checklist .progress-bar {
+    background: linear-gradient(90deg, var(--yellow), var(--orange), var(--green)) !important;
   }
   .issue-keyword,
   .issue-meta-section .octicon {
@@ -2367,6 +2401,35 @@
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: transparent !important;
+  }
+  div#network.network > div > canvas,
+  img[alt="FOSSA Status"],
+  img[data-canonical-src*="prod/timeseries/"],
+  a[href$="vote"] img[data-canonical-src*="/poll/"],
+  #parallax_error_text:not(p),
+  img[data-canonical-src*="img.shields.io"][data-canonical-src*="style=social"],
+  img[alt="Mona Lisa"] {
+    filter: invert(90%) hue-rotate(180deg) contrast(140%) !important;
+    mix-blend-mode: exclusion;
+  }
+  .network-current-repository {
+    background-color: var(--base-7) !important;
+  }
+  .network-tree {
+    height: 0 !important;
+    width: 19px !important;
+    padding-top: 26px !important;
+    background-repeat: no-repeat !important;
+    background-position: -2px center !important;
+  }
+  .network-tree[src$="t.png"] {
+    background-image: url("data:image/gif;base64,R0lGODlhFAAaAIAAAMzMzP///yH5BAEAAAEALAAAAAAUABoAAAIkjI+pG8APY5O0uorfzRzt3n1g5pSTOTJiSq1s5L6ajMW0YgcFADs=") !important;
+  }
+  .network-tree[src$="i.png"] {
+    background-image: url("data:image/gif;base64,R0lGODlhFAAaAIAAAMzMzP///yH5BAEAAAEALAAAAAAUABoAAAIhjI+pG8APY5O0uorfzRzt3n1gJo6WGaJcqUJsy7ywIgcFADs=") !important;
+  }
+  .network-tree[src$="l.png"] {
+    background-image: url("data:image/gif;base64,R0lGODlhFAAaAIAAAMzMzP///yH5BAEAAAEALAAAAAAUABoAAAIejI+pG8APY5O0uorfzRzt3n1g5pSTOabqyrbuC68FADs=") !important;
   }
   .oauth-org-access-details {
     background-color: var(--base-2) !important;
@@ -3671,6 +3734,25 @@
   .signed-commit-signer-name .signer {
     color: var(--text-light) !important;
   }
+  img[src*="octocat-spinner"],
+  img[src="/images/spinner.gif"],
+  .profile-picture-spinner {
+    height: 0 !important;
+    width: 0 !important;
+  }
+  img[src*="octocat-spinner"],
+  img[src="/images/spinner.gif"],
+  .facebox-loading,
+  .branch-action-body .spinner,
+  .status-indicator-loading,
+  .ajax-pagination-form.loading .ajax-pagination-btn:after,
+  .profile-picture-spinner,
+  .more-repos-link.is-loading {
+    background: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><style>.a{fill:%23333;}</style><path d="M364 29C421 57 460 94 485 151l-31 15c-20-41-63-84-105-104" class="a"><animate attributeName="fill" begin="0s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m494 169c20 60 21 114-1 172l-33-11c15-43 15-104 0-148" class="a"><animate attributeName="fill" begin="0.125s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m485 359c-28 57-66 96-122 121l-15-31c41-20 84-63 105-105" class="a"><animate attributeName="fill" begin="0.250s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m345 489c-60 20-114 21-172-1l11-33c43 15 104 15 148 0" class="a"><animate attributeName="fill" begin="0.375s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m154 483c-57-28-95-66-121-122l31-15c20 41 63 84 105 105" class="a"><animate attributeName="fill" begin="0.500s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m24 343c-20-60-21-114 1-172l33 11c-15 44-15 104 0 148" class="a"><animate attributeName="fill" begin="0.625s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="M32 151C60 94 98 55 154 30l15 31c-41 20-84 63-105 105" class="a"><animate attributeName="fill" begin="0.750s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m173 21c60-20 114-21 172 1l-11 33c-43-15-104-15-148 0" class="a"><animate attributeName="fill" begin="0.875s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m197 459v-48s-4-4-33-1c-28 3-62-66-65-69 24-10 43 26 65 38h31s3-44 20-37c17 6-72 1-97-61s19-126 20-115c0 9-17-35-10-46 20-24 50 11 69 15 5 0 18-8 59-7 41 0 55 8 60 6 22-10 51-32 65-17 10 12-1 61-1 49s43 81 6 132c-29 46-95 43-84 46 21 15 14 91 14 115l-22 4v-74c0-9-9-10-9-9v85l-21 1v-86h-10v86l-20-1v-83s-8-1-8 10v72" fill="%23eee"/></svg>") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50% !important;
+  }
   .State--green {
     border: 1px solid var(--teal) !important;
     color: var(--teal) !important;
@@ -3699,7 +3781,7 @@
     fill: var(--red) !important;
   }
   .Subhead {
-    border-color: var(--base-1) !important;
+    border-color: var(--base-6) !important;
   }
   .Subhead-description {
     color: var(--text-faded) !important;
@@ -4134,6 +4216,18 @@
     color: var(--blue) !important;
     border-color: var(--blue) !important;
     background-color: var(--blue-transparent) !important;
+  }
+  .traffic-graph path.total {
+    stroke: var(--green) !important;
+  }
+  .traffic-graph path.unique {
+    stroke: var(--blue) !important;
+  }
+  .totals circle {
+    fill: var(--green) !important;
+  }
+  .uniques circle {
+    fill: var(--blue) !important;
   }
   #tree-finder-field {
     background-color: var(--base-2) !important;

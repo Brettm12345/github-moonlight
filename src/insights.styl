@@ -3,7 +3,7 @@
 line[stroke="#000"]
   vc 0 base(7)
 text
-  &[fill="#000"], &[fill="#6a737d"]
+  &, &[fill="#000"], &[fill="#6a737d"]
     vc fg("primary")
 .viz
   .code-frequency
@@ -16,6 +16,10 @@ text
   &del
     c $red
 .graphs
+  .path
+    vc 0 $teal
+  .dot
+    vc $teal $teal
   &.axis
     c 0 base(1)
   .dir
@@ -52,3 +56,5 @@ table.capped-list
   c 0 0 base(4)
 .rule
   bb $b
+.community-checklist .progress-bar
+  bg linear-gradient(90deg,$yellow,$orange,$green)
