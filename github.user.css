@@ -186,6 +186,9 @@
   hr {
     border-bottom: 1px solid var(--base-1) !important;
   }
+  relative-time {
+    color: var(--text-secondary) !important;
+  }
   .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
@@ -533,8 +536,10 @@
     box-shadow: var(--elevation-1) !important;
   }
   .Box-header {
+    border: none !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
+    margin: 0 !important;
   }
   .Box-header--blue {
     color: var(--blue) !important;
@@ -944,6 +949,8 @@
   .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .search-input-wrapper .search-input .TextInput-icon,
   #readme .Box-header .octicon-pencil,
   .select-menu-action,
+  .tabnav--responsive .tabnav-tab,
+  .tabnav-tab,
   .toolbar-item,
   .toolbar-item .menu-target,
   .lia-link-navigation {
@@ -1330,7 +1337,7 @@
   }
   .discussion-sidebar-item {
     color: var(--text-faded) !important;
-    border-color: var(--base-1) !important;
+    border-color: var(--base-4) !important;
     font-weight: 500 !important;
   }
   .TimelineItem-badge {
@@ -1793,8 +1800,7 @@
   .cdel {
     color: var(--red) !important;
   }
-  .num,
-  relative-time {
+  .num {
     color: var(--text-faded) !important;
   }
   .graphs.axis {
@@ -3843,6 +3849,7 @@
     filter: saturate(0.6);
   }
   .tabnav-tabs[aria-label="Stargazers"] .tabnav-tab.selected {
+    color: var(--text-light) !important;
     background-color: var(--base-2) !important;
   }
   .tabnav-tabs.js-file-editor-nav .tabnav-tab {
@@ -3851,7 +3858,9 @@
     background-color: var(--base-2) !important;
     margin-top: 8px !important;
   }
-  .tabnav-tabs.js-file-editor-nav .tabnav-tab {
+  .tabnav-tabs.js-file-editor-nav .tabnav-tab,
+  .tabnav--responsive .tabnav-tab,
+  .tabnav-tab {
     border-top-left-radius: 6px !important;
     border-top-right-radius: 6px !important;
   }
@@ -3860,13 +3869,19 @@
     color: var(--text-faded) !important;
     border-color: var(--base-1) !important;
   }
+  .tabnav--responsive .tabnav-tab:hover,
+  .tabnav-tab:hover,
+  .tabnav--responsive .tabnav-tab:focus,
+  .tabnav-tab:focus {
+    color: var(--text-primary) !important;
+  }
   .tabnav--responsive .tabnav-tab.selected,
   .tabnav-tab.selected,
   .tabnav--responsive .tabnav-tab[aria-selected="true"],
   .tabnav-tab[aria-selected="true"],
   .tabnav--responsive .tabnav-tab[aria-current],
   .tabnav-tab[aria-current] {
-    color: var(--text-primary) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
