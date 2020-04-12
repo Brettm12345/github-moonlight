@@ -6,11 +6,13 @@
   &[style*="margin-top"]
     c 0 $t base(2)
   &-item
-    ~/-octicon
+    ^[0]-octicon
       c fg("faded")
-      ../.selected &
-        c fg("light")
-    &.selected
+      ease color
+    &.selected, &[aria-current], &[role="tab"][aria-selected="true"]
       bbc $blue
-    &:hover
+      ease border-color, color
+      octicon fg("light")
+    &:hover, &:focus
       bbc base(8)
+      octicon fg("primary")

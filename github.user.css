@@ -262,6 +262,12 @@
   .CheckStep-line:hover {
     background-color: var(--base-5) !important;
   }
+  .d-flex[style*="opacity: 0.6"] {
+    opacity: 1 !important;
+  }
+  .Box.rounded-2.d-flex.flex-column.overflow-hidden.width-full.flex-auto.mb-4 .d-flex.flex-justify-between.px-4.pt-3.pb-4 {
+    background-color: var(--base-6) !important;
+  }
   .auth-form-body {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
@@ -873,6 +879,13 @@
   .CircleBadge[style*="#eff9f9"] {
     background-color: var(--base-2) !important;
   }
+  .file-sidebar-container + tab-container .UnderlineNav {
+    border-bottom: none !important;
+    background-color: var(--base-2) !important;
+  }
+  .js-code-editor {
+    background-color: var(--base-5) !important;
+  }
   .topics-row-container {
     height: auto;
   }
@@ -880,6 +893,7 @@
     color: var(--text-dark) !important;
   }
   .text-blue,
+  .cm-atom,
   .cm-def {
     color: var(--blue) !important;
   }
@@ -887,7 +901,8 @@
   .cm-punctuation {
     color: var(--text-primary) !important;
   }
-  .text-gray-dark {
+  .text-gray-dark,
+  .text-white {
     color: var(--text-light) !important;
   }
   .text-emphasized {
@@ -1011,6 +1026,7 @@
   .tabnav-tab,
   .toolbar-item,
   .toolbar-item .menu-target,
+  .UnderlineNav-octicon,
   .lia-link-navigation {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
@@ -1698,10 +1714,9 @@
     border-color: var(--base-1) !important;
   }
   .file-header {
-    color: var(--blue) !important;
+    color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
-    margin: 0 !important;
   }
   .form-group .form-control {
     color: var(--text-light) !important;
@@ -2305,7 +2320,9 @@
     color: var(--base-9) !important;
   }
   .notification-navigation .notification-configure-filters .octicon,
-  .numbers-summary .octicon {
+  .numbers-summary .octicon,
+  .UnderlineNav-item:hover .octicon,
+  .UnderlineNav-item:focus .octicon {
     color: var(--text-primary) !important;
   }
   .notification-navigation .notification-configure-filters:hover .octicon,
@@ -3763,6 +3780,9 @@
   .cm-comment {
     color: var(--indigo) !important;
   }
+  .cm-number {
+    color: var(--orange) !important;
+  }
   .cm-property {
     color: var(--teal) !important;
   }
@@ -3945,9 +3965,6 @@
   }
   .tabnav {
     border-bottom: 1px solid var(--base-1) !important;
-  }
-  .container-preview .tabnav-tabs {
-    margin-left: 5% !important;
   }
   .tabnav-extra,
   .tabnav-tab {
@@ -4149,13 +4166,23 @@
   .UnderlineNav-octicon {
     color: var(--text-faded) !important;
   }
-  .UnderlineNav-item.selected .UnderlineNav-octicon {
-    color: var(--text-light) !important;
-  }
-  .UnderlineNav-item.selected {
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current],
+  .UnderlineNav-item[role="tab"][aria-selected="true"] {
     border-bottom-color: var(--blue) !important;
   }
-  .UnderlineNav-item:hover {
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current],
+  .UnderlineNav-item[role="tab"][aria-selected="true"] {
+    transition: border-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  }
+  .UnderlineNav-item.selected .octicon,
+  .UnderlineNav-item[aria-current] .octicon,
+  .UnderlineNav-item[role="tab"][aria-selected="true"] .octicon {
+    color: var(--text-light) !important;
+  }
+  .UnderlineNav-item:hover,
+  .UnderlineNav-item:focus {
     border-bottom-color: var(--base-8) !important;
   }
   .usage-bar {
