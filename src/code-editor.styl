@@ -2,4 +2,19 @@
   bb none
   c 0 0 2
 .js-code-editor
-  c 0 0 5
+  c 0 0 3
+.CodeMirror
+  &-linenumber-&gutter-elt
+    fw 500
+  pre
+    fs font("mono", "size")
+.cm-s-github-light
+  &.CodeMirror
+    c fg("primary") 1 3
+  .CodeMirror-
+    /&gutter&linenumbers, &gutters
+      c v("indigo") 1 3
+    &lines
+      c 0 0 3
+    &linenumber
+      c 9

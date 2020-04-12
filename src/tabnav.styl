@@ -6,16 +6,11 @@
     &.selected, &[aria-selected="true"], &[aria-current]
       c 0 0 2
   &-tabs
-    mb -2px
     & ^[0]-tab
       &:not(.selected)
         c fg("dark")
       &.selected
         c fg("light") 0 2
-    &.js-file-editor-nav ^[0]-tab
-      c fg("faded") 1 2
-      mt 8px
-      rt 6px
   &--responsive &-tab, &-tab
     c fg("faded")
     ease color
@@ -29,4 +24,4 @@
       bbc $t
       &.js-blob-edit-
         &code, &preview
-          c v("blue") 1 3
+          c 0 0 3

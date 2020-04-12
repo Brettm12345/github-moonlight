@@ -1,32 +1,22 @@
 $cmColors = {
-  atom: v("blue")
-  attribute: v("yellow")
-  punctuation: fg("primary")
-  comment: v("indigo")
-  def: v("blue")
-  number: v("orange")
-  property: v("teal")
-  operator: v("cyan")
-  string: v("green")
-  string-2: v("green")
-  keyword: v("purple")
+  atom: "blue"
+  attribute: "yellow"
+  punctuation: "text-primary"
+  comment: "indigo"
+  def: "blue"
+  number: "orange"
+  property: "teal"
+  operator: "cyan"
+  string: "green"
+  string-2: "green"
+  keyword: "purple"
+  variable: "purple"
 }
-map-record($cmColors, '.cm-', color)
+for $k, $v in $cmColors
+  .cm-{$k}
+    c v($v)
 code, pre, tt
   set-font "mono"
-.CodeMirror-
-  &linenumber&gutter-elt
-    fw 500
-.cm-s-github-light
-  &.CodeMirror
-    c fg("primary") 1 5
-  .CodeMirror-
-    /&gutter&linenumbers, &gutters
-      c v("indigo") 1 4
-    &lines
-      c 0 0 5
-    &linenumber
-      c v("indigo")
 .code .s1
   c v("green")
 .pl-
