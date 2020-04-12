@@ -1,6 +1,7 @@
 $fgColors = {
   gray-light: fg("dark")
   blue: $blue
+  blue-mktg: $blue
   gray: fg("primary")
   gray-dark: fg("light")
   emphasized: fg("secondary")
@@ -14,6 +15,7 @@ $borderColors = {
   blue-light: $blue
   gray-dark: base(1)
   lg-left: base(1)
+  lg-top: base(6)
 }
 map-record($borderColors, '.border-', border-color)
 $bgColors = {
@@ -43,7 +45,17 @@ for $direction in top left right bottom
   c fg("faded")
 div[style*="#fcfdfd"]
   c 0 0 base(4)
-path[fill="#eee"]
-  vc base(7)
+g[fill="#23292f"] + path
+  vc base(9)
+g, path
+  &[fill="#eee"]
+    vc base(7)
+  &[stroke="#23292f"]
+    vc 0 fg("primary")
+  &[fill="#23292f"]
+    vc fg("primary")
 section[style*="#fafbfc"]
   c 0 0 base(2)
+.bg-dots-gray
+  bg url('/images/modules/site/patterns/dots-small.svg') base(2)
+  background-blend-mode color-burn

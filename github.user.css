@@ -276,6 +276,10 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
+  .session-authentication .create-account-callout {
+    border-color: var(--base-5) !important;
+    background-color: var(--base-3) !important;
+  }
   .autocomplete-item.navigation-focus,
   .autocomplete-item.selected,
   .autocomplete-item:hover,
@@ -896,6 +900,7 @@
     color: var(--text-dark) !important;
   }
   .text-blue,
+  .text-blue-mktg,
   .cm-atom,
   .cm-def {
     color: var(--blue) !important;
@@ -929,6 +934,9 @@
   .border-gray-dark,
   .border-lg-left {
     border-color: var(--base-1) !important;
+  }
+  .border-lg-top {
+    border-color: var(--base-6) !important;
   }
   .bg-gray,
   .bg-gray-light,
@@ -985,11 +993,27 @@
   div[style*="#fcfdfd"] {
     background-color: var(--base-4) !important;
   }
+  g[fill="#23292f"] + path {
+    fill: var(--base-9) !important;
+  }
+  g[fill="#eee"],
   path[fill="#eee"] {
     fill: var(--base-7) !important;
   }
+  g[stroke="#23292f"],
+  path[stroke="#23292f"] {
+    stroke: var(--text-primary) !important;
+  }
+  g[fill="#23292f"],
+  path[fill="#23292f"] {
+    fill: var(--text-primary) !important;
+  }
   section[style*="#fafbfc"] {
     background-color: var(--base-2) !important;
+  }
+  .bg-dots-gray {
+    background: url("/images/modules/site/patterns/dots-small.svg") var(--base-2) !important;
+    background-blend-mode: color-burn;
   }
   .review-comment {
     color: var(--text-primary) !important;
@@ -1293,6 +1317,9 @@
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-6) !important;
+  }
+  .customer-story-card.bg-white {
+    border-color: var(--base-3) !important;
   }
   .dashboard .Details-content--hidden,
   .dashboard :not(code) .Box {
@@ -1784,8 +1811,26 @@
   .write-content.js-write-bucket {
     box-shadow: none !important;
   }
+  .home-hero-signup .form-control-note {
+    color: var(--text-dark) !important;
+  }
+  #signup-form {
+    background-color: var(--base-3) !important;
+  }
   .graph-canvas .activity {
     color: var(--text-primary) !important;
+  }
+  .home-enterprise::before {
+    opacity: 0.1 !important;
+  }
+  .home-enterprise-wrapper::before {
+    background-color: var(--base-2) !important;
+  }
+  .logo-img[alt="Bloomberg"] {
+    filter: invert(1);
+  }
+  .IconNav.bg-white {
+    background-color: var(--base-2) !important;
   }
   .octicon {
     color: var(--text-primary);
@@ -2020,6 +2065,11 @@
   .reaction-summary-item {
     background-color: var(--base-4) !important;
   }
+  .jumbotron-codelines {
+    background: url("/images/modules/site/heroes/simple-codelines.svg"), var(--base-2) !important;
+    background-blend-mode: color-dodge;
+    color: var(--text-primary) !important;
+  }
   ol.repository-lang-stats-numbers li .lang {
     color: var(--text-light) !important;
   }
@@ -2073,6 +2123,12 @@
   }
   .link-gray-dark:hover {
     color: var(--blue-light) !important;
+  }
+  .link-mktg {
+    box-shadow: 0 1px 0 0 var(--blue) !important;
+  }
+  .link-mktg:hover {
+    box-shadow: 0 1px 0 0 var(--blue-light) !important;
   }
   .list-group-item {
     border-color: var(--base-1) !important;
@@ -2270,6 +2326,12 @@
   }
   .markdown-body .clippy-wrapper .clippy .icon {
     filter: invert(1);
+  }
+  .MarketingBody-lead p {
+    color: var(--text-secondary) !important;
+  }
+  .MarketingBody-lead p:first-child {
+    color: var(--text-primary) !important;
   }
   .marketplace-plan-emphasis {
     color: var(--text-gray) !important;
@@ -3838,6 +3900,12 @@
   }
   .application-main > main > .site-subnav + div .text-gray-light {
     color: var(--text-primary) !important;
+  }
+  .summarylink .octicon-triangle-right {
+    color: var(--text-dark) !important;
+  }
+  .summarylink-btn {
+    border-color: var(--base-5) !important;
   }
   .suggester {
     color: var(--text-primary) !important;
