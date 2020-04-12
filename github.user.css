@@ -720,7 +720,7 @@
     border-color: var(--base-1) !important;
   }
   .Box-row {
-    border-top: 1px solid var(--base-1) !important;
+    border-top: 1px solid var(--base-6) !important;
   }
   .Box-row--unread {
     box-shadow: inset 2px 0 0 var(--blue) !important;
@@ -1171,6 +1171,9 @@
   .bg-yellow-light {
     color: var(--yellow) !important;
   }
+  .selected-color-white {
+    color: var(--text-light) !important;
+  }
   g.bar {
     fill: var(--green) !important;
   }
@@ -1536,7 +1539,7 @@
   .select-menu-action,
   .select-menu-tab-nav,
   .select-menu-tabs a,
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white),
   .subnav-search-context .btn,
   .tabnav--responsive .tabnav-tab,
   .tabnav-tab,
@@ -2619,6 +2622,9 @@
   }
   .muted-link:hover {
     color: var(--blue) !important;
+  }
+  .link-gray {
+    color: var(--text-secondary) !important;
   }
   .link-gray-dark {
     color: var(--text-light) !important;
@@ -4273,6 +4279,9 @@
   .email-preference-exceptions .exception {
     border-color: var(--base-1) !important;
   }
+  .saved-reply-form {
+    border-color: var(--base-4) !important;
+  }
   .box-shadow-medium {
     box-shadow: var(--elevation-1) !important;
   }
@@ -4449,13 +4458,13 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white),
   .subnav-search-context .btn {
     color: var(--text-dark) !important;
   }
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):hover,
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white):hover,
   .subnav-search-context .btn:hover,
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link).selected,
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white).selected,
   .subnav-search-context .btn.selected {
     color: var(--blue) !important;
   }
@@ -4976,7 +4985,7 @@
   }
   .note,
   .help {
-    color: var(--blue) !important;
+    color: var(--text-dark) !important;
   }
   .copyable-terminal,
   .js-notice {
