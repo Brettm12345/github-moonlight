@@ -1,18 +1,21 @@
 .project-
   &issue-body-blur
     fade-out()
+  &column, &card
+    &:focus
+      c 0 v("blue")
+      shadow 0 0 0 0.2em t("blue")
+  &columns
+    c 0 0 base(2)
   &column
-    c 0 0 base(4)
+    c 0 0 base(3)
   &pane.bg-white
-    c 0 0 base(5)
+    c 0 0 base(3)
   &header
     c 0 0 base(2)
-  &card
-    &:hover
-      c 0 base(1)
-      elevation 1
-    &:focus
-      shadow 0 0 0 0.2em t("blue")
+  &card:hover
+    c 0 base(1)
+    elevation 1
 .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2
   c 0 0 base(4)
 .d-flex.flex-row.flex-items-center.f6

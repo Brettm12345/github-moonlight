@@ -1010,7 +1010,7 @@
     background-color: var(--base-2) !important;
   }
   .bg-white {
-    background-color: var(--base-5) !important;
+    background-color: rgba(255,255,255,0.018) !important;
   }
   .border-top {
     border-top: 1px solid var(--base-5) !important;
@@ -3539,11 +3539,19 @@
   .project-issue-body-blur {
     background: linear-gradient(to top, var(--base-1), transparent) !important;
   }
+  .project-column:focus,
+  .project-card:focus {
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 0 0.2em var(--blue-transparent) !important;
+  }
+  .project-columns {
+    background-color: var(--base-2) !important;
+  }
   .project-column {
-    background-color: var(--base-4) !important;
+    background-color: var(--base-3) !important;
   }
   .project-pane.bg-white {
-    background-color: var(--base-5) !important;
+    background-color: var(--base-3) !important;
   }
   .project-header {
     background-color: var(--base-2) !important;
@@ -3551,9 +3559,6 @@
   .project-card:hover {
     border-color: var(--base-1) !important;
     box-shadow: var(--elevation-1) !important;
-  }
-  .project-card:focus {
-    box-shadow: 0 0 0 0.2em var(--blue-transparent) !important;
   }
   .d-flex.js-socket-channel.js-updatable-content.mb-2.border.rounded-1.p-2 {
     background-color: var(--base-4) !important;
@@ -4361,7 +4366,7 @@
     color: var(--indigo) !important;
   }
   .pl-c1 {
-    color: var(--purple) !important;
+    color: var(--orange) !important;
   }
   .pl-sr .pl-sre,
   .pl-sr .pl-sra,
@@ -5687,7 +5692,7 @@
     color: var(--green) !important;
   }
   code .sr {
-    color: var(--green) !important;
+    color: var(--cyan) !important;
   }
   code .ss {
     color: var(--purple) !important;
