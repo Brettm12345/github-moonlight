@@ -4565,7 +4565,8 @@
     color: var(--green) !important;
   }
   .pl-s1,
-  .pl-s .pl-v {
+  .pl-s .pl-v,
+  .pl-s1 a {
     color: var(--text-primary) !important;
   }
   .pl-e,
