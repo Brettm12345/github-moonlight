@@ -1,6 +1,6 @@
 .gitako-
   &ready .js-header-wrapper
-    c 0 0 base(2)
+    c 0 0 2
   &toggle-show-button-wrapper
     .action-icon
       .octicon
@@ -10,16 +10,16 @@
           c v("blue")
           o 1
     &.collapsed
-      c 0 base(1) base(5)
+      c 0 1 5
       m 1%
       .action-icon
         c v("blue")
   &side-bar
     &, ../resize-handler
-      c 0 base(1) base(1)
+      c 0 1 1
     & &-body
       brc base(1)
-      c 0 base(1) base(4)
+      c 0 1 4
       .octicon
         c fg("faded")
         ease color
@@ -34,14 +34,14 @@
               ease color, opacity
               o 0.4
             &:hover, &:focus
-              c 0 0 base(4)
+              c 0 0 4
               .octicon
                 c v("blue")
                 o 1
         .node-item, .search-input-wrapper .search-input
-          c 0 base(1) base(3)
+          c 0 1 3
           &:focus-within
-            c 0 0 base(6)
+            c 0 0 6
             .TextInput-icon
               c v("blue")
           .TextInput-icon
@@ -49,23 +49,23 @@
             ease color
       & ^[0]settings-bar
         &-content .settings-section .field select
-          c fg("primary") base(1) base(3)
+          c fg("primary") 1 3
           &:focus
             c 0 v("blue")
           outline none
         .access-token-input
-          c 0 base(1) base(3)
+          c 0 1 3
           &:focus-within
-            c 0 v("blue") base(6)
+            c 0 v("blue") 6
         &-title
           btc base(1)
         &-content .shadow-shelter
-          c 0 base(1) base(4)
+          c 0 1 4
         &, .header-row
-          c fg("primary") base(1) base(4)
+          c fg("primary") 1 4
       &, ^[1]-content
         .meta-bar
-          c fg("primary") base(1) base(4)
+          c fg("primary") 1 4
         .file-explorer
           .search-input-wrapper input[type="text"].form-control
             b 1px
@@ -73,19 +73,19 @@
           .no-results
             c fg("faded")
           .node-item
-            c fg("primary") base(1)
+            c fg("primary") 1
             &-row
-              c 0 0 base(5)
+              c 0 0 5
 // Disable Shadows
 .drJOih, .jOtAYC
   shadow none
 // Settings Input
 .drJOih
-  c 0 base(1) base(3)
+  c 0 1 3
   &:focus-within
-    c 0 v("blue") base(6)
+    c 0 v("blue") 6
 // Button
 .jOtAYC
-  c fg("primary") base(1) base(3)
+  c fg("primary") 1 3
   &:disabled
-    c fg("faded") base(1) base(2)
+    c fg("faded") 1 2

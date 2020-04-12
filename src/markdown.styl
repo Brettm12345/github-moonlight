@@ -15,13 +15,13 @@
     &:focus
       outline-color fg("faded")
     &:hover
-      c 0 0 base(2)
+      c 0 0 2
       &::marker
         c v("blue")
   del
-    c base(9)
+    c 9
   /.js-commit-preview &
-    c 0 0 base(5)
+    c 0 0 5
   .lead-mktg p
     c fg("faded")
   a
@@ -33,40 +33,40 @@
   .absent
     c v("red")
   img
-    c 0 0 base(4)
+    c 0 0 4
   hr
-    c 0 base(5) base(5)
+    c 0 5 5
   table
     th
-      c fg("primary") base(1)
+      c fg("primary") 1
       background-color base(2)
     td, th
-      c 0 base(1)
+      c 0 1
     tr
       &, &:nth-child(2n)
         background-color base(3)
       td:not([class*="blob"])
-        c fg("primary") base(1) base(3)
+        c fg("primary") 1 3
   p
     c fg("paragraph")
   pre > code
     c 0 0 $t
   .csv-data
     .blob-num
-      c 0 base(3)
+      c 0 3
     th
-      c 0 base(4)
+      c 0 4
   tt
     b $b
   code, tt
-    c fg("light") base(1) base(7)
+    c fg("light") 1 7
     m 0.4em
     fs font("mono", "size")
     set-font "mono"
   h6
     c fg("faded")
   h1, h2, h3, h4, h5, h6
-    c 0 base(7)
+    c 0 7
     .octicon-link
       c v("cyan")
       o 0
@@ -76,22 +76,22 @@
       o 1
   /.highlight pre, pre
     b $b
-    c 0 base(1) base(3)
+    c 0 1 3
     set-font "mono"
   span.frame
     & > span
-      c 0 base(1)
+      c 0 1
     span span
       c fg("secondary")
   blockquote
     bg linear-gradient(to right, base(6), base(3))
-    c fg("secondary") base(7) base(5)
+    c fg("secondary") 7 5
     p
       c fg("dark")
   .clippy-wrapper .clippy
-    c fg("light") base(1) base(4)
+    c fg("light") 1 4
     ease border-color, background-color
     &:hover
-      c 0 v("blue") base(8)
+      c 0 v("blue") 8
     .icon
       inv()

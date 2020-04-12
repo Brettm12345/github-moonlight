@@ -1,19 +1,19 @@
 input
   caret-color v("blue")
   &[type="text"]
-    c fg("light") base(1) base(3)
+    c fg("light") 1 3
     ease background-color, border-color
     &:focus
-      c 0 v("blue") base(5)
+      c 0 v("blue") 5
 .input-contrast
   box()
 .form-
   &group &control
-    c fg("light") base(1) base(4)
+    c fg("light") 1 4
     .search-input
       caret-color v("blue")
     &:focus
-      c 0 v("blue") base(7)
+      c 0 v("blue") 7
       .form-control, .ais-SearchBox-input, .form-select
         &.focus, &:focus
           c 0 v("blue")
@@ -22,8 +22,8 @@ input
     &, ../select
       ../.search-page-label.js-advanced-search-label
         &, & input
-          c 0 0 base(5)
-      c fg("light") base(1) base(4)
+          c 0 0 5
+      c fg("light") 1 4
       shadow none
       &.focus, &:focus
         c fg("light") v("blue") 0

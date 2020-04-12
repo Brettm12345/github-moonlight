@@ -1,53 +1,57 @@
 *:not(code) .Box
-  c 0 base(1) base(4)
+  c 0 1 4
 .Box
   &-body
-    c 0 base(1)
+    c 0 1
+    &:last-of-type
+      bb none
     .topic-tag
-      c 0 0 base(3)
+      c 0 0 3
     .help
       c fg("faded")
   &--overlay
-    c 0 base(1) base(2)
+    c 0 1 2
     elevation 1
   &-header
     b none
-    c 0 base(1) base(4)
+    c 0 1 4
     m 0
     &&--blue
-      c v("blue") base(1) base(4)
+      c v("blue") 1 4
   &-footer
-    c 0 base(1)
+    c 0 1
   &-row
+    /^[0] > ul > &
+      btc base(1)
     bt 1px solid base(6)
     &--unread
       shadow inset 2px 0 0 v("blue")
     &[style*="background"]
-      c 0 0 base(8)
+      c 0 0 8
     &:first-of-type
       bt 0
   &&--condensed
     & ^[0]-header
-      c 0 0 base(3)
+      c 0 0 3
       &--blue
-        c 0 0 base(4)
+        c 0 0 4
       & + ul
         br $b
     & ^[0]-row
-      c 0 base(1) base(3)
+      c 0 1 3
   &-row--
     &gray
-      c o o base(4)
+      c o o 4
     &focus-gray
-      c 0 0 base(3)
+      c 0 0 3
       &.navigation-focus
-        c 0 0 base(6)
+        c 0 0 6
     &yellow
-      c fg("primary") base(6) $t
+      c fg("primary") 6 $t
     ../--responsive &unread::before
       bgi none
       c 0 0 v("blue")
 .tint-box
-  c 0 0 base(4)
+  c 0 0 4
 .body > div.d-flex
   px 10px

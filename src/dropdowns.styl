@@ -1,11 +1,11 @@
 .dropdown-
   &divider
-    c 0 base(1)
+    c 0 1
   &signed-commit &menu-w
-    caret "left" base(2)
+    caret "left" 2
   &menu
     &, &-dark
-      c fg("primary") base(1) base(4)
+      c fg("primary") 1 4
       .octicon
         c v("indigo")
         o 0.6
@@ -14,15 +14,15 @@
         &-check
           c v("green")
       &-ne, &-nw, &-n
-        caret "top" base(5)
+        caret "top" 5
       &-sw, &-se, &-s
         caret "bottom"
       &-w, &-e
-        caret "left" base(2)
+        caret "left" 2
   &header
     c fg("faded")
   &item
     c fg("primary")
     ease background, color, background-color
     &:hover, &:focus
-      c fg("light") 0 base(6)
+      c fg("light") 0 6

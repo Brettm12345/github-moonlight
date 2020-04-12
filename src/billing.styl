@@ -1,16 +1,16 @@
 .signup-plan-card
-  c fg("primary") base(1) base(5)
+  c fg("primary") 1 5
   &:hover
-    c 0 0 base(8)
+    c 0 0 8
 div[style*="height: 1px;"]
-  c 0 0 base(1)
+  c 0 0 1
 .showcase-page-pattern::after
-  c 0 base(4) base(1)
+  c 0 4 1
 .plan-
     &notice
       btc base(1)
     &choice
-      c 0 base(1) base(3)
+      c 0 1 3
       ease background-color
       &--experiment
         experiment-color($sel, $color)
@@ -22,7 +22,7 @@ div[style*="height: 1px;"]
         experiment-color('green', v("green"))
         experiment-color('purple', v("purple"))
       &.open, &.selected
-        c 0 0 base(4)
+        c 0 0 4
 .billing-
   &box-
     &progressBars span:nth-child(2)
@@ -34,7 +34,7 @@ div[style*="height: 1px;"]
           c fg("secondary")
   &plans
     tbody > .selected, .current
-      c 0 0 base(5)
+      c 0 0 5
     .coupon
       &-label:after
         bbc v("teal")
@@ -45,7 +45,7 @@ div[style*="height: 1px;"]
   &line-item
     btc base(1)
   &manager-banner
-    c 0 base(1) base(4)
+    c 0 1 4
     &-icon
       c fg("faded")
     &-title
@@ -63,7 +63,7 @@ div[style*="height: 1px;"]
     .{$k} .status
       c $v
   .failed, .refunded
-    c 0 0 base(4)
+    c 0 0 4
 .discounted-original-price
   c fg("faded")
 .golden-ticket-banner
@@ -71,6 +71,6 @@ div[style*="height: 1px;"]
 .bt-pp-cancel
   c v("red")
 .paypal-container
-  c 0 0 base(2)
+  c 0 0 2
 .braintree-paypal-loggedin
-  c 0 base(1)
+  c 0 1

@@ -7,17 +7,17 @@
   p
     c fg('paragraph')
   button
-    c fg('light') base(1) base(2)
+    c fg('light') 1 2
   a
     c v("blue")
 // common
 .awesome-autocomplete
   .tt-hint
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
   .tt-cursor
-    c 0 0 base(7)
+    c 0 0 7
   .tt-dropdown-menu
-    c 0 base(1) base(4)
+    c 0 1 4
     octicon fg('pimary')
     shadow 0 3px 12px rgba(0,0,0,0.15)
     .aa-query
@@ -27,17 +27,17 @@
     .aa-branding
       c fg('pimary')
     .aa-category
-      c fg('dark') 0 base(3)
+      c fg('dark') 0 3
     .tt-suggestion
       bb $b
       em
-        c fg('dark') 0 base(5)
+        c fg('dark') 0 5
       .aa-suggestion
         .aa-infos
           c fg('primary')
         &.aa-user
           .aa-thumbnail
-            c 0 0 base(3)
+            c 0 0 3
           .aa-login
             c fg('primary')
           .aa-company
@@ -46,12 +46,12 @@
               c fg('primary')
         &.aa-repo
           .aa-thumbnail
-            c 0 0 base(3)
+            c 0 0 3
           .aa-description
             c fg('primary')
         &.aa-issue
           .aa-thumbnail
-            c 0 0 base(3)
+            c 0 0 3
           .aa-repo-name
             c fg('primary')
           .aa-issue-number

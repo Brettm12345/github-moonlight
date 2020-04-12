@@ -1,24 +1,24 @@
 .compare-pr-placeholder
-  c 0 base(1) base(5)
+  c 0 1 5
   p
     c fg("primary")
 .range-editor
-  c 0 base(1) base(3)
+  c 0 1 3
   &-icon
     c fg("faded")
 .Progress
-  c 0 0 base(7)
+  c 0 0 7
 .github-pr-file span
   &.deletion
     c 0 0 v("red")
   &.addition
     c 0 0 v("green")
 ul.comparison-list
-  c 0 base(1) base(4)
+  c 0 1 4
   & > li
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
     &.title
-      c fg("primary") base(1) base(5)
+      c fg("primary") 1 5
     em
       c fg("faded")
 .merge-
@@ -28,23 +28,25 @@ ul.comparison-list
     c fg("faded")
   &status-
     &list
-      c 0 base(1)
+      c 0 1
     &item
-      c 0 base(1) base(4)
+      c 0 1 4
 .gh-header-number
   c v("orange")
   fw 400
   td underline
 .CheckRun
-  c 0 base(1) base(4)
+  c 0 1 4
   &-header
-    c 0 base(1)
+    c 0 1
 .checks-list-item
   &.selected &-name
-    c fg("light") 0 base(8)
+    c fg("light") 0 8
 .octofication .message, .overall-summary
-  c 0 base(1) base(4)
+  c 0 1 4
 .numbers-summary
   octicon fg("primary")
   li > .nolink, li > a
     c fg("faded")
+#submit-review
+  c 0 0 3

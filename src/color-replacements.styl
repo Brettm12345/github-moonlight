@@ -4,6 +4,7 @@ $fgColors = {
   blue-mktg: v("blue")
   gray: fg("primary")
   gray-dark: fg("light")
+  gray-9: base(9)
   emphasized: fg("secondary")
   green: v("green")
   purple: v("purple")
@@ -46,7 +47,7 @@ for $direction in top left right bottom
 .text
   c fg("faded")
 div[style*="#fcfdfd"]
-  c 0 0 base(4)
+  c 0 0 4
 g[fill="#23292f"] + path
   vc base(9)
 g, path
@@ -57,7 +58,7 @@ g, path
   &[fill="#23292f"]
     vc fg("primary")
 section[style*="#fafbfc"]
-  c 0 0 base(2)
+  c 0 0 2
 .bg-dots-gray
   bg url('/images/modules/site/patterns/dots-small.svg') base(2)
   background-blend-mode color-burn

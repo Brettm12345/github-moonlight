@@ -5,30 +5,30 @@
     ^[0]common-dropdown-toggle:active,
     ^[0]common-dropdown-toggle^[0]link-active
       &:hover, &:focus
-        c 0 base(1) base(3)
+        c 0 1 3
   &thread-reply &quilt-forum-message
-    c 0 base(6) base(3)
+    c 0 6 3
   &accepted-solution &quilt-forum-message &quilt-row-footer
-    c 0 0 base(3)
+    c 0 0 3
   &forum-topic-page-reply-count
     c fg("light")
   /.MessageListTaplet &panel-content > &list-standard > li
-    c 0 base(1)
+    c 0 1
   &link-
     &navigation.kudos-count-link&disabled
       &, &:hover, &:focus
-        c fg("faded") 0 base(3)
+        c fg("faded") 0 3
   /.user-navigation-settings-drop-down
     & .dropdown-, &-inner > ^[0]list-standard ^[0], ^[0]menu-dropdown-items ^[0]
       &separator
-        c 0 0 base(1)
+        c 0 0 1
   &fa, &mentions-gte-v2-block &mentions-load-more-link::after
     c fg("faded")
   &link-ticket-post-action
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
   &message-view-
     &display .default-menu-option
-      c 0 0 base(5)
+      c 0 0 5
     &blog-message&display ^[0]quilt-row-header ^[0]message-post-date
       c fg("dark")
   &button
@@ -38,28 +38,28 @@
       ease background-color, border-color, color
       &:hover, &:focus
         background-position 0
-        c base(1) 0 v("teal")
+        c 1 0 v("teal")
   &quilt-
     for $s in forum forum-message group-reply group-topic blog-topic-message blog-message blog-topic blog-reply idea-reply contest-reply tkb-reply media reviews
       ^[0]message-view-{$s}
         &, &-display
           & ^[1]row-footer
-            c 0 base(1) base(2)
+            c 0 1 2
       &forum-message ^[0]component-go-to-solution-link
         c v("teal") v("teal") t("teal")
     &blog-
       &message
         &, ^[2]topic-message
           & > ^[1]row-header
-            c 0 base(1)
+            c 0 1
       &message, &article-page, ^[0]message-view-forum-message
         .kudos-link
-          c 0 base(1)
+          c 0 1
         &, ^[1]blog-article-page, ^[0]message-view-forum-message
           ^[0]button-image-kudos-count
-            c 0 base(1)
+            c 0 1
             .kudos-count-link
-              c 0 0 base(3)
+              c 0 0 3
   &panel,
   &panel-message,
   &message-view-display,
@@ -67,7 +67,7 @@
   &spoiler-container,
   &top-quilt > &quilt-row-footer,
   &tkb-content-finder &search-tag-filter
-    c 0 base(1) base(2)
+    c 0 1 2
   &message-stats-label,
   &count-label,
   &recent-message-count-label
@@ -85,7 +85,7 @@
           &, & .SearchToggleFieldFilter, & .type-filter-alternative
             ease background-color
             &:hover, &:focus, &.selected
-              c 0 0 base(3)
+              c 0 0 3
   &autocomplete,
   &autocomplete-container,
   &menu-dropdown-items,
@@ -96,7 +96,7 @@
   /.mce-tinymce-inline.mce-container,
   /.ui-datepicker,
   /.user-navigation-settings-drop-down-inner>&list-standard
-    c 0 base(1) base(3)
+    c 0 1 3
     shadow none
     & > ^[0]button-active > a
       &:hover, &:focus
@@ -105,7 +105,7 @@
       c fg("primary")
       ease color, background-color
       &:hover, &:focus
-        c fg("light") 0 base(4)
+        c fg("light") 0 4
   &content
     ^[0]form-
       /input[type="text"],
@@ -118,30 +118,30 @@
       ^[0]message-editor,
       /.mce-edit-area.mce-panel,
       /.mce-form .mce-textbox
-        c fg("primary") base(1) base(3)
+        c fg("primary") 1 3
         caret-color v("blue")
         ease border-color, color, background-color
         &:hover, &:focus
-          c fg("light") v("blue") base(6)
+          c fg("light") v("blue") 6
           shadow none
   &list-
     &wide tbody > tr > td
-      c 0 base(6)
+      c 0 6
     &wide, &row
-      c 0 base(4) base(2)
+      c 0 4 2
   &panel
     b none
-    c 0 base(1)
+    c 0 1
     &-content
-      c 0 0 base(2)
+      c 0 0 2
   &quilt-row-
     &main
       ^[0]panel-heading-bar
-        c fg("primary") base(1) base(2)
+        c fg("primary") 1 2
       &-header
-        c fg("primary") base(1) base(2)
+        c fg("primary") 1 2
     &sub-header
-      c fg("primary") base(1) base(3)
+      c fg("primary") 1 3
   &faq-section-title
     ^[0]link-navigation
       c fg("primary")
@@ -150,43 +150,43 @@
         vc 0 v("blue")
       &:hover
         c v("blue")
-    c 0 base(1)
+    c 0 1
   &component-
     &author-rank
-      c fg("alt") base(1) base(5)
+      c fg("alt") 1 5
     &faq-toggleable-contents
-      c 0 base(1) base(3)
+      c 0 1 3
     &forms-widget-board-browser-list
       /a, .board-title ^[0]link-navigation
         c v("blue")
       ^[0]browser-category-heading
-        c 0 base(1) base(2)
+        c 0 1 2
         & > h2, & .board-count, & .category-title
           c fg("light")
     &quilt-
       /body, ^[0]content &header
-        c fg("primary") base(1) base(2)
+        c fg("primary") 1 2
       &community-hero
-        c 0 0 base(2)
+        c 0 0 2
 .gh-flash
   c fg("primary") v("blue") t("blue")
 mark
-  c fg("primary") base(1) base(3)
+  c fg("primary") 1 3
 a[href="/"] img
   inv()
 .kudos-link
   bgi none
   bg base(4)
-  c 0 base(1)
+  c 0 1
   &::before
     inv()
 .final-crumb span
   c fg("light")
 pre
-  c fg("primary") base(1) base(2)
+  c fg("primary") 1 2
 font[color="#808000"]
   c v("yellow")
 .custom-solution-mark .is-solution
   bgi none
   bg v("teal")
-  c base(1) 0 v("teal")
+  c 1 0 v("teal")

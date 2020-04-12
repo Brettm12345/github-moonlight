@@ -8,46 +8,46 @@
   &icon--check
     c v("green")
   &divider
-    c fg("primary") base(1) base(2)
+    c fg("primary") 1 2
   &list
-    c 0 base(1) base(3)
+    c 0 1 3
   &item, &modal
-    c 0 base(1) base(4)
+    c 0 1 4
   &blankslate, &loading, &message
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
   &footer
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
     kbd
       fs unset
   &item
-    c fg("primary") base(1)
+    c fg("primary") 1
     ease background-color
     @media (hover: hover)
       &:not([aria-selected="true"])
         &:hover
-          c fg("light") 0 base(7)
+          c fg("light") 0 7
         &:active
-          c fg("light") 0 base(8)
+          c fg("light") 0 8
       &:hover
-        c 0 0 base(5)
+        c 0 0 5
       &:active
-        c 0 0 base(3)
+        c 0 0 3
       &:focus
-        c 0 0 base(6)
+        c 0 0 6
     &[aria-checked="true"]
       c fg("light")
   &tabs
     btc base(1)
   &tab
-    c fg("primary") base(1) base(2)
+    c fg("primary") 1 2
     &[aria-selected="true"]
-      c fg("light") base(1) base(4)
+      c fg("light") 1 4
       @media (min-width: 544px)
-        c 0 base(1)
+        c 0 1
     &:not([aria-checked="true"])
       &:active, &:hover
         @media(hover: hover)
-          c 0 base(2)
+          c 0 2
 .select-menu-
   &button.primary
     &:after
@@ -60,7 +60,7 @@
     svg
       vc fg("secondary")
   &loading-overlay
-    c 0 0 base(2)
+    c 0 0 2
   &header
     octicon fg("faded")
   &action
@@ -69,18 +69,16 @@
     &:hover
       c v("blue")
   &header, &header &title
-    c fg("light") base(1) base(2)
-  &modal, &item
-    c fg("primary") base(1) base(4)
-  &divider
-    c fg("primary") base(1) base(4)
+    c fg("light") 1 2
+   &divider, &modal, &item
+    c fg("primary") 1 4
   &filters
-    c fg("primary") base(1) base(3)
+    c fg("primary") 1 3
   &no-results
-    c fg("faded") base(1) base(4)
+    c fg("faded") 1 4
   &text-filter
     &:first-child, &:last-child
-      c 0 base(1)
+      c 0 1
     &::placeholder
       c fg("placeholder")
   &new-item-form .octicon
@@ -93,7 +91,7 @@
       &-warning
         c v("red")
     .excluded
-      c 0 0 base(3)
+      c 0 0 3
     .octicon-circle-slash
       &, ^[1].selected &^[1]-icon
         c fg("faded")
@@ -102,9 +100,9 @@
         c fg("faded")
         o 0.6
     &:hover, &:focus
-      c 0 0 base(6)
+      c 0 0 6
   &tabs
-    c 0 base(1)
+    c 0 1
     ^[0]tab-nav, & a
       c fg("dark")
       ease color
@@ -112,6 +110,6 @@
         c fg("primary")
       &.selected, &[aria-selected="true"], &[aria-current]
         bc base(1) base(1) base(4)
-        c fg("light") 0 base(4)
+        c fg("light") 0 4
   &modal
     elevation 2

@@ -9,48 +9,48 @@
     &+^[0]-branches
       btc base(1)
     pre
-      c fg("primary") 0 base(4)
+      c fg("paragraph") 0 2
   &-icon .octicon, &-group-title .octicon-git-commit
-    c fg("primary") 0 base(4)
+    c fg("primary") 0 4
   &s-list-item
     &, &:hover
       c 0 0 $t
     &+&
       btc base(1)
   &-ref
-    c fg("primary") base(1) base(2)
+    c fg("primary") 1 2
     set-font "mono"
     .user
       c v("blue")
   &-sha
-    c v("yellow") base(1) base(5)
+    c v("yellow") 1 5
   & &-title .issue-link
     c v("blue")
   & &-title, &-group-title, a
     c fg("primary")
   &-tease
-    c v("blue") base(1) base(4)
+    c v("blue") 1 4
     &-sha
       c v("blue")
     &-contributors
       bt $b
-      c 0 0 base(9)
+      c 0 0 9
 .commits
   blockquote
     c fg("primary")
   &-listing:before
-    c 0 0 base(5)
+    c 0 0 5
   &-list-item
-    c 0 0 base(4)
+    c 0 0 4
     &+&
       btc base(1)
     &.navigation-focus
-      c 0 0 base(5)
+      c 0 0 5
     .commit-
       &desc pre, &author
         c fg("faded")
 .full-commit
-  c v("blue") base(1) base(4)
+  c v("blue") 1 4
   .branches-list li
     c fg("gray")
     &.loading, &.pull-request
@@ -59,7 +59,7 @@
     &:not(:disabled):hover
       c v("blue") v("blue")
     &, &:disabled
-      c 0 base(1)
+      c 0 1
   p.commit-title
     c v("blue")
   .sha-block
@@ -67,22 +67,22 @@
     fs 14px
     fw 500
     & > a
-      c fg("primary") base(6)
+      c fg("primary") 6
       &:hover
-        c 0 base(1)
+        c 0 1
     & > .sha
       c v("blue")
   .commit-meta
-    c 0 base(1) base(4)
+    c 0 1 4
 .file-commit-form--full
-  c fg("primary") base(1) base(2)
+  c fg("primary") 1 2
 .commit-form
-  c 0 0 base(4)
+  c 0 0 4
   caret "right"
 .line-comments
-  c 0 0 base(5)
+  c 0 0 5
   /.diff-table tr:not(:last-child) &
-    c 0 base(1)
+    c 0 1
   /.empty-cell + &, & + &
     blc base(1)
 .commit-build-statuses
@@ -91,4 +91,4 @@
     c v("blue")
 -expander
   .ellipsis&, .hidden-text& a
-    c fg("primary") 0 base(7)
+    c fg("primary") 0 7

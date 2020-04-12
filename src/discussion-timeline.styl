@@ -2,7 +2,7 @@ $commentDark = base(2)
 $commentBg = base(3)
 
 .markdown-toolbar.Details
-  c 0 base(1)
+  c 0 1
 .pagination-loader-container
   bgi url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E")
   c 0 0 $t
@@ -11,9 +11,9 @@ $commentBg = base(3)
     &header
       c fg("dark")
     &icon
-      c fg("primary") base(5) base(7)
+      c fg("primary") 5 7
   &timeline-actions
-    c 0 base(5) $t
+    c 0 5 $t
     .js-new-comment-form .timeline-comment
       c 0 0 $commentBg
   &sidebar-
@@ -25,23 +25,23 @@ $commentBg = base(3)
     &heading
       c fg("primary")
     &item
-      c fg("faded") base(4)
+      c fg("faded") 4
       fw 500
 .TimelineItem
   &-badge
-    c 0 base(5) base(4)
+    c 0 5 4
     ~/:target &-bage
       c 0 v("blue")
     ~/--condensed &
       size 30px
   &-break
-    c 0 base(4) $t
+    c 0 4 $t
   &, .status-meta, .merge-pr-more-commits
     &:before
-      c 0 0 base(5)
+      c 0 0 5
     &-badge, &--condensed &-badge
       b 2px solid base(5)
-      c base(9) base(5) base(4)
+      c 9 5 4
     &-body
       c fg("faded")
 timeline
@@ -50,25 +50,25 @@ timeline
     &-item
       blc base(9)
   .&-commits .hidden-text-expander .ellipsis-expander
-    c 0 0 base(4)
+    c 0 0 4
   .&-
     &new-comment .previewable-comment-form .comment-body
-      c 0 base(1)
+      c 0 1
     &comment
-      c fg("primary") base(1) $commentBg
+      c fg("primary") 1 $commentBg
       /.composer.composer-responsive &
-        caret "right" base(2)
+        caret "right" 2
       /:target &
         shadow 0 0 0 0.2em base(1)
         &::before
           filter drop-shadow(-0.28em 0 0 base(1))
       &-wrapper
         b 0
-        c 0 base(1)
+        c 0 1
       &-label.tooltipped.tooltipped-s.tooltipped-multiline
         c v("purple") v("purple") t("purple")
       &-header
-        c fg("light") base(1) $commentDark
+        c fg("light") 1 $commentDark
         .author
           c fg("light")
       &--caret
@@ -82,18 +82,18 @@ comment
       c 0 0 $commentDark
   /.review-
     &^[0]
-      c fg("primary") base(1) $commentBg
+      c fg("primary") 1 $commentBg
       &:target
         elevation 1
     &thread-reply
-      c 0 base(1) $commentBg
+      c 0 1 $commentBg
       .form-control
         c 0 0 $commentDark
       .inline-^[0]-form
         c 0 0 $commentDark
   &-form
     .previewable-&
-      c 0 base(1) $commentBg
+      c 0 1 $commentBg
       textarea
         c 0 0 $commentDark
       & .^[1]-head.tabnav
@@ -104,7 +104,7 @@ comment
           &:hover
             c fg("primary")
           &.selected, &[aria-selected="true"], &[aria-current]
-            c fg("light") base(1) $commentBg
+            c fg("light") 1 $commentBg
     .&-textarea.dragover
       c 0 v("blue")
     .&-error
@@ -112,32 +112,32 @@ comment
   .&-
     &reactions
       .user-has-reacted
-        c 0 base(1) base(5)
+        c 0 1 5
       &.has-reactions
-        c 0 base(1) $commentBg
+        c 0 1 $commentBg
 conversation-list
   .&-heading
-    c fg("faded") base(6)
+    c fg("faded") 6
     .inner
       b $b
-      c fg("faded") 0 base(4)
+      c fg("faded") 0 4
       p 0 10px
       r 2px
   .simple-&
     c fg("faded")
     & > li
-      c 0 base(6)
+      c 0 6
 button.reaction-summary-item
-  c 0 base(1)
+  c 0 1
   img
     c 0 0 $commentBg
   a
     c 0 0 $commentDark
 .js-reaction-option-item.border-gray-dark.bg-blue-light
-  c 0 base(1) base(7)
+  c 0 1 7
   r 4px
 .timeline-comment
   pre
     c 0 0 $commentDark
 .bg-gray.p-2.js-resolvable-thread-toggler-container.border-bottom
-  c 0 base(1) base(3)
+  c 0 1 3

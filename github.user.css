@@ -694,6 +694,9 @@
   .Box-body {
     border-color: var(--base-1) !important;
   }
+  .Box-body:last-of-type {
+    border-bottom: none !important;
+  }
   .Box-body .topic-tag {
     background-color: var(--base-3) !important;
   }
@@ -721,6 +724,9 @@
   }
   .Box-row {
     border-top: 1px solid var(--base-6) !important;
+  }
+  .Box > ul > .Box-row {
+    border-top-color: var(--base-1) !important;
   }
   .Box-row--unread {
     box-shadow: inset 2px 0 0 var(--blue) !important;
@@ -1059,6 +1065,9 @@
   .text-white {
     color: var(--text-light) !important;
   }
+  .text-gray-9 {
+    color: var(--base-9) !important;
+  }
   .text-emphasized {
     color: var(--text-secondary) !important;
   }
@@ -1200,8 +1209,8 @@
     border-top-color: var(--base-1) !important;
   }
   .commit-desc pre {
-    color: var(--text-primary) !important;
-    background-color: var(--base-4) !important;
+    color: var(--text-paragraph) !important;
+    background-color: var(--base-2) !important;
   }
   .commit-icon .octicon,
   .commit-group-title .octicon-git-commit {
@@ -1500,6 +1509,9 @@
   .github-jobs-logo strong {
     filter: invert(1);
   }
+  .news .Details button {
+    border-color: var(--base-5) !important;
+  }
   .news .Details button,
   .details-reset[role="button"],
   .details-reset[role="button"] > summary,
@@ -1699,7 +1711,7 @@
     border-right-color: var(--base-1) !important;
   }
   .composer.composer-responsive .timeline-comment::after {
-    border-right-color: var(--base-2) !important;
+    border-right-color: 2 !important;
   }
   :target .timeline-comment {
     box-shadow: 0 0 0 0.2em var(--base-1) !important;
@@ -1842,7 +1854,7 @@
     border-left-color: var(--base-1) !important;
   }
   .dropdown-signed-commit .dropdown-menu-w::after {
-    border-left-color: var(--base-2) !important;
+    border-left-color: 2 !important;
   }
   .dropdown-menu,
   .dropdown-menu-dark {
@@ -1875,7 +1887,7 @@
   .dropdown-menu-dark-nw::after,
   .dropdown-menu-n::after,
   .dropdown-menu-dark-n::after {
-    border-top-color: var(--base-5) !important;
+    border-top-color: 5 !important;
   }
   .dropdown-menu-sw::before,
   .dropdown-menu-dark-sw::before,
@@ -1903,7 +1915,7 @@
   .dropdown-menu-dark-w::after,
   .dropdown-menu-e::after,
   .dropdown-menu-dark-e::after {
-    border-left-color: var(--base-2) !important;
+    border-left-color: 2 !important;
   }
   .dropdown-header {
     color: var(--text-faded) !important;
@@ -2494,6 +2506,9 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
+  .summary-stats li .octicon-git-branch {
+    color: var(--green) !important;
+  }
   .summary-stats li:hover,
   .summary-stats li:focus,
   .summary-stats li:hover > .num,
@@ -2511,9 +2526,6 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
-  .pulse-section {
-    color: var(--text-faded) !important;
-  }
   .contrib-person path {
     fill: var(--orange) !important;
   }
@@ -2525,9 +2537,6 @@
   }
   .community-checklist .progress-bar {
     background: linear-gradient(90deg, var(--yellow), var(--orange), var(--green)) !important;
-  }
-  .summary-stats li .octicon-git-branch {
-    color: var(--green) !important;
   }
   .issue-keyword,
   .issue-meta-section .octicon {
@@ -3032,8 +3041,6 @@
   .oauth-permissions-details .permission-summary em.highlight {
     border: 1px solid var(--base-1) !important;
     color: var(--text-light) !important;
-    border-color: var(--base-0) !important;
-    background-color: var(--base-0) !important;
   }
   .oauth-org-access-details {
     background-color: var(--base-2) !important;
@@ -3588,22 +3595,22 @@
     border-bottom-color: var(--base-4) !important;
   }
   .Popover-message--bottom-right::before {
-    border-top-color: var(--base-4) !important;
+    border-top-color: 4 !important;
   }
   .Popover-message--bottom-right::after {
-    border-top-color: var(--base-4) !important;
+    border-top-color: 4 !important;
   }
   .Popover-message--top-right::before {
-    border-bottom-color: var(--base-4) !important;
+    border-bottom-color: 4 !important;
   }
   .Popover-message--top-right::after {
-    border-bottom-color: var(--base-4) !important;
+    border-bottom-color: 4 !important;
   }
   .Popover-message--top-left::before {
     border-bottom-color: var(--base-1) !important;
   }
   .Popover-message--top-left::after {
-    border-bottom-color: var(--base-5) !important;
+    border-bottom-color: 5 !important;
   }
   .Popover-message--bottom-left::before {
     border-top-color: var(--base-1) !important;
@@ -3817,6 +3824,15 @@
   .numbers-summary li > a {
     color: var(--text-faded) !important;
   }
+  #submit-review {
+    background-color: var(--base-3) !important;
+  }
+  .pulse-section {
+    color: var(--text-faded) !important;
+  }
+  .pulse-authors-graph .bar rect {
+    fill: var(--orange) !important;
+  }
   .release-timeline-tags .tag-timeline-date::after {
     border-color: var(--base-7) !important;
     background-color: var(--base-4) !important;
@@ -3839,7 +3855,7 @@
     color: var(--text-secondary) !important;
   }
   .social-count {
-    color: var(--blue) !important;
+    color: var(--text-secondary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
@@ -4152,13 +4168,9 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
   }
+  .select-menu-divider,
   .select-menu-modal,
   .select-menu-item {
-    color: var(--text-primary) !important;
-    border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
-  }
-  .select-menu-divider {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;

@@ -1,8 +1,8 @@
 .boxed-group
   .Counter
-    c fg("light") 0 base(7)
+    c fg("light") 0 7
   &-table th
-    c 0 base(1) base(4)
+    c 0 1 4
   &-warning
     c fg("light") v("yellow") t("yellow")
   &-list > li
@@ -10,7 +10,7 @@
       bt $b
     bb $b
     &.selected
-      c 0 base(4)
+      c 0 4
   &.dangerzone > h3
     c fg("light") v("red") t("red")
   &-inner
@@ -18,6 +18,6 @@
     .help
       c fg("faded")
     &, ~/ .heading, ~/ > h3
-      c 0 base(1) base(4)
+      c 0 1 4
       a^[0]-breadcrumb
         c fg("faded")

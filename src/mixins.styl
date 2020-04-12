@@ -5,7 +5,8 @@ $bc = base(1)
 $b = $bw $bs $bc
 $i = !important
 $t = transparent
-
+pipe($f1, $f2)
+  $f2($f1)
 S($x, $y)
   s($x, unquote($y))
 v($x)
@@ -43,6 +44,8 @@ map-record($rec = {}, $prefix = '', $prop)
 color-prop($p, $x)
   if ($x is a "call" || $x is a "rgba" || $x == none)
     prop $p $x
+  if ($x > 0)
+    prop $p base($x)
 /**
  * c <foreground> <border-color> <background>
  * use 0 to omit arguments
@@ -262,10 +265,10 @@ set-font($x)
   fn font($x, "family")
   fw font($x, "weight")
 box()
-  c 0 base(1) base(4)
+  c 0 1 4
   ease border-color, background-color
   &:hover, &:focus
-    c 0 v("blue") base(5)
+    c 0 v("blue") 5
 octicon($x...)
   +cache("x" + $x)
     .octicon

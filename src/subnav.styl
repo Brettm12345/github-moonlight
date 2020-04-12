@@ -1,10 +1,10 @@
 .site-subnav.bg-white
   bb $b
-  c 0 base(3) base(3)
+  c 0 3 3
   ease box-shadow, background-color, border-color
   &.is-stuck
     bb $b
-    c 0 base(1) base(2)
+    c 0 1 2
     elevation 1
 .subnav-
   &link
@@ -16,16 +16,16 @@
       bbc v("blue")
       c fg("light")
   &bordered
-    c 0 base(1)
+    c 0 1
   &item
-    c 0 base(1) base(4)
+    c 0 1 4
     ease border-color, background-color
     &:focus, &:hover
-      c 0 0 base(6)
+      c 0 0 6
     &.selected
       &, &:focus, &:hover
         bbc v("blue")
-        c 0 base(1) base(5)
+        c 0 1 5
 .btn
   &-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white), .subnav-search-context &
     c fg("dark")
@@ -33,8 +33,8 @@
     &:hover, &.selected
       c v("blue")
   &&-primary, .js-selected-navigation-item.subnav-item
-    c 0 0 base(5)
+    c 0 0 5
 .application-main > main > .site-subnav + div
-  c 0 0 base(2)
+  c 0 0 2
   .text-gray-light
     c fg("primary")

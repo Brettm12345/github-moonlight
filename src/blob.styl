@@ -10,47 +10,47 @@
         ^[0]code-marker::before
           c v($v)
         .x
-          c base(1) 0 v($v)
+          c 1 0 v($v)
   &code, &num
     &&-expandable, &&-hunk
-      c 0 0 base(7)
+      c 0 0 7
   &code
-    c 0 0 base(3)
+    c 0 0 3
     &-inner
       c fg("primary")
       lh 1.8
       fs font("mono", "size")
       set-font "mono"
       &.highlighted, & .highlighted
-        c 0 0 base(8)
+        c 0 0 8
   &num
-    c fg("dark") base(1) base(2)
+    c fg("dark") 1 2
     fw 600
     &-expandable
       .diff, .directional
         &-expander
           ease background-color
-          c 0 0 base(7)
+          c 0 0 7
           &:hover, &:focus
             c 0 dark("blue") dark("blue")
   &expanded
     & + tr:not(&), tr:not(&) + &
       & ^[0]num
-        c 0 base(1) base(2)
+        c 0 1 2
       & ^[0]code
-        c 0 base(1) base(3)
+        c 0 1 3
 .CopyBlock
   b 1px solid $t
   ease border-color, background-color
   &:active, &:focus, &:hover
-    c 0 base(1) base(7)
+    c 0 1 7
 .TagsearchPopover-
   &item, &list-item
     &, {selector('.blob-', '&num, &code', '&, &-inner')}
       ease background-color
-      c 0 0 base(4)
+      c 0 0 4
       ^[1]:hover &
-        c 0 0 base(2)
+        c 0 0 2
 .pl-token
   &.active, &:hover
-    c 0 0 base(8)
+    c 0 0 8

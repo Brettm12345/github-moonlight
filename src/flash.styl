@@ -1,5 +1,5 @@
 .flash
-  c fg("light") base(1) base(4)
+  c fg("light") 1 4
   $states = {
     error: "red"
     success: "green"
@@ -9,4 +9,4 @@
     &-{$k}
       c v($v) v($v) t($v)
       .btn
-        c base(2) base(1) v($v)
+        c 2 1 v($v)

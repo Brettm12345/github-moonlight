@@ -2,22 +2,22 @@
   c fg("primary")
 .sidebar-menu
   &, h3, ul ul li
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
     &:hover, & a:hover
-      c fg("light") base(1) base(6)
+      c fg("light") 1 6
 .js-current .standalone a
   blc v("blue")
-  c fg("light") 0 base(5)
+  c fg("light") 0 5
 .sidebar-module .disable > a
-  c fg("light") base(1) base(5)
+  c fg("light") 1 5
 .sub-nav
-  c 0 base(1)
+  c 0 1
 body table
   th
-    c fg("primary") base(1) base(2)
+    c fg("primary") 1 2
   tr td
-    c fg("primary") base(1) base(4)
-  c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
+  c fg("primary") 1 4
 .alert
   &.tip
     c fg("primary") v("teal") t("teal")
@@ -31,7 +31,7 @@ body table
 h1, h2, h3, h4, h5, h6
   c fg("primary")
 .content ol li pre code
-  c 0 0 base(2)
+  c 0 0 2
   p 8px
 ol > li::before
   brc base(1)
@@ -40,9 +40,9 @@ ol > li::before
 .lead
   c fg("faded")
 .libraries-jumbotron
-  c fg("primary") base(1) base(2)
+  c fg("primary") 1 2
 .sidebar-module
-  c 0 base(1) base(5)
+  c 0 1 5
 .command-line
   em
     c v("blue")
@@ -54,14 +54,14 @@ ol > li::before
       c fg("gray")
 .content .sectionbody .dlist dt, .content .verseblock-content, .content dl code, .content h2 code, .content h3 code, .content h4 code, .content ol code, .content p > tt, .content table code, .content ul code, p code,
 pre
-  c fg("primary") base(1) base(5)
+  c fg("primary") 1 5
 .headlines > li
   cursor pointer
   ease background-color, color
   &:hover
-    c 0 0 base(7)
+    c 0 0 7
   &, .sidebar-module ul h3
-    c fg("primary") base(1)
+    c fg("primary") 1
 .published span
   c fg("secondary")
 .headlines > li > a > .date
@@ -84,7 +84,7 @@ pre
   a
     ease background-color, color
     &:hover
-      c fg("light") 0 base(3)
+      c fg("light") 0 3
 code
   $rec = {
     bp: 'text-dark'
@@ -138,13 +138,13 @@ code
 .text-alpha, .text-beta, .text-delta, .text-gamma, h1, h2, h3, h4, h5
   c fg("gray")
 .card
-  c 0 base(1) base(3)
+  c 0 1 3
   ease background-color
   /a&.bg-gray-light
     &:hover, &:focus
-      c 0 0 base(6)
+      c 0 0 6
 .bg-blue
-  c 0 0 base(2)
+  c 0 0 2
 .text-black
   c fg("light")
 .bg-custom-gradient

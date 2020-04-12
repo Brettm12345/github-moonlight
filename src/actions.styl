@@ -1,6 +1,6 @@
 .repository-content
   .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end
-    c fg("primary") base(1) base(4)
+    c fg("primary") 1 4
 .CheckStep
   $ansi = {
     b: 'indigo'
@@ -35,23 +35,23 @@
     &-timestamp
       c fg("secondary")
   &-line
-    c fg("primary") 0 base(3)
+    c fg("primary") 0 3
     set-font "mono"
     & &-timestamp
       c fg("secondary")
     &-number
-      c base(9) base(1) base(2)
+      c 9 1 2
       br $b
       pr 18px
     &content
       c fg("primary")
     &.selected
-      c 0 0 base(6)
+      c 0 0 6
     &:hover
-      c 0 0 base(5)
+      c 0 0 5
 .d-flex[style*="opacity: 0.6"]
   o 1
 .Box.rounded-2.d-flex.flex-column.overflow-hidden.width-full.flex-auto.mb-4 .d-flex.flex-justify-between.px-4.pt-3.pb-4
-  c 0 0 base(6)
+  c 0 0 6
 .js-checks-log-display-container
   b $b

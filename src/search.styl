@@ -1,11 +1,11 @@
 .filter-bar
   bb 2px solid base(1)
-  c 0 0 base(2)
+  c 0 0 2
 header #search-results-container
-  c 0 0 base(4)
+  c 0 0 4
 .search_repos
   fieldset
-    c 0 0 base(3)
+    c 0 0 3
     px 16px
 .user, .issue
   &-list-item
@@ -13,11 +13,11 @@ header #search-results-container
       btc base(1)
 .form-
   &group &control
-    c fg("light") base(1) base(4)
+    c fg("light") 1 4
     .search-input
       caret-color v("blue")
     &:focus
-      c 0 v("blue") base(7)
+      c 0 v("blue") 7
       .form-control, .ais-SearchBox-input, .form-select
         &.focus, &:focus
           c 0 v("blue")
@@ -26,35 +26,35 @@ header #search-results-container
     &, ~/select
       ^[1].search-page-label.js-advanced-search-label
         &, & input
-          c 0 0 base(5)
-      c fg("light") base(1) base(4)
+          c 0 0 5
+      c fg("light") 1 4
       shadow none
       &.focus, &:focus
         c fg("light") v("blue") 0
         shadow none
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
-    c fg("primary") base(1)
+    c fg("primary") 1
   &-item
     &.hx_hit-code&-public.repo-specific
-      c 0 0 base(2)
+      c 0 0 2
 .jump-to-
   &field-active, /.js-navigation-item:hover, /#jump-to-results:hover
-    c 0 0 base(5)
+    c 0 0 5
   &suggestions
     &-results-container
       .navigation-
         &focus ^[1]-path
-          c 0 0 base(8)
+          c 0 0 8
         &item
-          c 0 base(1)
+          c 0 1
 .ais-
   /.search-result-intro
     & mark, & .ais-Highlight-highlighted
       bbc v("blue")
   &Hits-item
     &:hover
-      c 0 0 base(7)
+      c 0 0 7
   &SearchBox-input
     bg base(4) url("/assets/images/octicons/search.svg") no-repeat 6px
-    c fg("light") base(1)
+    c fg("light") 1
