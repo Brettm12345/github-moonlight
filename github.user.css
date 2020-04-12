@@ -36,6 +36,32 @@
 @var color scrollbar-track "Scrollbar Track" #1b1d2c
 @var color selection-bg "Selection Bg" #82aaff
 @var color selection-fg "Selection Fg" #e2e8fa
+@var color blue-desaturated "Blue Desaturated" #A1B5E0
+@var color blue-dark-desaturated "Blue Dark Desaturated" #7288C2
+@var color cyan-desaturated "Cyan Desaturated" #A3D1DF
+@var color cyan-light-desaturated "Cyan Light Desaturated" #C5E8E7
+@var color green-desaturated "Green Desaturated" #BFD1A4
+@var color indigo-desaturated "Indigo Desaturated" #8F96BA
+@var color orange-desaturated "Orange Desaturated" #D7A486
+@var color pink-desaturated "Pink Desaturated" #E7BCDE
+@var color purple-desaturated "Purple Desaturated" #C7B0E1
+@var color red-desaturated "Red Desaturated" #D47E8C
+@var color red-light-desaturated "Red Light Desaturated" #DD979C
+@var color teal-desaturated "Teal Desaturated" #71B4A8
+@var color yellow-desaturated "Yellow Desaturated" #DDC199
+@var color blue-light "Blue Light" #A8C4FF
+@var color blue-dark-light "Blue Dark Light" #658BEE
+@var color cyan-light "Cyan Light" #ACEAFD
+@var color cyan-light-light "Cyan Light Light" #DCFCFC
+@var color green-light "Green Light" #D3EEAC
+@var color indigo-light "Indigo Light" #929ED8
+@var color orange-light "Orange Light" #FFAF81
+@var color pink-light "Pink Light" #FDD0F4
+@var color purple-light "Purple Light" #DABDFB
+@var color red-light "Red Light" #FF758C
+@var color red-light-light "Red Light Light" #FF9AA2
+@var color teal-light "Teal Light" #67DCC7
+@var color yellow-light "Yellow Light" #FFD69C
 @var color blue-transparent "Blue Transparent" #82aaff33
 @var color blue-dark-transparent "Blue Dark Transparent" #4976eb33
 @var color cyan-transparent "Cyan Transparent" #86e1fc33
@@ -64,6 +90,7 @@
 @var text mono-font-family "Mono Font Family" monospace
 @var text mono-font-size "Mono Font Size" 100%
 @var text mono-font-weight "Mono Font Weight" 500
+@var text max-width "Max Width" 1012px
 @var text selection-border "Selection Border" none
 @var text scrollbar-chrome-radius "Scrollbar Chrome Radius" 0px
 @var text scrollbar-chrome-size "Scrollbar Chrome Size" 6px
@@ -99,6 +126,32 @@
 --scrollbar-track: /*[[scrollbar-track]]*/;
 --selection-bg: /*[[selection-bg]]*/;
 --selection-fg: /*[[selection-fg]]*/;
+--blue-desaturated: /*[[blue-desaturated]]*/;
+--blue-dark-desaturated: /*[[blue-dark-desaturated]]*/;
+--cyan-desaturated: /*[[cyan-desaturated]]*/;
+--cyan-light-desaturated: /*[[cyan-light-desaturated]]*/;
+--green-desaturated: /*[[green-desaturated]]*/;
+--indigo-desaturated: /*[[indigo-desaturated]]*/;
+--orange-desaturated: /*[[orange-desaturated]]*/;
+--pink-desaturated: /*[[pink-desaturated]]*/;
+--purple-desaturated: /*[[purple-desaturated]]*/;
+--red-desaturated: /*[[red-desaturated]]*/;
+--red-light-desaturated: /*[[red-light-desaturated]]*/;
+--teal-desaturated: /*[[teal-desaturated]]*/;
+--yellow-desaturated: /*[[yellow-desaturated]]*/;
+--blue-light: /*[[blue-light]]*/;
+--blue-dark-light: /*[[blue-dark-light]]*/;
+--cyan-light: /*[[cyan-light]]*/;
+--cyan-light-light: /*[[cyan-light-light]]*/;
+--green-light: /*[[green-light]]*/;
+--indigo-light: /*[[indigo-light]]*/;
+--orange-light: /*[[orange-light]]*/;
+--pink-light: /*[[pink-light]]*/;
+--purple-light: /*[[purple-light]]*/;
+--red-light: /*[[red-light]]*/;
+--red-light-light: /*[[red-light-light]]*/;
+--teal-light: /*[[teal-light]]*/;
+--yellow-light: /*[[yellow-light]]*/;
 --blue-transparent: /*[[blue-transparent]]*/;
 --blue-dark-transparent: /*[[blue-dark-transparent]]*/;
 --cyan-transparent: /*[[cyan-transparent]]*/;
@@ -127,6 +180,7 @@
 --mono-font-family: /*[[mono-font-family]]*/;
 --mono-font-size: /*[[mono-font-size]]*/;
 --mono-font-weight: /*[[mono-font-weight]]*/;
+--max-width: /*[[max-width]]*/;
 --selection-border: /*[[selection-border]]*/;
 --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/;
 --scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/;
@@ -281,6 +335,8 @@
   .summary-stats li > a,
   .js-selected-navigation-item.subnav-item,
   .js-selected-navigation-item .js-issue-row,
+  .js-selected-navigation-item.subnav-item.Box-row--focus-gray,
+  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray,
   .ScreenshotCarousel-navitem,
   .notifications-list-item:hover .notification-list-item-actions .btn,
   .notifications-list-item:focus .notification-list-item-actions .btn,
@@ -555,9 +611,6 @@
   .Box-row:first-of-type {
     border-top: 0 !important;
   }
-  .Box-row--focus-gray.navigation-focus {
-    background-color: var(--base-7) !important;
-  }
   .Box-row[style*="background"] {
     background-color: var(--base-8) !important;
   }
@@ -569,7 +622,10 @@
     background-color: var(--base-4) !important;
   }
   .Box-row--focus-gray {
-    background-color: var(--base-5) !important;
+    background-color: var(--base-3) !important;
+  }
+  .Box-row--focus-gray.navigation-focus {
+    background-color: var(--base-6) !important;
   }
   .Box-row--yellow {
     color: var(--text-primary) !important;
@@ -940,7 +996,8 @@
     background-color: var(--base-2) !important;
   }
   .previewable-comment-form .comment-form-head.tabnav .tabnav-tab,
-  :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item),
+  .discussion-sidebar-toggle .octicon,
+  a,
   .markdown-body a,
   .reponav-item,
   .reponav-item .octicon,
@@ -1179,6 +1236,9 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
+  .container-lg {
+    max-width: var(--max-width);
+  }
   .Counter {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
@@ -1331,6 +1391,13 @@
   }
   .discussion-timeline-actions .js-new-comment-form .timeline-comment {
     background-color: var(--base-4) !important;
+  }
+  .discussion-sidebar-toggle .octicon {
+    color: var(--text-faded) !important;
+  }
+  .discussion-sidebar-toggle .octicon:hover,
+  .discussion-sidebar-toggle .octicon:focus {
+    color: var(--blue) !important;
   }
   .discussion-sidebar-heading {
     color: var(--text-primary) !important;
@@ -1874,12 +1941,18 @@
   .js-selected-navigation-item.Header-link {
     border-top: none !important;
   }
-  .js-selected-navigation-item.subnav-item.Box-row--focus-gray,
-  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray {
-    background-color: var(--base-4) !important;
-  }
+  .js-selected-navigation-item.subnav-item.navigation-focus,
+  .js-selected-navigation-item .js-issue-row.navigation-focus,
+  .js-selected-navigation-item.subnav-item.Box-row--focus-gray.navigation-focus,
+  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray.navigation-focus,
+  .js-selected-navigation-item.subnav-item:hover,
+  .js-selected-navigation-item .js-issue-row:hover,
   .js-selected-navigation-item.subnav-item.Box-row--focus-gray:hover,
-  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray:hover {
+  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray:hover,
+  .js-selected-navigation-item.subnav-item:focus,
+  .js-selected-navigation-item .js-issue-row:focus,
+  .js-selected-navigation-item.subnav-item.Box-row--focus-gray:focus,
+  .js-selected-navigation-item .js-issue-row.Box-row--focus-gray:focus {
     background-color: var(--base-5) !important;
   }
   .pinned-issue-item {
@@ -1917,7 +1990,9 @@
     border-color: var(--green) !important;
   }
   code .link-gray {
-    font-weight: 500 !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra):not(.module-linker):not(.tabnav-tab):not(.reponav-item) {
     color: var(--text-primary) !important;
@@ -1930,6 +2005,15 @@
   }
   .muted-link:hover {
     color: var(--blue) !important;
+  }
+  .link-gray-dark {
+    color: var(--blue) !important;
+  }
+  .link-gray-dark .octicon {
+    color: var(--text-dark) !important;
+  }
+  .link-gray-dark:hover {
+    color: var(--blue-light) !important;
   }
   .list-group-item {
     border-color: var(--base-1) !important;
@@ -2315,7 +2399,7 @@
   }
   .gh-header-meta {
     color: var(--text-primary) !important;
-    border-color: var(--base-1) !important;
+    border-color: var(--base-4) !important;
   }
   .Header {
     border-bottom: 1px solid var(--base-1) !important;
