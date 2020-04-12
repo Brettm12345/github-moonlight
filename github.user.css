@@ -1402,7 +1402,9 @@
   .ajax-pagination-form > .Box > .bg-white,
   .pagination a,
   .select-menu-item,
-  .SideNav-item {
+  .SideNav-item,
+  .headlines > li,
+  .site-header-nav .dropdown-menu a {
     transition: background-color, color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   .news .Details button:hover {
@@ -1437,7 +1439,8 @@
   .toolbar-item,
   .toolbar-item .menu-target,
   .UnderlineNav-octicon,
-  .lia-link-navigation {
+  .lia-link-navigation,
+  .sub-nav ul a {
     transition: color 300ms cubic-bezier(0.645, 0.045, 0.355, 1) !important;
   }
   #dependencies .octicon-chevron-right:hover,
@@ -5540,5 +5543,49 @@
   code .mi,
   code .mo {
     color: var(--orange) !important;
+  }
+  .headlines > li {
+    cursor: pointer;
+  }
+  .headlines > li:hover {
+    background-color: var(--base-7) !important;
+  }
+  .headlines > li,
+  .headlines > li .sidebar-module ul h3 {
+    color: var(--text-primary) !important;
+    border-color: var(--base-1) !important;
+  }
+  .published span {
+    color: var(--text-secondary) !important;
+  }
+  .headlines > li > a > .date {
+    color: var(--text-dark) !important;
+  }
+  .meta li {
+    color: var(--text-faded) !important;
+  }
+  .sub-nav ul a {
+    color: var(--text-faded) !important;
+  }
+  .sub-nav ul a.active {
+    color: var(--text-light) !important;
+    font-weight: 500 !important;
+  }
+  .sub-nav ul a:hover {
+    color: var(--text-primary) !important;
+  }
+  .sub-nav ul,
+  .sub-nav ul a.active {
+    border-left-color: var(--base-6) !important;
+  }
+  .site-header-nav .dropdown-menu::before {
+    border-bottom-color: var(--base-1) !important;
+  }
+  .site-header-nav .dropdown-menu::after {
+    border-bottom-color: var(--base-4) !important;
+  }
+  .site-header-nav .dropdown-menu a:hover {
+    color: var(--text-light) !important;
+    background-color: var(--base-3) !important;
   }
 }

@@ -66,3 +66,33 @@ code
     c v("red")
   .mf, .mh, .mi, .mo
     c v("orange")
+.headlines > li
+  cursor pointer
+  ease background-color, color
+  &:hover
+    c 0 0 base(7)
+  &, .sidebar-module ul h3
+    c fg("primary") base(1)
+.published span
+  c fg("secondary")
+.headlines > li > a > .date
+  c fg("dark")
+.meta li
+  c fg("faded")
+.sub-nav ul
+  & a
+    ease color
+    c fg("faded")
+    &.active
+      c fg("light")
+      fw 500
+    &:hover
+      c fg("primary")
+  &, & a.active
+    blc base(6)
+.site-header-nav .dropdown-menu
+  caret "bottom"
+  a
+    ease background-color, color
+    &:hover
+      c fg("light") 0 base(3)
