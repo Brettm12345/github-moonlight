@@ -610,7 +610,7 @@
     background-color: var(--base-4) !important;
     margin: 0 !important;
   }
-  .Box-header--blue {
+  .Box-header.Box-header--blue {
     color: var(--blue) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
