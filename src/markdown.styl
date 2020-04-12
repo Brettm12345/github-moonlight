@@ -41,9 +41,8 @@
   code, tt
     b $b
     c fg("light") base(1) base(7)
-    fw 500
     m 0.4em
-    mono()
+    set-font "mono"
   h6
     c fg("faded")
   h1, h2, h3, h4, h5, h6
@@ -58,8 +57,7 @@
   /.highlight pre, pre
     b $b
     c 0 base(1) base(3)
-    fw 500
-    mono()
+    set-font "mono"
   span.frame
     & > span
       c 0 base(1)

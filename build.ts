@@ -7,12 +7,6 @@ import * as fs from "fs";
 import * as stylus from "stylus";
 import * as pkg from "./package.json";
 
-const fonts = {
-  ui:
-    "'Inter', 'Inter V', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji",
-  mono: "monospace"
-};
-
 const palette = {
   red: "#ff5370",
   "red-light": "#ff757f",
@@ -102,9 +96,34 @@ const userVariables = pipe(
   pipe(
     [
       [
-        fonts,
         {
-          handleKey: k => `${k}-font`
+          family: [
+            "'Inter V'",
+            "'Inter'",
+            "sans-serif",
+            "-apple-system",
+            "BlinkMacSystemFont",
+            "Segoe UI",
+            "Helvetica",
+            "Arial",
+            "Apple Color Emoji",
+            "Segoe UI Emoji"
+          ].join(","),
+          weight: "400",
+          size: "75%"
+        },
+        {
+          handleKey: k => `ui-font-${k}`
+        }
+      ],
+      [
+        {
+          family: "monospace",
+          weight: "500",
+          size: "100%"
+        },
+        {
+          handleKey: k => `mono-font-${k}`
         }
       ],
       [{ "selection-border": "none" }],

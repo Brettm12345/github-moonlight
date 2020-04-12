@@ -230,10 +230,10 @@ min-size($w, $h = $w)
 max-size($w, $h = $w)
   prop "max-height" $h
   prop "max-width" $w
-mono()
-  fn font("mono")
-inv()
-  filter invert(1)
+set-font($x)
+  fn font($x, "family")
+  fw font($x, "weight")
+  fs font($x, "size")
 box()
   c 0 base(1) base(4)
   ease border-color, background-color

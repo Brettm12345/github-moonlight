@@ -8,11 +8,9 @@ blob($x, $c, $b)
         .x
           c base(1) 0 $c
 
-
 blob('addition', $teal, 'teal')
 blob('deletion', $red, 'red')
 
-      
 .blob-
   &code, &num
     &-expandable, &-hunk
@@ -20,9 +18,8 @@ blob('deletion', $red, 'red')
   &code-
     &inner
       c fg("primary")
-      fs 15px
       lh 1.8
-      mono()
+      set-font "mono"
       &.highlighted, & .highlighted
         c 0 0 base(8)
   &num

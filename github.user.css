@@ -58,8 +58,12 @@
 @var color base-7 "Base 7" #2f334d
 @var color base-8 "Base 8" #383e5c
 @var color base-9 "Base 9" #444a73
-@var text mono-font "Mono Font" monospace
-@var text ui-font "Ui Font" 'Inter', 'Inter V', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji
+@var text ui-font-family "Ui Font Family" 'Inter V','Inter',sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji
+@var text ui-font-size "Ui Font Size" 75%
+@var text ui-font-weight "Ui Font Weight" 400
+@var text mono-font-family "Mono Font Family" monospace
+@var text mono-font-size "Mono Font Size" 100%
+@var text mono-font-weight "Mono Font Weight" 500
 @var text selection-border "Selection Border" none
 @var text scrollbar-chrome-radius "Scrollbar Chrome Radius" 0px
 @var text scrollbar-chrome-size "Scrollbar Chrome Size" 6px
@@ -118,8 +122,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
 --base-7: /*[[base-7]]*/;
 --base-8: /*[[base-8]]*/;
 --base-9: /*[[base-9]]*/;
---mono-font: /*[[mono-font]]*/;
---ui-font: /*[[ui-font]]*/;
+--ui-font-family: /*[[ui-font-family]]*/;
+--ui-font-size: /*[[ui-font-size]]*/;
+--ui-font-weight: /*[[ui-font-weight]]*/;
+--mono-font-family: /*[[mono-font-family]]*/;
+--mono-font-size: /*[[mono-font-size]]*/;
+--mono-font-weight: /*[[mono-font-weight]]*/;
 --selection-border: /*[[selection-border]]*/;
 --scrollbar-chrome-radius: /*[[scrollbar-chrome-radius]]*/;
 --scrollbar-chrome-size: /*[[scrollbar-chrome-size]]*/;
@@ -135,8 +143,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     background-color: var(--base-4) !important;
   }
   .CheckStep-line {
-    font-family: var(--mono-font) !important;
-    font-weight: 500 !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   .CheckStep-line-number {
     color: var(--indigo) !important;
@@ -388,9 +397,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   .blob-code-inner {
     color: var(--text-primary) !important;
-    font-size: 15px !important;
     line-height: 1.8 !important;
-    font-family: var(--mono-font) !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted {
@@ -934,8 +944,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
-    font-family: var(--mono-font) !important;
-    font-weight: 500 !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   .commit-ref .user {
     color: var(--blue) !important;
@@ -1643,9 +1654,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   .donut-chart .failure {
     fill: var(--red) !important;
   }
-  img[src*="octocat-spinner-64.gif"] {
-    filter: invert(1);
-  }
   .graph-filter .info {
     color: var(--text-primary) !important;
   }
@@ -1899,9 +1907,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-7) !important;
-    font-weight: 500 !important;
     margin: 0.4em !important;
-    font-family: var(--mono-font) !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   .markdown-body h6 {
     color: var(--text-faded) !important;
@@ -1938,8 +1947,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border: 1px solid var(--base-1) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
-    font-weight: 500 !important;
-    font-family: var(--mono-font) !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   .markdown-body span.frame > span {
     border-color: var(--base-1) !important;
@@ -1964,18 +1974,12 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--blue) !important;
     background-color: var(--base-8) !important;
   }
-  .markdown-body .clippy-wrapper .clippy .icon {
-    filter: invert(1);
-  }
   .marketplace-plan-emphasis {
     color: var(--text-gray) !important;
   }
   .MarketplaceBackground-buffer {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
-  }
-  .MarketplaceBackground-reccomendations img {
-    filter: invert(1);
   }
   .MarketplacePlan--sticky div.bg-white {
     border: 1px solid var(--base-1) !important;
@@ -2605,9 +2609,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
   }
-  :root {
-    --background: var(--base-4);
-  }
   .dashboard .js-all-activity-header + div {
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
@@ -2624,6 +2625,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   button.reaction-summary-item {
     border-color: var(--base-1) !important;
+  }
+  button.reaction-summary-item img {
+    background-color: var(--base-4) !important;
   }
   button.reaction-summary-item a {
     background-color: var(--base-3) !important;
@@ -2679,9 +2683,6 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   }
   #first-time-contributor .Popover-message::after {
     border-right-color: var(--base-4) !important;
-  }
-  .github-jobs-logo strong {
-    filter: invert(1);
   }
   .pinned-item-list-item .pinned-item-handle,
   .pinned-item-name {
@@ -3518,7 +3519,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   code,
   pre,
   tt {
-    font-family: var(--mono-font) !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
   }
   .CodeMirror-linenumber.CodeMirror-gutter-elt {
     font-weight: 500 !important;
@@ -3963,9 +3966,10 @@ regexp('https?://((developer|gist).)?github.com/.*') {
   body {
     color: var(--text-primary) !important;
     background-color: var(--base-2) !important;
-    font-family: var(--ui-font) !important;
-    font-size: 14px !important;
     line-height: 1.8 !important;
+    font-family: var(--ui-font-family) !important;
+    font-weight: var(--ui-font-weight) !important;
+    font-size: var(--ui-font-size) !important;
   }
   h1,
   h2,
@@ -3982,7 +3986,9 @@ regexp('https?://((developer|gist).)?github.com/.*') {
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
     font-size: 14px !important;
-    font-family: var(--mono-font) !important;
+    font-family: var(--mono-font-family) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
     box-shadow: inset 0 -1px 0 var(--base-1) !important;
   }
   ol,
