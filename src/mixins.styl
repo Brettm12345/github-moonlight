@@ -61,12 +61,12 @@ c($x, $y = 0, $z = 0)
 vc($x, $y = 0)
   color-prop "fill" $x
   color-prop "stroke" $y
-caret($direction = "bottom", $bg = base(4), $border = base(1))
+caret($direction = "bottom", $bg = 4, $border = 1)
     $p = "border-" + $direction + "-color"
     &::before
-      prop $p $border
+      color-prop $p $border
     &::after
-      prop $p $bg
+      color-prop $p $bg
 bgi($x...)
   prop "background-image" $x
 bgs($x...)
@@ -129,7 +129,7 @@ btw($x = $bw)
 bts($x = $bs)
   prop "border-top-style" $x
 btc($x = $bc)
-  prop "border-top-color" $x
+  color-prop "border-top-color" $x
 
 bb($x...)
   prop "border-bottom" $x

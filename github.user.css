@@ -1711,7 +1711,7 @@
     border-right-color: var(--base-1) !important;
   }
   .composer.composer-responsive .timeline-comment::after {
-    border-right-color: 2 !important;
+    border-right-color: var(--base-2) !important;
   }
   :target .timeline-comment {
     box-shadow: 0 0 0 0.2em var(--base-1) !important;
@@ -1854,7 +1854,7 @@
     border-left-color: var(--base-1) !important;
   }
   .dropdown-signed-commit .dropdown-menu-w::after {
-    border-left-color: 2 !important;
+    border-left-color: var(--base-2) !important;
   }
   .dropdown-menu,
   .dropdown-menu-dark {
@@ -1887,7 +1887,7 @@
   .dropdown-menu-dark-nw::after,
   .dropdown-menu-n::after,
   .dropdown-menu-dark-n::after {
-    border-top-color: 5 !important;
+    border-top-color: var(--base-5) !important;
   }
   .dropdown-menu-sw::before,
   .dropdown-menu-dark-sw::before,
@@ -1915,7 +1915,7 @@
   .dropdown-menu-dark-w::after,
   .dropdown-menu-e::after,
   .dropdown-menu-dark-e::after {
-    border-left-color: 2 !important;
+    border-left-color: var(--base-2) !important;
   }
   .dropdown-header {
     color: var(--text-faded) !important;
@@ -3595,22 +3595,22 @@
     border-bottom-color: var(--base-4) !important;
   }
   .Popover-message--bottom-right::before {
-    border-top-color: 4 !important;
+    border-top-color: var(--base-4) !important;
   }
   .Popover-message--bottom-right::after {
-    border-top-color: 4 !important;
+    border-top-color: var(--base-4) !important;
   }
   .Popover-message--top-right::before {
-    border-bottom-color: 4 !important;
+    border-bottom-color: var(--base-4) !important;
   }
   .Popover-message--top-right::after {
-    border-bottom-color: 4 !important;
+    border-bottom-color: var(--base-4) !important;
   }
   .Popover-message--top-left::before {
     border-bottom-color: var(--base-1) !important;
   }
   .Popover-message--top-left::after {
-    border-bottom-color: 5 !important;
+    border-bottom-color: var(--base-5) !important;
   }
   .Popover-message--bottom-left::before {
     border-top-color: var(--base-1) !important;
