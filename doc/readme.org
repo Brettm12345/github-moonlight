@@ -1,9 +1,12 @@
-#+EXPORT_FILE_NAME: ../readme
+#+STARTUP: nofold
 #+MACRO: badge #+HTML: <a href="$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
 #+MACRO: install {{{badge(Install Directly with Stylus,https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
+#+EXPORT_FILE_NAME: ../readme
 #+HTML: <div align="center">
 
 * Github Moonlight
+:PROPERTIES:
+:END:
 
 A dark userstyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:

@@ -1,13 +1,12 @@
-# Created 2020-04-12 Sun 02:10
-#+TITLE: 
+# Created 2020-04-12 Sun 02:59
 #+AUTHOR: Brett Mandler
-#+export_file_name: ../readme
+#+startup: nofold
 #+macro: badge #+HTML: <a href="$2"><img src="https://img.shields.io/$3&style=flat-square" alt="$1"/></a>
 #+macro: install {{{badge(Install Directly with Stylus,https://raw.githubusercontent.com/brettm12345/github-moonlight/master/github.user.css,badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true)}}}
+#+export_file_name: ../readme
 #+html: <div align="center">
 
 * Github Moonlight
-
 A dark userstyle for GitHub inspired by [[https://github.com/atomiks/moonlight-vscode-theme][moonlight-vscode-theme]]
 made with :heart:
 
