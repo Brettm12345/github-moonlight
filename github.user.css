@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      3.1.0
+@version      3.2.0
 
 @license      MIT
 @description  A dark blue github theme
@@ -257,22 +257,22 @@
   .CheckStep .ansifg-gr {
     color: var(--text-dark) !important;
   }
-  .CheckStep log-line-command {
+  .CheckStep .log-line-command {
     color: var(--blue) !important;
   }
-  .CheckStep log-line-debug {
+  .CheckStep .log-line-debug {
     color: var(--purple) !important;
   }
-  .CheckStep log-line-error {
+  .CheckStep .log-line-error {
     color: var(--red) !important;
   }
-  .CheckStep log-line-verbose {
+  .CheckStep .log-line-verbose {
     color: var(--text-dark) !important;
   }
-  .CheckStep log-line-warning {
+  .CheckStep .log-line-warning {
     color: var(--yellow) !important;
   }
-  .CheckStep log-line-section {
+  .CheckStep .log-line-section {
     color: var(--teal) !important;
   }
   .CheckStep-header {
@@ -1194,40 +1194,40 @@
   .CircleBadge[style*="#eff9f9"] {
     background-color: var(--base-2) !important;
   }
-  cm-atom {
+  .cm-atom {
     color: var(--blue) !important;
   }
-  cm-attribute {
+  .cm-attribute {
     color: var(--yellow) !important;
   }
-  cm-punctuation {
+  .cm-punctuation {
     color: var(--text-primary) !important;
   }
-  cm-comment {
+  .cm-comment {
     color: var(--indigo) !important;
   }
-  cm-def {
+  .cm-def {
     color: var(--blue) !important;
   }
-  cm-number {
+  .cm-number {
     color: var(--orange) !important;
   }
-  cm-property {
+  .cm-property {
     color: var(--teal) !important;
   }
-  cm-operator {
+  .cm-operator {
     color: var(--cyan) !important;
   }
-  cm-string {
+  .cm-string {
     color: var(--green) !important;
   }
-  cm-string-2 {
+  .cm-string-2 {
     color: var(--green) !important;
   }
-  cm-keyword {
+  .cm-keyword {
     color: var(--purple) !important;
   }
-  cm-variable {
+  .cm-variable {
     color: var(--purple) !important;
   }
   .file-sidebar-container + tab-container .UnderlineNav {
@@ -2364,10 +2364,10 @@
   #signup-form {
     background-color: var(--base-3) !important;
   }
-  .highlight-graphql k {
+  .highlight-graphql .k {
     color: var(--purple) !important;
   }
-  .highlight-graphql n {
+  .highlight-graphql .n {
     color: var(--orange) !important;
   }
   .history-contents,
@@ -2431,25 +2431,25 @@
     border-top-color: var(--base-1) !important;
     border-color: var(--base-1) !important;
   }
-  .graphiql-container arg-default-value {
+  .graphiql-container .arg-default-value {
     color: var(--text-gray) !important;
   }
-  .graphiql-container doc-explorer-back {
+  .graphiql-container .doc-explorer-back {
     color: var(--blue) !important;
   }
-  .graphiql-container arg-name {
+  .graphiql-container .arg-name {
     color: var(--pink) !important;
   }
-  .graphiql-container field-name {
+  .graphiql-container .field-name {
     color: var(--blue) !important;
   }
-  .graphiql-container keyword {
+  .graphiql-container .keyword {
     color: var(--purple) !important;
   }
-  .graphiql-container type-name {
+  .graphiql-container .type-name {
     color: var(--yellow) !important;
   }
-  .graphiql-container field-short-description {
+  .graphiql-container .field-short-description {
     color: var(--indigo) !important;
   }
   .graphiql-container .history-contents p {
