@@ -1,8 +1,14 @@
+syntax($x)
+  +prefix-classes("pl-")
+    for $k, $v in $x
+      .{$k}
+        &, & a
+          c v($v)
 $syntaxTokens = {
   ba: 9
   bp: 'text-dark'
   bu: 'red'
-  c1: 'blue'
+  c1: 'text-primary'
   c2: 'light'
   c: 'indigo'
   cm: 'indigo'
@@ -38,7 +44,7 @@ $syntaxTokens = {
   p: 'text-dark'
   pds: 'green'
   pse: 'cyan'
-  s1: 'green'
+  s1: 'text-primary'
   s2: 'green'
   s: 'green'
   sb: 'green'
@@ -48,7 +54,7 @@ $syntaxTokens = {
   sg: 'text-faded'
   sh: 'green'
   si: 'cyan'
-  smi: 'blue'
+  smi: 'yellow'
   smw: 'yellow'
   sr: 'cyan'
   ss: 'purple'
@@ -58,41 +64,99 @@ $syntaxTokens = {
   vg: 'pink'
   vi: 'pink'
 }
-colors($syntaxTokens, 'pl-')
-.pl-
-  for $k, $v in $syntaxTokens
-    &{$k} a
-      c v($v)
-  &sr &sre, &sr &sra
-    c v("green")
-  &s &v
+syntax($syntaxTokens)
++prefix-classes("pl-")
+  .sr
+    .sre, .sra
+      c v("green")
+    .cce
+      c alt("red")
+      fw bold
+  .k + .s1
+    c v("red-alt")
+  .s > .v
     c fg("primary")
-  &s1 &kos
+  .en + .kos ~ .c1:not(.kos)
+    c v("orange")
+  .en + .kos ~ .s1:not(.kos)
+    c fg("primary")
+  .s1 > .kos
     c v("cyan")
-  &s > &smi
+    & + .s1
+      c fg("primary")
+  .s > .smi
     c alt("red")
-  &s &pse &s1
+  .s .pse .s1
     c v("cyan")
-  &sr &cce
-    c alt("red")
-    fw bold
-  &c2, &ii
+  .c2, .ii
     c fg("light") 0 v("red")
-  &c2::before
+  .c2::before
     content "^M"
-  &mh &en
+  .mh .en
     c v("cyan")
-  for $x in ("md" "red") ("mi1" "teal") ("mc" "cyan")
-    &{$x[0]}
-      c v($x[1]) 0 t($x[1])
-  &mdr
+  .mdr
     fw bold
-  &corl
+  .corl
     td underline
-.type-haskell
-  colors(
-    {
-      c1: 'yellow'
-    },
-    'pl-'
-  )
+  set(S('.%s', $x[0]), c, v($x[1]) 0 t($x[1])) for $x in ("md" "red") ("mi1" "teal") ("mc" "cyan")
+$languageTokens = {
+  css: {
+    en: "aqua"
+  }
+  haskell: {
+    c1: "yellow"
+  }
+  yaml: {
+    c1: "orange"
+  }
+  nix: {
+    v: "text-primary"
+  }
+  rust: {
+    c1: "red-alt"
+  }
+  shell: {
+    c1: "aqua"
+    's > .smi': "red-alt"
+    smi: "text-secondary"
+  }
+  stylus: {
+    c1: "aqua"
+    smi: "red-alt"
+  }
+  typescript: {
+    c1: "teal"
+    "kos:first-of-type + .c1": "purple"
+    "en + .s1 ~ .c1": "purple"
+    "kos + .kos + .c1": "purple"
+    "k + .s1 ~ .c1": "purple"
+    "s1 + .kos + .c1": "text-primary"
+  }
+  "vim-script": {
+    smi: "red-alt"
+  }
+}
+
+for $k, $v in $languageTokens
+  .type-{$k}
+    syntax $v
+
+language($x)
+  .type-{$x}
+    +prefix-classes("pl-")
+      {block}
+      
++language("typescript")
+  .s1:first-of-type
+    c v("pink")
+  .k + .en
+    c v("blue")
+    & ~ .s1
+      c v("pink")
+    & ~ .c1
+      c v("purple")
+  :not(.k) + .en
+    c v("aqua")
++language("stylus")
+  :not(.e) + .c1
+    c v("orange")

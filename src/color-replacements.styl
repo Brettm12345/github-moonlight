@@ -1,5 +1,5 @@
-colors(
-  {
+$replacements = {
+  text: {
     gray-light: "text-dark"
     blue: "blue"
     blue-mktg: "blue"
@@ -11,24 +11,16 @@ colors(
     purple: "purple"
     red: "red"
     white: "text-light"
-  },
-  'text-'
-)
-
-borders(
-  {
+  }
+  border: {
     blue-light: "blue"
     gray-dark: 1
     lg-left: 6
     lg-top: 6
     lg-right: 6
     lg-bottom: 6
-  },
-  'border-'
-)
-
-backgrounds(
-  {
+  }
+  bg: {
     gray: 4
     gray-light: 3
     blue-light: 5
@@ -43,9 +35,10 @@ backgrounds(
     gray-2: 7
     pending: "purple"
     white: rgba(white, 0.008)
-  },
-  'bg-'
-)
+  }
+}
+for $x in ('text' c) ('border' bc) ('bg' bgc)
+  set(s('.%s-%s', unquote($x[0]), unquote($k)), $x[1], v($v)) for $k, $v in $replacements[$x[0]]
 for $direction in top left right bottom
   $x = 'border-' + $direction
   .{$x}
@@ -56,29 +49,26 @@ for $direction in top left right bottom
   c fg("faded")
 div[style*="#fcfdfd"]
   c 0 0 4
-g[fill="#23292f"] + path
-  vc base(9)
 g, path
   &[fill="#eee"]
-    vc base(7)
+    vc 7
   &[stroke="#23292f"]
     vc 0 fg("primary")
   &[fill="#23292f"]
     vc fg("primary")
+    & + path
+      vc 9
 section[style*="#fafbfc"]
   c 0 0 2
-.bg-dots-gray
-  bg url('/images/modules/site/patterns/dots-small.svg') base(2)
-  background-blend-mode color-burn
-.bg-green
-  octicon base(1)
-.bg-yellow-light
-  c v("yellow")
 .selected-color-white
   c fg("light")
-
+.bg-
+  &dots-gray
+    bg url('/images/modules/site/patterns/dots-small.svg') base(2)
+    background-blend-mode color-burn
+  &green
+    octicon base(1)
+  &yellow-light
+    c v("yellow")
 .rounded-1, .box-shadow, .Box
-  for $direction in top left right bottom
-    $x = 'border-' + $direction
-    .{$x}
-      {$x} 1px solid base(1) $i
+  borders 1

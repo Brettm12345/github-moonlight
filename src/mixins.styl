@@ -63,14 +63,17 @@ scrollbar($x)
   v(S("scrollbar-%s", $x))
 base($x)
   v(s("base-%s", $x))
+set(x, y, z)
+  {x}
+    {y} z
 set-fg($k, $v)
-  .{$k}
+  &{$k}
     c v($v)
 set-bd($k, $v)
-  .{$k}
+  &{$k}
     c 0 v($v)
 set-bg($k, $v)
-  .{$k}
+  &{$k}
     c 0 0 v($v)
 get-key(x, y, z)
   z is a "object" ? x : y
@@ -78,10 +81,10 @@ foreach(xs, fn)
   fn(x, y) for x, y in xs
 map(xs, fn)
   xs[get-key(x, y, xs)] = fn(x, y) for x, y in xs
-colors($xs, $prefix = "")
-  set-fg($prefix + $k, $v) for $k, $v in $xs
+colors($xs, $p = "")
+  set($p + $k, c, v($v)) for $k, $v in $xs
 backgrounds($xs, $prefix = "")
-  set-bg($prefix + $k, $v) for $k, $v in $xs
+  set($p + $k, c, 0 0 v($v)) for $k, $v in $xs
 borders($xs, $prefix = "")
   set-bd($prefix + $k, $v) for $k, $v in $xs
 prop($p, $x...)
@@ -347,3 +350,11 @@ debug()
   [style], style, [class=""], [id=""], a[href="#"]
     background: rgba(yellow, .2)
     border: 1px solid gold
+borders($x)
+  for $direction in top left right bottom
+    $x = 'border-' + $direction
+    $y = 1px solid v($x) $i
+    .border
+      border $y
+    .{$x}
+      {$x} $y
