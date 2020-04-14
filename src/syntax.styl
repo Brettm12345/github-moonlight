@@ -1,132 +1,142 @@
-syntax($x)
+  syntax($x)
+    +prefix-classes("pl-")
+      for $k, $v in $x
+        .{$k}
+          &, & a
+            c v($v)
+  $syntaxTokens = {
+    ba: 9
+    bp: 'text-dark'
+    bu: 'red'
+    c1: 'text-primary'
+    c2: 'light'
+    c: 'indigo'
+    cm: 'indigo'
+    cp: 'indigo'
+    cs: 'indigo'
+    e: 'blue'
+    en: 'blue'
+    ent: 'red-alt'
+    go: 'text-dark'
+    gr: 'red'
+    gt: 'red'
+    gu: 'text-light'
+    il: 'teal'
+    k: 'purple'
+    kos: 'text-secondary'
+    kp: 'orange'
+    kt: 'blue'
+    m: 'green'
+    mf: 'orange'
+    mh: 'green'
+    mi: 'yellow'
+    ml: 'orange'
+    mo: 'orange'
+    na: 'purple'
+    nb: 'purple'
+    nc: 'yellow'
+    nf: 'blue'
+    ni: 'cyan'
+    nn: 'yellow'
+    no: 'yellow'
+    nt: 'red'
+    o: 'cyan'
+    p: 'text-dark'
+    pds: 'text-primary'
+    pse: 'cyan'
+    s1: 'text-primary'
+    s2: 'green'
+    s: 'green'
+    sb: 'green'
+    sc: 'green'
+    sd: 'green'
+    se: 'green'
+    sg: 'text-faded'
+    sh: 'green'
+    si: 'cyan'
+    smi: 'yellow'
+    smw: 'yellow'
+    sr: 'cyan'
+    ss: 'purple'
+    sx: 'green'
+    v: 'red-alt'
+    vc: 'pink'
+    vg: 'pink'
+    vi: 'pink'
+  }
+  syntax($syntaxTokens)
   +prefix-classes("pl-")
-    for $k, $v in $x
-      .{$k}
-        &, & a
-          c v($v)
-$syntaxTokens = {
-  ba: 9
-  bp: 'text-dark'
-  bu: 'red'
-  c1: 'text-primary'
-  c2: 'light'
-  c: 'indigo'
-  cm: 'indigo'
-  cp: 'indigo'
-  cs: 'indigo'
-  e: 'blue'
-  en: 'blue'
-  ent: 'red-alt'
-  go: 'text-dark'
-  gr: 'red'
-  gt: 'red'
-  gu: 'text-light'
-  il: 'teal'
-  k: 'purple'
-  kos: 'text-secondary'
-  kp: 'orange'
-  kt: 'blue'
-  m: 'green'
-  mf: 'orange'
-  mh: 'green'
-  mi: 'yellow'
-  ml: 'orange'
-  mo: 'orange'
-  na: 'purple'
-  nb: 'purple'
-  nc: 'yellow'
-  nf: 'blue'
-  ni: 'cyan'
-  nn: 'yellow'
-  no: 'yellow'
-  nt: 'red'
-  o: 'cyan'
-  p: 'text-dark'
-  pds: 'green'
-  pse: 'cyan'
-  s1: 'text-primary'
-  s2: 'green'
-  s: 'green'
-  sb: 'green'
-  sc: 'green'
-  sd: 'green'
-  se: 'green'
-  sg: 'text-faded'
-  sh: 'green'
-  si: 'cyan'
-  smi: 'yellow'
-  smw: 'yellow'
-  sr: 'cyan'
-  ss: 'purple'
-  sx: 'green'
-  v: 'red-alt'
-  vc: 'pink'
-  vg: 'pink'
-  vi: 'pink'
-}
-syntax($syntaxTokens)
-+prefix-classes("pl-")
-  .sr
-    .sre, .sra
-      c v("green")
-    .cce
-      c alt("red")
-      fw bold
-  .k + .s1
-    c v("red-alt")
-  .s > .v
-    c fg("primary")
-  .en + .kos ~ .c1:not(.kos)
-    c v("orange")
-  .en + .kos ~ .s1:not(.kos)
-    c fg("primary")
-  .s1 > .kos
-    c v("cyan")
-    & + .s1
+    .sr
+      .sre, .sra
+        c v("green")
+      .cce
+        c alt("red")
+        fw bold
+    .k + .s1
+      c v("red-alt")
+    .s > .v
       c fg("primary")
-  .s > .smi
-    c alt("red")
-  .s .pse .s1
-    c v("cyan")
-  .c2, .ii
-    c fg("light") 0 v("red")
-  .c2::before
-    content "^M"
-  .mh .en
-    c v("cyan")
-  .mdr
-    fw bold
-  .corl
-    td underline
-  set(S('.%s', $x[0]), c, v($x[1]) 0 t($x[1])) for $x in ("md" "red") ("mi1" "teal") ("mc" "cyan")
-$languageTokens = {
-  css: {
-    en: "aqua"
-  }
-  haskell: {
-    c1: "yellow"
-  }
-  yaml: {
-    c1: "orange"
-  }
-  nix: {
-    v: "text-primary"
-  }
-  rust: {
-    c1: "red-alt"
-  }
-  shell: {
-    c1: "aqua"
-    's > .smi': "red-alt"
-    smi: "text-secondary"
-  }
-  stylus: {
-    c1: "aqua"
-    smi: "red-alt"
-  }
-  typescript: {
-    c1: "teal"
-    "kos:first-of-type + .c1": "purple"
+    .en + .kos ~ .c1:not(.kos)
+      c v("orange")
+    .en + .kos ~ .s1:not(.kos)
+      c fg("primary")
+    .s1 > .kos
+      c v("cyan")
+      & + .s1
+        c fg("primary")
+    .s > .smi
+      c alt("red")
+    .s .pse .s1
+      c v("cyan")
+    .c2, .ii
+      c fg("light") 0 v("red")
+    .c2::before
+      content "^M"
+    .mh .en
+      c v("cyan")
+    .mdr
+      fw bold
+    .corl
+      td underline
+    set(S('.%s', $x[0]), c, v($x[1]) 0 t($x[1])) for $x in ("md" "red") ("mi1" "teal") ("mc" "cyan")
+  $languageTokens = {
+    css: {
+      en: "aqua"
+      c1: "blue"
+      "en ~ .c1": "orange"
+      smi: "orange"
+    }
+    graphql: {
+      c1: "yellow"
+      v: "text-primary"
+    }
+    haskell: {
+      c1: "yellow"
+    }
+    json: {
+      c1: "orange"
+    }
+    yaml: {
+      c1: "orange"
+    }
+    nix: {
+      v: "text-primary"
+    }
+    rust: {
+      c1: "red-alt"
+    }
+    shell: {
+      c1: "aqua"
+      's > .smi': "red-alt"
+      smi: "text-secondary"
+    }
+    stylus: {
+      c1: "aqua"
+      smi: "red-alt"
+    }
+    typescript: {
+      "kos:first-of-type + .c1": "purple"
+      pds: 'orange'
     "en + .s1 ~ .c1": "purple"
     "kos + .kos + .c1": "purple"
     "k + .s1 ~ .c1": "purple"

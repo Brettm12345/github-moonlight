@@ -4830,7 +4830,7 @@
   }
   .pl-pds,
   .pl-pds a {
-    color: var(--green) !important;
+    color: var(--text-primary) !important;
   }
   .pl-pse,
   .pl-pse a {
@@ -4974,9 +4974,33 @@
   .type-css .pl-en a {
     color: var(--aqua) !important;
   }
+  .type-css .pl-c1,
+  .type-css .pl-c1 a {
+    color: var(--blue) !important;
+  }
+  .type-css .pl-en ~ .pl-c1,
+  .type-css .pl-en ~ .pl-c1 a {
+    color: var(--orange) !important;
+  }
+  .type-css .pl-smi,
+  .type-css .pl-smi a {
+    color: var(--orange) !important;
+  }
+  .type-graphql .pl-c1,
+  .type-graphql .pl-c1 a {
+    color: var(--yellow) !important;
+  }
+  .type-graphql .pl-v,
+  .type-graphql .pl-v a {
+    color: var(--text-primary) !important;
+  }
   .type-haskell .pl-c1,
   .type-haskell .pl-c1 a {
     color: var(--yellow) !important;
+  }
+  .type-json .pl-c1,
+  .type-json .pl-c1 a {
+    color: var(--orange) !important;
   }
   .type-yaml .pl-c1,
   .type-yaml .pl-c1 a {
@@ -5010,13 +5034,13 @@
   .type-stylus .pl-smi a {
     color: var(--red-alt) !important;
   }
-  .type-typescript .pl-c1,
-  .type-typescript .pl-c1 a {
-    color: var(--teal) !important;
-  }
   .type-typescript .pl-kos:first-of-type + .pl-c1,
   .type-typescript .pl-kos:first-of-type + .pl-c1 a {
     color: var(--purple) !important;
+  }
+  .type-typescript .pl-pds,
+  .type-typescript .pl-pds a {
+    color: var(--orange) !important;
   }
   .type-typescript .pl-en + .pl-s1 ~ .pl-c1,
   .type-typescript .pl-en + .pl-s1 ~ .pl-c1 a {
@@ -5927,15 +5951,14 @@
   .application-main {
     margin-bottom: 16px !important;
   }
+  .pagehead {
+    background-color: var(--base-2) !important;
+  }
   .gisthead .pagehead-actions .octicon-mute {
     fill: var(--text-faded) !important;
   }
   .reponav-item-selected {
     background-color: var(--base-4) !important;
-  }
-  .reponav,
-  .reponav-item {
-    background-color: var(--base-3) !important;
   }
   .gist-banner {
     border-color: var(--base-1) !important;
@@ -6202,7 +6225,7 @@
     color: var(--text-dark) !important;
   }
   code .pds {
-    color: var(--green) !important;
+    color: var(--text-primary) !important;
   }
   code .pse {
     color: var(--cyan) !important;

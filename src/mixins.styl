@@ -66,15 +66,6 @@ base($x)
 set(x, y, z)
   {x}
     {y} z
-set-fg($k, $v)
-  &{$k}
-    c v($v)
-set-bd($k, $v)
-  &{$k}
-    c 0 v($v)
-set-bg($k, $v)
-  &{$k}
-    c 0 0 v($v)
 get-key(x, y, z)
   z is a "object" ? x : y
 foreach(xs, fn)
@@ -82,11 +73,7 @@ foreach(xs, fn)
 map(xs, fn)
   xs[get-key(x, y, xs)] = fn(x, y) for x, y in xs
 colors($xs, $p = "")
-  set($p + $k, c, v($v)) for $k, $v in $xs
-backgrounds($xs, $prefix = "")
-  set($p + $k, c, 0 0 v($v)) for $k, $v in $xs
-borders($xs, $prefix = "")
-  set-bd($prefix + $k, $v) for $k, $v in $xs
+  set('.' + $p + $k, c, v($v)) for $k, $v in $xs
 prop($p, $x...)
   {$p} $x $i
 color-prop($p, $x)
