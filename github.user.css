@@ -1238,6 +1238,9 @@
     border-bottom: none !important;
     background-color: var(--base-2) !important;
   }
+  .tabnav-tab.js-blob-edit-tab.selected,
+  .tabnav-tab.js-blob-edit-tab[aria-selected="true"],
+  .tabnav-tab.js-blob-edit-tab[aria-current],
   .js-code-editor {
     background-color: var(--base-3) !important;
   }

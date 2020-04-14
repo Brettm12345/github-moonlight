@@ -18,8 +18,10 @@ colors(
 .file-sidebar-container + tab-container .UnderlineNav
   bb none
   c 0 0 2
-.js-code-editor
-  c 0 0 3
+.tabnav-tab.js-blob-edit-tab
+  +selected()
+    &, /.js-code-editor
+      c 0 0 3
 .CodeMirror
   &-linenumber-&gutter-elt
     fw 500
