@@ -190,10 +190,10 @@
 }
 
 @-moz-document regexp(".*github.*") {
-  .repository-content .bg-gray-dark.d-flex.flex-column.flex-auto.flex-justify-end {
+  .Box > .bg-gray-dark:nth-child(2):last-of-type {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-4) !important;
+    background-color: var(--base-3) !important;
   }
   .CheckStep .ansibg-b {
     background-color: var(--indigo) !important;
@@ -478,9 +478,6 @@
   }
   .d-flex[style*="opacity: 0.6"] {
     opacity: 1 !important;
-  }
-  .Box.rounded-2.d-flex.flex-column.overflow-hidden.width-full.flex-auto.mb-4 .d-flex.flex-justify-between.px-4.pt-3.pb-4 {
-    background-color: var(--base-6) !important;
   }
   .js-checks-log-display-container {
     border: 1px solid var(--base-1) !important;
