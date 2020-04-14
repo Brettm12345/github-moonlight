@@ -4,7 +4,7 @@
   &toggle-show-button-wrapper
     .action-icon
       .octicon
-        ease color, opacity
+        ease colors
         o 0.2
         &:hover
           c v("blue")
@@ -22,16 +22,16 @@
       c 0 1 4
       .octicon
         c fg("faded")
-        ease color
+        ease colors
         &:hover, &:focus
           c v("blue")
       & ^[1]-content
         .file-explorer
           .node-item
-            ease color, background-color
+            ease colors
             .octicon
               c v("indigo")
-              ease color, opacity
+              ease colors
               o 0.4
             &:hover, &:focus
               c 0 0 4
@@ -46,7 +46,7 @@
               c v("blue")
           .TextInput-icon
             c fg("faded")
-            ease color
+            ease colors
       & ^[0]settings-bar
         &-content .settings-section .field select
           c fg("primary") 1 3

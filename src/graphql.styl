@@ -1,11 +1,8 @@
 .highlight-graphql
-  $rec = {
+  colors({
     k: 'purple'
     n: 'orange'
-  }
-  for $k, $v in $rec
-    .{$k}
-      c v($v)
+  })
 .history-, .doc-explorer-
   $rec = {
     contents: 2
@@ -21,7 +18,7 @@
     blc v("blue")
   &-hint
     c fg("primary") 1 4
-    ease background-color
+    ease colors
     &-information
       c v("indigo") 1 4
     &-active
@@ -46,7 +43,7 @@ iframe#graphiql
     btc base(1)
     c 0 1
   &container
-    $colors = {
+    colors({
       arg-default-value: "text-gray"
       doc-explorer-back: "blue"
       arg-name: "pink"
@@ -54,10 +51,7 @@ iframe#graphiql
       keyword: "purple"
       type-name: "yellow"
       field-short-description: "indigo"
-    }
-    for $k, $v in $colors
-      .{$k}
-        c v($v)
+    })
     & .history-contents p
       c fg("primary") 1
       &:hover, &.hover, &:active
@@ -66,7 +60,7 @@ iframe#graphiql
       c 0 1 8
     .show-btn
       c fg("primary") 1 3
-      ease color, background-color
+      ease colors
       &:hover, &:focus
         c fg("light") 0 6
     .search-box

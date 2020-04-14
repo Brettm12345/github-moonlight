@@ -6,6 +6,8 @@ $commentBg = base(3)
 .pagination-loader-container
   bgi url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpolyline points='0 21 22 8 44 21 44 26 22 13 0 26' fill='%232f334d'/%3E%3C/svg%3E")
   c 0 0 $t
+.previewable-comment-form .comment-body
+  bbc 1
 .discussion-
   &item-
     &header
@@ -19,7 +21,7 @@ $commentBg = base(3)
   &sidebar-
     &toggle .octicon
       c fg("faded")
-      ease color
+      ease colors
       &:hover, &:focus
         c v("blue")
     &heading
@@ -46,43 +48,37 @@ $commentBg = base(3)
       c fg("faded")
 timeline
   .deployments-&
-    bbc base(1)
+    bbc 1
     &-item
-      blc base(9)
+      blc 9
   .&-commits .hidden-text-expander .ellipsis-expander
     c 0 0 4
-  .&-
-    &new-comment .previewable-comment-form .comment-body
+  .&-comment
+    c fg("primary") 1 $commentBg
+    /.composer.composer-responsive &
+      caret "right" 2
+    /:target &
+      shadow 0 0 0 0.2em t("purple")
+      &::before
+        filter drop-shadow(-0.28em 0 0 t("purple"))
+    &-wrapper
+      b 0
       c 0 1
-    &comment
-      c fg("primary") 1 $commentBg
-      /.composer.composer-responsive &
-        caret "right" 2
-      /:target &
-        shadow 0 0 0 0.2em base(1)
-        &::before
-          filter drop-shadow(-0.28em 0 0 base(1))
-      &-wrapper
-        b 0
-        c 0 1
-      &-label.tooltipped.tooltipped-s.tooltipped-multiline
-        c v("purple") v("purple") t("purple")
-      &-header
-        c fg("light") 1 $commentDark
-        .author
-          c fg("light")
-      &--caret
-        &, &.current-user
-          caret "right" $commentDark
+    &-label.tooltipped.tooltipped-s.tooltipped-multiline
+      c v("purple") v("purple") t("purple")
+    &-header
+      c fg("light") 1 $commentDark
+      .author
+        c fg("light")
+    &--caret
+      &, &.current-user
+        caret "right" $commentDark
 comment
-  .&-body
+  .&-body.markdown-body
     .bg-gray-light
       c 0 0 $commentBg
-    .blob-code, .blob-num
+    pre, .highlight pre, .blob-code, .blob-num
       c 0 0 $commentDark
-    &, .markdown-body
-      pre
-        c 0 0 3
   /.review-
     &^[0]
       c fg("primary") 1 $commentBg
@@ -93,7 +89,7 @@ comment
       .form-control
         c 0 0 $commentDark
       .inline-^[0]-form
-        c 0 0 $commentDark
+        c 0 1 $commentBg
   &-form
     .previewable-&
       c 0 1 $commentBg
@@ -103,10 +99,9 @@ comment
         .tabnav-tab, &, /.page-responsive &, .toolbar-commenting
           c fg("dark") 0 $commentDark
         .tabnav-tab
-          ease color
-          &:hover
-            c fg("primary")
-          &.selected, &[aria-selected="true"], &[aria-current]
+          ease colors
+          hover fg("primary")
+          +selected()
             c fg("light") 1 $commentBg
     .&-textarea.dragover
       c 0 v("blue")
@@ -139,8 +134,5 @@ button.reaction-summary-item
 .js-reaction-option-item.border-gray-dark.bg-blue-light
   c 0 1 7
   r 4px
-.timeline-comment
-  pre
-    c 0 0 $commentDark
 .bg-gray.p-2.js-resolvable-thread-toggler-container.border-bottom
   c 0 1 3

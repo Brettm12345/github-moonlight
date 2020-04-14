@@ -1,7 +1,9 @@
 .autocomplete-
   &item
-    &.navigation-focus, &.selected, &:hover, &[aria-selected="true"]
+    +nav-focus()
       c fg("primary") 0 4
   &results
     c 0 1 3
     elevation 1
+.card-filter-autocomplete-dropdown .bg-white
+  c 0 0 $t

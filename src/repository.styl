@@ -2,48 +2,43 @@
   c fg("placeholder") 1 4
 .num
   c fg("secondary")
-.social-count
-  c fg("secondary") 1 5
-  &:hover
-    c fg("light")
 .js-recent-activity-container > div > div,
 .repository-content > div.bg-white:first-child
   c 0 0 2
 #readme
   .Box-header
-    ease background-color
+    ease colors
     c 0 1 3
     o 1
-    &:hover
-      c 0 0 2
+    hover 0 0 2
     .octicon-pencil
       c v("indigo")
-      ease color
-      ../:hover ^[2..-1]
+      ease colors
+      +parent-hover()
         c v("blue")
 table
   &.files
     c fg("primary") 1 4
     tr
-      ease background-color
-      &.navigation-focus, &[aria-selected=true]
+      ease colors
+      +nav-focus()
         td
           c 0 0 6
-      &.up-tree
-        c 0 1
-        a
-          b 1px solid $t
-          ease background-color, border-color, color
-          &:hover, &:focus
-            b $b
-            c v("blue") 1 2
-            td none
       td
         c 0 1
         &.message
           c fg("faded")
         &.age, &.icon
           c fg("dark")
+      &.up-tree
+        c 0 1
+        a
+          b 1px solid $t
+          ease colors
+          &:hover, &:focus
+            b $b
+            c v("blue") 1 2
+            td none
 .hide-files-
   &btn
     c fg("secondary")

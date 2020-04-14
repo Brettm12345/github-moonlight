@@ -1,63 +1,54 @@
-.content
-  c fg("primary")
-.sidebar-menu
-  &, h3, ul ul li
-    c fg("primary") 1 4
-    &:hover, & a:hover
-      c fg("light") 1 6
 .js-current .standalone a
   blc v("blue")
   c fg("light") 0 5
-.sidebar-module .disable > a
-  c fg("light") 1 5
 .sub-nav
   c 0 1
 body table
   th
     c fg("primary") 1 2
-  tr td
+  &, tr td
     c fg("primary") 1 4
-  c fg("primary") 1 4
-.alert
-  &.tip
-    c fg("primary") v("teal") t("teal")
-  &.note
-    c fg("primary") v("blue") t("blue")
-  &.warning
-    c fg("primary") v("yellow") t("yellow")
-  &.product
-    bg t("purple")
-    c fg("primary") v("purple") t("purple")
+$alertColors = {
+  tip: "teal"
+  note: "blue"
+  warning: "yellow"
+  product: "purple"
+}
+for $k, $v in $alertColors
+  .alert.{$k}
+    bg t($v)
+    c fg("primary") v($v) t($v)
 h1, h2, h3, h4, h5, h6
   c fg("primary")
-.content ol li pre code
-  c 0 0 2
-  p 8px
 ol > li::before
   brc base(1)
   c fg("primary")
-.octokit-language span,
-.lead
+.octokit-language span, .lead
   c fg("faded")
 .libraries-jumbotron
   c fg("primary") 1 2
-.sidebar-module
-  c 0 1 5
 .command-line
   em
     c v("blue")
     td underline
-  span
-    &.comment
-      c v("indigo")
-    &.output
-      c fg("gray")
-.content .sectionbody .dlist dt, .content .verseblock-content, .content dl code, .content h2 code, .content h3 code, .content h4 code, .content ol code, .content p > tt, .content table code, .content ul code, p code,
-pre
-  c fg("primary") 1 5
+  $rec = {
+    comment: 'indigo'
+    output: 'text-gray'
+  }
+  for $k, $v in $rec
+    span.{$k}
+      c v($v)
+.content
+  c fg("primary")
+  ol li pre code
+    c 0 0 2
+    p 8px
+  /p, dl, h2, h3, h4, ol, table, ul
+    & code, /pre, ^[0] p > tt, ^[0] .sectionbody .dlist dt, ^[0] .verseblock-content
+      c fg("primary") 1 5
 .headlines > li
   cursor pointer
-  ease background-color, color
+  ease colors
   &:hover
     c 0 0 7
   &, .sidebar-module ul h3
@@ -70,7 +61,7 @@ pre
   c fg("faded")
 .sub-nav ul
   & a
-    ease color
+    ease colors
     c fg("faded")
     &.active
       c fg("light")
@@ -82,75 +73,42 @@ pre
 .site-header-nav .dropdown-menu
   caret "bottom"
   a
-    ease background-color, color
+    ease colors
     &:hover
       c fg("light") 0 3
 code
-  $rec = {
-    bp: 'text-dark'
-    c1: 'indigo'
-    c: 'indigo'
-    cm: 'indigo'
-    cp: 'indigo'
-    cs: 'indigo'
-    go: 'text-dark'
-    gr: 'red'
-    gt: 'red'
-    gu: 'text-light'
-    il: 'teal'
-    kt: 'blue'
-    m: 'green'
-    mf: 'orange'
-    mh: 'orange'
-    mi: 'orange'
-    mo: 'orange'
-    kp: 'orange'
-    na: 'purple'
-    no: 'yellow'
-    ni: 'cyan'
-    nf: 'blue'
-    nb: 'purple'
-    k: 'purple'
-    nc: 'yellow'
-    nn: 'yellow'
-    nt: 'red'
-    o: 'cyan'
-    p: 'text-dark'
-    s: 'green'
-    s1: 'green'
-    s2: 'green'
-    sb: 'green'
-    sc: 'green'
-    sd: 'green'
-    se: 'green'
-    sh: 'green'
-    si: 'cyan'
-    sx: 'green'
-    sr: 'cyan'
-    ss: 'purple'
-    vc: 'pink'
-    vg: 'pink'
-    vi: 'pink'
-  }
-  for $k, $v in $rec
+  for $k, $v in $syntaxTokens
     .{$k}
       c v($v)
-.text-alpha, .text-beta, .text-delta, .text-gamma, h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5
   c fg("gray")
 .card
   c 0 1 3
-  ease background-color
+  ease colors
   /a&.bg-gray-light
-    &:hover, &:focus
-      c 0 0 6
-.bg-blue
-  c 0 0 2
-.text-black
-  c fg("light")
-.bg-custom-gradient
-  bg linear-gradient(180deg,base(3),$t)
+    hover 0 0 6
 .link-mono
-  ease box-shadow, color
+  ease colors
   shadow 0 1px 0 0 t("blue")
   &:hover
     shadow 0 1px 0 0 v("blue")
+.bg-
+  &blue
+    c 0 0 2
+  &custom-gradient
+    bg linear-gradient(180deg,base(3),$t)
+.text-
+  &black
+    c fg("light")
+  &alpha, &beta, &gamma, &delta
+    c fg("gray")
+.sidebar-
+  &module
+    c 0 1 5
+    .disable > a
+      c fg("light") 1 5
+  &menu
+    &, h3, ul ul li
+      c fg("primary") 1 4
+      &:hover, & a:hover
+        c fg("light") 1 6

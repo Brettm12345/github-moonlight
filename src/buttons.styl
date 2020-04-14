@@ -2,10 +2,9 @@
   &, &&-sm
     bgi none
     c fg("light") 1 5
-    ease background-color, border-color
-    &:disabled
-      &, &:hover, &:focus
-        c fg("faded") 1 5
+    ease colors
+    +disabled()
+      c fg("faded") 1 5
     &:hover, &:focus
       bgi none
       c fg("light") 0 7
@@ -14,14 +13,14 @@
     &, &.BtnGroup-item, &.tooltipped.tooltipped-sw
       ease all
       c 0 0 3
-      &:hover, &:focus
-        c 0 0 5
+      hover 0 0 5
   &-mktg
     c fg("light") 1 rgba(black, 0.1)
   &-octicon
     c v("blue")
-    &:hover, &:focus
-      c fg("light")
+    hover fg("light")
     &-danger
-      &:hover, &:focus
-        c v("red")
+      hover v("red")
+.social-count
+  c fg("secondary") 1 5
+  hover fg("light")

@@ -35,7 +35,7 @@
     &:not(input)&-primary, &:not(input)&-secondary, ^[0]quilt-post-page &wrapper-Submit-action &primary&secondary
       bgi none
       c fg("primary") v("teal") t("teal")
-      ease background-color, border-color, color
+      ease colors
       &:hover, &:focus
         background-position 0
         c 1 0 v("teal")
@@ -83,7 +83,7 @@
       &, &-inline
         &, & > ul > li, /.user-navigation-settings-drop-down-inner > ^[0]list-standard
           &, & .SearchToggleFieldFilter, & .type-filter-alternative
-            ease background-color
+            ease colors
             &:hover, &:focus, &.selected
               c 0 0 3
   &autocomplete,
@@ -103,7 +103,7 @@
         c 0 0 v("blue")
     & > li a
       c fg("primary")
-      ease color, background-color
+      ease colors
       &:hover, &:focus
         c fg("light") 0 4
   &content
@@ -120,7 +120,7 @@
       /.mce-form .mce-textbox
         c fg("primary") 1 3
         caret-color v("blue")
-        ease border-color, color, background-color
+        ease colors
         &:hover, &:focus
           c fg("light") v("blue") 6
           shadow none
@@ -145,7 +145,7 @@
   &faq-section-title
     ^[0]link-navigation
       c fg("primary")
-      ease color
+      ease colors
       &::before
         vc 0 v("blue")
       &:hover

@@ -3,8 +3,8 @@
     c 0 0 $t
     ~/item
       c 0 0 $t
-      ease color, background-color, border-color
+      ease colors
       &:hover, &:focus
         c 0 0 6
-      &.selected, &[aria-selected="true"], &[aria-current]
+      +selected()
         c fg("light") 0 5

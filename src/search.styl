@@ -11,27 +11,6 @@ header #search-results-container
   &-list-item
     &+&
       btc base(1)
-.form-
-  &group &control
-    c fg("light") 1 4
-    .search-input
-      caret-color v("blue")
-    &:focus
-      c 0 v("blue") 7
-      .form-control, .ais-SearchBox-input, .form-select
-        &.focus, &:focus
-          c 0 v("blue")
-          shadow none
-  &control
-    &, ~/select
-      ^[1].search-page-label.js-advanced-search-label
-        &, & input
-          c 0 0 5
-      c fg("light") 1 4
-      shadow none
-      &.focus, &:focus
-        c fg("light") v("blue") 0
-        shadow none
 .code-list
   .file-box, & &-item + &-item, .divider .blob-code, .divider .blob-num, &-item-private .blob-num
     c fg("primary") 1

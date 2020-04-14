@@ -4,9 +4,9 @@
     c fg("secondary")
   &.closed
     c 0 0 4
-  &.selected
+  +selected()
     c 0 0 5
-  &.navigation-focus, &[aria-selected="true"]
+  +nav-focus()
     c 0 0 3
   &-summary a
     c fg("secondary")

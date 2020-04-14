@@ -1,21 +1,18 @@
-cal($opacity, $target, $color = v("calendar"))
+cal($opacity, $target, $color = "calendar")
   .legend li[style*=\"{$target}\"]
-    c 0 0 $color
+    c 0 0 v($color)
     o $opacity
   .calendar-graph rect[fill=\"{$target}\"]
     o $opacity
-    vc $color
+    vc v($color)
 
-cal(0.05, "#ebedf0", v("indigo"))
-cal(0.25, "#c6e48b")
-cal(0.5, "#7bc96f")
-cal(0.75, "#239a3b")
-cal(1, "#196127")
+$calendar = (0.05 "#ebedf0" "indigo") (0.25 "#c6e48b") (0.5 "#7bc96f") (0.75 "#239a3b") (1 "#196127")
+cal($x[0], $x[1], $x[2] || 'calendar') for $x in $calendar
 
 .activity-overview-box.border-top
   bt none
 .graph-before-activity-overview
-  c 0 0 4
+  c 0 0 3
 .calendar-graph text
   &.wday, &.month
     vc fg("light")

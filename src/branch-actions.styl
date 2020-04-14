@@ -4,33 +4,28 @@
   &name
     c fg("primary") 1 8
   &action-
-    &state-clean
-      & ^[1]body::before
-        brc base(5)
     &item
-      & + &, & + .mergeability-details
-        c 0 1
+      & + &, & + .mergeability-details, ~/body
+        c 0 5
       &-icon.completeness-indicator
+        for $x in ("success" "green") ("error" "red") ("problem" "yellow")
+          &-{$x[0]}
+            c 1 0 v($x[1])
         .octicon
-          vc base(1)
-        &-success
-          c 1 0 v("green")
-        &-error
-          c 1 0 v("red")
-        &-problem
-          c 1 0 v("yellow")
-    &state-dirty &icon
-      c 0 0 v("red")
-      .octicon
-        vc base(1)
-    &state-clean &icon
-      c 0 0 v("teal")
-      .octicon
-        vc base(1)
+          vc 1
     &body
-      b 0
-      c 0 1 4
+      c 0 0 3
       caret "right"
       .merge-
         &branch-form, &message
           c 0 1 4
+    for $x in ("dirty" "red") ("clean" "green")
+      &state-{$x[0]}
+        ^[1]body
+          c 0 v($x[1])
+          &::before
+            brc v($x[1])
+        ^[1]icon
+          c 0 0 v($x[1])
+          .octicon
+            vc 1

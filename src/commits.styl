@@ -29,9 +29,9 @@
   & &-title, &-group-title, a
     c fg("primary")
   &-tease
-    c v("blue") 1 4
+    c fg("gray") 1 4
     &-sha
-      c v("blue")
+      c v("yellow")
     &-contributors
       bt $b
       c 0 0 9
@@ -44,51 +44,42 @@
     c 0 0 4
     &+&
       btc base(1)
-    &.navigation-focus
+    +nav-focus()
       c 0 0 5
     .commit-
       &desc pre, &author
         c fg("faded")
 .full-commit
-  c v("blue") 1 4
+  &, & .commit-meta
+    c 0 1 3
   .branches-list li
     c fg("gray")
     &.loading, &.pull-request
       c fg("faded")
-  .btn-outline
-    &:not(:disabled):hover
-      c v("blue") v("blue")
-    &, &:disabled
-      c 0 1
   p.commit-title
-    c v("blue")
+    c v("light")
   .sha-block
     c fg("faded")
     fs 14px
     fw 500
     & > a
       c fg("primary") 6
-      &:hover
-        c 0 1
+      hover 0 1
     & > .sha
       c v("blue")
-  .commit-meta
-    c 0 1 4
 .file-commit-form--full
   c fg("primary") 1 2
 .commit-form
   c 0 0 4
   caret "right"
 .line-comments
-  c 0 0 5
   /.diff-table tr:not(:last-child) &
     c 0 1
   /.empty-cell + &, & + &
-    blc base(1)
+    blc 1
 .commit-build-statuses
   c fg("faded")
-  &:hover
-    c v("blue")
+  hover v("blue")
 -expander
   .ellipsis&, .hidden-text& a
     c fg("primary") 0 7

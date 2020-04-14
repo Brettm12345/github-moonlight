@@ -4,7 +4,8 @@
     c 0 1
     small
       c 0 0 fg("faded")
-    &.navigation-focus, &:hover, &[aria-selected="true"]
-      c 0 0 dark("blue")
-    &.selected, &[aria-selected="true"], &[aria-current]
+    +selected()
       c 0 0 6
+    +nav-focus()
+      &, ../:hover
+        c 0 0 dark("blue")

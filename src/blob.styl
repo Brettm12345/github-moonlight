@@ -29,7 +29,7 @@
     &-expandable
       .diff, .directional
         &-expander
-          ease background-color
+          ease colors
           c 0 0 7
           &:hover, &:focus
             c 0 dark("blue") dark("blue")
@@ -41,13 +41,13 @@
         c 0 1 3
 .CopyBlock
   b 1px solid $t
-  ease border-color, background-color
+  ease colors
   &:active, &:focus, &:hover
     c 0 1 7
 .TagsearchPopover-
   &item, &list-item
     &, {selector('.blob-', '&num, &code', '&, &-inner')}
-      ease background-color
+      ease colors
       c 0 0 4
       ^[1]:hover &
         c 0 0 2

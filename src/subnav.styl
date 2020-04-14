@@ -1,7 +1,7 @@
 .site-subnav.bg-white
   bb $b
   c 0 3 3
-  ease box-shadow, background-color, border-color
+  ease colors
   &.is-stuck
     bb $b
     c 0 1 2
@@ -19,7 +19,7 @@
     c 0 1
   &item
     c 0 1 4
-    ease border-color, background-color
+    ease colors
     &:focus, &:hover
       c 0 0 6
     &.selected
@@ -29,7 +29,7 @@
 .btn
   &-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white), .subnav-search-context &
     c fg("dark")
-    ease color
+    ease colors
     &:hover, &.selected
       c v("blue")
   &&-primary, .js-selected-navigation-item.subnav-item

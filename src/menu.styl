@@ -6,12 +6,12 @@
     c fg("gray") 1 4
   &-item
     bb $b
-    ease background-color, border-color, color
+    ease colors
     &:hover
       c 0 0 6
-    &.selected, &[aria-current]
+    +selected()
       c v("blue") 0 5
       &::before
         c 0 0 v("blue")
-      &:hover
+      &:hover, &:focus
         c 0 0 6

@@ -1,23 +1,22 @@
 .ajax-pagination-
-  &form.js-more-repos-form button
-    c 0 0 3
-    shadow inset 0 1px 0 base(1)
-  &form > .Box > .bg-white
-    c 0 0 4
-    ease background-color, color
-  &form > .Box:hover > .bg-white
-    c 0 0 5
-  &form:not(.js-more-repos-form) &btn
-    c fg("faded") 1 4
-    ease color, background-color
-    &:hover, &:focus
-      c v("blue") 0 6
+  &form
+    &.js-more-repos-form button
+      c 0 0 3
+      shadow inset 0 1px 0 base(1)
+    &:not(.js-more-repos-form) ^[0]btn
+      c fg("faded") 1 3
+      hover fg("primary") 0 5
+    & > .Box
+      & > .bg-white
+        c 0 0 4
+        ease colors
+        +parent-hover()
+          c 0 0 5
 .pagination
   a
     c fg("primary") 1 4
-    ease background-color, color
-    &:hover
-      c v("blue") 0 5
+    ease colors
+    hover v("blue") 0 5
   .current, [aria-current]
     &, &:hover
       c fg("primary") 1 dark("blue")

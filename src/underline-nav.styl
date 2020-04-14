@@ -1,6 +1,6 @@
 .UnderlineNav
   c 0 1 3
-  ease background-color, border-color
+  ease colors
   /nav& + div.border.d-md-block
     c 0 0 4
   &[style*="margin-top"]
@@ -8,10 +8,10 @@
   &-item
     ^[0]-octicon
       c fg("faded")
-      ease color
-    &.selected, &[aria-current], &[role="tab"][aria-selected="true"]
+      ease colors
+    +selected()
       bbc v("blue")
-      ease border-color, color
+      ease colors
       octicon fg("light")
     &:hover, &:focus
       bbc base(8)

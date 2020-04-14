@@ -6,12 +6,12 @@
     my 16px
   details summary
     b 1px solid $t
-    ease background-color, border-color, color
+    ease colors
     p 5px 10px
     m 3px -10px
     &::marker
       c fg("faded")
-      ease color
+      ease colors
     &:focus
       outline-color fg("faded")
     &:hover
@@ -26,7 +26,7 @@
     c fg("faded")
   a
     c v("blue")
-    ease color
+    ease colors
     &:hover
       c light("blue")
       td underline
@@ -90,7 +90,7 @@
       c fg("dark")
   .clippy-wrapper .clippy
     c fg("light") 1 4
-    ease border-color, background-color
+    ease colors
     &:hover
       c 0 v("blue") 8
     .icon

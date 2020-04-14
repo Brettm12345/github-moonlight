@@ -1,88 +1,98 @@
-$cmColors = {
-  atom: "blue"
-  attribute: "yellow"
-  punctuation: "text-primary"
-  comment: "indigo"
-  def: "blue"
-  number: "orange"
-  property: "teal"
-  operator: "cyan"
-  string: "green"
-  string-2: "green"
-  keyword: "purple"
-  variable: "purple"
+$syntaxTokens = {
+  ba: 9
+  bp: 'text-dark'
+  bu: 'red'
+  c1: 'blue'
+  c2: 'light'
+  c: 'indigo'
+  cm: 'indigo'
+  cp: 'indigo'
+  cs: 'indigo'
+  e: 'blue'
+  en: 'blue'
+  ent: 'red-alt'
+  go: 'text-dark'
+  gr: 'red'
+  gt: 'red'
+  gu: 'text-light'
+  il: 'teal'
+  k: 'purple'
+  kos: 'text-secondary'
+  kp: 'orange'
+  kt: 'blue'
+  m: 'green'
+  mf: 'orange'
+  mh: 'green'
+  mi: 'yellow'
+  ml: 'orange'
+  mo: 'orange'
+  na: 'purple'
+  nb: 'purple'
+  nc: 'yellow'
+  nf: 'blue'
+  ni: 'cyan'
+  nn: 'yellow'
+  no: 'yellow'
+  nt: 'red'
+  o: 'cyan'
+  p: 'text-dark'
+  pds: 'green'
+  pse: 'cyan'
+  s1: 'green'
+  s2: 'green'
+  s: 'green'
+  sb: 'green'
+  sc: 'green'
+  sd: 'green'
+  se: 'green'
+  sg: 'text-faded'
+  sh: 'green'
+  si: 'cyan'
+  smi: 'blue'
+  smw: 'yellow'
+  sr: 'cyan'
+  ss: 'purple'
+  sx: 'green'
+  v: 'red-alt'
+  vc: 'pink'
+  vg: 'pink'
+  vi: 'pink'
 }
-for $k, $v in $cmColors
-  .cm-{$k}
-    c v($v)
-code, pre, tt
-  set-font "mono"
-.code .s1
-  c v("green")
+colors($syntaxTokens, 'pl-')
 .pl-
-  &c, &c a
-    c v("indigo")
-  &c1
-    c v("orange")
-  &sr &sre, &sr &sra, &s
-    &, & a
-      c v("green")
-  &s1, &s &v, &s1 a
+  for $k, $v in $syntaxTokens
+    &{$k} a
+      c v($v)
+  &sr &sre, &sr &sra
+    c v("green")
+  &s &v
     c fg("primary")
-  &e, &en
-    c v("blue")
   &s1 &kos
     c v("cyan")
-  &v, &s > &smi, &ent
+  &s > &smi
     c alt("red")
-  &k
-    c v("purple")
-  &s &pse &s1, &pds
+  &s &pse &s1
     c v("cyan")
-  &sr
-    c v("cyan")
-    ^[0]cce
-      c alt("red")
-      fw bold
-  &smw
-    c v("yellow")
-  &bu
-    c v("red")
+  &sr &cce
+    c alt("red")
+    fw bold
   &c2, &ii
     c fg("light") 0 v("red")
   &c2::before
     content "^M"
-  &ml
-    c v("orange")
-  &mh &en, &ms
+  &mh &en
     c v("cyan")
-  &mh
-    c v("green")
-    fw bold
-  &mi
-    c v("yellow")
-    font-style italic
-  &mb
-    c fg("light")
-    fw bold
-  &md
-    c v("red") 0 t("red")
-  &mi1
-    c v("teal") 0 t("teal")
-  &mc
-    c v("cyan") 0 t("cyan")
+  for $x in ("md" "red") ("mi1" "teal") ("mc" "cyan")
+    &{$x[0]}
+      c v($x[1]) 0 t($x[1])
   &mdr
-    c v("teal")
     fw bold
-  &pse
-    c v("cyan")
-  &ba
-    c 9
-  &smi
-    c v("yellow")
-  &kos
-    c fg("secondary")
-  &sg
-    c fg("faded")
   &corl
     td underline
+.type-haskell
+  colors(
+    {
+      c1: 'yellow'
+    },
+    'pl-'
+  )

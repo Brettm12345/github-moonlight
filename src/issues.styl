@@ -1,27 +1,25 @@
+.issues-reset-query-icon
+  c 0 0 7
+.pinned-issue-item
+  c 0 1 5
 .issue-
-  &keyword, &meta-section .octicon
-    c v("purple")
   &meta-section .octicon
     va middle
-.issues-reset-query-
-  &icon
-    c 0 0 7
+    ~/keyword, &
+      c v("purple")
 .js-selected-navigation-item
   // Fixes https://github.com/Brettm12345/github-moonlight/issues/34
   &.Header-link
     bt none
   &.subnav-item, .js-issue-row
     &, &.Box-row--focus-gray
-      ease background-color
-      &.navigation-focus, &:hover, &:focus
-        c 0 0 5
-.pinned-issue-item
-  c 0 1 5
+      ease colors
+      +nav-focus()
+        &, ../:hover, ../:focus
+          c 0 0 5
 .reaction-
-  &sort-item
-    c 0 2
-    ease background-color, border-color
-    &:hover, &:focus
-      c 0 v("blue") t("blue")
   &summary-item
     c 0 0 4
+  &sort-item
+    c 0 2
+    hover 0 v("blue") t("blue")

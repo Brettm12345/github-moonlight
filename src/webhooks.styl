@@ -10,5 +10,6 @@
     &container
       .highlight pre, pre
         c 0 0 4
-      .tabnav-tab[aria-selected="true"]
-        c 0 0 2
+      .tabnav-tab
+        +selected()
+          c 0 0 2

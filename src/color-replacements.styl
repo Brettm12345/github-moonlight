@@ -1,43 +1,51 @@
-$fgColors = {
-  gray-light: fg("dark")
-  blue: v("blue")
-  blue-mktg: v("blue")
-  gray: fg("primary")
-  gray-dark: fg("light")
-  gray-9: base(9)
-  emphasized: fg("secondary")
-  green: v("green")
-  purple: v("purple")
-  red: v("red")
-  white: fg("light")
-}
-map-record($fgColors, '.text-', color)
-$borderColors = {
-  blue-light: v("blue")
-  gray-dark: base(1)
-  lg-left: base(6)
-  lg-top: base(6)
-  lg-right: base(6)
-  lg-bottom: base(6)
-}
-map-record($borderColors, '.border-', border-color)
-$bgColors = {
-  gray: base(4)
-  gray-light: base(3)
-  blue-light: base(4)
-  yellow-light: t("yellow")
-  purple-light: t("purple")
-  purple: v("purple")
-  red: v("red")
-  green: v("green")
-  blue: base(7)
-  blue-2: t("blue")
-  gray-dark: base(2)
-  gray-2: base(7)
-  pending: v("purple")
-  white: rgba(white, 0.008)
-}
-map-record($bgColors, '.bg-', background-color)
+colors(
+  {
+    gray-light: "text-dark"
+    blue: "blue"
+    blue-mktg: "blue"
+    gray: "text-primary"
+    gray-dark: "text-light"
+    gray-9: 9
+    emphasized: "text-secondary"
+    green: "green"
+    purple: "purple"
+    red: "red"
+    white: "text-light"
+  },
+  'text-'
+)
+
+borders(
+  {
+    blue-light: "blue"
+    gray-dark: 1
+    lg-left: 6
+    lg-top: 6
+    lg-right: 6
+    lg-bottom: 6
+  },
+  'border-'
+)
+
+backgrounds(
+  {
+    gray: 4
+    gray-light: 3
+    blue-light: 5
+    yellow-light: "yellow-transparent"
+    purple-light: "purple-transparent"
+    purple: "purple"
+    red: "red"
+    green: "green"
+    blue: 7
+    blue-2: "blue-transparent"
+    gray-dark: 2
+    gray-2: 7
+    pending: "purple"
+    white: rgba(white, 0.008)
+  },
+  'bg-'
+)
 for $direction in top left right bottom
   $x = 'border-' + $direction
   .{$x}
@@ -68,3 +76,9 @@ section[style*="#fafbfc"]
   c v("yellow")
 .selected-color-white
   c fg("light")
+
+.rounded-1, .box-shadow, .Box
+  for $direction in top left right bottom
+    $x = 'border-' + $direction
+    .{$x}
+      {$x} 1px solid base(1) $i

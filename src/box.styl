@@ -1,6 +1,13 @@
 *:not(code) .Box
-  c 0 1 4
+  c 0 1 3
 .Box
+  for $x in top left bottom right
+    .border-{$x}
+      border-{$x}-color base(1) $i
+  .bg-white
+    c 0 0 $t
+  &.md
+    c 0 0 4
   &-body
     c 0 1
     &:last-of-type
@@ -12,18 +19,19 @@
   &--overlay
     c 0 1 2
     elevation 1
+  /:not(code) &&--responsive
+    &, & ^[0]-header
+      c 0 0 3
   &-header
-    b none
-    c 0 1 4
-    m 0
+    c 0 1 2
     &&--blue
       c v("blue") 1 4
   &-footer
     c 0 1
   &-row
+    btc 1
     /^[0] > ul > &
-      btc base(1)
-    bt 1px solid base(6)
+      btc 1
     &--unread
       shadow inset 2px 0 0 v("blue")
     &[style*="background"]
@@ -44,7 +52,7 @@
       c o o 4
     &focus-gray
       c 0 0 3
-      &.navigation-focus
+      +nav-focus()
         c 0 0 6
     &yellow
       c fg("primary") 6 $t

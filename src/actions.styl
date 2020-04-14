@@ -18,40 +18,58 @@
       c 0 0 v($v)
     & .ansifg-{$k}
       c v($v)
-  & .log-line-
-    $rec = {
+  colors(
+    {
       command: 'blue'
       debug: 'purple'
       error: 'red'
       verbose: 'text-dark'
       warning: 'yellow'
       section: 'teal'
-    }
-    for $k, $v in $rec
-      &{$k}
-        c v($v)
+    },
+    "log-line-"
+  )
   &-header
     c fg("dark")
     &-timestamp
       c fg("secondary")
   &-line
-    c fg("primary") 0 3
+    c fg("primary") 0 2
     set-font "mono"
+    &:hover &-number
+      c fg("primary")
+    &:hover, &:hover &-number
+      c 0 0 5
     & &-timestamp
       c fg("secondary")
     &-number
       c 9 1 2
-      br $b
-      pr 18px
+      ease colors
     &content
       c fg("primary")
-    &.selected
+    +selected()
       c 0 0 6
-    &:hover
-      c 0 0 5
+.CheckRun
+  c 0 1 3
+  &-search .btn
+    &, &[disabled], &[disabled]:hover
+      c 0 0 2
+  &-log-title
+    c fg("secondary")
+  &-header
+    c 0 1
+    &-timestamp
+      c fg("dark")
+.checks-list-item
+  &.bg-white
+    c 0 0 $t
+  &.selected &-name
+    c fg("light") 0 8
 .d-flex[style*="opacity: 0.6"]
   o 1
 .Box.rounded-2.d-flex.flex-column.overflow-hidden.width-full.flex-auto.mb-4 .d-flex.flex-justify-between.px-4.pt-3.pb-4
   c 0 0 6
 .js-checks-log-display-container
   b $b
+aside[aria-label="Check suites"]
+  btc 1

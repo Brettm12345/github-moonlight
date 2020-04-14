@@ -1,8 +1,8 @@
 $iconColors = {
-  removed: v("red")
-  renamed: v("cyan")
-  modified: v("purple")
-  added: v("green")
+  removed: "red"
+  renamed: "cyan"
+  modified: "purple"
+  added: "green"
 }
 
 .toc-select
@@ -11,9 +11,8 @@ $iconColors = {
       &-text
         c fg("light")
       &-icon
-        map-record($iconColors, '&.octicon-diff-', color)
+        colors $iconColors '.octicon-diff-'
 .table-of-contents
-  map-record($iconColors, '.octicon-diff-', color)
   li
     & + &
       btc base(1)
