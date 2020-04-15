@@ -6,12 +6,11 @@
   &[style*="margin-top"]
     c 0 $t 2
   &-item
+    ease colors
     ^[0]-octicon
       c fg("faded")
-      ease colors
     +selected()
       bbc v("blue")
-      ease colors
       octicon fg("light")
     &:hover, &:focus
       bbc base(8)
