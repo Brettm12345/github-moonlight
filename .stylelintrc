@@ -2,6 +2,7 @@
   "extends": "stylelint-config-recommended",
   "rules": {
     "no-descending-specificity": null,
+    "block-no-empty": null,
     "declaration-block-no-duplicate-properties": null,
     "declaration-block-no-shorthand-property-overrides": null,
     "selector-type-no-unknown": [
