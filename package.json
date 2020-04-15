@@ -16,8 +16,11 @@
   "scripts": {
     "build:readme": "emacsclient -e '(progn (find-file \"doc/readme.org\") (org-org-export-to-org))'",
     "patch": "versions patch -C -c 'yarn build' package.json github.user.css",
+    "patch:push": "yarn patch && git push",
     "minor": "versions minor -C -c 'yarn build' package.json github.user.css",
+    "minor:push": "yarn minor && git push",
     "major": "versions major -C -c 'yarn build' package.json github.user.css",
+    "major:push": "yarn major && git push",
     "build": "ts-node build",
     "copy": "yarn build && xclip -i -selection clipboard github.user.css",
     "build:watch": "stylus --watch github.user.styl",
