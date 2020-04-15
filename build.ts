@@ -167,7 +167,7 @@ const userVariables = pipe(
   )
 );
 
-stylus.render('@import "github.user";', (err, css) => {
+stylus('@import "github.user";').render((err, css) => {
   if (err) throw err;
 
   fs.writeFileSync(
