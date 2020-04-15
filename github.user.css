@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      3.3.0
+@version      3.4.0
 
 @license      MIT
 @description  A dark blue github theme
@@ -198,6 +198,8 @@
 }
 
 @-moz-document regexp(".*github.*") {
+}
+@-moz-document domain("github.com"), domain("github.community") {
   .Box > .bg-gray-dark:nth-child(2):last-of-type {
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
@@ -389,7 +391,6 @@
   .topic-tag,
   .UnderlineNav,
   .UnderlineNav-item,
-  .UnderlineNav-octicon,
   .follow-list .follow-list-info,
   .follow-list .follow-list-info > a > span,
   .follow-list .follow-list-info .octicon,
@@ -1878,7 +1879,7 @@
     border-color: var(--base-5) !important;
     background-color: var(--base-4) !important;
   }
-  .TimelineItem:target .TimelineItem-badge-bage {
+  :target .TimelineItem-badge {
     border-color: var(--blue) !important;
   }
   .TimelineItem--condensed .TimelineItem-badge {
@@ -1889,9 +1890,9 @@
     border-color: var(--base-4) !important;
     background-color: transparent !important;
   }
-  .TimelineItem:before,
-  .TimelineItem .status-meta:before,
-  .TimelineItem .merge-pr-more-commits:before {
+  .TimelineItem::before,
+  .TimelineItem .status-meta::before,
+  .TimelineItem .merge-pr-more-commits::before {
     background-color: var(--base-5) !important;
   }
   .TimelineItem-badge,
@@ -3101,11 +3102,6 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-4) !important;
   }
-  .menu,
-  .menu .blankslate {
-    color: var(--base-4) !important;
-    border-color: var(--base-1) !important;
-  }
   .menu-heading {
     color: var(--text-gray) !important;
     border-color: var(--base-1) !important;
@@ -3218,18 +3214,6 @@
     color: var(--text-primary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-2) !important;
-  }
-  .oauth-org-access-details {
-    background-color: var(--base-2) !important;
-  }
-  .oauth-org-access-details .oauth-org-item.revoked {
-    background-color: var(--base-2) !important;
-  }
-  .oauth-org-access-details .oauth-org-item.on strong {
-    color: var(--text-light) !important;
-  }
-  .oauth-org-access-details .oauth-org-item:hover {
-    background-color: var(--base-3) !important;
   }
   .oauth-permissions-details.open a.btn-sm {
     border-color: var(--base-1) !important;
@@ -5315,6 +5299,7 @@
   .usage-bar .progress {
     background-color: var(--green) !important;
   }
+  .usage-bar .progressmax,
   .usage-bar .progress--purple {
     background-color: var(--purple) !important;
   }
