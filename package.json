@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "canvas": "^2.6.1",
+    "fp-ts-contrib": "^0.1.15",
     "stylus": "^0.54.7"
   },
   "devDependencies": {
