@@ -3271,6 +3271,9 @@
   .org-user-notice-content strong {
     color: var(--purple) !important;
   }
+  .colab-info {
+    color: var(--gray) !important;
+  }
   .gh-header {
     background-color: unset;
   }
@@ -3352,7 +3355,7 @@
     .pagehead,
     .pagehead-tabs-item,
     .pagehead .repohead.experiment-repo-nav {
-      color: var(--base-4) !important;
+      background-color: var(--base-4) !important;
     }
 }
   .repohead .Label--outline,

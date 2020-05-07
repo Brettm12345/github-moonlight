@@ -1,12 +1,6 @@
 import { capitalCase } from "change-case";
 import { chain, map, range, zip } from "fp-ts/lib/Array";
 import { Endomorphism, identity, tupled } from "fp-ts/lib/function";
-import {
-  Endomorphism as Endo,
-  flow,
-  identity,
-  tupled
-} from "fp-ts/lib/function";
 import { pipe } from "fp-ts/lib/pipeable";
 import * as R from "fp-ts/lib/Record";
 import * as fs from "fs";
