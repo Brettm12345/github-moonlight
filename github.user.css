@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         github-moonlight
 @namespace    https://github.com/brettm12345/github-moonlight
-@version      3.4.1
+@version      3.4.2
 
 @license      MIT
 @description  A dark blue github theme
@@ -381,7 +381,7 @@
   .SideNav-item,
   .site-subnav.bg-white,
   .subnav-item,
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white):not(.pagehead-tabs-item),
   .subnav-search-context .btn,
   .tabnav--responsive .tabnav-tab,
   .tabnav-tab,
@@ -3256,7 +3256,7 @@
     margin-right: 0.5% !important;
   }
   .orghead .pagehead-tabs-item.selected {
-    color: var(--blue) !important;
+    color: var(--text-light) !important;
     background-color: var(--base-2) !important;
   }
   .manage-member-meta-item {
@@ -4620,13 +4620,13 @@
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
   }
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white),
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white):not(.pagehead-tabs-item),
   .subnav-search-context .btn {
     color: var(--text-dark) !important;
   }
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white):hover,
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white):not(.pagehead-tabs-item):hover,
   .subnav-search-context .btn:hover,
-  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white).selected,
+  .btn-link:not(.IssueLabel):not(.tabnav-tab):not(.dropdown-item):not(.muted-link):not(.selected-color-white):not(.pagehead-tabs-item).selected,
   .subnav-search-context .btn.selected {
     color: var(--blue) !important;
   }
