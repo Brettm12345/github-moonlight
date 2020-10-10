@@ -5296,6 +5296,9 @@
   .UnderlineNav-item:focus .octicon {
     color: var(--text-primary) !important;
   }
+  .UnderlineNav-item[protocol_selector] {
+    color: var(--text-primary) !important;
+  }
   .usage-bar {
     background-color: var(--base-3) !important;
   }
