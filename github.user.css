@@ -5267,6 +5267,7 @@
   .UnderlineNav {
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
+    box-shadow: inset 0 -1px 0 var(--base-1);
   }
   nav.UnderlineNav + div.border.d-md-block {
     background-color: var(--base-4) !important;
