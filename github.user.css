@@ -1024,6 +1024,9 @@
   .breadcrumb strong.final-path {
     color: var(--text-light) !important;
   }
+  .btn {
+    box-shadow: none !important;
+  }
   .btn,
   .btn.btn-sm {
     background-image: none !important;
@@ -1112,6 +1115,7 @@
     color: var(--text-secondary) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-5) !important;
+    box-shadow: none !important;
   }
   .social-count:focus,
   .social-count:hover {
