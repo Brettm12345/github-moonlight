@@ -2803,6 +2803,7 @@
     background-color: var(--base-2) !important;
   }
   .Label--gray-darker {
+    color: var(--text-gray-dark) !important;
     background-color: var(--base-1) !important;
   }
   .Label----orange {
