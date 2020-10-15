@@ -359,6 +359,7 @@
   .menu-item,
   .notifications-list-item:hover .notification-list-item-actions .btn,
   .notifications-list-item:focus .notification-list-item-actions .btn,
+  .notifications-list-item.navigation-focus .notification-list-item-actions .btn,
   .reponav-item,
   .reponav-item .octicon,
   .ajax-pagination-form > .Box > .bg-white,
@@ -3189,11 +3190,13 @@
     fill: var(--text-primary) !important;
   }
   .notifications-list-item:hover,
-  .notifications-list-item:focus {
+  .notifications-list-item:focus,
+  .notifications-list-item.navigation-focus {
     background-color: var(--base-5) !important;
   }
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
-  .notifications-list-item:focus .notification-list-item-actions .btn:hover {
+  .notifications-list-item:focus .notification-list-item-actions .btn:hover,
+  .notifications-list-item.navigation-focus .notification-list-item-actions .btn:hover {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
     background-color: var(--base-1) !important;
