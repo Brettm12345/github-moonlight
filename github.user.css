@@ -1966,7 +1966,9 @@
   .timeline-comment--caret.current-user::after {
     border-right-color: var(--base-2) !important;
   }
-  .comment-body.markdown-body .bg-gray-light {
+  .comment-body.markdown-body .bg-gray-light,
+  .js-upload-markdown-image,
+  .js-upload-markdown-image .write-content {
     background-color: var(--base-3) !important;
   }
   .comment-body.markdown-body pre,
