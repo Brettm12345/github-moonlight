@@ -998,7 +998,7 @@
   .branch-action-body {
     border-color: var(--green) !important;
   }
-  .branch-action-body::before {
+  .branch-action-body.timeline-comment--caret::before {
     border-right-color: var(--green) !important;
   }
   .branch-action-icon {
