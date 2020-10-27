@@ -19,6 +19,8 @@
       .merge-
         &branch-form, &message
           c 0 1 4
+      &.timeline-comment--caret::before
+        brc v("green")
     for $x in ("dirty" "red") ("clean" "green")
       &state-{$x[0]}
         ^[1]body
