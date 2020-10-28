@@ -900,7 +900,7 @@
     padding-right: 10px !important;
   }
   .BorderGrid-cell {
-    background-color: var(--base-5) !important;
+    color: var(--base-5) !important;
   }
   .boxed-group .Counter {
     color: var(--text-light) !important;
