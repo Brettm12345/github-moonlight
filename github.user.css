@@ -899,6 +899,9 @@
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
+  .BorderGrid-cell {
+    background-color: var(--base-5) !important;
+  }
   .boxed-group .Counter {
     color: var(--text-light) !important;
     background-color: var(--base-7) !important;
