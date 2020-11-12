@@ -5114,6 +5114,7 @@
     color: var(--text-dark) !important;
     border-top-left-radius: 6px !important;
     border-top-right-radius: 6px !important;
+    margin-bottom: 1px !important;
   }
   .tabnav--responsive .tabnav-tab[aria-current],
   .tabnav-tab[aria-current] {
