@@ -2364,7 +2364,7 @@
   .form-select {
     color: var(--text-light) !important;
     border-color: var(--base-1) !important;
-    background-color: var(--base-3) !important;
+    background-color: var(--base-4) !important;
     box-shadow: none !important;
   }
   .form-control.focus,
@@ -2373,7 +2373,7 @@
   .form-select:focus {
     color: var(--text-light) !important;
     border-color: var(--blue) !important;
-    background-color: var(--base-4) !important;
+    background-color: var(--base-5) !important;
     box-shadow: none !important;
   }
   .form-control.search-page-label.js-advanced-search-label,
@@ -5295,7 +5295,7 @@
   .typeahead-result:hover,
   .typeahead-result[aria-selected="true"],
   .typeahead-result.navigation-focus {
-    border-color: var(--base-6) !important;
+    background-color: var(--base-6) !important;
   }
   .UnderlineNav {
     border-color: var(--base-1) !important;
