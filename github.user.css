@@ -2561,6 +2561,9 @@
   .graph-canvas .activity {
     color: var(--text-primary) !important;
   }
+  .color-bg-inset {
+    border-color: var(--base-1) !important;
+  }
   .home-enterprise::before {
     opacity: 0.1 !important;
   }
