@@ -240,10 +240,19 @@ a($x...)
   prop "animation" $x
 tr($x...)
   prop "transition" $x
+ttf($x)
+  prop "transition-timing-function" $x
+delay($x)
+  prop "transision-delay" $x
+duration($x)
+  prop "transition-duration" $x
 ease($x...)
   +cache("x" + $x)
     $x = border-color, background-color, color if $x == colors
-    tr $x 300ms $easeInOutCubic
+    transition-dur
+    ttf $easeInOutCubic
+    duration 300ms
+    tr $x
 fn($x)
   prop "font-family" $x
 fs($x)
