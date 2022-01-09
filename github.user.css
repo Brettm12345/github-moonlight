@@ -5292,6 +5292,11 @@
   .typeahead-result {
     color: var(--text-primary) !important;
   }
+  .typeahead-result:hover,
+  .typeahead-result[aria-selected="true"],
+  .typeahead-result.navigation-focus {
+    border-color: var(--base-6) !important;
+  }
   .UnderlineNav {
     border-color: var(--base-1) !important;
     background-color: var(--base-3) !important;
